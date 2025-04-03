@@ -204,9 +204,6 @@ void builder_PySAM::create_PySAM_files(const std::string &cmod, const std::strin
         bool output = false;
         std::string group_symbol = format_as_symbol(mm->first);
 
-        if (group_symbol == "AdjustmentFactors")
-            continue;
-
         if (group_symbol == "Outputs"){
             output = true;
             if (vardefs.empty())
@@ -310,10 +307,6 @@ void builder_PySAM::create_PySAM_files(const std::string &cmod, const std::strin
 
             var_def vd = it.second;
 
-            if (group_symbol == "AdjustmentFactors")
-                continue;
-
-
             if (vd.type == "number") {
                 fx_file << "static PyObject *\n"
                         << group_symbol << "_get_" << var_symbol << "(VarGroupObject *self, void *closure)\n"
@@ -404,9 +397,6 @@ void builder_PySAM::create_PySAM_files(const std::string &cmod, const std::strin
             std::string var_symbol = it.first;
 
             var_def vd = it.second;
-
-            if (group_symbol == "AdjustmentFactors")
-                continue;
 
             // make the PyGetSetDef struct
 
@@ -562,23 +552,7 @@ void builder_PySAM::create_PySAM_files(const std::string &cmod, const std::strin
 
         std::string module_symbol = format_as_symbol(mm->first);
 
-        if (module_symbol == "AdjustmentFactors"){
-            fx_file << "\tPyObject* AdjustmentFactorsModule = PyImport_ImportModule(\"AdjustmentFactors\");\n"
-                       "\n"
-                       "\tPyObject* data_cap = PyCapsule_New(self->data_ptr, NULL, NULL);\n"
-                       "\tPyObject* Adjust_obj = PyObject_CallMethod(AdjustmentFactorsModule, \"new\", \"(O)\", data_cap);\n"
-                       "\tPy_XDECREF(data_cap);\n"
-                       "\tPy_XDECREF(AdjustmentFactorsModule);\n"
-                       "\n"
-                       "\tif (!Adjust_obj){\n"
-                       "\t\tPyErr_SetString(PyExc_Exception, \"Couldn't create AdjustmentFactorsObject\\n\");\n"
-                       "\t\treturn NULL;\n"
-                       "\t}\n"
-                       "\n"
-                       "\tPyDict_SetItemString(attr_dict, \"AdjustmentFactors\", Adjust_obj);\n"
-                       "\tPy_DECREF(Adjust_obj);\n\n";
-        }
-        else if (vardefs.empty()) {
+        if (vardefs.empty()) {
             continue;
         }
         else{
@@ -936,28 +910,6 @@ void builder_PySAM::create_PySAM_files(const std::string &cmod, const std::strin
                "\tif (!" << tech_symbol << "_Type.tp_dict) { goto fail; }\n"
                "\n";
 
-    if (root->m_vardefs.find("AdjustmentFactors") != root->m_vardefs.end()){
-        fx_file << "\t/// Add the AdjustmentFactors type object to " << tech_symbol << "_Type\n"
-                "\tPyObject* AdjustmentFactorsModule = PyImport_ImportModule(\"AdjustmentFactors\");\n"
-                "\tif (!AdjustmentFactorsModule){\n"
-                "\t\tPyErr_SetImportError(PyUnicode_FromString(\"Could not import AdjustmentFactors module.\"), NULL, NULL);\n"
-                "\t}\n"
-                "\n"
-                "\tPyTypeObject* AdjustmentFactors_Type = (PyTypeObject*)PyObject_GetAttrString(AdjustmentFactorsModule, \"AdjustmentFactors\");\n"
-                "\tif (!AdjustmentFactors_Type){\n"
-                "\t\tPyErr_SetImportError(PyUnicode_FromString(\"Could not import AdjustmentFactors type.\"), NULL, NULL);\n"
-                "\t}\n"
-                "\tPy_XDECREF(AdjustmentFactorsModule);\n"
-                "\n"
-                "\tif (PyType_Ready(AdjustmentFactors_Type) < 0) { goto fail; }\n"
-                "\tPyDict_SetItemString(" << tech_symbol << "_Type.tp_dict,\n"
-                "\t\t\t\t\t\t \"AdjustmentFactors\",\n"
-                "\t\t\t\t\t\t (PyObject*)AdjustmentFactors_Type);\n"
-                "\tPy_DECREF(&AdjustmentFactors_Type);\n"
-                "\tPy_XDECREF(AdjustmentFactors_Type);\n\n";
-    }
-
-
     // add the group types
     for (auto& i : root->vardefs_order) {
         auto mm = root->m_vardefs.find(i);
@@ -965,7 +917,7 @@ void builder_PySAM::create_PySAM_files(const std::string &cmod, const std::strin
 
         std::string module_symbol = format_as_symbol(mm->first);
 
-        if (module_symbol == "AdjustmentFactors" || vardefs.empty())
+        if (vardefs.empty())
             continue;
 
         fx_file << "\t/// Add the " << module_symbol << " type object to " << tech_symbol << "_Type\n"
@@ -1108,16 +1060,8 @@ void builder_PySAM::create_PySAM_files(const std::string &cmod, const std::strin
             fx_file << "-";
         fx_file << "-\n\n";
 
-        if (module_symbol == "AdjustmentFactors") {
-            fx_file << ".. autoclass:: PySAM.AdjustmentFactors.AdjustmentFactors\n";
-        }
-        else {
-            fx_file << ".. autoclass:: PySAM." << tech_symbol << "." << tech_symbol << "." << module_symbol << "\n";
-        }
+        fx_file << ".. autoclass:: PySAM." << tech_symbol << "." << tech_symbol << "." << module_symbol << "\n";
         fx_file << "\t:members:\n";
-        if (module_symbol == "AdjustmentFactors") {
-            fx_file << "\t:noindex:\n";
-        }
         fx_file << "\n";
     }
 
@@ -1130,6 +1074,9 @@ void builder_PySAM::create_PySAM_files(const std::string &cmod, const std::strin
 
     fx_file << "class " << tech_symbol << "(object):\n";
     fx_file << "\tdef assign(self, dict):\n"
+               "\t\tpass\n"
+               "\n"
+               "\tdef replace(self, dict):\n"
                "\t\tpass\n"
                "\n"
                "\tdef value(self, name, value=None):\n"
@@ -1167,43 +1114,11 @@ void builder_PySAM::create_PySAM_files(const std::string &cmod, const std::strin
 
         std::string module_symbol = format_as_symbol(mm->first);
 
-        if (module_symbol == "AdjustmentFactors"){
-            fx_file << "\tclass AdjustmentFactors(object):\n"
-                       "\t\tdef assign(self): \n"
-                       "\t\t\tpass\n"
-                       "\t\n"
-                       "\t\tdef export(self): \n"
-                       "\t\t\treturn {}\n"
-                       "\t\n"
-                       "\t\tdef __init__(self, *args, **kwargs): # real signature unknown\n"
-                       "\t\t\tpass\n"
-                       "\t\n"
-                       "\t\tadjust_constant = float\n"
-                       "\t\tadjust_en_hourly = float\n"
-                       "\t\tadjust_en_periods = float\n"
-                       "\t\tadjust_en_timeindex = float\n"
-                       "\t\tadjust_hourly = tuple\n"
-                       "\t\tadjust_periods = tuple\n"
-                       "\t\tadjust_timeindex = tuple\n"
-                       "\t\tdc_adjust_constant = float\n"
-                       "\t\tdc_adjust_en_hourly = float\n"
-                       "\t\tdc_adjust_en_periods = float\n"
-                       "\t\tdc_adjust_en_timeindex = float\n"
-                       "\t\tdc_adjust_hourly = tuple\n"
-                       "\t\tdc_adjust_periods = tuple\n"
-                       "\t\tdc_adjust_timeindex = tuple\n"
-                       "\t\tsf_adjust_constant = float\n"
-                       "\t\tsf_adjust_en_hourly = float\n"
-                       "\t\tsf_adjust_en_periods = float\n"
-                       "\t\tsf_adjust_en_timeindex = float\n"
-                       "\t\tsf_adjust_hourly = tuple\n"
-                       "\t\tsf_adjust_periods = tuple\n"
-                       "\t\tsf_adjust_timeindex = tuple\n\n";
-            continue;
-        }
-
         fx_file << "\tclass " << module_symbol << "(object):\n";
-        fx_file << "\t\tdef assign(self): \n"
+        fx_file << "\t\tdef assign(self, dict): \n"
+                   "\t\t\tpass\n"
+                   "\t\n"
+                   "\t\tdef replace(self, dict): \n"
                    "\t\t\tpass\n"
                    "\t\n"
                    "\t\tdef export(self) -> dict:\n"

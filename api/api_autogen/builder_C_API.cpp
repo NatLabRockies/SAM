@@ -98,9 +98,6 @@ void builder_C_API::create_SAM_headers(const std::string &cmod, const std::strin
         auto mm = root->m_vardefs.find(root->vardefs_order[i]);
         std::map<std::string, var_def> vardefs = mm->second;
 
-        if (mm->first == "AdjustmentFactors")
-            continue;
-
         std::string module_symbol = format_as_symbol(mm->first);
 
         fx_file << "\n"
@@ -156,9 +153,6 @@ void builder_C_API::create_SAM_headers(const std::string &cmod, const std::strin
         auto mm = root->m_vardefs.find(i);
         std::map<std::string, var_def> vardefs = mm->second;
         std::string module_symbol = format_as_symbol(mm->first);
-
-        if (mm->first == "AdjustmentFactors")
-            continue;
 
         // getters
         fx_file << "\n\t/**\n";
@@ -251,10 +245,6 @@ void builder_C_API::create_SAM_definitions(const std::string &cmod, const std::s
         std::map<std::string, var_def> vardefs = mm->second;
         std::string module_symbol = format_as_symbol(mm->first);
 
-        if (mm->first == "AdjustmentFactors")
-            continue;
-        
-
         for (auto & vardef : vardefs) {
             std::string var_symbol = vardef.first;
 
@@ -298,9 +288,6 @@ void builder_C_API::create_SAM_definitions(const std::string &cmod, const std::s
         auto mm = root->m_vardefs.find(i);
         std::map<std::string, var_def> vardefs = mm->second;
         std::string module_symbol = format_as_symbol(mm->first);
-
-        if (mm->first == "AdjustmentFactors")
-            continue;
 
         for (auto & vardef : vardefs){
             std::string var_symbol = vardef.first;

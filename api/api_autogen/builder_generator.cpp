@@ -140,7 +140,6 @@ void builder_generator::gather_variables_ssc(const std::string &cmod_name) {
     int var_index = 0;
     ssc_info_t mod_info = ssc_module_var_info(p_mod, var_index);
     var_info* mod_info_cast = static_cast<var_info*>(mod_info);
-    std::map<std::string, var_def> adj_map;
     std::map<std::string, var_def> outputs_map;
     while (mod_info){
 
@@ -227,10 +226,6 @@ void builder_generator::gather_variables_ssc(const std::string &cmod_name) {
 
         ++var_index;
         mod_info = ssc_module_var_info(p_mod, var_index);
-    }
-    if (adj_map.size() > 0){
-        m_vardefs.insert({"AdjustmentFactors", adj_map});
-        vardefs_order.push_back("AdjustmentFactors");
     }
     m_vardefs.insert({"Outputs", outputs_map});
     vardefs_order.push_back("Outputs");
@@ -419,30 +414,18 @@ void builder_generator::export_variables_json(const std::string &cmod, const std
 
             VarValue* vv = nullptr;
 
-           // if adjustment factors, the variables need to have the 'adjust_' prefix removed
-            if (module_symbol == "AdjustmentFactors"){
-                size_t pos = v.name.find('_');
-                vv = SAM_config_to_defaults[config_name][v.name];
-                if (vv){
-                    var_symbol = v.name.substr(pos+1);
-                }
-                else
-                    continue;
+            if (config_name.find("Hybrid") != std::string::npos){
+                VarValue* vt = SAM_config_to_defaults[config_name].Get(format_as_symbol(cmod));
+                if (!vt)
+                    vt = SAM_config_to_defaults[config_name].Get("Hybrid");
+                vv = vt->Table()[v.name];
             }
             else{
-                if (config_name.find("Hybrid") != std::string::npos){
-                    VarValue* vt = SAM_config_to_defaults[config_name].Get(format_as_symbol(cmod));
-                    if (!vt)
-                        vt = SAM_config_to_defaults[config_name].Get("Hybrid");
-                    vv = vt->Table()[v.name];
-                }
-                else{
-                    vv = SAM_config_to_defaults[config_name][v.name];
+                vv = SAM_config_to_defaults[config_name][v.name];
 
-                    // if it's a battery configuration, turn on battery by default. Hybrid techs don't need this because cmod_hybrid does it
-                    if ((cmod == "battery" && v.name == "en_batt") ||  (cmod == "battwatts" && v.name == "batt_simple_enable"))
-                        vv->Set(1);
-                }
+                // if it's a battery configuration, turn on battery by default. Hybrid techs don't need this because cmod_hybrid does it
+                if ((cmod == "battery" && v.name == "en_batt") ||  (cmod == "battwatts" && v.name == "batt_simple_enable"))
+                    vv->Set(1);
             }
 
             // vv can be null in the case of variables not available in UI

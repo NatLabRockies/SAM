@@ -1128,6 +1128,14 @@ extern "C"
 	SAM_EXPORT void SAM_FresnelPhysical_Tou_dispatch_factors_ts_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
 
 	/**
+	 * Set dispatch_tod_factors: TOD factors for periods 1 through 9
+	 * options: We added this array input after SAM 2022.12.21 to replace the functionality of former single value inputs dispatch_factor1 through dispatch_factor9
+	 * constraints: None
+	 * required if: ppa_multiplier_model=0&csp_financial_model<5&is_dispatch=1&sim_type=1
+	 */
+	SAM_EXPORT void SAM_FresnelPhysical_Tou_dispatch_tod_factors_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
+
+	/**
 	 * Set f_turb_tou_periods: Dispatch logic for turbine load fraction [-]
 	 * options: None
 	 * constraints: None
@@ -1370,14 +1378,6 @@ extern "C"
 	 * required if: ppa_multiplier_model=0&csp_financial_model<5&is_dispatch=1&sim_type=1
 	 */
 	SAM_EXPORT void SAM_FresnelPhysical_TimeOfDeliveryFactors_dispatch_sched_weekend_mset(SAM_table ptr, double* mat, int nrows, int ncols, SAM_error *err);
-
-	/**
-	 * Set dispatch_tod_factors: TOD factors for periods 1 through 9
-	 * options: We added this array input after SAM 2022.12.21 to replace the functionality of former single value inputs dispatch_factor1 through dispatch_factor9
-	 * constraints: None
-	 * required if: ppa_multiplier_model=0&csp_financial_model<5&is_dispatch=1&sim_type=1
-	 */
-	SAM_EXPORT void SAM_FresnelPhysical_TimeOfDeliveryFactors_dispatch_tod_factors_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
 
 
 	//
@@ -2081,6 +2081,8 @@ extern "C"
 
 	SAM_EXPORT double* SAM_FresnelPhysical_Tou_dispatch_factors_ts_aget(SAM_table ptr, int* length, SAM_error *err);
 
+	SAM_EXPORT double* SAM_FresnelPhysical_Tou_dispatch_tod_factors_aget(SAM_table ptr, int* length, SAM_error *err);
+
 	SAM_EXPORT double* SAM_FresnelPhysical_Tou_f_turb_tou_periods_aget(SAM_table ptr, int* length, SAM_error *err);
 
 	SAM_EXPORT double SAM_FresnelPhysical_Tou_is_timestep_load_fractions_nget(SAM_table ptr, SAM_error *err);
@@ -2156,8 +2158,6 @@ extern "C"
 	SAM_EXPORT double* SAM_FresnelPhysical_TimeOfDeliveryFactors_dispatch_sched_weekday_mget(SAM_table ptr, int* nrows, int* ncols, SAM_error *err);
 
 	SAM_EXPORT double* SAM_FresnelPhysical_TimeOfDeliveryFactors_dispatch_sched_weekend_mget(SAM_table ptr, int* nrows, int* ncols, SAM_error *err);
-
-	SAM_EXPORT double* SAM_FresnelPhysical_TimeOfDeliveryFactors_dispatch_tod_factors_aget(SAM_table ptr, int* length, SAM_error *err);
 
 
 	/**

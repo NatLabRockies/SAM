@@ -806,6 +806,12 @@ SAM_EXPORT void SAM_FresnelPhysical_Tou_dispatch_factors_ts_aset(SAM_table ptr, 
 	});
 }
 
+SAM_EXPORT void SAM_FresnelPhysical_Tou_dispatch_tod_factors_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_array(ptr, "dispatch_tod_factors", arr, length);
+	});
+}
+
 SAM_EXPORT void SAM_FresnelPhysical_Tou_f_turb_tou_periods_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_array(ptr, "f_turb_tou_periods", arr, length);
@@ -971,12 +977,6 @@ SAM_EXPORT void SAM_FresnelPhysical_TimeOfDeliveryFactors_dispatch_sched_weekday
 SAM_EXPORT void SAM_FresnelPhysical_TimeOfDeliveryFactors_dispatch_sched_weekend_mset(SAM_table ptr, double* mat, int nrows, int ncols, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_matrix(ptr, "dispatch_sched_weekend", mat, nrows, ncols);
-	});
-}
-
-SAM_EXPORT void SAM_FresnelPhysical_TimeOfDeliveryFactors_dispatch_tod_factors_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
-	translateExceptions(err, [&]{
-		ssc_data_set_array(ptr, "dispatch_tod_factors", arr, length);
 	});
 }
 
@@ -2479,6 +2479,16 @@ SAM_EXPORT double* SAM_FresnelPhysical_Tou_dispatch_factors_ts_aget(SAM_table pt
 	return result;
 }
 
+SAM_EXPORT double* SAM_FresnelPhysical_Tou_dispatch_tod_factors_aget(SAM_table ptr, int* length, SAM_error *err){
+	double* result = nullptr;
+	translateExceptions(err, [&]{
+	result = ssc_data_get_array(ptr, "dispatch_tod_factors", length);
+	if (!result)
+		make_access_error("SAM_FresnelPhysical", "dispatch_tod_factors");
+	});
+	return result;
+}
+
 SAM_EXPORT double* SAM_FresnelPhysical_Tou_f_turb_tou_periods_aget(SAM_table ptr, int* length, SAM_error *err){
 	double* result = nullptr;
 	translateExceptions(err, [&]{
@@ -2735,16 +2745,6 @@ SAM_EXPORT double* SAM_FresnelPhysical_TimeOfDeliveryFactors_dispatch_sched_week
 	result = ssc_data_get_matrix(ptr, "dispatch_sched_weekend", nrows, ncols);
 	if (!result)
 		make_access_error("SAM_FresnelPhysical", "dispatch_sched_weekend");
-	});
-	return result;
-}
-
-SAM_EXPORT double* SAM_FresnelPhysical_TimeOfDeliveryFactors_dispatch_tod_factors_aget(SAM_table ptr, int* length, SAM_error *err){
-	double* result = nullptr;
-	translateExceptions(err, [&]{
-	result = ssc_data_get_array(ptr, "dispatch_tod_factors", length);
-	if (!result)
-		make_access_error("SAM_FresnelPhysical", "dispatch_tod_factors");
 	});
 	return result;
 }

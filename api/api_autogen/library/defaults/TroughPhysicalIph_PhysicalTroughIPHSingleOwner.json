@@ -514,13 +514,13 @@
 			"const_per_upfront_rate5": 0
 		},
 		"AdjustmentFactors": {
-			"constant": 4,
-			"en_periods": 0,
-			"en_timeindex": 0,
-			"periods": [
+			"adjust_constant": 4,
+			"adjust_en_periods": 0,
+			"adjust_en_timeindex": 0,
+			"adjust_periods": [
 				[0.000000, 0.000000, 0.000000]
 			],
-			"timeindex": [0.000000]
+			"adjust_timeindex": [0.000000]
 		},
 		"ElectricityRates": {
 			"rate_escalation": [0.000000],
