@@ -44,6 +44,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "urdb.h"
 #include "widgets.h"
 #include "main.h"
+#include "geotools.h"
 
 static wxString MyGet(const wxString &url)
 {
@@ -267,15 +268,22 @@ bool OpenEI::QueryUtilityCompanies(wxArrayString &names, wxString *err)
 
 bool OpenEI::QueryUtilityCompaniesbyZipcode(const wxString &zipcode, wxArrayString &names, wxString *err)
 {
-
-	// NREL Developer API to list utility companies by zip code https://developer.nrel.gov/docs/electricity/utility-rates-v3/
-	wxString url = SamApp::WebApi("urdb_companies_by_zip");
-	url.Replace("<ADDRESS>", zipcode);
+	// geocode zip to lat/lon
+	double lat = 0, lon = 0;
+	if (!GeoTools::GeocodeDeveloper(zipcode, &lat, &lon)) {
+		if (err) *err = wxString::Format("Could not get lat/lon for zipcode = %d" + zipcode);
+		return false;
+	}
+	 
+	// NREL Developer API to list utility companies by lat/lon https://developer.nrel.gov/docs/electricity/utility-rates-v3/
+	wxString url = SamApp::WebApi("urdb_companies_by_lat_lon");
+	url.Replace("<LAT>", wxString::Format("%f",lat));
+	url.Replace("<LON>", wxString::Format("%f",lon));
 
 	wxString json_data = MyGet(url);
 	if (json_data.IsEmpty())
 	{
-		if (err) *err = "Web API call to urdb_companies_by_zip returned empty JSON for zip code = " + zipcode + ".";
+		if (err) *err = wxString::Format("Web API call to urdb_companies_by_lat_lon returned empty JSON for lat = %f lon = %f", lat, lon);
 		return false;
 	}
 
