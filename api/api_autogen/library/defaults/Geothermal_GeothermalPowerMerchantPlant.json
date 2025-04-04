@@ -173,6 +173,7 @@
 			"startup_frac": 0.2,
 			"startup_time": 1,
 			"stim_success_rate": 0,
+			"stimulation_type": 0,
 			"subsurface_water_loss": 2,
 			"system_use_lifetime_output": 1,
 			"temp_decline_max": 30,
