@@ -656,6 +656,14 @@ extern "C"
 	SAM_EXPORT void SAM_Geothermal_GeoHourly_stim_success_rate_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
+	 * Set stimulation_type: Which wells are stimulated [0/1/2/3]
+	 * options: 0=Injection,1=Production,2=Both,3=Neither
+	 * constraints: None
+	 * required if: ?=3
+	 */
+	SAM_EXPORT void SAM_Geothermal_GeoHourly_stimulation_type_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
 	 * Set subsurface_water_loss: Subsurface water loss [%]
 	 * options: None
 	 * constraints: None
@@ -925,6 +933,8 @@ extern "C"
 
 	SAM_EXPORT double SAM_Geothermal_GeoHourly_stim_success_rate_nget(SAM_table ptr, SAM_error *err);
 
+	SAM_EXPORT double SAM_Geothermal_GeoHourly_stimulation_type_nget(SAM_table ptr, SAM_error *err);
+
 	SAM_EXPORT double SAM_Geothermal_GeoHourly_subsurface_water_loss_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Geothermal_GeoHourly_system_use_lifetime_output_nget(SAM_table ptr, SAM_error *err);
@@ -1013,7 +1023,13 @@ extern "C"
 
 	SAM_EXPORT double SAM_Geothermal_Outputs_num_wells_getem_inj_nget(SAM_table ptr, SAM_error *err);
 
+	SAM_EXPORT double SAM_Geothermal_Outputs_num_wells_getem_inj_drilled_nget(SAM_table ptr, SAM_error *err);
+
 	SAM_EXPORT double SAM_Geothermal_Outputs_num_wells_getem_output_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Geothermal_Outputs_num_wells_getem_prod_drilled_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Geothermal_Outputs_num_wells_getem_prod_failed_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Geothermal_Outputs_plant_brine_eff_nget(SAM_table ptr, SAM_error *err);
 

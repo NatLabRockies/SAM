@@ -43,6 +43,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <ssc/cmod_pvsamv1_eqns.h>
 #include <ssc/cmod_merchantplant_eqns.h>
 #include <ssc/cmod_analysisperiodchange_eqns.h>
+#include <ssc/cmod_geothermal_costs_eqns.h>
 
 #include "SAM_api.h"
 #include "SAM_eqns.h"
@@ -76,5 +77,11 @@ SAM_EXPORT void SAM_analysisperiodchange_eqn(ssc_data_t data, SAM_error* err) {
 SAM_EXPORT void SAM_Reopt_size_standalone_battery_post_eqn(ssc_data_t data, SAM_error* err) {
     translateExceptions(err, [&] {
         Reopt_size_standalone_battery_params(data);
+        });
+}
+
+SAM_EXPORT void SAM_getem_om_cost_calc_eqn(SAM_table data, SAM_error* err) {
+    translateExceptions(err, [&] {
+        getem_om_cost_calc(data);
         });
 }

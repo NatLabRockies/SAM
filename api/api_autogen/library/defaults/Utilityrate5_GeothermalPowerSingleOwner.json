@@ -1,7 +1,7 @@
 {
 	"defaults": {
 		"Lifetime": {
-			"analysis_period": 25,
+			"analysis_period": 30,
 			"inflation_rate": 2.5,
 			"system_use_lifetime_output": 1
 		},
