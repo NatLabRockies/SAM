@@ -268,10 +268,24 @@ bool OpenEI::QueryUtilityCompanies(wxArrayString &names, wxString *err)
 
 bool OpenEI::QueryUtilityCompaniesbyZipcode(const wxString &zipcode, wxArrayString &names, wxString *err)
 {
+
+	names.Clear();
+
+	int zip = 0;
+
+	if (!zipcode.ToInt(&zip)) {
+		if (err) *err = wxString::Format("Invalid zipcode = %s. Zipcode must be an integer.", zipcode);
+		return false;
+	}
+	else if (zip <= 500 || zip > 99950) {
+		if (err) *err = wxString::Format("Invalid zipcode = %d. Zipcode must be a five-digit number between 00500 and 99950.", zip);
+		return false;
+	} 	
+	
 	// geocode zip to lat/lon
 	double lat = 0, lon = 0;
 	if (!GeoTools::GeocodeDeveloper(zipcode, &lat, &lon)) {
-		if (err) *err = wxString::Format("Could not get lat/lon for zipcode = %d" + zipcode);
+		if (err) *err = wxString::Format("Could not get lat/lon for zipcode = %d." + zipcode);
 		return false;
 	}
 	 
@@ -283,7 +297,7 @@ bool OpenEI::QueryUtilityCompaniesbyZipcode(const wxString &zipcode, wxArrayStri
 	wxString json_data = MyGet(url);
 	if (json_data.IsEmpty())
 	{
-		if (err) *err = wxString::Format("Web API call to urdb_companies_by_lat_lon returned empty JSON for lat = %f lon = %f", lat, lon);
+		if (err) *err = wxString::Format("Web API call to urdb_companies_by_lat_lon returned empty JSON for lat = %f lon = %f.", lat, lon);
 		return false;
 	}
 
@@ -295,7 +309,7 @@ bool OpenEI::QueryUtilityCompaniesbyZipcode(const wxString &zipcode, wxArrayStri
 
 	if (reader.HasParseError())
 	{
-		if (err) *err = wxString::Format("Could not parse JSON for zipcode = %s.\nRapidJSON ParseErrorCode = %d", zipcode, reader.GetParseError());;
+		if (err) *err = wxString::Format("Could not parse JSON for zipcode = %s.\nRapidJSON ParseErrorCode = %d.", zipcode, reader.GetParseError());;
 		return false;
 	}
 
@@ -312,7 +326,7 @@ bool OpenEI::QueryUtilityCompaniesbyZipcode(const wxString &zipcode, wxArrayStri
 	}
 	if (company_id.IsEmpty())
 	{
-		if (err) *err = "JSON returned by web API call to urdb_companies_by_zip returned empty company_id for zip code =" + zipcode + ".";
+		if (err) *err = wxString::Format("JSON returned by urdb_companies_by_zip API returned empty company_id for zip code = %s.", zipcode);
 		return false;
 	}
 
@@ -326,18 +340,16 @@ bool OpenEI::QueryUtilityCompaniesbyZipcode(const wxString &zipcode, wxArrayStri
     json_data = MyGet(url);
 	if (json_data.IsEmpty())
 	{
-		if (err) *err = "URDB ask for query by zip returned empty JSON for EIAID = " + company_id + ".";
+		if (err) *err = wxString::Format("URDB ask for query by zip returned empty JSON for EIAID = %s.", company_id);
 		return false;
 	}
 
 	reader.Parse(json_data.c_str());
 	if (reader.HasParseError())
 	{
-		if (err) *err = wxString::Format("URDB ask for query by zip: Failed to parse JSON for EIAID = %s\nRapidJSON ParseErrorCode = %d", company_id, reader.GetParseError());
+		if (err) *err = wxString::Format("URDB ask for query by zip: Failed to parse JSON for EIAID = %s\nRapidJSON ParseErrorCode = %d.", company_id, reader.GetParseError());
 		return false;
 	}
-
-	names.Clear();
 
 	if (reader.HasMember(L"results")) {
 		if (reader[L"results"].IsObject()) {
