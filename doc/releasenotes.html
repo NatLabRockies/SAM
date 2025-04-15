@@ -78,14 +78,13 @@ CATEGORY FOR MAINTENANCE UPDATES: General, Solar, etc.
 
 -->
 
-<h1 id="2025-4-7">**DRAFT** SAM 2025.4.16, SSC 302: April 16, 2025</h1>
+<h1 id="2025-4-7">SAM 2025.4.16, SSC 302: April 16, 2025</h1>
 
 <p>This version updates the geothermal power model with more drilling cost detail, improved capital and O&M cost models, and improved PySAM geothermal functionality. It also adds an option for a counterflow heat exchanger to SAM's Industrial Process Heat (IPH) models for a more realistic representation of the thermal load, and includes several improvements to the battery dispatch and degradation calculations, including a new option to allow the battery to discharge to grid for retail rates dispatch, among other improvements and bug fixes.</p>
 
 <p>For a complete list of code revisions associated with this version, see the <a href="https://github.com/NREL/SAM/pulls?q=is%3Apr+milestone%3A%22SAM+Spring+2025+Release%22+is%3Aclosed">SAM</a> and <a href="https://github.com/NREL/ssc/pulls?q=is%3Apr+milestone%3A%22SAM+Spring+2025+Release%22+is%3Aclosed">SSC</a> GitHub repositories.  Highlights include:</p>
 
-
-<h2>General (SAM 2025.4.7)</h2>
+<h2>General (SAM 2025.4.16)</h2>
 
 <p>Update API call for electricity rate download-by-zip-code option. API now requires geocoding zip code to latitude/longitude before API call. (<a href="https://github.com/NREL/SAM/pull/2053">SAM 2053</a>)</p>
 
@@ -95,7 +94,7 @@ CATEGORY FOR MAINTENANCE UPDATES: General, Solar, etc.
 
 <p>Add support for unicode characters in LK 'isdigit()', 'isalpha()', and 'isalnum()' functions. (<a href="https://github.com/NREL/lk/pull/54">LK 54</a>)</p>
 
-<h2>Geothermal Power (SAM 2025.4.7)</h2>
+<h2>Geothermal Power (SAM 2025.4.16)</h2>
 
 <p>Reorganize and clean up geothermal cost inputs. (<a href="https://github.com/NREL/SAM/pull/2045">SAM 2045</a>)</p>
 
@@ -103,7 +102,7 @@ CATEGORY FOR MAINTENANCE UPDATES: General, Solar, etc.
 
 <p>Convert stimulation cost per well from input to calculated value. (<a href="https://github.com/NREL/SAM/pull/2063">SAM 2063</a></p>
 
-<h2>Photovoltaics (SAM 2025.4.7)</h2>
+<h2>Photovoltaics (SAM 2025.4.16)</h2>
 
 <p><em>The changes in this section apply to Detailed PV, PVWatts, PV-battery, and hybrid configurations with PV.</em></p>
 
@@ -115,7 +114,7 @@ CATEGORY FOR MAINTENANCE UPDATES: General, Solar, etc.
 
 <p>Remove error messages about bifacial modules and one-axis tracking. (<a href="https://github.com/NREL/ssc/pull/1311">SAM 1311</a>)</p>
 
-<h2>Detailed PV (SAM 2025.4.7)</h2>
+<h2>Detailed PV (SAM 2025.4.16)</h2>
 
 <p>Enable power consumption during operation for Inverter Datasheet option when weighted efficiency option is used. (<a href="https://github.com/NREL/SAM/pull/2066">SAM 2066</a>)</p>
 
@@ -123,7 +122,7 @@ CATEGORY FOR MAINTENANCE UPDATES: General, Solar, etc.
 
 <p>Revise PDF report template to show module type instead of a number. Applies to Detailed PV and PV-Battery only. (<a href="https://github.com/NREL/SAM/pull/2001">SAM 2001</a>)</p>
 
-<h2>Concentrating Solar Power (CSP) (SAM 2025.4.7)</h2>
+<h2>Concentrating Solar Power (CSP) (SAM 2025.4.16)</h2>
 
 <p>Add two new SENER collectors to collector library for physical trough model. (<a href="https://github.com/NREL/SAM/pull/2029">SAM 2029 </a>)</p>
 	 
@@ -131,15 +130,15 @@ CATEGORY FOR MAINTENANCE UPDATES: General, Solar, etc.
 
 <p>Fix boundary condition equations for packed bed TES model. Fix reporting unit bug for packed bed outputs. (<a href="https://github.com/NREL/ssc/pull/1312">SSC 1312</a>)</p>
 
-<h2>Industrial Process Heat (IPH) (SAM 2025.4.7)</h2>
+<h2>Industrial Process Heat (IPH) (SAM 2025.4.16)</h2>
 
 <p>Add counterflow heat exchanger option to model heat transfer between the heat transfer fluid and steam heat sink. (<a href="https://github.com/NREL/SAM/pull/2002">SAM 2002</a>, <a href="https://github.com/NREL/ssc/pull/1274">SSC 1274</a>)</p> 
 
 <p>Update default solar field temperatures for IPH Parabolic Trough configurations for oil field HTF and salt storage fluid. (<a href="https://github.com/NREL/SAM/pull/1992">SAM 1992</a>)</p>
 
-<p>Add new input for over-design mass flow rate. (<a href="https://github.com/NREL/SAM/pull/2046">SAM 2046</a>,(<a href="https://github.com/NREL/ssc/pull/1308">SSC 1308</a></p>
+<p>Add new input for over-design mass flow rate. (<a href="https://github.com/NREL/SAM/pull/2046">SAM 2046</a>,(<a href="https://github.com/NREL/ssc/pull/1308">SSC 1308</a>)</p>
 
-<h2>Electric Battery Storage (SAM 2025.4.7)</h2>
+<h2>Electric Battery Storage (SAM 2025.4.16)</h2>
 
 <p>Fix UI checks for critical load length to work with Custom Generation Battery configurations. (<a href="https://github.com/NREL/SAM/pull/2049">SAM 2049</a>)</p>
 
@@ -159,7 +158,7 @@ CATEGORY FOR MAINTENANCE UPDATES: General, Solar, etc.
 
 <p>Improve error handling of forecast price signals object to prevent SSC crashes for SAM Software Development Kit (SDK), PySAM, and gtest. (<a href="https://github.com/NREL/ssc/pull/1288">SAM 1288</a>)</p>
 
-<h2>Marine Energy (SAM 2025.4.7)</h2>
+<h2>Marine Energy (SAM 2025.4.16)</h2>
 
 <p>Update cost curves. (<a href="https://github.com/NREL/SAM/pull/2043">SAM 2043</a>)</p>
 
@@ -167,15 +166,15 @@ CATEGORY FOR MAINTENANCE UPDATES: General, Solar, etc.
 
 <p>Add cost curve for RM2 wave energy converter. (<a href="https://github.com/NREL/ssc/pull/1305">SSC 1305</a>)
 
-<h2>Wind Power (SAM 2025.4.7)</h2>
+<h2>Wind Power (SAM 2025.4.16)</h2>
 
 <p>Fix double-counting of time series adjustment factors. (<a href="https://github.com/NREL/ssc/pull/1284">SAM 1284</a>)</p>
 
-<h2>Custom Generation Profile (SAM 2025.4.7)</h2>
+<h2>Custom Generation Profile (SAM 2025.4.16)</h2>
 
 <p>Fix problem with combining generation profiles from cases with different weather file time steps. (<a href="https://github.com/NREL/SAM/pull/2012">SAM 2012</a>)</p>
 
-<h2>Financial Models (SAM 2025.4.7)</h2>
+<h2>Financial Models (SAM 2025.4.16)</h2>
 
 <p>Provide feedback for behind-the-meter (BTM) with billing demand enabled when "Included in Billing Demand" is zero for all periods. (<a href="https://github.com/NREL/ssc/pull/1293">SSC 1293</a>)</p>
 
@@ -183,7 +182,7 @@ CATEGORY FOR MAINTENANCE UPDATES: General, Solar, etc.
 
 <p>Add missing fuel cell O&M cost line item to cashflow and fix Send-to-Excel with Equations callback error for Fuel Cell / Commercial configuration. (<a href="https://github.com/NREL/SAM/pull/1995">SAM 1995</a>)</p>
 
-<h2>Hybrid Systems (SAM 2025.4.7)</h2>
+<h2>Hybrid Systems (SAM 2025.4.16)</h2>
 
 <p>Fix "Apply values from library" button for time-of-delivery (TOD) factors on Revenue input page. (<a href="https://github.com/NREL/SAM/pull/1999">SAM 1999</a>)</p>
 
