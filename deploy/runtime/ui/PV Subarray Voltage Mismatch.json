@@ -1,6 +1,6 @@
 {
     "Name": "PV Subarray Voltage Mismatch",
-    "Width": 873.0,
+    "Width": 1010.0,
     "Height": 186.0,
     "FormObjects": {
         "Label": {
@@ -185,7 +185,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 861.0
+                    "Integer": 1000.0
                 },
                 "Height": {
                     "Type": 3.0,

@@ -1,7 +1,7 @@
 {
     "Name": "PV Land Area",
-    "Width": 883.0,
-    "Height": 252.0,
+    "Width": 1013.0,
+    "Height": 254.0,
     "FormObjects": {
         "Label": {
             "Visible": 1.0,
@@ -256,7 +256,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 872.0
+                    "Integer": 1000.0
                 },
                 "Height": {
                     "Type": 3.0,
