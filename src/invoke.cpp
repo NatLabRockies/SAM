@@ -3794,19 +3794,32 @@ static bool copy_mat(lk::invoke_t &cxt, wxString sched_name, matrix_t<double> &m
 	return true;
 }
 
-void fcall_geocode(lk::invoke_t& cxt) 
+void fcall_geocode(lk::invoke_t& cxt)
 {
 	LK_DOC("geocode",
-		"Given a street address or location name, returns latitude, longitude, and time zone. Not designed to take latitude and longitude as input. Uses the MapQuest Geocoding API via a private NREL wrapper. Returned table fields are 'lat', 'lon', 'tz', 'ok'.",
+		"Given a street address or location name, returns latitude, longitude. Returns optional time zone if get_tz is set to true. Not designed to take latitude and longitude as input. Uses the MapQuest Geocoding API via a private NREL wrapper. Returned table fields are 'lat', 'lon', 'tz', 'ok'.",
 		"(string):table");
 
-	double lat = 0, lon = 0, tz = 0;
-	// use GeoTools::GeocodeGoogle for non-NREL builds and set google_api_key in private.h
-	bool ok = GeoTools::GeocodeDeveloper(cxt.arg(0).as_string(), &lat, &lon, &tz);
+	bool get_tz = false;
+	if (cxt.arg_count() > 1) {
+		get_tz = cxt.arg(1).as_boolean();
+	}
+
+	double lat=NULL, lon=NULL, tz=NULL;
+	bool ok = false;
 	cxt.result().empty_hash();
+
+	// use GeoTools::GeocodeGoogle for non-NREL builds and set google_api_key in private.h
+ 	if (get_tz) {
+		ok = GeoTools::GeocodeDeveloper(cxt.arg(0).as_string(), &lat, &lon, &tz);
+		cxt.result().hash_item("tz").assign(tz); // converts NULL to 0
+	}
+	else {
+		ok = GeoTools::GeocodeDeveloper(cxt.arg(0).as_string(), &lat, &lon);
+	}
+	
 	cxt.result().hash_item("lat").assign(lat);
 	cxt.result().hash_item("lon").assign(lon);
-	cxt.result().hash_item("tz").assign(tz);
 	cxt.result().hash_item("ok").assign(ok ? 1.0 : 0.0);
 }
 
