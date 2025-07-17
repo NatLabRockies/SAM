@@ -3797,8 +3797,8 @@ static bool copy_mat(lk::invoke_t &cxt, wxString sched_name, matrix_t<double> &m
 void fcall_geocode(lk::invoke_t& cxt)
 {
 	LK_DOC("geocode",
-		"Given a street address or location name, returns latitude, longitude. Returns optional time zone if get_tz is set to true. Not designed to take latitude and longitude as input. Uses the MapQuest Geocoding API via a private NREL wrapper. Returned table fields are 'lat', 'lon', 'tz', 'ok'.",
-		"(string):table");
+		"Given a street address or location name, returns latitude, longitude. Returns optional time zone if get_tz is true. Not designed to take latitude and longitude as input. Uses the MapQuest Geocoding API via a private NREL wrapper. Returned table fields are 'lat', 'lon', 'tz', 'ok'.",
+		"(string:location, [boolean:get_tz]):table");
 
 	bool get_tz = false;
 	if (cxt.arg_count() > 1) {
