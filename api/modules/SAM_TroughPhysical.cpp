@@ -6898,6 +6898,16 @@ SAM_EXPORT double* SAM_TroughPhysical_Outputs_rec_op_mode_final_aget(SAM_table p
 	return result;
 }
 
+SAM_EXPORT double* SAM_TroughPhysical_Outputs_rec_time_in_startup_aget(SAM_table ptr, int* length, SAM_error *err){
+	double* result = nullptr;
+	translateExceptions(err, [&]{
+	result = ssc_data_get_array(ptr, "rec_time_in_startup", length);
+	if (!result)
+		make_access_error("SAM_TroughPhysical", "rec_time_in_startup");
+	});
+	return result;
+}
+
 SAM_EXPORT double* SAM_TroughPhysical_Outputs_recirculating_aget(SAM_table ptr, int* length, SAM_error *err){
 	double* result = nullptr;
 	translateExceptions(err, [&]{

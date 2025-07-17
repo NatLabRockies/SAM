@@ -37,6 +37,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <wx/statline.h>
 #include <wx/tokenzr.h>
 #include <wx/dir.h>
+#include <wx/gdicmn.h>
 
 #include <wex/exttree.h>
 #include <wex/exttext.h>
@@ -65,6 +66,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "macro.h"
 
 #include "../resource/graph.cpng"
+#include "../resource/notes.cpng"
+
 
 class CollapsePaneCtrl : public wxPanel
 {
@@ -147,16 +150,11 @@ BEGIN_EVENT_TABLE( CaseWindow, wxSplitterWindow )
 	EVT_LISTBOX( ID_INPUTPAGELIST, CaseWindow::OnCommand )
     EVT_DATAVIEW_SELECTION_CHANGED(ID_TechTree, CaseWindow::OnTree)
 	EVT_DATAVIEW_ITEM_COLLAPSING(ID_TechTree, CaseWindow::OnTreeCollapsing)
-
-//    EVT_DATAVIEW_ITEM_START_EDITING(ID_TechTree, CaseWindow::OnTreeActivated)
-//    EVT_DATAVIEW_ITEM_ACTIVATED(ID_TechTree, CaseWindow::OnTreeActivated)
-    //EVT_LISTBOX( ID_TechTree, CaseWindow::OnCommand)
 	EVT_BUTTON( ID_EXCL_BUTTON, CaseWindow::OnCommand )
     EVT_LISTBOX( ID_EXCL_RADIO, CaseWindow::OnCommand)
 	EVT_CHECKBOX( ID_COLLAPSE, CaseWindow::OnCommand )
 	EVT_MENU_RANGE( ID_EXCL_OPTION, ID_EXCL_OPTION_MAX, CaseWindow::OnCommand )
 	EVT_LISTBOX( ID_EXCL_TABLIST, CaseWindow::OnCommand )
-
 	EVT_NOTEBOOK_PAGE_CHANGED( ID_PAGES, CaseWindow::OnSubNotebookPageChanged )
 	EVT_NOTEBOOK_PAGE_CHANGED( ID_BASECASE_PAGES, CaseWindow::OnSubNotebookPageChanged )
 END_EVENT_TABLE()
@@ -177,7 +175,7 @@ CaseWindow::CaseWindow( wxWindow *parent, Case *c )
 	wxFont lafont(*wxNORMAL_FONT);
 	lafont.SetWeight(wxFONTWEIGHT_BOLD);
 
-	m_pageNote = 0;
+	m_pageNote = new PageNote(this); // create page note before m_pageFlipper adds pages
 	m_currentGroup = 0;
 
 	// navigation menu objects
@@ -297,8 +295,6 @@ CaseWindow::CaseWindow( wxWindow *parent, Case *c )
 	SetMinimumPaneSize( 50 );
 	SplitVertically( m_left_panel, m_pageFlipper, (int)(210*xScale) );
 	
-	m_pageNote = new PageNote( this );
- 
 	// load page note window geometry
 	int nw_xrel, nw_yrel, nw_w, nw_h;
 	double sf = wxGetScreenHDScale();
@@ -637,6 +633,8 @@ bool CaseWindow::GenerateReport( wxString pdffile, wxString templfile, VarValue 
 
 void CaseWindow::OnTree(wxDataViewEvent &evt)
 {
+	UpdateNotesIcon(); // when leaving a page and notes erased
+
 	m_pageFlipper->SetSelection(0);
 	wxDataViewItem dvi = evt.GetItem();
 	if (!dvi.IsOk())
@@ -660,10 +658,30 @@ void CaseWindow::OnTree(wxDataViewEvent &evt)
 	else {
 		m_currentSelection = evt.GetItem();
 	}
+
+	/*
+	if (HasPageNote(GetCurrentContext())) {
+		m_navigationMenu->SetItemIcon(m_currentSelection, wxBitmapBundle::FromBitmap(wxBITMAP_PNG_FROM_DATA(notes)));
+		//m_navigationMenu->im // TODO set images and override onImagesChanged method to show notes icon
+		m_navigationMenu->Refresh();
+	}
+	// update all navigation items note icon
+	m_navigationMenu->get
+	auto bmb = wxBitmapBundle::FromBitmap(wxBITMAP_PNG_FROM_DATA(notes));
+	for (size_t i = 0; i < m_pageGroups.size(); i++)
+		if (HasPageNote(m_pageGroups[i]->HelpContext)
+			m_currentGroup = m_pageGroups[i];
+
+	*/
+
+
 	wxString title = m_navigationMenu->GetItemText(m_currentSelection);
 	m_navigationMenu->SetFocus();
 	SwitchToInputPage(title);
 
+	m_left_panel->Layout(); // Issue 1552
+//	wxVariant x = wxDataViewIconText("text", wxBitmapBundle::FromBitmap(wxBITMAP_PNG_FROM_DATA(notes)));
+//	m_navigationMenu->SetItemData(m_currentSelection,(wxClientData*) & x);
 }
 
 void CaseWindow::OnTreeCollapsing(wxDataViewEvent& evt)
@@ -1076,7 +1094,7 @@ bool CaseWindow::SwitchToInputPage( const wxString &name )
 	wxBusyCursor wait;
 //	m_inputPagePanel->Freeze();
 
-	//DetachCurrentInputPage();
+//	DetachCurrentInputPage();
 
 	m_currentGroup = 0;
 	for( size_t i=0;i<m_pageGroups.size();i++ )
@@ -1100,6 +1118,8 @@ bool CaseWindow::SwitchToInputPage( const wxString &name )
 //	if ( m_inputPageList->GetStringSelection() != name )
 	int p = m_inputPageList->Find(name);
 	m_inputPageList->Select( p );
+	m_inputPageList->Refresh();
+	m_left_panel->Layout();// try to force onPaint call for the input page list
 
 	return true;
 }
@@ -1469,7 +1489,7 @@ void CaseWindow::UpdateConfiguration()
     if (cfg->TechnologyFullName.Contains("Generic")) return; //if generic get out of the loop
     
 	wxDataViewItem dvi = m_navigationMenu->GetNthChild(wxDataViewItem(0), 0);
-	if (m_navigationMenu->IsContainer(dvi)) {
+	if (dvi.IsOk() && m_navigationMenu->IsContainer(dvi)) {
 		dvi = m_navigationMenu->GetNthChild(dvi, 0);
 	}
 
@@ -1479,7 +1499,7 @@ void CaseWindow::UpdateConfiguration()
 	}
 
 	// check for orphaned notes and if any found add to first page per Github issue 796
-	CheckAndUpdateNotes(inputPageHelpContext);
+//	CheckAndUpdateNotes(inputPageHelpContext);
 
 	m_szsims->Clear(true);
 	if (m_case->GetTechnology().Contains("wave") || m_case->GetTechnology().Contains("tidal")) {
@@ -1577,11 +1597,55 @@ void CaseWindow::UpdatePageNote()
 	// update ID
 	m_lastPageNoteId = GetCurrentContext();
 
-	// update text on page note
+		// update text on page note
 	wxString text = m_case->RetrieveNote( m_lastPageNoteId );
 	m_pageNote->SetText(text);
-	m_pageNote->Show( SamApp::Window()->GetCurrentCaseWindow() == this && !text.IsEmpty() );
+
+	bool bShowNote = SamApp::Window()->GetCurrentCaseWindow() == this && !text.IsEmpty();
+
+	m_pageNote->Show( bShowNote );
+
+	UpdateNotesIcon();
 }
+
+void CaseWindow::UpdateNotesIcon()
+{
+	wxDataViewModel* model = m_navigationMenu->GetModel();
+	if (!model)
+		return;
+
+	// Get the invisible root item
+	wxDataViewItem root = model->GetParent(wxDataViewItem(nullptr)); 
+
+	// Start iteration (depth-first traversal shown)
+	UpdateNotesIconChildren(model, root);
+}
+
+void CaseWindow::UpdateNotesIconChildren(wxDataViewModel* model, const wxDataViewItem& parent)
+{
+	wxDataViewItemArray children;
+	model->GetChildren(parent, children);
+	for (const wxDataViewItem& child : children) {
+		// Check if the child item has a note
+		bool bShowNote = false;
+		for (auto pg : m_pageGroups) {
+			if (pg->SideBarLabel == m_navigationMenu->GetItemText(child))
+				bShowNote = HasPageNote(pg->HelpContext);
+		}
+
+		if (bShowNote) {
+			m_navigationMenu->SetItemIcon(child, wxBitmapBundle::FromBitmap(wxBITMAP_PNG_FROM_DATA(notes)));
+		}
+		else {
+			m_navigationMenu->SetItemIcon(child, wxNullBitmap);
+		}
+		// Recursively check its children if it's a container
+		if (model->IsContainer(child)) {
+			UpdateNotesIconChildren(model, child);
+		}
+	}
+}
+
 
 void CaseWindow::ShowPageNote()
 {
@@ -1600,7 +1664,7 @@ bool CaseWindow::HasPageNote(const wxString &id)
 	return !id.IsEmpty() && !m_case->RetrieveNote(id).IsEmpty();
 }
 
-void CaseWindow::OnSubNotebookPageChanged( wxNotebookEvent & )
+void CaseWindow::OnSubNotebookPageChanged( wxNotebookEvent &evt )
 {
 	// common event handler for notebook page events to update the page note
 	UpdatePageNote();

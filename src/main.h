@@ -102,6 +102,8 @@ public:
 	void DeleteCaseWindow( Case *c );
 	bool SwitchToCaseWindow( const wxString &name );
 
+	void UpdateAllPageNotes();
+
 	bool LoadProject( const wxString &file );
 	bool SaveProject( const wxString &file );
 

@@ -2655,6 +2655,8 @@ extern "C"
 
 	SAM_EXPORT double* SAM_FresnelPhysical_Outputs_rec_thermal_eff_aget(SAM_table ptr, int* length, SAM_error *err);
 
+	SAM_EXPORT double* SAM_FresnelPhysical_Outputs_rec_time_in_startup_aget(SAM_table ptr, int* length, SAM_error *err);
+
 	SAM_EXPORT double* SAM_FresnelPhysical_Outputs_recirculating_aget(SAM_table ptr, int* length, SAM_error *err);
 
 	SAM_EXPORT double* SAM_FresnelPhysical_Outputs_rh_aget(SAM_table ptr, int* length, SAM_error *err);
