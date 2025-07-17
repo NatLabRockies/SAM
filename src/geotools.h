@@ -51,7 +51,7 @@ public:
         double* lat, double* lon, double* tz = 0, bool showprogress = true);
 
     enum MapProvider {
-        GOOGLE_MAPS, BING_MAPS
+        GOOGLE_MAPS, AZURE_MAPS
     };
 
     // Return a map for a given lat/lon and zoom level as a bitmap image
