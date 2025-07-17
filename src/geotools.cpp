@@ -279,9 +279,9 @@ bool GeoTools::GeocodeDeveloper(const wxString& address, double* lat, double* lo
         if (reader.HasMember(L"error")) {
             if (reader[L"error"].HasMember(L"code")) {
                 if (reader[L"error"][L"code"].IsString()) {
-                    wxString str = reader[L"error"][L"code"].GetString();
-                    if (str.Lower() != "") {
-                        wxMessageBox(wxString::Format("Time Zone API Error!\n%s", str));
+                    wxString error_str = reader[L"error"][L"code"].GetString();
+                    if (error_str.Lower() != "") {
+                        wxMessageBox(wxString::Format("Time Zone API Error!\n%s", error_str));
                         return false;
                     } 
                 }
