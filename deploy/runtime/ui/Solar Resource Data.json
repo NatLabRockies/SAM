@@ -3841,8 +3841,6 @@
         "\t\t{\r",
         "\t\t\tlocation = loc_test.address;\r",
         "\t\t\tg = geocode( location );\r",
-        "\t\t\t// sometimes correct address fails but works on second try\r",
-        "\t\t\tif ( !g.ok ) { g = geocode( location ); }\r",
         "\t\t\tif ( g.ok ) \r",
         "\t\t\t{\r",
         "\t\t\t\tlat = g.lat;\r",
