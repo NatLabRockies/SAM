@@ -3805,7 +3805,9 @@ void fcall_geocode(lk::invoke_t& cxt)
 		get_tz = cxt.arg(1).as_boolean();
 	}
 
-	double lat=NULL, lon=NULL, tz=NULL;
+	double lat = std::numeric_limits<double>::quiet_NaN();
+	double lon = std::numeric_limits<double>::quiet_NaN();
+	double tz = std::numeric_limits<double>::quiet_NaN();
 	bool ok = false;
 	cxt.result().empty_hash();
 
