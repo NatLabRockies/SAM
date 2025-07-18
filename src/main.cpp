@@ -1657,7 +1657,7 @@ bool InputPageData::Write_JSON(const std::string& file, wxString& ui_path)
 	Write_JSON(doc, ui_path);
 
 	rapidjson::StringBuffer os;
-	rapidjson::PrettyWriter<rapidjson::StringBuffer> writer(os);
+	rapidjson::PrettyWriter<rapidjson::StringBuffer, rapidjson::UTF8<char>, rapidjson::UTF8<char>, rapidjson::CrtAllocator, rapidjson::kWriteNanAndInfFlag> writer(os);
 	doc.Accept(writer);
 
 	if (doc.HasParseError()) {

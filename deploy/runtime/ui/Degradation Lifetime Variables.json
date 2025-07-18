@@ -1,8 +1,70 @@
 {
     "Name": "Degradation Lifetime Variables",
-    "Width": 787.0,
-    "Height": 135.0,
+    "Width": 788.0,
+    "Height": 126.0,
     "FormObjects": {
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "batt_warning"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 438.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 27.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 342.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
         "GroupBox": {
             "Visible": 1.0,
             "ObjectProperties": {
@@ -24,7 +86,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 130.0
+                    "Integer": 118.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -49,19 +111,19 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 21.0
+                    "Integer": 18.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 54.0
+                    "Integer": 57.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 760.0
+                    "Integer": 763.0
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 74.0
+                    "Integer": 56.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -160,5 +222,14 @@
         }
     },
     "Equations": [],
-    "Callbacks": []
+    "Callbacks": [
+        "on_load{'Degradation Lifetime Variables'} = define()\r",
+        "{\r",
+        "\tif ( technology() == 'PV Battery' ) { \r",
+        "\t\tenable('save_full_lifetime_variables', 0); \r",
+        "\t\tproperty('batt_warning',\r",
+        "\t\t'Caption',\"This option must be enabled for PV Battery configurations.\");\r",
+        "\t}\r",
+        "};"
+    ]
 }

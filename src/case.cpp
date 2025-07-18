@@ -613,7 +613,6 @@ bool Case::SaveDefaults(bool quiet)
 
 
     rapidjson::StringBuffer os;
-//	rapidjson::PrettyWriter<rapidjson::StringBuffer> writer(os); // MSPT/MP 64MB JSON, 6.7MB txt, JSON Zip 242kB
 	rapidjson::PrettyWriter<rapidjson::StringBuffer, rapidjson::UTF8<char>, rapidjson::UTF8<char>, rapidjson::CrtAllocator, rapidjson::kWriteNanAndInfFlag> writer(os); // MSPT/MP 64MB JSON, 6.7MB txt, JSON Zip 242kB
 	doc.Accept(writer);
     wxString sfn = file;
@@ -683,7 +682,7 @@ bool Case::SaveAsSSCJSON(wxString filename)
 	doc.Parse(json_string);
 
 	rapidjson::StringBuffer os;
-	rapidjson::PrettyWriter<rapidjson::StringBuffer> writer(os);
+	rapidjson::PrettyWriter<rapidjson::StringBuffer, rapidjson::UTF8<char>, rapidjson::UTF8<char>, rapidjson::CrtAllocator, rapidjson::kWriteNanAndInfFlag> writer(os); 
 	doc.Accept(writer);
 	wxFFileOutputStream out(filename);
 	out.Write(os.GetString(), os.GetSize());
