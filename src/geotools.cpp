@@ -378,7 +378,7 @@ wxBitmap GeoTools::StaticMap(double lat, double lon, int zoom, MapProvider servi
             return wxNullBitmap;
         }
         wxMessageBox(wxString::Format("Static Map Error!\nNo map image."));
-        return false;
+        return wxNullBitmap;
     }
     else {
         return ok ? wxBitmap(curl.GetDataAsImage(wxBITMAP_TYPE_PNG)) : wxNullBitmap;
