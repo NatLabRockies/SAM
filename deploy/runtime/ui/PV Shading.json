@@ -1,7 +1,7 @@
 {
     "Name": "PV Shading",
-    "Width": 1039.0,
-    "Height": 918.0,
+    "Width": 1036.0,
+    "Height": 927.0,
     "FormObjects": {
         "GroupBox": {
             "Visible": 1.0,
@@ -743,7 +743,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 126.0
+                    "Integer": 27.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1364,15 +1364,15 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 732.0
+                    "Integer": 885.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 831.0
+                    "Integer": 834.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 126.0
+                    "Integer": 125.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -1427,11 +1427,11 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 855.0
+                    "Integer": 834.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 126.0
+                    "Integer": 225.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -1460,15 +1460,15 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 732.0
+                    "Integer": 885.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 858.0
+                    "Integer": 888.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 126.0
+                    "Integer": 125.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -1519,15 +1519,15 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 432.0
+                    "Integer": 429.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 831.0
+                    "Integer": 888.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 228.0
+                    "Integer": 350.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -1560,15 +1560,15 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 912.0
+                    "Integer": 885.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 834.0
+                    "Integer": 861.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 90.0
+                    "Integer": 125.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -1880,7 +1880,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 120.0
+                    "Integer": 162.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -2252,11 +2252,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 561.0
+                    "Integer": 429.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 855.0
+                    "Integer": 861.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -5287,7 +5287,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 126.0
+                    "Integer": 27.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -5295,7 +5295,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 222.0
+                    "Integer": 288.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -5311,7 +5311,7 @@
                 },
                 "Items": {
                     "Type": 6.0,
-                    "StringList": "Enter my own hourly snow data|Use snow data from weather file"
+                    "StringList": "Enter or download time series snow data|Use snow data from weather file"
                 },
                 "ShowCaptions": {
                     "Type": 2.0,
@@ -5399,7 +5399,7 @@
             "Type": 4.0,
             "Label": "Coordinates",
             "Units": "",
-            "Group": "",
+            "Group": "Shading and Snow",
             "IndexLabels": "",
             "Flags": 8.0,
             "DefaultValue": "<invalid>",
@@ -5412,7 +5412,7 @@
             "Type": 4.0,
             "Label": "Station ID:",
             "Units": "",
-            "Group": "",
+            "Group": "Shading and Snow",
             "IndexLabels": "",
             "Flags": 8.0,
             "DefaultValue": "",
@@ -5425,7 +5425,7 @@
             "Type": 4.0,
             "Label": "Year: ",
             "Units": "",
-            "Group": "",
+            "Group": "Shading and Snow",
             "IndexLabels": "",
             "Flags": 8.0,
             "DefaultValue": "",
@@ -5452,11 +5452,11 @@
         "snow_array": {
             "Version": 4.0,
             "Type": 2.0,
-            "Label": "",
+            "Label": "Snow time series losses",
             "Units": "",
-            "Group": "",
+            "Group": "Shading and Snow",
             "IndexLabels": "",
-            "Flags": 0.0,
+            "Flags": 1.0,
             "DefaultValue": [
                 0.0
             ],
@@ -6607,11 +6607,11 @@
         "use_snow_weather_file": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "Use snow data from weather file",
             "Units": "",
-            "Group": "",
-            "IndexLabels": "",
-            "Flags": 0.0,
+            "Group": "Snow Losses",
+            "IndexLabels": "Enter or download time series snow data|Use snow data from weather file",
+            "Flags": 1.0,
             "DefaultValue": 0.0,
             "UIObject": "RadioChoice",
             "sscVariableName": "",
@@ -6823,16 +6823,15 @@
         "\t\t\t} else {\r",
         "\t\t\t\tmultiplier = mod(wfp, ts);\r",
         "\t\t\t}\r",
-        "\t\t\t\t\r",
         "\t\t\tif (multiplier != 0) {\r",
-        "\t\t\t\tmsg_snow = 'Weather file period (' + to_string(wfp) + ') does not align with snow data period (' + to_string(ts) + ')';\r",
+        "\t\t\t\tmsg_snow = 'Weather file time step (' + to_string(wfp) + ' minutes) does not align with snow data time step (' + to_string(ts) + ' minutes).';\r",
         "\t\t\t} else {\r",
         "\t\t\t\t// This condition and the preceding condition are not mutually exclusive\r",
         "\t\t\t\tif (has_negative_snow_depth()) {\r",
-        "\t\t\t\t\tmsg_snow = 'Hourly snow depth data contains negative values';\r",
+        "\t\t\t\t\tmsg_snow = 'Hourly snow depth data contains negative values.';\r",
         "\t\t\t\t}\r",
         "\t\t\t\tif (!has_positive_snow_depth()) {\r",
-        "\t\t\t\t\tmsg_snow = 'Hourly snow depth data contains no strictly positive values';\r",
+        "\t\t\t\t\tmsg_snow = 'Hourly snow depth data contains no values greater than zero.';\r",
         "\t\t\t\t}\r",
         "\t\t\t}\r",
         "\t\t }\r",
