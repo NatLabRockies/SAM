@@ -3814,7 +3814,7 @@ void fcall_geocode(lk::invoke_t& cxt)
 	// use GeoTools::GeocodeGoogle for non-NREL builds and set google_api_key in private.h
  	if (get_tz) {
 		ok = GeoTools::GeocodeDeveloper(cxt.arg(0).as_string(), &lat, &lon, &tz);
-		cxt.result().hash_item("tz").assign(tz); // converts NULL to 0
+		cxt.result().hash_item("tz").assign(tz);
 	}
 	else {
 		ok = GeoTools::GeocodeDeveloper(cxt.arg(0).as_string(), &lat, &lon);
