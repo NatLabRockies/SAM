@@ -370,9 +370,6 @@ void NOHRSCDialog::ResetAll()
 	m_links.clear();
 }
 
-
-
-
 void NOHRSCDialog::GetResources()
 {
 	// hit api with address and return available resources
@@ -447,30 +444,29 @@ bool NOHRSCDialog::DownloadNOHRSC(wxString beginYear, wxString stationID, wxStri
 	}
 	i_endHour = i_beginHour - 1;
 
+	// url data=11
+	wxString url = SamApp::WebApi("noaa_snow");
+	url.Replace("<STATION>", wxString::Format("%s", stationID));
+	url.Replace("<BEGINYEAR>", wxString::Format("%d", i_beginYear));
+	url.Replace("<BEGINMONTH>", wxString::Format("%d", i_beginEndMonth));
+	url.Replace("<BEGINHOUR>", wxString::Format("%d", i_beginHour));
+	url.Replace("<ENDYEAR>", wxString::Format("%d", i_endYear));
+	url.Replace("<ENDMONTH>", wxString::Format("%d", i_beginEndMonth));
+	url.Replace("<ENDHOUR>", wxString::Format("%d", i_endHour));
+	url.Replace("<DATA>", wxString::Format("%d", 11));
 
-	wxString url = wxString::Format(
-		wxT("https://www.nohrsc.noaa.gov/interactive/html/graph.html?station=%s&w=600&h=400&o=a&uc=0&by=%d&bm=%d&bd=1&bh=%d&ey=%d&em=%d&ed=1&eh=%d&data=11&units=1&region=us"),
-		stationID,
-		i_beginYear,
-		i_beginEndMonth,
-		i_beginHour,
-		i_endYear,
-		i_beginEndMonth, 
-		i_endHour
-	);
+	// humanUrl data=0
+	wxString humanUrl = SamApp::WebApi("noaa_snow");
+	humanUrl.Replace("<STATION>", wxString::Format("%s", stationID));
+	humanUrl.Replace("<BEGINYEAR>", wxString::Format("%d", i_beginYear));
+	humanUrl.Replace("<BEGINMONTH>", wxString::Format("%d", i_beginEndMonth));
+	humanUrl.Replace("<BEGINHOUR>", wxString::Format("%d", i_beginHour));
+	humanUrl.Replace("<ENDYEAR>", wxString::Format("%d", i_endYear));
+	humanUrl.Replace("<ENDMONTH>", wxString::Format("%d", i_beginEndMonth));
+	humanUrl.Replace("<ENDHOUR>", wxString::Format("%d", i_endHour));
+	humanUrl.Replace("<DATA>", wxString::Format("%d", 0));
 
-	wxString humanUrl = wxString::Format(
-		wxT("https://www.nohrsc.noaa.gov/interactive/html/graph.html?station=%s&w=600&h=400&o=a&uc=0&by=%d&bm=%d&bd=1&bh=%d&ey=%d&em=%d&ed=1&eh=%d&data=0&units=1&region=us"),
-		stationID,
-		i_beginYear,
-		i_beginEndMonth,
-		i_beginHour,
-		i_endYear,
-		i_beginEndMonth,
-		i_endHour
-	);
 	m_url = humanUrl;
-	//wxString fileName = wxString::Format(wxT("%s_%s"), stationID, beginYear);
 
 	bool ok = m_curl.Get(url + "&utc=false", "Download NOHRSC data", this);
 	if (!ok)
@@ -480,7 +476,7 @@ bool NOHRSCDialog::DownloadNOHRSC(wxString beginYear, wxString stationID, wxStri
 	}
 	else if (m_curl.GetDataAsString().Length() < 1000)
 	{
-		wxMessageBox("Weather file not available.\n\n" + url + "\n\n" + m_curl.GetDataAsString(), "NSRDB Download Message", wxOK, this);
+		wxMessageBox("Snow data not available.\n\n" + url + "\n\n" + m_curl.GetDataAsString(), "NOHRSC Download Message", wxOK, this);
 		return false;
 	}
 	return true;
@@ -491,7 +487,7 @@ bool NOHRSCDialog::WriteDatatoFile(wxString filePath) {
 	filePath += ".csv";
 	// if there is data present, then write it
 	if (!m_curl.WriteDataToFile(filePath)) {
-		wxMessageBox("Failed to write file.\n\n" + filePath, "NSRDB Download Message", wxOK, this);
+		wxMessageBox("Failed to write file.\n\n" + filePath, "NOHRSC Download Message", wxOK, this);
 		return false;
 	}
 	return true;
