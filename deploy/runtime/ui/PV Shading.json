@@ -1,7 +1,7 @@
 {
     "Name": "PV Shading",
-    "Width": 1036.0,
-    "Height": 927.0,
+    "Width": 1035.0,
+    "Height": 947.0,
     "FormObjects": {
         "GroupBox": {
             "Visible": 1.0,
@@ -747,7 +747,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 807.0
+                    "Integer": 834.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1364,11 +1364,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 885.0
+                    "Integer": 849.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 834.0
+                    "Integer": 861.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1423,11 +1423,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 429.0
+                    "Integer": 393.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 834.0
+                    "Integer": 861.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1460,11 +1460,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 885.0
+                    "Integer": 849.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 888.0
+                    "Integer": 915.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1519,11 +1519,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 429.0
+                    "Integer": 393.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 888.0
+                    "Integer": 915.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1539,7 +1539,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "Visit the NOHRSC Interactive Website..."
+                    "String": "Visit NOHRSC interactive website"
                 },
                 "URL": {
                     "Type": 5.0,
@@ -1560,11 +1560,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 885.0
+                    "Integer": 849.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 861.0
+                    "Integer": 888.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1631,7 +1631,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 24.0
+                    "Integer": 48.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -1639,7 +1639,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "Snow losses are caused by snow covering the array. When your weather file includes snow depth data, SAM can estimate losses due to snow.  Losses are calculated for each subarray."
+                    "String": "Snow losses are caused by snow covering the array. When snow depth data is available in the weather file or provided below, SAM can estimate these losses for each subarray. Click Edit Array to enter your own data, or click Download Snow Data to download data from the NOHRSC."
                 },
                 "TextColour": {
                     "Type": 4.0,
@@ -1880,7 +1880,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 162.0
+                    "Integer": 180.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -2252,11 +2252,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 429.0
+                    "Integer": 393.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 861.0
+                    "Integer": 888.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -4229,15 +4229,15 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 429.0
+                    "Integer": 393.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 807.0
+                    "Integer": 834.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 414.0
+                    "Integer": 612.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -5287,11 +5287,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 27.0
+                    "Integer": 42.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 834.0
+                    "Integer": 861.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -6804,9 +6804,6 @@
         "//just run this function anytime anything relevant changes",
         "function input_enabling()",
         "{\r",
-        "//'ui_step_minutes'",
-        "\t//enable_module_area = false;",
-        "\t",
         "\tmsg_snow = '';\r",
         "\tif (value('en_snow_model') ==1) {\r",
         "\t\tif (isnan(value('annual_snow')) && value('use_snow_weather_file') == 1) {\r",
@@ -6825,29 +6822,26 @@
         "\t\t\t}\r",
         "\t\t\tif (multiplier != 0) {\r",
         "\t\t\t\tmsg_snow = 'Weather file time step (' + to_string(wfp) + ' minutes) does not align with snow data time step (' + to_string(ts) + ' minutes).';\r",
-        "\t\t\t} else {\r",
+        "\t\t\t} \r",
+        "\t\t\telse {\r",
         "\t\t\t\t// This condition and the preceding condition are not mutually exclusive\r",
         "\t\t\t\tif (has_negative_snow_depth()) {\r",
-        "\t\t\t\t\tmsg_snow = 'Hourly snow depth data contains negative values.';\r",
+        "\t\t\t\t\tmsg_snow = 'Snow depth data contains negative values. Click Edit Array to see the data.';\r",
         "\t\t\t\t}\r",
         "\t\t\t\tif (!has_positive_snow_depth()) {\r",
-        "\t\t\t\t\tmsg_snow = 'Hourly snow depth data contains no values greater than zero.';\r",
+        "\t\t\t\t\tmsg_snow = 'Snow depth data contains no values greater than zero. Click Edit Array to see the data.';\r",
         "\t\t\t\t}\r",
         "\t\t\t}\r",
-        "\t\t }\r",
-        "\t\t \r",
-        "\t\t\r",
-        "\r",
+        "\t\t}\r",
         "\t}\r",
         "\t",
         "\tproperty('ui_msg_snow','Caption',msg_snow);\r",
         "\t\r",
         "\t// If the snow loss model is enabled, allow editing of array\r",
         "\tenable(\"use_snow_weather_file\", value('en_snow_model') == 1);\r",
-        "\t\r",
-        "\t\r",
         "\tenable(\"snow_array\", value('en_snow_model') == 1 && value('use_snow_weather_file') ==0);",
         "\tenable(\"nohrsc_downloader\", value('en_snow_model') == 1 && value('use_snow_weather_file') ==0);\r",
+        "\r",
         "\tmsg='';\r",
         "\tfor(i=1; i<=4; i++)",
         "\t{",
@@ -7059,7 +7053,7 @@
         "\thash = nohrscquery();\r",
         "\tif ( hash == '' ) return;\r",
         "\tproperty( 'nohrsc_url', 'caption', \r",
-        "\t'View the NOHRSC website for this station' );\r",
+        "\t'View the data for this station on the NOHRSC website' );\r",
         "\tproperty( 'nohrsc_url', 'url', hash{'stationURL'} );\r",
         "\tinput_enabling();\r",
         "};\r",
