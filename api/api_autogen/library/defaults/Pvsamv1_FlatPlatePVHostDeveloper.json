@@ -27,6 +27,7 @@
 			"calculate_rack_shading": 0,
 			"dcoptimizer_loss": 0,
 			"en_snow_model": 0,
+			"snow_array": [0.000000],
 			"subarray1_dcwiring_loss": 2,
 			"subarray1_diodeconn_loss": 0.5,
 			"subarray1_electrical_mismatch": 0,

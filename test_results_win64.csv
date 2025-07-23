@@ -60,7 +60,7 @@ Standalone Battery,Merchant Plant,-6.8282e+06,28.139,NA,; Warning: IRR at end of
 Standalone Battery,Leveraged Partnership Flip,-6.8282e+06,75.8238,72.8932,; Warning: IRR at end of analysis period is not a number (NaN). This can indicate that revenues are too low to cover costs, or that they are excessively high compared to costs. Warning: IRR in target year is not a number (NaN). This can indicate that revenues are too low to cover costs, or that they are excessively high compared to costs. Warning: NPV is $-1.51094e+07. A negative NPV indicates project costs are higher than revenues.
 Standalone Battery,All Equity Partnership Flip,-6.8282e+06,80.0715,72.8932,; Warning: IRR at end of analysis period is not a number (NaN). This can indicate that revenues are too low to cover costs, or that they are excessively high compared to costs. Warning: IRR in target year is not a number (NaN). This can indicate that revenues are too low to cover costs, or that they are excessively high compared to costs. Warning: NPV is $-3.88136e+07. A negative NPV indicates project costs are higher than revenues.
 Standalone Battery,Sale Leaseback,-6.8282e+06,76.249,72.8932,; Warning: IRR at end of analysis period is not a number (NaN). This can indicate that revenues are too low to cover costs, or that they are excessively high compared to costs. Warning: NPV is $-1.98418e+07. A negative NPV indicates project costs are higher than revenues. Warning: NPV is $-8.19532e+07. A negative NPV indicates project costs are higher than revenues.
-ETES,Single Owner,-466572896,15.0793,7.40746,; 
+ETES,Single Owner,-466572416,15.0793,7.40746,; 
 PTES,Single Owner,-197595520,19.0302,10.3676,; 
 Physical Trough,Single Owner,377430080,14.7263,14.5131,; 
 Physical Trough,Merchant Plant,377430080,13.3388,NA,; 
@@ -105,9 +105,9 @@ Generic CSP System,All Equity Partnership Flip,592360448,12.8552,11.2639,; Warni
 Generic CSP System,Sale Leaseback,592360448,13.0371,11.2639,; Warning: NPV is $-1.04309e+08. A negative NPV indicates project costs are higher than revenues. Notice: time 0.00 { Generic solar model 2 }:\ The interpolation code must be 1 (interpolate) or 2 (nearest neighbor)The input value was 0, so it was reset to 1
 Generic CSP System,LCOE Calculator,592360448,NA,NA,; Notice: time 0.00 { Generic solar model 2 }:\ The interpolation code must be 1 (interpolate) or 2 (nearest neighbor)The input value was 0, so it was reset to 1
 Generic CSP System,None,592360448,NA,NA,; Notice: time 0.00 { Generic solar model 2 }:\ The interpolation code must be 1 (interpolate) or 2 (nearest neighbor)The input value was 0, so it was reset to 1
-MSPT IPH,None,1497517184,NA,NA,; 
-MSPT IPH,LCOH Calculator,1497517184,NA,NA,; 
-MSPT IPH,Single Owner,1550383232,6.2643,6.83681,; Notice: At time = 6087  CR_ON__PC_RM_HI__TES_FULL__AUX_OFF converged to a power cycle thermal input 278.765 [MWt] less than the target 279.126 [MWt].
+MSPT IPH,None,1497516928,NA,NA,; 
+MSPT IPH,LCOH Calculator,1497516928,NA,NA,; 
+MSPT IPH,Single Owner,1550383104,6.2643,6.83681,; Notice: At time = 6087  CR_ON__PC_RM_HI__TES_FULL__AUX_OFF converged to a power cycle thermal input 278.765 [MWt] less than the target 279.126 [MWt].
 Physical Trough IPH,None,20907466,NA,NA,; 
 Physical Trough IPH,LCOH Calculator,20907466,NA,NA,; 
 Physical Trough IPH,Single Owner,20907466,7.5501,7.02159,; 
