@@ -2069,7 +2069,7 @@ void fcall_ssc_auto_exec(lk::invoke_t& cxt)
 //						if (auto vv = cxt.env()->lookup(name, true))
 //						if (auto vv = c->Values(0).Get(name)) // TODO: hybrids
 /*
-* Note for hybrids - the search starts with the firs case vartable and continues until the first "name" is found in the UI
+* Note for hybrids - the search starts with the first case vartable and continues until the first "name" is found in the UI
 */						auto cfg = c->GetConfiguration();
 						int ndxHybrid = 0;
 						if (cfg->Technology.size() > 1) { // select ndxHybrid based on compute module position in simulations collection

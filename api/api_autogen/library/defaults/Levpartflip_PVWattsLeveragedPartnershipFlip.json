@@ -262,7 +262,7 @@
 		"Recapitalization": {
 		},
 		"TimeOfDelivery": {
-			"system_use_lifetime_output": 0
+			"system_use_lifetime_output": 1
 		},
 		"UtilityBill": {
 		},

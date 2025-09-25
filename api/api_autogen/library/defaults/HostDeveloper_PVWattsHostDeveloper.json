@@ -274,7 +274,7 @@
 		"Recapitalization": {
 		},
 		"TimeOfDelivery": {
-			"system_use_lifetime_output": 0
+			"system_use_lifetime_output": 1
 		},
 		"ConstructionFinancing": {
 			"construction_financing_cost": 24890.2

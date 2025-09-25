@@ -199,6 +199,9 @@
     "cp_capacity_payment_type": 0.0,
     "cp_system_nameplate": 100.0,
     "dc_ac_ratio": 1.3,
+    "dc_degradation": [
+        0.5
+    ],
     "debt_message": "",
     "debt_option": 1.0,
     "debt_percent": 60.0,
@@ -19227,7 +19230,7 @@
     "modulearray_power_w": 100000000.0,
     "months_receivables_reserve": 0.0,
     "months_working_reserve": 6.0,
-    "nominal_discount_rate": 9.060000000000003,
+    "nominal_discount_rate": 9.060000000000004,
     "om_capacity": [
         19.0
     ],
@@ -19379,7 +19382,7 @@
     "step": 3600.0,
     "subtotal_direct": 99000000.0,
     "system_capacity": 100000.0,
-    "system_use_lifetime_output": 0.0,
+    "system_use_lifetime_output": 1.0,
     "term_int_rate": 7.0,
     "term_tenor": 18.0,
     "tilt": 0.0,
@@ -19408,7 +19411,7 @@
     "ui_system_nameplate_standalone": 0.0,
     "ui_total_land_area_ha": 175.43871222814654,
     "ui_total_module_area": 526315.7894736842,
-    "ui_total_module_area_acres": 130.05534895540843,
+    "ui_total_module_area_acres": 130.05534895540846,
     "ui_total_module_area_ha": 52.63157894736842,
     "ui_use_acre_per_mw": 0.0,
     "ui_wacc": 6.709740000000002,
