@@ -74,6 +74,7 @@ static SamApp::ver releases[] = {
 	//intermediate version numbers are required in this list in order for the version upgrade script (versions.lk) to work correctly
 	//please clarify the reason for the new version in a comment. Examples: public release, variable changes, internal release, public beta release, etc.
 	//the top version should always be the current working version
+			{ 2025, 9, 19 }, // Placeholder for PVWatts-Battery upgrade testing (replace with release version number)
 			{ 2025, 4, 16 }, // 2025.4.16 ssc 302 public release
 			{ 2025, 4, 7},	// 2025.4.7 ssc 301 release candidate
 			{ 2024, 12, 12},	// 2024.12.12 ssc 298 public release
@@ -375,10 +376,9 @@ extern void RegisterReportObjectTypes();
 
 
 	wxEasyCurl::Initialize();
-	//wxEasyCurl::SetApiKeys( GOOGLE_API_KEY, BING_API_KEY, DEVELOPER_API_KEY );
 	wxEasyCurl::SetUrlEscape("<SAMAPIKEY>", wxString(sam_api_key));
 	wxEasyCurl::SetUrlEscape("<GEOCODEAPIKEY>", wxString(geocode_api_key));
-	wxEasyCurl::SetUrlEscape("<BINGAPIKEY>", wxString(bing_api_key));
+	wxEasyCurl::SetUrlEscape("<AZUREAPIKEY>", wxString(azure_api_key));
 	wxEasyCurl::SetUrlEscape("<GOOGLEAPIKEY>", wxString(google_api_key));
 
 	wxEasyCurl::SetUrlEscape("<USEREMAIL>", wxString(user_email));

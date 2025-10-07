@@ -32,6 +32,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
 #include "macro.h"
+#include "invoke.h"
 
 class macro_vm : public lk::vm
 {

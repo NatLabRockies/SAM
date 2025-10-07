@@ -62,7 +62,7 @@ struct smart_ptr
 extern const char *sam_api_key;
 extern const char* geocode_api_key;
 extern const char* google_api_key;
-extern const char* bing_api_key;
+extern const char* azure_api_key;
 
 class wxSimplebook;
 class wxPanel;
@@ -101,6 +101,8 @@ public:
 	CaseWindow *CreateCaseWindow( Case *c );
 	void DeleteCaseWindow( Case *c );
 	bool SwitchToCaseWindow( const wxString &name );
+
+	void UpdateAllPageNotes();
 
 	bool LoadProject( const wxString &file );
 	bool SaveProject( const wxString &file );

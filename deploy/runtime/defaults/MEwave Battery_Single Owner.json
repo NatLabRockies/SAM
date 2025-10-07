@@ -31636,6 +31636,7 @@
     "land_leases_onshore_substation_cost": 0.0,
     "lat": 40.8398,
     "laydown_area_cost": 0.0,
+    "lbl_fom_dispatch_message": "",
     "lease_acquisition_activities_cost": 0.0,
     "legal_support_cost": 0.0,
     "level_check": 0.0,

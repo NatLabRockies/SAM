@@ -478,6 +478,8 @@ bool MainWindow::CreateNewCase( const wxString &_name, wxString tech, wxString f
 	c->LoadDefaults();
 	m_project.AddCase(GetUniqueCaseName(_name), c);
 	CreateCaseWindow( c );
+	UpdateAllPageNotes();
+
 	return true;
 }
 
@@ -513,9 +515,9 @@ CaseWindow *MainWindow::CreateCaseWindow( Case *c )
         }
 		// load first page of hybrid and non-hybrid configurations
 		if (c->GetConfiguration()->Technology.size() > 1) // hybrid	
-			win->SwitchToInputPage(c->GetConfiguration()->InputPageGroups[c->GetConfiguration()->Technology.size() - 1][0]->SideBarLabel);
+			win->SwitchToNavigationMenu(c->GetConfiguration()->InputPageGroups[c->GetConfiguration()->Technology.size() - 1][0]->SideBarLabel);	
 		else
-			win->SwitchToInputPage(pages[0]);
+			win->SwitchToNavigationMenu(pages[0]);
 
 		// reevaluate all equations address SAM #1583
 		c->EvaluateEquations();
@@ -533,6 +535,11 @@ void MainWindow::DeleteCaseWindow( Case *c )
 	m_caseNotebook->DeletePage( m_caseNotebook->FindPage( cw ) );
 	m_caseTabList->Remove( m_project.GetCaseName( c ) );
 	m_caseTabList->Refresh();
+
+	if (m_caseTabList->Count() > 0) {
+		wxString case_name = m_caseTabList->GetLabel(0);
+		SwitchToCaseWindow(case_name);
+	}
 }
 
 extern void ShowIDEWindow();
@@ -1240,15 +1247,20 @@ bool MainWindow::SwitchToCaseWindow( const wxString &case_name )
 			}
 		}
 
-		// update all the page notes so they get
-		// hidden/shown appropriately
-		for( size_t i=0;i<m_caseNotebook->GetPageCount();i++ )
-			if ( CaseWindow *cw = dynamic_cast<CaseWindow*>( m_caseNotebook->GetPage(i) ) )
-				cw->UpdatePageNote();
+		UpdateAllPageNotes();
 
 		return true;
 	}
 	else return false;
+}
+
+void MainWindow::UpdateAllPageNotes()
+{
+	// update all the page notes so they get
+	// hidden/shown appropriately
+	for (size_t i = 0; i<m_caseNotebook->GetPageCount(); i++)
+		if (CaseWindow* cw = dynamic_cast<CaseWindow*>(m_caseNotebook->GetPage(i)))
+			cw->UpdatePageNote();
 }
 
 void MainWindow::OnCaseTabChange( wxCommandEvent &evt )
@@ -1657,7 +1669,7 @@ bool InputPageData::Write_JSON(const std::string& file, wxString& ui_path)
 	Write_JSON(doc, ui_path);
 
 	rapidjson::StringBuffer os;
-	rapidjson::PrettyWriter<rapidjson::StringBuffer> writer(os);
+	rapidjson::PrettyWriter<rapidjson::StringBuffer, rapidjson::UTF8<char>, rapidjson::UTF8<char>, rapidjson::CrtAllocator, rapidjson::kWriteNanAndInfFlag> writer(os);
 	doc.Accept(writer);
 
 	if (doc.HasParseError()) {

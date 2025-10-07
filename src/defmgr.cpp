@@ -689,7 +689,7 @@ void DefaultsManager::OnModify( wxCommandEvent & )
 					}
 
 					rapidjson::StringBuffer os;
-					rapidjson::PrettyWriter<rapidjson::StringBuffer> writer(os); // MSPT/MP 64MB JSON, 6.7MB txt, JSON Zip 242kB
+					rapidjson::PrettyWriter<rapidjson::StringBuffer, rapidjson::UTF8<char>, rapidjson::UTF8<char>, rapidjson::CrtAllocator, rapidjson::kWriteNanAndInfFlag> writer(os); // MSPT/MP 64MB JSON, 6.7MB txt, JSON Zip 242kB 
 					doc.Accept(writer);
 					wxString sfn = file;
 					wxFileName fn(sfn);
@@ -778,7 +778,8 @@ void DefaultsManager::OnDeleteVar(wxCommandEvent &)
 					}
 
 					rapidjson::StringBuffer os;
-					rapidjson::PrettyWriter<rapidjson::StringBuffer> writer(os); // MSPT/MP 64MB JSON, 6.7MB txt, JSON Zip 242kB
+					rapidjson::PrettyWriter<rapidjson::StringBuffer, rapidjson::UTF8<char>, rapidjson::UTF8<char>, rapidjson::CrtAllocator, rapidjson::kWriteNanAndInfFlag> writer(os); // MSPT/MP 64MB JSON, 6.7MB txt, JSON Zip 242kB 
+
 					doc.Accept(writer);
 					wxString sfn = file;
 					wxFileName fn(sfn);

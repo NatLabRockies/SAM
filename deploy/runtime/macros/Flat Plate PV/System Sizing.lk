@@ -5,7 +5,7 @@
 <li>The <b>Annual DC degradation</b> parameter at right is for the DC/AC Ratio assumptions table (Table 3) in the report. Enter a value to represent the worst-case for an estimate of end-of-life DC/AC ratio.</li>
 <li>The minimum, maximum, and adjustment temperatures are for the worst case Voc calculations as described in the Bill Brooks article <a href="https://solarprofessional.com/articles/design-installation/array-voltage-considerations">Array Voltage Considerations</a>, Solar Pro Magazine Issue 3.6 Oct/Nov 2010. The macro displays a table showing Voc at these temperatures along with the minimum and maximum operating Voc values calculated by SAM.
 <li>The maximum DC/AC ratio affects the list of recommended modules. The macro will only list modules that result in a DC/AC ration less than or equal to the value you specify.
-<li>By default, the macro displays a report in a SAM window. If you want to export the report, choose Yes for <b>Show results in default browser?</b> to save the report as an HTML file and open it in your default browser. You can then use the browser's tools to export it to PDF or another format.
+<li>By default, the macro displays a report in a SAM window. If you want to export the report to an HTML file, choose Yes for <b>Save results to HTML</b> to save the report as an HTML file and open it in your default browser. You can then use the browser's tools to export it to PDF or another format.
 </ol>
 <p>&nbsp;</p>
 
@@ -16,11 +16,12 @@
 //@ name=t_max;type=number;label=Maximum temperature (C);value=46
 //@ name=t_adj;type=number;label=Adjustment temperature (C);value=30
 //@ name=dcac_max;type=number;label=Maximum DC/AC ratio;value=1.3
-//@ name=show_in_browser;type=combo;label=Show results in default browser?;value=Yes,No;sel=1
+//@ name=save_to_html;type=combo;label=Save results to HTML;value=Yes,No;sel=1
 
 // to run as script for troubleshooting, set troubleshoot = false to use sample inputs
 // otherwise, display warning if the macro is run outside of a case
 troubleshoot = false;
+html_dir = '';
 if ( troubleshoot ) // sample inputs
 {
 	macro.dc_degradation = 0.5;
@@ -28,13 +29,15 @@ if ( troubleshoot ) // sample inputs
 	macro.t_max = 46;
 	macro.t_adj = 30;
 	macro.dcac_max = 1.3;
-	macro.show_in_browser = 1;
+	macro.save_to_html = "Yes";
 }
 elseif ( typeof(macro) == 'unknown' ) {
 	msgbox('This macro must be run from within a case.');
 	exit;
 }
-
+elseif( macro.save_to_html == 'Yes') {
+	html_dir = choose_dir( homedir(), 'Choose a folder to save HTML file');
+}
 //Max number of subarrays allowed in SAM:
 max_subarrays = 4;
 
@@ -121,7 +124,7 @@ function html_table ( T ) // arr, row_headers, title
 	rows = #T.arr;
 	cols = #T.arr[0];
 	if ( T.title == '' ) { h = ''; }
-	else { 	h = '<p align="center"><font face="Segoe UI"; size="3">' + T.title + '</font></p>'; }
+	else { 	h = '<p align="center"><font face="Segoe UI" size="3">' + T.title + '</font></p>'; }
 	h += '<table bgcolor="#dddddd" width="100%">\n';
 	for ( i=0; i<rows; i++ )
 	{
@@ -161,7 +164,8 @@ function html_table ( T ) // arr, row_headers, title
 //   'y_labels' = 1D array of strings with a label for each bar
 //   'bar_label' = string with label for legend describing bar
 //   'line_labels' = 1D array of two or three strings for legend describing each vertical line
-//   'export_graph' = true/false export graph as png file named from title string }
+//   'export_graph' = true/false export graph as png file named from title string 
+//   'png_dir' = folder to save image files }
 function bar_graph_with_limit_lines( T )
 {
 	x_axis_max = max( [max(T.bar_data), max(T.line_data)] );
@@ -190,13 +194,14 @@ function bar_graph_with_limit_lines( T )
 	plotopt( {	'title' = T.title, 'legend' = true, 'scale' = 1, 'font' = 'Segoe UI', 'window' = [10,10,600,300], 'border' = 1, 'fine' = true, 'coarse' = true } );	
 	if ( T.export_graph )
 	{
-		f_path=cwd();
-		f_name = replace( T.title , ' ' , '_' );
+		f_path = T.png_dir;
+		f_name = replace( T.title , ' ' , '-' );
 		f_name = replace( f_name, ':' , '' );
 		f_name = replace( f_name, '.' , '' );
-		f_name = replace( f_name, '__' , '_' );
+		f_name = replace( f_name, '--' , '-' );
 		f = f_path + '/' + f_name  + '.png';
-		ok = plotout( f , 'png'); // png, pdf, bmp, or jpg. Defaults to png if file type not given.
+		f = replace( f, '\\' , '/' );
+		ok = plotout( f , 'png');
 		if ( ok == false)
 		{
 			outln('Could not save the plot to ' + f);
@@ -205,6 +210,62 @@ function bar_graph_with_limit_lines( T )
 		}
 		else { return f; }
 	}
+}
+
+// return path to .png of a bar graph of annual power limiting loss over analysis period
+function plot_annual_inv_cliploss( png_dir ) 
+{
+	// determine number of time steps per year
+	data_ts = get('inv_cliploss');
+	analysis_period = get('analysis_period');
+	num_ts = #get('gen');
+	ts_per_year = num_ts / analysis_period;
+
+	// calculate annual totals for any given simulation time step
+	data_ann = alloc(analysis_period);
+	n=0;
+	start = 0;
+	for (y=0; y<analysis_period; y++) 
+	{
+		x = 0;
+		for(ts=start; ts<num_ts; ts++)
+		{
+			x += data_ts[ts];
+		}
+		data_ann[y] = x;
+		start += ts_per_year;
+	}
+
+	// generate year number for x axis
+	years = alloc(analysis_period);
+	for(i=0;i<#data_ann;i++)
+	{
+		years[i] = i;
+	}
+
+	// create bar plot of annual total vs year
+	title = 'Figure 1: Annual Power Limiting Losses';
+	newplot(true);
+	plot(years, data_ann, {'type'='bar', 'color' = '#457585', 'thick' = 5});
+	axis('x1', {'min'=min(years), 'max'=max(years),'label'='year' });
+	axis('y1', {'min'=0, 'max'=max(data_ann), 'label'='Energy (kWh)'});
+	plotopt( {'title' = title, 'legend' = false, 'scale' = 1, 'font' = 'Segoe UI', 'window' = [10,10,600,300], 'border' = 1, 'fine' = true, 'coarse' = true } );
+
+	use_html_dir = macro.save_to_html == 'Yes';	
+	f_path =  ? use_html_dir [cwd(), html_dir];
+	f_name = replace( title , ' ' , '-' );
+	f_name = replace( f_name, ':' , '' );
+	f_name = replace( f_name, '.' , '' );
+	f_name = replace( f_name, '--' , '-' );
+	f = f_path + '/' + f_name  + '.png';
+	f = replace( f, '\\' , '/' );
+	ok = plotout( f , 'png');
+	if ( ok == false)
+	{
+		outln('Could not save the plot to ' + f);
+		return null;
+	}
+	else { return f; }	
 }
 
 // return table of module parameters, except SPE module model return null
@@ -426,42 +487,56 @@ clipping_time_severe = 0.10;
 clipping_energy_moderate = 0.20; // fraction of kWh/year
 clipping_energy_severe = 0.50;
 
-// power limiting when DC input power exceeds inverter rating
-inv_dc_input = get('annual_dc_net');
-inv_ac_output = get('annual_ac_gross');
+num_ts = #get('gen');
+num_ts_ann_avg = num_ts/analysis_period;
+
+// sum of DC net and AC gross over lifetime
 inv_dc_input_ts = get('dc_net');
+inv_dc_input = sum(inv_dc_input_ts);
+inv_ac_output_ts = get('ac_gross');
+inv_ac_output = sum(inv_ac_output_ts);
+
+// determine number of timesteps at inverter is at rated power
 inv_power_at_capacity_num_ts=0;
-for (i=0; i<#inv_dc_input_ts; i++)
+for (i=0; i<#inv_dc_input_ts; i++) 
 {
 	if ( inv_dc_input_ts[i] >= inverter.pdco * num_inverters / 1000 )
 		{ inv_power_at_capacity_num_ts++; }
 }
-inv_dc_input_ts = null;		
-inv_powerlimitloss_ts = get('inv_cliploss');		//Gets time series data of inverter clipping losses
-num_ts = #inv_powerlimitloss_ts;
+inv_dc_input_ts = null;	// avoid storing large array
+
+// power limiting when DC input power exceeds inverter rating
+inv_powerlimitloss_ts = get('inv_cliploss'); 
 inv_powerlimitloss_max = max(inv_powerlimitloss_ts);
 inv_powerlimitloss = sum(inv_powerlimitloss_ts);
+inv_powerlimitloss_ann_avg = inv_powerlimitloss/analysis_period;
 inv_powerlimitloss_num_ts = 0;
 for (i=0; i<#inv_powerlimitloss_ts; i++)
 {
 	if(inv_powerlimitloss_ts[i]>0)
 		{ inv_powerlimitloss_num_ts++; }
 }
-inv_powerlimitloss_ts = null;
-inv_powerlimitloss_percent_dc = inv_powerlimitloss / inv_dc_input * 100;
-inv_powerlimitloss_percent_ac = inv_powerlimitloss / inv_ac_output * 100;
+inv_powerlimitloss_ts = null; // avoid storing large array
+inv_powerlimitloss_num_ts_ann_avg = inv_powerlimitloss_num_ts/analysis_period;
 
-// first-year inverter mppt voltage clipping
+
+// voltage clipping when DC voltage exceeds inverter MPPT voltage ratings
 mpptloss_ts = get('dc_invmppt_loss');
 mpptloss_max = max(mpptloss_ts);
 mpptloss = sum(mpptloss_ts);
-mpptloss_num_ts = 0; //how many hours are clipped per year
+mpptloss_ann_avg = mpptloss/analysis_period;
+mpptloss_num_ts = 0; 
 for (i=0; i<#mpptloss_ts; i++)
 {
 	if(mpptloss_ts[i]>0)
 		{ mpptloss_num_ts++; }
 }
-mpptloss_ts = null;
+mpptloss_ts = null; // avoid storing large array
+mpptloss_num_ts_ann_avg = mpptloss_num_ts/analysis_period;
+
+// calculate percentages over lifetime
+inv_powerlimitloss_percent_dc = inv_powerlimitloss / inv_dc_input * 100;
+inv_powerlimitloss_percent_ac = inv_powerlimitloss / inv_ac_output * 100;
 mpptloss_percent_dc = mpptloss / inv_dc_input * 100;
 mpptloss_percent_ac = mpptloss / inv_ac_output * 100;
 
@@ -528,8 +603,9 @@ vmp_min_design = ( module.vmp + ( macro.t_max + macro.t_adj - t_stc ) * module.g
 voc_max_design = ( module.voc + ( macro.t_min - t_stc ) * module.bvoc/100 * module.voc ); // single module
 
 ////////////////////////////////////////////////////////////////////////////////
-// design suggestions
+// Design suggestions
 ////////////////////////////////////////////////////////////////////////////////
+
 out('Generating design suggestions ');
 // check 1: number of strings based on dc-ac ratio
 dcac_ok = true;
@@ -607,7 +683,10 @@ modules_diff = shorten_array(modules_diff, 50);
 // Create graphs as .png files
 ////////////////////////////////////////////////////////////////////////////////
 
+annual_cliploss_graph = plot_annual_inv_cliploss( html_dir );
+
 num_plots = 0;
+num_start = 2; // assumes Figure 1 is cliploss graph, so these plots start at Figure 2
 for ( j=0; j < max_subarrays; j++ )
 {
 	if ( vdc_hi[j] > -999 )
@@ -628,16 +707,18 @@ for ( j=0; j < max_subarrays; j++ )
 			line_labels = ['V_mpptmin','V_mpptmax', 'V_dcmax'];
 			line_data = [ inverter.vmppt_min , inverter.vmppt_max , inverter.vdcmax ];
 		}	
-			
+		
+		use_html_dir = macro.save_to_html=='Yes';	
 		voperating_graphs[num_plots] = bar_graph_with_limit_lines( {
-			'title' = 'Figure ' + to_string(num_plots+1) + ': ' + pre_str + 'String Voltages', // underscore makes subscript
+			'title' = 'Figure ' + to_string(num_plots+num_start) + ': ' + pre_str + 'String Voltages', // underscore makes subscript
 			'line_data' = line_data, // vmppt_min, vmppt_max, and Vdcmax if Vdcmax != Vmppt_max
 			'line_labels' = line_labels,
 			'bar_data' = [voc_max_design * modules_per_string[j], voc_hi[j], vdc_hi[j], vdc_low[j], vmp_min_design * modules_per_string[j] ], // one value for each bar
 			'bar_label' = '',
 			'x_label' = 'VDC',
 			'y_labels' = ['Max Design Voc','Max Operating Voc','Max Operating Vdc','Min Operating Vdc','Min Design Vdc'], // one label for each bar
-			 'export_graph' = true} );
+			 'export_graph' = true, 
+			 'png_dir' = ? use_html_dir [cwd(), html_dir] });
 		num_plots++;
 	}	
 }
@@ -688,16 +769,16 @@ for( i=0; i<#lid; i++ )
 		{ tabledata_dcac[3][i+1] = last_yr_dcac[i]; }
 }
 
-tabletitle_powerloss = 'Estimated Power Losses Due to Inverter Voltage Clipping and Power Limiting';
+tabletitle_powerloss = 'Estimated Lifetime Power Losses Due to Inverter Voltage Clipping and Power Limiting';
 tabledata_powerloss[0][0] = '';
 tabledata_powerloss[0][1] = 'Power Limiting';
 tabledata_powerloss[0][2] = 'MPPT Voltage Clipping';
 tabledata_powerloss[1][0] = 'Total kWh/year lost';
-tabledata_powerloss[1][1] = inv_powerlimitloss;
-tabledata_powerloss[1][2] = mpptloss;
-tabledata_powerloss[2][0] = 'Number of time steps (hourly or subhourly)';
-tabledata_powerloss[2][1] = [inv_powerlimitloss_num_ts,clipping_time_moderate*num_ts,clipping_time_severe*num_ts]; // change background color when value exceeds 5% and 10% of timesteps per year
-tabledata_powerloss[2][2] = [mpptloss_num_ts,clipping_time_moderate*num_ts,clipping_time_severe*num_ts];
+tabledata_powerloss[1][1] = inv_powerlimitloss_ann_avg;
+tabledata_powerloss[1][2] = mpptloss_ann_avg;
+tabledata_powerloss[2][0] = 'Number of time steps/year (hourly or subhourly)';
+tabledata_powerloss[2][1] = [inv_powerlimitloss_num_ts_ann_avg,clipping_time_moderate*num_ts_ann_avg,clipping_time_severe*num_ts_ann_avg]; // change background color when value exceeds 5% and 10% of timesteps per year
+tabledata_powerloss[2][2] = [mpptloss_num_ts_ann_avg,clipping_time_moderate*num_ts_ann_avg,clipping_time_severe*num_ts_ann_avg];
 tabledata_powerloss[3][0] = 'Total kWh/year lost as % of inverter DC input';
 tabledata_powerloss[3][1] = [inv_powerlimitloss_percent_dc,clipping_energy_moderate*100,clipping_energy_severe*100]; // change background color when when value exceeds 20% and 50%
 tabledata_powerloss[3][2] = [mpptloss_percent_dc,clipping_energy_moderate*100,clipping_energy_severe*100];
@@ -770,7 +851,7 @@ for(column_diff = 2 ; column_diff < (max_subarrays + 2) ; column_diff++){
 // Create HTML report
 ////////////////////////////////////////////////////////////////////////////////
 num_table = 0;
-str = '<html><body><h1>System Sizing Information</h1><p>This information is based';
+str = '<!DOCTYPE HTML><html><body><h1>System Sizing Information</h1><p>This information is based';
 str += ' on the inputs and simulation results for the "' + active_case() + '" case.</p>';
 
 str += '<h2>Parameters Used for System Sizing</h2>';
@@ -796,21 +877,26 @@ str += ' some power limiting or voltage clipping losses may be acceptable.</p>';
 num_table++;
 str += html_table( {'arr' = tabledata_powerloss, 'row_headers' = false, 'title' = 'Table ' + num_table + ': ' + tabletitle_powerloss } );
 str += '<p>Table ' + num_table + ' shows the amount of power limiting and voltage';
-str += ' clipping from the simulation results, which give you an estimate of what to expect from the real system.';
+str += ' clipping over the ' + to_string(analysis_period) + '-year lifetime from the simulation results,';
+str += ' which you can use to estimate what to expect from the real system.';
 str += ' Colors indicate:</p>';
 str += '<ul><li>Red: More than 10% of time steps of the year, or more than 50% of annual power output.</li>';
 str += '<li>Orange: More than 5% of time steps or 20% of output.</li>';
 str += '<li>Clear: Values are within acceptable range, less than 5% of time steps or 20% of annual power output.</li></ul>';
+
+str += '<p>Figure 1 shows inverter power limiting losses by year. These losses decrease due to degradation of modules in the photovoltaic array (DC degradation).</p>';
+str += '<p align="center"><img src="' + file_only(annual_cliploss_graph) + '"/></p>';
+
 str += '<p>The figure(s) below show the inverter rated MPPT voltage range with worst case';
 str += ' design maximum open-circuit voltage and minimum maximum-power voltage, along with';
 str += ' the operating open circuit, minimum, and maximum voltages from the';
 str += ' simulation results for each subarray in the system.</p>';
-
 for (i=0; i<#voperating_graphs; i++)
 {
-	str += '<p align="center"><img src="' + voperating_graphs[i] + '" /></p>';
+	str += '<p align="center"><img src="' + file_only(voperating_graphs[i]) + '" /></p>';
 }	
 num_fig = i;	
+
 str += '<p>The equations for the design string voltages use parameters from Table 1:</p>';
 str += '<p align="center"><font face="verdana">V<sub>dc , min_design</sub>';
 str += ' = [ V<sub>mp</sub> + ( T<sub>max</sub> + T<sub>adj</sub> - T<sub>stc</sub> ) * &gamma;P<sub>mp</sub>/100% * P<sub>mp</sub> ] * modules_per_string</font></p>'; 
@@ -893,16 +979,23 @@ newplot( true );
 
 // save html to file and open file in default web browser
 // this is useful for converting to other formats like pdf or docx
-
-if ( macro.show_in_browser == 'Yes' )
+if ( macro.save_to_html == 'Yes' )
 {
-	html_file = cwd() + '/' + active_case() + '.html';
+	html_file = html_dir + '/' + active_case() + '.html';
 	write_text_file( html_file , str );
 	browse( html_file );
 }
 else
 {
 	html_dialog(str, 'System Sizing Information', [300,300,800,600]); //custom window title and size
+	// after dialog displays, delete graph png files
+	remove_file(annual_cliploss_graph);
+	for (i=0;i<#voperating_graphs;i++)
+	{		
+		remove_file(voperating_graphs[i]);
+	}
 }
+
+
 
 outln('Done. If you do not see an HTML report, try minimizing the SAM window to see if is hidden behind the window.'); 	

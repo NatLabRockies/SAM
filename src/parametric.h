@@ -123,6 +123,7 @@ public:
 	void Init();
 	void UpdateSetup();
 	void UpdateView();
+	std::vector<Simulation*> PrepareSimulations();
 
 	wxArrayString GetInputNames();
 	wxArrayString GetOutputNames();

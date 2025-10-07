@@ -140,7 +140,8 @@ void WritePythonConfig(const std::string& configPath, const PythonConfig& config
 
     rapidjson::StringBuffer buffer;
     buffer.Clear();
-    rapidjson::PrettyWriter<rapidjson::StringBuffer> writer(buffer);
+    rapidjson::PrettyWriter<rapidjson::StringBuffer, rapidjson::UTF8<char>, rapidjson::UTF8<char>, rapidjson::CrtAllocator, rapidjson::kWriteNanAndInfFlag> writer(buffer);
+
     configObj.Accept(writer);
     configFile << buffer.GetString();
     configFile.close();

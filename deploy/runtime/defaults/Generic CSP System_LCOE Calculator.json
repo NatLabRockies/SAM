@@ -505,7 +505,7 @@
     "csp.gss.sf.wspd_loss_f3": 0.0,
     "csp.gss.solf.fixed_land_area": 307.2410461791766,
     "csp.gss.solf.land_overhead_factor": 6.0,
-    "csp.gss.solf.total_land_area": 1843.4462770750595,
+    "csp.gss.solf.total_land_area": 1843.44627707506,
     "csp.gss.tes.charge_loss_f0": 1.0,
     "csp.gss.tes.charge_loss_f1": 0.0,
     "csp.gss.tes.charge_loss_f2": 0.0,
@@ -538,7 +538,7 @@
         0.05,
         0.05
     ],
-    "dni_par_design": 0.49789300000000005,
+    "dni_par_design": 0.4978930000000001,
     "dni_par_f0": 0.0,
     "dni_par_f1": -0.086635,
     "dni_par_f2": 0.584528,
@@ -586,7 +586,7 @@
     "f_par_tot_des": 0.8512869999999999,
     "f_sfhl_ref": 0.063,
     "f_startup": 0.5,
-    "f_t_amb_loss_des": 0.0013909999999999999,
+    "f_t_amb_loss_des": 0.001391,
     "f_teshl_ref": 0.35,
     "f_v_wind_loss_des": 0.017246,
     "f_wmax": 1.0,
@@ -9374,7 +9374,7 @@
     "hrs_tes": 10.0,
     "ibh": 0.0,
     "ibn": 0.0,
-    "in_location": "Type a location name, street address, or lat,lon in decimal degrees",
+    "in_location": "",
     "in_location_list": "|||",
     "in_location_options": 0.0,
     "in_nsrdb_options": 0.0,
@@ -9438,7 +9438,6 @@
         0.0
     ],
     "solar_data_file_name": "daggett_ca_34.865371_-116.783023_psmv3_60_tmy.csv",
-    "solar_data_file_name_load": "daggett_ca_34.865371_-116.783023_psmv3_60_tmy.csv",
     "solar_data_source": "NSRDB",
     "solar_resource": "daggett_ca_34.865371_-116.783023_psmv3_60_tmy",
     "solar_resource_file": "daggett_ca_34.865371_-116.783023_psmv3_60_tmy.csv",
@@ -9465,7 +9464,7 @@
     "theta_stow": 170.0,
     "tilt": 0.0,
     "timezone": -8.0,
-    "total_land_area": 1843.4462770750595,
+    "total_land_area": 1843.44627707506,
     "track_mode": 1.0,
     "tslogic_a": [
         0.0

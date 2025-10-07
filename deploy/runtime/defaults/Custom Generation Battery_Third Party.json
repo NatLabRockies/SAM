@@ -45738,6 +45738,7 @@
     "import_message": "",
     "inflation_rate": 2.5,
     "is_btm": 0.0,
+    "lbl_btm_dispatch_message": "",
     "lease_escalation": 1.0,
     "lease_or_ppa": 0.0,
     "lease_price": 50.0,

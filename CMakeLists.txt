@@ -42,6 +42,7 @@ set(SAM_SRC src/private.h
 	src/s3view.cpp         src/s3view.h
 	src/stochastic.cpp     src/stochastic.h
 	src/urdb.cpp           src/urdb.h
+	src/nohrsc.cpp	       src/nohrsc.h
 	src/nsrdb.cpp          src/nsrdb.h
 	src/windtoolkit.cpp    src/windtoolkit.h
 	src/wavetoolkit.cpp    src/wavetoolkit.h

@@ -852,6 +852,11 @@ void ParametricViewer::OnMenuItem(wxCommandEvent &evt)
 	case ID_SHOW_ALL_INPUTS:
 		if ((int)m_grid_data->GetRuns().size() > m_grid_data->GetRunNumberForRowNumber(m_selected_grid_row)){
 			if (m_grid_data->GetRuns()[m_grid_data->GetRunNumberForRowNumber(m_selected_grid_row)])	{
+				// If uninitialized, init and set up variables from the parametric grid
+				if (m_grid_data->GetRuns()[m_grid_data->GetRunNumberForRowNumber(m_selected_grid_row)]->GetInputSize() < 1)
+				{
+					m_grid_data->PrepareSimulations();
+				}
 				std::vector<VarTable*> pvts;
 				for (size_t i = 0; i < m_case->GetConfiguration()->Technology.size(); i++)
 					pvts.push_back(m_grid_data->GetRuns()[m_grid_data->GetRunNumberForRowNumber(m_selected_grid_row)]->GetInputVarTable(i));
@@ -868,6 +873,11 @@ void ParametricViewer::OnMenuItem(wxCommandEvent &evt)
 				// create new case with updated vartable
 				if (Case* dup = dynamic_cast<Case*>(m_case->Duplicate()))
 				{
+					// If uninitialized, init and set up variables from the parametric grid
+					if (m_grid_data->GetRuns()[m_grid_data->GetRunNumberForRowNumber(m_selected_grid_row)]->GetInputSize() < 1)
+					{
+						m_grid_data->PrepareSimulations();
+					}
 					// update var table
 					auto pvtParametric = m_grid_data->GetRuns()[m_grid_data->GetRunNumberForRowNumber(m_selected_grid_row)]->GetInputVarTable(0); // TODO:hybrids
 					for (auto it = pvtParametric->begin(); it != pvtParametric->end(); ++it) {
@@ -2369,7 +2379,6 @@ void ParametricGridData::SortColumn(const int& col, const bool& asc)
 	}
 }
 
-
 int ParametricGridData::GetRunNumberForRowNumber(const int& rowNum)
 {
 	int runNumber = -1;
@@ -3034,7 +3043,53 @@ std::vector<Simulation *> ParametricGridData::GetRuns()
 	return sims;
 }
 
+std::vector<Simulation*> ParametricGridData::PrepareSimulations() {
+	SimulationDialog tpd("Preparing simulations...", 1);
+	std::vector<Simulation*> sims;
+	int total_runs = 0;
+	for (size_t i = 0; i < m_par.Runs.size(); i++)
+		if (!m_valid_run[i]) total_runs++;
+	if (total_runs == 0) total_runs = m_par.Runs.size();
 
+	for (size_t i = 0; i < m_par.Runs.size(); i++)
+	{
+		// reset all simulation objects to copy over latest value if changed on input page (no listeners)
+		m_valid_run[i] = false;
+
+		if (!m_valid_run[i])
+		{
+			m_par.Runs[i]->Clear();
+
+			for (int col = 0; col < m_cols; col++)
+			{
+				if (IsInput(col))
+				{
+					if (VarValue* vv = &m_par.Setup[col].Values[i])
+					{
+						// set for simulation
+//						m_par.Runs[i]->Override(m_var_names[col], *vv, m_par.Setup[col].ndxHybrid); // TODO: hybrids
+						m_par.Runs[i]->Override(m_par.Setup[col].varName, *vv, m_par.Setup[col].ndxHybrid);
+					}
+				}
+			}
+			// Excel exchange if necessary
+			ExcelExchange& ex = m_case->ExcelExch();
+			if (ex.Enabled) {
+				for (size_t ndxHybrids = 0; ndxHybrids < m_case->GetConfiguration()->Technology.size(); ndxHybrids++)
+					ExcelExchange::RunExcelExchange(ex, m_case->Values(ndxHybrids), m_par.Runs[i]);
+			}
+
+			if (!m_par.Runs[i]->Prepare())
+				wxMessageBox(wxString::Format("internal error preparing simulation %d for parametric: %s", (int)(i + 1), m_par.Runs[i]->GetErrors()[0]));
+
+			tpd.Update(0, (float)i / (float)total_runs * 100.0f, wxString::Format("%d of %d", (int)(i + 1), (int)total_runs));
+		}
+
+		m_par.Runs[i]->SetName(wxString::Format("Parametric #%d", (int)(i + 1)));
+		sims.push_back(m_par.Runs[i]);
+	}
+	return sims;
+}
 
 bool ParametricGridData::RunSimulations_multi()
 {
@@ -3051,46 +3106,8 @@ bool ParametricGridData::RunSimulations_multi()
 	if (total_runs == 0) total_runs = m_par.Runs.size();
 
 	std::vector<Simulation*> sims;
-	for (size_t i = 0; i < m_par.Runs.size(); i++)
-	{
-		// reset all simulation objects to copy over latest value if changed on input page (no listeners)
-		m_valid_run[i] = false;
 
-		if (!m_valid_run[i])
-		{
-			m_par.Runs[i]->Clear();
-
-			for (int col = 0; col < m_cols; col++)
-			{
-				if (IsInput(col))
-				{
-					if (VarValue *vv = &m_par.Setup[col].Values[i])
-					{
-						// set for simulation
-//						m_par.Runs[i]->Override(m_var_names[col], *vv, m_par.Setup[col].ndxHybrid); // TODO: hybrids
-						m_par.Runs[i]->Override(m_par.Setup[col].varName, *vv, m_par.Setup[col].ndxHybrid); 
-					}
-				}
-			}
-			// Excel exchange if necessary
-			ExcelExchange &ex = m_case->ExcelExch();
-			if (ex.Enabled) {
-				for (size_t ndxHybrids = 0; ndxHybrids < m_case->GetConfiguration()->Technology.size(); ndxHybrids++)
-				ExcelExchange::RunExcelExchange(ex, m_case->Values(ndxHybrids), m_par.Runs[i]);
-			}
-
-			if (!m_par.Runs[i]->Prepare())
-				wxMessageBox(wxString::Format("internal error preparing simulation %d for parametric: %s", (int)(i + 1), m_par.Runs[i]->GetErrors()[0]));
-
-			tpd.Update(0, (float)i / (float)total_runs * 100.0f, wxString::Format("%d of %d", (int)(i + 1), (int)total_runs));
-		}
-
-		m_par.Runs[i]->SetName( wxString::Format("Parametric #%d", (int)(i+1) ) );
-		sims.push_back(m_par.Runs[i]);
-	}
-
-
-//	int time_prep = sw.Time();
+	sims = PrepareSimulations();
 	sw.Start();
 
 	if ( nthread > (int)sims.size() ) nthread = sims.size();

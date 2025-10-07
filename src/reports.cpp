@@ -2255,11 +2255,16 @@ void SamReportScriptObject::Render( wxPageOutputDevice &dv )
 		env.register_funcs( lk::stdlib_math() );
 		env.register_funcs( lk::stdlib_wxui() );
 
-		wxStopWatch sw;
-		lk::eval e( tree, &env );
-		if ( !e.run() )
-			for (size_t i=0;i<e.error_count();i++)
-				errors += e.get_error(i) + "\n";
+		try {
+			wxStopWatch sw;
+			lk::eval e(tree, &env);
+			if (!e.run())
+				for (size_t i = 0; i < e.error_count(); i++)
+					errors += e.get_error(i) + "\n";
+		}
+		catch (std::exception e) {
+			wxMessageBox(e.what());
+		}
 	}
 			
 	int i=0;
@@ -2559,7 +2564,7 @@ void SamReportScriptObject::RenderTable( const matrix_t<wxString> &tab )
 		float xpos = tab_x;
 		for (int c=0;c<(int)tab.ncols();c++)
 		{
-			int align = (r==0) ? m_headerAlign : m_cellAlign;
+			int align = (r<m_headerLines) ? m_headerAlign : m_cellAlign;
 			switch( align )
 			{
 			case wxLEFT:
@@ -2602,11 +2607,11 @@ void SamReportScriptObject::RenderTable( const matrix_t<wxString> &tab )
 	}
 	
 	m_curDevice->Color( *wxBLACK );
-	if (m_headerLine && row_heights.size() > 0)
-		m_curDevice->Line( tab_x, tab_y+row_heights[0], 
-			tab_x+tab_width, tab_y+row_heights[0] );
+	if (m_headerLine && row_heights.size() > 0 )
+		m_curDevice->Line( tab_x, tab_y+m_headerLines*row_heights[0], 
+			tab_x+tab_width, tab_y+ m_headerLines * row_heights[0] );
     float ypos_total_lines = tab_y+row_heights[0];
-    for (int r = 1; r < (int)tab.nrows(); r++) {
+    for (int r = m_headerLines - 1; r < (int)tab.nrows(); r++) {
         ypos_total_lines += row_heights[r];
         for (int b = 0; b < m_totalLines.size(); b++) {
             if (r == m_totalLines[b] && r != (int)tab.nrows() - 1) {

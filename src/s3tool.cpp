@@ -135,7 +135,7 @@ LocationSetup::LocationSetup( wxWindow *parent, ShadeTool *st )
 	m_bitmapCtrl = new wxGenericStaticBitmap( m_scrollWin, wxID_ANY, wxNullBitmap );
 	m_address = new wxTextCtrl( this, ID_ADDRESS, "Denver, CO", wxDefaultPosition, wxDefaultSize, wxTE_PROCESS_ENTER );
 
-	m_zoomLevel = 19;
+	m_zoomLevel = 19; // max zoom level for Azure static map microsoft.imagery is 19
 	m_mpp = 0.01;
 	
 //	wxMetroButton *btn;
@@ -203,18 +203,30 @@ void LocationSetup::OnAddressChange( wxCommandEvent & )
 
 	wxYield();
 
-	double lat, lon, tz;
+	double lat = std::numeric_limits<double>::quiet_NaN();
+	double lon = std::numeric_limits<double>::quiet_NaN();
+	double tz = std::numeric_limits<double>::quiet_NaN();
+	
 	// use GeoTools::GeocodeGoogle for non-NREL builds and set google_api_key in private.h
-	if ( !GeoTools::GeocodeDeveloper( m_address->GetValue(), &lat, &lon, &tz ) )
+	if (GeoTools::GeocodeDeveloper(m_address->GetValue(), &lat, &lon))
 	{
-		wxMessageBox("failed to geocode address");
+		m_lat->SetValue(lat);
+		m_lon->SetValue(lon);
+	}
+	else
+	{
+		wxMessageBox("Geocode error!\nFailed to geocode address.");
 		return;
 	}
-	
-	m_lat->SetValue( lat );
-	m_lon->SetValue( lon );
-	m_tz->SetValue( tz );	
-
+	if (GeoTools::GetTimeZone(&lat, &lon, &tz))
+	{
+		m_tz->SetValue(tz);
+	}
+	else
+	{
+		wxMessageBox("Geocode error!\nTime zone API call failed. Please set time zone value manually.");
+		return;
+	}
 	DownloadMap();
 }
 
@@ -225,10 +237,10 @@ void LocationSetup::OnGetMap( wxCommandEvent & )
 
 void LocationSetup::DownloadMap(  )
 {
-	m_bitmap = GeoTools::StaticMap( m_lat->Value(), m_lon->Value(), m_zoomLevel, GeoTools::BING_MAPS );
+	m_bitmap = GeoTools::StaticMap( m_lat->Value(), m_lon->Value(), m_zoomLevel, GeoTools::AZURE_MAPS );
 	if (!m_bitmap.IsOk())
 	{
-		wxMessageBox("Invalid image data file");
+		wxMessageBox("Static map image download failed. Please try creating a map image outside of SAM and importing it by clicking the Load Image button.");
 		return;
 	}
 
@@ -253,7 +265,8 @@ void LocationSetup::OnMapChange( wxCommandEvent &evt )
 		return;
 	}
 
-	double incr = 0.00005*(22-m_zoomLevel);
+	// zoom level range is 0-19 for Azure static map microsoft.imagery 
+	double incr = 0.00005*(20-m_zoomLevel);
 
 	switch(evt.GetId())
 	{
@@ -261,14 +274,14 @@ void LocationSetup::OnMapChange( wxCommandEvent &evt )
 	case ID_GO_DOWN: lat-=incr; break;
 	case ID_GO_LEFT: lon-=incr; break;
 	case ID_GO_RIGHT: lon+=incr; break;
-	case ID_ZOOM_IN: if ( m_zoomLevel < 21 ) m_zoomLevel++; break;
-	case ID_ZOOM_OUT: if ( m_zoomLevel > 1 ) m_zoomLevel--; break;
+	case ID_ZOOM_IN: if ( m_zoomLevel < 19 ) m_zoomLevel++; break;
+	case ID_ZOOM_OUT: if ( m_zoomLevel > 0 ) m_zoomLevel--; break;
 	}
 
-	m_lat->SetValue( lat );
-	m_lon->SetValue( lon );
+	m_lat->SetValue(lat);
+	m_lon->SetValue(lon);
 
-	DownloadMap( );
+	DownloadMap();
 }
 
 int LocationSetup::GetZoomLevel() { return m_zoomLevel; }

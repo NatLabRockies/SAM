@@ -1,7 +1,7 @@
 {
     "Name": "Battery Dispatch Options FOM",
     "Width": 1053.0,
-    "Height": 208.0,
+    "Height": 212.0,
     "FormObjects": {
         "CheckBox": {
             "Visible": 1.0,
@@ -57,7 +57,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 150.0
+                    "Integer": 159.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -98,7 +98,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 129.0
+                    "Integer": 135.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -139,7 +139,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 171.0
+                    "Integer": 183.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -180,7 +180,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 90.0
+                    "Integer": 87.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -266,7 +266,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 15.0
+                    "Integer": 18.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -319,12 +319,12 @@
                 }
             }
         },
-        "Label": {
+        "MultilineText": {
             "Visible": 1.0,
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "lbl_fom_warning_message"
+                    "String": "lbl_fom_dispatch_message"
                 },
                 "X": {
                     "Type": 3.0,
@@ -332,25 +332,29 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 90.0
+                    "Integer": 87.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 381.0
+                    "Integer": 378.0
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 83.0
+                    "Integer": 117.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
                     "String": ""
                 },
-                "Caption": {
+                "Text": {
                     "Type": 5.0,
                     "String": ""
                 },
-                "TextColour": {
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "ForeColour": {
                     "Type": 4.0,
                     "Color": {
                         "Red": 0.0,
@@ -359,25 +363,18 @@
                         "Alpha": 255.0
                     }
                 },
-                "Bold": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
                 },
-                "FontSize": {
+                "TabOrder": {
                     "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "WordWrap": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "AlignRight": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "AlignTop": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
+                    "Integer": -1.0
                 }
             }
         },
@@ -402,7 +399,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 199.0
+                    "Integer": 205.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -510,6 +507,19 @@
             "UIObject": "RadioChoice",
             "sscVariableName": "",
             "sscVariableValue": ""
+        },
+        "lbl_fom_dispatch_message": {
+            "Version": 4.0,
+            "Type": 4.0,
+            "Label": "FOM battery dispatch UI message",
+            "Units": "",
+            "Group": "Battery Dispatch",
+            "IndexLabels": "",
+            "Flags": 9.0,
+            "DefaultValue": "",
+            "UIObject": "MultilineText",
+            "sscVariableName": "",
+            "sscVariableValue": ""
         }
     },
     "Equations": [],
@@ -520,8 +530,7 @@
         "\tcheck_auto_ppa();",
         "\tenable_charge_from_clip();\r",
         "\tenable_grid_limited_power();",
-        "\twarning_message();",
-        "\twave_batt_smoothing_msg();\r",
+        "\tfom_dispatch_message();",
         "\tptc_pbi_with_grid_charging_message();\r",
         "\tt = technology();\r",
         "\tis_hybrid = (t == 'PVWatts Wind FuelCell Battery Hybrid' || t == 'CustomGeneration PVWatts Wind FuelCell Battery Hybrid' ||\r",
@@ -551,11 +560,21 @@
         "\tproperty('lbl_dispatch_options','TextColour',clr);",
         "};",
         "\r",
-        "on_change{'batt_dispatch_auto_can_gridcharge'} = define() {ptc_pbi_with_grid_charging_message();};\r",
+        "on_change{'batt_dispatch_auto_can_gridcharge'} = define() \r",
+        "{\r",
+        "\tptc_pbi_with_grid_charging_message();\r",
+        "};\r",
         "\r",
         "on_change{'batt_dispatch_auto_can_charge'} = define()\r",
         "{\r",
         "\tenable_grid_limited_power();\r",
+        "\tfom_dispatch_message();\r",
+        "};\r",
+        "\r",
+        "on_change{'batt_dispatch_auto_can_curtailcharge'} = define()\r",
+        "{\r",
+        "\tenable_grid_limited_power();\r",
+        "\tfom_dispatch_message();\r",
         "};\r",
         "",
         "on_change{'batt_dispatch_choice_ui'} = define() ",
@@ -564,21 +583,10 @@
         "\tenable_charge_from_clip();",
         "\tshow_hide_charge_options();\r",
         "\tenable_grid_limited_power();",
-        "\twave_batt_smoothing_msg();\r",
         "\tptc_pbi_with_grid_charging_message();\t",
+        "\tfom_dispatch_message();\r",
         "\tvalue('batt_dispatch_excl', value('batt_dispatch_choice_ui'));",
         "};",
-        "\r",
-        "function wave_batt_smoothing_msg()",
-        "{",
-        "\tcheck = value('batt_dispatch_choice_ui');",
-        "\ttech = technology();",
-        "\tif (check == 1 && tech == \"MEwave Battery\") ",
-        "\t{",
-        "\t\tproperty('lbl_fom_warning_message', 'Caption', 'The PV Smoothing dispatch option was designed for PV + battery systems with solar resource data timestep of 15 minutes or less. Using this model for wave energy converter + battery systems may lead to unexpected results.');",
-        "\t\tproperty('lbl_fom_warning_message', 'TextColour', 'red');",
-        "\t}",
-        "}",
         "",
         "function check_auto_ppa()",
         "{",
@@ -626,12 +634,11 @@
         "\t\tenable('batt_dispatch_auto_can_clipcharge',false);",
         "\t\tproperty('batt_dispatch_auto_can_clipcharge','State', 0);",
         "\t} ",
-        "\twarning_message();",
         "}",
         "\r",
-        "function enable_grid_limited_power()\r",
+        "function is_grid_limit()\r",
         "{\r",
-        "\tinterconnection = value(\"enable_interconnection_limit\");\r",
+        "\ten_interconnection = value(\"enable_interconnection_limit\");\r",
         "\tcurtailment = value(\"grid_curtailment\");\r",
         "\ten_curtailment = false;\r",
         "\tfor (i=0; i<#curtailment; i++)\r",
@@ -641,9 +648,14 @@
         "\t\t\tbreak;\r",
         "\t\t}\r",
         "\t}\r",
+        "\treturn en_interconnection || en_curtailment;\r",
+        "}\r",
+        "\r",
+        "function enable_grid_limited_power()\r",
+        "{\r",
         "\ten_dispatch = value('batt_dispatch_choice_ui') == 0 || (value('batt_dispatch_choice_ui') == 3);\r",
         "\ten_system_power = value('batt_dispatch_auto_can_charge');\r",
-        "\tif ((interconnection || en_curtailment) && en_dispatch && !en_system_power) {\r",
+        "\tif ( is_grid_limit() && en_dispatch && (!en_system_power || value('batt_dispatch_choice_ui') == 3)) {\r",
         "\t\tenable('batt_dispatch_auto_can_curtailcharge', true);\r",
         "\t}\r",
         "\telse {\r",
@@ -652,25 +664,49 @@
         "\t}\r",
         "}\r",
         "",
-        "function warning_message() ",
-        "{",
+        "function fom_dispatch_message() {",
         "\tis_dc = (value('batt_ac_or_dc' ) == 0);",
-        "\tcolor = 'black';",
-        "\tif ( is_dc )",
-        "\t{",
-        "\t\tmsg = 'Battery is DC-connected.'; ",
+        "\r",
+        "\t// special case for marine energy\r",
+        "\tif (value('batt_dispatch_choice_ui') == 1 && technology() == \"MEwave Battery\") {\r",
+        "\t\tmsg = 'The PV Smoothing dispatch option was designed for PV + battery systems with solar resource data timestep of 15 minutes or less. Using this model for wave energy converter + battery systems may lead to unexpected results.';\r",
+        "\t\tproperty('lbl_fom_dispatch_message','Text',msg);\r",
+        "\t\treturn;\r",
+        "\t}\r",
+        "\t",
+        "\tif ( is_dc ) {",
+        "\t\tmsg = 'Battery is DC-connected. (See Power Converters inputs on Battery Cell and System page.)'; ",
         "\t}",
-        "\telse",
-        "\t{ ",
-        "\t\tmsg = 'Battery is AC-connected.'; ",
-        "\t}",
-        "\tmsg = msg + ' Charging from clipped or grid-limited power is only available for automated or manual dispatch and DC-connected batteries. See input under Power Converters on Battery Cell and System page.';",
-        "\tif ( value('batt_dispatch_choice_ui') == 2 ) ",
-        "\t{",
-        "\t\tmsg = ''; ",
-        "\t}",
-        "\tproperty('lbl_fom_warning_message','Caption',msg);",
-        "\tproperty('lbl_fom_warning_message','TextColour',color);",
+        "\telse { ",
+        "\t\tmsg = 'Battery is AC-connected. (See Power Converters inputs on Battery Cell and System page.)'; ",
+        "\t}\r",
+        "\t// manual dispatch\r",
+        "\tif ( value('batt_dispatch_choice_ui') == 3 ) {\r",
+        "\t\tmsg += '\\nFor manual dispatch, use check boxes below to determine when the battery charges and discharges.';\r",
+        "\t}\r",
+        "\t// grid limited power\r",
+        "\tif ( !is_grid_limit() ) {\r",
+        "\t\tmsg += '\\nCharging from grid-limited power is only available when limits are defined on the Grid Limits page.';\r",
+        "\t}\r",
+        "\telseif ( value('batt_dispatch_choice_ui') == 1 || value('batt_dispatch_choice_ui') == 2 ) {\r",
+        "\t\tmsg += '\\nCharging from grid-limited power is only available for Automated Dispatch and Manual Dispatch.';\r",
+        "\t}\r",
+        "\telseif ( value('batt_dispatch_auto_can_charge') == 1 && value('batt_dispatch_choice_ui') == 0 ) {\r",
+        "\t\tmsg += '\\nCharging from grid limited power requires that Battery Can Charge from System be disabled.';\r",
+        "\t}\r",
+        "\telseif ( value('batt_dispatch_auto_can_curtailcharge') == 1  && value('batt_dispatch_choice_ui') == 3) {\r",
+        "\t\tmsg += '\\nBattery only charges from grid-limited power in time steps that Charge from System is disabled.';\r",
+        "\t}\r",
+        "\t// clipped power\r",
+        "\tif ( !is_dc ) {\r",
+        "\t\tmsg += '\\nCharging from clipped power is only available for DC-connected batteries.';\r",
+        "\t}\r",
+        "\telseif ( value('batt_dispatch_choice_ui') == 1 || value('batt_dispatch_choice_ui') == 2 ) {\r",
+        "\t\tmsg += '\\nCharging from clipped power is only available for Automated Dispatch and Manual Dispatch.';\r",
+        "\t}\r",
+        "\tmsg += '\\nSee Help for more information about these dispatch options.';\r",
+        "\t",
+        "\tproperty('lbl_fom_dispatch_message','Text',msg);",
         "}",
         ""
     ]
