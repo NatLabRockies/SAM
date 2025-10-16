@@ -1,5 +1,5 @@
 {
-    "Name": "Marine Tidal Resource File",
+    "Name": "Marine Tidal Resource Distribution File",
     "Width": 996.0,
     "Height": 460.0,
     "FormObjects": {
@@ -74,43 +74,6 @@
                 "TabOrder": {
                     "Type": 3.0,
                     "Integer": 3.0
-                }
-            }
-        },
-        "Button": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "btn_view_tidal_data"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 720.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 318.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 94.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 28.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Caption": {
-                    "Type": 5.0,
-                    "String": "View Data"
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
                 }
             }
         },
@@ -339,7 +302,7 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "tidal_location"
+                    "String": "tidal_location_dist"
                 },
                 "X": {
                     "Type": 3.0,
@@ -363,7 +326,7 @@
                 },
                 "Library": {
                     "Type": 5.0,
-                    "String": "TidalResourceTSData"
+                    "String": "TidalResourceData"
                 },
                 "Fields": {
                     "Type": 5.0,
@@ -376,7 +339,7 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "tidal_resource_filename"
+                    "String": "tidal_resource_dist_filename"
                 },
                 "X": {
                     "Type": 3.0,
@@ -432,72 +395,7 @@
         }
     },
     "VarDatabase": {
-        "data_source": {
-            "Version": 4.0,
-            "Type": 4.0,
-            "Label": "Data Source",
-            "Units": "",
-            "Group": "Tidal Resource",
-            "IndexLabels": "",
-            "Flags": 9.0,
-            "DefaultValue": "<invalid>",
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "distance_to_shore_file": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "",
-            "Units": "",
-            "Group": "",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "lat": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "",
-            "Units": "",
-            "Group": "",
-            "IndexLabels": "",
-            "Flags": 0.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "library_folder_list": {
-            "Version": 4.0,
-            "Type": 4.0,
-            "Label": "",
-            "Units": "",
-            "Group": "",
-            "IndexLabels": "",
-            "Flags": 9.0,
-            "DefaultValue": "<invalid>",
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "location": {
-            "Version": 4.0,
-            "Type": 4.0,
-            "Label": "",
-            "Units": "",
-            "Group": "",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": "<invalid>",
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "location_id": {
+        "tidal_location_dist": {
             "Version": 4.0,
             "Type": 4.0,
             "Label": "",
@@ -505,229 +403,28 @@
             "Group": "",
             "IndexLabels": "",
             "Flags": 0.0,
-            "DefaultValue": "0",
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "lon": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "",
-            "Units": "",
-            "Group": "",
-            "IndexLabels": "",
-            "Flags": 0.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "notes": {
-            "Version": 4.0,
-            "Type": 4.0,
-            "Label": "",
-            "Units": "",
-            "Group": "",
-            "IndexLabels": "",
-            "Flags": 8.0,
             "DefaultValue": "<invalid>",
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "tidal_location": {
-            "Version": 4.0,
-            "Type": 4.0,
-            "Label": "Tidal resource library",
-            "Units": "",
-            "Group": "Tidal Resource",
-            "IndexLabels": "TidalResourceData|0",
-            "Flags": 19.0,
-            "DefaultValue": "",
             "UIObject": "Library",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
-        "tidal_resource_filename": {
+        "tidal_resource_dist_filename": {
             "Version": 4.0,
             "Type": 4.0,
-            "Label": "Tidal resource filename",
-            "Units": "",
-            "Group": "Tidal resource",
-            "IndexLabels": "",
-            "Flags": 9.0,
-            "DefaultValue": "<invalid>",
-            "UIObject": "Label",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "tidal_vel_freq": {
-            "Version": 4.0,
-            "Type": 3.0,
-            "Label": "Tidal timeseries velocity distribution",
-            "Units": "%",
-            "Group": "",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": [
-                [
-                    0.0
-                ]
-            ],
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "tidal_velocity": {
-            "Version": 4.0,
-            "Type": 2.0,
-            "Label": "Tidal velocity",
-            "Units": "m/s",
-            "Group": "Tidal resource",
-            "IndexLabels": "",
-            "Flags": 9.0,
-            "DefaultValue": [
-                0.0
-            ],
-            "UIObject": "DataArray",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "tz": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Time Zone",
-            "Units": "",
-            "Group": "Tidal Resource",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "ui_step_minutes": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Time step",
-            "Units": "minutes",
-            "Group": "Tidal resource",
-            "IndexLabels": "",
-            "Flags": 9.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "water_depth_file": {
-            "Version": 4.0,
-            "Type": 1.0,
             "Label": "",
             "Units": "",
             "Group": "",
             "IndexLabels": "",
             "Flags": 8.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "year": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Year",
-            "Units": "",
-            "Group": "Tidal Resource",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": 0.0,
+            "DefaultValue": "<invalid>",
             "UIObject": "Default",
             "sscVariableName": "",
             "sscVariableValue": ""
         }
     },
-    "Equations": [
-        "equations{ 'ui_step_minutes' } = define() {\r",
-        "\tarray = ${tidal_velocity};\r",
-        "\tlen_array = #array;\r",
-        "\treturn 60 / (len_array/8760);\r",
-        "};\r",
-        "\r",
-        "equations{ 'tidal_vel_freq' } = define() {\r",
-        "\tobj = ssc_create();\r",
-        "\tssc_var(obj, 'tidal_resource_model_choice', 1);\r",
-        "\tssc_var(obj, 'tidal_resource_filename', ${tidal_resource_filename});\r",
-        "\terr = ssc_exec(obj, 'tidal_file_reader');\r",
-        "\tif (err != 0) {\r",
-        "\t\tmsgbox('error');\r",
-        "\t\treturn [[0]];\r",
-        "\t}\r",
-        "\tarray = [];\r",
-        "\tarray = ssc_var(obj, 'tidal_velocity');\r",
-        "\t//array = ${tidal_velocity};\r",
-        "\tlen_array = #array;\r",
-        "\tmin_vel = floor(min(array));\r",
-        "\tmax_vel = ceil(max(array));\r",
-        "\tbins = (max_vel - min_vel) * 10; //int to int, * 10 for 0.1 bin size\r",
-        "\tfreq_bin = [[]];\r",
-        "\tfor (i = 1; i <= bins; i++) { //Create velocity bins (m/s)\r",
-        "\t\tfreq_bin[i-1][0] = min_vel + 0.1 * i;\r",
-        "\t\tfreq_bin[i-1][1] = 0;\r",
-        "\t}\r",
-        "\tfor (j = 0; j < len_array; j++) { //iterate through time series to sort velocities into bins\r",
-        "\t\tvel = array[j];\r",
-        "\t\tif (vel < freq_bin[0][0]) {\r",
-        "\t\t\tfreq_bin[0][1] += 1 / len_array;\r",
-        "\t\t}\r",
-        "\t\telse {\r",
-        "\t\t\tk = 0;\r",
-        "\t\t\twhile ((array[j] - freq_bin[k][0]) > 0.1 && k < bins) {\r",
-        "\t\t\t\tk = k + 1;\r",
-        "\t\t\t}\r",
-        "\t\t\tfreq_bin[k][1] += 1.0 / len_array;\r",
-        "\t\t}\r",
-        "\t}\r",
-        "\treturn freq_bin;\r",
-        "\r",
-        "};\r",
-        ""
-    ],
+    "Equations": [],
     "Callbacks": [
-        "on_change{'btn_view_tidal_data'} = define() {\r",
-        "\tif ( dview_tidal(value('tidal_resource_filename')) )\r",
-        "\t{\tmsgbox('Failed to read file!\\nThe data viewer was not able to open the weather file:\\n' + value('wave_resource_filename_ts') ); }\r",
-        "};\r",
-        "\r",
-        "\r",
-        "on_change{'btn_refresh_library'} = define() {\r",
-        "\trescanlibrary('tidal_ts');\r",
-        "\t//update_info('on_change btn_refresh_library');\r",
-        "};\r",
-        "\r",
-        "on_change{'btn_add_remove_folders'} = define() {\r",
-        "\tif ( showsettings( 'tidal_ts' ) )\r",
-        "\t{\r",
-        "\t\tupdate_library_folders( '' );\r",
-        "\t\t/*// if current library selection is no longer in library, change to first item listed in library CSV file\r",
-        "\t\tL = strlen( value( 'library_folder_list' ) );\r",
-        "\t\tif ( strlen( value( 'library_folder_list' ) ) < L )\r",
-        "\t\t{\r",
-        "\t\t\tif ( !solar_library(value('solar_resource_file'),false){'is_in_library'} )\r",
-        "\t\t\t{\r",
-        "\t\t\t\tfirst_item = solar_library(value('solar_resource')){'first_item_key'};\r",
-        "\t\t\t\tfirst_item = replace( file_only(first_item), '.csv', '' );\r",
-        "\t\t\t\tmsgbox( 'Selected weather file not in solar resource library!\\nThe file ' \r",
-        "\t\t\t\t\t     + value( file_only('solar_resource_file') )\r",
-        "\t\t\t\t\t     + ' is not in the solar resource library. Changing library selection to ' \r",
-        "\t\t\t\t\t     +  first_item  + '.' );\r",
-        "\t\t\t\tvalue( 'solar_resource' , first_item );\r",
-        "\t\t\t}\t\r",
-        "\t\t}*/\r",
-        "\t}\r",
-        "};\r",
-        "\r",
-        "on_load{'Marine Tidal Resource File'} = define() {\r",
+        "on_load{'Marine Tidal Resource Distribution File'} = define() {\r",
         "\t\r",
         "\t//rescanlibrary('wave_ts');\r",
         "\t//enable(\"wave_resource_matrix\",false);\r",
@@ -738,14 +435,14 @@
         "\trefresh();\r",
         "};\r",
         "\r",
-        "on_change{'tidal_location'} = define() {\r",
-        "\tfile = ${tidal_resource_filename};\r",
+        "on_change{'tidal_location_dist'} = define() {\r",
+        "\tfile = ${tidal_resource_dist_filename};\r",
         "\t//value(\"location_id\",value(\"location_ts\"));\r",
         "\trefresh();\r",
         "\tif (!file_exists(file))\r",
         "\t{\r",
-        "\t\trescanlibrary( 'tidal_ts' );\r",
-        "\t\trefresh('tidal_location');\r",
+        "\t\trescanlibrary( 'tidal' );\r",
+        "\t\trefresh('tidal_location_dist');\r",
         "\t\treturn;\r",
         "\t}\r",
         "\tfile = replace(file, '\\\\', '/');\r",
@@ -753,49 +450,6 @@
         "\tclose(fn);\r",
         "\t//update_info('on_change location_ts');\r",
         "};\r",
-        "\r",
-        "\r",
-        "function update_library_folders( new_path )\r",
-        "{\r",
-        "\t//msgbox('Hello from update_library_folders()');\r",
-        "\tx = get_settings('tidal_data_paths');\r",
-        "\t// add new path if provided and it doesn't already exist in the library\r",
-        "\tif ( new_path != '' && dir_exists( new_path ) && ( strpos( x, new_path ) < 0 ) )\r",
-        "\t{\r",
-        "\t\tif ( x != '' ) { x += ';'; }\r",
-        "\t\tx += slash_back_to_forward( new_path );\r",
-        "\t}\r",
-        "\t// list of library folders files to display on separate lines\r",
-        "\tpaths = split( x, ';' );\r",
-        "\t// put wave download folder at top of list\r",
-        "\tclean_list = '';\r",
-        "\t// remove folders in list that no longer exist\r",
-        "\tfor (i = 0; i<#paths; i++ )\r",
-        "\t{\r",
-        "\t\tif ( dir_exists( paths[i] ) )\r",
-        "\t\t{\r",
-        "\t\t\tclean_list += paths[i];\r",
-        "\t\t\tif ( i < #paths-1 ) { clean_list += ';'; }\r",
-        "\t\t}\t\r",
-        "\t}\t\t\r",
-        "\t// update solar_data_paths used by library.cpp and nsrdb.cpp to cleaned list\t\t\r",
-        "\tset_settings('tidal_data_paths', clean_list );\r",
-        "\t// update list to display\r",
-        "\tvalue( 'library_folder_list', get_settings('tidal_download_path') + '\\n' \r",
-        "\t       + replace( clean_list , ';' , '\\n' ) );\r",
-        "\trescanlibrary( 'tidal_ts' );     \r",
-        "}\r",
-        "\r",
-        "function slash_back_to_forward( str )\r",
-        "{\r",
-        "\treturn replace( str, '\\\\', '/' );\r",
-        "}\r",
-        "\r",
-        "function file_to_key( file ) \r",
-        "{\r",
-        "\t\tkey = file_only( file );\r",
-        "\t\tkey = replace( key, '.' + ext_only( file ), '');\r",
-        "\t\treturn key;\r",
-        "}"
+        ""
     ]
 }

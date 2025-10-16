@@ -4406,7 +4406,13 @@ void fcall_rescanlibrary( lk::invoke_t &cxt )
     else if (type == "tidal")
     {
         wxString tidal_resource_db = SamApp::GetUserLocalDataDir() + "/TidalResourceData.csv";
-        ScanTidalResourceData(tidal_resource_db, false);
+        ScanTidalResourceData(tidal_resource_db, true);
+        reloaded = Library::Load(tidal_resource_db);
+    }
+    else if (type == "tidal_ts")
+    {
+        wxString tidal_resource_db = SamApp::GetUserLocalDataDir() + "/TidalResourceTSData.csv";
+        ScanTidalResourceTSData(tidal_resource_db, false);
         reloaded = Library::Load(tidal_resource_db);
     }
 

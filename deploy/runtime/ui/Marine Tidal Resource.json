@@ -185,12 +185,41 @@
                 }
             }
         },
+        "Plot": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "tidal_resource_curve_plot"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 432.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 60.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 540.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 380.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                }
+            }
+        },
         "DataMatrix": {
             "Visible": 1.0,
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "tidal_resource"
+                    "String": "tidal_resource_lib"
                 },
                 "X": {
                     "Type": 3.0,
@@ -295,35 +324,6 @@
                 "ColorMap": {
                     "Type": 2.0,
                     "Boolean": 0.0
-                }
-            }
-        },
-        "Plot": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "tidal_resource_curve_plot"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 432.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 60.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 540.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 380.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
                 }
             }
         }
@@ -491,6 +491,40 @@
             "UIObject": "DataMatrix",
             "sscVariableName": "",
             "sscVariableValue": ""
+        },
+        "tidal_resource_input": {
+            "Version": 4.0,
+            "Type": 3.0,
+            "Label": "",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 0.0,
+            "DefaultValue": [
+                [
+                    0.0
+                ]
+            ],
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "tidal_resource_lib": {
+            "Version": 4.0,
+            "Type": 3.0,
+            "Label": "",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": [
+                [
+                    0.0
+                ]
+            ],
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
         }
     },
     "Equations": [
@@ -503,6 +537,15 @@
         "\t\tpsum += resourceMatrix[i][1];",
         "\t}",
         "\treturn psum;",
+        "};\r",
+        "\r",
+        "equations{'tidal_resource'} = define() {\r",
+        "\tif (${tidal_resource_model_choice} == 0) {\r",
+        "\t\treturn ${tidal_resource_lib};\r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\treturn ${tidal_resource_input};\r",
+        "\t}\r",
         "};",
         "",
         "",
