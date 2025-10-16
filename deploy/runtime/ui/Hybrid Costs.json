@@ -845,6 +845,89 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
+                    "String": "ui_mspt_cost"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 585.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 195.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 90.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
                     "String": "ui_pv_cost"
                 },
                 "X": {
@@ -1112,6 +1195,19 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
+        "ui_mspt_cost": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Power tower installed cost",
+            "Units": "$",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "ui_pv_cost": {
             "Version": 4.0,
             "Type": 1.0,
@@ -1145,7 +1241,12 @@
         "};\r",
         "\r",
         "equations{ 'ui_wind_cost' } = define() {\r",
-        "\treturn ${wind_total_installed_cost};\r",
+        "\tif (technology() != 'PVWatts CSPTowerMoltenSalt Battery Hybrid') {\r",
+        "\t\treturn ${wind_total_installed_cost};\r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\treturn 0;\r",
+        "\t}\r",
         "};\r",
         "\r",
         "equations{ 'ui_pv_cost' } = define() {\r",
@@ -1169,6 +1270,15 @@
         "\telse {\r",
         "\t\treturn 0;\r",
         "\t}\t\r",
+        "};\r",
+        "\r",
+        "equations{ 'ui_mspt_cost'} = define() {\r",
+        "\tif ( technology() == 'PVWatts CSPTowerMoltenSalt Battery Hybrid') {\r",
+        "\t\treturn ${mspt_total_installed_cost};\r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\treturn 0;\r",
+        "\t}\r",
         "};\r",
         "\r",
         "equations{ 'total_installed_cost' } = define() {\r",
@@ -1199,6 +1309,11 @@
         "             + ${wind_total_installed_cost}  \r",
         "             + ${fuelcell_total_installed_cost} \r",
         "             + ${battery_total_installed_cost};\r",
+        "\t}\r",
+        "\telseif (technology() == 'PVWatts CSPTowerMoltenSalt Battery Hybrid') {\r",
+        "\t\treturn ${pv_total_installed_cost}\r",
+        "\t\t+ ${mspt_total_installed_cost}\r",
+        "\t\t+ ${battery_total_installed_cost};\r",
         "\t}\r",
         "\telse {\r",
         "\t\treturn null;\r",
