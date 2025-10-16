@@ -3613,9 +3613,18 @@
         "}\r",
         "",
         "on_load{'MSPT System Design'} = define() ",
-        "\t{ on_change{'Q_rec_des'}();};",
+        "\t{ on_change{'Q_rec_des'}();\r",
+        "\t  on_change{'is_parallel_htr'}(); };",
         "\r",
         "on_change{'Q_rec_des'} = define()\r",
-        "\t{ compare_solarmult(); };"
+        "\t{ compare_solarmult(); };\r",
+        "\t\r",
+        "on_change{'is_parallel_htr'} = define()\r",
+        "\t{ is_htr = value('is_parallel_htr') == 1;\r",
+        "\tenable(\"heater_mult\", is_htr);\r",
+        "\tenable(\"tshours_heater\", is_htr);\r",
+        "\tenable(\"q_dot_heater_des_calc\", is_htr);\r",
+        "\tis_dispatch = value('is_dispatch') == 1;\r",
+        "    };"
     ]
 }
