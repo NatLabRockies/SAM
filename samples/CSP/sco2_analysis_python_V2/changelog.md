@@ -1,0 +1,27 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+## [SAM Fall 2025 Release]
+<!-- Version and date placeholder -->
+### Added
+- Two new cycle configurations:
+  - Recompression with HTR Bypass
+  - Turbine Split Flow
+- Inflation year parameter (`yr_inflation`)
+  - Modifies cycle component costs to target inflation year
+- Thermal efficiency cutoff
+  - Prevents finalization of component designs if efficiency is below the threshold
+
+### Changed
+- Recuperator cost model
+  - Adds temperature-based cost factor for temperatures above 550 °C
+  - Based on Weiland et al., 2019
+- Axial turbine cost model
+  - Adds temperature-based cost factor for inlet temperatures above 550 °C
+  - Based on Weiland et al., 2019
+- Optimization objective metric calculation
+  - Improved behavior when using a minimum temperature difference (`min_phx_deltaT`)
+
+### Fixed
+- Improved stability of air cooler convergence
