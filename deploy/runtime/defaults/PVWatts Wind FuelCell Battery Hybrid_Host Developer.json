@@ -119490,6 +119490,9 @@
         "show_ReserveAccounts": 1.0,
         "show_construction_period": 1.0,
         "solution_mode_message": "",
+        "start_day_of_year": 3.335046e-317,
+        "start_day_of_year_load_ui": 3.335046e-317,
+        "start_day_of_year_tod_ui": 3.335046e-317,
         "state_tax_rate": [
             7.0
         ],

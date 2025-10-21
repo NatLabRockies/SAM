@@ -86,6 +86,12 @@ SAM_EXPORT void SAM_Equpartflip_Revenue_ppa_soln_tolerance_nset(SAM_table ptr, d
 	});
 }
 
+SAM_EXPORT void SAM_Equpartflip_Revenue_start_day_of_year_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "start_day_of_year", number);
+	});
+}
+
 SAM_EXPORT void SAM_Equpartflip_FinancialParameters_analysis_period_nset(SAM_table ptr, double number, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_number(ptr, "analysis_period", number);
@@ -1755,6 +1761,15 @@ SAM_EXPORT double SAM_Equpartflip_Revenue_ppa_soln_tolerance_nget(SAM_table ptr,
 	translateExceptions(err, [&]{
 	if (!ssc_data_get_number(ptr, "ppa_soln_tolerance", &result))
 		make_access_error("SAM_Equpartflip", "ppa_soln_tolerance");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Equpartflip_Revenue_start_day_of_year_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "start_day_of_year", &result))
+		make_access_error("SAM_Equpartflip", "start_day_of_year");
 	});
 	return result;
 }

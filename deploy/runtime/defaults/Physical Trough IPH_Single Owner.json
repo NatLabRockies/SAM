@@ -11883,6 +11883,8 @@
     "solar_resource_file": "tucson_az_32.116521_-110.933042_psmv3_60_tmy.csv",
     "specified_solar_multiple": 2.3,
     "specified_total_aperture": 20000.0,
+    "start_day_of_year": 3.335046e-317,
+    "start_day_of_year_tod_ui": 3.335046e-317,
     "state": "-",
     "state_tax_rate": [
         7.0

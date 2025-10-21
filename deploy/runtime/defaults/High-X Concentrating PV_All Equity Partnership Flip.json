@@ -28309,6 +28309,8 @@
     "solution_mode_message": "",
     "sponsor_cap_recovery_mode": 0.0,
     "sponsor_cap_recovery_year": 3.0,
+    "start_day_of_year": 3.335046e-317,
+    "start_day_of_year_tod_ui": 3.335046e-317,
     "state": "-",
     "state_tax_rate": [
         7.0

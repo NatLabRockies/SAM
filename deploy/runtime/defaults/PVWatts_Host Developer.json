@@ -36960,6 +36960,9 @@
     "solar_resource": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy",
     "solar_resource_file": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
     "solution_mode_message": "",
+    "start_day_of_year": 3.335046e-317,
+    "start_day_of_year_load_ui": 3.335046e-317,
+    "start_day_of_year_tod_ui": 3.335046e-317,
     "state": "-",
     "state_tax_rate": [
         7.0

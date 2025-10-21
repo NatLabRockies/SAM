@@ -127,7 +127,7 @@
     "federal_tax_rate": [
         21.0
     ],
-    "first_year_output": 35591986.409471999,
+    "first_year_output": 35591986.409472,
     "first_year_output_peak": 9318.8352,
     "fixed_plant_input": 0.0,
     "grid_curtailment": [
@@ -26514,7 +26514,7 @@
         184.05
     ],
     "nameplate_capacity": 9707.12,
-    "nominal_discount_rate": 9.060000000000003,
+    "nominal_discount_rate": 9.060000000000004,
     "normalize_to_utility_bill": 0.0,
     "om_capacity": [
         25.0
@@ -26578,7 +26578,7 @@
     "peak_9": 226.751,
     "prop_tax_assessed_decline": 0.0,
     "prop_tax_cost_assessed_percent": 100.0,
-    "property_assessed_value": 11976159.299999999,
+    "property_assessed_value": 11976159.3,
     "property_tax_rate": 1.0,
     "ptc_fed_amount": [
         0.0
@@ -26601,6 +26601,8 @@
     "show_cash_incentives": 1.0,
     "show_tax_credits": 1.0,
     "spec_mode": 0.0,
+    "start_day_of_year": 3.335046e-317,
+    "start_day_of_year_load_ui": 3.335046e-317,
     "state_tax_rate": [
         7.0
     ],
@@ -26609,10 +26611,10 @@
     "system_use_lifetime_output": 0.0,
     "total_direct_cost": 10192476.0,
     "total_indirect_cost": 1375984.26,
-    "total_installed_cost": 11976159.299999999,
+    "total_installed_cost": 11976159.3,
     "ui_annual_load": 0.0,
     "ui_loan_amount": 7185695.579999999,
-    "ui_net_capital_cost": 11976159.299999999,
+    "ui_net_capital_cost": 11976159.3,
     "ui_step_minutes": 60.0,
     "ui_wacc": 6.709740000000002,
     "ur_annual_min_charge": 0.0,

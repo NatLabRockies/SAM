@@ -47418,6 +47418,8 @@
     "solar_resource": "daggett_ca_34.865371_-116.783023_psmv3_60_tmy",
     "solar_resource_file": "daggett_ca_34.865371_-116.783023_psmv3_60_tmy.csv",
     "solarm": 2.4,
+    "start_day_of_year": 0.0,
+    "start_day_of_year_tod_ui": 3.335046e-317,
     "startup_ramp_time": 0.0,
     "startup_target_Tdiff": -5.0,
     "state": "-",

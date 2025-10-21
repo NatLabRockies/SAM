@@ -1145,11 +1145,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 87.0
+                    "Integer": 90.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 435.0
+                    "Integer": 456.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2240,11 +2240,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 72.0
+                    "Integer": 75.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 384.0
+                    "Integer": 405.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -3342,6 +3342,68 @@
                 }
             }
         },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "lbl_start_day"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 63.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 222.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 375.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 28.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
         "Numeric": {
             "Visible": 1.0,
             "ObjectProperties": {
@@ -3541,11 +3603,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 69.0
+                    "Integer": 72.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 267.0
+                    "Integer": 288.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -3582,11 +3644,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 54.0
+                    "Integer": 57.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 366.0
+                    "Integer": 387.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -3682,11 +3744,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 54.0
+                    "Integer": 57.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 240.0
+                    "Integer": 261.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -4914,6 +4976,47 @@
                 }
             }
         },
+        "Choice": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "start_day_of_year_load_ui"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 261.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 195.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 120.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Items": {
+                    "Type": 6.0,
+                    "StringList": "Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday"
+                },
+                "Selection": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
         "ToolTipCtrl": {
             "Visible": 1.0,
             "ObjectProperties": {
@@ -4997,11 +5100,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 414.0
+                    "Integer": 417.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 294.0
+                    "Integer": 315.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -5062,6 +5165,43 @@
                 }
             }
         },
+        "ToolTipCtrl": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "tt_start_day"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 414.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 195.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Tips": {
+                    "Type": 5.0,
+                    "String": "Type a tip here or define in runtime/help/tooltips.json"
+                },
+                "TipTitle": {
+                    "Type": 5.0,
+                    "String": "Type a tip title here or define in runtime/help/tooltips.json"
+                }
+            }
+        },
         "MonthlyFactor": {
             "Visible": 1.0,
             "ObjectProperties": {
@@ -5071,11 +5211,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 279.0
+                    "Integer": 282.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 294.0
+                    "Integer": 315.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -5731,6 +5871,19 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
+        "start_day_of_year_load_ui": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "January 1 day of week",
+            "Units": "",
+            "Group": "Electric Load",
+            "IndexLabels": "",
+            "Flags": 2.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Choice",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "utility_bill_data": {
             "Version": 4.0,
             "Type": 2.0,
@@ -6108,6 +6261,21 @@
         "\t\t\t}\r",
         "\t\t}\r",
         "\t}\r",
-        "}"
+        "}\r",
+        "\r",
+        "on_change{'start_day_of_year_load_ui'} = define() {\r",
+        "\tvalue('start_day_of_year', value('start_day_of_year_load_ui'));\r",
+        "\tmsg = '';\r",
+        "\tfin = financing();\r",
+        "\tif(fin == 'Host Developer') {\r",
+        "\t\tvalue('start_day_of_year_tod_ui', value('start_day_of_year'));\r",
+        "\t\tmsg = 'January 1 day of week is linked to input on TOD Factors page.';\r",
+        "\t}\r",
+        "\telse if(fin == 'Residential' || fin == 'Third Party') {\r",
+        "\t\tvalue('start_day_of_year_belpe_ui', value('start_day_of_year'));\r",
+        "\t}\r",
+        "\t\r",
+        "\tproperty('lbl_start_day','Caption',msg);\r",
+        "};"
     ]
 }

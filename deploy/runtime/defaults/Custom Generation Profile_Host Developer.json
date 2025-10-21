@@ -36657,7 +36657,7 @@
         184.05
     ],
     "nameplate_capacity": 9707.12,
-    "nominal_discount_rate": 9.060000000000003,
+    "nominal_discount_rate": 9.060000000000004,
     "normalize_to_utility_bill": 0.0,
     "om_capacity": [
         25.0
@@ -36755,6 +36755,9 @@
     "show_construction_period": 1.0,
     "solution_mode_message": "",
     "spec_mode": 0.0,
+    "start_day_of_year": 3.335046e-317,
+    "start_day_of_year_load_ui": 3.335046e-317,
+    "start_day_of_year_tod_ui": 3.335046e-317,
     "state_tax_rate": [
         7.0
     ],

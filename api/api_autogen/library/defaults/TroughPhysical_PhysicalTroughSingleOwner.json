@@ -649,7 +649,8 @@
 			"en_electricity_rates": 0
 		},
 		"TimeOfDeliveryFactors": {
-			"dispatch_tod_factors": [1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000]
+			"dispatch_tod_factors": [1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000],
+			"start_day_of_year": 0
 		},
 		"Revenue": {
 			"ppa_price_input": [0.134000]

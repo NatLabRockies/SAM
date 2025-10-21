@@ -50979,6 +50979,8 @@
     "sponsor_operating_margin": 20.0,
     "sponsor_operating_margin_amount": 1999985.8435200004,
     "sponsor_operating_margin_escalation": 2.0,
+    "start_day_of_year": 3.335046e-317,
+    "start_day_of_year_tod_ui": 3.335046e-317,
     "state": "-",
     "state_tax_rate": [
         7.0
