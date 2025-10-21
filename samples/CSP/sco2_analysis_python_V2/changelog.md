@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [SAM Fall 2025 Release]
+## [2025.10.21]
 <!-- Version and date placeholder -->
 ### Added
 - Two new cycle configurations:
@@ -24,4 +24,6 @@ All notable changes to this project will be documented in this file.
   - Improved behavior when using a minimum temperature difference (`min_phx_deltaT`)
 
 ### Fixed
-- Improved stability of air cooler convergence
+- Improved stability of air cooler convergence at low cycle efficiencies
+- Fixed bug solving heat exchangers with low effectiveness due to pinch points
+- Fixed heat exchanger bug with 2-phase cold fluid stream
