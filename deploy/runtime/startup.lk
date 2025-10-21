@@ -893,32 +893,42 @@ setup_all_equity_partnership_flip_pages();
 setup_electricity_purchases();
 
 setconfig('PV UI','None');
-	addpage( [[ 'Solar Resource Data', {'name'='PV Albedo and Radiation', 'caption' = 'Albedo - Sky Diffuse Model - Irradiance Data (Advanced)', 'collapsible'=true, 'collapsible_var'='pv.radmode.is_shown'} ]], { 'sidebar'='Location and Resource', 'help'='pv_location_and_resource' } );
-	addpage( [ ['Simple Efficiency Module Model'],
-				['CEC Performance Model with Module Database'],
-				['CEC Performance Model with User Entered Specifications'],
-				['Sandia PV Array Performance Model with Module Database'],
-				['IEC61853 Single Diode Model'] ],
-			{ 'sidebar'='Module', 'help'='pv_module', 'exclusive_var'='module_model' } );
-	addpage( [ ['Inverter CEC Database', 'Inverter Temp Derate CEC DB'],
-			 ['Inverter Datasheet', 'Inverter Temp Derate DS'],
-			 ['Inverter Part Load Curve', 'Inverter Temp Derate PLC'],
-			 ['Inverter CEC Coefficient Generator', 'Inverter Temp Derate CEC CG'] ],
-			{ 'sidebar'='Inverter', 'help'='pv_inverter', 'exclusive_var'='inverter_model' } );
+	addpage( [['Solar Resource Download', 
+	           'Solar Resource Library', 
+	           'Solar Resource Information', 
+	           {'name'='PV Albedo and Radiation', 'caption' = 'Albedo - Sky Diffuse Model - Irradiance Data (Advanced)', 'collapsible'=true, 'collapsible_var'='pv.radmode.is_shown'} ]], 
+	           { 'sidebar'='Location and Resource', 'help'='pv_location_and_resource' });
+	addpage( [['Simple Efficiency Module Model - Copy'],
+			  ['CEC Performance Model with Module Database - Copy'],
+			  ['CEC Performance Model with User Entered Specifications - Copy'],
+			  ['Sandia PV Array Performance Model with Module Database'],
+			  ['IEC61853 Single Diode Model'] ], 
+			  {'sidebar'='Module', 'help'='pv_module', 'exclusive_var'='module_model'});
+	addpage( [['Inverter CEC Database - Copy', 'Inverter Temp Derate CEC DB'],
+			  ['Inverter Datasheet - Copy', 'Inverter Temp Derate DS'],
+			  ['Inverter Part Load Curve - Copy', 'Inverter Temp Derate PLC'],
+			  ['Inverter CEC Coefficient Generator - Copy', 'Inverter Temp Derate CEC CG']],
+			  {'sidebar'='Inverter', 'help'='pv_inverter', 'exclusive_var'='inverter_model'});
 	// System Sizing
-	addpage( [ ['PV System Size'] ], { 'sidebar'='System Size', 'help'='pv_xxx' } );
-	addpage( [ ['PV String Size and Subarrays'] ], { 'sidebar'='String Size and Subarrays', 'help'='pv_xxx' } );
-	addpage( [ ['PV Inverter Input Voltage'] ], { 'sidebar'='Inverter Input Voltage', 'help'='pv_xxx' } );
+	addpage( [['PV System Size',
+	           'PV Subarrays and String Size' , 
+	           'PV Inverter Input Voltage']], 
+	          {'sidebar'='System Sizing', 'help'='pv_xxx'});
 	// Tracking Layout Land
-	addpage( [ ['PV Tracking and Orientation'] ], { 'sidebar'='Tracking and Orientation', 'help'='pv_xxx' } );
-	addpage( [ ['PV Row Dimensions and Spacing'] ], { 'sidebar'='Row Dimensions and Spacing', 'help'='pv_xxx' } );
-	addpage( [ ['PV Terrain Slope'] ], { 'sidebar'='Terrain Slope', 'help'='pv_xxx' } );
-	addpage( [ ['PV Land Area'] ], { 'sidebar'='Land Area', 'help'='pv_xxx' } );
+	addpage( [['PV Tracking and Orientation', 
+	          'PV Row Dimensions and Spacing', 
+	          'PV Terrain Slope', 
+	          'PV UI Land Area']], 
+	          {'sidebar'='Tracking Layout Land', 'help'='pv_xxx'});
 	// Soiling Shading Snow
-	addpage( [ ['PV Soiling Losses'] ], { 'sidebar'='Soiling Losses', 'help'='pv_xxx' } );
-	addpage( [ ['PV External Shading'] ], { 'sidebar'='External Shading', 'help'='pv_xxx' } );
-	addpage( [ ['PV Self Shading'] ], { 'sidebar'='Self Shading', 'help'='pv_xxx' } );
-	addpage( [ ['PV Snow Losses'] ], { 'sidebar'='Snow Losses', 'help'='pv_xxx' } );
+	addpage( [['PV Soiling Shading Snow'] ], 
+	          {'sidebar'='Soiling Shading Snow', 'help'='pv_xxx'});
+	// Electrical losses
+	addpage( [['PV DC Losses', 
+	          'PV AC Losses', 
+	          'PV System Availability']], 
+	          {'sidebar'='Electrical Losses', 'help'='pv_xxx'});
+	
 	// Battery Enable form stores hidden en_batt variable required by some UI forms to determine if there is a battery
 	/*addpage( [ ['PV System Design', 
 	           {'name'='PV Land Area', 'caption' = 'Land Area', 'collapsible'=true, 'collapsible_var'='pv_land_area_is_shown'},

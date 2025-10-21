@@ -165,7 +165,7 @@
                 },
                 "TabOrder": {
                     "Type": 3.0,
-                    "Integer": 3.0
+                    "Integer": -1.0
                 }
             }
         },
@@ -248,7 +248,7 @@
                 },
                 "TabOrder": {
                     "Type": 3.0,
-                    "Integer": 5.0
+                    "Integer": 3.0
                 }
             }
         },
@@ -331,7 +331,56 @@
                 },
                 "TabOrder": {
                     "Type": 3.0,
-                    "Integer": 4.0
+                    "Integer": 2.0
+                }
+            }
+        },
+        "RadioChoice": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "enable_auto_size"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 15.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 75.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 350.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 54.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Selection": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Items": {
+                    "Type": 6.0,
+                    "StringList": "Specify number of modules and inverters|Specify desired size and DC/AC ratio"
+                },
+                "ShowCaptions": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Horizontal": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 1.0
                 }
             }
         },
@@ -414,7 +463,66 @@
                 },
                 "TabOrder": {
                     "Type": 3.0,
-                    "Integer": 1.0
+                    "Integer": 4.0
+                }
+            }
+        },
+        "MultilineText": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "layout_warning"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 18.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 165.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 586.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 132.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Text": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
                 }
             }
         },
@@ -452,55 +560,6 @@
                 "Bold": {
                     "Type": 2.0,
                     "Boolean": 1.0
-                }
-            }
-        },
-        "RadioChoice": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "pv_size_choice"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 15.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 75.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 350.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 54.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Selection": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Items": {
-                    "Type": 6.0,
-                    "StringList": "Specify desired size and DC/AC ratio|Specify number of modules and inverters"
-                },
-                "ShowCaptions": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Horizontal": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
                 }
             }
         },
@@ -563,65 +622,6 @@
                 "AlignTop": {
                     "Type": 2.0,
                     "Boolean": 1.0
-                }
-            }
-        },
-        "MultilineText": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "sizing_messages"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 18.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 165.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 586.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 132.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Text": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
                 }
             }
         },
@@ -1011,6 +1011,19 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
+        "enable_auto_size": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "System size option",
+            "Units": "",
+            "Group": "PV System Size",
+            "IndexLabels": "Specify number of modules and inverters|Specify desired size and DC/AC ratio",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "RadioChoice",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "inverter_count": {
             "Version": 4.0,
             "Type": 1.0,
@@ -1024,27 +1037,14 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
-        "pv_size_choice": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "System size option",
-            "Units": "",
-            "Group": "PV System Size",
-            "IndexLabels": "Specify desired size and DC/AC ratio|Specify number of modules and inverters",
-            "Flags": 3.0,
-            "DefaultValue": 0.0,
-            "UIObject": "RadioChoice",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "sizing_messages": {
+        "layout_warning": {
             "Version": 4.0,
             "Type": 4.0,
             "Label": "System sizing messages",
             "Units": "",
             "Group": "PV System Size",
             "IndexLabels": "",
-            "Flags": 5.0,
+            "Flags": 9.0,
             "DefaultValue": "",
             "UIObject": "MultilineText",
             "sscVariableName": "",
@@ -1106,8 +1106,7 @@
     "Equations": [
         "equations{ '$MIMO$ pv_size_array' } = define()\r",
         "{\r",
-        "\tif (${pv_size_choice}==0)\r",
-        "\t{\r",
+        "\tif (${enable_auto_size}==1) {\r",
         "\t\t//disable subarrays 2-4- this only works for a single subarray\r",
         "\t\t${subarray2_enable} = 0;\r",
         "\t\t${subarray3_enable} = 0;\r",
@@ -1174,7 +1173,7 @@
         "\t\t\tnum_series = 0;\r",
         "\t\t\tnum_parallel = 0;\r",
         "\t\t\tinverter_count = 0;\r",
-        "\t\t\tmsgbox('SAM was not able to automatically size the system close enough to your desired size. Please size the system manually, or enter another size.');\r",
+        "\t\t\tmsgbox('Warning!\\nSAM was not able to calculate a system size close to the desired size. Please size the system manually, try another desired size, or try a different module and/or inverter.\\n\\nDesired size: ' + ${desired_size} +' kWdc\\nCalculated size: ' + proposed_size + ' kWdc');\r",
         "\t\t}\t\r",
         "\t\t\r",
         "\t\t//assign the final calculated numbers\r",
@@ -1235,7 +1234,7 @@
         "\t* ${total_modules};\r",
         "};\r",
         "\r",
-        "equations{'sizing_messages'} = define(){\r",
+        "equations{'layout_warning'} = define(){\r",
         "\r",
         "\tmessage = '';\r",
         "\t\r",
@@ -1311,42 +1310,51 @@
         "\t\tif ( more != '' ) { message += 'Consider increasing the number of modules per string for Subarray(s)' + more + '.\\n'; }\r",
         "\t\tif ( less != '' ) { message += 'Consider decreasing the number of modules per string for Subarray(s)' + less + '.\\n'; }\r",
         "\t}\r",
-        "\r",
-        "\tinv_vlow = ?${inverter_model} [${inv_snl_mppt_low}, ${inv_ds_mppt_low}, ${inv_pd_mppt_low},${inv_cec_cg_mppt_low}];\r",
-        "\tif ( ${mppt_low_inverter} != inv_vlow ) { message += 'Minimum MPPT voltage is different from value on inverter page: ' + inv_vlow + ' Vdc.\\n'; }\r",
         "\t\r",
-        "    inv_vhi = ?${inverter_model} [${inv_snl_mppt_hi}, ${inv_ds_mppt_hi}, ${inv_pd_mppt_hi},${inv_cec_cg_mppt_hi}];\r",
-        "    if ( ${mppt_hi_inverter} != inv_vhi ) { message += 'Maximum MPPT voltage is different from value on inverter page: ' + inv_vhi + ' Vdc.\\n'; }\r",
-        "\t\r",
-        "    inv_vmax = ?${inverter_model} [${inv_snl_vdcmax}, ${inv_ds_vdcmax}, ${inv_pd_vdcmax},${inv_cec_cg_vdcmax}];\r",
-        "\tif ( ${vdcmax_inverter} != inv_vmax ) { message += 'Maximum DC voltage is different from value on inverter page: ' + inv_vmax + ' Vdc.'; }\r",
+        "\t// nameplate capacity is zero when autosize fails\r",
+        "\tif ( ${system_capacity} == 0 ) {\r",
+        "\t\tmessage += 'Nameplate DC capacity is zero. Specify a different desired size or use the Specify Number of Modules and Inverters option.';\r",
+        "\t}\r",
         "\r",
         "\tif (message == '') { message = 'No system sizing messages.'; }\r",
         "\r",
         "\treturn message; \r",
         "};\r",
         "\r",
-        "\r",
+        "equations{ 'batt_max_power' } = define() {\r",
+        "\tmax_power = 0;\r",
+        "\tif ( technology() == 'PV Battery') {\r",
+        "\t\tmax_power = ${batt_power_discharge_max_kwdc};\r",
+        "\t}\r",
+        "\treturn max_power;\r",
+        "};\r",
         ""
     ],
     "Callbacks": [
         "on_load{'PV System Size'} = define() {\r",
         "\r",
         "\tsize_option_inputs();\r",
-        "\r",
+        "\tauto_size_subarray_enable(); // defined on PV Subarrays and String Size form\r",
+        "\t\r",
         "\t// show/hide battery max power input\r",
         "\tshow('batt_max_power', (technology() == 'PV Battery') );\r",
         "\trefresh();\r",
         "\t\r",
         "};\r",
         "\r",
-        "on_change{'pv_size_choice'} = define () {\r",
+        "on_change{'enable_auto_size'} = define () {\r",
         "\tsize_option_inputs();\r",
+        "\t auto_size_subarray_enable();\r",
         "};\r",
         "\r",
+        "on_change{'inverter_count'} = define () {\r",
+        "\t// these are defined on PV Inverter Input Voltage form\r",
+        "\tenable_mppt();\r",
+        "\tmppt_warning();\r",
+        "};\r",
         "\r",
         "function size_option_inputs() {\r",
-        "\tif (value('pv_size_choice') == 0) {\r",
+        "\tif (value('enable_auto_size') == 1) {\r",
         "\t\tenable('inverter_count', 0);\r",
         "\t\tenable('desired_size', 1);\r",
         "\t\tenable('desired_dcac_ratio', 1);\r",

@@ -1,8 +1,230 @@
 {
     "Name": "PV System Availability",
     "Width": 1010.0,
-    "Height": 510.0,
+    "Height": 169.0,
     "FormObjects": {
+        "Divider": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "ac_loss_divider"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 15.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 51.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 480.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 16.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Orientation": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Colour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 120.0,
+                        "Green": 120.0,
+                        "Blue": 120.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "DC Losses"
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "LossAdjustment": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "adjust"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 540.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 75.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 270.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 73.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 2.0
+                },
+                "Description": {
+                    "Type": 5.0,
+                    "String": "AC System Availability Losses"
+                },
+                "Label": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "AnalysisPeriod": {
+                    "Type": 3.0,
+                    "Integer": 25.0
+                },
+                "ShowMode": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AnnualEnabled": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "WeeklyEnabled": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "LossAdjustment": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "dc_adjust"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 39.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 75.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 270.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 79.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Description": {
+                    "Type": 5.0,
+                    "String": "DC System Availability Losses"
+                },
+                "Label": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "AnalysisPeriod": {
+                    "Type": 3.0,
+                    "Integer": 25.0
+                },
+                "ShowMode": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AnnualEnabled": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "WeeklyEnabled": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Divider": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "dc_loss_divider"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 516.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 51.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 480.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 16.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Orientation": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Colour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 120.0,
+                        "Green": 120.0,
+                        "Blue": 120.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "AC Losses"
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
         "GroupBox": {
             "Visible": 1.0,
             "ObjectProperties": {
@@ -24,7 +246,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 500.0
+                    "Integer": 161.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -39,9 +261,259 @@
                     "Boolean": 1.0
                 }
             }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 767"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 15.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 980.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "System availability losses reduce the system output to represent system outages or other events. Availability losses may be applied either on the DC or AC side of the system."
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
         }
     },
-    "VarDatabase": {},
+    "VarDatabase": {
+        "adjust": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "AC availability losses",
+            "Units": "% of AC output",
+            "Group": "PV System Availability",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "LossAdjustment",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "adjust_constant": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Constant performance adjustment",
+            "Units": "% of AC output",
+            "Group": "PV System Availability",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "adjust_en_periods": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Enable custom period performance adjustments",
+            "Units": "0/1",
+            "Group": "PV System Availability",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "adjust_en_timeindex": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Enable timeseries performance adjustments",
+            "Units": "0/1",
+            "Group": "PV System Availability",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "adjust_periods": {
+            "Version": 4.0,
+            "Type": 3.0,
+            "Label": "Custom period performance adjustments",
+            "Units": "% of AC output",
+            "Group": "PV System Availability",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": [
+                [
+                    0.0
+                ]
+            ],
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "adjust_timeindex": {
+            "Version": 4.0,
+            "Type": 2.0,
+            "Label": "Timeseries performance adjustments",
+            "Units": "% of AC output",
+            "Group": "PV System Availability",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": [
+                0.0
+            ],
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "dc_adjust": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "DC availability losses",
+            "Units": "% of DC output",
+            "Group": "PV System Availability",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "LossAdjustment",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "dc_adjust_constant": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "DC Constant performance adjustment",
+            "Units": "% of DC output",
+            "Group": "PV System Availability",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "dc_adjust_en_periods": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "DC enable custom period performance adjustments",
+            "Units": "0/1",
+            "Group": "PV System Availability",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "dc_adjust_en_timeindex": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "DC enable timeseries performance adjustments",
+            "Units": "0/1",
+            "Group": "PV System Availability",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "dc_adjust_periods": {
+            "Version": 4.0,
+            "Type": 3.0,
+            "Label": "DC custom period performance adjustments",
+            "Units": "% of DC output",
+            "Group": "PV System Availability",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": [
+                [
+                    0.0
+                ]
+            ],
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "dc_adjust_timeindex": {
+            "Version": 4.0,
+            "Type": 2.0,
+            "Label": "DC timeseries performance adjustments",
+            "Units": "% of DC output",
+            "Group": "PV System Availability",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": [
+                0.0
+            ],
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        }
+    },
     "Equations": [],
-    "Callbacks": []
+    "Callbacks": [
+        "on_load{'PV System Availability'} = define() {\r",
+        "\r",
+        "\t// set length of loss adjustment input table to analysis period\r",
+        "\tif (financing() != 'LCOE Calculator' && financing() != 'None') {\r",
+        "\t\tif (value('system_use_lifetime_output') == 1) {\r",
+        "\t\t\tproperty('adjust', 'AnalysisPeriod', value('analysis_period'));\r",
+        "\t\t\tproperty('dc_adjust', 'AnalysisPeriod', value('analysis_period'));\r",
+        "\t\t}\r",
+        "\t\telse {\r",
+        "\t\t\tproperty('adjust', 'AnalysisPeriod', 1);\r",
+        "\t\t\tproperty('dc_adjust', 'AnalysisPeriod', 1);\r",
+        "\t\t}\r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\tproperty('adjust', 'AnalysisPeriod', 1);\r",
+        "\t\tproperty('dc_adjust', 'AnalysisPeriod', 1);\r",
+        "\t}\r",
+        "};"
+    ]
 }
