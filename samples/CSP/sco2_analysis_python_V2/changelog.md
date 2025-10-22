@@ -2,10 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
-## [2025.10.21]
+## [2025.10.22]
 ### Git Commits
-- **SSC**: https://github.com/NREL/ssc/commit/1e7fc7d740bd1dbd56a578b0323af96da70a525f
-- **SAM**: https://github.com/NREL/SAM/commit/82466c3527505f0adc59bf9e8a140d3c08ed593a
+- **SSC**: https://github.com/NREL/ssc/commit/0276c6cc1cdeeeecbd8533078d33c0fe35c348ae
+- **SAM**: https://github.com/NREL/SAM/commit/b543f650f69af203f843b65537d1839e6d7cc109
 ### Added
 - Two new cycle configurations:
   - Recompression with HTR Bypass
