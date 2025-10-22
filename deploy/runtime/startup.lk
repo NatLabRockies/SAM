@@ -912,7 +912,8 @@ setconfig('PV UI','None');
 	// System Sizing
 	addpage( [['PV System Size',
 	           'PV Subarrays and String Size' , 
-	           'PV Inverter Input Voltage']], 
+	           'PV Inverter Input Voltage',
+	           'Battery Enable']], 
 	          {'sidebar'='System Sizing', 'help'='pv_xxx'});
 	// Tracking Layout Land
 	addpage( [['PV Tracking and Orientation', 
