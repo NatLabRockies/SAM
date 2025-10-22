@@ -34,7 +34,7 @@ def get_sco2_design_parameters():
 
     # Cycle design options
         # Configuration
-    des_par["cycle_config"] = 1  # [1] = RC, [2] = PC
+    des_par["cycle_config"] = 1  # [1] = RC, [2] = PC, [3] = HTR BP, [4] = TSF
 
         # Recuperator design
     des_par["design_method"] = 2  # [-] 1 = specify efficiency, 2 = specify total recup UA, 3 = Specify each recup design (see inputs below)
@@ -94,103 +94,120 @@ def get_sco2_design_parameters():
     # Default
     des_par["deltaP_counterHX_frac"] = 0.0054321  # [-] Fraction of CO2 inlet pressure that is design point counterflow HX (recups & PHX) pressure drop
 
+    # HTR BP parameters
+    des_par['is_bypass_ok'] = -0.11  # Bypass Fraction 1 = Optimize, 0 = no bypass, < 0 = fix bp_frac to abs(input)
+    des_par['T_bypass_target'] = 480 # [C] Target HTF Outlet Temperature (if bypass frac is not fixed)
+    des_par['T_target_is_HTF'] = 1   # Temperature target is HTF outlet (rather than sco2)
+    des_par['deltaT_bypass'] = 0     # [dC] Temperature difference at Mixer 2
+    des_par['set_HTF_mdot'] = 0      # [kg/s or False] Do NOT set HTF mdot (model solves it with approach temps)
+
+    # TSF paramters
+    des_par['is_turbine_split_ok'] = 1                  # Turbine split fraction 1 = Optimize, 0 = no bypass, < 0 = fix bp_frac to abs(input)
+    des_par['eta_isen_t2'] = des_par['eta_isen_t']      # Turbine 2 isentropic efficiency
+
     return des_par
 
-print("current processId:", os.getpid());
+if __name__ == "__main__":
 
-"Save dictionary of design parameters from above"
-sco2_des_par_default = get_sco2_design_parameters()
+    print("current processId:", os.getpid());
 
-##########################################
-"Cycle design simulation with default parameters"
-c_sco2 = sco2_solve.C_sco2_sim(1)   # Initialize to the recompression cycle default (1)
-c_sco2.overwrite_default_design_parameters(sco2_des_par_default)
-c_sco2.solve_sco2_case()            # Run design simulation
-print(c_sco2.m_solve_dict)
-print("\nDid the simulation code solve successfully = ",c_sco2.m_solve_success)
-c_sco2.m_also_save_csv = True
-c_sco2.save_m_solve_dict("design_solution__default_pars")   # Save design solution dictionary
-sol_dict__default_pars = c_sco2.m_solve_dict
+    "Save dictionary of design parameters from above"
+    sco2_des_par_default = get_sco2_design_parameters()
 
-##########################################
-"Plotting a cycle design"
-c_plot = cy_plt.C_sco2_TS_PH_plot(sol_dict__default_pars)
-c_plot.is_save_plot = True
-c_plot.file_name = "cycle_design_plots__default_pars"
-c_plot.plot_new_figure()
+    save_csv = True
+    save_figure = True
+    save_json = True
 
-##########################################
-"Modifying the cycle design parameters to fully constrain the cycle design"
-mod_base_dict = {"is_recomp_ok" : -0.35}   #[-] fix the recompression fraction to 0.35
-mod_base_dict["is_PR_fixed"] = -10          #[MPa] fix the low pressure side to 9 MPa
-mod_base_dict["design_method"] = 3         # fix recuperator performance
-mod_base_dict["LTR_design_code"] = 3        # 1 = UA, 2 = min dT, 3 = effectiveness
-mod_base_dict["LTR_eff_des_in"] = 0.845     # [-] (required if LTR_design_code == 3)
-mod_base_dict["HTR_design_code"] = 3        # 1 = UA, 2 = min dT, 3 = effectiveness
-mod_base_dict["HTR_eff_des_in"] = 0.895      # [-] (required if LTR_design_code == 3)
+    ##########################################
+    "Cycle design simulation with default parameters"
+    c_sco2 = sco2_solve.C_sco2_sim(1)   # Initialize to the recompression cycle default (1)
+    c_sco2.overwrite_default_design_parameters(sco2_des_par_default)
+    c_sco2.solve_sco2_case()            # Run design simulation
+    print(c_sco2.m_solve_dict)
+    print("\nDid the simulation code solve successfully = ",c_sco2.m_solve_success)
+    c_sco2.m_also_save_csv = save_csv
+    if save_json:
+        c_sco2.save_m_solve_dict("design_solution__default_pars")   # Save design solution dictionary
+    sol_dict__default_pars = c_sco2.m_solve_dict
 
-c_sco2.overwrite_des_par_base(mod_base_dict)    # Overwrite baseline design parameters
-c_sco2.solve_sco2_case()            # Run design simulation
-print(c_sco2.m_solve_dict)
-print("\nDid the simulation code with " 
-      "modified design parameters solve successfully = ",c_sco2.m_solve_success)
-c_sco2.m_also_save_csv = True
-c_sco2.save_m_solve_dict("design_solution__modified_pars")   # Save design solution dictionary
-sol_dict__mod_pars = c_sco2.m_solve_dict
+    ##########################################
+    "Plotting a cycle design"
+    c_plot = cy_plt.C_sco2_TS_PH_plot(sol_dict__default_pars)
+    c_plot.is_save_plot = save_figure
+    c_plot.file_name = "cycle_design_plots__default_pars"
+    c_plot.plot_new_figure()
 
-c_plot = cy_plt.C_sco2_TS_PH_plot(sol_dict__mod_pars)
-c_plot.is_save_plot = True
-c_plot.file_name = "cycle_design_plots__mod_pars"
-c_plot.plot_new_figure()
+    ##########################################
+    "Modifying the cycle design parameters to fully constrain the cycle design"
+    mod_base_dict = {"is_recomp_ok" : -0.35}   #[-] fix the recompression fraction to 0.35
+    mod_base_dict["is_PR_fixed"] = -10          #[MPa] fix the low pressure side to 9 MPa
+    mod_base_dict["design_method"] = 3         # fix recuperator performance
+    mod_base_dict["LTR_design_code"] = 3        # 1 = UA, 2 = min dT, 3 = effectiveness
+    mod_base_dict["LTR_eff_des_in"] = 0.845     # [-] (required if LTR_design_code == 3)
+    mod_base_dict["HTR_design_code"] = 3        # 1 = UA, 2 = min dT, 3 = effectiveness
+    mod_base_dict["HTR_eff_des_in"] = 0.895      # [-] (required if LTR_design_code == 3)
 
-##########################################
-"Comparing two cycle designs"
-c_comp_plot = cy_plt.C_sco2_TS_PH_overlay_plot(sol_dict__default_pars, sol_dict__mod_pars)
-c_comp_plot.is_save_plot = True
-c_comp_plot.plot_new_figure()
+    c_sco2.overwrite_des_par_base(mod_base_dict)    # Overwrite baseline design parameters
+    c_sco2.solve_sco2_case()            # Run design simulation
+    print(c_sco2.m_solve_dict)
+    print("\nDid the simulation code with " 
+        "modified design parameters solve successfully = ",c_sco2.m_solve_success)
+    c_sco2.m_also_save_csv = save_csv
+    if save_json:
+        c_sco2.save_m_solve_dict("design_solution__modified_pars")   # Save design solution dictionary
+    sol_dict__mod_pars = c_sco2.m_solve_dict
 
-##########################################
-"Running a parametric study on one design parameter"
-c_sco2.overwrite_default_design_parameters(sco2_des_par_default)
-UA_in_par_list = list(np.arange(5000,21000,1000))
-UA_in_par_dict_list = []
-for UA_in in UA_in_par_list:
-    UA_in_par_dict_list.append({"UA_recup_tot_des": UA_in})
-c_sco2.solve_sco2_parametric(UA_in_par_dict_list)
-print("\nDid the parametric analyses solve successfully = ",c_sco2.m_par_solve_success)
-c_sco2.m_also_save_csv = True
-c_sco2.save_m_par_solve_dict("UA_recup_parametric")
-sol_dict_parametric = c_sco2.m_par_solve_dict
+    c_plot = cy_plt.C_sco2_TS_PH_plot(sol_dict__mod_pars)
+    c_plot.is_save_plot = save_figure
+    c_plot.file_name = "cycle_design_plots__mod_pars"
+    c_plot.plot_new_figure()
 
-##########################################
-"Plotting a 1D parametric study"
-par_plot = cy_plt.C_des_stacked_outputs_plot([sol_dict_parametric])
-par_plot.x_var = "recup_tot_UA"
-par_plot.y_vars = ["eta", "PHX_dT", "f_recomp","MC_P_in",
-                      "recup_tot_UA_calculated", "LTR_UA_calculated", "HTR_UA_calculated","RC_P_in",
-                      "LTR_UA", "LTR_eff", "LTR_min_dT","PC_P_in",
-                      "HTR_UA", "HTR_eff", "HTR_min_dT","MC_P_out"]
-par_plot.is_legend = False
-par_plot.max_rows = 4
-par_plot.is_save = True
-par_plot.var_info_metrics["recup_tot_UA"].y_axis_min_max = [5,20]
-par_plot.file_name = "UA_recup_par_plot"
-par_plot.create_plot()
+    ##########################################
+    "Comparing two cycle designs"
+    c_comp_plot = cy_plt.C_sco2_TS_PH_overlay_plot(sol_dict__default_pars, sol_dict__mod_pars)
+    c_comp_plot.is_save_plot = save_figure
+    c_comp_plot.plot_new_figure()
 
-##########################################
-"Plotting one cycle design from a parametric solution dictionary"
-i_plot = len(sol_dict_parametric["UA_recup_tot_des"]) - 1
-dict_i_plot = sco2_solve.get_one_des_dict_from_par_des_dict(sol_dict_parametric, "UA_recup_tot_des", i_plot)
-c_i_cycle_plot = cy_plt.C_sco2_TS_PH_plot(dict_i_plot)
-c_i_cycle_plot.is_save_plot = True
-c_i_cycle_plot.file_name = "cycle_design_plots__largest_recup_tot_UA"
-c_i_cycle_plot.plot_new_figure()
+    ##########################################
+    "Running a parametric study on one design parameter"
+    c_sco2.overwrite_default_design_parameters(sco2_des_par_default)
+    UA_in_par_list = list(np.arange(5000,21000,1000))
+    UA_in_par_dict_list = []
+    for UA_in in UA_in_par_list:
+        UA_in_par_dict_list.append({"UA_recup_tot_des": UA_in})
+    c_sco2.solve_sco2_parametric(UA_in_par_dict_list)
+    print("\nDid the parametric analyses solve successfully = ",c_sco2.m_par_solve_success)
+    c_sco2.m_also_save_csv = save_csv
+    if save_json:
+        c_sco2.save_m_par_solve_dict("UA_recup_parametric")
+    sol_dict_parametric = c_sco2.m_par_solve_dict
 
-##########################################
-##########################################
-##########################################
-##########################################
-##########################################
+    ##########################################
+    "Plotting a 1D parametric study"
+    par_plot = cy_plt.C_des_stacked_outputs_plot([sol_dict_parametric])
+    par_plot.x_var = "recup_tot_UA"
+    par_plot.y_vars = ["eta", "PHX_dT", "f_recomp","MC_P_in",
+                        "recup_tot_UA_calculated", "LTR_UA_calculated", "HTR_UA_calculated","RC_P_in",
+                        "LTR_UA", "LTR_eff", "LTR_min_dT","PC_P_in",
+                        "HTR_UA", "HTR_eff", "HTR_min_dT","MC_P_out"]
+    par_plot.is_legend = False
+    par_plot.max_rows = 4
+    par_plot.is_save = save_figure
+    par_plot.var_info_metrics["recup_tot_UA"].y_axis_min_max = [5,20]
+    par_plot.file_name = "UA_recup_par_plot"
+    par_plot.create_plot()
 
+    ##########################################
+    "Plotting one cycle design from a parametric solution dictionary"
+    i_plot = len(sol_dict_parametric["UA_recup_tot_des"]) - 1
+    dict_i_plot = sco2_solve.get_one_des_dict_from_par_des_dict(sol_dict_parametric, "UA_recup_tot_des", i_plot)
+    c_i_cycle_plot = cy_plt.C_sco2_TS_PH_plot(dict_i_plot)
+    c_i_cycle_plot.is_save_plot = save_figure
+    c_i_cycle_plot.file_name = "cycle_design_plots__largest_recup_tot_UA"
+    c_i_cycle_plot.plot_new_figure()
 
-     
+    ##########################################
+    ##########################################
+    ##########################################
+    ##########################################
+    ##########################################
