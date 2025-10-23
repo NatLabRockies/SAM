@@ -1,7 +1,7 @@
 {
     "Name": "Marine Wave Resource",
-    "Width": 1098.0,
-    "Height": 1415.0,
+    "Width": 1093.0,
+    "Height": 1309.0,
     "FormObjects": {
         "Hyperlink": {
             "Visible": 1.0,
@@ -959,43 +959,6 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "object 418"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 12.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 1308.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 1075.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 96.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Caption": {
-                    "Type": 5.0,
-                    "String": "Use a wave time series resource file stored on your computer"
-                },
-                "Bold": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                }
-            }
-        },
-        "GroupBox": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
                     "String": "object 46"
                 },
                 "X": {
@@ -1025,205 +988,6 @@
                 "Bold": {
                     "Type": 2.0,
                     "Boolean": 1.0
-                }
-            }
-        },
-        "Label": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "object 7"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 45.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 1359.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 588.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 39.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Caption": {
-                    "Type": 5.0,
-                    "String": "Check the box and click Browse to choose a an .csv file stored on your computer without adding it to the wave resource library."
-                },
-                "TextColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "Bold": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "FontSize": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                },
-                "WordWrap": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "AlignRight": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "AlignTop": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                }
-            }
-        },
-        "Button": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "select_wf_wave"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 675.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 1329.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 90.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 28.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Caption": {
-                    "Type": 5.0,
-                    "String": "Browse..."
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                }
-            }
-        },
-        "CheckBox": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "use_specific_wf_wave"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 45.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 1329.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 30.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 27.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Caption": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "State": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                }
-            }
-        },
-        "TextEntry": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "user_specified_wf_wave"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 84.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 1329.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 585.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 28.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Text": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
                 }
             }
         },
@@ -1557,45 +1321,6 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
-        "use_specific_wf_wave": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "",
-            "Units": "",
-            "Group": "",
-            "IndexLabels": "",
-            "Flags": 0.0,
-            "DefaultValue": 0.0,
-            "UIObject": "CheckBox",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "user_specified_wf_wave": {
-            "Version": 4.0,
-            "Type": 4.0,
-            "Label": "",
-            "Units": "",
-            "Group": "",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": "<invalid>",
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "wave_resource_file_name": {
-            "Version": 4.0,
-            "Type": 4.0,
-            "Label": "Wave resource file from library",
-            "Units": "",
-            "Group": "",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": "<invalid>",
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
         "wave_resource_filename": {
             "Version": 4.0,
             "Type": 4.0,
@@ -1659,11 +1384,7 @@
         "\t\t\tsum_mat += mat[r][c];",
         "\treturn sum_mat;",
         "};\r",
-        "\r",
-        "equations{ 'wave_resource_filename'} = define() {\r",
-        "\t\tif ( ${use_specific_wf_wave} ) return ${user_specified_wf_wave};\r",
-        "\t\telse return ${wave_resource_file_name};\r",
-        "};",
+        "",
         ""
     ],
     "Callbacks": [
@@ -1683,7 +1404,6 @@
         "\t//show('wave_data_wave_resource_filename_load', false); // stores weather file name when UI form loaded",
         "\t//show('wave_data_wave_resource_filename', false); ",
         "\t//show('in_time_frame', value('in_wave_options') != 0 ); //No option for TMY data on first iteraiton",
-        "\ton_change{'use_specific_wf_wave'}();",
         "\t//refresh();",
         "\tupdate_library_folders( '' );",
         "\t//update_info( 'on_load Wave Resource Data');",
@@ -1691,7 +1411,7 @@
         "};",
         "",
         "on_change{'location'} = define() {",
-        "\tfile = ${wave_resource_file_name};",
+        "\tfile = ${wave_resource_filename};",
         "\tvalue(\"name\",value(\"location\"));",
         "\t",
         "\tif (!file_exists(file))",
@@ -1713,22 +1433,6 @@
         "\t//update_info('on_change btn_refresh_library');",
         "};",
         "",
-        "on_change{'use_specific_wf_wave'} = define() {\r",
-        "\tenable( 'user_specified_wf_wave', ${use_specific_wf_wave} );\r",
-        "\tenable( 'select_wf_wave', ${use_specific_wf_wave} );\r",
-        "\t//enable( 'location', !${use_specific_wf_wave} );\r",
-        "\tenable('wave_resource_matrix', !${use_specific_wf_wave} );\r",
-        "};\r",
-        "\r",
-        "on_change{'select_wf_wave'} = define() {\r",
-        "\tfile = choose_file( path_only( value('user_specified_wf_wave') ), 'Choose a wave resource file (csv)', \r",
-        "\t\t'Wave Resource Files (*.*)|*.*');\r",
-        "\t\t\r",
-        "\tif ( file != '' ) {\r",
-        "\t\tfile = replace(file, '\\\\', '/');\r",
-        "\t\tvalue( 'user_specified_wf_wave', file );\r",
-        "\t}\r",
-        "};",
         "",
         "",
         "",

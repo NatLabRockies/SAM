@@ -1203,7 +1203,7 @@ bool ScanWaveResourceData(const wxString &db_file, bool show_busy)
 	csv(2, 12) = "notes";
 
 	csv(0, 13) = "File name";
-	csv(2, 13) = "wave_resource_file_name";
+	csv(2, 13) = "wave_resource_filename";
 
 	csv(0, 14) = "Frequency distribution";
 	csv(2, 14) = "wave_resource_matrix";
@@ -1397,7 +1397,7 @@ bool ScanWaveResourceTSData(const wxString& db_file, bool show_busy)
     csv(2, 10) = "notes";
 
     csv(0, 11) = "File name";
-    csv(2, 11) = "wave_resource_ts_file_name";
+    csv(2, 11) = "wave_resource_filename_ts";
 
     csv(0, 12) = "Significant wave height";
     csv(1, 12) = "m";

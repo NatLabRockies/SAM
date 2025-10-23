@@ -107,7 +107,7 @@ WaveDownloadDialog::WaveDownloadDialog(wxWindow *parent, const wxString &title)
 
     wxArrayString years;
     wxArrayString list_years;
-    for (int x = 1979; x < 2011; x++) {
+    for (int x = 1979; x < 2021; x++) {
         wxString year_string = std::to_string(x);
         years.Add(year_string);
         list_years.Add(year_string);

@@ -7104,16 +7104,12 @@
     "unscheduled_maintenance_cost_total_check": 0.0,
     "use_offshore_substation_calc": 0.0,
     "use_onshore_substation": 0.0,
-    "use_specific_wf_wave": 0.0,
-    "use_specific_wf_wavets": 0.0,
     "use_wavefile_spacing": 0.0,
     "user_export_cable_length": 0.0,
     "user_input_devices_per_row": 10.0,
     "user_input_number_rows": 10.0,
     "user_inter_array_cable_length": 0.0,
     "user_riser_cable_length": 0.0,
-    "user_specified_wf_wave": "<invalid>",
-    "user_specified_wf_wavets": "<invalid>",
     "user_wave_power_matrix": [
         [
             0.0,
@@ -8140,7 +8136,6 @@
             0.0
         ]
     ],
-    "wave_resource_file_name": "<invalid>",
     "wave_resource_filename": "Humboldt_California_Wave-Resource.csv",
     "wave_resource_filename_ts": "lat40.84_lon-124.25__2010.csv",
     "wave_resource_matrix": [
@@ -8650,7 +8645,6 @@
         ]
     ],
     "wave_resource_model_choice": 0.0,
-    "wave_resource_ts_file_name": "<invalid>",
     "weather_forecasting_cost": 0.0,
     "wharfage_fees_cost": 0.0,
     "year": [

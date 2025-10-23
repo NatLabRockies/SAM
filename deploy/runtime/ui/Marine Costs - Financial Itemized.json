@@ -1552,7 +1552,7 @@
         "};",
         "*/",
         "equations {'itemized_check_construction_insurance'} = define() {",
-        "\treturn ?${insurance_during_construction_method}",
+        "\treturn ?${insurance_during_construction_cost_method}",
         "\t\t\t[",
         "\t\t\t\t0,",
         "\t\t\t\t0,",

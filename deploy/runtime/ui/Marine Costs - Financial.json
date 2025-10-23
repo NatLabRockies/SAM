@@ -1978,11 +1978,11 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "project_contingency_budget_cost"
+                    "String": "project_contingency_budget_cost_rvalue"
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 834.0
+                    "Integer": 714.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -2014,11 +2014,11 @@
                 },
                 "Decimals": {
                     "Type": 3.0,
-                    "Integer": 0.0
+                    "Integer": 3.0
                 },
                 "Prefix": {
                     "Type": 5.0,
-                    "String": "$"
+                    "String": ""
                 },
                 "Suffix": {
                     "Type": 5.0,
@@ -2061,11 +2061,11 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "project_contingency_budget_cost_rvalue"
+                    "String": "project_contingency_cost"
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 714.0
+                    "Integer": 834.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -2097,11 +2097,11 @@
                 },
                 "Decimals": {
                     "Type": 3.0,
-                    "Integer": 3.0
+                    "Integer": 0.0
                 },
                 "Prefix": {
                     "Type": 5.0,
-                    "String": ""
+                    "String": "$"
                 },
                 "Suffix": {
                     "Type": 5.0,

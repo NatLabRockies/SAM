@@ -363,7 +363,7 @@
                 },
                 "Library": {
                     "Type": 5.0,
-                    "String": "TidalResourceTSData"
+                    "String": "TidalResourceData"
                 },
                 "Fields": {
                     "Type": 5.0,
@@ -701,12 +701,12 @@
         "\r",
         "\r",
         "on_change{'btn_refresh_library'} = define() {\r",
-        "\trescanlibrary('tidal_ts');\r",
+        "\trescanlibrary('tidal');\r",
         "\t//update_info('on_change btn_refresh_library');\r",
         "};\r",
         "\r",
         "on_change{'btn_add_remove_folders'} = define() {\r",
-        "\tif ( showsettings( 'tidal_ts' ) )\r",
+        "\tif ( showsettings( 'tidal' ) )\r",
         "\t{\r",
         "\t\tupdate_library_folders( '' );\r",
         "\t\t/*// if current library selection is no longer in library, change to first item listed in library CSV file\r",
@@ -744,7 +744,7 @@
         "\trefresh();\r",
         "\tif (!file_exists(file))\r",
         "\t{\r",
-        "\t\trescanlibrary( 'tidal_ts' );\r",
+        "\t\trescanlibrary( 'tidal' );\r",
         "\t\trefresh('tidal_location');\r",
         "\t\treturn;\r",
         "\t}\r",
@@ -783,7 +783,7 @@
         "\t// update list to display\r",
         "\tvalue( 'library_folder_list', get_settings('tidal_download_path') + '\\n' \r",
         "\t       + replace( clean_list , ';' , '\\n' ) );\r",
-        "\trescanlibrary( 'tidal_ts' );     \r",
+        "\trescanlibrary( 'tidal' );     \r",
         "}\r",
         "\r",
         "function slash_back_to_forward( str )\r",
