@@ -39,7 +39,7 @@
 			"ppa_soln_mode": 1
 		},
 		"FinancialParameters": {
-			"analysis_period": 30,
+			"analysis_period": 20,
 			"construction_financing_cost": 1.18233e+07,
 			"cost_debt_closing": 0,
 			"cost_debt_fee": 2.75,
