@@ -4671,8 +4671,8 @@ void fcall_make_jpd_multiyear(lk::invoke_t& cxt)
             csv(1, 1) = "";
             csv(1, 2) = "";
             csv(1, 3) = "";
-            csv(1, 0) = wxFileNameFromPath(final_file);
-            //csv(1, 0) = wxString(final_file).substr(0, wxString(final_file).Find(".csv"));
+            wxString final_file_string = wxFileNameFromPath(final_file);
+            csv(1, 0) = wxString(final_file_string).substr(0, wxString(final_file_string).Find(".csv"));
 
 
             csv.WriteFile(final_file);
