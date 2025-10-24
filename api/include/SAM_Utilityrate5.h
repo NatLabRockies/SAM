@@ -85,6 +85,14 @@ extern "C"
 	SAM_EXPORT void SAM_Utilityrate5_ElectricityRates_rate_escalation_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
 
 	/**
+	 * Set start_day_of_year: Start day of year for TOD periods [0..6]
+	 * options: 0=Monday, 6=Sunday
+	 * constraints: None
+	 * required if: ?=0
+	 */
+	SAM_EXPORT void SAM_Utilityrate5_ElectricityRates_start_day_of_year_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
 	 * Set ur_annual_min_charge: Annual minimum charge [$]
 	 * options: None
 	 * constraints: None
@@ -473,6 +481,8 @@ extern "C"
 
 	SAM_EXPORT double* SAM_Utilityrate5_ElectricityRates_rate_escalation_aget(SAM_table ptr, int* length, SAM_error *err);
 
+	SAM_EXPORT double SAM_Utilityrate5_ElectricityRates_start_day_of_year_nget(SAM_table ptr, SAM_error *err);
+
 	SAM_EXPORT double SAM_Utilityrate5_ElectricityRates_ur_annual_min_charge_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double* SAM_Utilityrate5_ElectricityRates_ur_billing_demand_lookback_percentages_mget(SAM_table ptr, int* nrows, int* ncols, SAM_error *err);
@@ -683,14 +693,6 @@ extern "C"
 
 	SAM_EXPORT double* SAM_Utilityrate5_Outputs_charge_wo_sys_minimum_ym_mget(SAM_table ptr, int* nrows, int* ncols, SAM_error *err);
 
-	SAM_EXPORT double* SAM_Utilityrate5_Outputs_elec_cost_with_system_aget(SAM_table ptr, int* length, SAM_error *err);
-
-	SAM_EXPORT double SAM_Utilityrate5_Outputs_elec_cost_with_system_year1_nget(SAM_table ptr, SAM_error *err);
-
-	SAM_EXPORT double* SAM_Utilityrate5_Outputs_elec_cost_without_system_aget(SAM_table ptr, int* length, SAM_error *err);
-
-	SAM_EXPORT double SAM_Utilityrate5_Outputs_elec_cost_without_system_year1_nget(SAM_table ptr, SAM_error *err);
-
 	SAM_EXPORT double* SAM_Utilityrate5_Outputs_energy_w_sys_ec_apr_tp_mget(SAM_table ptr, int* nrows, int* ncols, SAM_error *err);
 
 	SAM_EXPORT double* SAM_Utilityrate5_Outputs_energy_w_sys_ec_aug_tp_mget(SAM_table ptr, int* nrows, int* ncols, SAM_error *err);
@@ -787,9 +789,13 @@ extern "C"
 
 	SAM_EXPORT double* SAM_Utilityrate5_Outputs_utility_bill_w_sys_aget(SAM_table ptr, int* length, SAM_error *err);
 
+	SAM_EXPORT double SAM_Utilityrate5_Outputs_utility_bill_w_sys_year1_nget(SAM_table ptr, SAM_error *err);
+
 	SAM_EXPORT double* SAM_Utilityrate5_Outputs_utility_bill_w_sys_ym_mget(SAM_table ptr, int* nrows, int* ncols, SAM_error *err);
 
 	SAM_EXPORT double* SAM_Utilityrate5_Outputs_utility_bill_wo_sys_aget(SAM_table ptr, int* length, SAM_error *err);
+
+	SAM_EXPORT double SAM_Utilityrate5_Outputs_utility_bill_wo_sys_year1_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double* SAM_Utilityrate5_Outputs_utility_bill_wo_sys_ym_mget(SAM_table ptr, int* nrows, int* ncols, SAM_error *err);
 

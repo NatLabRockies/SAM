@@ -98,6 +98,12 @@ SAM_EXPORT void SAM_MhkCosts_MHKCosts_inter_array_cable_length_nset(SAM_table pt
 	});
 }
 
+SAM_EXPORT void SAM_MhkCosts_MHKCosts_lib_tidal_device_sset(SAM_table ptr, const char* str, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_string(ptr, "lib_tidal_device", str);
+	});
+}
+
 SAM_EXPORT void SAM_MhkCosts_MHKCosts_lib_wave_device_sset(SAM_table ptr, const char* str, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_string(ptr, "lib_wave_device", str);
@@ -334,6 +340,16 @@ SAM_EXPORT double SAM_MhkCosts_MHKCosts_inter_array_cable_length_nget(SAM_table 
 	translateExceptions(err, [&]{
 	if (!ssc_data_get_number(ptr, "inter_array_cable_length", &result))
 		make_access_error("SAM_MhkCosts", "inter_array_cable_length");
+	});
+	return result;
+}
+
+SAM_EXPORT const char* SAM_MhkCosts_MHKCosts_lib_tidal_device_sget(SAM_table ptr, SAM_error *err){
+	const char* result = nullptr;
+	translateExceptions(err, [&]{
+	result = ssc_data_get_string(ptr, "lib_tidal_device");
+	if (!result)
+		make_access_error("SAM_MhkCosts", "lib_tidal_device");
 	});
 	return result;
 }

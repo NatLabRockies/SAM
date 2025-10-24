@@ -22,9 +22,9 @@
     "analysis_period": 25.0,
     "annual_crit": 0.0,
     "annual_peak": 4.30453,
-    "capacity_factor_calc": 86.4,
+    "capacity_factor_calc": 86.39999999999999,
     "chk_update_peaks": 1.0,
-    "conv_eff": 34.118,
+    "conv_eff": 34.118048447628797,
     "crit_1": 0.0,
     "crit_10": 0.0,
     "crit_11": 0.0,
@@ -44,18 +44,18 @@
     "en_batt": 0.0,
     "en_wave_batt": 0.0,
     "enable_interconnection_limit": 0.0,
-    "energy_1": 752.186,
-    "energy_10": 837.847,
-    "energy_11": 640.379,
-    "energy_12": 731.813,
-    "energy_2": 642.382,
-    "energy_3": 647.755,
-    "energy_4": 643.76,
-    "energy_5": 777.222,
-    "energy_6": 1151.7,
-    "energy_7": 1594.78,
-    "energy_8": 1393.36,
-    "energy_9": 1016.16,
+    "energy_1": 752.185785,
+    "energy_10": 837.8469560000002,
+    "energy_11": 640.3785220000026,
+    "energy_12": 731.8132690000008,
+    "energy_2": 642.3817860000003,
+    "energy_3": 647.7547610000007,
+    "energy_4": 643.7600319999993,
+    "energy_5": 777.2224669999997,
+    "energy_6": 1151.695144000001,
+    "energy_7": 1594.7795350000006,
+    "energy_8": 1393.361068999999,
+    "energy_9": 1016.1560469999996,
     "energy_output_array": [
         0.0
     ],
@@ -68,7 +68,7 @@
     "escal_other": [
         0.0
     ],
-    "first_year_output": 30274.6,
+    "first_year_output": 30274.56,
     "first_year_output_peak": 3.84,
     "grid_curtailment": [
         1e38,
@@ -17602,7 +17602,7 @@
         1.24378,
         0.980213
     ],
-    "load_annual_total": 10829.3,
+    "load_annual_total": 10829.335372999947,
     "load_escalation": [
         0.0
     ],
@@ -26383,7 +26383,7 @@
         1.71415,
         1.87435
     ],
-    "nominal_discount_rate": 9.06,
+    "nominal_discount_rate": 9.060000000000004,
     "normalize_to_utility_bill": 0.0,
     "peak_1": 1.85407,
     "peak_10": 2.55071,
@@ -26405,6 +26405,8 @@
     "real_discount_rate": 6.4,
     "scale_factor": 1.0,
     "spec_mode": 0.0,
+    "start_day_of_year": 3.335046e-317,
+    "start_day_of_year_load_ui": 3.335046e-317,
     "system_capacity": 4.0,
     "system_capacity_combined": 0.0,
     "system_use_lifetime_output": 0.0,

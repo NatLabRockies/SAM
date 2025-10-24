@@ -23,10 +23,6 @@
 			"lease_price": 0,
 			"ppa_escalation": 1,
 			"ppa_price": 0
-		},
-		"ElectricityCost": {
-			"elec_cost_with_system": [0],
-			"elec_cost_without_system": [0]
 		}
 	}
 }

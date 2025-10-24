@@ -112,7 +112,7 @@ bool CaseCallbackContext::Invoke( lk::node_t *root, lk::env_t *parent_env, size_
 	SetupLibraries( &local_env );
 
 	try {
- 
+		SamApp::Window()->SetEquationCase(m_case);
         CaseScriptInterpreter e( root, &local_env, &GetValues(ndxHybrid), m_case, ndxHybrid);
 		if ( !e.run() )
 		{
@@ -613,8 +613,8 @@ bool Case::SaveDefaults(bool quiet)
 
 
     rapidjson::StringBuffer os;
-    rapidjson::PrettyWriter<rapidjson::StringBuffer> writer(os); // MSPT/MP 64MB JSON, 6.7MB txt, JSON Zip 242kB
-    doc.Accept(writer);
+	rapidjson::PrettyWriter<rapidjson::StringBuffer, rapidjson::UTF8<char>, rapidjson::UTF8<char>, rapidjson::CrtAllocator, rapidjson::kWriteNanAndInfFlag> writer(os); // MSPT/MP 64MB JSON, 6.7MB txt, JSON Zip 242kB
+	doc.Accept(writer);
     wxString sfn = file;
     wxFileName fn(sfn);
     wxFFileOutputStream out(sfn);
@@ -682,7 +682,7 @@ bool Case::SaveAsSSCJSON(wxString filename)
 	doc.Parse(json_string);
 
 	rapidjson::StringBuffer os;
-	rapidjson::PrettyWriter<rapidjson::StringBuffer> writer(os);
+	rapidjson::PrettyWriter<rapidjson::StringBuffer, rapidjson::UTF8<char>, rapidjson::UTF8<char>, rapidjson::CrtAllocator, rapidjson::kWriteNanAndInfFlag> writer(os); 
 	doc.Accept(writer);
 	wxFFileOutputStream out(filename);
 	out.Write(os.GetString(), os.GetSize());
@@ -757,7 +757,9 @@ bool Case::VarTablesFromJSONFile(std::vector<VarTable>& vt, const std::string& f
 
 		rapidjson::StringStream is(os.GetString().c_str());
 
-		doc.ParseStream(is);
+//	doc.ParseStream(is);
+	// SAM issue 1856 handle parsing Inf values for max tier usage values.
+	doc.ParseStream< rapidjson::kParseNanAndInfFlag>( is);
 		if (doc.HasParseError()) {
 			wxLogError(wxS("Could not read the json file string conversion '%s'."), file);
 			return false;
@@ -1493,6 +1495,8 @@ int Case::Recalculate( const wxString &trigger, size_t ndxHybrid)
 		wxLogStatus( "cannot recalculate: no active configuration" );
 		return -1;
 	}
+	// SAM issue 1922
+	SamApp::Window()->SetEquationCase(this);
 
 	CaseEvaluator eval( this, m_vals[ndxHybrid], m_config->Equations[ndxHybrid]);
 	int n = eval.Changed( trigger, ndxHybrid);

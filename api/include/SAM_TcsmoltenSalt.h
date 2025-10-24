@@ -469,7 +469,7 @@ extern "C"
 	SAM_EXPORT void SAM_TcsmoltenSalt_SystemControl_q_pc_target_su_in_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
 
 	/**
-	 * Set q_rec_heattrace: Receiver heat trace energy consumption during startup [kWe-hr]
+	 * Set q_rec_heattrace: Receiver heat trace energy consumption during startup [kWhe]
 	 * options: None
 	 * constraints: None
 	 * required if: ?=0.0
@@ -493,7 +493,7 @@ extern "C"
 	SAM_EXPORT void SAM_TcsmoltenSalt_SystemControl_rec_op_mode_initial_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set rec_startup_energy_remain_init: Initial receiver startup energy remaining [W-hr]
+	 * Set rec_startup_energy_remain_init: Initial receiver startup energy remaining [Wh]
 	 * options: None
 	 * constraints: None
 	 * required if: None
@@ -544,7 +544,7 @@ extern "C"
 	 * Set timestep_load_fractions: Turbine load fraction for each timestep, alternative to block dispatch
 	 * options: None
 	 * constraints: None
-	 * required if: ?
+	 * required if: None
 	 */
 	SAM_EXPORT void SAM_TcsmoltenSalt_SystemControl_timestep_load_fractions_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
 
@@ -1409,7 +1409,7 @@ extern "C"
 	SAM_EXPORT void SAM_TcsmoltenSalt_HeliostatField_opt_max_iter_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set p_start: Heliostat startup energy [kWe-hr]
+	 * Set p_start: Heliostat startup energy [kWhe]
 	 * options: None
 	 * constraints: None
 	 * required if: *
@@ -2212,7 +2212,7 @@ extern "C"
 	SAM_EXPORT void SAM_TcsmoltenSalt_UserDefinedPowerCycle_ud_ind_od_mset(SAM_table ptr, double* mat, int nrows, int ncols, SAM_error *err);
 
 	/**
-	 * Set ud_is_sco2_regr: False: default, base udpc interpolation, True: use sco2 heuristic regression
+	 * Set ud_is_sco2_regr: 0: (default) simple max htf mass flow correction; 1: sco2 heuristic regression; 2: no correction
 	 * options: None
 	 * constraints: None
 	 * required if: ?=0
@@ -2273,12 +2273,28 @@ extern "C"
 	SAM_EXPORT void SAM_TcsmoltenSalt_TimeOfDeliveryFactors_dispatch_tod_factors_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
 
 	/**
+	 * Set is_timestep_load_fractions: Use turbine load fraction for each timestep instead of block dispatch?
+	 * options: None
+	 * constraints: None
+	 * required if: ?=0
+	 */
+	SAM_EXPORT void SAM_TcsmoltenSalt_TimeOfDeliveryFactors_is_timestep_load_fractions_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
 	 * Set ppa_multiplier_model: PPA multiplier model 0: dispatch factors dispatch_factorX, 1: hourly multipliers dispatch_factors_ts [0/1]
 	 * options: 0=diurnal,1=timestep
 	 * constraints: INTEGER,MIN=0
 	 * required if: ?=0
 	 */
 	SAM_EXPORT void SAM_TcsmoltenSalt_TimeOfDeliveryFactors_ppa_multiplier_model_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
+	 * Set start_day_of_year: Start day of year for TOD periods [0..6]
+	 * options: 0=Monday, 6=Sunday
+	 * constraints: None
+	 * required if: ?=0
+	 */
+	SAM_EXPORT void SAM_TcsmoltenSalt_TimeOfDeliveryFactors_start_day_of_year_nset(SAM_table ptr, double number, SAM_error *err);
 
 
 	//
@@ -3252,7 +3268,11 @@ extern "C"
 
 	SAM_EXPORT double* SAM_TcsmoltenSalt_TimeOfDeliveryFactors_dispatch_tod_factors_aget(SAM_table ptr, int* length, SAM_error *err);
 
+	SAM_EXPORT double SAM_TcsmoltenSalt_TimeOfDeliveryFactors_is_timestep_load_fractions_nget(SAM_table ptr, SAM_error *err);
+
 	SAM_EXPORT double SAM_TcsmoltenSalt_TimeOfDeliveryFactors_ppa_multiplier_model_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_TcsmoltenSalt_TimeOfDeliveryFactors_start_day_of_year_nget(SAM_table ptr, SAM_error *err);
 
 
 	/**

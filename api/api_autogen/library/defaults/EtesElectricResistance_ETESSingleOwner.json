@@ -293,7 +293,8 @@
 				[1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 2.000000, 2.000000, 2.000000, 2.000000, 2.000000, 2.000000, 2.000000, 2.000000, 2.000000, 2.000000, 2.000000, 2.000000]
 			],
 			"dispatch_tod_factors": [0.250000, 1.750000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000, 1.000000],
-			"ppa_multiplier_model": 1
+			"ppa_multiplier_model": 1,
+			"start_day_of_year": 0
 		},
 		"Revenue": {
 			"ppa_price_input": [0.045000]
@@ -338,13 +339,13 @@
 			"sales_tax_rate": 5
 		},
 		"AdjustmentFactors": {
-			"constant": 0,
-			"en_periods": 0,
-			"en_timeindex": 0,
-			"periods": [
+			"adjust_constant": 0,
+			"adjust_en_periods": 0,
+			"adjust_en_timeindex": 0,
+			"adjust_periods": [
 				[0.000000, 0.000000, 0.000000]
 			],
-			"timeindex": [0.000000]
+			"adjust_timeindex": [0.000000]
 		}
 	}
 }

@@ -20,6 +20,9 @@ for (t=0; t<#technologies; t++)
 	&& (technologies[t] != "Dish Stirling")
 	&& (technologies[t] != "ISCC")
 	&& (technologies[t] != "Retired")
+	&& (technologies[t] != "Generic System")
+	&& (technologies[t] != "Generic Battery")
+	&& (technologies[t] != "Generic PVWatts Wind FuelCell Battery Hybrid")
 	&& (technologies[t] != "MSPTV2"))
 	{
 		//Loop through all financing options for that technology

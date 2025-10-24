@@ -130,22 +130,22 @@
 			"pbi_fed_escal": 0,
 			"pbi_fed_tax_fed": 1,
 			"pbi_fed_tax_sta": 1,
-			"pbi_fed_term": 10,
+			"pbi_fed_term": 0,
 			"pbi_oth_amount": [0.000000],
 			"pbi_oth_escal": 0,
 			"pbi_oth_tax_fed": 1,
 			"pbi_oth_tax_sta": 1,
-			"pbi_oth_term": 10,
+			"pbi_oth_term": 0,
 			"pbi_sta_amount": [0.000000],
 			"pbi_sta_escal": 0,
 			"pbi_sta_tax_fed": 1,
 			"pbi_sta_tax_sta": 1,
-			"pbi_sta_term": 10,
+			"pbi_sta_term": 0,
 			"pbi_uti_amount": [0.000000],
 			"pbi_uti_escal": 0,
 			"pbi_uti_tax_fed": 1,
 			"pbi_uti_tax_sta": 1,
-			"pbi_uti_term": 10
+			"pbi_uti_term": 0
 		},
 		"BatterySystem": {
 		},
@@ -175,11 +175,7 @@
 			"gen": [0]
 		},
 		"Lifetime": {
-			"system_use_lifetime_output": 0
-		},
-		"ThirdPartyOwnership": {
-			"elec_cost_with_system": [0],
-			"elec_cost_without_system": [0]
+			"system_use_lifetime_output": 1
 		},
 		"LCOS": {
 			"batt_salvage_percentage": 0

@@ -3523,7 +3523,7 @@
         "\t\t\t[",
         "\t\t\t\t${site_access_port_staging_cost_input}*${system_capacity},",
         "\t\t\t\t${site_access_port_staging_cost_input},",
-        "\t\t\t\t${site_access_port_staging_cost_modeled_ui},",
+        "\t\t\t\t${site_access_port_staging_cost_modeled},",
         "\t\t\t\t${site_access_port_staging_cost_total},\r",
         "\t\t\t\t(${site_access_port_staging_cost_input}*pow(${number_devices},-array_scaling_b_value))*${number_devices}",
         "\t\t\t];",

@@ -1,7 +1,7 @@
 {
     "Name": "Geothermal Plant and Equipment",
-    "Width": 857.0,
-    "Height": 1016.0,
+    "Width": 844.0,
+    "Height": 774.0,
     "FormObjects": {
         "CheckBox": {
             "Visible": 1.0,
@@ -526,11 +526,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 660.0
+                    "Integer": 693.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 480.0
+                    "Integer": 483.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1848,7 +1848,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 792.0
+                    "Integer": 807.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1897,7 +1897,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 96.0
+                    "Integer": 105.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -2362,11 +2362,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 399.0
+                    "Integer": 411.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 456.0
+                    "Integer": 459.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -3004,7 +3004,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 297.0
+                    "Integer": 309.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -3087,11 +3087,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 297.0
+                    "Integer": 309.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 456.0
+                    "Integer": 459.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -3294,11 +3294,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 660.0
+                    "Integer": 693.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 432.0
+                    "Integer": 435.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -3377,11 +3377,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 660.0
+                    "Integer": 693.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 456.0
+                    "Integer": 459.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -3462,7 +3462,7 @@
             "IndexLabels": "",
             "Flags": 0.0,
             "DefaultValue": 0.0,
-            "UIObject": "Default",
+            "UIObject": "LossAdjustment",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
@@ -4238,8 +4238,12 @@
         "\t}",
         "    ",
         "    ${num_wells_getem} = ssc_var( obj, 'num_wells_getem_output');",
-        "    ${num_wells_getem_inj} = ssc_var( obj, 'num_wells_getem_inj');",
-        "    ${geotherm.plant_efficiency_used} = ssc_var( obj, 'plant_brine_eff');",
+        "    ${num_wells_getem_inj} = ssc_var( obj, 'num_wells_getem_inj');\r",
+        "    ${geotherm.cost.prod_wells_drilled} = ssc_var( obj, 'num_wells_getem_prod_drilled');\r",
+        "    ${geotherm.cost.inj_wells_drilled} = ssc_var( obj, 'num_wells_getem_inj_drilled');",
+        "    ${geotherm.plant_efficiency_used} = ssc_var( obj, 'plant_brine_eff');\r",
+        "    failed_prod = ssc_var( obj, 'num_wells_getem_prod_failed');\r",
+        "    //${geotherm.cost.surf_num_wells} = ${num_wells_getem} + ${geotherm.cost.inj_wells_drilled} + failed_prod;",
         "    ${pump_work_watthr_lb} = ssc_var( obj, 'pump_watthr_per_lb');",
         "    ${pumpwork_prod} = ssc_var( obj, 'pumpwork_prod');",
         "    ${pumpwork_inj} = ssc_var( obj, 'pumpwork_inj');",
@@ -4295,7 +4299,7 @@
         "\t\treturn ${wet_bulb_temp_input};\r",
         "\t}\r",
         "\telseif ( isnan(${wet_bulb_temp_wf}) ) {\r",
-        "\t\treturn ${annual_tdry}; // from Solar Resource Data form\r",
+        "\t\treturn 0;\r",
         "\t}\r",
         "\telse {\r",
         "\t\treturn ${wet_bulb_temp_wf}; // annual twet\r",

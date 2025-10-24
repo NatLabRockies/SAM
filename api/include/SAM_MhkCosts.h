@@ -144,6 +144,14 @@ extern "C"
 	SAM_EXPORT void SAM_MhkCosts_MHKCosts_inter_array_cable_length_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
+	 * Set lib_tidal_device: Tidal library name
+	 * options: None
+	 * constraints: None
+	 * required if: marine_energy_tech=1
+	 */
+	SAM_EXPORT void SAM_MhkCosts_MHKCosts_lib_tidal_device_sset(SAM_table ptr, const char* str, SAM_error *err);
+
+	/**
 	 * Set lib_wave_device: Wave library name
 	 * options: None
 	 * constraints: None
@@ -327,6 +335,8 @@ extern "C"
 	SAM_EXPORT double SAM_MhkCosts_MHKCosts_export_cable_system_cost_method_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_MhkCosts_MHKCosts_inter_array_cable_length_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT const char* SAM_MhkCosts_MHKCosts_lib_tidal_device_sget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT const char* SAM_MhkCosts_MHKCosts_lib_wave_device_sget(SAM_table ptr, SAM_error *err);
 

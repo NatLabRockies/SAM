@@ -12,7 +12,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 261.0
+                    "Integer": 280.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -95,7 +95,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 261.0
+                    "Integer": 280.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -178,7 +178,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 369.0
+                    "Integer": 385.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -261,7 +261,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 261.0
+                    "Integer": 280.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -344,7 +344,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 726.0
+                    "Integer": 760.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -427,7 +427,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 261.0
+                    "Integer": 280.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -510,7 +510,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 261.0
+                    "Integer": 280.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -593,7 +593,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 726.0
+                    "Integer": 760.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -676,7 +676,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 726.0
+                    "Integer": 760.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -759,7 +759,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 726.0
+                    "Integer": 760.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -842,7 +842,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 261.0
+                    "Integer": 280.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1248,7 +1248,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 726.0
+                    "Integer": 760.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1331,7 +1331,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 369.0
+                    "Integer": 385.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1414,7 +1414,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 261.0
+                    "Integer": 280.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1497,7 +1497,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 261.0
+                    "Integer": 280.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1580,7 +1580,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 726.0
+                    "Integer": 760.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1721,7 +1721,7 @@
         "COPY_field_thermal_output_ideal": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "Field thermal power w/ no defocus constraints",
+            "Label": "Field thermal power w/o defocus constraints",
             "Units": "MWt",
             "Group": "",
             "IndexLabels": "",
@@ -2064,6 +2064,7 @@
         "\t\t${vol_tank} = ssc_var(obj, \"vol_tank\");\r",
         "\t\t${Q_tes} = ssc_var(obj, \"q_tes\");\r",
         "\t\t${csp.pt.tes.tank_diameter} = ssc_var(obj, \"csp_pt_tes_tank_diameter\");\r",
+        "\t\t${csp.pt.tes.tank_height} = ssc_var(obj, \"csp_pt_tes_tank_height\");\r",
         "\t\t${q_dot_tes_est} = ssc_var(obj, \"q_dot_tes_est\");\r",
         "\t\t${csp.pt.tes.htf_density} = ssc_var(obj, \"csp_pt_tes_htf_density\");\r",
         "\t\t${tes_avail_vol} = ssc_var(obj, \"tes_avail_vol\");\r",
@@ -2166,6 +2167,7 @@
         "\t\t${vol_tank} = fail;\r",
         "\t\t${Q_tes} = fail;\r",
         "\t\t${csp.pt.tes.tank_diameter} = fail;\r",
+        "\t\t${csp.pt.tes.tank_height} = fail;\r",
         "\t\t${q_dot_tes_est} = fail;\r",
         "\t\t${csp.pt.tes.htf_density} = fail;\r",
         "\t\t${tes_avail_vol} = fail;\r",

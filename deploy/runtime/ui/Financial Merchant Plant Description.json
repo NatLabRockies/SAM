@@ -1,7 +1,7 @@
 {
     "Name": "Financial Merchant Plant Description",
-    "Width": 861.0,
-    "Height": 107.0,
+    "Width": 864.0,
+    "Height": 126.0,
     "FormObjects": {
         "GroupBox": {
             "Visible": 1.0,
@@ -24,7 +24,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 100.0
+                    "Integer": 119.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -61,7 +61,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 72.0
+                    "Integer": 58.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -101,9 +101,68 @@
                     "Boolean": 1.0
                 }
             }
+        },
+        "Choice": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "start_day_of_year_merchant_ui"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 165.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 84.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 90.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Items": {
+                    "Type": 6.0,
+                    "StringList": "Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday"
+                },
+                "Selection": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
         }
     },
-    "VarDatabase": {},
+    "VarDatabase": {
+        "start_day_of_year_merchant_ui": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "January 1 day of week",
+            "Units": "",
+            "Group": "Financial Analysis Parameters",
+            "IndexLabels": "",
+            "Flags": 0.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Choice",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        }
+    },
     "Equations": [],
-    "Callbacks": []
+    "Callbacks": [
+        "on_change{'start_day_of_year_merchant_ui'} = define() {\r",
+        "\tvalue('start_day_of_year', value('start_day_of_year_merchant_ui'));\r",
+        "};"
+    ]
 }

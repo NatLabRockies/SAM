@@ -16,7 +16,7 @@
 			"real_discount_rate": 6.4,
 			"salvage_percentage": 0,
 			"state_tax_rate": [7.000000],
-			"system_capacity": 7.03931
+			"system_capacity": 8.00718
 		},
 		"SystemCosts": {
 			"om_capacity": [28.780000],
@@ -25,7 +25,7 @@
 			"om_fixed_escal": 0,
 			"om_production": [0.000000],
 			"om_production_escal": 0,
-			"total_installed_cost": 19437.3
+			"total_installed_cost": 25304.5
 		},
 		"LandLease": {
 		},
@@ -174,10 +174,6 @@
 		},
 		"Lifetime": {
 			"system_use_lifetime_output": 1
-		},
-		"ThirdPartyOwnership": {
-			"elec_cost_with_system": [0],
-			"elec_cost_without_system": [0]
 		},
 		"LCOS": {
 			"batt_salvage_percentage": 0

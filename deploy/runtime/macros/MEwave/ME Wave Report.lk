@@ -187,6 +187,43 @@ if (deviceMaterial=='Other')
     deviceMaterial = in('Enter the primary structural material for the device modeled in the existing ME Wave case.','','Enter Value');
 }
 
+//Table construction
+csv_table = [[]];
+//csv_table[0] = ["companyName", "-", companyName];
+/*
+file_name = choose_file();
+check = csvwrite(file_name, csv_table);
+outln(check);
+*/
+/*
+csv_table[0][0] = "Company_Name";
+csv_table[0][1] = "WEC_Name";
+csv_table[0][2] = "Device_Model";
+csv_table[0][3] = "Device_Model_Year";
+csv_table[0][4] = "WEC_Type";
+csv_table[0][5] = "TRL";
+csv_table[0][6] = "PTO_Type";
+csv_table[0][7] = "Foundation_Type";
+csv_table[0][7] = "Structural_Mass";
+csv_table[0][7] = "Primary_Structural_Material";
+csv_table[0][7] = "Characteristic_Dimension";
+csv_table[0][7] = "Device_Scale";
+csv_table[0][7] = "Device_Rated_Power";
+csv_table[0][7] = "Device_Average_Power";
+csv_table[0][7] = "Capacity_Factor";
+csv_table[0][7] = "AEP";
+csv_table[0][7] = "Resource_type";
+csv_table[0][7] = "Resource_Name";
+*/
+csv_table_rows = ["Company_Name","WEC_Name","Device_Model","Device_Model_Year","WEC_Type",
+	"TRL","PTO_Type","Foundation_Type","Structural_Mass","Primary_Structural_Material","Characteristic_Dimension","Device_Scale","Device_Rated_Power",
+	"Device_Average_Power","Capacity_Factor","AEP","Resource_type","Resource_Name",
+	"Location","Latitude","Longitude","Buoy_Number", "Bathymetry","Seabed", "Avg_Power_Flux","Rated_Array_Capacity",
+	"Number_of_Devices","Distance_to_Shore","Depth","Device_Spacing","Row_Spcaing","Total_Assumed_Losses",
+	"CAPEX","OPEX","LCOE","FCR","Structural_Assembly","Power_Take_off","Mooring_Foundation_and_Subsystem",
+	"Development","Engineering_and_Management", "Electrical_Infrastructure","Plant_Commissioning","Site_Access","Assembly_and_Install",
+	"Other_Infrastructure","Project_Contingency_Budget","Insurance_during_Construction","Reserve_Accounts", "Operations", "Maintenance"];
+
 //outln('Device Material = ' + deviceMaterial);
 
 
@@ -258,6 +295,9 @@ else
 
 }
 
+resource_type = get('wave_resource_model_choice');
+if (resource_type == 0) resourceType = "Frequency of Occurence";
+else resourceType = "Time Series";
 //get device info
 
 deviceRatedPower = get('device_rated_power');
@@ -709,7 +749,31 @@ for (j=1; j < 22; j++)
 }
 //outln(zValuesAep);
 
-
+csv_table_rows = ["Company_Name","WEC_Name","Device_Model","Device_Model_Year","WEC_Type",
+	"TRL","PTO_Type","Foundation_Type","Structural_Mass","Primary_Structural_Material","Characteristic_Dimension","Device_Scale","Device_Rated_Power",
+	"Device_Average_Power","Capacity_Factor","AEP","Resource_type","Resource_Name",
+	"Location","Latitude","Longitude","Buoy_Number", "Bathymetry","Seabed", "Avg_Power_Flux","Rated_Array_Capacity",
+	"Number_of_Devices","Distance_to_Shore","Depth","Device_Spacing","Row_Spcaing","Total_Assumed_Losses",
+	"CAPEX","OPEX","LCOE","FCR","Structural_Assembly","Power_Take_off","Mooring_Foundation_and_Subsystem",
+	"Development","Engineering_and_Management", "Electrical_Infrastructure","Plant_Commissioning","Site_Access","Assembly_and_Install",
+	"Other_Infrastructure","Project_Contingency_Budget","Insurance_during_Construction","Reserve_Accounts", "Operations", "Maintenance"];
+csv_table_units = ["Unitless","Unitless","Unitless","Year","Unitless","Unitless","Unitless","Unitless","Mg","Unitless","m","Unitless",
+	"kW","kW","%","kWh","Unitless","Unitless","Unitless","Unitless","Unitless",
+	"Unitless","Unitless","Unitless","kW/m","kW","Unitless","km","m","m","m","kWh",
+	"%","%","$","$","$/kWh","%","$","$","$","$","$","$","$","$","$","$","$","$",
+	"$","$","$"];
+csv_table_results = [companyName, deviceName, deviceModel, deviceModelYear, deviceType,
+	deviceTRL,ptoType,foundationType,deviceMass,deviceMaterial,charDia,deviceScale,deviceRatedPower,
+	deviceMeanPower,capacityFactor,aep,resourceType,resourceName,resourceLocation,latitude,longitude,buoyNumber,bathymetry,seabed,waveResourceAvg,arrayRatedPower,
+	deviceCount,distanceToShore,waterDepth,deviceSpacing,rowSpacing,totalLoss,capex,opex,lcoe,fcr,
+	structure,pto,foundation,development,engmanag,elecinfrast,commissioning,access,install,otherinfras,projectContingency,
+	insurance,reserveAccounts,operations,maintenance];
+final_table = [[]];
+final_table[0] = csv_table_rows;
+final_table[1] = csv_table_units;
+final_table[2] = csv_table_results;
+fn = choose_file();
+csvwrite(fn, final_table);
 
 reportCode = 
 '<html>'

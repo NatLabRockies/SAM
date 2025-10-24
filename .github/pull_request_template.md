@@ -1,33 +1,37 @@
-# Pull Request Template
+## Pull Request Template
 
-## Description
+### Description
 
-Please include a summary of the change and which issue is fixed. Please also include relevant motivation and context. List any dependencies that are required for this change.
+[ description of the bug fix or new functionality ]
 
-Fixes # (issue)
+[ include directions for reviewers if necessary- what or how should they test or review ]
 
-## Type of change
+Fixes # (issue(s))
 
-Please delete options that are not relevant.
+### Corresponding branches and PRs:
 
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] This change requires a documentation update
-- [ ] This change modifies variables in existing compute modules. Please see [Checking for PySAM Incompatible API Changes](https://github.com/NREL/SAM/wiki/PySAM-Incompatible-API-Changes-&-Regenerating-PySAM-Files).
-- [ ] This change requires updating the PySAM files via export_config. Please see [When do the PySAM files need to be regenerated?](https://github.com/NREL/SAM/wiki/PySAM-Incompatible-API-Changes-&-Regenerating-PySAM-Files#when-do-the-pysam-files-need-to-be-regenerated-via-export_config)
+[ which branches of wex, lk, and ssc should be built with this PR ]
 
+[ link any corresponding PRs in other repos, i.e. NREL/ssc#x ]
 
-## Checklist:
+### Unit Test Impact:
 
-If you have added a new compute module in a SSC pull request related to this one, be sure to check the [Process Requirements](https://github.com/NREL/SAM/wiki/Compute-modules-in-SAM).
+[ new tests written? ]
 
-- [ ] My code follows the style guidelines of this project
-- [ ] I have performed a self-review of my own code
-- [ ] I have commented my code, particularly in hard-to-understand areas
-- [ ] I have made corresponding changes to the documentation
-- [ ] My changes generate no new warnings
-- [ ] I have added tests that prove my fix is effective or that my feature works
-- [ ] New and existing unit tests pass locally with my changes
-- [ ] Any dependent changes have been merged and published in downstream modules
-- [ ] I have checked my code and corrected any misspellings
+[ expected changes in unit tests or speed of tests? ]
+
+[ expected changes in test_results files? ]
+
+### Checklist
+- [ ] requires help revision and I added that label
+- [ ] adds, removes, modifies, or deletes variables in existing compute modules
+- [ ] adds a new compute module
+- [ ] changes defaults
+- [ ] I've tagged this PR to a milestone
+
+### Reminders- this section can be deleted
+[Checking for PySAM Incompatible API Changes]
+(https://github.com/NREL/SAM/wiki/PySAM-Incompatible-API-Changes-&-Regenerating-PySAM-Files).
+
+[When do the PySAM files need to be regenerated?]
+(https://github.com/NREL/SAM/wiki/PySAM-Incompatible-API-Changes-&-Regenerating-PySAM-Files#when-do-the-pysam-files-need-to-be-regenerated-via-export_config)

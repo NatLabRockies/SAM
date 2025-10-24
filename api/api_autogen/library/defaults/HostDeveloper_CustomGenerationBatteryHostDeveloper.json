@@ -36,7 +36,8 @@
 			"ppa_escalation": 1,
 			"ppa_multiplier_model": 0,
 			"ppa_price_input": [0.150000],
-			"ppa_soln_mode": 1
+			"ppa_soln_mode": 1,
+			"start_day_of_year": 0
 		},
 		"FinancialParameters": {
 			"analysis_period": 25,
@@ -76,21 +77,21 @@
 		},
 		"SystemCosts": {
 			"add_om_num_types": 1,
-			"om_batt_capacity_cost": [6.280000],
+			"om_batt_capacity_cost": [5.250000],
 			"om_batt_fixed_cost": [0.000000],
-			"om_batt_nameplate": 1200.21,
-			"om_batt_replacement_cost": [282.000000],
+			"om_batt_nameplate": 1200.54,
+			"om_batt_replacement_cost": [280.000000],
 			"om_batt_variable_cost": [0.000000],
-			"om_capacity": [16.000000],
+			"om_capacity": [25.000000],
 			"om_capacity_escal": 0,
 			"om_fixed": [0.000000],
 			"om_fixed_escal": 0,
-			"om_fuel_cost": [0.000000],
+			"om_fuel_cost": [10.000000],
 			"om_fuel_cost_escal": 0,
 			"om_production": [0.000000],
 			"om_production_escal": 0,
 			"om_replacement_cost_escal": 0,
-			"total_installed_cost": 868471
+			"total_installed_cost": 1.15652e+06
 		},
 		"LandLease": {
 		},
@@ -254,8 +255,6 @@
 		},
 		"Host": {
 			"annual_energy_value": [0],
-			"elec_cost_with_system": [0],
-			"elec_cost_without_system": [0],
 			"host_real_discount_rate": 6.4
 		},
 		"TimeSeries": {
@@ -275,7 +274,6 @@
 			"utility_bill_w_sys": [0]
 		},
 		"SystemOutput": {
-			"annual_energy_value": [0],
 			"degradation": [0.000000],
 			"gen": [0],
 			"system_capacity": 215
@@ -289,20 +287,20 @@
 			"system_use_lifetime_output": 1
 		},
 		"ConstructionFinancing": {
-			"construction_financing_cost": 22797.4
+			"construction_financing_cost": 30358.8
 		},
 		"BatterySystem": {
-			"batt_computed_bank_capacity": 1200.21,
+			"batt_computed_bank_capacity": 1200.54,
 			"batt_replacement_option": 1,
 			"batt_replacement_schedule_percent": [0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000],
-			"battery_per_kWh": 225.06,
+			"battery_per_kWh": 184,
 			"en_batt": 1,
 			"en_standalone_batt": 0,
 			"en_wave_batt": 0
 		},
 		"LCOS": {
 			"batt_salvage_percentage": 0,
-			"battery_total_cost_lcos": 423051
+			"battery_total_cost_lcos": 419978
 		},
 		"ElectricityRates": {
 			"rate_escalation": [0.000000]

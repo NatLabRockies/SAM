@@ -131,7 +131,7 @@ extern "C"
 	 * Set tidal_resource: Frequency distribution of resource as a function of stream speeds
 	 * options: None
 	 * constraints: None
-	 * required if: *
+	 * required if: tidal_resource_model_choice=0
 	 */
 	SAM_EXPORT void SAM_MhkTidal_MHKTidal_tidal_resource_mset(SAM_table ptr, double* mat, int nrows, int ncols, SAM_error *err);
 
@@ -147,7 +147,7 @@ extern "C"
 	 * Set tidal_velocity: Tidal velocity [m/s]
 	 * options: None
 	 * constraints: None
-	 * required if: ?
+	 * required if: tidal_resource_model_choice=1
 	 */
 	SAM_EXPORT void SAM_MhkTidal_MHKTidal_tidal_velocity_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
 

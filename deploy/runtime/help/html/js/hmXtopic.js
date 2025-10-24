@@ -3,10 +3,10 @@
 hmProjectInfo = {
 	title: "SAM Help",
 	author: "National Renewable Energy Laboratory",
-	copyright: "© 2024 National Renewable Energy Laboratory",
+	copyright: "© 2025 National Renewable Energy Laboratory",
 	summary: "&nbsp;",
 	version: "0.0.1",
-	date: "Monday, October 28, 2024",
+	date: "Thursday, April 10, 2025",
 	language: "en-us",
 	mainfile: "index.html"
 	}

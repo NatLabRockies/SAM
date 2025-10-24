@@ -1220,18 +1220,6 @@ SAM_EXPORT void SAM_Cashloan_Lifetime_system_use_lifetime_output_nset(SAM_table 
 	});
 }
 
-SAM_EXPORT void SAM_Cashloan_ThirdPartyOwnership_elec_cost_with_system_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
-	translateExceptions(err, [&]{
-		ssc_data_set_array(ptr, "elec_cost_with_system", arr, length);
-	});
-}
-
-SAM_EXPORT void SAM_Cashloan_ThirdPartyOwnership_elec_cost_without_system_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
-	translateExceptions(err, [&]{
-		ssc_data_set_array(ptr, "elec_cost_without_system", arr, length);
-	});
-}
-
 SAM_EXPORT void SAM_Cashloan_LCOS_batt_annual_charge_energy_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_array(ptr, "batt_annual_charge_energy", arr, length);
@@ -3198,26 +3186,6 @@ SAM_EXPORT double SAM_Cashloan_Lifetime_system_use_lifetime_output_nget(SAM_tabl
 	translateExceptions(err, [&]{
 	if (!ssc_data_get_number(ptr, "system_use_lifetime_output", &result))
 		make_access_error("SAM_Cashloan", "system_use_lifetime_output");
-	});
-	return result;
-}
-
-SAM_EXPORT double* SAM_Cashloan_ThirdPartyOwnership_elec_cost_with_system_aget(SAM_table ptr, int* length, SAM_error *err){
-	double* result = nullptr;
-	translateExceptions(err, [&]{
-	result = ssc_data_get_array(ptr, "elec_cost_with_system", length);
-	if (!result)
-		make_access_error("SAM_Cashloan", "elec_cost_with_system");
-	});
-	return result;
-}
-
-SAM_EXPORT double* SAM_Cashloan_ThirdPartyOwnership_elec_cost_without_system_aget(SAM_table ptr, int* length, SAM_error *err){
-	double* result = nullptr;
-	translateExceptions(err, [&]{
-	result = ssc_data_get_array(ptr, "elec_cost_without_system", length);
-	if (!result)
-		make_access_error("SAM_Cashloan", "elec_cost_without_system");
 	});
 	return result;
 }

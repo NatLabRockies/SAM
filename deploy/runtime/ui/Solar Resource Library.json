@@ -1,0 +1,975 @@
+{
+    "Name": "Solar Resource Library",
+    "Width": 882.0,
+    "Height": 534.0,
+    "FormObjects": {
+        "GroupBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "GroupBox2"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 9.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 6.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 870.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 525.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Choose Weather File"
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Button": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "btn_add_remove_folders"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 621.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 381.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 252.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 30.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Add/remove weather file folders..."
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 2.0
+                }
+            }
+        },
+        "Button": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "btn_browse_file"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 765.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 495.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 108.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 28.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Browse"
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "Button": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "btn_refresh_library"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 621.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 411.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 252.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 30.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Refresh library"
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "caption_library"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 15.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 78.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 855.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 28.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "The Solar Resource library is a list of weather files on your computer. Choose a file from the library and verify the weather data information below."
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "folder_caption"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 18.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 339.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 855.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 39.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "SAM scans the following folders on your computer for valid weather files and adds them to your Solar Resource library. To use weather files stored on your computer, click Add/remove Weather File Folders and add folders containing valid weather files."
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "MultilineText": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "library_folder_list"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 18.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 381.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 588.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 60.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Text": {
+                    "Type": 5.0,
+                    "String": "List of Solar Resource library folders"
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "Divider": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 22"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 15.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 57.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 855.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 16.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Orientation": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Colour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 120.0,
+                        "Green": 120.0,
+                        "Blue": 120.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Solar Resource Library"
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Divider": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 223"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 18.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 447.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 855.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 16.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Orientation": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Colour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 120.0,
+                        "Green": 120.0,
+                        "Blue": 120.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Disable Solar Resource Library"
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 7"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 465.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 855.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 28.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "If you prefer not to use the Solar Resource Library, check Choose Weather File to disable it, and click Browse to choose a weather file."
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 711"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 15.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 846.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 28.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Choose a weather file from the library or from a folder."
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "TextEntry": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "solar_data_file_name"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 180.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 306.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 690.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 28.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Text": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "Library": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "solar_resource"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 15.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 108.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 855.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 186.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Library": {
+                    "Type": 5.0,
+                    "String": "SolarResourceData"
+                },
+                "Fields": {
+                    "Type": 5.0,
+                    "String": "Name,Latitude,Longitude,Time zone,Elevation,Station ID,Source,Version"
+                }
+            }
+        },
+        "CheckBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "use_specific_weather_file"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 27.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 495.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 162.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 28.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Choose weather file"
+                },
+                "State": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "TextEntry": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "user_specified_weather_file"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 192.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 495.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 570.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 28.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Text": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        }
+    },
+    "VarDatabase": {
+        "library_folder_list": {
+            "Version": 4.0,
+            "Type": 4.0,
+            "Label": "Solar resource library folders",
+            "Units": " ",
+            "Group": "Location and Resource",
+            "IndexLabels": "",
+            "Flags": 5.0,
+            "DefaultValue": "",
+            "UIObject": "MultilineText",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "library_paths": {
+            "Version": 4.0,
+            "Type": 4.0,
+            "Label": "Solar resource library file path list",
+            "Units": " ",
+            "Group": "Location and Resource",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": "",
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "solar_data_file_name": {
+            "Version": 4.0,
+            "Type": 4.0,
+            "Label": "Weather file from library",
+            "Units": "",
+            "Group": "Location and Resource",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": "",
+            "UIObject": "TextEntry",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "solar_resource": {
+            "Version": 4.0,
+            "Type": 4.0,
+            "Label": "Solar resource library current selection",
+            "Units": " ",
+            "Group": "Location and Resource",
+            "IndexLabels": "SolarResourceData|0",
+            "Flags": 19.0,
+            "DefaultValue": "",
+            "UIObject": "Library",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "use_specific_weather_file": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Use user-specified weather file",
+            "Units": "",
+            "Group": "Location and Resource",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "CheckBox",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "user_specified_weather_file": {
+            "Version": 4.0,
+            "Type": 4.0,
+            "Label": "Weather file on disk",
+            "Units": "",
+            "Group": "Location and Resource",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": "",
+            "UIObject": "TextEntry",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        }
+    },
+    "Equations": [
+        "",
+        ""
+    ],
+    "Callbacks": [
+        "on_load{'Solar Resource Library'} = define() {",
+        "\t//msgbox('Debug\\non_load Solar Resource Library');",
+        "\tenable_user_specified_wf();\r",
+        "\tupdate_library_folders(''); // refresh list of library folders\r",
+        "\tlibrary_notification();\r",
+        "};",
+        "",
+        "on_change{'btn_refresh_library'} = define() {",
+        "\t//msgbox('Debug\\non_change btn_refresh_library');\r",
+        "\trescanlibrary( 'solar' );\r",
+        "\tlibrary_notification();",
+        "};",
+        "",
+        "on_change{'btn_add_remove_folders'} = define() {",
+        "\t//msgbox('Debug\\non_change btn_add_remove_folders');\r",
+        "\tif ( showsettings( 'solar' ) ) {",
+        "\t\tupdate_library_folders( '' );",
+        "\t}\r",
+        "\telse {\r",
+        "\t\tmsgbox('Failed to open Solar Resource Data Folder Settings window.');\r",
+        "\t}\r",
+        "\tlibrary_notification();\r",
+        "};",
+        "\r",
+        "on_change{'btn_browse_file'} = define() {\r",
+        "\tf_current = value('user_specified_weather_file');\r",
+        "\tif ( !file_exists(f_current) ) {\r",
+        "\t\tfpath = homedir();\r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\tfpath = path_only( f_current );\r",
+        "\t}\r",
+        "\t\r",
+        "\tf = choose_file( fpath , 'Choose a weather file', 'Weather Files (*.csv, *.epw, *.tm2)|*.csv; *.epw; *.tm2');\r",
+        "\t\t\r",
+        "\tif ( f != '' ) {\r",
+        "\t\tf = replace(f, '\\\\', '/');\r",
+        "\t\tvalue( 'user_specified_weather_file', f );\r",
+        "\t}\r",
+        "};\r",
+        "\r",
+        "on_change{'use_specific_weather_file'} = define() {\r",
+        "\tenable_user_specified_wf();\r",
+        "\tlibrary_notification();\r",
+        "};\r",
+        "\r",
+        "function enable_user_specified_wf() {\r",
+        "\tis_user_specified = ( value('use_specific_weather_file') == 1 );\r",
+        "\tenable('user_specified_weather_file', is_user_specified );\r",
+        "\tenable('btn_browse_file', is_user_specified );\r",
+        "\tenable('solar_resource', !is_user_specified );\r",
+        "\tenable('solar_data_file_name', !is_user_specified );\r",
+        "\tenable('library_folder_list', !is_user_specified );\r",
+        "\tenable('btn_add_remove_folders', !is_user_specified );\r",
+        "\tenable('btn_refresh_library', !is_user_specified );\r",
+        "}\r",
+        "\r",
+        "// update ui list of library folders, and optionally add new path to library folders\r",
+        "function update_library_folders( new_path )\r",
+        "{\r",
+        "\t//msgbox('Debug\\nupdate_library_folders()');\r",
+        "\tx = get_settings('solar_data_paths');\r",
+        "\t// add new path if provided and it doesn't already exist in the library\r",
+        "\tif ( new_path != '' && dir_exists( new_path ) && ( strpos( x, new_path ) < 0 ) )\r",
+        "\t{\r",
+        "\t\tif ( x != '' ) { x += ';'; }\r",
+        "\t\tx += replace( new_path, '\\\\', '/' );\r",
+        "\t}\r",
+        "\t// list of library folders files to display on separate lines\r",
+        "\tpaths = split( x, ';' );\r",
+        "\t// put solar download folder at top of list\r",
+        "\tclean_list = '';\r",
+        "\t// remove folders in list that no longer exist\r",
+        "\tfor (i = 0; i<#paths; i++ )\r",
+        "\t{\r",
+        "\t\tif ( dir_exists( paths[i] ) )\r",
+        "\t\t{\r",
+        "\t\t\tclean_list += paths[i];\r",
+        "\t\t\tif ( i < #paths-1 ) { clean_list += ';'; }\r",
+        "\t\t}\t\r",
+        "\t}\t\t\r",
+        "\t// update solar_data_paths used by library.cpp and nsrdb.cpp to cleaned list\t\t\r",
+        "\tset_settings('solar_data_paths', clean_list );\r",
+        "\t// update list to display\r",
+        "\tvalue( 'library_folder_list', get_settings('solar_download_path') + '\\n' \r",
+        "\t       + replace( clean_list , ';' , '\\n' ) );\r",
+        "\trescanlibrary( 'solar' );        \r",
+        "}\r",
+        "\r",
+        "// sets the library widget's notification text based on status of library\r",
+        "function library_notification() {\r",
+        "\r",
+        "\t// get list of default files and files in library\r",
+        "\tsam_dir = replace(appdir(),'\\\\','/'); // app dir is like c:/SAM/2024.12.12/x64\r",
+        "\tdefault_solar_resource_path = left(sam_dir,last_of(sam_dir,'/'))+'/solar_resource'; // default solar resource path is like c:/SAM/2024.12.12/solar_resource\r",
+        "\tdefault_files = dir_list(default_solar_resource_path, '*');\r",
+        "\tlib = csvread(userlocaldatadir() + '/SolarResourceData.csv', {'skip'=3});\r",
+        "\r",
+        "\t// set library widget notification text\r",
+        "\tif ( librarygetcurrentselection('solar_resource') == '' ) {\r",
+        "\t\tlibrarynotifytext('solar_resource','Nothing selected. Please choose a file.');\r",
+        "\t}\r",
+        "\telseif ( strpos( replace(value('solar_data_file_name'),'\\\\','/'), replace(value('solar_resource'),'\\\\','/')  ) < 0) {\r",
+        "\t\tlibrarynotifytext('solar_resource','Invalid selection. Choose a different file.');\r",
+        "\t}\r",
+        "\telseif (librarygetnumbermatches('solar_resource') < 1) {\r",
+        "\t\tlibrarynotifytext('solar_resource', 'No match found. Try downloading or choosing a weather file.');\r",
+        "\t}\r",
+        "\telseif ( replace(value('solar_data_file_name'), '\\\\', '/') != replace( value('solar_resource_file'), '\\\\', '/' ) ) {\r",
+        "\t\tlibrarynotifytext('solar_resource','Current selection is different from weather file.');\r",
+        "\t}\r",
+        "\telseif ( #lib ==  #default_files ) {\r",
+        "\t\tlibrarynotifytext('solar_resource', 'You have not added any weather files to your library.' );\r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\tlibrarynotifytext('solar_resource', ''); //'Everything is fine.'\r",
+        "\t}\r",
+        "\r",
+        "\tif (value('use_specific_weather_file') == 1) {\r",
+        "\t\tproperty('caption_library','Caption','The Solar Resource library is disabled. Clear the Use Weather File on Disk checkbox below to enable the library.');\r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\tproperty('caption_library','Caption','The Solar Resource library is a list of weather files on your computer. Choose a file from the library and verify the weather data information below.');\r",
+        "\t}\r",
+        "\t//msgbox('Debug\\nlibraryget functions'+\r",
+        "\t//'\\nfiltertext = ' + librarygetfiltertext('solar_resource') \r",
+        "\t//+ '\\nnumber matches = ' + librarygetnumbermatches('solar_resource') \r",
+        "\t//+ '\\ncurrentselection = ' + librarygetcurrentselection('solar_resource'));\r",
+        "\r",
+        "}\r",
+        ""
+    ]
+}

@@ -4298,7 +4298,7 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "plant_commissioning_cost_modeled_ui"
+                    "String": "plant_commissioning_cost_modeled"
                 },
                 "X": {
                     "Type": 3.0,
@@ -4671,7 +4671,7 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "site_access_port_staging_cost_modeled_ui"
+                    "String": "site_access_port_staging_cost_modeled"
                 },
                 "X": {
                     "Type": 3.0,
@@ -5155,7 +5155,7 @@
         "\t\t\t[",
         "\t\t\t\t${plant_commissioning_cost_input} * ${system_capacity},",
         "\t\t\t\t${plant_commissioning_cost_input},",
-        "\t\t\t\t${plant_commissioning_cost_modeled_ui},\r",
+        "\t\t\t\t${plant_commissioning_cost_modeled},\r",
         "\t\t\t\t(${plant_commissioning_cost_input}*pow(${number_devices},-array_scaling_b_value))*${number_devices}",
         "\t\t\t];",
         "};",

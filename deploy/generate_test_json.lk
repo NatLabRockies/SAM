@@ -11,6 +11,14 @@ folder = "/Users/imacuser/Public/Projects/SAM/Documentation/FinancialMarkets/Tes
 // to test all financial compute modules
 cmod_list="cashloan,thirdpartyownership,host_developer,singleowner,communitysolar,merchantplant,levpartflip,equpartflip,saleleaseback,lcoefcr";
 
+// to test a technology cmod
+// 1) change cmod_list to the technology cmod name; e.g. cmod_list="fresnel_physical"
+// 2) change technologies[t] to the SAM technology name; e.g. technologies[t] == "MSLF"
+// 3) change financial loop to "f < 1" to avoid re-running the technology cmod
+// 4) the resulting json will set a local path for the weather file directory
+///// so set the weather file name when constructing the test
+///// e.g. Test("fresnel_physical", file_inputs, file_outputs, compare_number_variables, compare_array_variables, 0.001, "tucson_az_32.116521_-110.933042_psmv3_60_tmy.csv");
+
 close_project();
 
 create_case("PVWatts", "None", casename);

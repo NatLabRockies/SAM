@@ -62,7 +62,7 @@ struct smart_ptr
 extern const char *sam_api_key;
 extern const char* geocode_api_key;
 extern const char* google_api_key;
-extern const char* bing_api_key;
+extern const char* azure_api_key;
 
 class wxSimplebook;
 class wxPanel;
@@ -84,7 +84,7 @@ class CaseWindow;
 class MainWindow : public wxFrame
 {
 public:
-	MainWindow( );
+	MainWindow();
 
 	ProjectFile &Project() { return m_project; }
 
@@ -102,6 +102,8 @@ public:
 	void DeleteCaseWindow( Case *c );
 	bool SwitchToCaseWindow( const wxString &name );
 
+	void UpdateAllPageNotes();
+
 	bool LoadProject( const wxString &file );
 	bool SaveProject( const wxString &file );
 
@@ -111,6 +113,10 @@ public:
 	wxString GetProjectDisplayName();
 	wxString GetProjectFileName();
 
+	void SetEquationCase(Case* eqnCase) {
+		m_eqnCase = eqnCase;
+	}
+	Case* GetEquationCase() { return m_eqnCase; }
 	Case *GetCurrentCase();
 	CaseWindow *GetCurrentCaseWindow();
 	void CaseVarGrid(std::vector<Case*> &cases);
@@ -130,6 +136,7 @@ private:
 	wxMetroButton *m_mainMenuButton;
 	wxMetroTabList *m_caseTabList;
 	wxSimplebook *m_caseNotebook;
+	Case* m_eqnCase;
 
 	ProjectFile m_project;
 	wxString m_projectFileName;

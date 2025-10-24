@@ -808,6 +808,14 @@ extern "C"
 	SAM_EXPORT void SAM_Biomass_Biopower_file_name_sset(SAM_table ptr, const char* str, SAM_error *err);
 
 	/**
+	 * Set start_day_of_year: Start day of year for TOD periods [0..6]
+	 * options: 0=Monday, 6=Sunday
+	 * constraints: None
+	 * required if: ?=0
+	 */
+	SAM_EXPORT void SAM_Biomass_Biopower_start_day_of_year_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
 	 * Set system_capacity: Nameplate capacity [kW]
 	 * options: None
 	 * constraints: None
@@ -1058,6 +1066,8 @@ extern "C"
 	SAM_EXPORT double SAM_Biomass_Biopower_biopwr_plant_tou_option_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT const char* SAM_Biomass_Biopower_file_name_sget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Biomass_Biopower_start_day_of_year_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Biomass_Biopower_system_capacity_nget(SAM_table ptr, SAM_error *err);
 

@@ -36,11 +36,12 @@
 			"ppa_escalation": 1,
 			"ppa_multiplier_model": 0,
 			"ppa_price_input": [0.080000],
-			"ppa_soln_mode": 1
+			"ppa_soln_mode": 1,
+			"start_day_of_year": 0
 		},
 		"FinancialParameters": {
-			"analysis_period": 25,
-			"construction_financing_cost": 1.52983e+07,
+			"analysis_period": 30,
+			"construction_financing_cost": 3.06534e+07,
 			"cost_debt_closing": 0,
 			"cost_debt_fee": 2.75,
 			"cost_other_financing": 0,
@@ -72,20 +73,20 @@
 			"reserves_interest": 1.75,
 			"salvage_percentage": 0,
 			"state_tax_rate": [7.000000],
-			"system_capacity": 32813.6,
+			"system_capacity": 45106.2,
 			"term_int_rate": 7,
 			"term_tenor": 18
 		},
 		"SystemCosts": {
-			"om_capacity": [175.000000],
+			"om_capacity": [0.000000],
 			"om_capacity_escal": 0,
-			"om_fixed": [0.000000],
+			"om_fixed": [8117300.000000],
 			"om_fixed_escal": 0,
 			"om_production": [0.000000],
 			"om_production_escal": 0,
-			"system_recapitalization_cost": 2.82098e+07,
+			"system_recapitalization_cost": 6.39853e+07,
 			"system_use_recapitalization": 1,
-			"total_installed_cost": 1.24377e+08
+			"total_installed_cost": 2.49214e+08
 		},
 		"LandLease": {
 		},
@@ -252,6 +253,7 @@
 		"ElectricityRates": {
 			"en_electricity_rates": 0,
 			"rate_escalation": [0.000000],
+			"start_day_of_year": 0,
 			"ur_annual_min_charge": 0,
 			"ur_billing_demand_lookback_percentages": [
 				[60.000000, 0.000000],
@@ -367,11 +369,12 @@
 		"SystemOutput": {
 			"degradation": [0.000000],
 			"gen": [0.000000],
-			"system_capacity": 32813.6
+			"system_capacity": 45106.2
 		},
 		"UtilityBill": {
 		},
 		"Lifetime": {
+			"inflation_rate": 2.5,
 			"system_use_lifetime_output": 1
 		},
 		"FuelCell": {
@@ -382,7 +385,7 @@
 			"cp_capacity_payment_amount": [0.000000],
 			"cp_capacity_payment_esc": 0,
 			"cp_capacity_payment_type": 0,
-			"cp_system_nameplate": 32.8136
+			"cp_system_nameplate": 45.1062
 		},
 		"GridLimits": {
 			"grid_curtailment_price": [0.000000],

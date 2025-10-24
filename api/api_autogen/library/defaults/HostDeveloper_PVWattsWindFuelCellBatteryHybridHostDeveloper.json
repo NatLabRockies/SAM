@@ -36,7 +36,8 @@
 			"ppa_escalation": 1,
 			"ppa_multiplier_model": 0,
 			"ppa_price_input": [0.153000],
-			"ppa_soln_mode": 0
+			"ppa_soln_mode": 0,
+			"start_day_of_year": 0
 		},
 		"FinancialParameters": {
 			"analysis_period": 25,
@@ -78,7 +79,7 @@
 			"om_capacity": [0],
 			"om_fixed": [0],
 			"om_production": [0],
-			"total_installed_cost": 5.29375e+06
+			"total_installed_cost": 4.51256e+06
 		},
 		"LandLease": {
 		},
@@ -123,7 +124,7 @@
 			"depr_bonus_sta": 0,
 			"depr_bonus_sta_custom": 0,
 			"depr_bonus_sta_macrs_15": 0,
-			"depr_bonus_sta_macrs_5": 0,
+			"depr_bonus_sta_macrs_5": 1,
 			"depr_bonus_sta_sl_15": 0,
 			"depr_bonus_sta_sl_20": 0,
 			"depr_bonus_sta_sl_39": 0,
@@ -132,14 +133,14 @@
 			"depr_fedbas_method": 1,
 			"depr_itc_fed_custom": 0,
 			"depr_itc_fed_macrs_15": 0,
-			"depr_itc_fed_macrs_5": 0,
+			"depr_itc_fed_macrs_5": 1,
 			"depr_itc_fed_sl_15": 0,
 			"depr_itc_fed_sl_20": 0,
 			"depr_itc_fed_sl_39": 0,
 			"depr_itc_fed_sl_5": 0,
 			"depr_itc_sta_custom": 0,
 			"depr_itc_sta_macrs_15": 0,
-			"depr_itc_sta_macrs_5": 0,
+			"depr_itc_sta_macrs_5": 1,
 			"depr_itc_sta_sl_15": 0,
 			"depr_itc_sta_sl_20": 0,
 			"depr_itc_sta_sl_39": 0,
@@ -242,8 +243,6 @@
 		},
 		"Host": {
 			"annual_energy_value": [0],
-			"elec_cost_with_system": [0],
-			"elec_cost_without_system": [0],
 			"host_real_discount_rate": 6.4
 		},
 		"TimeSeries": {
@@ -263,7 +262,6 @@
 			"utility_bill_w_sys": [0]
 		},
 		"SystemOutput": {
-			"annual_energy_value": [0],
 			"gen": [0],
 			"system_capacity": 769.565
 		},
@@ -276,7 +274,7 @@
 			"system_use_lifetime_output": 0
 		},
 		"ConstructionFinancing": {
-			"construction_financing_cost": 138961
+			"construction_financing_cost": 118455
 		},
 		"BatterySystem": {
 			"batt_replacement_option": 1
@@ -294,7 +292,7 @@
 		"FuelCell": {
 		},
 		"HybridCosts": {
-			"total_installed_cost": 5.29375e+06
+			"total_installed_cost": 4.51256e+06
 		}
 	}
 }

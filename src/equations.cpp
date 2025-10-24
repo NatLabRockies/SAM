@@ -535,8 +535,7 @@ int EqnEvaluator::Calculate( )
 	size_t niterations = 0;
 	size_t nevals = 0; // number of equations evaluated
 
-//	wxLogStatus("Calculating equations...");
-	
+
 	do
 	{
 		niterations++;

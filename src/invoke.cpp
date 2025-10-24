@@ -93,6 +93,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "graph.h"
 #include "ptesdesignptdialog.h"
 #include "geotools.h"
+#include "nohrsc.h"
 
 
 
@@ -1233,7 +1234,9 @@ void fcall_value( lk::invoke_t &cxt )
 	wxString name = cxt.arg(0).as_string();
 	auto& c = cc.GetCase();
 	bool found = false;
-	for (size_t ndxHybrid = 0; !found && ndxHybrid < c.GetConfiguration()->Technology.size(); ndxHybrid++) {
+	// Issue 1965 - assumption is that higher ndxHybrid vartables contain independent vairables in startup.lk
+//	for (size_t ndxHybrid = 0; !found && ndxHybrid < c.GetConfiguration()->Technology.size(); ndxHybrid++) {
+	for (int ndxHybrid = c.GetConfiguration()->Technology.size() - 1; !found && ndxHybrid > -1; ndxHybrid--) {
 		if (VarValue* vv = cc.GetValues(ndxHybrid).Get(name))
 		{
 			found = true;
@@ -1938,23 +1941,30 @@ void fcall_var_exists(lk::invoke_t& cxt)
 {
 	LK_DOC("var_exists", "Check by name if an input or output variable exists in current case", "(string:name):bool");
 
-	if (Case* c = SamApp::Window()->GetCurrentCase()) {
-		wxString name = cxt.arg(0).as_string();
-		auto cfg = c->GetConfiguration();
-		int ndxHybrid = 0;
-		VarValue* vv = NULL;
-		bool bfound = false;
-		for (size_t ndx = 0; ndx < cfg->Technology.size(); ndx++ ) { // select ndxHybrid based on compute module position in 		
-			if (vv = c->Values(ndxHybrid).Get(name)) {
-				bfound = true;
-				ndxHybrid = ndx;
-			}
-		}
-		if (bfound)
-			cxt.result().assign(1);
-		else
-			cxt.result().assign((double)0);
-	}
+    Case* c = nullptr;
+    if (CaseCallbackContext* ci = static_cast<CaseCallbackContext*>(cxt.user_data()))
+        *c = ci->GetCase();
+    else if (SamApp::Window()->GetEquationCase() != nullptr)
+        c = SamApp::Window()->GetEquationCase();
+    else
+        c = SamApp::Window()->GetCurrentCase();
+    if (c != nullptr) {
+        wxString name = cxt.arg(0).as_string();
+        auto cfg = c->GetConfiguration();
+        int ndxHybrid = 0;
+        VarValue* vv = NULL;
+        bool bfound = false;
+        for (size_t ndx = 0; ndx < cfg->Technology.size(); ndx++) { // select ndxHybrid based on compute module position in
+            if (vv = c->Values(ndxHybrid).Get(name)) {
+                bfound = true;
+                ndxHybrid = ndx;
+            }
+        }
+        if (bfound)
+            cxt.result().assign(1);
+        else
+            cxt.result().assign((double)0);
+    }
 	else
 		cxt.result().assign((double)0);
 }
@@ -2059,7 +2069,7 @@ void fcall_ssc_auto_exec(lk::invoke_t& cxt)
 //						if (auto vv = cxt.env()->lookup(name, true))
 //						if (auto vv = c->Values(0).Get(name)) // TODO: hybrids
 /*
-* Note for hybrids - the search starts with the firs case vartable and continues until the first "name" is found in the UI
+* Note for hybrids - the search starts with the first case vartable and continues until the first "name" is found in the UI
 */						auto cfg = c->GetConfiguration();
 						int ndxHybrid = 0;
 						if (cfg->Technology.size() > 1) { // select ndxHybrid based on compute module position in simulations collection
@@ -2710,6 +2720,36 @@ void fcall_wfdownloaddir( lk::invoke_t &cxt)
 	cxt.result().assign(wfdir);
 }
 
+void fcall_nohrscquery(lk::invoke_t& cxt)
+{
+	LK_DOC("nohrscquery", "Creates the NOHRSC data download dialog box, lists all available resource files, downloads multiple solar resource files, and returns local file name for weather file", "(none) : string");
+	//Create the wind data object
+	NOHRSCDialog dlgNOHRSC(SamApp::Window(), "Advanced NOHRSC Download");
+	dlgNOHRSC.CenterOnParent();
+	int code = dlgNOHRSC.ShowModal(); //shows the dialog and makes it so you can't interact with other parts until window is closed
+
+	//Return an empty string if the window was dismissed
+	if (code == wxID_CANCEL)
+	{
+		cxt.result().assign(wxEmptyString);
+		return;
+	}
+
+	//Get selected filename
+	wxString year = dlgNOHRSC.GetNOHRSCYear();
+	wxString url = dlgNOHRSC.GetNOHRSCURL();
+	wxString stationID = dlgNOHRSC.GetNOHRSCstationID();
+
+	cxt.result().empty_hash();
+
+	// meta data
+	cxt.result().hash_item("year").assign(year);
+	cxt.result().hash_item("url").assign(url);
+	cxt.result().hash_item("stationID").assign(stationID);
+	cxt.result().hash_item("stationURL").assign(dlgNOHRSC.GetNOHRSCURL());
+}
+
+
 
 void fcall_nsrdbquery(lk::invoke_t &cxt)
 {
@@ -3024,7 +3064,7 @@ void fcall_wavetoolkit(lk::invoke_t& cxt)
                     SamApp::Settings().Write("wave_data_paths", wxJoin(paths, ';'));
                 }
             }
-            if (file_list != "") wxMessageBox("Download complete.\n\nThe following files have been downloaded and added to your solar resource library:\n\n" + file_list, "NREL Hindcast Wave Data Download Message", wxOK);
+            if (file_list != "") wxMessageBox("Download complete.\n\nThe following files have been downloaded and added to your resource library:\n\n" + file_list, "NREL Hindcast Wave Data Download Message", wxOK);
             //EndModal(wxID_OK);
         }
 
@@ -3093,7 +3133,7 @@ void fcall_windtoolkit(lk::invoke_t &cxt)
 		wxBusyInfo bid("Converting address to lat/lon.");
 
 		// use GeoTools::GeocodeGoogle for non-NREL builds and set google_api_key in private.h
-        if (!GeoTools::GeocodeDeveloper(spd.GetAddress(), &lat, &lon, NULL, false))
+        if (!GeoTools::GeocodeDeveloper(spd.GetAddress(), &lat, &lon, false))
 		{
 			wxMessageDialog* md = new wxMessageDialog(NULL, "Failed to convert address to lat/lon. This may be caused by a geocoding service outage or internet connection problem.", "WIND Toolkit Download Error", wxOK);
 			md->ShowModal();
@@ -3563,9 +3603,13 @@ void fcall_urdb_read(lk::invoke_t &cxt)
 				// try upgrading - see project file upgrader for 2015.11.16
 				// update to matrix for ec and dc
 				//errors.Add("Problem assigning " + var_name + " missing with " + value);
-				ret_val = false;
-				upgrade_list.Add(var_name);
-				upgrade_value.Add(value);
+// SAM issue 2007 - check that var_name in list to be updated below
+				// do not fail for previously saved files with no longer used variables like "ui_electricity_rate_option"
+				if (var_name.Left(2).Lower() != "ui") {
+					ret_val = false;
+					upgrade_list.Add(var_name);
+					upgrade_value.Add(value);
+				}
 			}
 		}
 		// try upgrading to matrix format
@@ -3781,20 +3825,105 @@ static bool copy_mat(lk::invoke_t &cxt, wxString sched_name, matrix_t<double> &m
 	return true;
 }
 
-void fcall_geocode(lk::invoke_t& cxt) 
+void fcall_geocode(lk::invoke_t& cxt)
 {
-	LK_DOC("geocode",
-		"Given a street address or location name, returns latitude, longitude, and time zone. Not designed to take latitude and longitude as input. Uses the MapQuest Geocoding API via a private NREL wrapper. Returned table fields are 'lat', 'lon', 'tz', 'ok'.",
-		"(string):table");
+  	LK_DOC("geocode",
+		"Given a street address or location name, returns latitude, longitude. Returns optional time zone if get_tz is true. Not designed to take latitude and longitude as input. Uses the MapQuest Geocoding API via a private NREL wrapper. Returned table fields are 'lat', 'lon', 'tz', 'ok'.",
+		"(string:location, [boolean:get_tz]):table");
 
-	double lat = 0, lon = 0, tz = 0;
-	// use GeoTools::GeocodeGoogle for non-NREL builds and set google_api_key in private.h
-	bool ok = GeoTools::GeocodeDeveloper(cxt.arg(0).as_string(), &lat, &lon, &tz);
+	double lat, lon, tz;
+	lat = lon = tz = std::numeric_limits<double>::quiet_NaN();
+	bool ok, is_address;
+	ok = is_address = false;
+	wxString err = "";
+
 	cxt.result().empty_hash();
+
+	// if input string contains any non-numeric characters other than n/s/e/w, assume it is an address for geocoding
+	//lk_string str = cxt.arg(0).as_string();
+	lk_string address = cxt.arg(0).as_string();
+	//wxString address;
+
+	//address = wxString::FromUTF8(str);
+
+	if (address.IsEmpty()) { // string contains invalid UTF-8 characters
+		cxt.result().hash_item("lat").assign(lat);
+		cxt.result().hash_item("lon").assign(lon);
+		cxt.result().hash_item("tz").assign(tz);
+		cxt.result().hash_item("ok").assign(ok ? 1.0 : 0.0);
+		//err = wxString::Format("Location name \"%s\" contains invalid characters.", str);
+		err = wxString::Format("Location name \"%s\" contains invalid characters.", address);
+	}
+	else { // string is valid
+		address = address.Lower();
+		address.Replace("north", "n");
+		address.Replace("south", "s");
+		address.Replace("east", "e");
+		address.Replace("west", "w");
+
+		// determine whether address is lat/lon pair
+		wxUniChar c;
+		bool d, a;
+		for (wxString::const_iterator it = address.begin(); it != address.end(); ++it) {
+			c = *it;
+			d = wxIsdigit(c);
+			a = wxIsalpha(c);
+			if (!d && a) {
+				if (c != 'n' && c != 's' && c != 'e' && c != 'w') {
+					is_address = true;
+				}
+			}
+
+		}
+	}
+
+	bool get_tz = false;
+	if (cxt.arg_count() > 1) {
+		get_tz = cxt.arg(1).as_boolean();
+	}
+
+	// use GeoTools::GeocodeGoogle for non-NREL builds and set google_api_key in private.h
+	if (is_address) {
+		ok = GeoTools::GeocodeDeveloper(cxt.arg(0).as_string(), &lat, &lon);
+		if (!ok) {
+			err = wxString::Format("Call to geocoding API failed for address: %s", address);
+		}
+	}
+	else if (!address.IsEmpty()) { // if address is empty assume input string is lat/lon pair and try to parse
+		wxString coordinates = cxt.arg(0).as_string();
+		wxString lat_str, lon_str;
+		ok = GeoTools::coordinates_to_lat_lon(coordinates, lat_str, lon_str);
+		if (ok) {
+			// degree, minute, seconds
+			double lat_d, lat_m, lat_s;
+			lat_d = lat_m = lat_s = std::numeric_limits<double>::quiet_NaN();
+			double lon_d, lon_m, lon_s; 
+			lon_d = lon_m = lon_s = std::numeric_limits<double>::quiet_NaN();
+			ok = GeoTools::coordinate_to_dms(lat_str, &lat_d, &lat_m, &lat_s) && GeoTools::coordinate_to_dms(lon_str, &lon_d, &lon_m, &lon_s);
+			if (ok) {
+				ok = GeoTools::dms_to_dd(lat_d, lat_m, lat_s, &lat) && GeoTools::dms_to_dd(lon_d, lon_m, lon_s, &lon);
+				if (!ok) {
+					err = wxString::Format("Failed to parse latitude/longitude pair %s.", coordinates);
+				}
+			}
+		}
+	}
+
+	if (get_tz) {
+		ok = GeoTools::GetTimeZone(&lat, &lon, &tz);
+		if (!ok) {
+			err = wxString::Format("Timezone not found for: (%g, %g)", lat, lon);
+		}
+		cxt.result().hash_item("tz").assign(tz);
+	}
+
+	
 	cxt.result().hash_item("lat").assign(lat);
 	cxt.result().hash_item("lon").assign(lon);
-	cxt.result().hash_item("tz").assign(tz);
 	cxt.result().hash_item("ok").assign(ok ? 1.0 : 0.0);
+
+	if (err != "")
+		wxMessageBox(wxString::Format("Geocode error.\n%s", err));
 }
 
 
@@ -6542,6 +6671,7 @@ lk::fcall_t* invoke_uicallback_funcs()
 		fcall_current_at_voltage_sandia,
 		fcall_windtoolkit,
 		fcall_nsrdbquery,
+		fcall_nohrscquery,
 		fcall_combinecasesquery,
         fcall_wavetoolkit,
         fcall_ptesdesignptquery,

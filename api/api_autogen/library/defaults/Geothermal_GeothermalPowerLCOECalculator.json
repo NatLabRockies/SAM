@@ -173,6 +173,7 @@
 			"startup_frac": 0.2,
 			"startup_time": 1,
 			"stim_success_rate": 0,
+			"stimulation_type": 0,
 			"subsurface_water_loss": 2,
 			"system_use_lifetime_output": 0,
 			"temp_decline_max": 30,
@@ -182,13 +183,13 @@
 			"wet_bulb_temp": 10
 		},
 		"AdjustmentFactors": {
-			"constant": 5,
-			"en_periods": 0,
-			"en_timeindex": 0,
-			"periods": [
+			"adjust_constant": 5,
+			"adjust_en_periods": 0,
+			"adjust_en_timeindex": 0,
+			"adjust_periods": [
 				[0.000000, 0.000000, 0.000000]
 			],
-			"timeindex": [0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000]
+			"adjust_timeindex": [0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000]
 		}
 	}
 }

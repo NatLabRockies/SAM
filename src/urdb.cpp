@@ -44,12 +44,17 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "urdb.h"
 #include "widgets.h"
 #include "main.h"
+#include "geotools.h"
 
 static wxString MyGet(const wxString &url)
 {
 	wxEasyCurl curl;
-	curl.AddHttpHeader( "Content-type: text/plain" );
-	curl.AddHttpHeader( "Cache-Control: no-cache" );
+//	curl.AddHttpHeader( "Content-type: text/plain" );
+//	curl.AddHttpHeader( "Cache-Control: no-cache" );
+//	curl.AddHttpHeader( "Cache-Control: no-cache" );
+	curl.AddHttpHeader("Content-Type: application/json");
+	curl.AddHttpHeader("Accept: application/json");
+
     curl.Get(url);
 	return curl.GetDataAsString();
 }
@@ -215,7 +220,7 @@ bool OpenEI::QueryUtilityCompanies(wxArrayString &names, wxString *err)
 		return false;
 	}
 
-	rapidjson::Document reader;
+	rapidjson::GenericDocument < rapidjson::UTF16<> > reader;
 	reader.Parse(json_data.c_str());
 
 	if (reader.HasParseError())
@@ -224,10 +229,10 @@ bool OpenEI::QueryUtilityCompanies(wxArrayString &names, wxString *err)
 		return false;
 	}
 
-    if ( reader.HasMember("error") )
+    if ( reader.HasMember(L"error") )
     {
-		if (reader["error"].HasMember("message")) {
-			wxString str = reader["error"]["message"].GetString();
+		if (reader[L"error"].HasMember(L"message")) {
+			wxString str = reader[L"error"][L"message"].GetString();
 			if (err) *err = "URDB API error: " + str;
 		}
         return false;
@@ -235,16 +240,16 @@ bool OpenEI::QueryUtilityCompanies(wxArrayString &names, wxString *err)
 
 	names.Clear();
 
-	if (reader.HasMember("items")) {
+	if (reader.HasMember(L"items")) {
 
-		if (reader["items"].IsArray()) {
+		if (reader[L"items"].IsArray()) {
 
-			auto item_list = reader["items"].GetArray();
+			auto item_list = reader[L"items"].GetArray();
 
 			int count = item_list.Size();
 			for (int i = 0; i < count; i++)	{
-				if (item_list[i].HasMember("label")) {
-					wxString buf = item_list[i]["label"].GetString();
+				if (item_list[i].HasMember(L"label")) {
+					wxString buf = item_list[i][L"label"].GetString();
 					buf.Replace("&amp;", "&");
 					names.Add(buf);
 				}
@@ -264,43 +269,64 @@ bool OpenEI::QueryUtilityCompanies(wxArrayString &names, wxString *err)
 bool OpenEI::QueryUtilityCompaniesbyZipcode(const wxString &zipcode, wxArrayString &names, wxString *err)
 {
 
-	// NREL Developer API to list utility companies by zip code https://developer.nrel.gov/docs/electricity/utility-rates-v3/
-	wxString url = SamApp::WebApi("urdb_companies_by_zip");
-	url.Replace("<ADDRESS>", zipcode);
+	names.Clear();
+
+	int zip = 0;
+
+	if (!zipcode.ToInt(&zip)) {
+		if (err) *err = wxString::Format("Invalid zipcode = %s. Zipcode must be an integer.", zipcode);
+		return false;
+	}
+	else if (zip <= 500 || zip > 99950) {
+		if (err) *err = wxString::Format("Invalid zipcode = %d. Zipcode must be a five-digit number between 00500 and 99950.", zip);
+		return false;
+	} 	
+	
+	// geocode zip to lat/lon
+	double lat = 0, lon = 0;
+	if (!GeoTools::GeocodeDeveloper(zipcode, &lat, &lon)) {
+		if (err) *err = wxString::Format("Could not get lat/lon for zipcode = %d." + zipcode);
+		return false;
+	}
+	 
+	// NREL Developer API to list utility companies by lat/lon https://developer.nrel.gov/docs/electricity/utility-rates-v3/
+	wxString url = SamApp::WebApi("urdb_companies_by_lat_lon");
+	url.Replace("<LAT>", wxString::Format("%g",lat));
+	url.Replace("<LON>", wxString::Format("%g",lon));
 
 	wxString json_data = MyGet(url);
 	if (json_data.IsEmpty())
 	{
-		if (err) *err = "Web API call to urdb_companies_by_zip returned empty JSON for zip code = " + zipcode + ".";
+		if (err) *err = wxString::Format("Web API call to urdb_companies_by_lat_lon returned empty JSON for lat = %f lon = %f.", lat, lon);
 		return false;
 	}
 
 //	wxJSONReader reader;
 //	wxJSONValue root;
 
-	rapidjson::Document reader;
+	rapidjson::GenericDocument < rapidjson::UTF16<> > reader;
 	reader.Parse(json_data.c_str());
 
 	if (reader.HasParseError())
 	{
-		if (err) *err = wxString::Format("Could not parse JSON for zipcode = %s.\nRapidJSON ParseErrorCode = %d", zipcode, reader.GetParseError());;
+		if (err) *err = wxString::Format("Could not parse JSON for zipcode = %s.\nRapidJSON ParseErrorCode = %d.", zipcode, reader.GetParseError());;
 		return false;
 	}
 
 	wxString company_id = wxEmptyString;
 
-	if (reader.HasMember("outputs")) {
+	if (reader.HasMember(L"outputs")) {
 		//wxJSONValue item_list = root.Item("outputs");
 		// does not resolve to OpenEI names only EIA names
 		//wxString buf = item_list.Item("utility_name").AsString();
 		// EIAID number for utility company
 		// some zip codes return company_id with multiple EIAIDs separated by single pipes
-		if (reader["outputs"].HasMember("company_id"))
-			company_id = reader["outputs"]["company_id"].GetString();
+		if (reader[L"outputs"].HasMember(L"company_id"))
+			company_id = reader[L"outputs"][L"company_id"].GetString();
 	}
 	if (company_id.IsEmpty())
 	{
-		if (err) *err = "JSON returned by web API call to urdb_companies_by_zip returned empty company_id for zip code =" + zipcode + ".";
+		if (err) *err = wxString::Format("JSON returned by urdb_companies_by_zip API returned empty company_id for zip code = %s.", zipcode);
 		return false;
 	}
 
@@ -314,28 +340,26 @@ bool OpenEI::QueryUtilityCompaniesbyZipcode(const wxString &zipcode, wxArrayStri
     json_data = MyGet(url);
 	if (json_data.IsEmpty())
 	{
-		if (err) *err = "URDB ask for query by zip returned empty JSON for EIAID = " + company_id + ".";
+		if (err) *err = wxString::Format("URDB ask for query by zip returned empty JSON for EIAID = %s.", company_id);
 		return false;
 	}
 
 	reader.Parse(json_data.c_str());
 	if (reader.HasParseError())
 	{
-		if (err) *err = wxString::Format("URDB ask for query by zip: Failed to parse JSON for EIAID = %s\nRapidJSON ParseErrorCode = %d", company_id, reader.GetParseError());
+		if (err) *err = wxString::Format("URDB ask for query by zip: Failed to parse JSON for EIAID = %s\nRapidJSON ParseErrorCode = %d.", company_id, reader.GetParseError());
 		return false;
 	}
 
-	names.Clear();
-
-	if (reader.HasMember("results")) {
-		if (reader["results"].IsObject()) {
-			const auto& item_list = reader["results"].GetObject();
+	if (reader.HasMember(L"results")) {
+		if (reader[L"results"].IsObject()) {
+			const auto& item_list = reader[L"results"].GetObject();
 			//wxArrayString list_name = item_list.GetMemberNames();
 			if (item_list.MemberCount() > 0)	{
 				for (size_t i = 0; i < item_list.MemberCount(); i++) {
 					wxString urdbname = (item_list.begin() + i)->name.GetString(); 
-					if ((item_list.begin() + i)->value.HasMember("fulltext"))
-						urdbname = (item_list.begin() + i)->value["fulltext"].GetString();
+					if ((item_list.begin() + i)->value.HasMember(L"fulltext"))
+						urdbname = (item_list.begin() + i)->value[L"fulltext"].GetString();
 					urdbname.Replace("&amp;", "&");
 					names.Add(urdbname);
 				}
@@ -488,7 +512,7 @@ bool OpenEI::RetrieveUtilityRateData(const wxString &guid, RateData &rate, wxStr
 	}
 
 
-	rapidjson::Document reader;
+	rapidjson::GenericDocument < rapidjson::UTF16<> > reader;
 	reader.Parse(json_data.c_str());
 
 	if (reader.HasParseError())
@@ -498,7 +522,7 @@ bool OpenEI::RetrieveUtilityRateData(const wxString &guid, RateData &rate, wxStr
 	}
 
 //	wxJSONValue val = root.Item("items").ItemAt(0);
-	auto& val = reader["items"][0];
+	auto& val = reader[L"items"][0];
 	if (val.IsNull())
 	{
 		if (err) *err = "Root JSON structure error: Items is null for GUID = " + guid;
@@ -533,74 +557,74 @@ bool OpenEI::RetrieveUtilityRateData(const wxString &guid, RateData &rate, wxStr
 
 
 	rate.Header.GUID = guid;
-	rate.Header.Name =  val["name"].GetString();
-	rate.Header.Utility =  val["utility"].GetString();
-	rate.Header.Sector =  val["sector"].GetString();
+	rate.Header.Name =  val[L"name"].GetString();
+	rate.Header.Utility =  val[L"utility"].GetString();
+	rate.Header.Sector =  val[L"sector"].GetString();
 	// optional
-	if (val.HasMember("description"))
-		rate.Header.Description = val["description"].GetString();
+	if (val.HasMember(L"description"))
+		rate.Header.Description = val[L"description"].GetString();
 	// optional
-	if (val.HasMember("source"))
-		rate.Header.Source = val["source"].GetString();
+	if (val.HasMember(L"source"))
+		rate.Header.Source = val[L"source"].GetString();
 	// optional
-	if (val.HasMember("version"))
-		rate.Header.Version = val["version"].GetInt();
+	if (val.HasMember(L"version"))
+		rate.Header.Version = val[L"version"].GetInt();
 	// optional
-	if (val.HasMember("energycomments"))
-		rate.Header.EnergyComments = val["energycomments"].GetString();
+	if (val.HasMember(L"energycomments"))
+		rate.Header.EnergyComments = val[L"energycomments"].GetString();
 	// optional
-	if (val.HasMember("demandcomments"))
-		rate.Header.DemandComments = val["demandcomments"].GetString();
+	if (val.HasMember(L"demandcomments"))
+		rate.Header.DemandComments = val[L"demandcomments"].GetString();
 	// optional
-	if (val.HasMember("basicinformationcomments"))
-		rate.Header.BasicInformationComments = val["basicinformationcomments"].GetString();
+	if (val.HasMember(L"basicinformationcomments"))
+		rate.Header.BasicInformationComments = val[L"basicinformationcomments"].GetString();
 	rate.Header.JSONURL = url;
 	rate.Header.RateURL = SamApp::WebApi("urdb_view_rate") + "/rate/view/" + guid;
 
 	// optional
-	if (val.HasMember("startdate"))
-		rate.Header.StartDate = GetDate(val["startdate"].GetInt());
+	if (val.HasMember(L"startdate"))
+		rate.Header.StartDate = GetDate(val[L"startdate"].GetInt());
 	// optional
-	if (val.HasMember("enddate"))
-		rate.Header.EndDate = GetDate(val["enddate"].GetInt());
+	if (val.HasMember(L"enddate"))
+		rate.Header.EndDate = GetDate(val[L"enddate"].GetInt());
 	else
 		rate.Header.EndDate = "N/A";
 	// Metering Option
 	// optional
-	if (val.HasMember("dgrules"))
-		rate.DgRules = val["dgrules"].GetString();
+	if (val.HasMember(L"dgrules"))
+		rate.DgRules = val[L"dgrules"].GetString();
 
 	// Applicability
 	// optional
-	if (val.HasMember("peakkwcapacityhistory"))
-		rate.Applicability.peakkwcapacityhistory = val["peakkwcapacityhistory"].GetDouble();
+	if (val.HasMember(L"peakkwcapacityhistory"))
+		rate.Applicability.peakkwcapacityhistory = val[L"peakkwcapacityhistory"].GetDouble();
 	// optional
-	if (val.HasMember("peakkwcapacitymax"))
-		rate.Applicability.peakkwcapacitymax = val["peakkwcapacitymax"].GetDouble();
+	if (val.HasMember(L"peakkwcapacitymax"))
+		rate.Applicability.peakkwcapacitymax = val[L"peakkwcapacitymax"].GetDouble();
 	// optional
-	if (val.HasMember("peakkwcapacitymin"))
-		rate.Applicability.peakkwcapacitymin = val["peakkwcapacitymin"].GetDouble();
+	if (val.HasMember(L"peakkwcapacitymin"))
+		rate.Applicability.peakkwcapacitymin = val[L"peakkwcapacitymin"].GetDouble();
 	// optional
-	if (val.HasMember("peakkwhusagehistory"))
-		rate.Applicability.peakkwhusagehistory = val["peakkwhusagehistory"].GetDouble();
+	if (val.HasMember(L"peakkwhusagehistory"))
+		rate.Applicability.peakkwhusagehistory = val[L"peakkwhusagehistory"].GetDouble();
 	// optional
-	if (val.HasMember("peakkwhusagemax"))
-		rate.Applicability.peakkwhusagemax = val["peakkwhusagemax"].GetDouble();
+	if (val.HasMember(L"peakkwhusagemax"))
+		rate.Applicability.peakkwhusagemax = val[L"peakkwhusagemax"].GetDouble();
 	// optional
-	if (val.HasMember("peakkwhusagemin"))
-		rate.Applicability.peakkwhusagemin = val["peakkwhusagemin"].GetDouble();
+	if (val.HasMember(L"peakkwhusagemin"))
+		rate.Applicability.peakkwhusagemin = val[L"peakkwhusagemin"].GetDouble();
 	// optional
-	if (val.HasMember("voltagemaximum"))
-		rate.Applicability.voltagemaximum = val["voltagemaximum"].GetDouble();
+	if (val.HasMember(L"voltagemaximum"))
+		rate.Applicability.voltagemaximum = val[L"voltagemaximum"].GetDouble();
 	// optional
-	if (val.HasMember("voltageminimum"))
-		rate.Applicability.voltageminimum = val["voltageminimum"].GetDouble();
+	if (val.HasMember(L"voltageminimum"))
+		rate.Applicability.voltageminimum = val[L"voltageminimum"].GetDouble();
 	// optional
-	if (val.HasMember("voltagecategory"))
-		rate.Applicability.voltagecategory = val["voltagecategory"].GetString();
+	if (val.HasMember(L"voltagecategory"))
+		rate.Applicability.voltagecategory = val[L"voltagecategory"].GetString();
 	// optional
-	if (val.HasMember("phasewiring"))
-		rate.Applicability.phasewiring = val["phasewiring"].GetString();
+	if (val.HasMember(L"phasewiring"))
+		rate.Applicability.phasewiring = val[L"phasewiring"].GetString();
 
 	// Unused Items, set HasUnusedItems to true for items that would affect bill calculation
 
@@ -609,22 +633,22 @@ bool OpenEI::RetrieveUtilityRateData(const wxString &guid, RateData &rate, wxStr
 
 //	wxJSONValue isd = val.Item("is_default");
 //    if ( isd.IsBool() )
-	if (val.HasMember("is_default"))
-		if (val["is_default"].IsBool())
-			rate.Unused.IsDefault = val["is_default"].GetBool();
+	if (val.HasMember(L"is_default"))
+		if (val[L"is_default"].IsBool())
+			rate.Unused.IsDefault = val[L"is_default"].GetBool();
 
 //	wxJSONValue st = val.Item("servicetype");
 //    if ( st.IsString())
-	if (val.HasMember("servicetype"))
-		if (val["servicetype"].IsString())
-		    rate.Unused.ServiceType = val["servicetype"].GetString();
+	if (val.HasMember(L"servicetype"))
+		if (val[L"servicetype"].IsString())
+		    rate.Unused.ServiceType = val[L"servicetype"].GetString();
 
 //	wxJSONValue fam = val.Item("fueladjustmentsmonthly");
 //	if (fam.Size() > 0)
 //	{
-	if (val.HasMember("fueladjustmentsmonthly")) {
-		if (val["fueladjustmentsmonthly"].IsArray()) {
-			auto fam = val["fueladjustmentsmonthly"].GetArray();
+	if (val.HasMember(L"fueladjustmentsmonthly")) {
+		if (val[L"fueladjustmentsmonthly"].IsArray()) {
+			auto fam = val[L"fueladjustmentsmonthly"].GetArray();
 			rate.Unused.HasUnusedItems = true;
 			for (int i = 0; i < 12; i++)
 				rate.Unused.FuelAdjustmentsMonthly[i] = fam[i].GetDouble();
@@ -633,19 +657,19 @@ bool OpenEI::RetrieveUtilityRateData(const wxString &guid, RateData &rate, wxStr
 
 //	wxJSONValue dw = val.Item("demandwindow");
 //	if (dw.IsDouble())
-	if (val.HasMember("demandwindow")) {
-		if (val["demandwindow"].IsNumber()) {
+	if (val.HasMember(L"demandwindow")) {
+		if (val[L"demandwindow"].IsNumber()) {
 			rate.Unused.HasUnusedItems = true;
-			rate.Unused.DemandWindow = val["demandwindow"].GetDouble();
+			rate.Unused.DemandWindow = val[L"demandwindow"].GetDouble();
 		}
 	}
 
 //   wxJSONValue drpc = val.Item("demandreactivepowercharge");
 //   if (drpc.IsDouble() )
-	if (val.HasMember("demandreactivepowercharge")) {
-		if (val["demandreactivepowercharge"].IsNumber()) {
+	if (val.HasMember(L"demandreactivepowercharge")) {
+		if (val[L"demandreactivepowercharge"].IsNumber()) {
 			rate.Unused.HasUnusedItems = true;
-			rate.Unused.DemandReactivePowerCharge = val["demandreactivepowercharge"].GetDouble();
+			rate.Unused.DemandReactivePowerCharge = val[L"demandreactivepowercharge"].GetDouble();
 		}
 	}
 
@@ -653,8 +677,8 @@ bool OpenEI::RetrieveUtilityRateData(const wxString &guid, RateData &rate, wxStr
 
 //	wxArrayString key;
 
-	if (val.HasMember("energyattrs")) {
-		auto& ea = val["energyattrs"];
+	if (val.HasMember(L"energyattrs")) {
+		auto& ea = val[L"energyattrs"];
 		wxString ea_str = "";
 		if (ea.IsArray()){
 			rate.Unused.HasUnusedItems = true;
@@ -672,8 +696,8 @@ bool OpenEI::RetrieveUtilityRateData(const wxString &guid, RateData &rate, wxStr
 		}
 	}
 //	wxJSONValue fa = val.Item("fixedattrs");
-	if (val.HasMember("fixedattrs")) {
-		auto& fa = val["fixedattrs"];
+	if (val.HasMember(L"fixedattrs")) {
+		auto& fa = val[L"fixedattrs"];
 		wxString fa_str = "";
 		if (fa.IsArray())		{
 			rate.Unused.HasUnusedItems = true;
@@ -698,8 +722,8 @@ bool OpenEI::RetrieveUtilityRateData(const wxString &guid, RateData &rate, wxStr
 
 
 //	wxJSONValue da = val.Item("demandattrs");
-	if (val.HasMember("demandattrs")) {
-		auto& da = val["demandattrs"];
+	if (val.HasMember(L"demandattrs")) {
+		auto& da = val[L"demandattrs"];
 		wxString da_str = "";
 		if (da.IsArray())		{
 			rate.Unused.HasUnusedItems = true;
@@ -717,13 +741,13 @@ bool OpenEI::RetrieveUtilityRateData(const wxString &guid, RateData &rate, wxStr
 		}
 	}
 
-	if (val.HasMember("coincidentrateunit"))
-		rate.Unused.CoincidentRateUnit = val["coincidentrateunit"].GetString();
+	if (val.HasMember(L"coincidentrateunit"))
+		rate.Unused.CoincidentRateUnit = val[L"coincidentrateunit"].GetString();
 
 
-	if (val.HasMember("coincidentratestructure")) {
+	if (val.HasMember(L"coincidentratestructure")) {
 		int num_cr_rows = 0;
-		auto& cr_periods = val["coincidentratestructure"];
+		auto& cr_periods = val[L"coincidentratestructure"];
 		if (cr_periods.IsArray()){
 			for (size_t period = 0; period < cr_periods.Size(); period++)	{
 				auto& cr_tier = cr_periods[period];
@@ -746,17 +770,17 @@ bool OpenEI::RetrieveUtilityRateData(const wxString &guid, RateData &rate, wxStr
 //					double charge = json_double(cr_tier[tier].Item("rate"), 0.0, &rate.Unused.HasCoincidentRate);
 //					double adj = json_double(cr_tier[tier].Item("adj"), 0.0, &rate.Unused.HasCoincidentRate);
 					double max = 1e38;
-					if (cr_tier[tier].HasMember("max"))
-						if (cr_tier[tier]["max"].IsNumber())
-							max = cr_tier[tier]["max"].GetDouble();
+					if (cr_tier[tier].HasMember(L"max"))
+						if (cr_tier[tier][L"max"].IsNumber())
+							max = cr_tier[tier][L"max"].GetDouble();
 					double charge = 0.0;
-					if (cr_tier[tier].HasMember("rate"))
-						if (cr_tier[tier]["rate"].IsNumber())
-							charge = cr_tier[tier]["rate"].GetDouble();
+					if (cr_tier[tier].HasMember(L"rate"))
+						if (cr_tier[tier][L"rate"].IsNumber())
+							charge = cr_tier[tier][L"rate"].GetDouble();
 					double adj =  0.0;
-					if (cr_tier[tier].HasMember("adj"))
-						if (cr_tier[tier]["adj"].IsNumber())
-							adj = cr_tier[tier]["adj"].GetDouble();
+					if (cr_tier[tier].HasMember(L"adj"))
+						if (cr_tier[tier][L"adj"].IsNumber())
+							adj = cr_tier[tier][L"adj"].GetDouble();
 					rate.Unused.CoincidentRateStructure.at(cr_row, 0) = period + 1;
 					rate.Unused.CoincidentRateStructure.at(cr_row, 1) = tier + 1;
 					rate.Unused.CoincidentRateStructure.at(cr_row, 2) = max;
@@ -767,24 +791,24 @@ bool OpenEI::RetrieveUtilityRateData(const wxString &guid, RateData &rate, wxStr
 		}
 	}
 
-	if (val.HasMember("coincidentschedule"))
-		if (!RetrieveDiurnalData(val["coincidentschedule"], rate.Unused.CoincidentSchedule)) return false;
+	if (val.HasMember(L"coincidentschedule"))
+		if (!RetrieveDiurnalData(val[L"coincidentschedule"], rate.Unused.CoincidentSchedule)) return false;
 
 	// Minimum Charge
-	if (val.HasMember("mincharge"))
-		rate.MinCharge = val["mincharge"].GetDouble();
-	if (val.HasMember("minchargeunits"))
-		rate.MinChargeUnits = val["minchargeunits"].GetString();
+	if (val.HasMember(L"mincharge"))
+		rate.MinCharge = val[L"mincharge"].GetDouble();
+	if (val.HasMember(L"minchargeunits"))
+		rate.MinChargeUnits = val[L"minchargeunits"].GetString();
     if (rate.MinChargeUnits == "$/day")
         rate.Unused.HasUnusedItems = true;
 
 	// Fixed Charge
-	if (val.HasMember("fixedchargefirstmeter"))
-		rate.FixedChargeFirstMeter = val["fixedchargefirstmeter"].GetDouble();
-	if (val.HasMember("fixedchargeeaaddl"))
-		rate.FixedChargeAddlMeter = val["fixedchargeeaaddl"].GetDouble();
-	if (val.HasMember("fixedchargeunits"))
-		rate.FixedChargeUnits = val["fixedchargeunits"].GetString();
+	if (val.HasMember(L"fixedchargefirstmeter"))
+		rate.FixedChargeFirstMeter = val[L"fixedchargefirstmeter"].GetDouble();
+	if (val.HasMember(L"fixedchargeeaaddl"))
+		rate.FixedChargeAddlMeter = val[L"fixedchargeeaaddl"].GetDouble();
+	if (val.HasMember(L"fixedchargeunits"))
+		rate.FixedChargeUnits = val[L"fixedchargeunits"].GetString();
     if (rate.FixedChargeUnits != "$/month")
         rate.Unused.HasUnusedItems = true;
 
@@ -792,10 +816,10 @@ bool OpenEI::RetrieveUtilityRateData(const wxString &guid, RateData &rate, wxStr
 	rate.HasEnergyCharge = true;
 
 	// first check for energy rate structure and resize matrix if present
-	if (val.HasMember("energyratestructure")) {
+	if (val.HasMember(L"energyratestructure")) {
 		int num_ec_rows = 0; // default to one for each month
 		//	wxJSONValue ers_periods = val.Item("energyratestructure");
-		auto& ers_periods = val["energyratestructure"];
+		auto& ers_periods = val[L"energyratestructure"];
 		if (ers_periods.IsArray())	{
 			for (size_t period = 0; period < ers_periods.Size(); period++)	{
 				auto& ers_tier = ers_periods[period];
@@ -818,24 +842,24 @@ bool OpenEI::RetrieveUtilityRateData(const wxString &guid, RateData &rate, wxStr
 				for (size_t tier = 0; tier < ers_tier.Size(); tier++) {
 //					double max = json_double(ers_tier[tier].Item("max"), 1e38, &rate.HasEnergyCharge);
 					double max = 1e38;
-					if (ers_tier[tier].HasMember("max"))
-						if (ers_tier[tier]["max"].IsNumber()) // some max values are stored as integers
-							max = ers_tier[tier]["max"].GetDouble();
+					if (ers_tier[tier].HasMember(L"max"))
+						if (ers_tier[tier][L"max"].IsNumber()) // some max values are stored as integers
+							max = ers_tier[tier][L"max"].GetDouble();
 					double buy = 0.0;
-					if (ers_tier[tier].HasMember("rate"))
-						if (ers_tier[tier]["rate"].IsNumber())
-							buy = ers_tier[tier]["rate"].GetDouble();
+					if (ers_tier[tier].HasMember(L"rate"))
+						if (ers_tier[tier][L"rate"].IsNumber())
+							buy = ers_tier[tier][L"rate"].GetDouble();
 					double sell = 0.0;
-					if (ers_tier[tier].HasMember("sell"))
-						if (ers_tier[tier]["sell"].IsNumber())
-							sell = ers_tier[tier]["sell"].GetDouble();
+					if (ers_tier[tier].HasMember(L"sell"))
+						if (ers_tier[tier][L"sell"].IsNumber())
+							sell = ers_tier[tier][L"sell"].GetDouble();
 					double adj = 0.0;
-					if (ers_tier[tier].HasMember("adj"))
-						if (ers_tier[tier]["adj"].IsNumber())
-							adj = ers_tier[tier]["adj"].GetDouble();
+					if (ers_tier[tier].HasMember(L"adj"))
+						if (ers_tier[tier][L"adj"].IsNumber())
+							adj = ers_tier[tier][L"adj"].GetDouble();
 					wxString units;
-					if (ers_tier[tier].HasMember("unit"))
-						units = ers_tier[tier]["unit"].GetString();
+					if (ers_tier[tier].HasMember(L"unit"))
+						units = ers_tier[tier][L"unit"].GetString();
 					rate.EnergyUnits = "";
 					int iunits = 0; // assume kWh if units not provided
 					if (units.Lower() == "kwh")
@@ -861,18 +885,18 @@ bool OpenEI::RetrieveUtilityRateData(const wxString &guid, RateData &rate, wxStr
 			}
 		}
 
-		if (!RetrieveDiurnalData(val["energyweekdayschedule"], rate.EnergyWeekdaySchedule)) return false;
-		if (!RetrieveDiurnalData(val["energyweekendschedule"], rate.EnergyWeekendSchedule)) return false;
+		if (!RetrieveDiurnalData(val[L"energyweekdayschedule"], rate.EnergyWeekdaySchedule)) return false;
+		if (!RetrieveDiurnalData(val[L"energyweekendschedule"], rate.EnergyWeekendSchedule)) return false;
 	}
 
 	// Demand Charge
 	rate.HasDemandCharge = true;
-	if (val.HasMember("demandrateunit"))
-		rate.DemandRateUnit = val["demandrateunit"].GetString();
+	if (val.HasMember(L"demandrateunit"))
+		rate.DemandRateUnit = val[L"demandrateunit"].GetString();
 
 
-	if (val.HasMember("lookbackpercent")) {
-		auto& lp = val["lookbackpercent"];
+	if (val.HasMember(L"lookbackpercent")) {
+		auto& lp = val[L"lookbackpercent"];
 		if (lp.IsNumber()) {
 			rate.LookbackPercent = lp.GetDouble() * 100.0;
 		}
@@ -881,14 +905,14 @@ bool OpenEI::RetrieveUtilityRateData(const wxString &guid, RateData &rate, wxStr
 		}
 	}
 
-	if (val.HasMember("lookbackrange")) {
-		auto& lr = val["lookbackrange"];
+	if (val.HasMember(L"lookbackrange")) {
+		auto& lr = val[L"lookbackrange"];
 		if (lr.IsInt())
 			rate.LookbackRange = lr.GetInt();
 	}
 
-	if (val.HasMember("lookbackmonths")) {
-		auto& lm = val["lookbackmonths"];
+	if (val.HasMember(L"lookbackmonths")) {
+		auto& lm = val[L"lookbackmonths"];
 		if (lm.IsArray()) {
 			for (size_t i = 0; i < lm.Size(); i++) {
 				rate.LookbackMonths[i] = lm[i].GetBool();
@@ -897,8 +921,8 @@ bool OpenEI::RetrieveUtilityRateData(const wxString &guid, RateData &rate, wxStr
 	}
 
 	int num_months = 0;
-	if (val.HasMember("flatdemandmonths")) {
-		auto& fdm_periods = val["flatdemandmonths"];
+	if (val.HasMember(L"flatdemandmonths")) {
+		auto& fdm_periods = val[L"flatdemandmonths"];
 		if (fdm_periods.IsArray()) {
 			// addresses issue from Pieter 6/26/15 for Upper Cumberland EMC GS3 rate with incorrect json - not an entry for every month.
 			num_months = fdm_periods.Size();
@@ -909,8 +933,8 @@ bool OpenEI::RetrieveUtilityRateData(const wxString &guid, RateData &rate, wxStr
 		}
 	}
 	if (num_months == 12) {
-		if (val.HasMember("flatdemandmonths")) {
-			auto& fds_periods = val["flatdemandstructure"];
+		if (val.HasMember(L"flatdemandmonths")) {
+			auto& fds_periods = val[L"flatdemandstructure"];
 			int fds_row = 0;
 			if (fds_periods.IsArray()) {
 				for (size_t period = 0; period < fds_periods.Size(); period++) {
@@ -938,17 +962,17 @@ bool OpenEI::RetrieveUtilityRateData(const wxString &guid, RateData &rate, wxStr
 							//						double charge = json_double(fds_tier[tier].Item("rate"), 0.0, &rate.HasDemandCharge);
 							//						double adj = json_double(fds_tier[tier].Item("adj"), 0.0, &rate.HasDemandCharge);
 							double max = 1e38;
-							if (fds_tier[tier].HasMember("max"))
-								if (fds_tier[tier]["max"].IsNumber())
-									max = fds_tier[tier]["max"].GetDouble();
+							if (fds_tier[tier].HasMember(L"max"))
+								if (fds_tier[tier][L"max"].IsNumber())
+									max = fds_tier[tier][L"max"].GetDouble();
 							double charge = 0.0;
-							if (fds_tier[tier].HasMember("rate"))
-								if (fds_tier[tier]["rate"].IsNumber())
-									charge = fds_tier[tier]["rate"].GetDouble();
+							if (fds_tier[tier].HasMember(L"rate"))
+								if (fds_tier[tier][L"rate"].IsNumber())
+									charge = fds_tier[tier][L"rate"].GetDouble();
 							double adj = 0.0;
-							if (fds_tier[tier].HasMember("adj"))
-								if (fds_tier[tier]["adj"].IsNumber())
-									adj = fds_tier[tier]["adj"].GetDouble();
+							if (fds_tier[tier].HasMember(L"adj"))
+								if (fds_tier[tier][L"adj"].IsNumber())
+									adj = fds_tier[tier][L"adj"].GetDouble();
 							rate.DemandFlatStructure.at(fd_row, 0) = m;
 							rate.DemandFlatStructure.at(fd_row, 1) = tier + 1;
 							rate.DemandFlatStructure.at(fd_row, 2) = max;
@@ -965,8 +989,8 @@ bool OpenEI::RetrieveUtilityRateData(const wxString &guid, RateData &rate, wxStr
 
 	// first check for energy rate structure and resize matrix if present
 	int num_dc_rows = 0; // default to one for each month
-	if (val.HasMember("demandratestructure")) {
-		auto& drs_periods = val["demandratestructure"];
+	if (val.HasMember(L"demandratestructure")) {
+		auto& drs_periods = val[L"demandratestructure"];
 		if (drs_periods.IsArray()) {
 			for (size_t period = 0; period < drs_periods.Size(); period++) {
 				auto& drs_tier = drs_periods[period];
@@ -991,17 +1015,17 @@ bool OpenEI::RetrieveUtilityRateData(const wxString &guid, RateData &rate, wxStr
 					//				double charge = json_double(drs_tier[tier].Item("rate"), 0.0, &rate.HasDemandCharge);
 					//				double adj = json_double(drs_tier[tier].Item("adj"), 0.0, &rate.HasDemandCharge);
 					double max = 1e38;
-					if (drs_tier[tier].HasMember("max"))
-						if (drs_tier[tier]["max"].IsNumber())
-							max = drs_tier[tier]["max"].GetDouble();
+					if (drs_tier[tier].HasMember(L"max"))
+						if (drs_tier[tier][L"max"].IsNumber())
+							max = drs_tier[tier][L"max"].GetDouble();
 					double charge = 0.0;
-					if (drs_tier[tier].HasMember("rate"))
-						if (drs_tier[tier]["rate"].IsNumber())
-							charge = drs_tier[tier]["rate"].GetDouble();
+					if (drs_tier[tier].HasMember(L"rate"))
+						if (drs_tier[tier][L"rate"].IsNumber())
+							charge = drs_tier[tier][L"rate"].GetDouble();
 					double adj = 0.0;
-					if (drs_tier[tier].HasMember("adj"))
-						if (drs_tier[tier]["adj"].IsNumber())
-							adj = drs_tier[tier]["adj"].GetDouble();
+					if (drs_tier[tier].HasMember(L"adj"))
+						if (drs_tier[tier][L"adj"].IsNumber())
+							adj = drs_tier[tier][L"adj"].GetDouble();
 
 					rate.DemandTOUStructure.at(ds_row, 0) = period + 1;
 					rate.DemandTOUStructure.at(ds_row, 1) = tier + 1;
@@ -1012,17 +1036,17 @@ bool OpenEI::RetrieveUtilityRateData(const wxString &guid, RateData &rate, wxStr
 			}
 		}
 
-		if (!RetrieveDiurnalData(val["demandweekdayschedule"], rate.DemandWeekdaySchedule)) return false;
-		if (!RetrieveDiurnalData(val["demandweekendschedule"], rate.DemandWeekendSchedule)) return false;
+		if (!RetrieveDiurnalData(val[L"demandweekdayschedule"], rate.DemandWeekdaySchedule)) return false;
+		if (!RetrieveDiurnalData(val[L"demandweekendschedule"], rate.DemandWeekendSchedule)) return false;
 	}
 	return true;
 }
 
 
 
-bool OpenEI::RetrieveDiurnalData(rapidjson::Value &month_ary, double sched[12][24])
+bool OpenEI::RetrieveDiurnalData(rapidjson::GenericValue< rapidjson::UTF16<>> &month_ary, double sched[12][24])
 {
-	rapidjson::Value hour_ary;
+	rapidjson::GenericValue< rapidjson::UTF16<>> hour_ary;
 
 	if (month_ary.IsArray())
 	{
@@ -1247,28 +1271,26 @@ void OpenEIUtilityRateDialog::QueryUtilities()
 
 }
 
-void OpenEIUtilityRateDialog::QueryUtilitiesByZipCode()
+void OpenEIUtilityRateDialog::QueryUtilitiesByZipCode(wxString *err)
 {
 	lblStatus->SetLabel("Loading companies...");
-	wxString err;
 	wxBusyInfo busy("Getting list of companies...", this);
 	wxString zip_code = txtZipCode->GetValue();
-	if (!api.QueryUtilityCompaniesbyZipcode(zip_code, mUtilityCompanies, &err))
-	{
-		busy.~wxBusyInfo();
-		lstUtilities->Clear();
-		wxMessageBox("Query by Zipcode Error\n\n" + err, "URDB Download Message");
-		return;
-	}
-
-	lstUtilities->Freeze();
 	lstUtilities->Clear();
-	lstUtilities->Append(mUtilityCompanies);
-	lstUtilities->Thaw();
+	lstRates->Clear();
+	lblUtilityCount->SetLabel("");
+	lblRateStatus->SetLabel("");
+	chkActiveOnly->SetLabel("Show active");
 
+	if (api.QueryUtilityCompaniesbyZipcode(zip_code, mUtilityCompanies, err))	{
+		lstUtilities->Freeze();
+		lstUtilities->Clear();
+		lstUtilities->Append(mUtilityCompanies);
+		lstUtilities->Thaw();
+		lblUtilityCount->SetLabel(wxString::Format("%d companies", (int)lstUtilities->Count()));
+		lstUtilities->SetFocus();
+	}
 	lblStatus->SetLabel("Ready.");
-	lblUtilityCount->SetLabel(wxString::Format("%d companies", (int)lstUtilities->Count()));
-	lstUtilities->SetFocus();
 }
 
 int OpenEIUtilityRateDialog::ShowModal()
@@ -1277,8 +1299,9 @@ int OpenEIUtilityRateDialog::ShowModal()
 	return wxDialog::ShowModal();
 }
 
-void OpenEIUtilityRateDialog::QueryRates(const wxString &utility_name)
+bool OpenEIUtilityRateDialog::QueryRates(const wxString &utility_name)
 {
+	bool ret = true;
 	wxBusyInfo busy("Getting available rates...", this);
 	lblStatus->SetLabel("Loading rates...");
 
@@ -1289,8 +1312,10 @@ void OpenEIUtilityRateDialog::QueryRates(const wxString &utility_name)
     if (!api.QueryUtilityRates(utility_name, mUtilityRates, &err))
     {
 		busy.~wxBusyInfo();
-		wxMessageBox("Utility Rate Query Error\n\n" + err, "URDB Download Message");
-		return;
+//		wxMessageBox("Utility Rate Query Error\n\n" + err, "URDB Download Message");
+//		return false;
+		ret = false;
+		mUtilityRates.clear();
 	}
 
     lblRateStatus->SetLabel(wxString::Format("%d rates available for %s", (int)mUtilityRates.size(), utility_name));
@@ -1301,6 +1326,7 @@ void OpenEIUtilityRateDialog::QueryRates(const wxString &utility_name)
 		lblStatus->SetLabel("Ready.");
 
 	UpdateRateList();
+	return true;
 }
 
 void OpenEIUtilityRateDialog::UpdateRateList()
@@ -1410,8 +1436,14 @@ void OpenEIUtilityRateDialog::OnEvent(wxCommandEvent &evt)
 		UpdateRateList();
 		break;
 	case ID_lstUtilities:
-		QueryRates( lstUtilities->GetStringSelection() );
-		lblUtilityCount->SetLabel(wxString::Format("%d utilities", (int)lstUtilities->Count()));
+		if (QueryRates(lstUtilities->GetStringSelection())) {
+			lblUtilityCount->SetLabel(wxString::Format("%d utilities", (int)lstUtilities->Count()));
+		}
+		else {
+			lstRates->Clear();
+			mGUIDList.Clear();
+			mUtilityRates.clear();
+		}
 		break;
 	case ID_lstRates:
 		UpdateRateData();
@@ -1421,7 +1453,11 @@ void OpenEIUtilityRateDialog::OnEvent(wxCommandEvent &evt)
 		QueryUtilities();
 		break;
 	case ID_btnQueryZipCode:
-		QueryUtilitiesByZipCode();
+		wxString err ="";
+		QueryUtilitiesByZipCode(&err);
+		if (err != "")	{
+			wxMessageBox("Error getting list of companies by zip code.\n\n" + err, "URDB Download Message");
+		}
 		break;
 	}
 }

@@ -143,6 +143,14 @@ extern "C"
 	 */
 	SAM_EXPORT void SAM_HostDeveloper_Revenue_ppa_soln_tolerance_nset(SAM_table ptr, double number, SAM_error *err);
 
+	/**
+	 * Set start_day_of_year: Start day of year for TOD periods [0..6]
+	 * options: 0=Monday, 6=Sunday
+	 * constraints: None
+	 * required if: ?=0
+	 */
+	SAM_EXPORT void SAM_HostDeveloper_Revenue_start_day_of_year_nset(SAM_table ptr, double number, SAM_error *err);
+
 
 	//
 	// FinancialParameters parameters
@@ -1955,22 +1963,6 @@ extern "C"
 	SAM_EXPORT void SAM_HostDeveloper_Host_annual_energy_value_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
 
 	/**
-	 * Set elec_cost_with_system: Host energy bill with system [$]
-	 * options: None
-	 * constraints: None
-	 * required if: *
-	 */
-	SAM_EXPORT void SAM_HostDeveloper_Host_elec_cost_with_system_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
-
-	/**
-	 * Set elec_cost_without_system: Host energy bill without system [$]
-	 * options: None
-	 * constraints: None
-	 * required if: *
-	 */
-	SAM_EXPORT void SAM_HostDeveloper_Host_elec_cost_without_system_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
-
-	/**
 	 * Set host_real_discount_rate: Host real discount rate [%]
 	 * options: None
 	 * constraints: None
@@ -2074,15 +2066,7 @@ extern "C"
 	//
 
 	/**
-	 * Set annual_energy_value: Energy value [$]
-	 * options: None
-	 * constraints: None
-	 * required if: *
-	 */
-	SAM_EXPORT void SAM_HostDeveloper_SystemOutput_annual_energy_value_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
-
-	/**
-	 * Set annual_thermal_value: Energy value [$]
+	 * Set annual_thermal_value: Host thermal value [$]
 	 * options: None
 	 * constraints: None
 	 * required if: None
@@ -2528,6 +2512,8 @@ extern "C"
 	SAM_EXPORT double SAM_HostDeveloper_Revenue_ppa_soln_mode_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_HostDeveloper_Revenue_ppa_soln_tolerance_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_HostDeveloper_Revenue_start_day_of_year_nget(SAM_table ptr, SAM_error *err);
 
 
 	/**
@@ -3008,10 +2994,6 @@ extern "C"
 
 	SAM_EXPORT double* SAM_HostDeveloper_Host_annual_energy_value_aget(SAM_table ptr, int* length, SAM_error *err);
 
-	SAM_EXPORT double* SAM_HostDeveloper_Host_elec_cost_with_system_aget(SAM_table ptr, int* length, SAM_error *err);
-
-	SAM_EXPORT double* SAM_HostDeveloper_Host_elec_cost_without_system_aget(SAM_table ptr, int* length, SAM_error *err);
-
 	SAM_EXPORT double SAM_HostDeveloper_Host_host_real_discount_rate_nget(SAM_table ptr, SAM_error *err);
 
 
@@ -3048,8 +3030,6 @@ extern "C"
 	/**
 	 * SystemOutput Getters
 	 */
-
-	SAM_EXPORT double* SAM_HostDeveloper_SystemOutput_annual_energy_value_aget(SAM_table ptr, int* length, SAM_error *err);
 
 	SAM_EXPORT double* SAM_HostDeveloper_SystemOutput_annual_thermal_value_aget(SAM_table ptr, int* length, SAM_error *err);
 

@@ -427,6 +427,9 @@ void ActiveInputPage::OnNativeEvent( wxCommandEvent &evt )
 				m_case->m_analysis_period = vval->Integer();
 
 			// equations updates
+			// SAM 1922 - set eqnCase for ssc_auto_exec var_exists calls
+			SamApp::Window()->SetEquationCase(m_case);
+
 			m_case->Recalculate( obj->GetName(), m_ndxHybrid );
 
 			// prevent further updates of analysis period dependent variables

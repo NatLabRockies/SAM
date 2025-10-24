@@ -9533,6 +9533,11 @@
 			"u_tank": 0.4
 		},
 		"HeatSink": {
+			"hs_htf_mdot_max_frac": 1.1,
+			"hs_phys_P_steam_hot_des": 4.762,
+			"hs_phys_Q_steam_hot_des": 0.75,
+			"hs_phys_T_steam_cold_des": 120,
+			"hs_type": 0,
 			"pb_pump_coef": 0.55
 		},
 		"TimeOfDeliveryFactors": {
@@ -9542,45 +9547,25 @@
 		"Revenue": {
 		},
 		"FinancialParameters": {
-			"const_per_interest_rate1": 6.5,
-			"const_per_interest_rate2": 0,
-			"const_per_interest_rate3": 0,
-			"const_per_interest_rate4": 0,
-			"const_per_interest_rate5": 0,
-			"const_per_months1": 24,
-			"const_per_months2": 0,
-			"const_per_months3": 0,
-			"const_per_months4": 0,
-			"const_per_months5": 0,
-			"const_per_percent1": 100,
-			"const_per_percent2": 0,
-			"const_per_percent3": 0,
-			"const_per_percent4": 0,
-			"const_per_percent5": 0,
-			"const_per_upfront_rate1": 1,
-			"const_per_upfront_rate2": 0,
-			"const_per_upfront_rate3": 0,
-			"const_per_upfront_rate4": 0,
-			"const_per_upfront_rate5": 0,
 			"sales_tax_rate": 5
 		},
 		"Deprecated": {
 		},
 		"AdjustmentFactors": {
-			"constant": 4,
-			"en_periods": 0,
-			"en_timeindex": 0,
-			"periods": [
-				[0.000000, 0.000000, 0.000000]
-			],
-			"timeindex": [0.000000],
-			"adjust_constant": 5,
+			"adjust_constant": 4,
 			"adjust_en_periods": 0,
 			"adjust_en_timeindex": 0,
 			"adjust_periods": [
 				[0.000000, 0.000000, 0.000000]
 			],
-			"adjust_timeindex": [0.000000]
+			"adjust_timeindex": [0.000000],
+			"sf_adjust_constant": 5,
+			"sf_adjust_en_periods": 0,
+			"sf_adjust_en_timeindex": 0,
+			"sf_adjust_periods": [
+				[0.000000, 0.000000, 0.000000]
+			],
+			"sf_adjust_timeindex": [0.000000]
 		}
 	}
 }

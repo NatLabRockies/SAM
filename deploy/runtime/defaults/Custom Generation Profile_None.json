@@ -19,8 +19,8 @@
         0.0,
         0.0
     ],
-    "capacity_factor_calc": 86.4,
-    "conv_eff": 34.118,
+    "capacity_factor_calc": 86.39999999999999,
+    "conv_eff": 34.118048447628797,
     "derate": 4.0,
     "en_batt": 0.0,
     "en_wave_batt": 0.0,

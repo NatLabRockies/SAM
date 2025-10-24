@@ -1701,27 +1701,6 @@ extern "C"
 
 
 	//
-	// ThirdPartyOwnership parameters
-	//
-
-	/**
-	 * Set elec_cost_with_system: Energy value [$]
-	 * options: None
-	 * constraints: None
-	 * required if: *
-	 */
-	SAM_EXPORT void SAM_Cashloan_ThirdPartyOwnership_elec_cost_with_system_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
-
-	/**
-	 * Set elec_cost_without_system: Energy value [$]
-	 * options: None
-	 * constraints: None
-	 * required if: *
-	 */
-	SAM_EXPORT void SAM_Cashloan_ThirdPartyOwnership_elec_cost_without_system_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
-
-
-	//
 	// LCOS parameters
 	//
 
@@ -2332,15 +2311,6 @@ extern "C"
 	 */
 
 	SAM_EXPORT double SAM_Cashloan_Lifetime_system_use_lifetime_output_nget(SAM_table ptr, SAM_error *err);
-
-
-	/**
-	 * ThirdPartyOwnership Getters
-	 */
-
-	SAM_EXPORT double* SAM_Cashloan_ThirdPartyOwnership_elec_cost_with_system_aget(SAM_table ptr, int* length, SAM_error *err);
-
-	SAM_EXPORT double* SAM_Cashloan_ThirdPartyOwnership_elec_cost_without_system_aget(SAM_table ptr, int* length, SAM_error *err);
 
 
 	/**

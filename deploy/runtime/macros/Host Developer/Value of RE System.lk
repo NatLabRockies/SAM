@@ -419,7 +419,7 @@ none_mc = sum(mc);
 none_total_bill = sum(total);
 
 // Annual cash flows for value calculations
-none_annual_cashflow = get('elec_cost_without_system');
+none_annual_cashflow = get('utility_bill_wo_sys');
 none_npc = npv(none_annual_cashflow,discount_rate);
 none_npv = 0;
 
@@ -474,7 +474,7 @@ re_bill_savings = none_total_bill - re_total_bill ;
 // Annual cash flows for value calculations
 re_annual_cost = get('cf_after_tax_net_equity_cost_flow');
 re_npc = -npv(re_annual_cost,discount_rate);
-re_annual_bill = get('elec_cost_with_system');
+re_annual_bill = get('utility_bill_w_sys');
 re_bill_npc = npv(re_annual_bill,discount_rate);
 CF = cost_w_bill( none_annual_cashflow, re_annual_cost, re_annual_bill, is_commercial );
 re_npc_w_bill = -npv(CF.cf_w_bill,discount_rate); //costs are negative
@@ -531,7 +531,7 @@ if ( batt )
 	batt_annual_replacement_cost = get('cf_battery_replacement_cost');
 	batt_npc_replacement = npv(batt_annual_replacement_cost,discount_rate);
 	batt_npc = -npv(batt_annual_cost,discount_rate) - batt_npc_replacement;
-	batt_annual_bill = get('elec_cost_with_system');
+	batt_annual_bill = get('utility_bill_w_sys');
 	batt_bill_npc = npv(batt_annual_bill,discount_rate);
 	CF = cost_w_bill( none_annual_cashflow, batt_annual_cost, batt_annual_bill, is_commercial);
 	batt_npc_w_bill = -npv(CF.cf_w_bill,discount_rate); //costs are negative

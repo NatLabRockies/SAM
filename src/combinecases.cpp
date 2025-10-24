@@ -262,7 +262,9 @@ void CombineCasesDialog::OnEvt(wxCommandEvent& e)
 							analysis_period_this = current_case->Values(0).Get("c_lifetime")->Value();
 						}
 						else if (financial_name != "None") {
+							bool use_lifetime = current_case->Values(0).Get("system_use_lifetime_output")->Boolean();
 							analysis_period_this = current_case->Values(0).Get("analysis_period")->Value();
+							analysis_period_this = use_lifetime ? analysis_period_this : 1;
 						}
 
 						// determine hourly generation profile of current case
@@ -280,7 +282,7 @@ void CombineCasesDialog::OnEvt(wxCommandEvent& e)
 							SamApp::Window()->SwitchToCaseWindow(m_custom_generation_case_name);
 							m_custom_generation_case_window->SwitchToInputPage("Power Plant");
 							wxMessageBox("Subhourly simulations unsupported\n\n"
-								"The subhourly simulation for case " + technology_name + " is not supported.",
+								"The subhourly simulation for case " + case_name + " is not supported.",
 								"Combine Cases Message", wxOK, this);
 							return;
 						}

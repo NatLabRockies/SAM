@@ -6,7 +6,7 @@ pressure ratio, hot TES temperatures. The design-point model then solves
 the design-point cycle and reports values that can be used as inputs in the SAM PTES model, like charging coefficient of performance, discharging efficiency, round-trip efficiency, cold TES temperatures, parasitics, and costs.</p>
 
 <p>The design-point PTES model is written in <a href="https://www.mathworks.com/products/matlab.html"> Matlab</a>, so you must have
-it installed on your computer to use the design-point model. We hope to include some of the design-point model in the SAM code base in the 2023 release.</p>
+it installed on your computer to use the design-point model. There is also a button on the System Design page that calls an internal macro implementing a simplified version of the Matlab PTES model.</p>
 
 <p>This macro:</p>
 

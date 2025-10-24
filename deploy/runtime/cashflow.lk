@@ -45,6 +45,16 @@ function cf_formatting_examples()
 // Helper functions
 ////////////////////////////////////////////////////////////////////////////////
 
+function is_iph_tech()
+{
+	tech = technology();
+	x = ( tech == 'MSPT IPH' ||
+	      tech == 'Physical Trough IPH' ||
+	      tech == 'DSGL IPH' ||
+	      tech == 'MSLF IPH' );
+	return x;
+}
+
 function is_batt_tech()
 {
 	// may need to update to include PVWatts Battery, but as of 2020.2.29:
@@ -125,13 +135,22 @@ function cf_production()
 	}
 	if ( is_fom_fin() || financing() == 'Community Solar' )
 	{
-		cfline( 'cf_energy_sales', 0);
-		cfline( 'cf_energy_purchases', 0);
+		is_iph = is_iph_tech();
+		if (!is_iph) {
+			cfline( 'cf_energy_sales', 0);
+			cfline( 'cf_energy_purchases', 0);
+		}
 		cfline( 'cf_energy_net', 0);
+		if (is_iph) {
+			cfline('cf_energy_net_heat_btu', 0);
+		}
 	}
 	else
 	{
 		cfline( 'cf_energy_net', 0);
+		if (is_iph_tech()) {
+			cfline('cf_energy_net_heat_btu', 0); 
+		}
 	}
 	if ( is_batt_tech() && (varinfo('gen_without_battery')!= null))  // SAM issue 1563
 	{
@@ -150,13 +169,22 @@ function cf_savings()
 	tech = technology();
 	fin = financing();
 	cfline( 'SAVINGS', -1 );
-	cfline( 'elec_cost_without_system', 0);
+	cfline( 'utility_bill_wo_sys', 0);
 	cfline('minus:', -1, 0);
-	cfline( 'elec_cost_with_system', 0);
+	cfline( 'utility_bill_w_sys', 0);
 	cfline('equals:', -1, 0);
 	if ( fin == 'Host Developer' ) { cfline( 'annual_energy_value', 0); }
 	else if ( fin != 'Merchant Plant' ){ cfline( 'cf_energy_value', 0); }
-	if (tech == 'Fuel Cell') { cfline( 'cf_thermal_value', 0); }
+	if (tech == 'Fuel Cell' || tech == 'CustomGeneration PVWatts Wind FuelCell Battery Hybrid'  ||  tech == 'PVWatts Wind FuelCell Battery Hybrid') { 
+		cfline( 'thermal_cost_without_system', 0);
+		cfline('minus:', -1, 0);
+		cfline( 'thermal_cost_with_system', 0);
+		cfline('equals:', -1, 0);
+		if ( fin == 'Host Developer' ) 
+			cfline( 'annual_thermal_value', 0); 
+		else
+			cfline( 'cf_thermal_value', 0); 
+	}
 	if ( fin == 'Host Developer' )
 	{
 		cfline( '' );
@@ -168,6 +196,20 @@ function cf_savings()
 		cfline( 'cf_payback_with_expenses', 0);
 		cfline( 'cf_cumulative_payback_with_expenses', 0);
 	}
+	cfline( '' );
+}
+
+
+function cf_savings_heat()
+{
+	tech = technology();
+	fin = financing();
+	cfline( 'SAVINGS', -1 );
+	cfline( 'thermal_cost_without_system', 0);
+	cfline('minus:', -1, 0);
+	cfline( 'thermal_cost_with_system', 0);
+	cfline('equals:', -1, 0);
+	cfline( 'annual_thermal_value', 0);
 	cfline( '' );
 }
 
@@ -189,9 +231,17 @@ function cf_revenue()
 	elseif ( fin == 'Single Owner' ) // Only single owner earns revenue other than PPA revenue
 	{
 		cfline( 'cf_ppa_price' , -2 );
+		if (is_iph_tech()) 		cfline( 'cf_ppa_price_heat_btu' , -2 );
 		cfline( 'cf_energy_value', 0);
-		cfline( 'cf_curtailment_value', 0);
-		cfline( 'cf_capacity_payment', 0);
+		if (!is_iph_tech()) 
+	/*	{
+			//cfline( 'cf_thermal_value', 0);		
+		}
+		else */
+		{
+			cfline( 'cf_curtailment_value', 0);
+			cfline( 'cf_capacity_payment', 0);
+		}
 	}
 	elseif ( fin == 'Community Solar')
 	{
@@ -256,14 +306,24 @@ function cf_om_expenses()
 	{
 		cfline( 'cf_om_fixed2_expense,cf_om_production2_expense,cf_om_capacity2_expense', 0);
 		cfline( 'cf_fuelcell_replacement_cost', 0);
+		cfline( 'cf_om_fuel_expense', 0);
 	}
 	if ( is_fuel_tech() ) { cfline('cf_om_fuel_expense', 0); }
 	if ( tech == 'Biopower' ) { cfline( 'cf_om_opt_fuel_1_expense,cf_om_opt_fuel_2_expense', 0); }
 	if ( tech == 'Geothermal' ) { if (value('system_use_recapitalization')==1) { cfline ('cf_recapitalization', 0); } }
 	if ( is_fom_fin() )
 	{
-		cfline('cf_utility_bill', 0 ); // electricity purchases for self-consumption and/or battery charging
+		if(is_iph_tech()) {
+			cfline('cf_om_elec_price_for_heat_techs', 0);
+		}
+		else{
+			cfline('cf_utility_bill', 0 ); // electricity purchases for self-consumption and/or battery charging
+		}
 	}
+	else if(is_iph_tech()) {
+			cfline('cf_om_elec_price_for_heat_techs', 0);
+	}
+
 	if ( technology() == 'PVWatts Wind Battery Hybrid') 
 	{
 		cfline( 'Subsystem Costs', -1, 0 );
@@ -320,7 +380,7 @@ function cf_operating_expenses()
 	cf_om_expenses();
 	cfline( 'cf_property_tax_expense', 0);
 	cfline( 'cf_insurance_expense', 0);
-   	if ( is_land_lease_config() ) { cfline('cf_land_lease_expense', 0); }
+   	if ( is_land_lease_config() ) { cfline('cf_land_lease_expense', 0); } // hybrid land lease handled in cf_om_expenses() function
    	if ( fin == 'Community Solar')
 	{
 		cfline('cf_community_solar_recurring_fixed', 0);
@@ -769,7 +829,9 @@ function cf_levelized_metrics()
 
     has_ppa_revenue = ( fin != 'Community Solar') && ( fin != 'Merchant Plant');
 
-	cfline('AFTER-TAX LCOE' + ? has_ppa_revenue[ '', ' AND PPA PRICE'], -1);
+	lcoe_label = 'LCOE';
+	if(is_iph_tech()) lcoe_label = 'LCOH';
+	cfline('AFTER-TAX ' + lcoe_label + ? has_ppa_revenue[ '', ' AND PPA PRICE'], -1);
 	cfline('cf_annual_costs', 0);
 	if ( has_ppa_revenue ) { cfline('cf_energy_value', 0); }
 	cfline('cf_energy_sales', 0);
@@ -1047,7 +1109,7 @@ function create_workbook( wkbk )
 
 	tech = technology();
 	
-	if ( tech == 'PVWatts Wind Battery Hybrid' || tech == 'PVWatts Wind FuelCell Battery Hybrid' || tech == 'Photovoltaic Wind Battery Hybrid' || tech == 'CustomGeneration PVWatts Wind FuelCell Battery Hybrid' )
+	if ( tech == 'PVWatts Wind Battery Hybrid' || tech == 'PVWatts Wind FuelCell Battery Hybrid' || tech == 'Photovoltaic Wind Battery Hybrid' || tech == 'CustomGeneration PVWatts Wind FuelCell Battery Hybrid' || is_iph_tech() )
 	{
 		msgbox('Send-to Excel with Equations Not Available.\nThis option is not available for ' + tech + ' configurations.');
 		exit;
@@ -1728,7 +1790,7 @@ function set_annual_values( xl )
 	{
 		xl_set_output( xl, 'cf_ppa_price'); // ppa price by year
 		xl_set_output( xl, 'cf_energy_value'); // ppa revenue
-		if ( fin == 'Single Owner' )
+		if ( fin == 'Single Owner' && !is_iph_tech())
 		{
 			xl_set_output( xl, 'cf_capacity_payment'); // capacity payments
 			xl_set_output( xl, 'cf_curtailment_value'); // curtailment payments
@@ -1945,7 +2007,10 @@ cashflow{ 'Residential' } = define()
 cashflow{ 'Commercial' } = define()
 {
 	cf_production();
- 	cf_savings();
+	if (is_iph_tech())
+		cf_savings_heat();
+	else
+		cf_savings();
  	cf_operating_expenses();
 	cf_debt_repayment();
 	cf_income_tax_savings();
@@ -2308,8 +2373,8 @@ cashflow_to_excel{ 'Host Developer' } = define()
 	set_solution_mode( xl );
 
 	// HOST values
-	xl_set_output( xl, 'elec_cost_with_system');
-	xl_set_output( xl, 'elec_cost_without_system');
+	xl_set_output( xl, 'utility_bill_w_sys');
+	xl_set_output( xl, 'utility_bill_wo_sys');
 	xl_set_value( xl, 'host_real_discount_rate');
 
 	set_lcos( xl );

@@ -16,7 +16,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 306.0
+                    "Integer": 354.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -251,7 +251,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 138.0
+                    "Integer": 186.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -313,7 +313,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 234.0
+                    "Integer": 282.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -375,7 +375,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 162.0
+                    "Integer": 210.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -437,7 +437,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 258.0
+                    "Integer": 306.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -499,7 +499,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 186.0
+                    "Integer": 234.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -561,7 +561,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 282.0
+                    "Integer": 330.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -623,7 +623,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 210.0
+                    "Integer": 258.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -685,7 +685,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 90.0
+                    "Integer": 138.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -747,7 +747,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 66.0
+                    "Integer": 114.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -809,7 +809,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 114.0
+                    "Integer": 162.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -855,6 +855,43 @@
                 "AlignTop": {
                     "Type": 2.0,
                     "Boolean": 0.0
+                }
+            }
+        },
+        "Button": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "copy_schedule"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 15.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 63.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 261.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 28.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Copy schedule from TOD Factors page"
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
                 }
             }
         },
@@ -998,7 +1035,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 90.0
+                    "Integer": 138.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1081,7 +1118,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 114.0
+                    "Integer": 162.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1164,7 +1201,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 138.0
+                    "Integer": 186.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1247,7 +1284,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 162.0
+                    "Integer": 210.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1330,7 +1367,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 186.0
+                    "Integer": 234.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1413,7 +1450,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 210.0
+                    "Integer": 258.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1496,7 +1533,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 234.0
+                    "Integer": 282.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1579,7 +1616,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 258.0
+                    "Integer": 306.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1662,7 +1699,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 282.0
+                    "Integer": 330.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2699,6 +2736,16 @@
     "Callbacks": [
         "on_load{ 'Physical Trough IPH Dispatch Control' } = define() {",
         "\r",
+        "\tfin = financing();\r",
+        "\tif ( fin == \"Commercial\" || fin == \"None\" || fin == \"LCOH Calculator\")\r",
+        "\t{\r",
+        "\t\tshow('copy_schedule', false);\r",
+        "\t}\r",
+        "\telse if(fin == \"Single Owner\")\r",
+        "\t{\r",
+        "\t\tshow('copy_schedule', true);\r",
+        "\t}\r",
+        "\r",
         "\ton_change{\"is_timestep_load_fractions\"}();\r",
         "};",
         "\r",
@@ -2716,6 +2763,14 @@
         "\tenable(\"ui_disp_9_turbout\",mode==0);\r",
         "\tenable(\"weekday_schedule\",mode==0);\r",
         "\tenable(\"weekend_schedule\",mode==0);\r",
+        "\tenable(\"copy_schedule\",mode==0);\r",
+        "};\r",
+        "\r",
+        "on_change{ 'copy_schedule' } = define() {\r",
+        "\r",
+        "    value( 'weekday_schedule' , value ( 'dispatch_sched_weekday' ) );\r",
+        "    value( 'weekend_schedule' , value ( 'dispatch_sched_weekend' ) );\r",
+        "\r",
         "};\r",
         ""
     ]

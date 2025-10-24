@@ -67,9 +67,9 @@
 			"fuelcell_efficiency_choice": 0,
 			"fuelcell_fixed_pct": 95,
 			"fuelcell_fuel_available": 2.83168e+14,
-			"fuelcell_fuel_type": 0,
+			"fuelcell_fuel_type": 1,
 			"fuelcell_is_started": 0,
-			"fuelcell_lhv": 983,
+			"fuelcell_lhv": 51591,
 			"fuelcell_number_of_units": 1,
 			"fuelcell_operation_options": 1,
 			"fuelcell_replacement_option": 1,
@@ -79,7 +79,8 @@
 			"fuelcell_startup_time": 24,
 			"fuelcell_type": 2,
 			"fuelcell_unit_max_power": 200,
-			"fuelcell_unit_min_power": 60
+			"fuelcell_unit_min_power": 60,
+			"start_day_of_year": 0
 		}
 	}
 }

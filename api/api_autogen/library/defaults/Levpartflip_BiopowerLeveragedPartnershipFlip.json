@@ -36,7 +36,8 @@
 			"ppa_escalation": 1,
 			"ppa_multiplier_model": 0,
 			"ppa_price_input": [0.120000],
-			"ppa_soln_mode": 1
+			"ppa_soln_mode": 1,
+			"start_day_of_year": 0
 		},
 		"FinancialParameters": {
 			"analysis_period": 25,
@@ -80,7 +81,7 @@
 			"om_capacity_escal": 0,
 			"om_fixed": [0.000000],
 			"om_fixed_escal": 0,
-			"om_opt_fuel_1_cost": [54.028200],
+			"om_opt_fuel_1_cost": [54.028214],
 			"om_opt_fuel_1_cost_escal": 0,
 			"om_opt_fuel_1_usage": 320113,
 			"om_opt_fuel_2_cost": [0.000000],

@@ -14,7 +14,7 @@
 	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
 	<meta name="generator" content="Help+Manual" />
 	<meta name="keywords" content="" />
-	<meta name="description" content="The options on the Electricity Purchases page determine how front-of-meter projects pay for electricity required by the system when it is not generating power, such as to..." />
+	<meta name="description" content="The options on the Electricity Purchases page determine how front-of-meter projects pay for electricity required by the system when it is not generating electricity, such as to..." />
 	<meta name="ZOOMIMAGE" content="./images/zoomimage.jpg" />
 	<meta name="author" content="National Renewable Energy Laboratory" />
 	<meta name="msapplication-tap-highlight" content="no" />
@@ -512,7 +512,7 @@ hmDevice.pageStylesheet = "./css/hmprojectstyles.css";
 	<div id="hmpagebody">
 	<div id="hmpagebody_scroller">
 <!--ZOOMRESTART--> 
-	<p class="p_Text"><span class="f_Text">The options on the Electricity Purchases page determine how front-of-meter projects pay for electricity required by the system when it is not generating power, such as to charge batteries, meet photovoltaic inverter night-time loads, or meet concentrating solar power parasitic loads for freeze protection and other equipment.</span></p>
+	<p class="p_Text"><span class="f_Text">The options on the Electricity Purchases page determine how front-of-meter projects pay for electricity required by the system when it is not generating electricity, such as to charge batteries, meet photovoltaic inverter night-time loads, or meet concentrating solar power or industrial process heat parasitic loads for freeze protection and other equipment.</span></p>
 <p class="p_Text"><span class="f_Text">The cost of purchasing electricity is treated as a tax-deductible operating expense in the project <a href="cashflow.html" class="topiclink">cash flow</a>. You can explore the cost details in the <a href="utility_bill_results.html" class="topiclink">electricity bill results</a>.</span></p>
 <h3 class="p_Heading3_atocs_" style="page-break-inside: avoid; page-break-after: avoid; border-top: none; border-right: none; border-left: none;"><span class="f_Heading3_atocs_">Electricity Purchases</span></h3>
 <p class="p_Text"><span class="f_Text">SAM provides two options for defining the retail rate structure for electricity purchases.</span></p>
@@ -720,6 +720,7 @@ hmDevice.pageStylesheet = "./css/hmprojectstyles.css";
 <p class="p_VariableDescription"><span class="f_VariableDescription">The time-of-use period number from the Demand Rates by Time-of-use Period and/or Tiers table under </span><span class="f_CHInterfaceElement">Demand Charges</span><span class="f_VariableDescription">.</span></p>
 <p class="p_VariableName" style="page-break-inside: avoid; page-break-after: avoid;"><span class="f_VariableName">Included in Billing Demand (0/1)</span></p>
 <p class="p_VariableDescription"><span class="f_VariableDescription">For each time-of-use period, assign a 1 to include consumption in that period in the billing demand calculation. Assign a zero to exclude consumption in that period from the billing demand calculation.</span></p>
+<p class="p_Note"><span class="f_CHNote">Note.</span><span class="f_Note"> You must assign a 1 to at least one time-of-use period for the demand charge calculations to work correctly, even if the </span><span class="f_CHInterfaceElement">Charge ($/kW)</span><span class="f_Note"> column in the </span><span class="f_VariableDescription">Demand Rates by Time-of-use Period and/or Tiers table is set to zero</span><span class="f_Note"> for all periods.</span></p>
 </td>
 </tr>
 </table>

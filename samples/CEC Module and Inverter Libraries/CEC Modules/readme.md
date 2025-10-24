@@ -12,7 +12,7 @@ This document explains how to build the SAM CEC module library file from the CEC
 
 2. Go to https://solarequipment.energy.ca.gov/Home/PVModuleList and click the **Download Excel file** link to the working folder.
 
-3. Change the Excel file name with the last CEC update date in the file name `PV_Module_List_Full_Data_ADA-yyyy-m-d.xlsx`.
+3. Change the Excel file name with the last CEC update date (from Row 2 in the workbook) in the file name `PV_Module_List_Full_Data_ADA-yyyy-m-d.xlsx`.
 
 ### Step 2: Manually process CEC xlsx file
 
@@ -20,39 +20,47 @@ This step could be automated in Excel, but this process is a good excuse to do a
 
 1. Open file in Excel.
 
-2. Save as Unicode UTF-8 CSV to preserve Greek characters used in column headings.
+2. Replace all commas `,` with nothing.
 
-3. Close Excel.
+3. Save as Unicode UTF-8 CSV to preserve Greek characters used in column headings.
 
-3. Open CSV file in text editor.
+4. Close Excel.
 
-4. Delete all rows up to column headings row (begins with "Manufacturer").
+5. Open CSV file in text editor.
 
-5. Delete soft line breaks LF `\n` in header rows so that there is one header row that begins with "Manufacturer" and ends with "Last Update." Show hidden characters in text editor to find single LF in first row. (Note remaining lines use CRLF.) (This step is new after CEC added in-cell linebreaks to some header cells after 3/1/2019.)
+6. Delete all rows up to column headings row (begins with "Manufacturer").
 
-5. Search and replace LF followed by comma `\n,` with nothing to remove soft line breaks from columns (assumes Windows CRLF line endings).
+7. Delete soft line breaks LF `\n` in header rows so that there is one header row that begins with "Manufacturer" and ends with "Last Update." Show hidden characters in text editor to find single LF in first row. (Note remaining lines use CRLF.) (This step is new after CEC added in-cell linebreaks to some header cells after 3/1/2019.)
 
-5. Search and replace Greek characters in column headings row: alpha, beta, gamma. For example, replace βVoc with betaVoc. Should be one instance of gamma, and two instances each of alpha and beta.
+8. Search and replace LF followed by comma `\n,` with nothing to remove soft line breaks from columns (assumes Windows CRLF line endings). Repeat until all instances are found.
 
-5. Use regular expression option to replace `[^\x00-\x7F]+` with empty string. This removes non-ASCII characters that cause problems in SAM UI (and may cause problems with LK reading data from file).
+9. Search and replace comma followed by LF `,\n` with nothing to remove soft line breaks from columns (assumes Windows CRLF line endings). Repeat until all instances are found.
 
-6. Save file and close text editor.
+10. Search and replace space followed by LF ` \n` with comma `,` to fix some Excel cells with empty line in cell (see Trina modules).
 
-7. Open file in Excel.
+11. Search and replace space followed by comma space ` ,` with comma `,`.
 
-8. Search and replace all commas `,` with nothing. (Can't do this in text editor because don't want to change column delimiters, only commas in some text fields.)
+12. Search and replace comma followed by space `, ` with comma `,`.
 
-9. Delete units row, Row 2.
+13. Search and replace Greek characters in column headings row: alpha, beta, gamma. For example, replace βVoc with betaVoc. Should be one instance of gamma, and two instances each of alpha and beta.
 
-10. Save and close the file.
+14. Use regular expression search option to replace `[^\x00-\x7F]+` with empty string. This removes non-ASCII characters that cause problems in SAM UI (and may cause problems with LK reading data from file).
 
-11. Open CSV file in text editor remove double quotes `"` by replacing them with nothing. (If the file is tab-delimited, replace tabs `\t` with  commas `,`.)
+15. Save CSV file and close text editor.
 
-12. Save file and close editor.
+16. Open CSV file in Excel.
+
+17. Delete units row, Row 2.
+
+18. Save and close CSV file.
+
+12. Open CSV file in text editor remove double quotes `"` by replacing them with nothing. (If the file is tab-delimited, replace tabs `\t` with  commas `,`.)
+
+13. Save CSV file and close editor.
 
 ### Step 3: Run LK script to convert worksheet data into SAM library file
 
-1. Start SAM and open the latest version of the Update CEC Modules script (`update_cec_modules_2020.lk` as of this writing).
+1. Start SAM and open the latest version of the Update CEC Modules script (`update_cec_modules_2023.lk` as of this writing).
 
 2. Set `version` to the SAM version you are using to run the script.
 

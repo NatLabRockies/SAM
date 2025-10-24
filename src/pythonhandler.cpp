@@ -140,7 +140,8 @@ void WritePythonConfig(const std::string& configPath, const PythonConfig& config
 
     rapidjson::StringBuffer buffer;
     buffer.Clear();
-    rapidjson::PrettyWriter<rapidjson::StringBuffer> writer(buffer);
+    rapidjson::PrettyWriter<rapidjson::StringBuffer, rapidjson::UTF8<char>, rapidjson::UTF8<char>, rapidjson::CrtAllocator, rapidjson::kWriteNanAndInfFlag> writer(buffer);
+
     configObj.Accept(writer);
     configFile << buffer.GetString();
     configFile.close();
@@ -151,7 +152,8 @@ bool CheckPythonInstalled(const PythonConfig& config){
 }
 
 bool InstallPythonWindows(const std::string& path, const PythonConfig& config){
-    std::string cmd = "powershell.exe -windowstyle hidden -ExecutionPolicy Bypass -File " + path + "/install_python.ps1 -version " + config.pythonVersion + " -config " + path;
+//    std::string cmd = "powershell.exe -windowstyle hidden -ExecutionPolicy Bypass -File " + path + "/install_python.ps1 -version " + config.pythonVersion + " -config " + path;
+    std::string cmd = "powershell.exe -windowstyle hidden -ExecutionPolicy Bypass -File \"" + path + "/install_python.ps1\" -version " + config.pythonVersion + " -config \"" + path + "\"";
     int rvalue = system(cmd.c_str());
     return (bool)rvalue;
 }

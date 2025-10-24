@@ -201,27 +201,6 @@ extern "C"
 	SAM_EXPORT void SAM_Thirdpartyownership_CashFlow_ppa_price_nset(SAM_table ptr, double number, SAM_error *err);
 
 
-	//
-	// ElectricityCost parameters
-	//
-
-	/**
-	 * Set elec_cost_with_system: Energy value [$]
-	 * options: None
-	 * constraints: None
-	 * required if: *
-	 */
-	SAM_EXPORT void SAM_Thirdpartyownership_ElectricityCost_elec_cost_with_system_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
-
-	/**
-	 * Set elec_cost_without_system: Energy value [$]
-	 * options: None
-	 * constraints: None
-	 * required if: *
-	 */
-	SAM_EXPORT void SAM_Thirdpartyownership_ElectricityCost_elec_cost_without_system_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
-
-
 	/**
 	 * Depreciation Getters
 	 */
@@ -286,15 +265,6 @@ extern "C"
 	SAM_EXPORT double SAM_Thirdpartyownership_CashFlow_ppa_escalation_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Thirdpartyownership_CashFlow_ppa_price_nget(SAM_table ptr, SAM_error *err);
-
-
-	/**
-	 * ElectricityCost Getters
-	 */
-
-	SAM_EXPORT double* SAM_Thirdpartyownership_ElectricityCost_elec_cost_with_system_aget(SAM_table ptr, int* length, SAM_error *err);
-
-	SAM_EXPORT double* SAM_Thirdpartyownership_ElectricityCost_elec_cost_without_system_aget(SAM_table ptr, int* length, SAM_error *err);
 
 
 	/**

@@ -122,18 +122,6 @@ SAM_EXPORT void SAM_Thirdpartyownership_CashFlow_ppa_price_nset(SAM_table ptr, d
 	});
 }
 
-SAM_EXPORT void SAM_Thirdpartyownership_ElectricityCost_elec_cost_with_system_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
-	translateExceptions(err, [&]{
-		ssc_data_set_array(ptr, "elec_cost_with_system", arr, length);
-	});
-}
-
-SAM_EXPORT void SAM_Thirdpartyownership_ElectricityCost_elec_cost_without_system_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
-	translateExceptions(err, [&]{
-		ssc_data_set_array(ptr, "elec_cost_without_system", arr, length);
-	});
-}
-
 SAM_EXPORT double* SAM_Thirdpartyownership_Depreciation_depr_fed_custom_aget(SAM_table ptr, int* length, SAM_error *err){
 	double* result = nullptr;
 	translateExceptions(err, [&]{
@@ -297,26 +285,6 @@ SAM_EXPORT double SAM_Thirdpartyownership_CashFlow_ppa_price_nget(SAM_table ptr,
 	translateExceptions(err, [&]{
 	if (!ssc_data_get_number(ptr, "ppa_price", &result))
 		make_access_error("SAM_Thirdpartyownership", "ppa_price");
-	});
-	return result;
-}
-
-SAM_EXPORT double* SAM_Thirdpartyownership_ElectricityCost_elec_cost_with_system_aget(SAM_table ptr, int* length, SAM_error *err){
-	double* result = nullptr;
-	translateExceptions(err, [&]{
-	result = ssc_data_get_array(ptr, "elec_cost_with_system", length);
-	if (!result)
-		make_access_error("SAM_Thirdpartyownership", "elec_cost_with_system");
-	});
-	return result;
-}
-
-SAM_EXPORT double* SAM_Thirdpartyownership_ElectricityCost_elec_cost_without_system_aget(SAM_table ptr, int* length, SAM_error *err){
-	double* result = nullptr;
-	translateExceptions(err, [&]{
-	result = ssc_data_get_array(ptr, "elec_cost_without_system", length);
-	if (!result)
-		make_access_error("SAM_Thirdpartyownership", "elec_cost_without_system");
 	});
 	return result;
 }

@@ -1,10 +1,10 @@
 {
     "LeadAcid_q10": 93.0,
-    "LeadAcid_q10_computed": 230.175,
+    "LeadAcid_q10_computed": 223.8975,
     "LeadAcid_q20": 100.0,
-    "LeadAcid_q20_computed": 247.5,
+    "LeadAcid_q20_computed": 240.75,
     "LeadAcid_qn": 60.0,
-    "LeadAcid_qn_computed": 148.5,
+    "LeadAcid_qn_computed": 144.45,
     "LeadAcid_tn": 1.0,
     "add_om_num_types": 1.0,
     "analysis_period": 25.0,
@@ -17,17 +17,17 @@
     "batt_C_rate_max_discharge": 0.4,
     "batt_C_rate_max_discharge_input": 0.5,
     "batt_Cp": 1500.0,
-    "batt_Qexp": 0.04,
+    "batt_Qexp": 0.04000005,
     "batt_Qexp_percent": 1.77778,
     "batt_Qfull": 2.25,
-    "batt_Qfull_flow": 247.5,
-    "batt_Qnom": 2.0,
+    "batt_Qfull_flow": 240.75,
+    "batt_Qnom": 2.0000002500000004,
     "batt_Qnom_percent": 88.8889,
     "batt_Vcut": 2.706,
     "batt_Vexp": 4.05,
     "batt_Vfull": 4.1,
     "batt_Vnom": 3.4,
-    "batt_Vnom_default": 3.6,
+    "batt_Vnom_default": 3.98,
     "batt_ac_dc_efficiency": 96.0,
     "batt_ac_or_dc": 1.0,
     "batt_adjust": 0.0,
@@ -8838,14 +8838,14 @@
     "batt_cell_power_charge_max": 2.0,
     "batt_cell_power_discharge_max": 2.0,
     "batt_chem": 1.0,
-    "batt_computed_bank_capacity": 12.474,
-    "batt_computed_series": 14.0,
+    "batt_computed_bank_capacity": 12.456405,
+    "batt_computed_series": 13.0,
     "batt_computed_stacks_series": 1.0,
-    "batt_computed_strings": 110.0,
-    "batt_computed_voltage": 50.4,
-    "batt_current_charge_max": 99.0,
+    "batt_computed_strings": 107.0,
+    "batt_computed_voltage": 51.74,
+    "batt_current_charge_max": 96.3,
     "batt_current_choice": 0.0,
-    "batt_current_discharge_max": 99.0,
+    "batt_current_discharge_max": 96.3,
     "batt_custom_dispatch": [
         0.0
     ],
@@ -9805,17 +9805,17 @@
         0.0,
         0.0
     ],
-    "batt_mass": 178.2,
+    "batt_mass": 177.9486428571429,
     "batt_maximum_SOC": 95.0,
     "batt_meter_position": 0.0,
     "batt_minimum_SOC": 15.0,
     "batt_minimum_modetime": 10.0,
     "batt_minimum_outage_SOC": 10.0,
-    "batt_num_cells": 1540.0,
-    "batt_power_charge_max_kwac": 5.1975,
-    "batt_power_charge_max_kwdc": 4.9896,
-    "batt_power_discharge_max_kwac": 4.79002,
-    "batt_power_discharge_max_kwdc": 4.9896,
+    "batt_num_cells": 1391.0,
+    "batt_power_charge_max_kwac": 5.190168750000001,
+    "batt_power_charge_max_kwdc": 4.982562000000001,
+    "batt_power_discharge_max_kwac": 4.7832595200000009,
+    "batt_power_discharge_max_kwdc": 4.982562000000001,
     "batt_pv_ac_forecast": [
         0.0
     ],
@@ -9828,7 +9828,7 @@
     "batt_pv_clipping_forecast": [
         0.0
     ],
-    "batt_replacement_capacity": 50.0,
+    "batt_replacement_capacity": 70.0,
     "batt_replacement_option": 1.0,
     "batt_replacement_schedule_percent": [
         0.0,
@@ -9870,7 +9870,7 @@
     "batt_size_choice": 0.0,
     "batt_specific_energy_per_mass": 70.0,
     "batt_specific_energy_per_volume": 82.0,
-    "batt_surface_area": 1.7098,
+    "batt_surface_area": 1.7081938826471877,
     "batt_target_choice": 0.0,
     "batt_target_power": [
         0.0
@@ -9890,12 +9890,12 @@
         1.0
     ],
     "batt_thermal_choice": 0.0,
-    "batt_time_capacity": 2.5,
+    "batt_time_capacity": 2.4999999999999997,
     "batt_type": 5.0,
-    "batt_ui_bank_voltage": 50.4,
-    "batt_ui_cell_voltage": 3.6,
+    "batt_ui_bank_voltage": 51.74,
+    "batt_ui_cell_voltage": 3.98,
     "batt_ui_inverter_eff": 96.0,
-    "batt_ui_nominal_bank_power": 4.9896,
+    "batt_ui_nominal_bank_power": 4.982562000000001,
     "batt_unit_capacity": 400.0,
     "batt_unit_surface_area": 30.0,
     "batt_user_specified_weather_file_peak_shaving": "",
@@ -9907,16 +9907,16 @@
             0.0
         ]
     ],
-    "batt_volume": 0.152122,
-    "battery_energy": 12.474,
+    "batt_volume": 0.1519073780487805,
+    "battery_energy": 12.456405,
     "battery_indirect_cost_percent": 0.0,
     "battery_losses_shown": 0.0,
-    "battery_per_kW": 675.0,
-    "battery_per_kWh": 590.76,
-    "battery_power": 4.9896,
+    "battery_per_kW": 401.0,
+    "battery_per_kWh": 434.0,
+    "battery_power": 4.982562000000001,
     "battery_thermal_shown": 0.0,
-    "battery_total": 10737.1,
-    "battery_total_cost_lcos": 18849.0,
+    "battery_total": 7404.087132000001,
+    "battery_total_cost_lcos": 13030.2914886,
     "battery_voltage_shown": 0.0,
     "cap_vs_temp": [
         [
@@ -19436,18 +19436,18 @@
     "en_batt": 1.0,
     "en_standalone_batt": 1.0,
     "enable_interconnection_limit": 0.0,
-    "energy_1": 752.186,
-    "energy_10": 837.847,
-    "energy_11": 640.379,
-    "energy_12": 731.813,
-    "energy_2": 642.382,
-    "energy_3": 647.755,
-    "energy_4": 643.76,
-    "energy_5": 777.222,
-    "energy_6": 1151.7,
-    "energy_7": 1594.78,
-    "energy_8": 1393.36,
-    "energy_9": 1016.16,
+    "energy_1": 752.185785,
+    "energy_10": 837.8469560000002,
+    "energy_11": 640.3785220000026,
+    "energy_12": 731.8132690000008,
+    "energy_2": 642.3817860000003,
+    "energy_3": 647.7547610000007,
+    "energy_4": 643.7600319999993,
+    "energy_5": 777.2224669999997,
+    "energy_6": 1151.695144000001,
+    "energy_7": 1594.7795350000006,
+    "energy_8": 1393.361068999999,
+    "energy_9": 1016.1560469999996,
     "escal_belpe": [
         0.0
     ],
@@ -37061,7 +37061,7 @@
         1.24378,
         0.980213
     ],
-    "load_annual_total": 10829.3,
+    "load_annual_total": 10829.335372999947,
     "load_escalation": [
         0.0
     ],
@@ -45834,7 +45834,7 @@
     "load_user_forecast_data_psd": [
         0.0
     ],
-    "loan_amount": 9424.49,
+    "loan_amount": 6515.1457443,
     "loan_rate": 7.0,
     "loan_term": 25.0,
     "market": 0.0,
@@ -45853,7 +45853,7 @@
         1.71415,
         1.87435
     ],
-    "nominal_discount_rate": 9.06,
+    "nominal_discount_rate": 9.060000000000004,
     "normalize_to_utility_bill": 0.0,
     "om_batt_capacity_cost": [
         15.0
@@ -45861,9 +45861,9 @@
     "om_batt_fixed_cost": [
         0.0
     ],
-    "om_batt_nameplate": 12.474,
+    "om_batt_nameplate": 12.456405,
     "om_batt_replacement_cost": [
-        590.76
+        434.0
     ],
     "om_batt_variable_cost": [
         0.0
@@ -45919,7 +45919,7 @@
     "peak_shaving_batt_dispatch_choice": 0.0,
     "prop_tax_assessed_decline": 0.0,
     "prop_tax_cost_assessed_percent": 100.0,
-    "property_assessed_value": 18849.0,
+    "property_assessed_value": 13030.2914886,
     "property_tax_rate": 0.0,
     "ptc_fed_amount": [
         0.0
@@ -45968,29 +45968,30 @@
     "show_tax_credits": 1.0,
     "standalonebatt.cost.contingency": 0.0,
     "standalonebatt.cost.contingency_percent": 0.0,
-    "standalonebatt.cost.epc.fixed": 7575.0,
+    "standalonebatt.cost.epc.fixed": 5256.0,
     "standalonebatt.cost.epc.nonfixed": 0.0,
     "standalonebatt.cost.epc.percent": 0.0,
-    "standalonebatt.cost.epc.total": 7575.0,
-    "standalonebatt.cost.installed_per_capacity": 3.93506,
-    "standalonebatt.cost.per_watt": 6.0,
+    "standalonebatt.cost.epc.total": 5256.0,
+    "standalonebatt.cost.installed_per_capacity": 2.7241447874858357,
     "standalonebatt.cost.plm.fixed": 0.0,
     "standalonebatt.cost.plm.nonfixed": 0.0,
     "standalonebatt.cost.plm.percent": 0.0,
     "standalonebatt.cost.plm.total": 0.0,
     "standalonebatt.cost.sales_tax.percent": 100.0,
-    "standalonebatt.cost.sales_tax.total": 536.856,
+    "standalonebatt.cost.sales_tax.total": 370.2043566000001,
     "standalonebatt.cost.sales_tax.value": 5.0,
+    "start_day_of_year": 3.335046e-317,
+    "start_day_of_year_load_ui": 3.335046e-317,
     "state_tax_rate": [
         7.0
     ],
-    "system_capacity": 4.79002,
+    "system_capacity": 4.7832595200000009,
     "system_use_lifetime_output": 1.0,
     "timestep_minutes": 60.0,
     "timestep_minutes_ui": 0.0,
-    "total_direct_cost": 10737.1,
-    "total_indirect_cost": 7575.0,
-    "total_installed_cost": 18849.0,
+    "total_direct_cost": 7404.087132000001,
+    "total_indirect_cost": 5256.0,
+    "total_installed_cost": 13030.2914886,
     "ui_annual_load": 0.0,
     "ui_batt_life_model": 0.0,
     "ui_copy_batt_discharge_percent_1": 25.0,
@@ -45999,7 +46000,7 @@
     "ui_copy_batt_discharge_percent_4": 25.0,
     "ui_copy_batt_discharge_percent_5": 25.0,
     "ui_copy_batt_discharge_percent_6": 25.0,
-    "ui_net_capital_cost": 18849.0,
+    "ui_net_capital_cost": 13030.2914886,
     "ui_wacc": 7.29675,
     "ur_annual_min_charge": 0.0,
     "ur_billing_demand_is_shown": 0.0,

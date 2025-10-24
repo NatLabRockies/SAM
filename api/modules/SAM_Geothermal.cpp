@@ -464,6 +464,12 @@ SAM_EXPORT void SAM_Geothermal_GeoHourly_specify_pump_work_nset(SAM_table ptr, d
 	});
 }
 
+SAM_EXPORT void SAM_Geothermal_GeoHourly_start_day_of_year_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "start_day_of_year", number);
+	});
+}
+
 SAM_EXPORT void SAM_Geothermal_GeoHourly_startup_frac_nset(SAM_table ptr, double number, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_number(ptr, "startup_frac", number);
@@ -479,6 +485,12 @@ SAM_EXPORT void SAM_Geothermal_GeoHourly_startup_time_nset(SAM_table ptr, double
 SAM_EXPORT void SAM_Geothermal_GeoHourly_stim_success_rate_nset(SAM_table ptr, double number, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_number(ptr, "stim_success_rate", number);
+	});
+}
+
+SAM_EXPORT void SAM_Geothermal_GeoHourly_stimulation_type_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "stimulation_type", number);
 	});
 }
 
@@ -1238,6 +1250,15 @@ SAM_EXPORT double SAM_Geothermal_GeoHourly_specify_pump_work_nget(SAM_table ptr,
 	return result;
 }
 
+SAM_EXPORT double SAM_Geothermal_GeoHourly_start_day_of_year_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "start_day_of_year", &result))
+		make_access_error("SAM_Geothermal", "start_day_of_year");
+	});
+	return result;
+}
+
 SAM_EXPORT double SAM_Geothermal_GeoHourly_startup_frac_nget(SAM_table ptr, SAM_error *err){
 	double result;
 	translateExceptions(err, [&]{
@@ -1261,6 +1282,15 @@ SAM_EXPORT double SAM_Geothermal_GeoHourly_stim_success_rate_nget(SAM_table ptr,
 	translateExceptions(err, [&]{
 	if (!ssc_data_get_number(ptr, "stim_success_rate", &result))
 		make_access_error("SAM_Geothermal", "stim_success_rate");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Geothermal_GeoHourly_stimulation_type_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "stimulation_type", &result))
+		make_access_error("SAM_Geothermal", "stimulation_type");
 	});
 	return result;
 }
@@ -1624,11 +1654,38 @@ SAM_EXPORT double SAM_Geothermal_Outputs_num_wells_getem_inj_nget(SAM_table ptr,
 	return result;
 }
 
+SAM_EXPORT double SAM_Geothermal_Outputs_num_wells_getem_inj_drilled_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "num_wells_getem_inj_drilled", &result))
+		make_access_error("SAM_Geothermal", "num_wells_getem_inj_drilled");
+	});
+	return result;
+}
+
 SAM_EXPORT double SAM_Geothermal_Outputs_num_wells_getem_output_nget(SAM_table ptr, SAM_error *err){
 	double result;
 	translateExceptions(err, [&]{
 	if (!ssc_data_get_number(ptr, "num_wells_getem_output", &result))
 		make_access_error("SAM_Geothermal", "num_wells_getem_output");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Geothermal_Outputs_num_wells_getem_prod_drilled_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "num_wells_getem_prod_drilled", &result))
+		make_access_error("SAM_Geothermal", "num_wells_getem_prod_drilled");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Geothermal_Outputs_num_wells_getem_prod_failed_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "num_wells_getem_prod_failed", &result))
+		make_access_error("SAM_Geothermal", "num_wells_getem_prod_failed");
 	});
 	return result;
 }

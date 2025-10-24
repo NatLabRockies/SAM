@@ -128,7 +128,7 @@ if( mod(weatherLength, 8760) != 0){
 // Load snow data
 
 if( sf_unit == 'cm' ) conversion = 1.0;
-if( sf_unit == 'inch' ) conversion = 2.54;
+if( sf_unit == 'in' ) conversion = 2.54;
 if( sf_unit == 'mm' ) conversion = 0.1;
 if( sf_unit == 'feet' ) conversion = 30.48;
 if( sf_unit == 'meters' ) conversion = 100.0;

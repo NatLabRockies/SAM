@@ -128,7 +128,9 @@ bool ui_form_extractor::extract(const std::string& file) {
     std::ifstream ifs(file);
     rapidjson::IStreamWrapper is(ifs);
 
-    doc.ParseStream(is);
+    //	doc.ParseStream(is);
+    // SAM issue 1856 handle parsing Inf values for max tier usage values.
+    doc.ParseStream< rapidjson::kParseNanAndInfFlag>(is);
 
     if (doc.HasParseError()) {
         wxLogError(wxS("Could not read the json file '%s'.\nError: %d"), file, doc.GetParseError());

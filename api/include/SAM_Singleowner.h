@@ -143,6 +143,14 @@ extern "C"
 	 */
 	SAM_EXPORT void SAM_Singleowner_Revenue_ppa_soln_tolerance_nset(SAM_table ptr, double number, SAM_error *err);
 
+	/**
+	 * Set start_day_of_year: Start day of year for TOD periods [0..6]
+	 * options: 0=Monday, 6=Sunday
+	 * constraints: None
+	 * required if: ?=0
+	 */
+	SAM_EXPORT void SAM_Singleowner_Revenue_start_day_of_year_nset(SAM_table ptr, double number, SAM_error *err);
+
 
 	//
 	// FinancialParameters parameters
@@ -2088,6 +2096,14 @@ extern "C"
 	SAM_EXPORT void SAM_Singleowner_ElectricityRates_rate_escalation_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
 
 	/**
+	 * Set start_day_of_year: Start day of year for TOD periods [0..6]
+	 * options: 0=Monday, 6=Sunday
+	 * constraints: None
+	 * required if: ?=0
+	 */
+	SAM_EXPORT void SAM_Singleowner_ElectricityRates_start_day_of_year_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
 	 * Set ur_annual_min_charge: Annual minimum charge [$]
 	 * options: None
 	 * constraints: None
@@ -2389,6 +2405,14 @@ extern "C"
 	//
 	// Lifetime parameters
 	//
+
+	/**
+	 * Set inflation_rate: Inflation rate [%]
+	 * options: None
+	 * constraints: MIN=-99
+	 * required if: None
+	 */
+	SAM_EXPORT void SAM_Singleowner_Lifetime_inflation_rate_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
 	 * Set system_use_lifetime_output: Lifetime hourly system outputs [0/1]
@@ -2782,6 +2806,8 @@ extern "C"
 	SAM_EXPORT double SAM_Singleowner_Revenue_ppa_soln_mode_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Singleowner_Revenue_ppa_soln_tolerance_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Singleowner_Revenue_start_day_of_year_nget(SAM_table ptr, SAM_error *err);
 
 
 	/**
@@ -3299,6 +3325,8 @@ extern "C"
 
 	SAM_EXPORT double* SAM_Singleowner_ElectricityRates_rate_escalation_aget(SAM_table ptr, int* length, SAM_error *err);
 
+	SAM_EXPORT double SAM_Singleowner_ElectricityRates_start_day_of_year_nget(SAM_table ptr, SAM_error *err);
+
 	SAM_EXPORT double SAM_Singleowner_ElectricityRates_ur_annual_min_charge_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double* SAM_Singleowner_ElectricityRates_ur_billing_demand_lookback_percentages_mget(SAM_table ptr, int* nrows, int* ncols, SAM_error *err);
@@ -3385,6 +3413,8 @@ extern "C"
 	/**
 	 * Lifetime Getters
 	 */
+
+	SAM_EXPORT double SAM_Singleowner_Lifetime_inflation_rate_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Singleowner_Lifetime_system_use_lifetime_output_nget(SAM_table ptr, SAM_error *err);
 

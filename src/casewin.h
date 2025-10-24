@@ -87,6 +87,9 @@ public:
 
 	wxString GetCurrentContext();
 	void UpdatePageNote();
+	void UpdateNotesIcon();
+	void UpdateNotesIconChildren(wxDataViewModel* model, const wxDataViewItem& parent);
+	//void IterateChildren(wxDataViewCtrl* myDVC, wxDataViewModel* model, const wxDataViewItem& parent)
 	void CheckAndUpdateNotes(const wxArrayString& inputPageHelpContext);
 	bool HasPageNote( const wxString &id );
 	void ShowPageNote( );
@@ -96,6 +99,8 @@ public:
 
 	bool RunBaseCase( bool silent = false, wxString *messages = 0 );
 	void UpdateResults();
+
+	bool ExportCashflowExcel();
 
 	bool RunSSCBaseCase(wxString& fn, bool silent = false, wxString* messages = 0);
 
@@ -174,7 +179,6 @@ private:
     void OnTreeCollapsing(wxDataViewEvent &evt );
 	virtual void OnCaseEvent( Case *, CaseEvent & );
 	void OnSubNotebookPageChanged( wxNotebookEvent &evt );
-
 
 	DECLARE_EVENT_TABLE();
 };

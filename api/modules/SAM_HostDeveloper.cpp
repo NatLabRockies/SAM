@@ -98,6 +98,12 @@ SAM_EXPORT void SAM_HostDeveloper_Revenue_ppa_soln_tolerance_nset(SAM_table ptr,
 	});
 }
 
+SAM_EXPORT void SAM_HostDeveloper_Revenue_start_day_of_year_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "start_day_of_year", number);
+	});
+}
+
 SAM_EXPORT void SAM_HostDeveloper_FinancialParameters_analysis_period_nset(SAM_table ptr, double number, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_number(ptr, "analysis_period", number);
@@ -1430,18 +1436,6 @@ SAM_EXPORT void SAM_HostDeveloper_Host_annual_energy_value_aset(SAM_table ptr, d
 	});
 }
 
-SAM_EXPORT void SAM_HostDeveloper_Host_elec_cost_with_system_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
-	translateExceptions(err, [&]{
-		ssc_data_set_array(ptr, "elec_cost_with_system", arr, length);
-	});
-}
-
-SAM_EXPORT void SAM_HostDeveloper_Host_elec_cost_without_system_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
-	translateExceptions(err, [&]{
-		ssc_data_set_array(ptr, "elec_cost_without_system", arr, length);
-	});
-}
-
 SAM_EXPORT void SAM_HostDeveloper_Host_host_real_discount_rate_nset(SAM_table ptr, double number, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_number(ptr, "host_real_discount_rate", number);
@@ -1505,12 +1499,6 @@ SAM_EXPORT void SAM_HostDeveloper_ChargesByMonth_true_up_credits_ym_mset(SAM_tab
 SAM_EXPORT void SAM_HostDeveloper_ChargesByMonth_utility_bill_w_sys_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_array(ptr, "utility_bill_w_sys", arr, length);
-	});
-}
-
-SAM_EXPORT void SAM_HostDeveloper_SystemOutput_annual_energy_value_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
-	translateExceptions(err, [&]{
-		ssc_data_set_array(ptr, "annual_energy_value", arr, length);
 	});
 }
 
@@ -1911,6 +1899,15 @@ SAM_EXPORT double SAM_HostDeveloper_Revenue_ppa_soln_tolerance_nget(SAM_table pt
 	translateExceptions(err, [&]{
 	if (!ssc_data_get_number(ptr, "ppa_soln_tolerance", &result))
 		make_access_error("SAM_HostDeveloper", "ppa_soln_tolerance");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_HostDeveloper_Revenue_start_day_of_year_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "start_day_of_year", &result))
+		make_access_error("SAM_HostDeveloper", "start_day_of_year");
 	});
 	return result;
 }
@@ -3947,26 +3944,6 @@ SAM_EXPORT double* SAM_HostDeveloper_Host_annual_energy_value_aget(SAM_table ptr
 	return result;
 }
 
-SAM_EXPORT double* SAM_HostDeveloper_Host_elec_cost_with_system_aget(SAM_table ptr, int* length, SAM_error *err){
-	double* result = nullptr;
-	translateExceptions(err, [&]{
-	result = ssc_data_get_array(ptr, "elec_cost_with_system", length);
-	if (!result)
-		make_access_error("SAM_HostDeveloper", "elec_cost_with_system");
-	});
-	return result;
-}
-
-SAM_EXPORT double* SAM_HostDeveloper_Host_elec_cost_without_system_aget(SAM_table ptr, int* length, SAM_error *err){
-	double* result = nullptr;
-	translateExceptions(err, [&]{
-	result = ssc_data_get_array(ptr, "elec_cost_without_system", length);
-	if (!result)
-		make_access_error("SAM_HostDeveloper", "elec_cost_without_system");
-	});
-	return result;
-}
-
 SAM_EXPORT double SAM_HostDeveloper_Host_host_real_discount_rate_nget(SAM_table ptr, SAM_error *err){
 	double result;
 	translateExceptions(err, [&]{
@@ -4072,16 +4049,6 @@ SAM_EXPORT double* SAM_HostDeveloper_ChargesByMonth_utility_bill_w_sys_aget(SAM_
 	result = ssc_data_get_array(ptr, "utility_bill_w_sys", length);
 	if (!result)
 		make_access_error("SAM_HostDeveloper", "utility_bill_w_sys");
-	});
-	return result;
-}
-
-SAM_EXPORT double* SAM_HostDeveloper_SystemOutput_annual_energy_value_aget(SAM_table ptr, int* length, SAM_error *err){
-	double* result = nullptr;
-	translateExceptions(err, [&]{
-	result = ssc_data_get_array(ptr, "annual_energy_value", length);
-	if (!result)
-		make_access_error("SAM_HostDeveloper", "annual_energy_value");
 	});
 	return result;
 }

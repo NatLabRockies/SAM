@@ -92,6 +92,12 @@ SAM_EXPORT void SAM_Pvsamv1_Losses_en_snow_model_nset(SAM_table ptr, double numb
 	});
 }
 
+SAM_EXPORT void SAM_Pvsamv1_Losses_snow_array_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_array(ptr, "snow_array", arr, length);
+	});
+}
+
 SAM_EXPORT void SAM_Pvsamv1_Losses_snow_slide_coefficient_nset(SAM_table ptr, double number, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_number(ptr, "snow_slide_coefficient", number);
@@ -329,6 +335,12 @@ SAM_EXPORT void SAM_Pvsamv1_Losses_transformer_no_load_loss_nset(SAM_table ptr, 
 SAM_EXPORT void SAM_Pvsamv1_Losses_transmission_loss_nset(SAM_table ptr, double number, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_number(ptr, "transmission_loss", number);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_Losses_use_snow_weather_file_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "use_snow_weather_file", number);
 	});
 }
 
@@ -3158,6 +3170,36 @@ SAM_EXPORT void SAM_Pvsamv1_AdjustmentFactors_adjust_timeindex_aset(SAM_table pt
 	});
 }
 
+SAM_EXPORT void SAM_Pvsamv1_AdjustmentFactors_batt_adjust_constant_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "batt_adjust_constant", number);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_AdjustmentFactors_batt_adjust_en_periods_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "batt_adjust_en_periods", number);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_AdjustmentFactors_batt_adjust_en_timeindex_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "batt_adjust_en_timeindex", number);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_AdjustmentFactors_batt_adjust_periods_mset(SAM_table ptr, double* mat, int nrows, int ncols, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_matrix(ptr, "batt_adjust_periods", mat, nrows, ncols);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_AdjustmentFactors_batt_adjust_timeindex_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_array(ptr, "batt_adjust_timeindex", arr, length);
+	});
+}
+
 SAM_EXPORT void SAM_Pvsamv1_AdjustmentFactors_dc_adjust_constant_nset(SAM_table ptr, double number, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_number(ptr, "dc_adjust_constant", number);
@@ -3686,6 +3728,12 @@ SAM_EXPORT void SAM_Pvsamv1_BatteryDispatch_dispatch_manual_system_charge_first_
 	});
 }
 
+SAM_EXPORT void SAM_Pvsamv1_BatteryDispatch_start_day_of_year_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "start_day_of_year", number);
+	});
+}
+
 SAM_EXPORT void SAM_Pvsamv1_SystemCosts_om_batt_replacement_cost_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_array(ptr, "om_batt_replacement_cost", arr, length);
@@ -3923,6 +3971,12 @@ SAM_EXPORT void SAM_Pvsamv1_ElectricityRates_en_electricity_rates_nset(SAM_table
 SAM_EXPORT void SAM_Pvsamv1_ElectricityRates_rate_escalation_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_array(ptr, "rate_escalation", arr, length);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_ElectricityRates_start_day_of_year_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "start_day_of_year", number);
 	});
 }
 
@@ -4293,6 +4347,16 @@ SAM_EXPORT double SAM_Pvsamv1_Losses_en_snow_model_nget(SAM_table ptr, SAM_error
 	return result;
 }
 
+SAM_EXPORT double* SAM_Pvsamv1_Losses_snow_array_aget(SAM_table ptr, int* length, SAM_error *err){
+	double* result = nullptr;
+	translateExceptions(err, [&]{
+	result = ssc_data_get_array(ptr, "snow_array", length);
+	if (!result)
+		make_access_error("SAM_Pvsamv1", "snow_array");
+	});
+	return result;
+}
+
 SAM_EXPORT double SAM_Pvsamv1_Losses_snow_slide_coefficient_nget(SAM_table ptr, SAM_error *err){
 	double result;
 	translateExceptions(err, [&]{
@@ -4653,6 +4717,15 @@ SAM_EXPORT double SAM_Pvsamv1_Losses_transmission_loss_nget(SAM_table ptr, SAM_e
 	translateExceptions(err, [&]{
 	if (!ssc_data_get_number(ptr, "transmission_loss", &result))
 		make_access_error("SAM_Pvsamv1", "transmission_loss");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_Losses_use_snow_weather_file_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "use_snow_weather_file", &result))
+		make_access_error("SAM_Pvsamv1", "use_snow_weather_file");
 	});
 	return result;
 }
@@ -8953,6 +9026,53 @@ SAM_EXPORT double* SAM_Pvsamv1_AdjustmentFactors_adjust_timeindex_aget(SAM_table
 	return result;
 }
 
+SAM_EXPORT double SAM_Pvsamv1_AdjustmentFactors_batt_adjust_constant_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "batt_adjust_constant", &result))
+		make_access_error("SAM_Pvsamv1", "batt_adjust_constant");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_AdjustmentFactors_batt_adjust_en_periods_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "batt_adjust_en_periods", &result))
+		make_access_error("SAM_Pvsamv1", "batt_adjust_en_periods");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_AdjustmentFactors_batt_adjust_en_timeindex_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "batt_adjust_en_timeindex", &result))
+		make_access_error("SAM_Pvsamv1", "batt_adjust_en_timeindex");
+	});
+	return result;
+}
+
+SAM_EXPORT double* SAM_Pvsamv1_AdjustmentFactors_batt_adjust_periods_mget(SAM_table ptr, int* nrows, int* ncols, SAM_error *err){
+	double* result = nullptr;
+	translateExceptions(err, [&]{
+	result = ssc_data_get_matrix(ptr, "batt_adjust_periods", nrows, ncols);
+	if (!result)
+		make_access_error("SAM_Pvsamv1", "batt_adjust_periods");
+	});
+	return result;
+}
+
+SAM_EXPORT double* SAM_Pvsamv1_AdjustmentFactors_batt_adjust_timeindex_aget(SAM_table ptr, int* length, SAM_error *err){
+	double* result = nullptr;
+	translateExceptions(err, [&]{
+	result = ssc_data_get_array(ptr, "batt_adjust_timeindex", length);
+	if (!result)
+		make_access_error("SAM_Pvsamv1", "batt_adjust_timeindex");
+	});
+	return result;
+}
+
 SAM_EXPORT double SAM_Pvsamv1_AdjustmentFactors_dc_adjust_constant_nget(SAM_table ptr, SAM_error *err){
 	double result;
 	translateExceptions(err, [&]{
@@ -9769,6 +9889,15 @@ SAM_EXPORT double SAM_Pvsamv1_BatteryDispatch_dispatch_manual_system_charge_firs
 	return result;
 }
 
+SAM_EXPORT double SAM_Pvsamv1_BatteryDispatch_start_day_of_year_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "start_day_of_year", &result))
+		make_access_error("SAM_Pvsamv1", "start_day_of_year");
+	});
+	return result;
+}
+
 SAM_EXPORT double* SAM_Pvsamv1_SystemCosts_om_batt_replacement_cost_aget(SAM_table ptr, int* length, SAM_error *err){
 	double* result = nullptr;
 	translateExceptions(err, [&]{
@@ -10144,6 +10273,15 @@ SAM_EXPORT double* SAM_Pvsamv1_ElectricityRates_rate_escalation_aget(SAM_table p
 	result = ssc_data_get_array(ptr, "rate_escalation", length);
 	if (!result)
 		make_access_error("SAM_Pvsamv1", "rate_escalation");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_ElectricityRates_start_day_of_year_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "start_day_of_year", &result))
+		make_access_error("SAM_Pvsamv1", "start_day_of_year");
 	});
 	return result;
 }
@@ -11744,6 +11882,16 @@ SAM_EXPORT double* SAM_Pvsamv1_Outputs_batt_annual_energy_system_loss_aget(SAM_t
 	return result;
 }
 
+SAM_EXPORT double* SAM_Pvsamv1_Outputs_batt_availability_loss_aget(SAM_table ptr, int* length, SAM_error *err){
+	double* result = nullptr;
+	translateExceptions(err, [&]{
+	result = ssc_data_get_array(ptr, "batt_availability_loss", length);
+	if (!result)
+		make_access_error("SAM_Pvsamv1", "batt_availability_loss");
+	});
+	return result;
+}
+
 SAM_EXPORT double SAM_Pvsamv1_Outputs_batt_bank_installed_capacity_nget(SAM_table ptr, SAM_error *err){
 	double result;
 	translateExceptions(err, [&]{
@@ -11829,6 +11977,16 @@ SAM_EXPORT double* SAM_Pvsamv1_Outputs_batt_cycles_aget(SAM_table ptr, int* leng
 	result = ssc_data_get_array(ptr, "batt_cycles", length);
 	if (!result)
 		make_access_error("SAM_Pvsamv1", "batt_cycles");
+	});
+	return result;
+}
+
+SAM_EXPORT double* SAM_Pvsamv1_Outputs_batt_dispatch_period_aget(SAM_table ptr, int* length, SAM_error *err){
+	double* result = nullptr;
+	translateExceptions(err, [&]{
+	result = ssc_data_get_array(ptr, "batt_dispatch_period", length);
+	if (!result)
+		make_access_error("SAM_Pvsamv1", "batt_dispatch_period");
 	});
 	return result;
 }
@@ -14806,6 +14964,15 @@ SAM_EXPORT double* SAM_Pvsamv1_Outputs_survival_function_aget(SAM_table ptr, int
 	result = ssc_data_get_array(ptr, "survival_function", length);
 	if (!result)
 		make_access_error("SAM_Pvsamv1", "survival_function");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_Outputs_system_capacity_ac_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "system_capacity_ac", &result))
+		make_access_error("SAM_Pvsamv1", "system_capacity_ac");
 	});
 	return result;
 }

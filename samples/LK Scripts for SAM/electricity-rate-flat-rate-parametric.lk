@@ -3,9 +3,10 @@
 Run simulations over a range of flat energy buy rates for a parametric study.
 
 This script sets energy charge inputs for a simple flat buy rate and runs a
-set of simulations over a range of flat rates.
+set of simulations over a range of flat rates. Intended for use with an open
+SAM case with a behind-the-meter financial model.
 
-Written in SAM 2020.11.29 r2 tested in SAM 2021.12.02
+Written in SAM 2020.11.29 r2 tested in SAM 2024.12.12.
 
 */
 
@@ -61,8 +62,8 @@ for (r = rate_start; r<=rate_end; r=r+rate_increment )
 	set_simple_flat_rate( r );
 	simulate();
 	str_result += r +','
-	           + get('elec_cost_with_system')[1] + ',' 
-	           + get('elec_cost_without_system')[1] + ',' 
+	           + get('utility_bill_w_sys')[1] + ',' 
+	           + get('utility_bill_wo_sys')[1] + ',' 
 	           + get('npv') + '\n';
 }
 outln();
