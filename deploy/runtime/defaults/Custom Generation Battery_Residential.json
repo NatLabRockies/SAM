@@ -45867,6 +45867,7 @@
     "itc_sta_percent_maxvalue": [
         1e38
     ],
+    "lbl_btm_dispatch_message": "",
     "load": [
         0.772599,
         0.680559,
@@ -63549,6 +63550,8 @@
     "show_cash_incentives": 1.0,
     "show_tax_credits": 1.0,
     "spec_mode": 0.0,
+    "start_day_of_year": 3.335046e-317,
+    "start_day_of_year_load_ui": 3.335046e-317,
     "state_tax_rate": [
         7.0
     ],

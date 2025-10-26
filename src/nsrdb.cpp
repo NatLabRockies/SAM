@@ -547,13 +547,22 @@ void NSRDBDialog::GetResources()
 
 	wxString locname = "";
 
+	// determine whether address is lat/lon pair
 	bool is_addr = false;
-	const wxChar* locChars = location.c_str();
-	for (int i = 0; i < (int)location.Len(); i++) 
-	{
-		if (isalpha(locChars[i]))
-			is_addr = true;
+	wxUniChar c;
+	bool d, a;
+	for (wxString::const_iterator it = location.begin(); it != location.end(); ++it) {
+		c = *it;
+		d = wxIsdigit(c);
+		a = wxIsalpha(c);
+		if (!d && a) {
+			if (c != 'n' && c != 's' && c != 'e' && c != 'w') {
+				is_addr = true;
+			}
+		}
+
 	}
+
 	double lat, lon;
 	if (is_addr)	//entered an address instead of a lat/long
 	{
@@ -648,7 +657,6 @@ void NSRDBDialog::GetResources()
 
 	m_txtLatLon->SetValue(wxString::Format("%f,%f", lat, lon));
 
-
 	if (!reader.HasMember("outputs")) return; // error message?
 	if (!reader["outputs"].IsArray()) return; // error message?
 
@@ -705,7 +713,8 @@ void NSRDBDialog::GetResources()
 				&& (name.Lower() != "philippines") // basic solar resource data only tamb, dhi, dni, ghi, wind (not enough data for CSP or PV thermal models)
 				&& (name.Lower() != "vietnam")) // // basic solar resource data only tamb, dhi, dni, ghi, wind  (not enough data for CSP or PV thermal models)
 			{
-				m_links.push_back(LinkInfo(name, displayName, year, URL, interval, location));
+				//m_links.push_back(LinkInfo(name, displayName, year, URL, interval, location));
+				m_links.push_back(LinkInfo(name, displayName, year, URL, interval, locname));
 
 				// enable list, search, and buttons
 				m_chlResources->Enable();

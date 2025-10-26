@@ -58746,7 +58746,6 @@
     "show_construction_period": 1.0,
     "site_spec_cost": 16.0,
     "solar_data_file_name": "daggett_ca_34.865371_-116.783023_psmv3_60_tmy.csv",
-    "solar_data_file_name_load": "daggett_ca_34.865371_-116.783023_psmv3_60_tmy.csv",
     "solar_data_source": "NSRDB",
     "solar_resource": "daggett_ca_34.865371_-116.783023_psmv3_60_tmy",
     "solar_resource_file": "",

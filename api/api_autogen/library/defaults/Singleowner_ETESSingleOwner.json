@@ -35,7 +35,8 @@
 			"ppa_escalation": 1,
 			"ppa_multiplier_model": 1,
 			"ppa_price_input": [0.045000],
-			"ppa_soln_mode": 1
+			"ppa_soln_mode": 1,
+			"start_day_of_year": 0
 		},
 		"FinancialParameters": {
 			"analysis_period": 25,
@@ -248,6 +249,7 @@
 		"BatterySystem": {
 		},
 		"ElectricityRates": {
+			"start_day_of_year": 0
 		},
 		"SystemOutput": {
 			"degradation": [0.000000],

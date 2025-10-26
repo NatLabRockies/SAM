@@ -98,6 +98,12 @@ SAM_EXPORT void SAM_Singleowner_Revenue_ppa_soln_tolerance_nset(SAM_table ptr, d
 	});
 }
 
+SAM_EXPORT void SAM_Singleowner_Revenue_start_day_of_year_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "start_day_of_year", number);
+	});
+}
+
 SAM_EXPORT void SAM_Singleowner_FinancialParameters_analysis_period_nset(SAM_table ptr, double number, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_number(ptr, "analysis_period", number);
@@ -1526,6 +1532,12 @@ SAM_EXPORT void SAM_Singleowner_ElectricityRates_rate_escalation_aset(SAM_table 
 	});
 }
 
+SAM_EXPORT void SAM_Singleowner_ElectricityRates_start_day_of_year_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "start_day_of_year", number);
+	});
+}
+
 SAM_EXPORT void SAM_Singleowner_ElectricityRates_ur_annual_min_charge_nset(SAM_table ptr, double number, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_number(ptr, "ur_annual_min_charge", number);
@@ -2115,6 +2127,15 @@ SAM_EXPORT double SAM_Singleowner_Revenue_ppa_soln_tolerance_nget(SAM_table ptr,
 	translateExceptions(err, [&]{
 	if (!ssc_data_get_number(ptr, "ppa_soln_tolerance", &result))
 		make_access_error("SAM_Singleowner", "ppa_soln_tolerance");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Singleowner_Revenue_start_day_of_year_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "start_day_of_year", &result))
+		make_access_error("SAM_Singleowner", "start_day_of_year");
 	});
 	return result;
 }
@@ -4294,6 +4315,15 @@ SAM_EXPORT double* SAM_Singleowner_ElectricityRates_rate_escalation_aget(SAM_tab
 	result = ssc_data_get_array(ptr, "rate_escalation", length);
 	if (!result)
 		make_access_error("SAM_Singleowner", "rate_escalation");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Singleowner_ElectricityRates_start_day_of_year_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "start_day_of_year", &result))
+		make_access_error("SAM_Singleowner", "start_day_of_year");
 	});
 	return result;
 }

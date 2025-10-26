@@ -848,6 +848,12 @@ SAM_EXPORT void SAM_Battery_BatteryDispatch_dispatch_manual_system_charge_first_
 	});
 }
 
+SAM_EXPORT void SAM_Battery_BatteryDispatch_start_day_of_year_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "start_day_of_year", number);
+	});
+}
+
 SAM_EXPORT void SAM_Battery_SystemCosts_om_batt_replacement_cost_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_array(ptr, "om_batt_replacement_cost", arr, length);
@@ -1115,6 +1121,12 @@ SAM_EXPORT void SAM_Battery_ElectricityRates_en_electricity_rates_nset(SAM_table
 SAM_EXPORT void SAM_Battery_ElectricityRates_rate_escalation_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_array(ptr, "rate_escalation", arr, length);
+	});
+}
+
+SAM_EXPORT void SAM_Battery_ElectricityRates_start_day_of_year_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "start_day_of_year", number);
 	});
 }
 
@@ -2662,6 +2674,15 @@ SAM_EXPORT double SAM_Battery_BatteryDispatch_dispatch_manual_system_charge_firs
 	return result;
 }
 
+SAM_EXPORT double SAM_Battery_BatteryDispatch_start_day_of_year_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "start_day_of_year", &result))
+		make_access_error("SAM_Battery", "start_day_of_year");
+	});
+	return result;
+}
+
 SAM_EXPORT double* SAM_Battery_SystemCosts_om_batt_replacement_cost_aget(SAM_table ptr, int* length, SAM_error *err){
 	double* result = nullptr;
 	translateExceptions(err, [&]{
@@ -3084,6 +3105,15 @@ SAM_EXPORT double* SAM_Battery_ElectricityRates_rate_escalation_aget(SAM_table p
 	result = ssc_data_get_array(ptr, "rate_escalation", length);
 	if (!result)
 		make_access_error("SAM_Battery", "rate_escalation");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Battery_ElectricityRates_start_day_of_year_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "start_day_of_year", &result))
+		make_access_error("SAM_Battery", "start_day_of_year");
 	});
 	return result;
 }

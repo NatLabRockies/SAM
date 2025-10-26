@@ -143,6 +143,14 @@ extern "C"
 	 */
 	SAM_EXPORT void SAM_Levpartflip_Revenue_ppa_soln_tolerance_nset(SAM_table ptr, double number, SAM_error *err);
 
+	/**
+	 * Set start_day_of_year: Start day of year for TOD periods [0..6]
+	 * options: 0=Monday, 6=Sunday
+	 * constraints: None
+	 * required if: ?=0
+	 */
+	SAM_EXPORT void SAM_Levpartflip_Revenue_start_day_of_year_nset(SAM_table ptr, double number, SAM_error *err);
+
 
 	//
 	// FinancialParameters parameters
@@ -2446,6 +2454,8 @@ extern "C"
 	SAM_EXPORT double SAM_Levpartflip_Revenue_ppa_soln_mode_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Levpartflip_Revenue_ppa_soln_tolerance_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Levpartflip_Revenue_start_day_of_year_nget(SAM_table ptr, SAM_error *err);
 
 
 	/**

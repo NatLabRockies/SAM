@@ -203,27 +203,30 @@ void LocationSetup::OnAddressChange( wxCommandEvent & )
 
 	wxYield();
 
-	double lat, lon, tz;
+	double lat = std::numeric_limits<double>::quiet_NaN();
+	double lon = std::numeric_limits<double>::quiet_NaN();
+	double tz = std::numeric_limits<double>::quiet_NaN();
+	
 	// use GeoTools::GeocodeGoogle for non-NREL builds and set google_api_key in private.h
-	// temporary fix for tz to address SAM issue 2092 until NREL Developer API for geocode is modified to return time zone
-	if (GeoTools::GeocodeDeveloper(m_address->GetValue(), &lat, &lon, &tz))
+	if (GeoTools::GeocodeDeveloper(m_address->GetValue(), &lat, &lon))
 	{
 		m_lat->SetValue(lat);
 		m_lon->SetValue(lon);
-		m_tz->SetValue(tz);
-	}
-	else if (GeoTools::GeocodeDeveloper(m_address->GetValue(), &lat, &lon))
-	{
-		m_lat->SetValue(lat);
-		m_lon->SetValue(lon);
-		wxMessageBox("Geocode error!\nTime zone API call failed. Please set time zone value manually.");
 	}
 	else
 	{
 		wxMessageBox("Geocode error!\nFailed to geocode address.");
 		return;
 	}
-
+	if (GeoTools::GetTimeZone(&lat, &lon, &tz))
+	{
+		m_tz->SetValue(tz);
+	}
+	else
+	{
+		wxMessageBox("Geocode error!\nTime zone API call failed. Please set time zone value manually.");
+		return;
+	}
 	DownloadMap();
 }
 

@@ -17,7 +17,7 @@
         "6par_imp": 12.82,
         "6par_is_bifacial": 1.0,
         "6par_isc": 13.71,
-        "6par_module_length": 2.2772351657218019,
+        "6par_module_length": 2.277235165721802,
         "6par_module_name": "Aptos Solar Technology LLC DNA-144-BF10-530W (from CEC database)",
         "6par_module_width": 1.1329528187670657,
         "6par_mounting": 0.0,
@@ -9538,7 +9538,7 @@
         "cec_i_sc_ref": 13.71,
         "cec_is_bifacial": 1.0,
         "cec_material": "Mono-c-Si",
-        "cec_module_length": 2.2772351657218019,
+        "cec_module_length": 2.277235165721802,
         "cec_module_width": 1.1329528187670657,
         "cec_mounting_config": 0.0,
         "cec_mounting_orientation": 0.0,
@@ -19588,7 +19588,7 @@
                 6.57771
             ]
         ],
-        "in_location": "Type a location name, street address, or lat,lon in decimal degrees",
+        "in_location": "",
         "in_location_list": "|||",
         "in_location_options": 0.0,
         "in_nsrdb_options": 0.0,
@@ -21568,7 +21568,7 @@
         "module_area": 2.58,
         "module_aspect_ratio": 2.01,
         "module_costunits": 0.0,
-        "module_length": 2.2772351657218019,
+        "module_length": 2.277235165721802,
         "module_model": 1.0,
         "module_name": "Aptos Solar Technology LLC DNA-144-BF10-530W",
         "module_num_units": 188412.0,
@@ -21736,7 +21736,6 @@
             0.0
         ],
         "solar_data_file_name": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
-        "solar_data_file_name_load": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
         "solar_data_source": "NSRDB",
         "solar_resource": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy",
         "solar_resource_file": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
@@ -21756,7 +21755,7 @@
         "spe_eff4": 20.5,
         "spe_fd": 1.0,
         "spe_is_bifacial": 1.0,
-        "spe_module_length": 2.2772351657218019,
+        "spe_module_length": 2.277235165721802,
         "spe_module_structure": 1.0,
         "spe_module_width": 1.1329528187670657,
         "spe_power": 528.9,
@@ -34402,6 +34401,7 @@
         "grid_interconnection_limit_kwac": 20000.0,
         "hybrid_system_capacity": 275215.82,
         "inflation_rate": 2.5,
+        "lbl_fom_dispatch_message": "",
         "om_batt_capacity_cost": [
             7.25
         ],
@@ -52984,6 +52984,8 @@
         "show_ReserveAccounts": 1.0,
         "show_construction_period": 1.0,
         "solution_mode_message": "",
+        "start_day_of_year": 3.335046e-317,
+        "start_day_of_year_tod_ui": 3.335046e-317,
         "state_tax_rate": [
             7.0
         ],

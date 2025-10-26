@@ -40,7 +40,7 @@ extern "C"
 	SAM_EXPORT void SAM_MhkCosts_MHKCosts_assembly_and_install_cost_input_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set assembly_and_install_cost_method: Assembly and installation cost method [0/1/2]
+	 * Set assembly_and_install_cost_method: Assembly and installation cost method [0-4]
 	 * options: 0=Enter in $/kW,1=Enter in $,2=Use modeled value
 	 * constraints: MIN=0,MAX=4
 	 * required if: *
@@ -72,7 +72,7 @@ extern "C"
 	SAM_EXPORT void SAM_MhkCosts_MHKCosts_development_cost_input_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set development_cost_method: Development cost method [0/1/2]
+	 * Set development_cost_method: Development cost method [0-4]
 	 * options: 0=Enter in $/kW,1=Enter in $,2=Use modeled value,3=Enter in itemized costs
 	 * constraints: MIN=0,MAX=4
 	 * required if: *
@@ -120,7 +120,7 @@ extern "C"
 	SAM_EXPORT void SAM_MhkCosts_MHKCosts_elec_infras_cost_input_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set elec_infras_cost_method: Electrical infrastructure cost method [0/1/2]
+	 * Set elec_infras_cost_method: Electrical infrastructure cost method [0-4]
 	 * options: 0=Enter in $/kW,1=Enter in $,2=Use modeled value
 	 * constraints: MIN=0,MAX=4
 	 * required if: *
@@ -160,7 +160,7 @@ extern "C"
 	SAM_EXPORT void SAM_MhkCosts_MHKCosts_eng_and_mgmt_cost_input_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set eng_and_mgmt_cost_method: Engineering and management cost method [0/1/2]
+	 * Set eng_and_mgmt_cost_method: Engineering and management cost method [0-4]
 	 * options: 0=Enter in $/kW,1=Enter in $,2=Use modeled value,3=Enter in itemized costs
 	 * constraints: MIN=0,MAX=4
 	 * required if: *
@@ -184,14 +184,6 @@ extern "C"
 	SAM_EXPORT void SAM_MhkCosts_MHKCosts_eng_and_mgmt_cost_total_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set export_cable_length: Export cable length [m]
-	 * options: None
-	 * constraints: MIN=0
-	 * required if: *
-	 */
-	SAM_EXPORT void SAM_MhkCosts_MHKCosts_export_cable_length_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
 	 * Set insurance_during_construction_cost_input: Insurance during construction cost [$]
 	 * options: None
 	 * constraints: None
@@ -200,7 +192,7 @@ extern "C"
 	SAM_EXPORT void SAM_MhkCosts_MHKCosts_insurance_during_construction_cost_input_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set insurance_during_construction_cost_method: Insurance during construction cost method [0/1/2]
+	 * Set insurance_during_construction_cost_method: Insurance during construction cost method [0-3]
 	 * options: 0=Enter in $/kW,1=Enter in $,2=Use modeled value
 	 * constraints: MIN=0,MAX=4
 	 * required if: *
@@ -214,14 +206,6 @@ extern "C"
 	 * required if: insurance_during_construction_cost_method=3
 	 */
 	SAM_EXPORT void SAM_MhkCosts_MHKCosts_insurance_during_construction_cost_rvalue_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
-	 * Set inter_array_cable_length: Inter-array cable length [m]
-	 * options: None
-	 * constraints: MIN=0
-	 * required if: *
-	 */
-	SAM_EXPORT void SAM_MhkCosts_MHKCosts_inter_array_cable_length_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
 	 * Set lib_tidal_device: Tidal library name
@@ -256,7 +240,7 @@ extern "C"
 	SAM_EXPORT void SAM_MhkCosts_MHKCosts_maintenance_cost_input_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set maintenance_cost_method: Maintenance cost method [0/1/2]
+	 * Set maintenance_cost_method: Maintenance cost method [0-4]
 	 * options: 0=Enter in $/kW,1=Enter in $,2=Use modeled value
 	 * constraints: MIN=0,MAX=4
 	 * required if: *
@@ -296,7 +280,7 @@ extern "C"
 	SAM_EXPORT void SAM_MhkCosts_MHKCosts_mooring_found_substruc_cost_input_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set mooring_found_substruc_cost_method: Mooring, foundation, and substructure cost method [0/1/2]
+	 * Set mooring_found_substruc_cost_method: Mooring, foundation, and substructure cost method [0-4]
 	 * options: 0=Enter in $/kW,1=Enter in $,2=Use modeled value,3=Use itemized costs in $
 	 * constraints: MIN=0,MAX=4
 	 * required if: *
@@ -328,7 +312,7 @@ extern "C"
 	SAM_EXPORT void SAM_MhkCosts_MHKCosts_operations_cost_input_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set operations_cost_method: Operations cost method [0/1/2]
+	 * Set operations_cost_method: Operations cost method [0-4]
 	 * options: 0=Enter in $/kW,1=Enter in $,2=Use modeled value
 	 * constraints: MIN=0,MAX=4
 	 * required if: *
@@ -360,7 +344,7 @@ extern "C"
 	SAM_EXPORT void SAM_MhkCosts_MHKCosts_other_financial_cost_input_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set other_financial_cost_method: Other financial cost method [0/1/2]
+	 * Set other_financial_cost_method: Other financial cost method [0-3]
 	 * options: 0=Enter in $/kW,1=Enter in $,2=Use modeled value
 	 * constraints: MIN=0,MAX=4
 	 * required if: *
@@ -384,7 +368,7 @@ extern "C"
 	SAM_EXPORT void SAM_MhkCosts_MHKCosts_other_infrastructure_cost_input_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set other_infrastructure_cost_method: Other infrastructure cost method [0/1/2]
+	 * Set other_infrastructure_cost_method: Other infrastructure cost method [0-4]
 	 * options: 0=Enter in $/kW,1=Enter in $,2=Use modeled value
 	 * constraints: MIN=0,MAX=4
 	 * required if: *
@@ -416,7 +400,7 @@ extern "C"
 	SAM_EXPORT void SAM_MhkCosts_MHKCosts_plant_commissioning_cost_input_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set plant_commissioning_cost_method: Plant commissioning cost method [0/1/2]
+	 * Set plant_commissioning_cost_method: Plant commissioning cost method [0-3]
 	 * options: 0=Enter in $/kW,1=Enter in $,2=Use modeled value
 	 * constraints: MIN=0,MAX=4
 	 * required if: *
@@ -440,7 +424,7 @@ extern "C"
 	SAM_EXPORT void SAM_MhkCosts_MHKCosts_power_takeoff_system_cost_input_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set power_takeoff_system_cost_method: Power take-off system cost method [0/1/2]
+	 * Set power_takeoff_system_cost_method: Power take-off system cost method [0-4]
 	 * options: 0=Enter in $/kW,1=Enter in $,2=Use modeled value,3=Use itemized costs in $
 	 * constraints: MIN=0,MAX=4
 	 * required if: *
@@ -464,7 +448,7 @@ extern "C"
 	SAM_EXPORT void SAM_MhkCosts_MHKCosts_project_contingency_cost_input_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set project_contingency_cost_method: Project contingency cost method [0/1/2]
+	 * Set project_contingency_cost_method: Project contingency cost method [0-3]
 	 * options: 0=Enter in $/kW,1=Enter in $,2=Use modeled value
 	 * constraints: MIN=0,MAX=4
 	 * required if: *
@@ -488,7 +472,7 @@ extern "C"
 	SAM_EXPORT void SAM_MhkCosts_MHKCosts_reserve_accounts_cost_input_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set reserve_accounts_cost_method: Reserve accounts cost method [0/1/2]
+	 * Set reserve_accounts_cost_method: Reserve accounts cost method [0-4]
 	 * options: 0=Enter in $/kW,1=Enter in $,2=Use modeled value
 	 * constraints: MIN=0,MAX=4
 	 * required if: *
@@ -512,14 +496,6 @@ extern "C"
 	SAM_EXPORT void SAM_MhkCosts_MHKCosts_reserve_accounts_cost_total_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set riser_cable_length: Riser cable length [m]
-	 * options: None
-	 * constraints: MIN=0
-	 * required if: *
-	 */
-	SAM_EXPORT void SAM_MhkCosts_MHKCosts_riser_cable_length_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
 	 * Set site_access_port_staging_cost_input: Site access and port staging cost [$]
 	 * options: None
 	 * constraints: None
@@ -528,7 +504,7 @@ extern "C"
 	SAM_EXPORT void SAM_MhkCosts_MHKCosts_site_access_port_staging_cost_input_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set site_access_port_staging_cost_method: Site access and port staging cost method [0/1/2]
+	 * Set site_access_port_staging_cost_method: Site access and port staging cost method [0-4]
 	 * options: 0=Enter in $/kW,1=Enter in $,2=Use modeled value
 	 * constraints: MIN=0,MAX=4
 	 * required if: *
@@ -560,7 +536,7 @@ extern "C"
 	SAM_EXPORT void SAM_MhkCosts_MHKCosts_structural_assembly_cost_input_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set structural_assembly_cost_method: Structural assembly cost method [0/1/2]
+	 * Set structural_assembly_cost_method: Structural assembly cost method [0-4]
 	 * options: 0=Enter in $/kW,1=Enter in $,2=Use modeled value,3=Use itemized costs in $
 	 * constraints: MIN=0,MAX=4
 	 * required if: *
@@ -634,15 +610,11 @@ extern "C"
 
 	SAM_EXPORT double SAM_MhkCosts_MHKCosts_eng_and_mgmt_cost_total_nget(SAM_table ptr, SAM_error *err);
 
-	SAM_EXPORT double SAM_MhkCosts_MHKCosts_export_cable_length_nget(SAM_table ptr, SAM_error *err);
-
 	SAM_EXPORT double SAM_MhkCosts_MHKCosts_insurance_during_construction_cost_input_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_MhkCosts_MHKCosts_insurance_during_construction_cost_method_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_MhkCosts_MHKCosts_insurance_during_construction_cost_rvalue_nget(SAM_table ptr, SAM_error *err);
-
-	SAM_EXPORT double SAM_MhkCosts_MHKCosts_inter_array_cable_length_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT const char* SAM_MhkCosts_MHKCosts_lib_tidal_device_sget(SAM_table ptr, SAM_error *err);
 
@@ -715,8 +687,6 @@ extern "C"
 	SAM_EXPORT double SAM_MhkCosts_MHKCosts_reserve_accounts_cost_rvalue_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_MhkCosts_MHKCosts_reserve_accounts_cost_total_nget(SAM_table ptr, SAM_error *err);
-
-	SAM_EXPORT double SAM_MhkCosts_MHKCosts_riser_cable_length_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_MhkCosts_MHKCosts_site_access_port_staging_cost_input_nget(SAM_table ptr, SAM_error *err);
 

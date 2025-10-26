@@ -1,7 +1,7 @@
 {
     "Name": "Electric Building Load Calculator",
     "Width": 636.0,
-    "Height": 621.0,
+    "Height": 634.0,
     "FormObjects": {
         "GroupBox": {
             "Visible": 1.0,
@@ -16,7 +16,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 489.0
+                    "Integer": 510.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -61,7 +61,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 470.0
+                    "Integer": 501.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -90,7 +90,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 501.0
+                    "Integer": 522.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -880,7 +880,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 444.0
+                    "Integer": 480.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1075,7 +1075,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 2016.0
+                    "Integer": 24.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -1441,11 +1441,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 126.0
+                    "Integer": 129.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 510.0
+                    "Integer": 528.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -4051,6 +4051,47 @@
                     "Boolean": 0.0
                 }
             }
+        },
+        "Choice": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "start_day_of_year_belpe_ui"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 258.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 438.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 90.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Items": {
+                    "Type": 6.0,
+                    "StringList": "Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday"
+                },
+                "Selection": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
         }
     },
     "VarDatabase": {
@@ -4503,6 +4544,19 @@
             "UIObject": "Default",
             "sscVariableName": "",
             "sscVariableValue": ""
+        },
+        "start_day_of_year_belpe_ui": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "January 1 day of week",
+            "Units": "",
+            "Group": "Residential Load Calculator",
+            "IndexLabels": "",
+            "Flags": 0.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Choice",
+            "sscVariableName": "",
+            "sscVariableValue": ""
         }
     },
     "Equations": [
@@ -4560,7 +4614,8 @@
         "\tssc_var(obj, 'en_wash', ${en_wash});",
         "\tssc_var(obj, 'en_dry', ${en_dry});",
         "\tssc_var(obj, 'en_mels', ${en_mels});",
-        "\tssc_var(obj, 'Monthly_util', ${Monthly_util});",
+        "\tssc_var(obj, 'Monthly_util', ${Monthly_util});\r",
+        "\tssc_var(obj, 'start_day_of_year', ${start_day_of_year});",
         "\tssc_exec(obj, 'belpe', {'show_dialog'=true, 'hold_dialog'=true});",
         "\t",
         "\tdview(1, 1, 'Electric Load', 'Load', 'kWh', 1, ssc_var(obj, 'load'));",
@@ -4568,6 +4623,9 @@
         "\tssc_free(obj);",
         "};",
         "",
-        ""
+        "on_change{'start_day_of_year_belpe_ui'} = define() {\r",
+        "\tvalue('start_day_of_year', value('start_day_of_year_belpe_ui'));\r",
+        "\tvalue('start_day_of_year_load_ui', value('start_day_of_year_belpe_ui'));\r",
+        "};"
     ]
 }

@@ -224,7 +224,7 @@
 		"UtilityBill": {
 		},
 		"Lifetime": {
-			"system_use_lifetime_output": 0
+			"system_use_lifetime_output": 1
 		},
 		"CommunitySolar": {
 			"cs_cost_recurring_capacity": [10.000000],
