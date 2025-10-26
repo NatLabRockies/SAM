@@ -128,12 +128,6 @@ SAM_EXPORT void SAM_MhkCosts_MHKCosts_eng_and_mgmt_cost_total_nset(SAM_table ptr
 	});
 }
 
-SAM_EXPORT void SAM_MhkCosts_MHKCosts_export_cable_length_nset(SAM_table ptr, double number, SAM_error *err){
-	translateExceptions(err, [&]{
-		ssc_data_set_number(ptr, "export_cable_length", number);
-	});
-}
-
 SAM_EXPORT void SAM_MhkCosts_MHKCosts_insurance_during_construction_cost_input_nset(SAM_table ptr, double number, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_number(ptr, "insurance_during_construction_cost_input", number);
@@ -149,12 +143,6 @@ SAM_EXPORT void SAM_MhkCosts_MHKCosts_insurance_during_construction_cost_method_
 SAM_EXPORT void SAM_MhkCosts_MHKCosts_insurance_during_construction_cost_rvalue_nset(SAM_table ptr, double number, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_number(ptr, "insurance_during_construction_cost_rvalue", number);
-	});
-}
-
-SAM_EXPORT void SAM_MhkCosts_MHKCosts_inter_array_cable_length_nset(SAM_table ptr, double number, SAM_error *err){
-	translateExceptions(err, [&]{
-		ssc_data_set_number(ptr, "inter_array_cable_length", number);
 	});
 }
 
@@ -371,12 +359,6 @@ SAM_EXPORT void SAM_MhkCosts_MHKCosts_reserve_accounts_cost_rvalue_nset(SAM_tabl
 SAM_EXPORT void SAM_MhkCosts_MHKCosts_reserve_accounts_cost_total_nset(SAM_table ptr, double number, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_number(ptr, "reserve_accounts_cost_total", number);
-	});
-}
-
-SAM_EXPORT void SAM_MhkCosts_MHKCosts_riser_cable_length_nset(SAM_table ptr, double number, SAM_error *err){
-	translateExceptions(err, [&]{
-		ssc_data_set_number(ptr, "riser_cable_length", number);
 	});
 }
 
@@ -605,15 +587,6 @@ SAM_EXPORT double SAM_MhkCosts_MHKCosts_eng_and_mgmt_cost_total_nget(SAM_table p
 	return result;
 }
 
-SAM_EXPORT double SAM_MhkCosts_MHKCosts_export_cable_length_nget(SAM_table ptr, SAM_error *err){
-	double result;
-	translateExceptions(err, [&]{
-	if (!ssc_data_get_number(ptr, "export_cable_length", &result))
-		make_access_error("SAM_MhkCosts", "export_cable_length");
-	});
-	return result;
-}
-
 SAM_EXPORT double SAM_MhkCosts_MHKCosts_insurance_during_construction_cost_input_nget(SAM_table ptr, SAM_error *err){
 	double result;
 	translateExceptions(err, [&]{
@@ -637,15 +610,6 @@ SAM_EXPORT double SAM_MhkCosts_MHKCosts_insurance_during_construction_cost_rvalu
 	translateExceptions(err, [&]{
 	if (!ssc_data_get_number(ptr, "insurance_during_construction_cost_rvalue", &result))
 		make_access_error("SAM_MhkCosts", "insurance_during_construction_cost_rvalue");
-	});
-	return result;
-}
-
-SAM_EXPORT double SAM_MhkCosts_MHKCosts_inter_array_cable_length_nget(SAM_table ptr, SAM_error *err){
-	double result;
-	translateExceptions(err, [&]{
-	if (!ssc_data_get_number(ptr, "inter_array_cable_length", &result))
-		make_access_error("SAM_MhkCosts", "inter_array_cable_length");
 	});
 	return result;
 }
@@ -972,15 +936,6 @@ SAM_EXPORT double SAM_MhkCosts_MHKCosts_reserve_accounts_cost_total_nget(SAM_tab
 	translateExceptions(err, [&]{
 	if (!ssc_data_get_number(ptr, "reserve_accounts_cost_total", &result))
 		make_access_error("SAM_MhkCosts", "reserve_accounts_cost_total");
-	});
-	return result;
-}
-
-SAM_EXPORT double SAM_MhkCosts_MHKCosts_riser_cable_length_nget(SAM_table ptr, SAM_error *err){
-	double result;
-	translateExceptions(err, [&]{
-	if (!ssc_data_get_number(ptr, "riser_cable_length", &result))
-		make_access_error("SAM_MhkCosts", "riser_cable_length");
 	});
 	return result;
 }
