@@ -133,6 +133,9 @@
     "crit_8": 0.0,
     "crit_9": 0.0,
     "dc_ac_ratio": 1.15,
+    "dc_degradation": [
+        0.5
+    ],
     "degradation": [
         0.5
     ],
@@ -8939,7 +8942,7 @@
         1e38
     ],
     "grid_interconnection_limit_kwac": 100000.0,
-    "in_location": "Type a location name, street address, or lat,lon in decimal degrees",
+    "in_location": "",
     "in_location_list": "|||",
     "in_location_options": 0.0,
     "in_nsrdb_options": 0.0,
@@ -26524,7 +26527,7 @@
         1.71415,
         1.87435
     ],
-    "nominal_discount_rate": 9.060000000000003,
+    "nominal_discount_rate": 9.060000000000004,
     "normalize_to_utility_bill": 0.0,
     "peak_1": 1.85407,
     "peak_10": 2.55071,
@@ -26589,15 +26592,17 @@
         0.0
     ],
     "solar_data_file_name": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
-    "solar_data_file_name_load": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
     "solar_data_source": "NSRDB",
     "solar_resource": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy",
     "solar_resource_file": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
+    "start_day_of_year": 3.335046e-317,
+    "start_day_of_year_belpe_ui": 0.0,
+    "start_day_of_year_load_ui": 3.335046e-317,
     "state": "-",
     "station_id": "78208",
     "step": 3600.0,
     "system_capacity": 6.4,
-    "system_use_lifetime_output": 0.0,
+    "system_use_lifetime_output": 1.0,
     "tilt": 20.0,
     "total_land_area": 0.02774514111048713,
     "total_module_area": 33.68421052631579,

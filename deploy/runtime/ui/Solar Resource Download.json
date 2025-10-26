@@ -1,0 +1,1241 @@
+{
+    "Name": "Solar Resource Download",
+    "Width": 882.0,
+    "Height": 294.0,
+    "FormObjects": {
+        "Hyperlink": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "Hyperlink2"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 258.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 598.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 28.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Visit the SAM website Weather Page for links to other data sources."
+                },
+                "URL": {
+                    "Type": 5.0,
+                    "String": "https://sam.nrel.gov/weather-data"
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                }
+            }
+        },
+        "Button": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "btn_download"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 636.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 75.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 236.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 28.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Download"
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 9.0
+                }
+            }
+        },
+        "Button": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "btn_show_log"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 636.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 258.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 236.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 28.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Show download log"
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "download_weather_caption"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 15.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 855.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 36.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Caption set by show_hide_advanced() functcion"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "TextEntry": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "in_location"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 180.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 120.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 687.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 28.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Text": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 2.0
+                }
+            }
+        },
+        "StringArray": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "in_location_list"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 333.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 207.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 99.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Label": {
+                    "Type": 5.0,
+                    "String": "List of locations"
+                },
+                "Description": {
+                    "Type": 5.0,
+                    "String": "Type or import a list of addresses or lat,lon in decimal degrees"
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 7.0
+                }
+            }
+        },
+        "RadioChoice": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "in_location_options"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 51.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 207.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 180.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Selection": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Items": {
+                    "Type": 6.0,
+                    "StringList": "One location|Multiple locations"
+                },
+                "ShowCaptions": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Horizontal": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "Choice": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "in_nsrdb_options"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 114.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 174.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 258.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 28.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Items": {
+                    "Type": 6.0,
+                    "StringList": "Default TMY file|Choose year|Download files for all years"
+                },
+                "Selection": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 6.0
+                }
+            }
+        },
+        "RadioChoice": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "in_time_step"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 462.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 207.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 180.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Selection": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Items": {
+                    "Type": 6.0,
+                    "StringList": "60-minute|30-minute"
+                },
+                "ShowCaptions": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Horizontal": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 7.0
+                }
+            }
+        },
+        "RadioChoice": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "is_advanced"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 36.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 66.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 522.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Selection": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Items": {
+                    "Type": 6.0,
+                    "StringList": "Type an address or coordinates to download latest NSRDB data|Use Advanced NSRDB Options window to access all available data"
+                },
+                "ShowCaptions": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Horizontal": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "GroupBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 4"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 9.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 870.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 288.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Download Weather Files"
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Divider": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "options_divider"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 156.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 846.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 16.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Orientation": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Colour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 120.0,
+                        "Green": 120.0,
+                        "Blue": 120.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Options"
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        }
+    },
+    "VarDatabase": {
+        "in_location": {
+            "Version": 4.0,
+            "Type": 4.0,
+            "Label": "Address or coordinates",
+            "Units": " ",
+            "Group": "Location and Resource",
+            "IndexLabels": "",
+            "Flags": 0.0,
+            "DefaultValue": "",
+            "UIObject": "TextEntry",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "in_location_list": {
+            "Version": 4.0,
+            "Type": 4.0,
+            "Label": "List of locations",
+            "Units": " ",
+            "Group": "Location and Resource",
+            "IndexLabels": "abc",
+            "Flags": 0.0,
+            "DefaultValue": "15458 Denver W Pkwy, Golden CO 804041|phoenix,az|45.5,-120.9|Manaus,Brazil",
+            "UIObject": "StringArray",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "in_location_options": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Download from a list of locations",
+            "Units": " ",
+            "Group": "Location and Resource",
+            "IndexLabels": "One location|Multiple locations",
+            "Flags": 1.0,
+            "DefaultValue": 0.0,
+            "UIObject": "RadioChoice",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "in_nsrdb_options": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "File options",
+            "Units": " ",
+            "Group": "Location and Resource",
+            "IndexLabels": "Default TMY file|Choose year|Download files for all years",
+            "Flags": 0.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Choice",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "in_time_step": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Time Step option (0=60 min,1=30 min)",
+            "Units": " ",
+            "Group": "Location and Resource",
+            "IndexLabels": "60-minute|30-minute",
+            "Flags": 1.0,
+            "DefaultValue": 0.0,
+            "UIObject": "RadioChoice",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "is_advanced": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Advanced download option",
+            "Units": " ",
+            "Group": "Location and Resource",
+            "IndexLabels": "Type an address or coordinates to download latest NSRDB data|Use Advanced NSRDB Options window to access all available data",
+            "Flags": 1.0,
+            "DefaultValue": 0.0,
+            "UIObject": "RadioChoice",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        }
+    },
+    "Equations": [
+        "",
+        ""
+    ],
+    "Callbacks": [
+        "on_load{'Solar Resource Download'} = define() {\r",
+        "\t//msgbox('Debug\\non_load Solar Resource Download');",
+        "\tenable('in_location_list', value('in_location_options') == 1 );\r",
+        "\tshow_hide_advanced();\r",
+        "};",
+        "\r",
+        "on_change{'btn_download'} = define() {",
+        "\tif ( value( 'is_advanced' ) ) { nsrdb_all(); }",
+        "\telse { nsrdb_get(); }",
+        "};",
+        "\r",
+        "on_change{'btn_show_log'} = define() {\r",
+        "\tfolder = replace(wfdownloaddir(),'\\\\','/');\r",
+        "\tlog_file = folder + '/sam_nsrdb_download_log.txt';\r",
+        "\tif ( file_exists( log_file ) ) {\r",
+        "\t\tbrowse(log_file); \r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\tmsgbox('Failed to open download log.\\n' + log_file);\r",
+        "\t}\r",
+        "};\r",
+        "\r",
+        "on_change{ 'in_location_options' } = define() {\r",
+        "\tenable('in_location_list', value('in_location_options') == 1 );\r",
+        "};\r",
+        "\r",
+        "on_change{ 'in_nsrdb_options' } = define() {\r",
+        "\tenable('in_location_list', value('in_location_options') == 1 && !value('is_advanced'));\r",
+        "\tenable('in_location', value('in_location_options') == 0 && !value('is_advanced'));\r",
+        "\tenable('in_location_options', !value('is_advanced') );\r",
+        "\t// 30-minute data not available for tmy\r",
+        "\tshow('in_time_step', value('in_nsrdb_options') != 0 && !value('is_advanced')); \r",
+        "\trefresh();\r",
+        "};\r",
+        "\r",
+        "on_change{ 'is_advanced' } = define() {\r",
+        "\tshow_hide_advanced();\r",
+        "};\r",
+        "\r",
+        "function show_hide_advanced() {\r",
+        "\tif ( value('is_advanced') ) {\r",
+        "\t\tproperty( 'download_weather_caption' , 'Caption' , 'Click the Download button to choose files from a complete list of files available from the NSRDB, including TMY, TGY, TDY for different years and subhourly data.');\r",
+        "\t\tproperty( 'download_weather_caption' , 'TextColour', 'black' );\r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\tproperty( 'download_weather_caption' , 'Caption' , 'The NSRDB is a database of weather files that you can download and add to your to your solar resource library: Download a default typical-year (TMY) file for most long-term cash flow analyses, or choose files for single-year or P50/P90 analyses. See Help for details.' );\r",
+        "\t\tproperty( 'download_weather_caption' , 'TextColour', 'black' );\r",
+        "\t}\r",
+        "\tshow('options_divider', !value('is_advanced') );\r",
+        "\tshow('in_location_options', !value('is_advanced') );\r",
+        "\tshow('in_nsrdb_options', !value('is_advanced') );\r",
+        "\tshow('in_time_step', value('in_nsrdb_options') != 0 && !value('is_advanced')); \r",
+        "\tshow('in_location_list', !value('is_advanced') );\r",
+        "\tshow('in_location', !value('is_advanced') );\r",
+        "\trefresh();\r",
+        "}\r",
+        "\r",
+        "// NSRDB Download Functions Start Here //////\r",
+        "\r",
+        "// check JSON returned by a call to NSRDB Data Query for a valid response\r",
+        "function nsrdb_query_json_check( json_str ) {\r",
+        "\tvar = json_read( json_str );\r",
+        "\t//msgbox('Debug\\nvar.errors = ' + var.errors + '\\nvar.error = ' + var.error);\r",
+        "\t//msgbox('Debug\\nvar.outputs = ' + var.outputs);\r",
+        "\t//msgbox('Debug\\nvar = ' + var);\r",
+        "\t\r",
+        "\tmsg = '';\r",
+        "\t// json is valid if var is a table and var.errors is empty\r",
+        "\tif ( typeof( var ) == 'table' ) {\r",
+        "\t\tif ( var.errors != null) {\r",
+        "\t\t\tif ( #var.errors > 0 ) {\r",
+        "\t\t\t\tjson_ok = false;\r",
+        "\t\t\t\tmsg += 'Message from NSRDB Data Query: ' + var.errors[0] + '.\\nStatus = ' + var.status;\r",
+        "\t\t\t}\r",
+        "\t\t\telse {\r",
+        "\t\t\t\tjson_ok = true;\r",
+        "\t\t\t}\r",
+        "\t\t}\r",
+        "\t\t// if invalid key is supplied, API returns error with code and message\r",
+        "\t\telseif ( var.error != null ) {\r",
+        "\t\t\tif ( #@var.error > 0 ) {\r",
+        "\t\t\t\tjson_ok = false;\r",
+        "\t\t\t\tmsg += 'NSRDB Data Query Error: ' + var.error.message + '.\\nCode = ' + var.error.code;\r",
+        "\t\t\t\tif ( strpos( lower(var.code), 'api' ) > -1 ) { msg += 'See private.h to set API keys.'; }\r",
+        "\t\t\t}\t\r",
+        "\t\t}\r",
+        "\t\t// some locations are not covered by the NSRDB\r",
+        "\t\tif ( var.outputs == null ) {\r",
+        "\t\t\tjson_ok = false;\r",
+        "\t\t\tmsg += 'NSRDB Data Query returns no data (outputs = null) for this location.\\n\\nSee https://sam.nrel.gov/weather for links to other data sources.\\n';\r",
+        "\t\t}\r",
+        "\t\telseif ( var.outputs == [] ) {\r",
+        "\t\t\tjson_ok = false;\r",
+        "\t\t\tmsg += 'NSRDB Data Query returns no data (outputs = []) for this location.\\n\\nSee https://sam.nrel.gov/weather for links to other data sources.\\n';\r",
+        "\t\t}\r",
+        "\t}\r",
+        "\t// NSRDB API service could be down\r",
+        "\telse {\r",
+        "\t\tjson_ok = false;\r",
+        "\t\tmsg += 'NSRDB Data Query did not return valid JSON string:\\n\\n';\r",
+        "\t\tmsg += json_str;\r",
+        "\t}\r",
+        "\t\r",
+        "\tif ( !json_ok ) {\r",
+        "\t\tvar == null; \r",
+        "\t}\r",
+        "\t\r",
+        "\treturn {'json_ok' = json_ok, 'msg' = msg, 'var' = var };\r",
+        "}\r",
+        "\r",
+        "// converts a file path to a key for the solar resource library\r",
+        "function file_to_key( file ) {\r",
+        "\t\tkey = file_only( file );\r",
+        "\t\tkey = replace( key, '.' + ext_only( file ), '' );\r",
+        "\t\treturn key;\r",
+        "}\r",
+        "\r",
+        "// display window for advanced download\r",
+        "function nsrdb_all() {\r",
+        "\thash = nsrdbquery();\r",
+        "\t// meta data\r",
+        "\tif ( hash != '' ) { \r",
+        "\t\tfn = hash{'file'};\r",
+        "\t\tdn = hash{'folder'};\r",
+        "\t\taf = hash{'addfolder'};\r",
+        "\t\tif ( fn != '' ) {\r",
+        "\t\t\terror = wf_check( fn );\r",
+        "\t\t}\t\r",
+        "\t\tif (af == \"no\") {\r",
+        "\t\t\tif ((fn != '') && (dn != '')) {\r",
+        "\t\t\t\tvalue( 'use_specific_weather_file', 1 );\r",
+        "\t\t\t\tfn = replace(fn, '\\\\', '/');\r",
+        "\t\t\t\tvalue( 'user_specified_weather_file', fn );\r",
+        "\t\t\t}\r",
+        "\t\t}\r",
+        "\t\telse {\r",
+        "\t\t\trescanlibrary( 'solar' );  //** is this necessary??\r",
+        "\t\t\tif (fn != '') {\r",
+        "\t\t\t\tvalue( 'use_specific_weather_file', 0 );\r",
+        "\t\t\t\tvalue( 'solar_resource', file_to_key( fn ) );\r",
+        "\t\t\t}\r",
+        "\t\t}\r",
+        "\t}\r",
+        "}\r",
+        "\r",
+        "// clean up location string to use as file name\r",
+        "function clean_name( location ) {\r",
+        "\tname = \"\";\r",
+        "\r",
+        "\t// remove  characters not allowed file names https://en.wikipedia.org/wiki/Filename\r",
+        "\t// this approach allows non-latin characters for international location names\r",
+        "\tfor ( i=0; i<strlen(location); i++ ) {\r",
+        "\t\tc = mid(location,i,1);\r",
+        "\t\tif ( c == '<' || c == '>' || c == ':' || c == '/' || c == '\\\\' || c == '|' || c == '?' || c == '*' || c == '\\\"' || ascii(c) == 39 || c == '%' || c == ',' || c == '.' || c == ';' || c == '=' || c == ' ' || c == '&' || c == '#' || c == '(' || c == ')' || ascii(c) == 176 || ascii(c) == 8243 || ascii(c) == 8242 ) { \r",
+        "\t\t\tc = '_';\r",
+        "\t\t}\r",
+        "\t\tname += c;\r",
+        "\t}\t\r",
+        "\r",
+        "\t// remove consecutive underscores\r",
+        "\tname = replace( name , '____' , '_' );\r",
+        "\tname = replace( name , '__' , '_' );\r",
+        "\treturn name;\r",
+        "}\r",
+        "\r",
+        "// return a set of NSRDB urls for valid datasets available for a given lat/lon\r",
+        "// uses NSRDB Data Query on NREL Developer API\r",
+        "function nsrdb_query( lat, lon, is_tmy ) {\r",
+        "\tname = '';\r",
+        "\turl = '';\r",
+        "\tyears = [];\r",
+        "\tmsg = '';\r",
+        "\tjson_ok = false; // call to nsrdb API returned valid json with outputs\r",
+        "\tdataset_ok = false; // requested data is available from NSRDB API\r",
+        "\t\r",
+        "\turl = webapi( 'nsrdb_query' );\r",
+        "\turl = replace( url, '<LAT>', lat );\r",
+        "\turl = replace( url, '<LON>', lon );\r",
+        "\t//msgbox('Debug\\nurl = ' + url);\r",
+        "\tjson_str = curl( url );\r",
+        "\tmsg += 'Latitude / longitude for NSRDB Data Query: ' + lat + ',' + lon +  '\\n\\n';\r",
+        "\tmsg += 'URL for NSRDB Data Query: ' + url + '\\n\\n';\r",
+        "\r",
+        "\tapi_check = nsrdb_query_json_check( json_str );\r",
+        "\tjson_ok = api_check.json_ok;\r",
+        "\r",
+        "\tif ( json_ok ) {\r",
+        "\t\tvar = api_check.var;\r",
+        "\t\tavailable_datasets = var.outputs;\r",
+        "\t\t//msgbox('Debug\\navailable_datasets = ' + available_datasets);\r",
+        "\t\t// store available names for troubleshooting message\r",
+        "\t\tfor ( i=0; i<#available_datasets; i++ ) {\r",
+        "\t\t\tavailable_names[i] = available_datasets[i].name;\r",
+        "\t\t}\r",
+        "\t\t//msgbox('Debug\\navailable_names = ' + available_names);\r",
+        "\t\ti_dataset = -1;\r",
+        "\t\t// get index of dataset for requested file (tmy or single-year)\r",
+        "\t\t// this chooses the best available dataset and needs to be updated as NSRDB changes\r",
+        "\t\tfor ( i=0; i<#available_datasets; i++ ) {\r",
+        "\t\t\tname = available_datasets[i].name;\r",
+        "\t\t\tif ( is_tmy ) {\r",
+        "\t\t\t\t// only use himawari-tmy if nsrdb-GOES-tmy-v4-0-0 is not available\r",
+        "\t\t\t\tif ( name == 'himawari-tmy' && (available_names ?@ 'nsrdb-GOES-tmy-v4-0-0') < 0 ) {\r",
+        "\t\t\t\t\ti_dataset = i;\r",
+        "\t\t\t\t}\r",
+        "\t\t\t\t// only use suny-india-tmy if himawari-tmy is not available\r",
+        "\t\t\t\telseif ( name == 'suny-india-tmy' && (available_names ?@ 'himawari-tmy') < 0 ) {\r",
+        "\t\t\t\t\ti_dataset = i;\r",
+        "\t\t\t\t}\r",
+        "\t\t\t\telseif ( name == 'nsrdb-GOES-tmy-v4-0-0' ) {\r",
+        "\t\t\t\t\ti_dataset = i;\r",
+        "\t\t\t\t}\r",
+        "\t\t\t\telseif( name == 'nsrdb-msg-v1-0-0-tmy' ) {\r",
+        "\t\t\t\t\ti_dataset = i;\r",
+        "\t\t\t\t}\r",
+        "\t\t\t}\r",
+        "\t\t\telse { // single year\r",
+        "\t\t\t\tif ( name == 'msg-iodc' && (available_names ?@ 'himawari') < 0 ) {\r",
+        "\t\t\t\t\ti_dataset = i;\r",
+        "\t\t\t\t}\r",
+        "\t\t\t\telseif ( name == 'full-disc' && (available_names ?@ 'nsrdb-GOES-aggregated-v4-0-0') < 0 ) {\r",
+        "\t\t\t\t\ti_dataset = i;\r",
+        "\t\t\t\t}\r",
+        "\t\t\t\telseif ( name == 'himawari' && (available_names ?@ 'nsrdb-GOES-aggregated-v4-0-0') < 0 ) {\r",
+        "\t\t\t\t\ti_dataset = i;\r",
+        "\t\t\t\t}\r",
+        "\t\t\t\telseif ( name == 'nsrdb-GOES-aggregated-v4-0-0' ) {\r",
+        "\t\t\t\t\ti_dataset = i;\r",
+        "\t\t\t\t}\r",
+        "\t\t\t}\t\r",
+        "\t\t\t//msgbox('Debug\\navailable_datasets[i].name = ' + available_datasets[i].name + '\\ni_dataset = ' + i_dataset);\r",
+        "\t\t}\t\r",
+        "\t\tif ( i_dataset == -1 ) {\r",
+        "\t\t\tstr_tmy = '';\r",
+        "\t\t\tif ( is_tmy ) {\r",
+        "\t\t\t\tstr_tmy = 'TMY'; \r",
+        "\t\t\t}\r",
+        "\t\t\tmsg += 'No ' + str_tmy + ' file available for ' + lat + ', ' + lon + '. (Available datasets: ' + available_names + ')\\n\\n';\r",
+        "\t\t\tmsg += 'Try the Advanced Download option or see https://sam.nrel.gov/weather for other sources of data.\\n';\r",
+        "\t\t\tdataset_ok = false;\r",
+        "\t\t}\r",
+        "\t\telse {\r",
+        "\t\t\tname = var.outputs[i_dataset].name;\r",
+        "\t\t\turl = var.outputs[i_dataset].apiUrl+'.csv';\r",
+        "\t\t\tyears = var.outputs[i_dataset].availableYears;\r",
+        "\t\t\tdataset_ok = true;\r",
+        "\t\t}\r",
+        "\t}\r",
+        "\telse { \r",
+        "\t\tmsg += api_check.msg;\r",
+        "\t}\r",
+        "\tok_test = ( lat != null && lon != null && dataset_ok == true );\r",
+        "\t//msgbox('Debug\\nok_test = ' + ok_test + '\\nlat = ' + lat\t+ '\\nlon = ' + lon + '\\ndataset_ok = ' + dataset_ok );\r",
+        "\t//msgbox('Debug\\nmsg = ' + msg);\r",
+        "\treturn { 'name' = name , 'msg' = msg , 'url' = url, 'years' = years , 'ok' = ok_test };\r",
+        "}\r",
+        "\r",
+        "function wf_check( wf ) {\r",
+        "\tssc = ssc_create();\r",
+        "\tssc_var( ssc, 'input_file', wf );\r",
+        "\tresult = ssc_exec( ssc, 'wfcheck', {'show_dialog'=false} );\r",
+        "\tresult = to_string( result );\r",
+        "\tssc_free( ssc );\r",
+        "\treturn result;\r",
+        "}\r",
+        "\r",
+        "function nsrdb_get() {\r",
+        "\tenum { ADDRESS, COORDINATES };\r",
+        "\tenum { TMY, SINGLE_YEAR, ALL_YEARS };\r",
+        "\tenum { ONE_LOCATION, MULTIPLE_LOCATIONS };\r",
+        "\tenum { HOURLY, HALF_HOURLY };\r",
+        "\tdownload_ok = false;\r",
+        "\tfile_skipped = false; // skip download if file exists\r",
+        "\tcoordinate_list = []; // list of lat/lon values for locations\r",
+        "\trequested_name_list = []; // to use in filename\r",
+        "\ttype = []; // store type output from API like \"tmy\" or year\r",
+        "\r",
+        "\tfolder = replace( wfdownloaddir(), '\\\\', '/' );\r",
+        "\tlog_file = folder + '/sam_nsrdb_download_log.txt';\r",
+        "\tif ( file_exists( log_file ) ) {\r",
+        "\t\tflog = open( log_file , 'a' );\r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\tflog = open( log_file, 'w' );\r",
+        "\t}\r",
+        "\twrite_line( flog, '==========================================================');\t\r",
+        "\twrite_line( flog, 'NSRDB Download ' + date_time());\r",
+        "\twrite_line( flog, '==========================================================\\n');\t\r",
+        "\r",
+        "\t//msgbox('Debug\\ngetting location(s)');\r",
+        "\r",
+        "\tpb = progressbar( { 'title' = 'Download Progress' , 'message' = 'Preparing download...' , 'cancelbutton' = true , 'closebutton' = true , 'time' = false , 'max' = 100 } );\r",
+        "\tpb_count = 0;\r",
+        "\r",
+        "\twrite_line( flog, 'Geocoding results:' );\r",
+        "\r",
+        "\t// get list of locations\r",
+        "\tif ( value( 'in_location_options' ) == ONE_LOCATION ) {\r",
+        "\t\trequested_name_list = [value('in_location')]; // for generating filename\r",
+        "\t}\r",
+        "\telse { // multiple locations\r",
+        "\t\tstr = value('in_location_list'); // string with '|' delimiter\r",
+        "\t\tstr = replace( str, '\\\"', '' ); // files from spreadsheets may use quotes for strings\r",
+        "\t\trequested_name_list = split(str, '|');\r",
+        "\t}\r",
+        "\t//msgbox('Debug/requested_name_list = ' + requested_name_list);\r",
+        "\t// geocode each location in the list of requested names\r",
+        "\tn_valid = 0;\r",
+        "\tpb_i = 30 / #requested_name_list; // step 1 geocode\r",
+        "\tfor (i=0; i<#requested_name_list; i++) {\r",
+        "\t\tg = geocode( requested_name_list[i] ); // geocode function skips lat/lon locations\r",
+        "\t\t//msgbox('Debug\\ngeocode g='+g);\r",
+        "\t\tif ( g.ok ) {\r",
+        "\t\t\t//msgbox('Debug\\ng.ok='+g.ok);\r",
+        "\t\t\tcoordinate_list[n_valid] = [g.lat, g.lon];\r",
+        "\t\t\tn_valid++;\r",
+        "\t\t\t//msgbox('Debug\\n'+'* Location \\\"' + requested_name_list[i] + '\\\" geocoded to ' + to_string([g.lat,g.lon]));\r",
+        "\t\t\twrite_line( flog, '* Location \\\"' + requested_name_list[i] + '\\\" geocoded to ' + to_string([g.lat,g.lon]) );\r",
+        "\t\t\tprogressbar( pb, {'message' = requested_name_list[i] + ' geocoded to ' + to_string([g.lat,g.lon]) , value = pb_count});\r",
+        "\t\t}\r",
+        "\t\telse {\r",
+        "\t\t\t//msgbox('Debug\\ng.ok='+g.ok);\r",
+        "\t\t\t//msgbox('Debug\\nrequested_name_list[i]='+requested_name_list[i]);\r",
+        "\t\t\twrite_line( flog, '* Location \\\"' + requested_name_list[i] + '\\\" geocoding failed. Location skipped.');\t\r",
+        "\t\t\tprogressbar( pb, {'message' = requested_name_list[i] + ' geocoding failed. Location skipped.', value = pb_count});\r",
+        "\t\t}\r",
+        "\t\tpb_count += pb_i;\r",
+        "\t}\r",
+        "\r",
+        "\tstr_list = '';\r",
+        "\tfor ( i=0; i<#requested_name_list; i++ ) {\r",
+        "\t\tstr_list += '\\\"' + requested_name_list[i] + '\\\"'; \r",
+        "\t\tif ( i<#requested_name_list-1) {\r",
+        "\t\t\tstr_list += ', ';\r",
+        "\t\t}\r",
+        "\t}\r",
+        "\twrite_line( flog, '\\nRequested location(s): [ ' + str_list + ' ]\\n');\r",
+        "\t\r",
+        "\tdownload_option = value('in_nsrdb_options');\r",
+        "\tif ( value( 'in_time_step' ) == HOURLY || download_option == TMY ) { // tmy is always hourly\r",
+        "\t\ttime_step = '60'; \r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\ttime_step = '30'; \r",
+        "\t}\r",
+        "\r",
+        "\t// for each location (as lat/lon pair)\r",
+        "\t//msgbox('Debug\\n#coordinate_list = ' + #coordinate_list );\r",
+        "\tfor ( n=0; n<#coordinate_list; n++ ) {\r",
+        "\t\tlat = coordinate_list[n][0];\r",
+        "\t\tlon = coordinate_list[n][1];\r",
+        "\t\twrite_line( flog, '----------------------------------------------------------');\t\r",
+        "\t\twrite_line( flog, 'Location ' + to_string(n+1) + ' of ' + #coordinate_list + ': ' + coordinate_list[n]  + '');\r",
+        "\t\twrite_line( flog, '----------------------------------------------------------\\n');\t\r",
+        "\t\tdataset[n] = nsrdb_query( lat, lon, download_option == TMY );\r",
+        "\t\t//msgbox('Debug\\ndataset[n] = ' + dataset[n]);\r",
+        "\t\tif ( !dataset[n].ok ) {\r",
+        "\t\t\twrite_line( flog, dataset[n].msg + '\\n');\r",
+        "\t\t\tprogressbar(pb, {'message' = 'NSRDB Data Query failed.', 'value'= pb_count});\r",
+        "\t\t\tmsgbox('NSRDB Data Query Failed.\\n' + dataset[n].msg);\r",
+        "\t\t\tcontinue;\r",
+        "\t\t}\t\r",
+        "\t\tif ( download_option == TMY ) { // this needs to work for both nsrdb-GOES-tmy-v4-0-0 and suny-india-tmy\r",
+        "\t\t\ttype = ['tmy']; // should get newest TMY file for nsrdb-GOES-tmy-v4-0-0, or tmy for suny-india-tmy\r",
+        "\t\t}\r",
+        "\t\telseif ( download_option == SINGLE_YEAR ) {\r",
+        "\t\t\ty = choose_from_list( dataset[n].years, 'Choose a year', 'Available Years for \\\"' + coordinate_list[n] +'\\\"', 0 ); \r",
+        "\t\t\tif (y == '') {\r",
+        "\t\t\t\twrite_line( flog, 'Year not valid: Selection cancelled by user.\\n' );\r",
+        "\t\t\t\tcontinue;\r",
+        "\t\t\t}\r",
+        "\t\t\telse {\t\r",
+        "\t\t\t\ttype = [to_int( y )]; \r",
+        "\t\t\t}\r",
+        "\t\t}\r",
+        "\t\telse { // all years\r",
+        "\t\t\ttype = dataset[n].years; \r",
+        "\t\t}\r",
+        "\t\t//msgbox('Debug\\ntype = ' + type);\r",
+        "\t\twrite_line( flog, 'Requested year(s): ' + type );\r",
+        "\t\tif ( dataset[n].ok ) { \r",
+        "\t\t\tbase_url = dataset[n].url;\r",
+        "\t\t\tbase_url += '?api_key=<SAMAPIKEY>';\r",
+        "\t\t\tbase_url += '&full_name=sam_user';\r",
+        "\t\t\tbase_url += '&email=<USEREMAIL>';\r",
+        "\t\t\tbase_url += '&affiliation=unknown'; \r",
+        "\t\t\tbase_url += '&mailing_list=false';\r",
+        "\t\t\tbase_url += '&reason=SAM';\r",
+        "\t\t\tbase_url += '&interval=' + time_step;\r",
+        "\t\t\tbase_url += '&utc=false';\r",
+        "\t\t\tbase_url += '&leap_day=false';\r",
+        "\r",
+        "\t\t\t// create folder for multiple years to facilitate\r",
+        "\t\t\t// p50 p90 and add to library folders list\r",
+        "\t\t\t// do not put tmy file in multiple year folder\r",
+        "\t\t\t// use default folder if mdkir() fails\r",
+        "\t\t\tdefault_download_path = replace( folder, '\\\\', '/' );\r",
+        "\t\t\ttmy_path = replace( default_download_path, '\\\\', '/' );\r",
+        "\t\t\tpath = replace ( default_download_path, '\\\\', '/' );\r",
+        "\t\t\tif ( #type > 1 ) {\r",
+        "\t\t\t\tfn = clean_name(requested_name_list[n]);\r",
+        "\t\t\t\tpath = path + '/' + fn;\r",
+        "\t\t\t\tif ( !dir_exists( path ) ) {\r",
+        "\t\t\t\t\tif ( !mkdir( path, false ) ) {\r",
+        "\t\t\t\t\t\tpath = default_download_path; \r",
+        "\t\t\t\t\t}\r",
+        "\t\t\t\t}\r",
+        "\t\t\t\tif ( path != default_download_path /*&& i == 0*/) {\r",
+        "\t\t\t\t\trescanlibrary('solar'); \r",
+        "\t\t\t\t}\r",
+        "\t\t\t}\r",
+        "\t\t\t\r",
+        "\t\t\t// for each year\r",
+        "\t\t\tbase = base_url;\r",
+        "\t\t\t//msgbox('Debug\\n\\n#type = ' + #type + '\\n#coordinate_list = ' + #coordinate_list + '\\npb_i = ' + pb_i);\r",
+        "\t\t\tpb_i = 60/#type/#coordinate_list; // step 2 download files\r",
+        "\t\t\tfor( i=0; i<#type; i++ ) {\r",
+        "\t\t\t\t//msgbox('Debug\\ni = ' + i);\r",
+        "\t\t\t\tbase_url = base;\r",
+        "\t\t\t\tfile_skipped = false;\r",
+        "\t\t\t\t// only get attributes SAM needs for simulations\r",
+        "\t\t\t\t// otherwise default is to get all attributes\r",
+        "\t\t\t\t// https://developer.nrel.gov/docs/solar/nsrdb/\r",
+        "\t\t\t\tif ( dataset[n].name == 'nsrdb-GOES-aggregated-v4-0-0') {\r",
+        "\t\t\t\t\tbase_url += '&attributes=dni,dhi,ghi,dew_point,air_temperature,surface_pressure,relative_humidity,wind_direction,wind_speed,surface_albedo,clearsky_dhi,clearsky_dni,clearsky_ghi';\r",
+        "\t\t\t\t}\r",
+        "\t\t\t\telseif ( dataset[n].name == 'nsrdb-GOES-tmy-v4-0-0') {\r",
+        "\t\t\t\t\tbase_url += '&attributes=dni,dhi,ghi,dew_point,air_temperature,surface_pressure,wind_direction,wind_speed,surface_albedo,clearsky_dhi,clearsky_dni,clearsky_ghi';\r",
+        "\t\t\t\t}\r",
+        "\t\t\t\telseif ( dataset[n].name == 'suny-india' ) {\r",
+        "\t\t\t\t\tbase_url += '&attributes=dni,dhi,ghi,dew_point,surface_temperature,surface_pressure,relative_humidity,wdir,wspd,snow_depth';\r",
+        "\t\t\t\t}\r",
+        "\t\t\t\telseif ( dataset[n].name == 'suny-india-tmy' ) {\r",
+        "\t\t\t\t\tbase_url += '&attributes=dni,dhi,ghi,dew_point,air_temperature,surface_pressure,wind_direction,wind_speed';\r",
+        "\t\t\t\t}\r",
+        "\t\t\t\telseif ( dataset[n].name == 'msg-iodc' ) {\r",
+        "\t\t\t\t\tbase_url += '&attributes=dni,dhi,ghi,dew_point,air_temperature,surface_pressure,relative_humidity,wind_direction,wind_speed,surface_albedo,clearsky_dhi,clearsky_dni,clearsky_ghi';\r",
+        "\t\t\t\t}\r",
+        "\t\t\t\twrite_line( flog, '\\nFile ' + to_string(i+1) + ' of ' + #type + ': ' + type[i]);\r",
+        "\t\t\t\twrite_line( flog, '-----------------------------\\n');\t\r",
+        "\t\t\t\turl = base_url + '&names=' + to_string(type[i]);\r",
+        "\t\t\t\turl += '&wkt=POINT(' + lon + '%20' + lat + ')'; // note WKT is lon/lat, not lat/lon\r",
+        "\t\t\t\twrite_line( flog, url + '\\n');\r",
+        "\t\t\t\t// filename is requested location followed by lat/lon\r",
+        "\t\t\t\tfname = path + '/' + clean_name(requested_name_list[n]) + '_' + lat + '_' + lon + '_' + dataset[n].name + '_' + time_step + '_' + type[i] + '.csv';\r",
+        "\t\t\t\tif ( type[i] == 'tmy' ) { // for multiple year p50 p90 download\r",
+        "\t\t\t\t\tfname = replace( fname, path, tmy_path ); \r",
+        "\t\t\t\t\tfname_tmy = fname;\r",
+        "\t\t\t\t}\r",
+        "\t\t\t\t// check to see if file is already in library\r",
+        "\t\t\t\tlib_files = [];\r",
+        "\t\t\t\tlib_data = csvread( userlocaldatadir() + '/SolarResourceData.csv', { 'skip'=3 } );\r",
+        "\t\t\t\tf_exists = false;\r",
+        "\t\t\t\tfor (j=0; j<#lib_data; j++) {\r",
+        "\t\t\t\t\tlib_files[j] = replace(lib_data[j][10],'\\\\','/');\r",
+        "\t\t\t\t\tif ( fname == replace(lib_data[j][10],'\\\\','/') ) {\r",
+        "\t\t\t\t\t\tf_exists = true;\r",
+        "\t\t\t\t\t}\r",
+        "\t\t\t\t}\r",
+        "\t\t\t\t// don't download if file exists\r",
+        "\t\t\t\tif ( f_exists ) {\r",
+        "\t\t\t\t\tfile_skipped = true;\r",
+        "\t\t\t\t\twrite_line( flog, 'Download skipped, file already exists: ' + fname + '\\n');\r",
+        "\t\t\t\t\tprogressbar(pb, {'message' = 'Skipping ' + file_only(fname) + '. File already in library.', 'value' = pb_count });\r",
+        "\t\t\t\t\tif ( #coordinate_list == 1 ) {\r",
+        "\t\t\t\t\t\t//msgbox('Debug\\nfile_to_key( fname ) = ' + file_to_key( fname ));\r",
+        "\t\t\t\t\t\tvalue( 'solar_resource', file_to_key( fname ) );\r",
+        "\t\t\t\t\t\t//msgbox('Debug\\nvalue(\\'solar_resource\\') = ' + value('solar_resource'));\r",
+        "\t\t\t\t\t}\t\r",
+        "\t\t\t\t}\r",
+        "\t\t\t\t// all is good so far, proceed with download\r",
+        "\t\t\t\telse {\r",
+        "\t\t\t\t\twf_error = '';\r",
+        "\t\t\t\t\tstart = start_timer();\r",
+        "\t\t\t\t\tprogressbar(pb, {'message' = 'Getting file(s) for ' + requested_name_list[n] + ' from ' + dataset[n].name + ' (' + type[i] + '). File ' + to_string(i+1) + ' of ' + #type + '.', 'value' = pb_count });\r",
+        "\t\t\t\t\tcurl_ok = curl( url , { 'file'= fname } ); // curl() should replace <SAMAPI> from private.h and <USEREMAIL > from registry\r",
+        "\t\t\t\t\ttime = elapsed_time() / 1000;\r",
+        "\t\t\t\t\twrite_line( flog, 'Download time: ' + time + ' seconds.\\n' );\r",
+        "\t\t\t\t\tif ( !curl_ok ) {\r",
+        "\t\t\t\t\t\twrite_line( flog, 'Failed to download file from NSRDB: cURL failed.');\r",
+        "\t\t\t\t\t\tprogressbar(pb, {'message' = 'Failed to download weather file ' + fname, 'value' = pb_count });\r",
+        "\t\t\t\t\t}\r",
+        "\t\t\t\t\telse { // download succeeded\r",
+        "\t\t\t\t\t\twf_error = wf_check( fname );\r",
+        "\t\t\t\t\t\tif ( wf_error == '0' ) { // weather file valid\r",
+        "\t\t\t\t\t\t\tdownload_ok = true;\r",
+        "\t\t\t\t\t\t}\r",
+        "\t\t\t\t\t\tif ( wf_error == 'no file name given to weather file reader' ){ // wfcheck may fail for filename with unicode characters, e.g., cyrillic\r",
+        "\t\t\t\t\t\t\t// remove location name with problematic characters from file name\r",
+        "\t\t\t\t\t\t\tfname_old = fname;\r",
+        "\t\t\t\t\t\t\tfname_new = path + '/' + lat + '_' + lon + '_' + dataset[n].name + '_' + time_step + '_' + type[i] + '.csv';\r",
+        "\t\t\t\t\t\t\trename_file( fname, fname_new);\r",
+        "\t\t\t\t\t\t\ttest = wf_check( fname_new );\r",
+        "\t\t\t\t\t\t\tif ( test == '0' ) {\r",
+        "\t\t\t\t\t\t\t\tdownload_ok = true;\r",
+        "\t\t\t\t\t\t\t\tfname = fname_new;\r",
+        "\t\t\t\t\t\t\t\tif ( type[i] == 'tmy' ) { // for multiple year p50 p90 downloads\r",
+        "\t\t\t\t\t\t\t\t\tfname_tmy = fname_new;\r",
+        "\t\t\t\t\t\t\t\t}\r",
+        "\t\t\t\t\t\t\t\tprogressbar(pb, {'message' = 'Weather file renamed to \\\"' + file_only( fname ) +'\\\" due to invalid characters. See download log for details', 'value' = pb_count });\r",
+        "\t\t\t\t\t\t\t\twrite_line( flog, 'Weather file renamed to remove invalid characters: Old name = ' + fname_old + ', new name = ' + fname_new + '.\\n');\r",
+        "\t\t\t\t\t\t\t}\r",
+        "\t\t\t\t\t\t\telse {\r",
+        "\t\t\t\t\t\t\t\trename_file( fname, fname_old );\r",
+        "\t\t\t\t\t\t\t\tfname = fname_old;\r",
+        "\t\t\t\t\t\t\t}\r",
+        "\t\t\t\t\t\t}\r",
+        "\t\t\t\t\t\tif ( download_ok == false) { // usually indicates NSRDB returned a file containing error message instead of weather data\r",
+        "\t\t\t\t\t\t\tprogressbar(pb, {'message' = 'Weather file test failed for ' + file_only( fname ) +'. See download log for details', 'value' = pb_count });\r",
+        "\t\t\t\t\t\t\twrite_line( flog, 'Weather file test failed, ' + wf_error + ': ' + fname + '.\\n');\r",
+        "\t\t\t\t\t\t\tfile_text = read_text_file( fname );\r",
+        "\t\t\t\t\t\t\tif ( #file_text < 1000 ) { // likely json or html with message from server\r",
+        "\t\t\t\t\t\t\t\twrite_line( flog, 'Text from file:\\n' +  file_text );\r",
+        "\t\t\t\t\t\t\t}\r",
+        "\t\t\t\t\t\t\tfname_new = replace( fname, '.csv' , '_bad.txt' ); // rename file so next download attempt won't detect existing file\r",
+        "\t\t\t\t\t\t\tok = rename_file( fname , fname_new );\r",
+        "\t\t\t\t\t\t\tif ( ok ) { \r",
+        "\t\t\t\t\t\t\t\twrite_line( flog, '* File renamed to: ' + fname_new + '.\\n' );\r",
+        "\t\t\t\t\t\t\t}\r",
+        "\t\t\t\t\t\t\telse {\r",
+        "\t\t\t\t\t\t\t\twrite_line( flog, '* Failed to rename ' + fname + '.\\n' );\t\r",
+        "\t\t\t\t\t\t\t}\t\r",
+        "\t\t\t\t\t\t}\r",
+        "\t\t\t\t\t\t// set library to last file that was downloaded and passed weather file test\r",
+        "\t\t\t\t\t\tif ( download_ok == true && i == #type - 1 ) {\r",
+        "\t\t\t\t\t\t\trescanlibrary('solar');\r",
+        "\t\t\t\t\t\t\twrite_line( flog, 'Weather file test passed: ' + fname + '.\\n');\r",
+        "\r",
+        "\t\t\t\t\t\t}\t\r",
+        "\t\t\t\t\t}\r",
+        "\t\t\t\t}\r",
+        "\t\t\t//msgbox('Debug\\npb_count = ' + pb_count);\r",
+        "\t\t\tpb_count += pb_i;\r",
+        "\t\t\t}\r",
+        "\t\t}\t\r",
+        "\t\telse {\r",
+        "\t\t\twrite_line( flog, dataset[n].msg + '\\n');\r",
+        "\t\t}\r",
+        "\t}\r",
+        "\t\r",
+        "\t// downloads are finished, so finish reporting results\r",
+        "\tclose ( flog );\r",
+        "\tif ( file_skipped ) { // file already exists\r",
+        "\t\t//msgbox('Debug\\nFile skipped');\r",
+        "\t\tprogressbar( pb, { 'message' = 'Download finished: File(s) already in library.', 'value' = 100 } );\r",
+        "\t\t//str = 'File already in library.\\n Download skipped.\\n\\n' + fname;\r",
+        "\t\t//msgbox( 'Debug\\nstr = ' + str );\r",
+        "\t}\r",
+        "\telseif ( !download_ok ) {\r",
+        "\t\tprogressbar( pb, { 'message' = 'Download finished: Failed for one or more locations.', 'value' = 100 } );\r",
+        "\t\t//show_log = yesno( 'Download Messages\\nOpen log file to see messages?');\r",
+        "\t\t//if ( show_log ) { browse( log_file ); }\r",
+        "\t}\r",
+        "\telseif ( #type > 1 ) { // multiple years\r",
+        "\t\tis_uncertainty_tech = (technology() == 'Flat Plate PV' || technology() == 'PVWatts' );\r",
+        "\t\tstr = 'Download complete!\\n';\r",
+        "\t\tstr += 'Multiple single-year files downloaded to:\\n  ' + path + '\\n\\n';\r",
+        "\t\tstr += 'Do you want to show instructions for running ' + ? is_uncertainty_tech ['P50/P90', 'Uncertainty' ] + ' simulations now?';\r",
+        "\t\tprogressbar( pb, { 'message' = 'Download complete!', 'value' = 100 } );\r",
+        "\t\tif ( yesno( str ) ) {\r",
+        "\t\t\tfolder = path;\r",
+        "\t\t\tp50p90_text = 'Instructions for running P50/P90 simulations:\\n\\n'\r",
+        "\t\t\t+ '1. Click P50 / P90 at the bottom left of the main SAM window.\\n\\n'\r",
+        "\t\t\t+ '2. Click the ellipses (...) to the right of the Select Weather File Folder box.\\n\\n'\r",
+        "\t\t\t+ '3. Navigate to ' + folder + '.\\n\\n'\r",
+        "\t\t\t+ '4. Click \"Run P50/P90 simulations\".\\n'\r",
+        "\t\t\t+ '\\nIf you want to set a custom P value in addition to P10, P50 and P90, you can type a value for \"Custom Px\" before running the simulations.'\r",
+        "\t\t\t+ '\\n\\nTo remove this note window, delete all of its contents and close the window.';\r",
+        "\t\t\tuncertainty_text = 'Instructions for running Uncertainty simulations:\\n\\n'\r",
+        "\t\t\t+ '1. Click Uncertainty at the bottom left of the main SAM window.\\n\\n'\r",
+        "\t\t\t+ '2. Click the Choose Folder button to the right of the Select Weather File Folder box.\\n\\n'\r",
+        "\t\t\t+ '3. Navigate to ' + folder + '.\\n\\n'\r",
+        "\t\t\t+ '4. Click the Run Uncertainty Simulations button at the top of the page.\\n'\r",
+        "\t\t\t+ '\\nIf you want to set a custom P value, type a value for \"Custom Px\" before running the simulations.'\r",
+        "\t\t\t+ '\\n\\nTo remove this note window, delete all of its contents and close the window.';\r",
+        "\t\t\tif ( is_uncertainty_tech ) { \r",
+        "\t\t\t\tpagenote( uncertainty_text ); \r",
+        "\t\t\t}\r",
+        "\t\t\telse {\r",
+        "\t\t\t\tpagenote( p50p90_text ); \r",
+        "\t\t\t}\r",
+        "\t\t}\r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\t/*str = 'Download complete!\\n';\r",
+        "\t\tstr += 'Weather file(s) downloaded to:\\n' + path + '.\\n';\r",
+        "\t\tstr += '\\nOpen log file?';\r",
+        "\t\tshow_log = yesno( str );\r",
+        "\t\tif ( show_log ) { browse( log_file ); }*/\r",
+        "\t\t//msgbox('Debug\\nComplete.');\r",
+        "\t\tvalue( 'solar_resource', file_to_key( fname ) );\r",
+        "\t\tprogressbar( pb, { 'message' = 'Download complete! Solar resource library set to ' + file_only(fname), 'value' = 100 } );\r",
+        "\t}\r",
+        "\tprogressbar( pb );\r",
+        "}\r",
+        ""
+    ]
+}

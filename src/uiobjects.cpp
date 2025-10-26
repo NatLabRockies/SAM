@@ -278,6 +278,7 @@ public:
 		AddProperty( "Bold", new wxUIProperty( true ) );
 		Property("Width").Set( 300 );
 		Property("Height").Set( 16 );
+		Show(true);
 	}
 	virtual wxString GetTypeName() { return "Divider"; }
 	virtual wxUIObject *Duplicate() { wxUIObject *o = new wxUIDividerObject; o->Copy( this ); return o; }
@@ -285,31 +286,33 @@ public:
 	virtual bool DrawDottedOutline() { return false; }
 	virtual void Draw( wxWindow *win, wxDC &dc, const wxRect &geom )
 	{
-		wxSize tsz( 10, 10 ); // text extents
-		wxString capt = Property("Caption").GetString();
-		if (!capt.IsEmpty() )
-		{
-			wxFont font( *wxNORMAL_FONT );
-			if ( Property("Bold").GetBoolean() ) font.SetWeight( wxFONTWEIGHT_BOLD );
-			dc.SetFont( font );
-			tsz = dc.GetTextExtent( capt );
-		}
-		
-		dc.SetPen( wxPen( Property("Colour").GetColour() ) );
-		bool horiz = (Property("Orientation").GetInteger() == 0);
-		if ( horiz ) dc.DrawLine( geom.x, geom.y+1+tsz.y/2, geom.x+geom.width, geom.y+1+tsz.y/2 );
-		else dc.DrawLine( geom.x+4, geom.y, geom.x+4, geom.y+geom.height );
-			
-		if ( !capt.IsEmpty() )
-		{
-			if ( horiz )
+		if (IsVisible()) {
+			wxSize tsz(10, 10); // text extents
+			wxString capt = Property("Caption").GetString();
+			if (!capt.IsEmpty())
 			{
-				dc.SetBrush( wxBrush( win->GetBackgroundColour() ) );
-				dc.SetPen( *wxTRANSPARENT_PEN );
-				dc.DrawRectangle(geom.x+5, geom.y, tsz.x+2, tsz.y+1);
+				wxFont font(*wxNORMAL_FONT);
+				if (Property("Bold").GetBoolean()) font.SetWeight(wxFONTWEIGHT_BOLD);
+				dc.SetFont(font);
+				tsz = dc.GetTextExtent(capt);
 			}
-			dc.SetTextForeground(wxSystemSettings::GetColour(wxSYS_COLOUR_BTNTEXT));
-			dc.DrawText( capt, geom.x+6, geom.y );
+
+			dc.SetPen(wxPen(Property("Colour").GetColour()));
+			bool horiz = (Property("Orientation").GetInteger() == 0);
+			if (horiz) dc.DrawLine(geom.x, geom.y + 1 + tsz.y / 2, geom.x + geom.width, geom.y + 1 + tsz.y / 2);
+			else dc.DrawLine(geom.x + 4, geom.y, geom.x + 4, geom.y + geom.height);
+
+			if (!capt.IsEmpty())
+			{
+				if (horiz)
+				{
+					dc.SetBrush(wxBrush(win->GetBackgroundColour()));
+					dc.SetPen(*wxTRANSPARENT_PEN);
+					dc.DrawRectangle(geom.x + 5, geom.y, tsz.x + 2, tsz.y + 1);
+				}
+				dc.SetTextForeground(wxSystemSettings::GetColour(wxSYS_COLOUR_BTNTEXT));
+				dc.DrawText(capt, geom.x + 6, geom.y);
+			}
 		}
 	}
 };

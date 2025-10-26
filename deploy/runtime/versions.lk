@@ -55,6 +55,136 @@ function variable_name_change(new, old){
 	value(new, oldvalue(old), 'Variable name changed from \"' + old + '\" to \"' +  new + '\"');
 }
 
+version_upgrade{'2025.9.19'} = define() {
+
+	const cfg = config();
+
+	if(cfg.tech == 'PVWatts' || cfg.tech == 'PVWatts Battery') {
+		message('PVWatts now runs in lifetime mode so that time series outputs are over the analysis period instead of one year.');
+		message('PVWatts degradation is now modeled as DC degradation instead of AC degradation. DC degradation is an annual reduction in the DC output of the array instead of AC output of the system.', 'warning');
+		old_degradation = oldvalue('degradation');
+
+		value('dc_degradation', old_degradation, 'New DC degradation on DC Degradation page set to old AC degradation value from AC Degradation page.');
+	}
+	if (cfg.tech == 'PVWatts Battery') {
+		message('PVWatts Battery configurations now use the detailed battery inputs to allow for modeling a full range of battery applications instead of only behind-the-meter applications with limited dispatch options.', 'warning');
+		old_kw = oldvalue('batt_simple_kw');
+		old_kwh = oldvalue('batt_simple_kwh');
+		old_dispatch = oldvalue('batt_simple_dispatch');
+		old_chem = oldvalue('batt_simple_chemistry'); // batt_type
+
+		// inputs from simple battery inputs on old PVWatts-Battery System Design page with explanation of where to find inputs
+		value('batt_bank_power', old_kw, 'Desired bank power (kWac) on Battery Cell and System page set to old battery power (kWac).');
+		value('batt_bank_size_ui', old_kwh, 'Desired bank capacity (kWhac) on Battery Cell and System page capacity set to old battery capacity kWhac).');
+		filename = '';
+		if (old_chem == 0) {
+			// Lead Acid
+			value('batt_type', 0, 'New battery type on Battery Cell and System page set to Lead Acid: Flooded from old battery chemistry Lead Acid.');
+			value('batt_chem', 0, 'New battery chemistry on Battery Cell and System page set to Lead Acid.');
+			filename = 'BatteryStateful_LeadAcid.json';
+		}
+		else {
+			// Li-ion NMC
+			value('batt_type', 8, 'New battery type on Battery Cell and System page set to Lithium-ion: NMC/Graphite from old battery chemistry Lithium Ion.' );
+			value('batt_chem', 1, 'New battery chemistry on Battery Cell and System page set to Lithium-ion.');
+			filename = 'BatteryStateful_NMCGraphite.json';
+			
+			value('batt_specific_energy_per_mass',101);
+			value('batt_specific_energy_per_volume',70);
+		}
+		
+		// Get batt defaults from data from Battery Model UI form
+		defaults_dir = replace(appdir(), '\\', '/' ) + '/../libraries/BatteryStateful/';
+		defaults_dir += filename;
+		x = read_json(defaults_dir);
+		defs = x.defaults;
+			
+		cell_params = defs.paramscell;
+		pack_params = defs.paramspack;
+		
+		value('batt_Qfull',cell_params.qfull);
+		value('batt_Vnom_default', cell_params.vnom_default);
+			
+		if (value('batt_chem') == 0) {
+			value('LeadAcid_q20',cell_params.leadacid_q20);
+			value('LeadAcid_q10',cell_params.leadacid_q10);
+			value('LeadAcid_qn',cell_params.leadacid_qn);
+			value('LeadAcid_tn',cell_params.leadacid_tn);
+		}
+		
+		if (cell_params.voltage_choice == 0) {
+			// voltage curve
+			value('batt_C_rate',cell_params.c_rate);
+			value('batt_Vfull',cell_params.vfull);
+			value('batt_Vexp',cell_params.vexp);
+			value('batt_Vnom',cell_params.vnom);
+			value('batt_Vcut',cell_params.vcut);
+			value('batt_Qexp',cell_params.qexp);
+			value('batt_Vnom',cell_params.vnom);
+			value('batt_Qexp_percent', cell_params.qexp/cell_params.qfull/0.01);
+			value('batt_Qnom_percent', cell_params.qnom/cell_params.qfull/0.01);
+		}
+		else {
+			value('batt_voltage_matrix', cell_params.voltage_matrix);
+		}
+		
+		value('batt_resistance', cell_params.resistance); // from UBGC2, and DC400-6
+		value('batt_voltage_choice', cell_params.voltage_choice);
+
+		value('batt_bank_voltage', pack_params.nominal_voltage);
+		
+		// Lifetime
+		value('batt_life_model', cell_params.life_model);
+		value('ui_batt_life_model', cell_params.life_model);
+		value('batt_lifetime_matrix',cell_params.cycling_matrix);
+		
+		// turn calendar life model off
+		value('batt_calendar_choice', cell_params.calendar_choice);
+		
+		// Thermal
+		value('cap_vs_temp', pack_params.cap_vs_temp);
+		value('batt_Cp',pack_params.cp);
+		
+		// ancillary system losses
+		zero_array = [];
+		for (m = 0; m != 12; m++)
+			month_array[m] = 0;
+		value('batt_losses_charging', zero_array);
+		value('batt_losses_discharging', zero_array);
+		value('batt_losses_idle', zero_array);
+
+		value('batt_duration_choice', 0); // sizing choice to kWh (not hours of storage)
+		value('batt_bank_size_dc_ac', 1); // set sizing units to AC to be consistent with simple battery
+
+		if (old_dispatch == 0 || old_dispatch == 1) {
+			value('batt_dispatch_choice_ui', 0, 'Dispatch option on Battery Dispatch page set to Peak Shaving from old Peak Shaving (look ahead) or Peak shaving (look behind) option.');
+			value('batt_dispatch_choice', 0);
+			value('batt_dispatch_excl', 0);
+			msg_pk_shaving = 'Peak shaving dispatch option on Battery Dispatch page set to Perfect Look Ahead.';
+			if ( old_dispatch == 1 ) {
+				msg_pk_shaving = 'Peak shaving dispatch option on Battery Dispatch page set to One Day Look Behind.';
+			}
+			value('peak_shaving_batt_dispatch_choice', old_dispatch, msg_pk_shaving);
+			value('batt_dispatch_load_forecast_choice_peak_shaving', old_dispatch);
+		}
+		else {
+			// Should only be 2 (custom dispatch)
+			value('batt_dispatch_choice_ui', old_dispatch, 'Dispatch option on Battery Dispatch page set to Input Battery Power Targets from old Custom Dispatch option.');
+			value('batt_dispatch_choice', old_dispatch);
+			value('batt_dispatch_excl', old_dispatch);
+		}
+
+		// From cmod_battwatts lines 254 - 259
+		value('batt_dispatch_auto_can_charge', true);
+		value('batt_dispatch_auto_can_gridcharge', true);
+		value('batt_dispatch_auto_btm_can_discharge_to_grid', true);
+		value('batt_dispatch_auto_can_clipcharge', false);
+		value('batt_dispatch_charge_only_system_exceeds_load', false);
+		value('batt_dispatch_discharge_only_load_exceeds_system', false);
+		
+	}
+};
+
 version_upgrade{'2024.12.12'} = define() {
 	
 	const cfg = config();

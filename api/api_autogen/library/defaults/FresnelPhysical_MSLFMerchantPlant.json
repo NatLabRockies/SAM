@@ -408,6 +408,7 @@
 			"en_electricity_rates": 0
 		},
 		"TimeOfDeliveryFactors": {
+			"start_day_of_year": 0
 		},
 		"FinancialSolutionMode": {
 		},

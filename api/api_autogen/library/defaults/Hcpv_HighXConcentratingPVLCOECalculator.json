@@ -1,6 +1,6 @@
 {
 	"defaults": {
-		"SolarResourceData": {
+		"SolarResourceInformation": {
 		},
 		"PVWatts": {
 			"system_capacity": 1126.66

@@ -590,6 +590,19 @@ void fcall_show_page(lk::invoke_t &cxt)
 	else cxt.error("no active case");
 }
 
+void fcall_export_cashflow_excel(lk::invoke_t& cxt)
+{
+	LK_DOC("export_cashflow_excel", "Exports the current cash flow to Excel from the active case (Windows only). Runs a simulation before exporting only if the case has no results.", "():boolean");
+	Case* active_case = CurrentCase();
+	if (CaseWindow* case_window = SamApp::Window()->GetCaseWindow(active_case)) {
+		cxt.result().assign(case_window->ExportCashflowExcel() ? 1.0 : 0.0);
+	}
+	else {
+		cxt.error("no active case window");
+		cxt.result().assign(0.0);
+	}
+}
+
 void fcall_widgetpos( lk::invoke_t &cxt )
 {
 	LK_DOC("widgetpos", "Get geometry in pixels in toplevel coordinates of the widget associated with the specified variable.", "(string:name):array" );
@@ -659,6 +672,7 @@ lk::fcall_t *sam_functions() {
 		fcall_simulate,
         fcall_simulate_ssc_tests,
 		fcall_show_page,
+		fcall_export_cashflow_excel,
 		fcall_widgetpos,
 		fcall_focusto,
 		fcall_configuration,

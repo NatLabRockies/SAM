@@ -68,7 +68,7 @@
     "escal_other": [
         0.0
     ],
-    "first_year_output": 30274.559999999998,
+    "first_year_output": 30274.56,
     "first_year_output_peak": 3.84,
     "grid_curtailment": [
         1e38,
@@ -26383,7 +26383,7 @@
         1.71415,
         1.87435
     ],
-    "nominal_discount_rate": 9.060000000000003,
+    "nominal_discount_rate": 9.060000000000004,
     "normalize_to_utility_bill": 0.0,
     "peak_1": 1.85407,
     "peak_10": 2.55071,
@@ -26405,6 +26405,8 @@
     "real_discount_rate": 6.4,
     "scale_factor": 1.0,
     "spec_mode": 0.0,
+    "start_day_of_year": 3.335046e-317,
+    "start_day_of_year_load_ui": 3.335046e-317,
     "system_capacity": 4.0,
     "system_capacity_combined": 0.0,
     "system_use_lifetime_output": 0.0,

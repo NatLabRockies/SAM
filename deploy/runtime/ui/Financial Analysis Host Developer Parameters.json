@@ -792,6 +792,19 @@
             "UIObject": "Default",
             "sscVariableName": "",
             "sscVariableValue": ""
+        },
+        "start_day_of_year": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Start day of the year",
+            "Units": "",
+            "Group": "Financial Analysis Parameters",
+            "IndexLabels": "",
+            "Flags": 0.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
         }
     },
     "Equations": [

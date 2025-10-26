@@ -170,6 +170,7 @@
 			"rock_thermal_conductivity": 3,
 			"specified_pump_work_amount": 0,
 			"specify_pump_work": 0,
+			"start_day_of_year": 0,
 			"startup_frac": 0.2,
 			"startup_time": 1,
 			"stim_success_rate": 0,

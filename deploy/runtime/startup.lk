@@ -16,7 +16,7 @@ addconfig( 'PVWatts', [ 'Residential', 'Commercial', 'Third Party', 'Host Develo
 addconfig( 'High-X Concentrating PV', ['Single Owner', 'Merchant Plant', 'Leveraged Partnership Flip', 'All Equity Partnership Flip', 'Sale Leaseback', 'LCOE Calculator', 'None']);
 // Energy Storage
 addconfig( 'PV Battery', ['Residential', 'Commercial', 'Third Party', 'Host Developer', 'Single Owner', 'Merchant Plant', 'Leveraged Partnership Flip', 'All Equity Partnership Flip', 'Sale Leaseback'] );
-addconfig( 'PVWatts Battery', ['Residential', 'Commercial', 'Third Party', 'Host Developer'] );
+addconfig( 'PVWatts Battery', ['Residential', 'Commercial', 'Third Party', 'Host Developer', 'Single Owner', 'Merchant Plant', 'Leveraged Partnership Flip', 'All Equity Partnership Flip', 'Sale Leaseback'] );
 addconfig( 'Custom Generation Battery', ['Residential', 'Commercial', 'Third Party', 'Host Developer', 'Single Owner', 'Merchant Plant', 'Leveraged Partnership Flip', 'All Equity Partnership Flip', 'Sale Leaseback'] );
 addconfig( 'Standalone Battery', ['Residential', 'Commercial', 'Third Party', 'Host Developer', 'Single Owner', 'Merchant Plant', 'Leveraged Partnership Flip', 'All Equity Partnership Flip', 'Sale Leaseback'] );
 addconfig( 'ETES', ['Single Owner']);
@@ -242,20 +242,35 @@ function setup_pages_standalone_battery_dispatch_fom()
 			  'exclusive_header_pages' = ['Battery Dispatch Common', 'Battery Dispatch Standalone Options FOM'], 'exclusive_tabs'=true, 'exclusive_hide'=true, 'bin_name'='Battery'} );
 }
 
-function setup_pvwatts_battery_pages_behind_the_meter()
+function setup_pvwatts_battery_pages(is_btm)
 {
-	addpage( [[ 'Solar Resource Data' ]], { 'sidebar'='Location and Resource', 'help'='pvwatts_location_and_resource' } );
+	addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='Location and Resource', 'help'='pvwatts_location_and_resource', 'bin_name'='PVWatts' } );
 	addpage( [[ 'PVWatts',
-	            'Battery Model Simple with REopt',
 	            {'name'='PV Land Area', 'caption' = 'Land Area', 'collapsible'=true, 'collapsible_var'='pv_land_area_is_shown'},
-	            {'name'='PVWatts Advanced Inputs', 'caption' = 'Advanced Inputs', 'collapsible'=true, 'collapsible_var'='pvwatts.advanced.is_shown'} ]],
-	            { 'sidebar'='System Design', 'help'='pvwatts_system_design' } );
-	setup_grid_limits_page();
+	            {'name'='PVWatts Advanced Inputs', 'caption' = 'Advanced Inputs', 'collapsible'=true, 'collapsible_var'='pvwatts.advanced.is_shown'},
+	            'Battery Enable' ]],
+	            { 'sidebar'='System Design', 'help'='pvwatts_system_design', 'bin_name'='PVWatts' } );
+	
+	if (is_btm)
+	{
+		setup_pages_battery_cell_and_system(true,true); // REopt and BTM
+		setup_pages_battery_life();
+		setup_pages_battery_dispatch_btm();
+		setup_grid_limits_page();
+		setup_grid_outage_page();
+	}
+	else
+	{
+		setup_pages_battery_cell_and_system(false, false); // No REopt and FOM
+		setup_pages_battery_life();
+		setup_pages_pv_battery_dispatch_fom();
+		setup_grid_limits_page();
+	}            
 }
 
 function setup_pvwatts_pages()
 {
-	addpage( [[ 'Solar Resource Data' ]], { 'sidebar'='Location and Resource', 'help'='pvwatts_location_and_resource' } );
+	addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='Location and Resource', 'help'='pvwatts_location_and_resource' } );
 	addpage( [[ 'PVWatts',
 	            {'name'='PV Land Area', 'caption' = 'Land Area', 'collapsible'=true, 'collapsible_var'='pv_land_area_is_shown'},
 	            {'name'='PVWatts Advanced Inputs', 'caption' = 'Advanced Inputs', 'collapsible'=true, 'collapsible_var'='pvwatts.advanced.is_shown'}]],
@@ -267,7 +282,7 @@ function setup_flat_plate_pv_pages()
 {
 	//addpage( [ ['AA Widgets'] ], { 'sidebar'='Widgets' } ); // use for widget testing
 
-	addpage( [[ 'Solar Resource Data', {'name'='PV Albedo and Radiation', 'caption' = 'Albedo - Sky Diffuse Model - Irradiance Data (Advanced)', 'collapsible'=true, 'collapsible_var'='pv.radmode.is_shown'} ]], { 'sidebar'='Location and Resource', 'help'='pv_location_and_resource' } );
+	addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information', {'name'='PV Albedo and Radiation', 'caption' = 'Albedo - Sky Diffuse Model - Irradiance Data (Advanced)', 'collapsible'=true, 'collapsible_var'='pv.radmode.is_shown'} ]], { 'sidebar'='Location and Resource', 'help'='pv_location_and_resource' } );
 	addpage( [ ['Simple Efficiency Module Model'],
 				['CEC Performance Model with Module Database'],
 				['CEC Performance Model with User Entered Specifications'],
@@ -638,13 +653,13 @@ function setup_windpower_pages()
 
 function setup_solar_water_heating_pages()
 {
-	addpage( [[ 'Solar Resource Data' ]], { 'sidebar'='Location and Resource' , 'help'='shw_location_and_resource' });
+	addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='Location and Resource' , 'help'='shw_location_and_resource' });
 	addpage( [[ 'Solar Water Heating' ]], { 'sidebar'='Solar Water Heating', 'help'='shw_system' } );
 }
 
 function setup_etes_pages()
 {
-	addpage( [['Solar Resource Data']], { 'sidebar'='Location and Resource', 'help'='etes_location_and_resource' } );
+	addpage( [['Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information']], { 'sidebar'='Location and Resource', 'help'='etes_location_and_resource' } );
 	addpage( [['ETES System Design']], { 'sidebar'='System Design', 'help'='etes_system_design'} );
 	addpage( [['ETES Heater']], {'sidebar'='Heater', 'help'='etes_heater' } );
 	addpage( [[ 'Rankine Cycle Air or Evaporative Cooling' ], [ 'User-Defined Power Cycle' ]],
@@ -656,7 +671,7 @@ function setup_etes_pages()
 
 function setup_ptes_pages()
 {
-	addpage( [['Solar Resource Data']], { 'sidebar'='Location and Resource', 'help'='ptes_location_and_resource' } );
+	addpage( [['Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information']], { 'sidebar'='Location and Resource', 'help'='ptes_location_and_resource' } );
 	addpage( [['PTES System Design']], { 'sidebar'='System Design', 'help' = 'ptes_system_design' } );
 	addpage( [['PTES Energy Stores']], { 'sidebar'='Thermal Energy Storage', 'help' = 'ptes_energy_storage' } );
 	addpage( [['PTES Heat Pump']], { 'sidebar'='Heat Pump', 'help' = 'ptes_heat_pump'} );
@@ -666,7 +681,7 @@ function setup_ptes_pages()
 
 function setup_csp_physical_trough_pages()
 {
-	addpage( [[ 'Solar Resource Data' ]], { 'sidebar'='Location and Resource', 'help'='troughphysical_location_and_resource' } );
+	addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='Location and Resource', 'help'='troughphysical_location_and_resource' } );
 	addpage( [[ 'Physical Trough System Design' ]], { 'sidebar'='System Design', 'help'='troughphysical_system_design' } );
 	addpage( [[ 'Physical Trough Solar Field' ]], { 'sidebar'='Solar Field', 'help'='troughphysical_solar_field' } );
 	addpage( [[ 'Physical Trough Collector Header',
@@ -703,7 +718,7 @@ function setup_csp_physical_trough_pages()
 
 function setup_cst_physical_trough_pages()
 {
-	addpage( [[ 'Solar Resource Data' ]], { 'sidebar'='Location and Resource', 'help'='iph_trough-location_and_resource' } );
+	addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='Location and Resource', 'help'='iph_trough-location_and_resource' } );
 	addpage( [[ 'Physical Trough IPH System Design' ]], { 'sidebar'='System Design', 'help'='iph_trough-system_design' } );
 	addpage( [[ 'Physical Trough Solar Field' ]], { 'sidebar'='Solar Field', 'help'='iph_trough-solar_field' } );
 
@@ -727,7 +742,7 @@ function setup_cst_physical_trough_pages()
 
 function setup_csp_empirical_trough_pages()
 {
-	addpage( [[ 'Solar Resource Data' ]], { 'sidebar'='Location and Resource', 'help'='troughempirical_location_and_resource' } );
+	addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='Location and Resource', 'help'='troughempirical_location_and_resource' } );
 	addpage( [[ 'Empirical Trough Solar Field' ]], { 'sidebar'='Solar Field', 'help'='troughempirical_solar_field' } );
 	addpage( [[ 'Empirical Trough SCA' ]], { 'sidebar'='Collectors (SCAs)', 'help'='troughempirical_collectors_scas' } );
 	addpage( [[ 'Empirical Trough HCE' ]], { 'sidebar'='Receivers (HCEs)', 'help'='troughempirical_receivers_hces' } );
@@ -741,7 +756,7 @@ function setup_csp_empirical_trough_pages()
 
 function setup_geothermal_power_pages()
 {
-	addpage( [[ 'Solar Resource Data' ]], { 'sidebar'='Ambient Conditions', 'help'='geo_ambient_conditions' } );
+	addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='Ambient Conditions', 'help'='geo_ambient_conditions' } );
 	addpage( [[ 'Geothermal Resource',
 	{'name'='Geothermal Reservoir Input', 'caption'='Geothermal Reservoir Model Input Table', 'collapsible'=true, 'collapsible_var'='reservoir_model_inputs_shown'} ]], 
 	{ 'sidebar'='Geothermal Resource', 'help'='geo_geothermal_resource' } );
@@ -1175,7 +1190,7 @@ setup_pvwatts_pages();
 setconfig( 'PVWatts', 'Residential' );
 setmodules( ['pvwattsv8', 'belpe', 'grid', 'utilityrate5', 'cashloan']);
 setup_pvwatts_pages();
-setup_lifetime_page( DEGRADATION_AC_SINGLE_YEAR );
+setup_lifetime_page( DEGRADATION_DC_LIFETIME );
 addpage( [[ 'PV Capital Costs' ],
 	[ 'PVWatts Capital Cost Curve', 'PV Capex Table', 'PV Capex Table AC']],
 	{ 'sidebar'='Installation Costs', 'exclusive_var'='pv_capex_cost_choice','help'='cc_pv'} );
@@ -1185,7 +1200,7 @@ setup_residential_pages( LOAD_BELPE ); //includes building load calculator
 setconfig( 'PVWatts', 'Commercial' );
 setmodules( ['pvwattsv8', 'grid', 'utilityrate5', 'cashloan']);
 setup_pvwatts_pages();
-setup_lifetime_page( DEGRADATION_AC_SINGLE_YEAR );
+setup_lifetime_page( DEGRADATION_DC_LIFETIME );
 addpage( [[ 'PV Capital Costs' ],
 	[ 'PVWatts Capital Cost Curve', 'PV Capex Table', 'PV Capex Table AC']],
 	{ 'sidebar'='Installation Costs', 'exclusive_var'='pv_capex_cost_choice','help'='cc_pv'} );
@@ -1195,7 +1210,7 @@ setup_commercial_pages(LOAD_SIMPLE); //belpe not valid for commercial
 setconfig( 'PVWatts', 'Leveraged Partnership Flip' );
 setmodules( ['pvwattsv8', 'grid', 'utilityrate5', 'levpartflip']);
 setup_pvwatts_pages();
-setup_lifetime_page( DEGRADATION_AC_SINGLE_YEAR );
+setup_lifetime_page( DEGRADATION_DC_LIFETIME );
 addpage( [[ 'PV Capital Costs' ],
 	[ 'PVWatts Capital Cost Curve', 'PV Capex Table', 'PV Capex Table AC']],
 	{ 'sidebar'='Installation Costs', 'exclusive_var'='pv_capex_cost_choice','help'='cc_pv'} );
@@ -1206,7 +1221,7 @@ setup_electricity_purchases();
 setconfig( 'PVWatts', 'All Equity Partnership Flip' );
 setmodules( ['pvwattsv8', 'grid', 'utilityrate5', 'equpartflip']);
 setup_pvwatts_pages();
-setup_lifetime_page( DEGRADATION_AC_SINGLE_YEAR );
+setup_lifetime_page( DEGRADATION_DC_LIFETIME );
 addpage( [[ 'PV Capital Costs' ],
 	[ 'PVWatts Capital Cost Curve', 'PV Capex Table', 'PV Capex Table AC']],
 	{ 'sidebar'='Installation Costs', 'exclusive_var'='pv_capex_cost_choice','help'='cc_pv'} );
@@ -1217,7 +1232,7 @@ setup_electricity_purchases();
 setconfig( 'PVWatts', 'Sale Leaseback' );
 setmodules( ['pvwattsv8', 'grid', 'utilityrate5', 'saleleaseback']);
 setup_pvwatts_pages();
-setup_lifetime_page( DEGRADATION_AC_SINGLE_YEAR );
+setup_lifetime_page( DEGRADATION_DC_LIFETIME );
 addpage( [[ 'PV Capital Costs' ],
 	[ 'PVWatts Capital Cost Curve', 'PV Capex Table', 'PV Capex Table AC']],
 	{ 'sidebar'='Installation Costs', 'exclusive_var'='pv_capex_cost_choice','help'='cc_pv'} );
@@ -1228,7 +1243,7 @@ setup_electricity_purchases();
 setconfig( 'PVWatts', 'Single Owner' );
 setmodules( ['pvwattsv8', 'grid', 'utilityrate5', 'singleowner']);
 setup_pvwatts_pages();
-setup_lifetime_page( DEGRADATION_AC_SINGLE_YEAR );
+setup_lifetime_page( DEGRADATION_DC_LIFETIME );
 addpage( [[ 'PV Capital Costs' ],
 	[ 'PVWatts Capital Cost Curve', 'PV Capex Table', 'PV Capex Table AC']],
 	{ 'sidebar'='Installation Costs', 'exclusive_var'='pv_capex_cost_choice','help'='cc_pv'} );
@@ -1239,7 +1254,7 @@ setup_electricity_purchases();
 setconfig( 'PVWatts', 'Community Solar' );
 setmodules( ['pvwattsv8', 'grid', 'communitysolar']);
 setup_pvwatts_pages();
-setup_lifetime_page( DEGRADATION_AC_SINGLE_YEAR );
+setup_lifetime_page( DEGRADATION_DC_LIFETIME );
 addpage( [[ 'PV Capital Costs' ],
 	[ 'PVWatts Capital Cost Curve', 'PV Capex Table', 'PV Capex Table AC']],
 	{ 'sidebar'='Installation Costs', 'exclusive_var'='pv_capex_cost_choice','help'='cc_pv'} );
@@ -1250,7 +1265,7 @@ setup_community_solar_pages();
 setconfig( 'PVWatts', 'Merchant Plant' );
 setmodules( ['pvwattsv8', 'grid', 'utilityrate5', 'merchantplant']);
 setup_pvwatts_pages();
-setup_lifetime_page( DEGRADATION_AC_SINGLE_YEAR );
+setup_lifetime_page( DEGRADATION_DC_LIFETIME );
 addpage( [[ 'PV Capital Costs' ],
 	[ 'PVWatts Capital Cost Curve', 'PV Capex Table', 'PV Capex Table AC']],
 	{ 'sidebar'='Installation Costs', 'exclusive_var'='pv_capex_cost_choice','help'='cc_pv'} );
@@ -1261,7 +1276,7 @@ setup_electricity_purchases();
 setconfig( 'PVWatts', 'Host Developer' );
 setmodules( ['pvwattsv8', 'grid', 'utilityrate5', 'host_developer']);
 setup_pvwatts_pages();
-setup_lifetime_page( DEGRADATION_AC_SINGLE_YEAR );
+setup_lifetime_page( DEGRADATION_DC_LIFETIME );
 addpage( [[ 'PV Capital Costs' ],
 	[ 'PVWatts Capital Cost Curve', 'PV Capex Table', 'PV Capex Table AC']],
 	{ 'sidebar'='Installation Costs', 'exclusive_var'='pv_capex_cost_choice','help'='cc_pv'} );
@@ -1271,7 +1286,7 @@ setup_host_developer_pages( LOAD_SIMPLE ); //includes building load calculator b
 setconfig( 'PVWatts', 'Third Party' );
 setmodules( ['pvwattsv8', 'belpe', 'grid', 'utilityrate5', 'thirdpartyownership']);
 setup_pvwatts_pages();
-setup_lifetime_page( DEGRADATION_AC_SINGLE_YEAR );
+setup_lifetime_page( DEGRADATION_DC_LIFETIME );
 setup_thirdparty_pages( LOAD_BELPE); //includes building load calculator by default in this function
 
 // Wind Power //////////////////////////////////////////////////////////////////
@@ -1403,7 +1418,7 @@ setup_commercial_pages(LOAD_SIMPLE); //belpe not valid for commercial
 // Fuel Cell /////////////////////////////////////////////////////////
 setconfig( 'Fuel Cell', 'Commercial');
 setmodules( ['pvwattsv8', 'fuelcell', 'battery', 'grid', 'utilityrate5', 'thermalrate', 'cashloan'] );
-addpage( [[ 'Solar Resource Data' ]], { 'sidebar'='Location and Resource', 'help'='pv_location_and_resource' } );
+addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='Location and Resource', 'help'='pv_location_and_resource' } );
 addpage( [[ 'PVWatts',
             { 'name'='PV Land Area', 'caption' = 'Land Area', 'collapsible'=true, 'collapsible_var'='pv_land_area_is_shown'},
             { 'name'='PVWatts Advanced Inputs', 'caption' = 'Advanced Inputs', 'collapsible'=true, 'collapsible_var'='pvwatts.advanced.is_shown'} ]],
@@ -1451,7 +1466,7 @@ addpage( [[ 'Thermal Load' ]],
 
 setconfig( 'Fuel Cell', 'Single Owner');
 setmodules( ['pvwattsv8', 'fuelcell', 'battery', 'grid', 'utilityrate5', 'thermalrate', 'singleowner']);
-addpage( [[ 'Solar Resource Data' ]], { 'sidebar'='Location and Resource', 'help'='pv_location_and_resource' } );
+addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='Location and Resource', 'help'='pv_location_and_resource' } );
 addpage( [[ 'PVWatts',
             { 'name'='PV Land Area', 'caption' = 'Land Area', 'collapsible'=true, 'collapsible_var'='pv_land_area_is_shown'},
             { 'name'='PVWatts Advanced Inputs', 'caption' = 'Advanced Inputs', 'collapsible'=true, 'collapsible_var'='pvwatts.advanced.is_shown'} ]],
@@ -1647,7 +1662,7 @@ setup_custom_generation_pages();
 // Generic CSP System //////////////////////////////////////////////////////////
 function setup_generic_csp_pages()
 {
-	addpage( [[ 'Solar Resource Data' ]], { 'sidebar'='Location and Resource', 'help'='gss_location_and_resource' } );
+	addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='Location and Resource', 'help'='gss_location_and_resource' } );
 	addpage( [[ 'Generic CSP Solar Field' ]], { 'sidebar'='Solar Field', 'help'='gss_solar_field' } );
 	addpage( [[ 'Generic CSP Power Block' ]], { 'sidebar'='Power Block', 'help'='gss_power_block' } );
 //	addpage( [[ 'Generic CSP Thermal Storage' ]], { 'sidebar'='Thermal Storage', 'help'='gss_thermal_storage' } );
@@ -1723,7 +1738,7 @@ setup_generic_csp_pages();
 // High-X Concentrating PV /////////////////////////////////////////////////////
 function setup_hcpv_pages()
 {
-	addpage( [[ 'Solar Resource Data' ]], { 'sidebar'='Location and Resource', 'help'='pv_location_and_resource' } );
+	addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='Location and Resource', 'help'='pv_location_and_resource' } );
 	addpage( [[ 'HCPV Module' ]], { 'sidebar'='Module', 'help'='hcpv_module' } );
 	addpage( [ ['Inverter CEC Database']], { 'sidebar'='Inverter', 'help'='hcpv_inverter' } );
 	addpage( [[ 'HCPV Array' ]], { 'sidebar'='Array', 'help'='hcpv_array' } );
@@ -1788,7 +1803,7 @@ setup_hcpv_pages();
 // Biopower ////////////////////////////////////////////////////////////////////
 function setup_biopower_pages()
 {
-	addpage( [[ 'Solar Resource Data' ]], { 'sidebar'='Ambient Conditions', 'help'='biopower_location_ambient_conditions' } );
+	addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='Ambient Conditions', 'help'='biopower_location_ambient_conditions' } );
 	addpage( [[ 'Biopower Feedstock' ]], { 'sidebar'='Feedstock', 'help'='biopower_feedstock' } );
 	addpage( [[ 'Biopower Plant Specifications' ]], { 'sidebar'='Plant Specs', 'help'='biopower_plant_specs' } );
 	addpage( [[ 'Biopower Emissions Comparison' ]], { 'sidebar'='Emissions', 'help'='biopower_emissions' } );
@@ -1858,7 +1873,7 @@ setup_biopower_pages();
 // Molten Salt Power Tower ////////////////////////////////////////////////////////////////////
 function setup_MSPT_pages(is_grid_limits)
 {
-	addpage( [[ 'Solar Resource Data' ]], { 'sidebar'='Location and Resource', 'help'='pt_location_and_resource' } );
+	addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='Location and Resource', 'help'='pt_location_and_resource' } );
 	addpage( [[ 'MSPT System Design' ]], { 'sidebar'='System Design', 'help'='mspt_system_design' } );
 	addpage( [[ 'Tower SolarPilot Solar Field' ]], { 'sidebar'='Heliostat Field', 'help'='mspt_heliostat_field' } );
 	addpage( [[ 'MSPT Receiver External' ], [ 'MSPT Receiver Cavity' ]],
@@ -1879,7 +1894,7 @@ function setup_MSPT_pages(is_grid_limits)
 
 function setup_MSPT_IPH_pages()
 {
-	addpage( [[ 'Solar Resource Data' ]], { 'sidebar'='Location and Resource', 'help'='iph_mspt_location_and_resource' } );
+	addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='Location and Resource', 'help'='iph_mspt_location_and_resource' } );
 	addpage( [[ 'MSPT IPH System Design' ]], { 'sidebar'='System Design', 'help'='iph_mspt_system_design' } );
 	addpage( [[ 'Tower SolarPilot Solar Field' ]], { 'sidebar'='Heliostat Field', 'help'='iph_mspt_heliostat_field' } );
 	addpage( [[ 'MSPT Receiver External' ], [ 'MSPT Receiver Cavity' ]],
@@ -1992,7 +2007,7 @@ setup_electricity_purchases();
 // Direct Steam Linear IPH ////////////
 function setup_DSGL_IPH_pages()
 {
-	addpage( [[ 'Solar Resource Data' ]], { 'sidebar'='Location and Resource', 'help'='iph_linear_ds_location_and_resource' } );
+	addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='Location and Resource', 'help'='iph_linear_ds_location_and_resource' } );
 	addpage( [[ 'LF DSG System Design' ]], { 'sidebar'='System Design', 'help'='iph_linear_ds_system_design' } );
 	addpage( [[ 'LF DSG Solar Field' ]], { 'sidebar'='Solar Field', 'help'='iph_linear_ds_solar_field' } );
 	addpage( [[ 'LF DSG Boiler Header', 'Linear Fresnel Boiler Geometry' ]], { 'sidebar'='Collector and Receiver', 'help'='iph_linear_ds_collector_receiver' } );
@@ -2043,7 +2058,7 @@ addpage( [['Financial Depreciation Detailed' ]],
 // Direct Steam Linear Fresnel ////////////////////////////////////////////////////////////////////
 function setup_DSLF_pages()
 {
-	addpage( [[ 'Solar Resource Data' ]], { 'sidebar'='Location and Resource', 'help'='dslf_location_and_resource' } );
+	addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='Location and Resource', 'help'='dslf_location_and_resource' } );
 	addpage( [[ 'Linear Fresnel Solar Field' ]], { 'sidebar'='Solar Field', 'help'='dslf_solar_field' } );
 
 	addpage( [[ 'Linear Fresnel Collector and Receiver Header',
@@ -2124,7 +2139,7 @@ setup_electricity_purchases();
 // NEW Molten Salt Linear Fresnel ////////////////////////////////////////////////////////////////////
 function setup_MSLF_pages()
 {
-	addpage( [[ 'Solar Resource Data' ]], { 'sidebar'='Location and Resource', 'help'='mslf_location_and_resource' } );
+	addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='Location and Resource', 'help'='mslf_location_and_resource' } );
 	addpage( [[ 'MSLF System Design' ]], { 'sidebar'='System Design', 'help'='mslf_system_design' } );
 	addpage( [[ 'MSLF Solar Field' ]], { 'sidebar'='Solar Field', 'help'='mslf_solar_field' } );
 
@@ -2212,7 +2227,7 @@ setup_electricity_purchases();
 
 function setup_MSLF_IPH_pages()
 {
-	addpage( [[ 'Solar Resource Data' ]], { 'sidebar'='Location and Resource', 'help'='iph_mslf_location_and_resource' } );
+	addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='Location and Resource', 'help'='iph_mslf_location_and_resource' } );
 	addpage( [[ 'MSLF IPH System Design' ]], { 'sidebar'='System Design', 'help'='iph_mslf_system_design' } );
 	addpage( [[ 'MSLF Solar Field' ]], { 'sidebar'='Solar Field', 'help'='iph_mslf_solar_field' } );
 
@@ -2477,7 +2492,7 @@ setup_metidal_pages(0);
 
 function setup_pv_battery_pages(is_btm)
 {
-	addpage( [[ 'Solar Resource Data', {'name'='PV Albedo and Radiation', 'caption' = 'Albedo - Sky Diffuse Model - Irradiance Data (Advanced)', 'collapsible'=true, 'collapsible_var'='pv.radmode.is_shown'} ]], { 'sidebar'='Location and Resource', 'bin_name'='PV','help'='pv_location_and_resource' } );
+	addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information', {'name'='PV Albedo and Radiation', 'caption' = 'Albedo - Sky Diffuse Model - Irradiance Data (Advanced)', 'collapsible'=true, 'collapsible_var'='pv.radmode.is_shown'} ]], { 'sidebar'='Location and Resource', 'bin_name'='PV','help'='pv_location_and_resource' } );
 	addpage( [ ['Simple Efficiency Module Model'],
 //				['CEC Performance Model with Module Database', { 'name'='Test 1', 'collapsible'=true, 'collapsible_var'='pv.module.test_1.is_shown' }],
 				['CEC Performance Model with Module Database'],
@@ -2786,37 +2801,87 @@ setup_electricity_purchases();
 
 // PVWatts Battery /////////////////////////////////////////////////////////
 setconfig( 'PVWatts Battery', 'Residential' );
-setmodules( ['pvwattsv8', 'belpe', 'battwatts', 'grid', 'utilityrate5', 'cashloan']);
-setup_pvwatts_battery_pages_behind_the_meter();
-setup_lifetime_page( DEGRADATION_AC_SINGLE_YEAR );
+setmodules( ['pvwattsv8', 'belpe', 'battery', 'grid', 'utilityrate5', 'cashloan']);
+setup_pvwatts_battery_pages(true);
+setup_lifetime_page( DEGRADATION_DC_LIFETIME );
 addpage( [[ 'PV Battery Capital Costs' ],
 		[ 'PVWatts Battery Capital Cost Curve', 'PV Capex Table', 'PV Capex Table AC', 'PV Capex Table Battery']], { 'sidebar'='Installation Costs', 'help'='cc_pv','exclusive_var'='pv_capex_cost_choice' } );
 addpage( [[ 'Operating Costs' ]], {'sidebar' = 'Operating Costs', 'help'='oc_operating'} );
 setup_residential_pages( LOAD_BELPE ); //includes building load calculator
 
 setconfig( 'PVWatts Battery', 'Commercial' );
-setmodules( ['pvwattsv8', 'battwatts', 'grid', 'utilityrate5', 'cashloan']);
-setup_pvwatts_battery_pages_behind_the_meter();
-setup_lifetime_page( DEGRADATION_AC_SINGLE_YEAR );
+setmodules( ['pvwattsv8', 'battery', 'grid', 'utilityrate5', 'cashloan']);
+setup_pvwatts_battery_pages(true);
+setup_lifetime_page( DEGRADATION_DC_LIFETIME );
 addpage( [[ 'PV Battery Capital Costs' ],
 		[ 'PVWatts Battery Capital Cost Curve', 'PV Capex Table', 'PV Capex Table AC', 'PV Capex Table Battery']], { 'sidebar'='Installation Costs', 'help'='cc_pv','exclusive_var'='pv_capex_cost_choice' } );
 addpage( [[ 'Operating Costs' ]], {'sidebar' = 'Operating Costs', 'help'='oc_operating'} );
 setup_commercial_pages(LOAD_SIMPLE); //belpe not valid for commercial
 
 setconfig( 'PVWatts Battery', 'Host Developer' );
-setmodules( ['pvwattsv8', 'battwatts', 'grid', 'utilityrate5', 'host_developer']);
-setup_pvwatts_battery_pages_behind_the_meter();
-setup_lifetime_page( DEGRADATION_AC_SINGLE_YEAR );
+setmodules( ['pvwattsv8', 'battery', 'grid', 'utilityrate5', 'host_developer']);
+setup_pvwatts_battery_pages(true);
+setup_lifetime_page( DEGRADATION_DC_LIFETIME );
 addpage( [[ 'PV Battery Capital Costs' ],
 		[ 'PVWatts Battery Capital Cost Curve', 'PV Capex Table', 'PV Capex Table AC', 'PV Capex Table Battery']], { 'sidebar'='Installation Costs', 'help'='cc_pv','exclusive_var'='pv_capex_cost_choice' } );
 addpage( [[ 'Operating Costs' ]], {'sidebar' = 'Operating Costs', 'help'='oc_operating'} );
 setup_host_developer_pages( LOAD_SIMPLE ); //includes building load calculator by default in this function
 
 setconfig( 'PVWatts Battery', 'Third Party' );
-setmodules( ['pvwattsv8', 'belpe', 'battwatts', 'grid', 'utilityrate5', 'thirdpartyownership']);
-setup_pvwatts_battery_pages_behind_the_meter();
-setup_lifetime_page( DEGRADATION_AC_SINGLE_YEAR );
+setmodules( ['pvwattsv8', 'belpe', 'battery', 'grid', 'utilityrate5', 'thirdpartyownership']);
+setup_pvwatts_battery_pages(true);
+setup_lifetime_page( DEGRADATION_DC_LIFETIME );
 setup_thirdparty_pages( LOAD_BELPE ); //includes building load calculator by default in this function
+
+setconfig( 'PVWatts Battery', 'Single Owner' );
+setmodules( ['pvwattsv8', 'battery', 'grid', 'utilityrate5', 'singleowner']);
+setup_pvwatts_battery_pages(false);
+setup_lifetime_page( DEGRADATION_DC_LIFETIME );
+addpage( [[ 'PV Battery Capital Costs' ],
+		[ 'PVWatts Battery Capital Cost Curve', 'PV Capex Table', 'PV Capex Table AC', 'PV Capex Table Land', 'PV Capex Table Battery']], { 'sidebar'='Installation Costs', 'help'='cc_pv','exclusive_var'='pv_capex_cost_choice' } );
+addpage( [[ 'Operating Costs PV Battery', 'Operating Costs Land Lease' ]], {'sidebar' = 'Operating Costs', 'help'='oc_pv-battery'} );
+setup_single_owner_pages( );
+setup_electricity_purchases();
+
+setconfig( 'PVWatts Battery', 'Merchant Plant' );
+setmodules( ['pvwattsv8', 'battery', 'grid', 'utilityrate5', 'merchantplant']);
+setup_pvwatts_battery_pages(false);
+setup_lifetime_page( DEGRADATION_DC_LIFETIME );
+addpage( [[ 'PV Battery Capital Costs' ],
+		[ 'PVWatts Battery Capital Cost Curve', 'PV Capex Table', 'PV Capex Table AC', 'PV Capex Table Land', 'PV Capex Table Battery']], { 'sidebar'='Installation Costs', 'help'='cc_pv','exclusive_var'='pv_capex_cost_choice' } );
+addpage( [[ 'Operating Costs PV Battery', 'Operating Costs Land Lease' ]], {'sidebar' = 'Operating Costs', 'help'='oc_pv-battery'} );
+setup_merchant_plant_pages( );
+setup_electricity_purchases();
+
+setconfig( 'PVWatts Battery', 'Leveraged Partnership Flip' );
+setmodules( ['pvwattsv8', 'battery', 'grid', 'utilityrate5', 'levpartflip']);
+setup_pvwatts_battery_pages(false);
+setup_lifetime_page( DEGRADATION_DC_LIFETIME );
+addpage( [[ 'PV Battery Capital Costs' ],
+		[ 'PVWatts Battery Capital Cost Curve', 'PV Capex Table', 'PV Capex Table AC', 'PV Capex Table Land', 'PV Capex Table Battery']], { 'sidebar'='Installation Costs', 'help'='cc_pv','exclusive_var'='pv_capex_cost_choice' } );
+addpage( [[ 'Operating Costs PV Battery', 'Operating Costs Land Lease' ]], {'sidebar' = 'Operating Costs', 'help'='oc_pv-battery'} );
+setup_leveraged_partnership_flip_pages( );
+setup_electricity_purchases();
+
+setconfig( 'PVWatts Battery', 'All Equity Partnership Flip' );
+setmodules( ['pvwattsv8', 'battery', 'grid', 'utilityrate5', 'equpartflip']);
+setup_pvwatts_battery_pages(false);
+setup_lifetime_page( DEGRADATION_DC_LIFETIME );
+addpage( [[ 'PV Battery Capital Costs' ],
+		[ 'PVWatts Battery Capital Cost Curve', 'PV Capex Table', 'PV Capex Table AC', 'PV Capex Table Land', 'PV Capex Table Battery']], { 'sidebar'='Installation Costs', 'help'='cc_pv','exclusive_var'='pv_capex_cost_choice' } );
+addpage( [[ 'Operating Costs PV Battery', 'Operating Costs Land Lease' ]], {'sidebar' = 'Operating Costs', 'help'='oc_pv-battery'} );
+setup_all_equity_partnership_flip_pages( );
+setup_electricity_purchases();
+
+setconfig( 'PVWatts Battery', 'Sale Leaseback' );
+setmodules( ['pvwattsv8', 'battery', 'grid', 'utilityrate5', 'saleleaseback']);
+setup_pvwatts_battery_pages(false);
+setup_lifetime_page( DEGRADATION_DC_LIFETIME );
+addpage( [[ 'PV Battery Capital Costs' ],
+		[ 'PVWatts Battery Capital Cost Curve', 'PV Capex Table', 'PV Capex Table AC', 'PV Capex Table Land', 'PV Capex Table Battery']], { 'sidebar'='Installation Costs', 'help'='cc_pv','exclusive_var'='pv_capex_cost_choice' } );
+addpage( [[ 'Operating Costs PV Battery', 'Operating Costs Land Lease' ]], {'sidebar' = 'Operating Costs', 'help'='oc_pv-battery'} );
+setup_sale_leaseback_pages( );
+setup_electricity_purchases();
 
 // Hybrid Power ////////////////////////////////////////////////////////////////
 
@@ -2869,11 +2934,12 @@ sethybridvariabledependencies([
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 0,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 1,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 2,'DependentVariableName' = 'sales_tax_rate'},
-{ 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'system_capacity', 'DependentVartableIndex' = 2,'DependentVariableName' = 'hybrid_system_capacity'}
+{ 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'system_capacity', 'DependentVartableIndex' = 2,'DependentVariableName' = 'hybrid_system_capacity'},
+{ 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'start_day_of_week', 'DependentVartableIndex' = 2,'DependentVariableName' = 'start_day_of_week'}
 ]);
 addpage([['Hybrid System']], {'sidebar'='Hybrid System', 'help'='hybrid_system', 'top_page'=true});
 // pvwatts
-addpage( [[ 'Solar Resource Data' ]], { 'sidebar'='PV Location and Resource', 'help'='pvwatts_location_and_resource', 'bin_name'='PVWatts' } );
+addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='PV Location and Resource', 'help'='pvwatts_location_and_resource', 'bin_name'='PVWatts' } );
 addpage( [[ 'PVWatts', {'name'='PV Land Area', 'caption' = 'Land Area', 'collapsible'=true, 'collapsible_var'='pv_land_area_is_shown'}, {'name'='PVWatts Advanced Inputs', 'caption' = 'Advanced Inputs', 'collapsible'=true, 'collapsible_var'='pvwatts.advanced.is_shown'} ]], { 'sidebar'='PV System Design', 'help'='pvwatts_system_design', 'bin_name'='PVWatts' } );
 addpage( [[ 'Degradation AC Single Year'], ], { 'sidebar'='PV AC Degradation','help'='degradation_ac', 'bin_name'='PVWatts' } );
 addpage( [[ 'PV Capital Costs' ]], { 'sidebar'='PV Installation Costs', 'help'='cc_pv', 'bin_name'='PVWatts'} );
@@ -2928,11 +2994,12 @@ sethybridvariabledependencies([
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'ppa_price_input', 'DependentVartableIndex' = 2,'DependentVariableName' = 'ppa_price_input'}, // battery dispatch
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 0,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 1,'DependentVariableName' = 'sales_tax_rate'},
-{ 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 2,'DependentVariableName' = 'sales_tax_rate'}
+{ 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 2,'DependentVariableName' = 'sales_tax_rate'},
+{ 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'start_day_of_week', 'DependentVartableIndex' = 2,'DependentVariableName' = 'start_day_of_week'}
 ]);
 addpage([['Hybrid System']], {'sidebar'='Hybrid System', 'help'='hybrid_system', 'top_page'=true});
 // pvwatts
-addpage( [[ 'Solar Resource Data' ]], { 'sidebar'='PV Location and Resource', 'help'='pvwatts_location_and_resource', 'bin_name'='PVWatts' } );
+addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='PV Location and Resource', 'help'='pvwatts_location_and_resource', 'bin_name'='PVWatts' } );
 addpage( [[ 'PVWatts', {'name'='PV Land Area', 'caption' = 'Land Area', 'collapsible'=true, 'collapsible_var'='pv_land_area_is_shown'}, {'name'='PVWatts Advanced Inputs', 'caption' = 'Advanced Inputs', 'collapsible'=true, 'collapsible_var'='pvwatts.advanced.is_shown'} ]], { 'sidebar'='PV System Design', 'help'='pvwatts_system_design', 'bin_name'='PVWatts' } );
 addpage( [[ 'Degradation AC Single Year'], ], { 'sidebar'='PV AC Degradation','help'='degradation_ac', 'bin_name'='PVWatts' } );
 addpage( [[ 'PV Capital Costs' ]], { 'sidebar'='PV Installation Costs', 'help'='cc_pv', 'bin_name'='PVWatts'} );
@@ -2991,11 +3058,13 @@ sethybridvariabledependencies([
 { 'IndependentVartableIndex' = 4,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 1,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 4,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 2,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 4,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 3,'DependentVariableName' = 'sales_tax_rate'},
-{ 'IndependentVartableIndex' = 4,'IndependentVariableName' = 'system_capacity', 'DependentVartableIndex' = 3,'DependentVariableName' = 'hybrid_system_capacity'} // pv smoothing dispatch
+{ 'IndependentVartableIndex' = 4,'IndependentVariableName' = 'system_capacity', 'DependentVartableIndex' = 3,'DependentVariableName' = 'hybrid_system_capacity'}, // pv smoothing dispatch
+{ 'IndependentVartableIndex' = 4,'IndependentVariableName' = 'start_day_of_week', 'DependentVartableIndex' = 2,'DependentVariableName' = 'start_day_of_week'},
+{ 'IndependentVartableIndex' = 4,'IndependentVariableName' = 'start_day_of_week', 'DependentVartableIndex' = 3,'DependentVariableName' = 'start_day_of_week'}
 ]);
 addpage([['Hybrid System']], {'sidebar'='Hybrid System', 'help'='hybrid_system', 'top_page'=true});
 // pvwatts
-addpage( [[ 'Solar Resource Data' ]], { 'sidebar'='PV Location and Resource', 'help'='pvwatts_location_and_resource', 'bin_name'='PVWatts' } );
+addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='PV Location and Resource', 'help'='pvwatts_location_and_resource', 'bin_name'='PVWatts' } );
 addpage( [[ 'PVWatts', {'name'='PV Land Area', 'caption' = 'Land Area', 'collapsible'=true, 'collapsible_var'='pv_land_area_is_shown'}, {'name'='PVWatts Advanced Inputs', 'caption' = 'Advanced Inputs', 'collapsible'=true, 'collapsible_var'='pvwatts.advanced.is_shown'} ]], { 'sidebar'='PV System Design', 'help'='pvwatts_system_design', 'bin_name'='PVWatts' } );
 addpage( [[ 'Degradation AC Single Year'], ], { 'sidebar'='PV AC Degradation','help'='degradation_ac', 'bin_name'='PVWatts' } );
 addpage( [[ 'PV Capital Costs' ]], { 'sidebar'='PV Installation Costs', 'help'='cc_pv', 'bin_name'='PVWatts'} );
@@ -3062,11 +3131,13 @@ sethybridvariabledependencies([
 { 'IndependentVartableIndex' = 4,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 0,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 4,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 1,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 4,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 2,'DependentVariableName' = 'sales_tax_rate'},
-{ 'IndependentVartableIndex' = 4,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 3,'DependentVariableName' = 'sales_tax_rate'}
+{ 'IndependentVartableIndex' = 4,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 3,'DependentVariableName' = 'sales_tax_rate'},
+{ 'IndependentVartableIndex' = 4,'IndependentVariableName' = 'start_day_of_week', 'DependentVartableIndex' = 2,'DependentVariableName' = 'start_day_of_week'},
+{ 'IndependentVartableIndex' = 4, 'IndependentVariableName' = 'start_day_of_week', 'DependentVartableIndex' = 3,'DependentVariableName' = 'start_day_of_week'}
 ]);
 addpage([['Hybrid System']], {'sidebar'='Hybrid System', 'help'='hybrid_system', 'top_page'=true});
 // pvwatts
-addpage( [[ 'Solar Resource Data' ]], { 'sidebar'='PV Location and Resource', 'help'='pvwatts_location_and_resource', 'bin_name'='PVWatts' } );
+addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='PV Location and Resource', 'help'='pvwatts_location_and_resource', 'bin_name'='PVWatts' } );
 addpage( [[ 'PVWatts', {'name'='PV Land Area', 'caption' = 'Land Area', 'collapsible'=true, 'collapsible_var'='pv_land_area_is_shown'}, {'name'='PVWatts Advanced Inputs', 'caption' = 'Advanced Inputs', 'collapsible'=true, 'collapsible_var'='pvwatts.advanced.is_shown'} ]], { 'sidebar'='PV System Design', 'help'='pvwatts_system_design', 'bin_name'='PVWatts' } );
 addpage( [[ 'Degradation AC Single Year'], ], { 'sidebar'='PV AC Degradation','help'='degradation_ac', 'bin_name'='PVWatts' } );
 addpage( [[ 'PV Capital Costs' ]], { 'sidebar'='PV Installation Costs', 'help'='cc_pv', 'bin_name'='PVWatts'} );
@@ -3146,12 +3217,13 @@ sethybridvariabledependencies([
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 0,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 1,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 2,'DependentVariableName' = 'sales_tax_rate'},
-{ 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'system_capacity', 'DependentVartableIndex' = 2,'DependentVariableName' = 'hybrid_system_capacity'} // pv smoothing dispatch
+{ 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'system_capacity', 'DependentVartableIndex' = 2,'DependentVariableName' = 'hybrid_system_capacity'}, // pv smoothing dispatch
+{ 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'start_day_of_week', 'DependentVartableIndex' = 2,'DependentVariableName' = 'start_day_of_week'}
 
 ]);
 addpage([['Hybrid System']], {'sidebar'='Hybrid System', 'help'='hybrid_system', 'top_page'=true});
 // detailed pv
-addpage( [[ 'Solar Resource Data', {'name'='PV Albedo and Radiation', 'caption' = 'Albedo - Sky Diffuse Model - Irradiance Data (Advanced)', 'collapsible'=true, 'collapsible_var'='pv.radmode.is_shown'} ]], { 'sidebar'='PV Location and Resource', 'help'='pv_location_and_resource', 'bin_name'='Photovoltaic' } );
+addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information', {'name'='PV Albedo and Radiation', 'caption' = 'Albedo - Sky Diffuse Model - Irradiance Data (Advanced)', 'collapsible'=true, 'collapsible_var'='pv.radmode.is_shown'} ]], { 'sidebar'='PV Location and Resource', 'help'='pv_location_and_resource', 'bin_name'='Photovoltaic' } );
 addpage( [ ['Simple Efficiency Module Model'], ['CEC Performance Model with Module Database'], ['CEC Performance Model with User Entered Specifications'], ['Sandia PV Array Performance Model with Module Database'], ['IEC61853 Single Diode Model'] ], { 'sidebar'='PV Module', 'help'='pv_module', 'exclusive_var'='module_model', 'bin_name'='Photovoltaic' } );
 addpage( [ ['Inverter CEC Database', 'Inverter Temp Derate CEC DB'], ['Inverter Datasheet', 'Inverter Temp Derate DS'], ['Inverter Part Load Curve', 'Inverter Temp Derate PLC'], ['Inverter CEC Coefficient Generator', 'Inverter Temp Derate CEC CG'] ], { 'sidebar'='PV Inverter', 'help'='pv_inverter', 'exclusive_var'='inverter_model', 'bin_name'='Photovoltaic' } );
 addpage( [ ['PV System Design', {'name'='PV Land Area', 'caption' = 'Land Area', 'collapsible'=true, 'collapsible_var'='pv_land_area_is_shown'}, {'name'='PV Subarray Voltage Mismatch', 'collapsible'=true, 'collapsible_var' = 'mismatch_shown'}, 'Battery Enable'] ], { 'sidebar'='PV System Design', 'help'='pv_system_design', 'bin_name'='Photovoltaic' } );
@@ -3208,11 +3280,12 @@ sethybridvariabledependencies([
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'ppa_price_input', 'DependentVartableIndex' = 2,'DependentVariableName' = 'ppa_price_input'}, // battery dispatch
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 0,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 1,'DependentVariableName' = 'sales_tax_rate'},
-{ 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 2,'DependentVariableName' = 'sales_tax_rate'}
+{ 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 2,'DependentVariableName' = 'sales_tax_rate'},
+{ 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'start_day_of_week', 'DependentVartableIndex' = 2,'DependentVariableName' = 'start_day_of_week'}
 ]);
 addpage([['Hybrid System']], {'sidebar'='Hybrid System', 'help'='hybrid_system', 'top_page'=true});
 // detailed pv
-addpage( [[ 'Solar Resource Data', {'name'='PV Albedo and Radiation', 'caption' = 'Albedo - Sky Diffuse Model - Irradiance Data (Advanced)', 'collapsible'=true, 'collapsible_var'='pv.radmode.is_shown'} ]], { 'sidebar'='Location and Resource', 'help'='pv_location_and_resource', 'bin_name'='Photovoltaic' } );
+addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information', {'name'='PV Albedo and Radiation', 'caption' = 'Albedo - Sky Diffuse Model - Irradiance Data (Advanced)', 'collapsible'=true, 'collapsible_var'='pv.radmode.is_shown'} ]], { 'sidebar'='Location and Resource', 'help'='pv_location_and_resource', 'bin_name'='Photovoltaic' } );
 addpage( [ ['Simple Efficiency Module Model'], ['CEC Performance Model with Module Database'], ['CEC Performance Model with User Entered Specifications'], ['Sandia PV Array Performance Model with Module Database'], ['IEC61853 Single Diode Model'] ], { 'sidebar'='PV Module', 'help'='pv_module', 'exclusive_var'='module_model', 'bin_name'='Photovoltaic' } );
 addpage( [ ['Inverter CEC Database', 'Inverter Temp Derate CEC DB'], ['Inverter Datasheet', 'Inverter Temp Derate DS'], ['Inverter Part Load Curve', 'Inverter Temp Derate PLC'], ['Inverter CEC Coefficient Generator', 'Inverter Temp Derate CEC CG'] ], { 'sidebar'='PV Inverter', 'help'='pv_inverter', 'exclusive_var'='inverter_model', 'bin_name'='Photovoltaic' } );
 addpage( [ ['PV System Design', {'name'='PV Land Area', 'caption' = 'Land Area', 'collapsible'=true, 'collapsible_var'='pv_land_area_is_shown'}, {'name'='PV Subarray Voltage Mismatch', 'collapsible'=true, 'collapsible_var' = 'mismatch_shown'}, 'Battery Enable'] ], { 'sidebar'='PV System Design', 'help'='pv_system_design', 'bin_name'='Photovoltaic' } );
@@ -3280,6 +3353,8 @@ sethybridvariabledependencies([
 { 'IndependentVartableIndex' = 5,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 3,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 5,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 4,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 5,'IndependentVariableName' = 'system_capacity', 'DependentVartableIndex' = 4,'DependentVariableName' = 'hybrid_system_capacity'},
+{ 'IndependentVartableIndex' = 5,'IndependentVariableName' = 'start_day_of_week', 'DependentVartableIndex' = 3,'DependentVariableName' = 'start_day_of_week'},
+{ 'IndependentVartableIndex' = 5,'IndependentVariableName' = 'start_day_of_week', 'DependentVartableIndex' = 4,'DependentVariableName' = 'start_day_of_week'}
 ]);
 addpage([['Hybrid System']], {'sidebar'='Hybrid System', 'help'='hybrid_system', 'top_page'=true});
 //generic
@@ -3288,7 +3363,7 @@ addpage( [[ 'Degradation AC Single Year'], ], { 'sidebar'='Custom Generation AC 
 addpage( [[ 'Custom Generation Costs']],{ 'sidebar'='Custom Generation Installation Costs', 'help'='cc_custom_generation', 'bin_name'='CustomGeneration' } );
 addpage( [[ 'Operating Costs Fuel' ]], {'sidebar' = 'Custom Generation Operating Costs', 'help'='oc_operating', 'bin_name'='CustomGeneration'} );
 // pvwatts
-addpage( [[ 'Solar Resource Data' ]], { 'sidebar'='PV Location and Resource', 'help'='pvwatts_location_and_resource', 'bin_name'='PVWatts' } );
+addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='PV Location and Resource', 'help'='pvwatts_location_and_resource', 'bin_name'='PVWatts' } );
 addpage( [[ 'PVWatts', {'name'='PV Land Area', 'caption' = 'Land Area', 'collapsible'=true, 'collapsible_var'='pv_land_area_is_shown'}, {'name'='PVWatts Advanced Inputs', 'caption' = 'Advanced Inputs', 'collapsible'=true, 'collapsible_var'='pvwatts.advanced.is_shown'} ]], { 'sidebar'='PV System Design', 'help'='pvwatts_system_design', 'bin_name'='PVWatts' } );
 addpage( [[ 'Degradation AC Single Year'], ], { 'sidebar'='PV AC Degradation','help'='degradation_ac', 'bin_name'='PVWatts' } );
 addpage( [[ 'PV Capital Costs' ]], { 'sidebar'='PV Installation Costs', 'help'='cc_pv', 'bin_name'='PVWatts'} );
@@ -3361,7 +3436,9 @@ sethybridvariabledependencies([
 { 'IndependentVartableIndex' = 5,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 1,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 5,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 2,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 5,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 3,'DependentVariableName' = 'sales_tax_rate'},
-{ 'IndependentVartableIndex' = 5,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 4,'DependentVariableName' = 'sales_tax_rate'}
+{ 'IndependentVartableIndex' = 5,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 4,'DependentVariableName' = 'sales_tax_rate'},
+{ 'IndependentVartableIndex' = 5,'IndependentVariableName' = 'start_day_of_week', 'DependentVartableIndex' = 3,'DependentVariableName' = 'start_day_of_week'},
+{ 'IndependentVartableIndex' = 5,'IndependentVariableName' = 'start_day_of_week', 'DependentVartableIndex' = 4,'DependentVariableName' = 'start_day_of_week'}
 ]);
 addpage([['Hybrid System']], {'sidebar'='Hybrid System', 'help'='hybrid_system', 'top_page'=true});
 //generic
@@ -3370,7 +3447,7 @@ addpage( [[ 'Degradation AC Single Year'], ], { 'sidebar'='Generic AC Degradatio
 addpage( [[ 'Custom Generation Costs']],{ 'sidebar'='Custom Generation Installation Costs', 'help'='cc_custom_generation', 'bin_name'='CustomGeneration' } );
 addpage( [[ 'Operating Costs Fuel' ]], {'sidebar' = 'Custom Generation Operating Costs', 'help'='oc_operating', 'bin_name'='CustomGeneration'} );
 // pvwatts
-addpage( [[ 'Solar Resource Data' ]], { 'sidebar'='PV Location and Resource', 'help'='pvwatts_location_and_resource', 'bin_name'='PVWatts' } );
+addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='PV Location and Resource', 'help'='pvwatts_location_and_resource', 'bin_name'='PVWatts' } );
 addpage( [[ 'PVWatts', {'name'='PV Land Area', 'caption' = 'Land Area', 'collapsible'=true, 'collapsible_var'='pv_land_area_is_shown'}, {'name'='PVWatts Advanced Inputs', 'caption' = 'Advanced Inputs', 'collapsible'=true, 'collapsible_var'='pvwatts.advanced.is_shown'} ]], { 'sidebar'='PV System Design', 'help'='pvwatts_system_design', 'bin_name'='PVWatts' } );
 addpage( [[ 'Degradation AC Single Year'], ], { 'sidebar'='PV AC Degradation','help'='degradation_ac', 'bin_name'='PVWatts' } );
 addpage( [[ 'PV Capital Costs' ]], { 'sidebar'='PV Installation Costs', 'help'='cc_pv', 'bin_name'='PVWatts'} );

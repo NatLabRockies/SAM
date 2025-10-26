@@ -72,7 +72,7 @@ class C_sco2_cycle_TS_plot:
         self.y_max = -1
         
     def plot_new_figure(self):
-        
+
         fig1, ax1 = plt.subplots(num = 1,figsize=(7.0,4.5))
     
         self.plot_from_existing_axes(ax1)
@@ -128,8 +128,10 @@ class C_sco2_cycle_TS_plot:
     
     def overlay_cycle_data(self, ax_in):
         
-        if(self.dict_cycle_data["cycle_config"] == 1):
+        if(self.dict_cycle_data["cycle_config"] == 1 or self.dict_cycle_data["cycle_config"] == 3):
             self.plot_RC_points_and_lines(ax_in)
+        elif(self.dict_cycle_data["cycle_config"] == 4):
+            self.plot_TSF_points_and_lines(ax_in)
         else:
             self.plot_PC_points_and_lines(ax_in)
             
@@ -176,6 +178,8 @@ class C_sco2_cycle_TS_plot:
     
     def annotate(self, ax_in):
     
+        cycle_config = self.dict_cycle_data["cycle_config"]
+
         if(self.is_annotate_HTR and (not(math.isnan(float(self.dict_cycle_data["q_dot_HTR"]))))):
             HTR_title = r'$\bf{High}$' + " " + r'$\bf{Temp}$' + " " + r'$\bf{Recup}$'
             q_dot_text = "\nDuty = " + '{:.1f}'.format(self.dict_cycle_data["q_dot_HTR"]) + " MWt"
@@ -223,7 +227,9 @@ class C_sco2_cycle_TS_plot:
                            fontsize = 8,
                            bbox=dict(boxstyle="round", fc="w", pad = 0.5))
         
-        if(self.is_annotate_PHX and self.dict_cycle_data["od_T_t_in_mode"] == 0):
+        if(self.is_annotate_PHX
+            and ("od_T_t_in_mode" in self.dict_cycle_data)
+            and self.dict_cycle_data["od_T_t_in_mode"] == 0):
             T_states = self.dict_cycle_data["T_state_points"]
             s_states = self.dict_cycle_data["s_state_points"]
             
@@ -231,9 +237,13 @@ class C_sco2_cycle_TS_plot:
             T_PHX_in = T_states[5] + dT_PHX_hot_approach
             s_PHX_in = s_states[5]
 
+            PHX_sco2_in_index = 4
+            if cycle_config == 4:
+                PHX_sco2_in_index = 2
+
             dT_PHX_cold_approach = self.dict_cycle_data["dT_PHX_cold_approach"]
-            T_PHX_out = T_states[4] + dT_PHX_cold_approach
-            s_PHX_out = s_states[4]
+            T_PHX_out = T_states[PHX_sco2_in_index] + dT_PHX_cold_approach
+            s_PHX_out = s_states[PHX_sco2_in_index]
 
             if self.dict_cycle_data['htf'] == 50: # User-defined properties
                 # Plotting Phase Change in HTF
@@ -281,6 +291,16 @@ class C_sco2_cycle_TS_plot:
                 ax_in.plot([s_PHX_in, s_PHX_out], [T_PHX_in, T_PHX_out], color = '#ff9900', ls = "-")
                 s_PHX_avg = 0.90*s_PHX_in + 0.10*s_PHX_out
                 T_PHX_avg = 0.90*T_PHX_in + 0.10*T_PHX_out
+
+                if(cycle_config == 3):
+                    bp_val = self.dict_cycle_data["bypass_frac"]
+
+                    if (bp_val != '' and bp_val > 0):
+                        T_BPX_in = T_PHX_out
+                        T_BPX_out = self.dict_cycle_data["T_htf_cold_des"]
+                        s_BPX_in = s_PHX_out
+                        s_BPX_out = s_states[3]
+                        ax_in.plot([s_BPX_in, s_BPX_out], [T_BPX_in, T_BPX_out], color = '#ff9900', ls = "-")
             
             PHX_title = r'$\bf{Primary}$' + " " + r'$\bf{HX}$'
             q_dot_text = "\nDuty = " + '{:.1f}'.format(self.dict_cycle_data["q_dot_PHX"]) + " MWt"
@@ -357,20 +377,33 @@ class C_sco2_cycle_TS_plot:
         T_states = self.dict_cycle_data["T_state_points"]
         s_states = self.dict_cycle_data["s_state_points"]
         
-        T_LTR_hot = [T_states[2],T_states[7]]
-        s_LTR_hot = [s_states[2],s_states[7]]
+        cycle_config = self.dict_cycle_data['cycle_config']
+
+        # Nodes for cycles except TSF
+        LTR_hot_index = [2,7]
+        LTR_cold_index = [1,8]
+        HTR_cold_index = [3,7]
+        HTR_hot_index = [4,6]
+        if(cycle_config == 4):
+            LTR_hot_index = [2,14]
+            LTR_cold_index = [1,8]
+            HTR_cold_index = [1,7]
+            HTR_hot_index = [4,6]
+
+        T_LTR_hot = [T_states[LTR_hot_index[0]],T_states[LTR_hot_index[1]]]
+        s_LTR_hot = [s_states[LTR_hot_index[0]],s_states[LTR_hot_index[1]]]
         ax_in.plot(s_LTR_hot, T_LTR_hot, 'b-.', lw = 0.7, alpha = 0.9)
         
-        T_LTR_cold = [T_states[1],T_states[8]]
-        s_LTR_cold = [s_states[1],s_states[8]]
+        T_LTR_cold = [T_states[LTR_cold_index[0]],T_states[LTR_cold_index[1]]]
+        s_LTR_cold = [s_states[LTR_cold_index[0]],s_states[LTR_cold_index[1]]]
         ax_in.plot(s_LTR_cold, T_LTR_cold, 'b-.', lw = 0.7, alpha = 0.9)
         
-        T_HTR_cold = [T_states[3],T_states[7]]
-        s_HTR_cold = [s_states[3],s_states[7]]
+        T_HTR_cold = [T_states[HTR_cold_index[0]],T_states[HTR_cold_index[1]]]
+        s_HTR_cold = [s_states[HTR_cold_index[0]],s_states[HTR_cold_index[1]]]
         ax_in.plot(s_HTR_cold, T_HTR_cold, 'r-.', lw = 0.7, alpha = 0.9)
         
-        T_HTR_hot = [T_states[4],T_states[6]]
-        s_HTR_hot = [s_states[4],s_states[6]]
+        T_HTR_hot = [T_states[HTR_hot_index[0]],T_states[HTR_hot_index[1]]]
+        s_HTR_hot = [s_states[HTR_hot_index[0]],s_states[HTR_hot_index[1]]]
         ax_in.plot(s_HTR_hot, T_HTR_hot, 'r-.', lw = 0.7, alpha = 0.9)
         
         return ax_in
@@ -462,6 +495,28 @@ class C_sco2_cycle_TS_plot:
         
         return ax_in
     
+    def plot_TSF_points_and_lines(self, ax_in):
+        self.plot_hx(ax_in)
+
+        T_states = self.dict_cycle_data["T_state_points"]
+        s_states = self.dict_cycle_data["s_state_points"]
+        
+        T_mc_plot = [T_states[0],T_states[1]]
+        s_mc_plot = [s_states[0],s_states[1]]
+        ax_in.plot(s_mc_plot, T_mc_plot, self.lc)
+        
+        T_t_plot = [T_states[5],T_states[6]]
+        s_t_plot = [s_states[5],s_states[6]]
+        ax_in.plot(s_t_plot, T_t_plot, self.lc)
+
+        T_t2_plot = [T_states[4],T_states[14]]
+        s_t2_plot = [s_states[4],s_states[14]]
+        ax_in.plot(s_t2_plot, T_t2_plot, self.lc)
+        
+        ax_in.plot(s_states[0:15], T_states[0:15], self.lc + self.mt, markersize = self.markersize)
+
+        return ax_in
+
     def plot_constP(self, ax_in):
 
         fileDir = os.path.dirname(os.path.abspath(__file__))
@@ -507,8 +562,15 @@ def get_plot_name(dict_cycle_data):
         plot_title = "Recompression Cycle, " + eta_str
     elif (dict_cycle_data["cycle_config"] == 1):
         plot_title = "Simple Cycle, " + eta_str
-    else:
+    elif (dict_cycle_data["cycle_config"] == 2):
         plot_title = "Partial Cooling Cycle, " + eta_str
+    elif (dict_cycle_data["cycle_config"] == 3):
+        plot_title = "Recomp w/ HTR Bypass, " + eta_str
+    elif (dict_cycle_data["cycle_config"] == 4):
+        plot_title = "Turbine Split Flow, " + eta_str
+    else:
+        plot_title = eta_str
+    
     
     return plot_title
 
@@ -556,7 +618,8 @@ class C_sco2_cycle_PH_plot:
 
     def set_y_min(self):
 
-        if (self.dict_cycle_data["cycle_config"] == 1):
+        if (self.dict_cycle_data["cycle_config"] == 1 or self.dict_cycle_data["cycle_config"] == 3
+            or self.dict_cycle_data["cycle_config"] == 4):
             P_min = self.dict_cycle_data["P_state_points"][0]
         else:
             P_min = self.dict_cycle_data["P_state_points"][10]
@@ -595,8 +658,10 @@ class C_sco2_cycle_PH_plot:
     
     def overlay_cycle_data(self, ax_in):
         
-        if(self.dict_cycle_data["cycle_config"] == 1):
+        if(self.dict_cycle_data["cycle_config"] == 1 or self.dict_cycle_data["cycle_config"] == 3):
             self.plot_RC_points_and_lines(ax_in)
+        elif(self.dict_cycle_data["cycle_config"] == 4):
+            self.plot_TSF_points_and_lines(ax_in)
         else:
             self.plot_PC_points_and_lines(ax_in)
             
@@ -652,8 +717,42 @@ class C_sco2_cycle_PH_plot:
         
         return ax_in
     
+    def plot_TSF_points_and_lines(self, ax_in):
+        self.plot_shared_points_and_lines(ax_in)
+
+        P_states = self.dict_cycle_data["P_state_points"]
+        h_states = self.dict_cycle_data["h_state_points"]
+        
+        "Main cooler" # MIXER_OUT -> MC_IN
+        ax_in.plot([h_states[3],h_states[0]],[P_states[3],P_states[0]], self.lc)
+    
+        ax_in.plot(h_states[0:9]+[h_states[14]], P_states[0:9]+[P_states[14]], self.lc + self.mt, markersize = 4)
+    
+        "Turbine 2"     # HTR_HP_OUT (4) -> TURB2_OUT (14)
+        ax_in.plot([h_states[14],h_states[4]],[P_states[14],P_states[4]], self.lc)
+
+        f_recomp = self.dict_cycle_data["recomp_frac"]
+
+        return ax_in
+
     def plot_shared_points_and_lines(self, ax_in):
         
+        cycle_config = self.dict_cycle_data['cycle_config']
+        if(cycle_config == 3):
+            HTR_HP_IN = 3   # MIXER_OUT
+            PHX_IN = 13     # MIXER2_OUT
+            LTR_LP_IN = 7   # HTR_LP_OUT
+        if(cycle_config == 4):
+            HTR_HP_IN = 1   # MC_OUT
+            PHX_IN = 2      # LTR_HP_OUT
+            LTR_LP_IN = 14  # TURB2_OUT
+        else:
+            HTR_HP_IN = 3   # MIXER_OUT
+            PHX_IN = 4      # HTR_HP_OUT
+            LTR_LP_IN = 7   # HTR_LP_OUT
+            
+
+
         P_states = self.dict_cycle_data["P_state_points"]
         h_states = self.dict_cycle_data["h_state_points"]
         
@@ -666,10 +765,10 @@ class C_sco2_cycle_PH_plot:
         ax_in.plot([h_states[1],h_states[2]],[P_states[1],P_states[2]], self.lc)
         
         "HTR HP"
-        ax_in.plot([h_states[3],h_states[4]],[P_states[3],P_states[4]], self.lc)
+        ax_in.plot([h_states[HTR_HP_IN],h_states[4]],[P_states[HTR_HP_IN],P_states[4]], self.lc)
         
         "PHX"
-        ax_in.plot([h_states[4],h_states[5]],[P_states[4],P_states[5]], self.lc)
+        ax_in.plot([h_states[PHX_IN],h_states[5]],[P_states[PHX_IN],P_states[5]], self.lc)
         
         "Turbine"
         P_t_data = self.dict_cycle_data["P_t_data"]
@@ -680,7 +779,7 @@ class C_sco2_cycle_PH_plot:
         ax_in.plot([h_states[6],h_states[7]],[P_states[6],P_states[7]], self.lc)
         
         "LTR LP"
-        ax_in.plot([h_states[7],h_states[8]],[P_states[7],P_states[8]], self.lc)
+        ax_in.plot([h_states[LTR_LP_IN],h_states[8]],[P_states[LTR_LP_IN],P_states[8]], self.lc)
         
         return ax_in
     
@@ -745,11 +844,13 @@ class C_sco2_cycle_PH_plot:
     
     def annotate(self, ax_in):
 
-        m_dot_co2_full = self.dict_cycle_data["m_dot_co2_full"]
+        cycle_config = self.dict_cycle_data["cycle_config"]
+        #m_dot_co2_full = self.dict_cycle_data["m_dot_co2_full"]
         f_recomp = self.dict_cycle_data["recomp_frac"]
-        m_dot_mc = m_dot_co2_full * (1.0 - f_recomp)
-        m_dot_rc = m_dot_co2_full * f_recomp
-        
+        m_dot_mc = self.dict_cycle_data["mc_m_dot_des"]
+        m_dot_rc = self.dict_cycle_data["rc_m_dot_des"]
+        m_dot_t = self.dict_cycle_data["t_m_dot_des"]
+
         mc_title = r'$\bf{Main}$' + " " + r'$\bf{Compressor}$'
         m_dot_text = "\n" + r'$\.m$' + " = " + '{:.1f}'.format(m_dot_mc) + " kg/s"
         W_dot_text = "\nPower = " + '{:.1f}'.format(self.dict_cycle_data["mc_W_dot"]) + " MW"
@@ -757,6 +858,7 @@ class C_sco2_cycle_PH_plot:
         
         mc_text = mc_title + m_dot_text + W_dot_text + isen_text
         if(self.is_annotate_MC_stages):
+
             stages_text = "\nStages = " + '{:d}'.format(int(self.dict_cycle_data["mc_n_stages"]))
             l_type, d_type = py_sco2.get_entry_data_type(self.dict_cycle_data["mc_D"])
             d_text = "\nDiameters [m] ="
@@ -796,10 +898,10 @@ class C_sco2_cycle_PH_plot:
             t_weight = 0.25
 
         t_title = r'$\bf{Turbine}$'
-        m_dot_text = "\n" + r'$\.m$' + " = " + '{:.1f}'.format(m_dot_co2_full) + " kg/s"
+        m_dot_text = "\n" + r'$\.m$' + " = " + '{:.1f}'.format(m_dot_t) + " kg/s"
         W_dot_text = "\nPower = " + '{:.1f}'.format(self.dict_cycle_data["t_W_dot"]) + " MW"
         isen_text = "\n" + r'$\eta_{isen}$' + " = " + '{:.3f}'.format(self.dict_cycle_data["eta_isen_t"])
-    
+
         t_text = t_title + m_dot_text + W_dot_text + isen_text
         
         P_t_avg = t_weight*P_states[5] + (1.0-t_weight)*P_states[6]
@@ -810,11 +912,24 @@ class C_sco2_cycle_PH_plot:
                        fontsize = 8,
                        bbox=dict(boxstyle="round", fc="w", pad = 0.5))
         
+        if cycle_config == 4 and self.is_annotate_T:
+            t2_title = r'$\bf{Turbine 2}$'
+            m2_dot_text = "\n" + r'$\.m$' + " = " + '{:.1f}'.format(self.dict_cycle_data["t2_m_dot_des"]) + " kg/s"
+            W2_dot_text = "\nPower = " + '{:.1f}'.format(self.dict_cycle_data["t2_W_dot"]) + " MW"
+            isen2_text = "\n" + r'$\eta_{isen}$' + " = " + '{:.3f}'.format(self.dict_cycle_data["eta_isen_t2"])
+            t2_text = t2_title + m2_dot_text + W2_dot_text + isen2_text
+            P_t2_avg = 0.75*P_states[4] + (1.0-0.75)*P_states[14]
+            h_t2_avg = t_weight*h_states[4] + (1.0-t_weight)*h_states[14]
+
+            ax_in.annotate(t2_text, xy=(h_t2_avg,P_t2_avg), va="center", ha="center",multialignment="left",
+                       fontsize = 8,
+                       bbox=dict(boxstyle="round", fc="w", pad = 0.5))
+
 
                           
         if(is_pc):
             pc_title = r'$\bf{Pre}$' + " " + r'$\bf{Compressor}$'
-            m_dot_text = "\n" + r'$\.m$' + " = " + '{:.1f}'.format(m_dot_co2_full) + " kg/s"
+            m_dot_text = "\n" + r'$\.m$' + " = " + '{:.1f}'.format(m_dot_t) + " kg/s"
             W_dot_text = "\nPower = " + '{:.1f}'.format(self.dict_cycle_data["pc_W_dot"]) + " MW"
             isen_text = "\n" + r'$\eta_{isen}$' + " = " + '{:.3f}'.format(self.dict_cycle_data["eta_isen_rc"])
             
@@ -1042,6 +1157,10 @@ def cycle_label(cycle_data, is_multi_line = False, is_file_name = False):
     elif cycle_data["cycle_config"] == 1 and cycle_data["is_recomp_ok"] == 1:
         cycle_name = r'$\bf{Recompression}$'
         cycle_abv = "RC"
+    elif cycle_data["cycle_config"] == 3:
+        cycle_name = r'$\bf{Recompression}$' + " " + r'$\bf{w/}$' + " " + r'$\bf{HTR Bypass}$'
+    elif cycle_data["cycle_config"] == 4:
+        cycle_name = r'$\bf{Turbine Split Flow}$'
     else:
         cycle_name = r'$\bf{Simple}$'
         cycle_abv = "simple"

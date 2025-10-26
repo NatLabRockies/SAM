@@ -596,6 +596,12 @@ SAM_EXPORT void SAM_Biomass_Biopower_file_name_sset(SAM_table ptr, const char* s
 	});
 }
 
+SAM_EXPORT void SAM_Biomass_Biopower_start_day_of_year_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "start_day_of_year", number);
+	});
+}
+
 SAM_EXPORT void SAM_Biomass_Biopower_system_capacity_nset(SAM_table ptr, double number, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_number(ptr, "system_capacity", number);
@@ -1504,6 +1510,15 @@ SAM_EXPORT const char* SAM_Biomass_Biopower_file_name_sget(SAM_table ptr, SAM_er
 	result = ssc_data_get_string(ptr, "file_name");
 	if (!result)
 		make_access_error("SAM_Biomass", "file_name");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Biomass_Biopower_start_day_of_year_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "start_day_of_year", &result))
+		make_access_error("SAM_Biomass", "start_day_of_year");
 	});
 	return result;
 }
