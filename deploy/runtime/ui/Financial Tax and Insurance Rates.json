@@ -995,8 +995,16 @@
         "}",
         "",
         "on_load{'Financial Tax and Insurance Rates'} = define() {",
-        "\tenable_sales_tax();",
-        "};",
+        "\tenable_sales_tax();\r",
+        "\tchange_tax_array_length();",
+        "};\r",
+        "\r",
+        "\r",
+        "function change_tax_array_length()\r",
+        "{\r",
+        "\tproperty('state_tax_rate', 'FixedLength', value('analysis_period'));\r",
+        "\tproperty('federal_tax_rate', 'FixedLength', value('analysis_period'));\r",
+        "}",
         "\t",
         "\t"
     ]
