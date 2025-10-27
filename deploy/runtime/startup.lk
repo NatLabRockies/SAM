@@ -2007,7 +2007,7 @@ setup_electricity_purchases();
 // TODO: Update Help documentation
 function setup_particle_tower_pages()
 {
-	addpage( [[ 'Solar Resource Data' ]], { 'sidebar'='Location and Resource', 'help'='pt_location_and_resource' } );
+	addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='Location and Resource', 'help'='pt_location_and_resource' } );
 	addpage( [[ 'Particle Tower - System Design' ]], { 'sidebar'='System Design', 'help'='mspt_system_design' } );
 	addpage( [[ 'Tower SolarPilot Solar Field' ]], { 'sidebar'='Heliostat Field', 'help'='mspt_heliostat_field' } );
 	addpage( [[ 'Particle Tower Receiver', 'Particle Tower Free-falling', 'Particle Lost Operating Costs' ]], { 'sidebar'='Tower and Receiver', 'help'='mspt_tower_and_receiver' } );

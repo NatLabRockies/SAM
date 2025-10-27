@@ -92,9 +92,9 @@
     "annual_beam": 7.66733,
     "annual_diffuse": 1.24816,
     "annual_global": 5.83339,
-    "annual_snow": "nan",
+    "annual_snow": NaN,
     "annual_tdry": 16.9747,
-    "annual_twet": "nan",
+    "annual_twet": NaN,
     "annual_wspd": 2.26213,
     "aux_par": 0.023,
     "aux_par_0": 0.483,
@@ -32869,7 +32869,6 @@
         10.0
     ],
     "solar_data_file_name": "daggett_ca_34.865371_-116.783023_psmv3_60_tmy.csv",
-    "solar_data_file_name_load": "daggett_ca_34.865371_-116.783023_psmv3_60_tmy.csv",
     "solar_data_source": "NSRDB",
     "solar_resource": "daggett_ca_34.865371_-116.783023_psmv3_60_tmy",
     "solar_resource_file": "daggett_ca_34.865371_-116.783023_psmv3_60_tmy.csv",
@@ -35388,7 +35387,7 @@
     "use_specific_weather_file": 0.0,
     "user_specified_weather_file": "",
     "v_wind_max": 15.0,
-    "vel_rec_htf_des_calc": "nan",
+    "vel_rec_htf_des_calc": NaN,
     "washing_frequency": 63.0,
     "water_usage_per_wash": 0.7,
     "weekday_schedule": [
