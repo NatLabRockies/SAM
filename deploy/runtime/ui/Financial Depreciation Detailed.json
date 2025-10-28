@@ -3939,5 +3939,16 @@
         "",
         ""
     ],
-    "Callbacks": []
+    "Callbacks": [
+        "function change_depreciation_length()\r",
+        "{\r",
+        "\tyears = value('analysis_period');\r",
+        "\tproperty('depr_custom_schedule', 'FixedLength', years);\r",
+        "}\r",
+        "\r",
+        "on_load{'Financial Depreciation Detailed'} = define()\r",
+        "{\r",
+        "\tchange_depreciation_length();\r",
+        "};"
+    ]
 }

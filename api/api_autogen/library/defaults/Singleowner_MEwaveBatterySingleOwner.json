@@ -40,7 +40,7 @@
 			"start_day_of_year": 0
 		},
 		"FinancialParameters": {
-			"analysis_period": 30,
+			"analysis_period": 20,
 			"construction_financing_cost": 1.20245e+07,
 			"cost_debt_closing": 0,
 			"cost_debt_fee": 2.75,

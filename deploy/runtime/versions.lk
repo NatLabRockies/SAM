@@ -55,6 +55,18 @@ function variable_name_change(new, old){
 	value(new, oldvalue(old), 'Variable name changed from \"' + old + '\" to \"' +  new + '\"');
 }
 
+version_upgrade{'2025.10.27'} = define() {
+	const cfg = config();
+	if (cfg.tech == 'MEwave' || cfg.tech == 'MEtidal' || cfg.tech == 'MEwave Battery')
+	{
+		//variable name changes
+		variable_name_change('project_contingency_budget_cost', 'project_contingency_cost');
+		variable_name_change('project_contingency_budget_cost_rvalue', 'project_contingency_cost_rvalue');
+		variable_name_change('insurance_during_construction_method', 'insurance_during_construction_cost_method');
+		variable_name_change('insurance_during_construction_modeled', 'insurance_during_construction_cost_modeled');
+	}
+}
+
 version_upgrade{'2025.9.19'} = define() {
 
 	const cfg = config();
