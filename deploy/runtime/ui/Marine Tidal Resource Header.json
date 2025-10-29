@@ -69,7 +69,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "Choose Frequency of Occurrence to characterize the wave resource using joint probability distribution (JPD) data. Choose Time Series to characterize the resource using time series data, and to download time series resource data from the U.S. West Coast, U.S. Atlantic, and Hawaii Hindcast data sets. See Help for details."
+                    "String": "Choose Probability distribution to characterize the tidal resource using tidal velocity probability data. Choose Time series to characterize the resource using time series tidal velocity data. See Help for details. "
                 },
                 "TextColour": {
                     "Type": 4.0,
@@ -135,7 +135,7 @@
                 },
                 "Items": {
                     "Type": 6.0,
-                    "StringList": "Frequency of occurrence|Time series"
+                    "StringList": "Probability distribution|Time series"
                 },
                 "ShowCaptions": {
                     "Type": 2.0,
@@ -159,7 +159,7 @@
             "Label": "Tidal resource model choice",
             "Units": "0/1",
             "Group": "Tidal Resource",
-            "IndexLabels": "",
+            "IndexLabels": "Probability distribution|Time series",
             "Flags": 1.0,
             "DefaultValue": 0.0,
             "UIObject": "RadioChoice",

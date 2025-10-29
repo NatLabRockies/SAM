@@ -2388,8 +2388,9 @@ void SamApp::Restart()
     Library::Load(wave_resource_ts_db);
 
     wxString tidal_resource_db = SamApp::GetUserLocalDataDir() + "/TidalResourceData.csv";
-    if (!wxFileExists(tidal_resource_db)) ScanTidalResourceData(tidal_resource_db);
+    if (!wxFileExists(tidal_resource_db)) ScanTidalResourceTSData(tidal_resource_db);
     Library::Load(tidal_resource_db);
+
 }
 
 wxString SamApp::WebApi( const wxString &name )

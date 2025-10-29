@@ -78,6 +78,9 @@ WaveDownloadDialog::WaveDownloadDialog(wxWindow *parent, const wxString &title)
 {
 	wxString dnpath;
     dnpath = ::wxGetHomeDir() + "/SAM Downloaded Weather Files";
+    SamApp::Settings().Read("WaveDownloadFolder", &dnpath);
+    if (dnpath.Len() <= 0)
+        SamApp::Settings().Read("wave_download_path", &dnpath);
 	m_txtFolder = new wxTextCtrl(this, ID_txtFolder, dnpath, wxDefaultPosition, wxDefaultSize, 0);// , wxDefaultPosition, wxSize(500, 30));
 	m_txtFolder->SetValue(dnpath);
     m_btnFolder = new wxButton(this, ID_btnFolder, "...", wxDefaultPosition, wxSize(30, 30));
@@ -94,6 +97,7 @@ WaveDownloadDialog::WaveDownloadDialog(wxWindow *parent, const wxString &title)
     endpoints.Add("U.S. Atlantic Coast");
     endpoints.Add("Hawaii");
     endpoints.Add("Alaska");
+    endpoints.Add("Puerto Rico");
 
     wxString InitialValue = "U.S. West Coast";
     cboEndpoint = new wxComboBox(this, ID_cboEndpoint, InitialValue, wxDefaultPosition, wxDefaultSize, endpoints, wxCB_READONLY);
@@ -103,7 +107,7 @@ WaveDownloadDialog::WaveDownloadDialog(wxWindow *parent, const wxString &title)
 
     wxArrayString years;
     wxArrayString list_years;
-    for (int x = 1979; x < 2011; x++) {
+    for (int x = 1979; x < 2021; x++) {
         wxString year_string = std::to_string(x);
         years.Add(year_string);
         list_years.Add(year_string);
@@ -115,18 +119,18 @@ WaveDownloadDialog::WaveDownloadDialog(wxWindow *parent, const wxString &title)
     radMultiYear = new wxRadioButton(this, ID_radMultiYear, "Choose years");
     txtStartYear = new wxTextCtrl(this, ID_txtStartYear, "1979", wxDefaultPosition, wxDefaultSize, 0, ::wxTextValidator(wxFILTER_NUMERIC));
     txtEndYear = new wxTextCtrl(this, ID_txtEndYear, "1990", wxDefaultPosition, wxDefaultSize, 0, ::wxTextValidator(wxFILTER_NUMERIC));
-    radAllYear = new wxRadioButton(this, ID_radAllYear, "Download all years (1979-2010)");
+    radAllYear = new wxRadioButton(this, ID_radAllYear, "Download all years");
 
     txtLat = new wxTextCtrl(this, ID_txtLat, "46.2", wxDefaultPosition, wxDefaultSize, 0, ::wxTextValidator(wxFILTER_NUMERIC));
     txtLon = new wxTextCtrl(this, ID_txtLon, "-124.2", wxDefaultPosition, wxDefaultSize, 0, ::wxTextValidator(wxFILTER_NUMERIC));
 
-	wxString msg = "Use this window to list all weather files available from the USWave dataset for a given location, and choose files to download and add to your wave resource library.\n";
-	msg += "Type a latitude and longtitude, for example, \"40.842,-124.25\", and click Find to list available files.\n";
-	msg += "When the list appears, select the file or files you want to download, or use the filter and auto-select buttons to find and select files.\n";
+	wxString msg = "Use this window to download wave hindcast data from the USWave dataset for a given location, and choose files to download and add to your wave resource library.\n";
+	msg += "Type a latitude and longtitude, for example, \"40.842,-124.25.\n";
+	msg += "When the list appears, select the dataset and years for the data you want to download.\n";
 	msg += "Choose the download folder where you want SAM to save files, or use the default SAM Downloaded Weather Files folder.\n";
 	msg += "SAM automatically adds the folder to the list of folders it uses to populate your wave resource library.\n";
 	msg += "Click OK to download the selected files and add them to your wave resource library.";
-
+    msg += "The Puerto Rico dataset has data coverage for years 1979-2020. All other datasets have resource data for years 1979-2010. \n";
     //lstYears = new wxListBox(this, ID_lstYears, wxDefaultPosition, wxDefaultSize, list_years, wxLB_MULTIPLE);
     //all_years_chk = new wxCheckBox(this, ID_allyear_chk, "Download all years");
 

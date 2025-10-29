@@ -349,13 +349,20 @@
         "",
         "on_load{\"Financial Curtailment Price\"}=define()",
         "{",
-        "\tcurtailment_price_ctrl_refresh();",
+        "\tcurtailment_price_ctrl_refresh();\r",
+        "\tchange_curtailment_price_length();",
         "};\t",
         "",
         "on_change{\"grid_curtailment_price\"}=define()",
         "{",
         "\tcurtailment_price_ctrl_refresh();",
-        "};\t",
+        "};\t\r",
+        "\r",
+        "function change_curtailment_price_length()\r",
+        "{\r",
+        "\tyears = value('analysis_period');\r",
+        "\tproperty('grid_curtailment_price', 'FixedLength', years);\r",
+        "}",
         ""
     ]
 }

@@ -2675,6 +2675,7 @@
         "{\r",
         "\tenable_disable();\r",
         "\tcfin_is_zero_check();\r",
+        "\tchange_schedule_length();\r",
         "};\r",
         "\r",
         "\r",
@@ -2686,6 +2687,11 @@
         "\r",
         "on_change{'c_construction_cost'} = define() { cfin_is_zero_check(); };\r",
         "\r",
-        ""
+        "function change_schedule_length() \r",
+        "{\r",
+        "\tyears = value('c_lifetime');\r",
+        "\tproperty('c_depreciation_schedule', 'FixedLength', years);\r",
+        "\tproperty('c_construction_cost', 'FixedLength', years);\r",
+        "}"
     ]
 }

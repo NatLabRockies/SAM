@@ -630,7 +630,10 @@
         "  \tvalue('dc_lifetime_losses', value('dc_lifetime_losses_ui'));",
         "  }",
         "  txt = analysis_period_message();",
-        "  property('analysis_period_warning','caption',txt);",
+        "  property('analysis_period_warning','caption',txt);\r",
+        "  change_tax_array_length();\r",
+        "  change_curtailment_price_length();\r",
+        "  change_depreciation_length();",
         "};",
         ""
     ]
