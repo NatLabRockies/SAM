@@ -9,18 +9,19 @@ performance models with the following financial models:</p>
 <li>Third Party Ownership Host/Developer</li>
 </ul>
 
-<p>
-<table><tr><td style="background-color:#ffff99">
-<strong>Note.</strong>This macro is an initial implementation intended as a 
+<p>This macro is an initial implementation intended as a 
 proof-of-concept. If you have questions or suggestions for improving the macro, 
-please contact us at <a href="mailto:sam.support@nrel.gov">sam.support@nrel.gov</a>.
-</td></tr></table>
-</p>
-<p>This macro generates reports showing annual CPA meaningful benefits based on
-the SAM model inputs for the current case and two CPA macro parameters. Table 1 
-below describes the inputs and parameters used to calculate each benefit.
-The macro automatically calculates the value of the SAM input used to represent
-each benefit.</p>
+please contact us at <a href="mailto:sam.support@nrel.gov">sam.support@nrel.gov</a>.</p>
+
+<p>The macro generates reports showing annual CPA meaningful benefits based on
+the SAM model inputs for the current case and two CPA macro parameters.</p>
+
+<p>SAM does not have inputs to account for annual CPA meaningful benefits. Those
+benefits are the two input parameters to this macro. When you run the macro, it 
+adds the sum of the two parameters to the existing Fixed Annual Cost input on the
+Operating Costs page so that they are accounted for in SAM's cash flow calculations. 
+Table 1 below describes the inputs and parameters used to calculate each 
+benefit.</p>
 
 <p>
 <table border cellpadding=5 width="100%">
@@ -33,20 +34,27 @@ each benefit.</p>
 
 <p>To use the macro:</p>
 <ol>
-<li>Review inputs on the SAM inputs page and modify as appropriate for the project you are modeling.</li>
+<li>Review inputs on the SAM input pages and modify as appropriate for the project you are modeling.</li>
 <li>Type a value for each of the two CPA macro parameters at the top right of this window.</li>
 <li>Click <strong>Run macro</strong>.</li>
-<li>The macro will prompt you to choose a folder to save the PDF file. If there is a file from a previous run, it will prompt you to delete or rename the file before running the macro.</li>
 </ol>
 
-<p>The macro sets values of SAM inputs listed in Table 1 based on the macro 
-parameters, runs a SAM simulation, and generates a set of reports in different 
-formats. When the macro finishes, you should see the following:</p>
+<p>
+<table><tr><td style="background-color:#ffff99">
+<strong>Important Note!</strong> This macro changes the value of the Fixed Annual 
+Cost input on the Operating Costs page: It adds the values of the two macro
+parameters to the existing fixed annual cost value. Be sure to verify that the value of 
+fixed cost annual input is correct before running this macro.
+</td></tr></table>
+</p>
+
+<p>When the macro finishes, you should see the following:</p>
 
 <ul>
 <li>A PDF file with a summary of performance metrics and a table of annual benefits.</li>
 <li>A window with a table of total and annual benefits over the anlysis period.</li>
 <li>In Windows, an Excel file with the project cash flow from the SAM simulation. (Not available for Mac or Linux.)</li>
+<li>A yellow Notes page on the Operating Costs input page describing the fixed annual cost calculation.</li>
 <li>SAM's Results page where you can explore the effect of the macro parameters on the financial metrics and cash flow.</li>
 </ul>
 
@@ -66,10 +74,30 @@ outln('Running...');
 communitybenefitspayments = macro.communitybenefitspayments;
 jobtraining = macro.jobtraining;
 
-x[0] = to_real(communitybenefitspayments);
+om = get('om_fixed');
+
+x = om;
+x[0] += to_real(communitybenefitspayments);
 x[0] += to_real(jobtraining);
 
 set('om_fixed', x );
+
+msg = '';
+msg +='Fixed annual cost calculated by Community Power Accelerator (CPA) macro as sum of project fixed operating costs, CPA community benefits payments, and CPA job training costs:';
+msg += '\n\nProject fixed operating cost ($/yr) = ' + sprintf('%m',to_string(om[0]));
+msg += '\nCPA community benefits payments ($/yr) = ' + sprintf('%m',communitybenefitspayments);
+msg += '\nCPA job training costs ($/yr) = ' + sprintf('%m',jobtraining);
+msg += '\n-----------------------------------------------';
+msg += '\nFixed annual cost ($/yr) = ' + sprintf('%m',to_string(x[0]));
+
+outln('Fixed annual cost on Operating Costs page set to sum of ' + to_string(om[0]) +', '+ communitybenefitspayments +', ' + jobtraining);
+ok = show_page('Operating Costs');
+if (ok) {
+	pagenote(msg);
+}
+else {
+	outln('Unable to set page note for Operating Costs page.');
+}	
 
 // simulate
 outln('Simulating...');
@@ -91,9 +119,9 @@ fixedtotal = fixedjobtraining + fixedcommunitybenefitspayments;
 data = {'fixedjobtraining' = fixedjobtraining, 'fixedcommunitybenefitspayments' = fixedcommunitybenefitspayments, 'fixedtotal' = fixedtotal};
 
 // variables for html table
-varbenefits = ['Energy savings to beneficiary','Community benefits payments','Job training'];
-varcf = ['cf_energy_value','cf_om_fixed_expense','cf_om_fixed_expense'];
-varmultiplier = [1.0,fixedcommunitybenefitspayments/fixedtotal,fixedjobtraining/fixedtotal];
+varbenefits = ['Energy savings to beneficiary','Community benefits payments','Job training','After-tax costs','After-tax cash flow'];
+varcf = ['cf_energy_value','cf_om_fixed_expense','cf_om_fixed_expense','cf_after_tax_net_equity_cost_flow','cf_after_tax_cash_flow'];
+varmultiplier = [1.0,fixedcommunitybenefitspayments/fixedtotal,fixedjobtraining/fixedtotal,1.0,1.0];
 
 ap = round(to_real(get('analysis_period')));
 
