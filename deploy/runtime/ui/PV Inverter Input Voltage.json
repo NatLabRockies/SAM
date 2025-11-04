@@ -1,7 +1,7 @@
 {
     "Name": "PV Inverter Input Voltage",
     "Width": 1009.0,
-    "Height": 474.0,
+    "Height": 460.0,
     "FormObjects": {
         "Divider": {
             "Visible": 1.0,
@@ -99,11 +99,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 30.0
+                    "Integer": 24.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 411.0
+                    "Integer": 405.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -297,7 +297,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 411.0
+                    "Integer": 405.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -695,7 +695,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 464.0
+                    "Integer": 455.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -1695,14 +1695,8 @@
         "\tn_subarrays_max = 4;\r",
         "\r",
         "\t// show mppt inputs for enabled subarrays\r",
-        "\tshow('subarray1_mppt_input',1);\r",
         "\tfor ( i=2; i<=n_subarrays_max; i++ ) {\r",
-        "\t\tif ( value('subarray'+to_string(i)+'_enable') == 1 ) {\r",
-        "\t\t\tshow('subarray'+to_string(i)+'_mppt_input', 1);\r",
-        "\t\t}\r",
-        "\t\telse {\r",
-        "\t\t\tshow('subarray'+to_string(i)+'_mppt_input', 0);\r",
-        "\t\t}\r",
+        "\t\tshow('subarray'+to_string(i)+'_mppt_input', value('subarray'+to_string(i)+'_enable') == 1);\r",
         "\t}\r",
         "\trefresh();\r",
         "\r",

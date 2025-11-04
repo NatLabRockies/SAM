@@ -178,7 +178,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 501.0
+                    "Integer": 518.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -261,7 +261,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 501.0
+                    "Integer": 518.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -344,7 +344,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 15.0
+                    "Integer": 24.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -352,7 +352,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 350.0
+                    "Integer": 325.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -393,7 +393,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 501.0
+                    "Integer": 518.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -484,7 +484,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 586.0
+                    "Integer": 600.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -956,6 +956,47 @@
                     "Integer": -1.0
                 }
             }
+        },
+        "CheckBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "ui_chkbox_nmodx_eq_mod_per_string"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 132.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 351.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Set modules along bottom of row equal to modules per string"
+                },
+                "State": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
         }
     },
     "VarDatabase": {
@@ -1099,6 +1140,19 @@
             "Flags": 8.0,
             "DefaultValue": 0.0,
             "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "ui_chkbox_nmodx_eq_mod_per_string": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Set modules along bottom of row equal to modules per string",
+            "Units": "",
+            "Group": "PV System Size",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "CheckBox",
             "sscVariableName": "",
             "sscVariableValue": ""
         }
@@ -1344,7 +1398,7 @@
         "\r",
         "on_change{'enable_auto_size'} = define () {\r",
         "\tsize_option_inputs();\r",
-        "\t auto_size_subarray_enable();\r",
+        "\tauto_size_subarray_enable();\r",
         "};\r",
         "\r",
         "on_change{'inverter_count'} = define () {\r",
@@ -1355,12 +1409,12 @@
         "\r",
         "function size_option_inputs() {\r",
         "\tif (value('enable_auto_size') == 1) {\r",
-        "\t\tenable('inverter_count', 0);\r",
+        "\t\tshow_calculated('inverter_count', true); // defined on PV Subarrays and String Size form\r",
         "\t\tenable('desired_size', 1);\r",
         "\t\tenable('desired_dcac_ratio', 1);\r",
         "\t}\r",
         "\telse {\r",
-        "\t\tenable('inverter_count', 1);\r",
+        "\t\tshow_calculated('inverter_count', false);\r",
         "\t\tenable('desired_size', 0);\r",
         "\t\tenable('desired_dcac_ratio', 0);\r",
         "\t}\r",

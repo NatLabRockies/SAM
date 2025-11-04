@@ -11900,6 +11900,7 @@
     "ui_array_land_area_ha": 175.2967336432552,
     "ui_array_land_area_multiplier": 1.0,
     "ui_aspect_ratio": 1.7,
+    "ui_chkbox_nmodx_eq_mod_per_string": 0.0,
     "ui_land_area_additional": 0.0,
     "ui_land_area_additional_units": 0.0,
     "ui_land_area_per_mw": 0.0,

@@ -1,7 +1,7 @@
 {
     "Name": "PV Row Dimensions and Spacing",
-    "Width": 1010.0,
-    "Height": 618.0,
+    "Width": 1009.0,
+    "Height": 567.0,
     "FormObjects": {
         "Label": {
             "Visible": 1.0,
@@ -322,15 +322,15 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 30.0
+                    "Integer": 168.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 555.0
+                    "Integer": 504.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 266.0
+                    "Integer": 128.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -384,15 +384,15 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 30.0
+                    "Integer": 168.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 528.0
+                    "Integer": 477.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 266.0
+                    "Integer": 128.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -404,7 +404,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "Ground coverage ratio (GCR)"
+                    "String": "GCR"
                 },
                 "TextColour": {
                     "Type": 4.0,
@@ -446,15 +446,15 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 30.0
+                    "Integer": 168.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 582.0
+                    "Integer": 531.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 266.0
+                    "Integer": 128.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -508,7 +508,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 54.0
+                    "Integer": 24.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -516,7 +516,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 180.0
+                    "Integer": 141.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -570,6 +570,68 @@
                 "Height": {
                     "Type": 3.0,
                     "Integer": 135.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "lbl_row_spacing_message"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 792.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 477.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 189.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 78.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -1100,7 +1162,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 611.0
+                    "Integer": 560.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -1315,7 +1377,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 528.0
+                    "Integer": 477.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1339,7 +1401,7 @@
                 },
                 "Format": {
                     "Type": 3.0,
-                    "Integer": 1.0
+                    "Integer": 0.0
                 },
                 "Decimals": {
                     "Type": 3.0,
@@ -1359,7 +1421,7 @@
                 },
                 "Editable": {
                     "Type": 2.0,
-                    "Boolean": 1.0
+                    "Boolean": 0.0
                 },
                 "ForeColour": {
                     "Type": 4.0,
@@ -1402,7 +1464,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 104.0
+                    "Integer": 100.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -1605,7 +1667,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 582.0
+                    "Integer": 531.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1799,7 +1861,7 @@
                 },
                 "Decimals": {
                     "Type": 3.0,
-                    "Integer": 3.0
+                    "Integer": 1.0
                 },
                 "Prefix": {
                     "Type": 5.0,
@@ -1854,7 +1916,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 555.0
+                    "Integer": 504.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1937,7 +1999,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 528.0
+                    "Integer": 477.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1961,7 +2023,7 @@
                 },
                 "Format": {
                     "Type": 3.0,
-                    "Integer": 1.0
+                    "Integer": 0.0
                 },
                 "Decimals": {
                     "Type": 3.0,
@@ -2024,7 +2086,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 104.0
+                    "Integer": 100.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -2227,7 +2289,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 582.0
+                    "Integer": 531.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2476,7 +2538,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 555.0
+                    "Integer": 504.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2559,7 +2621,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 528.0
+                    "Integer": 477.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2583,7 +2645,7 @@
                 },
                 "Format": {
                     "Type": 3.0,
-                    "Integer": 1.0
+                    "Integer": 0.0
                 },
                 "Decimals": {
                     "Type": 3.0,
@@ -2646,7 +2708,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 98.0
+                    "Integer": 100.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -2849,7 +2911,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 582.0
+                    "Integer": 531.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -3098,7 +3160,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 555.0
+                    "Integer": 504.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -3181,7 +3243,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 528.0
+                    "Integer": 477.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -3205,7 +3267,7 @@
                 },
                 "Format": {
                     "Type": 3.0,
-                    "Integer": 1.0
+                    "Integer": 0.0
                 },
                 "Decimals": {
                     "Type": 3.0,
@@ -3268,7 +3330,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 101.0
+                    "Integer": 100.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -3471,7 +3533,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 582.0
+                    "Integer": 531.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -3720,7 +3782,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 555.0
+                    "Integer": 504.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -4419,7 +4481,6 @@
         "\telse l=${module_width}*n; //landscape\r",
         "\treturn l;\r",
         "};\r",
-        "\r",
         "equations{'subarray2_ui_length_side'} = define() {\r",
         "\to=${subarray2_mod_orient};\r",
         "\tn=${subarray2_nmody};\r",
@@ -4483,7 +4544,6 @@
         "\treturn ${subarray4_ui_nmodules}/${subarray4_nmodx}/${subarray4_nmody};\r",
         "};\r",
         "\r",
-        "\r",
         "equations{ 'subarray1_land_area'} = define() {\r",
         "\treturn ${subarray1_ui_nmodules} * ${module_area} / ${subarray1_gcr};\r",
         "};\r",
@@ -4499,55 +4559,61 @@
         ""
     ],
     "Callbacks": [
-        "function calculate_gcr( n_sub ) {\r",
-        "\tif (value('gcr_option') == 0 ) {\r",
-        "\t\tif (value('subarray'+to_string(n_sub)+'_ui_length_side')==0) {\r",
-        "\t\t\tgcr = nan();\r",
-        "\t\t}\r",
-        "\t\telse {\r",
-        "\t\t\tgcr = value('subarray'+to_string(n_sub)+'_ui_row_spacing') / value('subarray'+to_string(n_sub)+'_ui_length_side');\r",
-        "\t\t}\t\r",
-        "\t\tvalue('subarray'+to_string(n_sub)+'_gcr',gcr);\r",
+        "function calculated(str, bool) {\r",
+        "\tif ( bool == true ) {\r",
+        "\t\tproperty(str,'ForeColour',[29,80,173]);\r",
+        "\t\tproperty(str,'BackColour',[222,233,244]);\r",
+        "\t\tproperty(str,'Editable',false);\t\r",
         "\t}\r",
-        "}\r",
-        "\r",
-        "function calculate_row_spacing( n_sub ) {\r",
-        "\tif (value('gcr_option') == 1 ) {\r",
-        "\t\trow_spacing = value('subarray'+to_string(n_sub)+'_gcr') * value('subarray'+to_string(n_sub)+'_ui_length_side');\r",
-        "\t\tvalue('subarray'+to_string(n_sub)+'_ui_row_spacing',row_spacing);\r",
-        "\t}\r",
-        "}\r",
-        "\r",
-        "function enable_gcr_row_spacing() {\r",
-        "\tn_subarrays_max = 4;\r",
-        "\tenable( 'subarray1_gcr',value('gcr_option') == 1);\r",
-        "\tenable( 'subarray1_ui_row_spacing',value('gcr_option') == 0);\r",
-        "\tenable( 'subarray1_nmody',value('gcr_option') == 0);\r",
-        "\tenable( 'subarray1_nmodx',value('gcr_option') == 0);\r",
-        "\tfor (i=2;i<=n_subarrays_max;i++) {\r",
-        "\t\tprefix = 'subarray' + to_string(i) + '_';\r",
-        "\t\tif ( value(prefix + 'enable') == 1 ) {\r",
-        "\t\t\tenable(prefix + 'gcr',value('gcr_option') == 1);\r",
-        "\t\t\tenable(prefix + 'ui_row_spacing',value('gcr_option') == 0);\r",
-        "\t\t\tenable(prefix + 'nmody',value('gcr_option') == 0);\r",
-        "\t\t\tenable(prefix + 'nmodx',value('gcr_option') == 0);\r",
-        "\t\t}\r",
+        "\telse {\r",
+        "\t\tproperty(str,'ForeColour','black');\r",
+        "\t\tproperty(str,'BackColour','white');\r",
+        "\t\tproperty(str,'Editable',true);\r",
         "\t}\r",
         "}\r",
         "\r",
         "function is_bifacial() {\t\r",
-        "\tmodule_model = value('module_model');\r",
-        "\tis_bifacial = false;\r",
-        "\tif (module_model == 0){\r",
-        "\t\tis_bifacial = value('spe_is_bifacial');\r",
+        "\tx = value('module_model');\r",
+        "\tif (x == 0) { return value('spe_is_bifacial'); }\r",
+        "\tif (x == 1) { return value('cec_is_bifacial'); }\r",
+        "\tif (x == 2) { return  value('6par_is_bifacial'); }\r",
+        "}\r",
+        "\r",
+        "function calculate_gcr( n_sub ) {\r",
+        "\tif (value('gcr_option') == 0 ) {\r",
+        "\t\tif (value('subarray'+to_string(n_sub)+'_ui_row_spacing')==0) {\r",
+        "\t\t\tgcr = nan();\r",
+        "\t\t}\r",
+        "\t\telse {\r",
+        "\t\t\tgcr = value('subarray'+to_string(n_sub)+'_ui_length_side') / value('subarray'+to_string(n_sub)+'_ui_row_spacing');\r",
+        "\t\t}\t\r",
+        "\t\tvalue('subarray'+to_string(n_sub)+'_gcr',gcr);\r",
         "\t}\r",
-        "\telse if (module_model == 1){\r",
-        "\t\tis_bifacial = value('cec_is_bifacial');\r",
+        "}\t\r",
+        "\r",
+        "function calculate_row_spacing( n_sub ) {\r",
+        "\tif (value('gcr_option') == 1 ) {\r",
+        "\t\tif (value('subarray'+to_string(n_sub)+'_gcr')==0) {\r",
+        "\t\t\trow_spacing = nan();\r",
+        "\t\t}\r",
+        "\t\telse {\r",
+        "\t\t\trow_spacing = value('subarray'+to_string(n_sub)+'_ui_length_side') / value('subarray'+to_string(n_sub)+'_gcr');\r",
+        "\t\t}\t\r",
+        "\t\tvalue('subarray'+to_string(n_sub)+'_ui_row_spacing',row_spacing);\r",
         "\t}\r",
-        "\telse if (module_model == 2){\r",
-        "\t\tis_bifacial = value('6par_is_bifacial');\r",
+        "}\r",
+        "\r",
+        "function gcr_row_spacing_enable() {\r",
+        "\tn_subarrays_max = 4;\r",
+        "\tcalculated('subarray1_gcr',value('gcr_option') == 0);\r",
+        "\tcalculated('subarray1_ui_row_spacing',value('gcr_option') == 1);\r",
+        "\tfor (i=2;i<=n_subarrays_max;i++) {\r",
+        "\t\tprefix = 'subarray' + to_string(i) + '_';\r",
+        "\t\tif ( value(prefix + 'enable') == 1 ) {\r",
+        "\t\t\tcalculated(prefix + 'gcr',value('gcr_option') == 0);\r",
+        "\t\t\tcalculated(prefix + 'ui_row_spacing',value('gcr_option') == 1);\r",
+        "\t\t}\r",
         "\t}\r",
-        "\treturn is_bifacial;\r",
         "}\r",
         "\r",
         "function row_dimensions_enable() {\r",
@@ -4559,33 +4625,16 @@
         "\t\t// subarray enabled (subarray 1 always enabled)\r",
         "\t\tif (i==1) { en1 = true; } \r",
         "\t\telse { en1 = value(prefix + 'enable') == 1; }\t\r",
-        "\t\t\r",
-        "\t\t// fixed tilt or one-axis tracking\r",
-        "\t\ten2 = (value(prefix + 'track_mode') == 0 || value(prefix + 'track_mode') == 1 );\r",
-        "\t\t\r",
-        "\t\t// non-linear or linear self shading\r",
-        "\t\ten3 = (value(prefix + 'shade_mode') == 1 || value(prefix + 'shade_mode') == 2);\r",
-        "\t\t\r",
-        "\t\t// snow\r",
+        "\t\r",
+        "\t\ten2 = (value(prefix + 'track_mode') == 0 || value(prefix + 'track_mode') == 1 ); // fixed tilt or one-axis tracking\r",
+        "\t\ten3 = (value(prefix + 'shade_mode') == 1 || value(prefix + 'shade_mode') == 2); // non-linear or linear self shading\r",
         "\t\ten4 = value('en_snow_model') == 1;\t\r",
-        "\t\t\r",
-        "\t\t// bifacial\r",
         "\t\ten5 = is_bifacial();\r",
-        "\t\t\r",
-        "\t\t// row spacing input\r",
-        "\t\ten6 = value('gcr_option') == 0;\r",
+        "\t\ten6 = value('gcr_option') == 0; // specify row shading\r",
         "\r",
-        "\t\t//now enable all the inputs\r",
-        "\t\t//enable(prefix + 'shading', en1);\r",
-        "\t\t//enable(prefix + 'shade_mode', (en1 && en2));\r",
-        "\t\tenable(prefix + 'mod_orient', (en1 && en2 && en3) || (en1 && en5) || en6);\r",
-        "\t\t//enable(prefix + 'ui_length_side', (en1 && en2 && en3) || (en1 && en5));\r",
-        "\t\tenable(prefix + 'ui_nrows', (en1 && en2 && en3) || (en1 && en4) || (en1 && en5) || en6);\r",
-        "\t\tenable(prefix + 'ui_nmodules', (en1 && en2 && en3) || (en1 && en4) || (en1 && en5) || en6);\r",
-        "\t\t//enable(prefix + 'gcr', (en1 && en2 && en3) || (en1 && en5));\r",
-        "\t\t//enable(prefix + 'ui_row_spacing', (en1 && en2 && en3) || (en1 && en5));\r",
-        "\t\tenable(prefix + 'nmodx', (en1 && en2 && en3) || (en1 && en4) || (en1 && en5) || en6);\r",
-        "\t\tenable(prefix + 'nmody', (en1 && en2 && en3) || (en1 && en4) || (en1 && en5) || en6);\r",
+        "\t\tenable(prefix + 'mod_orient', (en1 && en2 && en3) || en4 || en5 || en6);\r",
+        "\t\tenable(prefix + 'nmodx', (en1 && en2 && en3) || en4 || en5 || en6);\r",
+        "\t\tenable(prefix + 'nmody', (en1 && en2 && en3) || en4 || en5 || en6);\r",
         "\t}\r",
         "}\r",
         "\r",
@@ -4594,56 +4643,70 @@
         "\tn_subarrays_max = 4;\r",
         "\tmsg = '';\r",
         "\tcolor = 'black';\r",
-        "\r",
+        "\tenable_row_dimensions =false;\r",
+        "\t\r",
         "\tfor(i=1; i<=n_subarrays_max; i++) {\r",
         "\t\tprefix = 'subarray' + to_string(i) + '_';\r",
-        "\r",
-        "\t\t// non-linear or linear self shading\r",
-        "\t\tself_shading = false;\r",
-        "\t\tif (value(prefix + 'shade_mode') == 1 || value(prefix + 'shade_mode') == 2) {\r",
-        "\t\t\tself_shading = true;\r",
-        "\t\t}\r",
-        "\r",
-        "\t\tsnow = false;\r",
-        "\t\tif ( value('en_snow_model') == 1 ) {\r",
-        "\t\t\tsnow = true;\r",
-        "\t\t}\t\r",
-        "\t\t\r",
-        "\t\tif ( self_shading || snow || is_bifacial() ) { \r",
+        "\t\tself_shading = (value(prefix + 'shade_mode') == 1 || value(prefix + 'shade_mode') == 2); // non-linear or linear self shading\r",
+        "\t\tif ( self_shading || (value('en_snow_model') == 1) || is_bifacial() || (value('gcr_option') == 0) ) { \r",
+        "\t\t\tenable_row_dimensions = true;\r",
         "\t\t\tnrows = value(prefix + 'ui_nrows');\r",
         "\t\t\tif ( nrows-to_int(nrows) != 0 ) {\r",
         "\t\t\t\tif (n>0){msg+=' ';}\r",
-        "\t\t\t\tmsg += 'The number of rows in subarray ' + i + ' is not an integer. ';\r",
+        "\t\t\t\tmsg += 'The number of rows in Subarray ' + i + ' is not an integer. ';\r",
         "\t\t\t\tcolor = 'red';\r",
         "\t\t\t\tn++;\r",
         "\t\t\t}\r",
-        "\t\t\t\r",
         "\t\t\tif ( self_shading ) {\r",
-        "\t\t\t\tnrows = value(prefix + 'ui_nrows');\r",
         "\t\t\t\tif ( nrows == 1 ) {\r",
         "\t\t\t\t\tmsg += 'Subarray ' + i + ' has only one row. Self shading calculations require two or more rows.';\r",
         "\t\t\t\t\tcolor = 'red';\r",
         "\t\t\t\t\tn++;\r",
-        "\t\t\t\t}\t\r",
+        "\t\t\t\t}\r",
         "\t\t\t}\r",
         "\t\t}\r",
-        "\t\telseif ( msg == '' ) {\r",
-        "\t\t\tmsg = 'Row dimension inputs are disabled unless self shading, snow losses, bifacial modules, or specify row spacing are enabled.';\r",
-        "\t\t\tcolor = 'black';\r",
-        "\t\t}\r",
         "\t}\r",
+        "\t\r",
+        "\tif (enable_row_dimensions == false) {\r",
+        "\t\tmsg = 'Row dimension inputs are disabled unless self shading, snow losses, bifacial modules, or specify row spacing are enabled.';\r",
+        "\t\tcolor = 'black';\r",
+        "\t}\t\r",
         "\r",
-        "    if (color == 'red') {\r",
+        "\tif ( color == 'red' ) {\r",
         "\t\tmsg += ' Adjust the number of modules along side or bottom to correct the problem.'; \r",
         "\t}\r",
         "\r",
         "\tproperty('lbl_row_dimensions_message','Caption',msg);\r",
         "\tproperty('lbl_row_dimensions_message','TextColour',color);\r",
+        "}\r",
         "\r",
+        "function row_spacing_message() {\r",
+        "\tmsg = '';\r",
+        "\tcolor = 'black';\r",
+        "\tn_subarrays_max = 4;\r",
+        "\tn = 0;\r",
+        "\tfor(i=1; i<=n_subarrays_max; i++) {\r",
+        "\t\tprefix = 'subarray' + to_string(i) + '_';\r",
+        "\t\tif ( value(prefix + 'gcr') < 0.01 || value(prefix + 'gcr') > 0.99 ) {\r",
+        "\t\t\tif ( value('gcr_option') == 1) {\r",
+        "\t\t\t\tif (n>0) {msg+=' ';}\r",
+        "\t\t\t\tmsg += 'Subarray ' + to_string(i) + ' GCR must be between 0.01 and 0.99.';\r",
+        "\t\t\t\tn++;\r",
+        "\t\t\t\tcolor = 'red';\r",
+        "\t\t\t}\r",
+        "\t\t\telse {\r",
+        "\t\t\t\tif (n>0) {msg+=' ';}\r",
+        "\t\t\t\tmsg += 'Subarray ' + to_string(i) + ' row spacing must be greater than Subarray ' + to_string(i) + ' length of side.';\r",
+        "\t\t\t\tn++;\r",
+        "\t\t\t\tcolor = 'red';\r",
+        "\t\t\t}\r",
+        "\t\t}\r",
+        "\t}\r",
+        "\tproperty('lbl_row_spacing_message','Caption',msg);\r",
+        "\tproperty('lbl_row_spacing_message','TextColour',color);\r",
         "}\r",
         "\r",
         "on_load{'PV Row Dimensions and Spacing'} = define() { \r",
-        "\r",
         "\tn_subarrays_max = 4;\r",
         "\tvars = [ 'gcr',\r",
         "\t\t'mod_orient',\r",
@@ -4654,26 +4717,20 @@
         "\t\t'ui_nrows',\r",
         "\t\t'ui_row_spacing'];\r",
         "\t\t\r",
-        "\t// hide inputs for disabled subarrays (always show subarray 1 inputs)\r",
+        "\t// hide inputs for disabled subarrays (always show subarray 1 inputs,so start index at 2)\r",
         "\tfor ( i=2; i<=n_subarrays_max; i++ ) {\r",
         "\t\tprefix = 'subarray' + to_string(i) + '_';\r",
-        "\t\t// show inputs for enabled subarrays\r",
-        "\t\tif ( value( prefix + 'enable') == 1 )  {\r",
-        "\t\t\tfor (j=0;j<#vars;j++) {\r",
-        "\t\t\t\tshow( prefix + vars[j], 1 );\r",
-        "\t\t\t}\t\r",
-        "\t\t}\r",
-        "\t\t// hide inputs for disabled subarrays\r",
-        "\t\telse {\r",
-        "\t\t\tfor (j=0;j<#vars;j++) {\r",
-        "\t\t\t\tshow( prefix + vars[j], 0 );\r",
-        "\t\t\t}\t\r",
+        "\t\tfor (j=0;j<#vars;j++) {\r",
+        "\t\t\tshow( prefix + vars[j], value( prefix + 'enable') == 1 );\r",
         "\t\t}\r",
         "\t}\r",
         "\trefresh();\r",
         "\r",
         "\trow_dimensions_enable();\r",
-        "\trow_dimensions_message();\t\r",
+        "\tgcr_row_spacing_enable();\r",
+        "\r",
+        "\trow_dimensions_message();\r",
+        "\trow_spacing_message();\r",
         "};\r",
         "\r",
         "on_change{'subarray1_ui_nrows'} = define() {\r",
@@ -4690,33 +4747,62 @@
         "};\r",
         "\r",
         "on_change{'gcr_option'} = define() {\r",
-        "\tenable_gcr_row_spacing();\r",
-        "};\r",
-        "\r",
-        "on_change{'subarray1_gcr'} = define() {\r",
-        "\tcalculate_row_spacing(1);\r",
-        "};\r",
-        "on_change{'subarray2_gcr'} = define() {\r",
-        "\tcalculate_row_spacing(2);\r",
-        "};\r",
-        "on_change{'subarray3_gcr'} = define() {\r",
-        "\tcalculate_row_spacing(3);\r",
-        "};\r",
-        "on_change{'subarray4_gcr'} = define() {\r",
-        "\tcalculate_row_spacing(4);\r",
+        "\tgcr_row_spacing_enable();\r",
+        "\trow_dimensions_enable();\r",
+        "\trow_dimensions_message();\r",
         "};\r",
         "\r",
         "on_change{'subarray1_ui_row_spacing'} = define() {\r",
         "\tcalculate_gcr(1);\r",
+        "\trow_spacing_message();\r",
         "};\r",
         "on_change{'subarray2_ui_row_spacing'} = define() {\r",
         "\tcalculate_gcr(2);\r",
+        "\trow_spacing_message();\r",
         "};\r",
         "on_change{'subarray3_ui_row_spacing'} = define() {\r",
         "\tcalculate_gcr(3);\r",
+        "\trow_spacing_message();\r",
         "};\r",
         "on_change{'subarray4_ui_row_spacing'} = define() {\r",
         "\tcalculate_gcr(4);\r",
-        "};"
+        "\trow_spacing_message();\r",
+        "};\r",
+        "\r",
+        "on_change{'subarray1_gcr'} = define() {\r",
+        "\tcalculate_row_spacing(1);\r",
+        "\trow_spacing_message();\r",
+        "};\r",
+        "on_change{'subarray2_gcr'} = define() {\r",
+        "\tcalculate_row_spacing(2);\r",
+        "\trow_spacing_message();\r",
+        "};\r",
+        "on_change{'subarray3_gcr'} = define() {\r",
+        "\tcalculate_row_spacing(3);\r",
+        "\trow_spacing_message();\r",
+        "};\r",
+        "on_change{'subarray4_gcr'} = define() {\r",
+        "\tcalculate_row_spacing(4);\r",
+        "\trow_spacing_message();\r",
+        "};\r",
+        "\r",
+        "// length of side might be changed by module orientation, nmodx or nmody.\r",
+        "on_change{'subarray1_ui_length_side'} = define() {\r",
+        "\tif (value('gcr_option')==0) { calculate_gcr(1); }\r",
+        "\telse { calculate_row_spacing(1); }\r",
+        "};\r",
+        "on_change{'subarray2_ui_length_side'} = define() {\r",
+        "\tif (value('gcr_option')==0) { calculate_gcr(2); }\r",
+        "\telse { calculate_row_spacing(2); }\r",
+        "};\r",
+        "on_change{'subarray3_ui_length_side'} = define() {\r",
+        "\tif (value('gcr_option')==0) { calculate_gcr(3); }\r",
+        "\telse { calculate_row_spacing(3); }\r",
+        "};\r",
+        "on_change{'subarray4_ui_length_side'} = define() {\r",
+        "\tif (value('gcr_option')==0) { calculate_gcr(4); }\r",
+        "\telse { calculate_row_spacing(4); }\r",
+        "};\r",
+        ""
     ]
 }
