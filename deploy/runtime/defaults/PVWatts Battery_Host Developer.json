@@ -37,7 +37,7 @@
     ],
     "analysis_period": 25.0,
     "analysis_period_warning": "No messages.",
-    "annual_albedo": 0.18395068539332039,
+    "annual_albedo": 0.1839506853933204,
     "annual_beam": 7.335643835616439,
     "annual_crit": 0.0,
     "annual_diffuse": 1.3484328767123289,
@@ -8876,7 +8876,7 @@
     "batt_cell_power_charge_max": 2.0,
     "batt_cell_power_discharge_max": 2.0,
     "batt_chem": 1.0,
-    "batt_computed_bank_capacity": 1200.5431199999999,
+    "batt_computed_bank_capacity": 1200.54312,
     "batt_computed_series": 126.0,
     "batt_computed_stacks_series": 1.0,
     "batt_computed_strings": 1064.0,
@@ -9857,9 +9857,9 @@
     "batt_minimum_outage_SOC": 10.0,
     "batt_num_cells": 134064.0,
     "batt_power_charge_max_kwac": 312.64143749999996,
-    "batt_power_charge_max_kwdc": 300.13577999999998,
+    "batt_power_charge_max_kwdc": 300.13578,
     "batt_power_discharge_max_kwac": 288.1303487999999,
-    "batt_power_discharge_max_kwdc": 300.13577999999998,
+    "batt_power_discharge_max_kwdc": 300.13578,
     "batt_pv_ac_forecast": [
         0.0
     ],
@@ -9915,7 +9915,7 @@
     "batt_size_choice": 0.0,
     "batt_specific_energy_per_mass": 70.0,
     "batt_specific_energy_per_volume": 82.0,
-    "batt_surface_area": 90.04073399999999,
+    "batt_surface_area": 1.7081938826471877,
     "batt_target_choice": 0.0,
     "batt_target_power": [
         1.0,
@@ -18694,12 +18694,12 @@
         1.0
     ],
     "batt_thermal_choice": 0.0,
-    "batt_time_capacity": 4.0,
+    "batt_time_capacity": 2.4999999999999997,
     "batt_type": 5.0,
-    "batt_ui_bank_voltage": 501.48,
+    "batt_ui_bank_voltage": 51.74,
     "batt_ui_cell_voltage": 3.98,
-    "batt_ui_inverter_eff": 98.69094035671238,
-    "batt_ui_nominal_bank_power": 300.13577999999998,
+    "batt_ui_inverter_eff": 97.33435924339612,
+    "batt_ui_nominal_bank_power": 4.982562000000001,
     "batt_unit_capacity": 400.0,
     "batt_unit_surface_area": 30.0,
     "batt_user_specified_weather_file_peak_shaving": "",
@@ -18711,24 +18711,24 @@
             0.0
         ]
     ],
-    "batt_volume": 14.640769756097559,
-    "battery_energy": 1200.5431199999999,
-    "battery_energy_kwh": 1200.5431199999999,
+    "batt_volume": 0.1519073780487805,
+    "battery_energy": 1296.0,
+    "battery_energy_kwh": 1296.0,
     "battery_indirect_cost_percent": 20.0,
     "battery_losses_shown": 0.0,
     "battery_per_kW": 667.0,
     "battery_per_kWh": 184.0,
-    "battery_power": 300.13577999999998,
-    "battery_power_kw": 300.13577999999998,
+    "battery_power": 324.0,
+    "battery_power_kw": 324.0,
     "battery_thermal_shown": 0.0,
-    "battery_total": 421090.49934,
-    "battery_total_cost_lcos": 43534145.024307,
+    "battery_total": 454572.0,
+    "battery_total_cost_lcos": 518340.6,
     "battery_voltage_shown": 0.0,
     "bifaciality": 0.0,
     "bos_equip_fixed": 0.0,
     "bos_equip_perarea": 0.0,
     "bos_equip_perwatt": 0.35,
-    "bos_equip_total": 198450000.0,
+    "bos_equip_total": 189000.0,
     "cap_vs_temp": [
         [
             -20.0,
@@ -18759,27 +18759,43 @@
             101.0
         ]
     ],
-    "capex_table_ac_cost_per_w": 0.79,
+    "capex_table_ac_cost_per_w": 0.72,
     "capex_table_ac_inputs": [
-        [
-            1.0,
-            1.28
-        ],
-        [
-            4000.0,
-            1.28
-        ],
-        [
-            7000.0,
-            1.28
-        ],
-        [
-            7001.0,
-            0.79
-        ],
         [
             100000.0,
             0.79
+        ],
+        [
+            199999.0,
+            0.79
+        ],
+        [
+            200000.0,
+            0.72
+        ],
+        [
+            499999.0,
+            0.72
+        ],
+        [
+            500000.0,
+            0.68
+        ],
+        [
+            999999.0,
+            0.68
+        ],
+        [
+            1000000.0,
+            0.66
+        ],
+        [
+            2000000.0,
+            0.66
+        ],
+        [
+            2000000.0,
+            0.65
         ]
     ],
     "capex_table_batt_cost_per_kw": 1030.0,
@@ -18821,7 +18837,7 @@
             192.0
         ]
     ],
-    "capex_table_cost_per_w": 0.94,
+    "capex_table_cost_per_w": 0.96,
     "capex_table_dc_inputs": [
         [
             100000.0,
@@ -18860,9 +18876,9 @@
             0.94
         ]
     ],
-    "capex_table_total_installed_ac_cost": 741913.043478261,
-    "capex_table_total_installed_batt_cost": 1471865.8651199998,
-    "capex_table_total_installed_dc_cost": 532979999.99999997,
+    "capex_table_total_installed_ac_cost": 338086.95652173916,
+    "capex_table_total_installed_batt_cost": 1588896.0,
+    "capex_table_total_installed_dc_cost": 518400.0,
     "cbi_fed_amount": 0.0,
     "cbi_fed_deprbas_fed": 0.0,
     "cbi_fed_deprbas_sta": 0.0,
@@ -18933,8 +18949,8 @@
     "const_per_upfront_rate3": 0.0,
     "const_per_upfront_rate4": 0.0,
     "const_per_upfront_rate5": 0.0,
-    "construction_financing_cost": 26146744.859163584,
-    "contingency": 28593643.619973605,
+    "construction_financing_cost": 37920.47238,
+    "contingency": 45398.88,
     "contingency_percent": 4.0,
     "cost_debt_closing": 0.0,
     "cost_debt_fee": 2.75,
@@ -73737,7 +73753,7 @@
     "module_power": 540.0,
     "module_total": 243810000.0,
     "module_type": 0.0,
-    "modulearray_area": 2842.1052631578947,
+    "modulearray_area": 2842.105263157895,
     "modulearray_power": 567000.0,
     "modulearray_power_w": 567000000.0,
     "months_receivables_reserve": 0.0,
@@ -73933,6 +73949,9 @@
     "solar_resource": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy",
     "solar_resource_file": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
     "solution_mode_message": "",
+    "start_day_of_year": 3.335046e-317,
+    "start_day_of_year_load_ui": 3.335046e-317,
+    "start_day_of_year_tod_ui": 3.335046e-317,
     "state": "-",
     "state_tax_rate": [
         7.0
@@ -73950,8 +73969,8 @@
     "total_direct_cost": 743434734.1193137,
     "total_indirect_cost": 215460000.0,
     "total_installed_cost": 996066470.8252794,
-    "total_land_area": 2.3409962811973519,
-    "total_module_area": 2842.1052631578947,
+    "total_land_area": 2.340996281197352,
+    "total_module_area": 2842.105263157895,
     "total_system_indirect_cost": 172368000.0,
     "total_system_installed_cost": 952532325.8009724,
     "tz": -7.0,

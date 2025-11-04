@@ -80,7 +80,7 @@
         1.0
     ],
     "YrBuilt": 1980.0,
-    "ac_nameplate": 6.9565217391304359,
+    "ac_nameplate": 6.956521739130436,
     "adjust": 0.0,
     "adjust_constant": 0.0,
     "adjust_en_periods": 0.0,
@@ -63669,7 +63669,7 @@
         1.71415,
         1.87435
     ],
-    "nominal_discount_rate": 9.060000000000003,
+    "nominal_discount_rate": 9.060000000000004,
     "normalize_to_utility_bill": 0.0,
     "om_capacity": [
         30.0
@@ -63835,6 +63835,9 @@
     "solar_data_source": "NSRDB",
     "solar_resource": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy",
     "solar_resource_file": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
+    "start_day_of_year": 3.335046e-317,
+    "start_day_of_year_belpe_ui": 0.0,
+    "start_day_of_year_load_ui": 3.335046e-317,
     "state": "-",
     "state_tax_rate": [
         7.0
@@ -63857,7 +63860,7 @@
     "ui_ac_capacity": 0.006956521739130436,
     "ui_annual_load": 0.0,
     "ui_array_land_area_acres": 0.03468142638810892,
-    "ui_array_land_area_ha": 0.014035096978251723,
+    "ui_array_land_area_ha": 0.014035096978251725,
     "ui_array_land_area_multiplier": 1.0,
     "ui_batt_life_model": 0.0,
     "ui_copy_batt_discharge_percent_1": 25.0,
@@ -63871,7 +63874,7 @@
     "ui_land_area_per_mw": 0.0,
     "ui_net_capital_cost": 666254.2914886,
     "ui_step_minutes": 60.0,
-    "ui_total_land_area_ha": 0.014035096978251723,
+    "ui_total_land_area_ha": 0.014035096978251725,
     "ui_total_module_area": 42.10526315789474,
     "ui_total_module_area_acres": 0.010404427916432676,
     "ui_total_module_area_ha": 0.004210526315789474,

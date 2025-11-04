@@ -11,9 +11,9 @@ loss_diagram{'Flat Plate PV'} = define() {
 	if ( value('spe_is_bifacial') || value('cec_is_bifacial') || value('6par_is_bifacial') ) 
 	{
 		add_gain_term( 'annual_rear_ground_reflected_percent', 'Ground reflected to rear' );
-		//add_gain_term( 'annual_rear_row_reflections_percent', 'Rear row reflections' );	// insignificant
-		//add_gain_term( 'annual_rear_direct_diffuse_percent', 'DNI and DHI to rear' );		// insignificant
-		//add_loss_term( 'annual_rear_self_shaded_percent', 'Rear self shading' );			// insignificant
+		add_gain_term( 'annual_rear_row_reflections_percent', 'Rear row reflections' );	// insignificant
+		add_gain_term( 'annual_rear_direct_diffuse_percent', 'DNI and DHI to rear' );		// insignificant
+		add_loss_term( 'annual_rear_self_shaded_percent', 'Rear self shading' );			// insignificant
 		add_loss_term( 'annual_rack_shaded_percent', 'Rear rack shading' );
 		add_loss_term( 'annual_rear_soiled_percent', 'Rear soiling' );
 		add_loss_term( 'annual_bifacial_electrical_mismatch_percent', 'Bifacial electrical mismatch' );

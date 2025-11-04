@@ -1,7 +1,7 @@
 {
     "Name": "Marine Availability",
-    "Width": 594.0,
-    "Height": 141.0,
+    "Width": 608.0,
+    "Height": 228.0,
     "FormObjects": {
         "GroupBox": {
             "Visible": 1.0,
@@ -16,7 +16,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 6.0
+                    "Integer": 3.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -24,7 +24,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 130.0
+                    "Integer": 211.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -33,56 +33,6 @@
                 "Caption": {
                     "Type": 5.0,
                     "String": "System Availability"
-                },
-                "Bold": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                }
-            }
-        },
-        "Divider": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "ac_loss_divider"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 282.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 18.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 230.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 16.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Orientation": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Colour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 120.0,
-                        "Green": 120.0,
-                        "Blue": 120.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "Caption": {
-                    "Type": 5.0,
-                    "String": "AC Losses"
                 },
                 "Bold": {
                     "Type": 2.0,
@@ -99,11 +49,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 282.0
+                    "Integer": 234.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 42.0
+                    "Integer": 120.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -160,19 +110,19 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 18.0
+                    "Integer": 39.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 21.0
+                    "Integer": 30.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 258.0
+                    "Integer": 534.0
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 111.0
+                    "Integer": 78.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,

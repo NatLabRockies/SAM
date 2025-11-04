@@ -26507,7 +26507,7 @@
         1.87435
     ],
     "nameplate_capacity": 8.0,
-    "nominal_discount_rate": 9.060000000000003,
+    "nominal_discount_rate": 9.060000000000004,
     "normalize_to_utility_bill": 0.0,
     "om_capacity": [
         25.0
@@ -26594,6 +26594,8 @@
     "show_cash_incentives": 1.0,
     "show_tax_credits": 1.0,
     "spec_mode": 0.0,
+    "start_day_of_year": 3.335046e-317,
+    "start_day_of_year_load_ui": 3.335046e-317,
     "state_tax_rate": [
         7.0
     ],
@@ -26606,7 +26608,7 @@
     "ui_annual_load": 0.0,
     "ui_net_capital_cost": 8736.0,
     "ui_step_minutes": 60.0,
-    "ui_wacc": 6.2387999999999999,
+    "ui_wacc": 6.2388,
     "ur_annual_min_charge": 0.0,
     "ur_billing_demand_is_shown": 0.0,
     "ur_billing_demand_lookback_percentages": [

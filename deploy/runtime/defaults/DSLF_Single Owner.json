@@ -20953,6 +20953,8 @@
     "solarm": 1.8,
     "solution_mode_message": "",
     "standby_control": 0.0,
+    "start_day_of_year": 3.335046e-317,
+    "start_day_of_year_tod_ui": 3.335046e-317,
     "startup_frac": 0.35,
     "startup_time": 0.35,
     "state": "-",

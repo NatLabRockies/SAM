@@ -106,8 +106,8 @@ bool ShowWaveResourceDataSettings();
 bool ShowTidalResourceDataSettings();
 bool ScanWaveResourceData(const wxString &db_file, bool show_busy = false);
 bool ScanWaveResourceTSData(const wxString &db_file, bool show_busy = false);
-bool ScanTidalResourceData(const wxString& db_file, bool show_busy = false);
-wxString WaveResourceTSData_makeJPD(const wxString& db_file, bool show_busy = false);
+bool ScanTidalResourceTSData(const wxString& db_file, bool show_busy = false);
+wxString WaveResourceTSData_makeJPD(const wxString& db_file, ssc_number_t* resource_matrix = 0, bool show_busy = false);
 
 class LibraryCtrl;
 class wxTextCtrl;

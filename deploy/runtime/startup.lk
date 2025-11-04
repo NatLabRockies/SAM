@@ -2934,7 +2934,8 @@ sethybridvariabledependencies([
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 0,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 1,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 2,'DependentVariableName' = 'sales_tax_rate'},
-{ 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'system_capacity', 'DependentVartableIndex' = 2,'DependentVariableName' = 'hybrid_system_capacity'}
+{ 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'system_capacity', 'DependentVartableIndex' = 2,'DependentVariableName' = 'hybrid_system_capacity'},
+{ 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'start_day_of_week', 'DependentVartableIndex' = 2,'DependentVariableName' = 'start_day_of_week'}
 ]);
 addpage([['Hybrid System']], {'sidebar'='Hybrid System', 'help'='hybrid_system', 'top_page'=true});
 // pvwatts
@@ -2993,7 +2994,8 @@ sethybridvariabledependencies([
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'ppa_price_input', 'DependentVartableIndex' = 2,'DependentVariableName' = 'ppa_price_input'}, // battery dispatch
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 0,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 1,'DependentVariableName' = 'sales_tax_rate'},
-{ 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 2,'DependentVariableName' = 'sales_tax_rate'}
+{ 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 2,'DependentVariableName' = 'sales_tax_rate'},
+{ 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'start_day_of_week', 'DependentVartableIndex' = 2,'DependentVariableName' = 'start_day_of_week'}
 ]);
 addpage([['Hybrid System']], {'sidebar'='Hybrid System', 'help'='hybrid_system', 'top_page'=true});
 // pvwatts
@@ -3056,7 +3058,9 @@ sethybridvariabledependencies([
 { 'IndependentVartableIndex' = 4,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 1,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 4,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 2,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 4,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 3,'DependentVariableName' = 'sales_tax_rate'},
-{ 'IndependentVartableIndex' = 4,'IndependentVariableName' = 'system_capacity', 'DependentVartableIndex' = 3,'DependentVariableName' = 'hybrid_system_capacity'} // pv smoothing dispatch
+{ 'IndependentVartableIndex' = 4,'IndependentVariableName' = 'system_capacity', 'DependentVartableIndex' = 3,'DependentVariableName' = 'hybrid_system_capacity'}, // pv smoothing dispatch
+{ 'IndependentVartableIndex' = 4,'IndependentVariableName' = 'start_day_of_week', 'DependentVartableIndex' = 2,'DependentVariableName' = 'start_day_of_week'},
+{ 'IndependentVartableIndex' = 4,'IndependentVariableName' = 'start_day_of_week', 'DependentVartableIndex' = 3,'DependentVariableName' = 'start_day_of_week'}
 ]);
 addpage([['Hybrid System']], {'sidebar'='Hybrid System', 'help'='hybrid_system', 'top_page'=true});
 // pvwatts
@@ -3127,7 +3131,9 @@ sethybridvariabledependencies([
 { 'IndependentVartableIndex' = 4,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 0,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 4,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 1,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 4,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 2,'DependentVariableName' = 'sales_tax_rate'},
-{ 'IndependentVartableIndex' = 4,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 3,'DependentVariableName' = 'sales_tax_rate'}
+{ 'IndependentVartableIndex' = 4,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 3,'DependentVariableName' = 'sales_tax_rate'},
+{ 'IndependentVartableIndex' = 4,'IndependentVariableName' = 'start_day_of_week', 'DependentVartableIndex' = 2,'DependentVariableName' = 'start_day_of_week'},
+{ 'IndependentVartableIndex' = 4, 'IndependentVariableName' = 'start_day_of_week', 'DependentVartableIndex' = 3,'DependentVariableName' = 'start_day_of_week'}
 ]);
 addpage([['Hybrid System']], {'sidebar'='Hybrid System', 'help'='hybrid_system', 'top_page'=true});
 // pvwatts
@@ -3211,7 +3217,8 @@ sethybridvariabledependencies([
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 0,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 1,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 2,'DependentVariableName' = 'sales_tax_rate'},
-{ 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'system_capacity', 'DependentVartableIndex' = 2,'DependentVariableName' = 'hybrid_system_capacity'} // pv smoothing dispatch
+{ 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'system_capacity', 'DependentVartableIndex' = 2,'DependentVariableName' = 'hybrid_system_capacity'}, // pv smoothing dispatch
+{ 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'start_day_of_week', 'DependentVartableIndex' = 2,'DependentVariableName' = 'start_day_of_week'}
 
 ]);
 addpage([['Hybrid System']], {'sidebar'='Hybrid System', 'help'='hybrid_system', 'top_page'=true});
@@ -3273,7 +3280,8 @@ sethybridvariabledependencies([
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'ppa_price_input', 'DependentVartableIndex' = 2,'DependentVariableName' = 'ppa_price_input'}, // battery dispatch
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 0,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 1,'DependentVariableName' = 'sales_tax_rate'},
-{ 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 2,'DependentVariableName' = 'sales_tax_rate'}
+{ 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 2,'DependentVariableName' = 'sales_tax_rate'},
+{ 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'start_day_of_week', 'DependentVartableIndex' = 2,'DependentVariableName' = 'start_day_of_week'}
 ]);
 addpage([['Hybrid System']], {'sidebar'='Hybrid System', 'help'='hybrid_system', 'top_page'=true});
 // detailed pv
@@ -3345,6 +3353,8 @@ sethybridvariabledependencies([
 { 'IndependentVartableIndex' = 5,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 3,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 5,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 4,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 5,'IndependentVariableName' = 'system_capacity', 'DependentVartableIndex' = 4,'DependentVariableName' = 'hybrid_system_capacity'},
+{ 'IndependentVartableIndex' = 5,'IndependentVariableName' = 'start_day_of_week', 'DependentVartableIndex' = 3,'DependentVariableName' = 'start_day_of_week'},
+{ 'IndependentVartableIndex' = 5,'IndependentVariableName' = 'start_day_of_week', 'DependentVartableIndex' = 4,'DependentVariableName' = 'start_day_of_week'}
 ]);
 addpage([['Hybrid System']], {'sidebar'='Hybrid System', 'help'='hybrid_system', 'top_page'=true});
 //generic
@@ -3426,7 +3436,9 @@ sethybridvariabledependencies([
 { 'IndependentVartableIndex' = 5,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 1,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 5,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 2,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 5,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 3,'DependentVariableName' = 'sales_tax_rate'},
-{ 'IndependentVartableIndex' = 5,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 4,'DependentVariableName' = 'sales_tax_rate'}
+{ 'IndependentVartableIndex' = 5,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 4,'DependentVariableName' = 'sales_tax_rate'},
+{ 'IndependentVartableIndex' = 5,'IndependentVariableName' = 'start_day_of_week', 'DependentVartableIndex' = 3,'DependentVariableName' = 'start_day_of_week'},
+{ 'IndependentVartableIndex' = 5,'IndependentVariableName' = 'start_day_of_week', 'DependentVartableIndex' = 4,'DependentVariableName' = 'start_day_of_week'}
 ]);
 addpage([['Hybrid System']], {'sidebar'='Hybrid System', 'help'='hybrid_system', 'top_page'=true});
 //generic

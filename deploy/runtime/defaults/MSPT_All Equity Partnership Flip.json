@@ -56887,6 +56887,8 @@
     "solution_mode_message": "",
     "sponsor_cap_recovery_mode": 0.0,
     "sponsor_cap_recovery_year": 3.0,
+    "start_day_of_year": 3.335046e-317,
+    "start_day_of_year_tod_ui": 3.335046e-317,
     "startup_frac": 0.5,
     "startup_ramp_time": 0.0,
     "startup_target_Tdiff": -5.0,
