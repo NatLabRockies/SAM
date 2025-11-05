@@ -3143,6 +3143,7 @@
         "}\r",
         "\r",
         "on_load{'PV Subarrays and String Size'} = define() {\r",
+        "\tauto_size_subarray_enable();\r",
         "\tshow_hide_string_size_subarrays();\r",
         "\tenable_mppt();\r",
         "\tstring_size_warning();\r",
