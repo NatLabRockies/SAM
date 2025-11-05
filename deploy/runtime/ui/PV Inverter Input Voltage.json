@@ -148,7 +148,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 120.0
+                    "Integer": 135.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1455,7 +1455,7 @@
             "Version": 4.0,
             "Type": 1.0,
             "Label": "Number of MPPTs",
-            "Units": "1..4",
+            "Units": "",
             "Group": "PV Inverter Input Voltage",
             "IndexLabels": "",
             "Flags": 2.0,

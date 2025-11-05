@@ -352,7 +352,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 325.0
+                    "Integer": 349.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -986,7 +986,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "Set modules along bottom of row equal to modules per string"
+                    "String": "Set row dimensions when modules per string changes"
                 },
                 "State": {
                     "Type": 2.0,

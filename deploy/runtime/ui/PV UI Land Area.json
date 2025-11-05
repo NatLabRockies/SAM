@@ -1,5 +1,5 @@
 {
-    "Name": "PV Land Area",
+    "Name": "PV UI Land Area",
     "Width": 1013.0,
     "Height": 254.0,
     "FormObjects": {
@@ -198,7 +198,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 63.0
+                    "Integer": 15.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -206,7 +206,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 774.0
+                    "Integer": 970.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -803,7 +803,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 200.0
+                    "Integer": 216.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -886,7 +886,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 200.0
+                    "Integer": 216.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -969,7 +969,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 292.0
+                    "Integer": 306.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1010,7 +1010,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 200.0
+                    "Integer": 216.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1536,7 +1536,7 @@
             "Version": 4.0,
             "Type": 1.0,
             "Label": "Additional land area",
-            "Units": "acres or ha",
+            "Units": "",
             "Group": "PV Land Area",
             "IndexLabels": "",
             "Flags": 2.0,
