@@ -74,6 +74,8 @@ static SamApp::ver releases[] = {
 	//intermediate version numbers are required in this list in order for the version upgrade script (versions.lk) to work correctly
 	//please clarify the reason for the new version in a comment. Examples: public release, variable changes, internal release, public beta release, etc.
 	//the top version should always be the current working version
+			{ 2025, 11, 6 }, // 2025.11.6.ssc.303 Community Power Accelerator (CPA) release (windows only)
+			{ 2025, 10, 27}, //2025.10.27 ssc 304 beta release for marine
 			{ 2025, 10, 8 }, // 2025.10.8.ssc.303 Community Power Accelerator (CPA) release (windows only)
 			{ 2025, 9, 19 }, // Placeholder for PVWatts-Battery upgrade testing (replace with release version number)
 			{ 2025, 4, 16 }, // 2025.4.16 ssc 302 public release
