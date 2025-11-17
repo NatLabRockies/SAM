@@ -65,7 +65,7 @@ version_upgrade{'2025.10.27'} = define() {
 		variable_name_change('insurance_during_construction_method', 'insurance_during_construction_cost_method');
 		variable_name_change('insurance_during_construction_modeled', 'insurance_during_construction_cost_modeled');
 	}
-}
+};
 
 version_upgrade{'2025.9.19'} = define() {
 
