@@ -315,9 +315,9 @@ function setup_detailed_pv_pages()
 	           'Solar Resource Information', 
 	           {'name'='PV Albedo and Radiation', 'caption' = 'Albedo - Sky Diffuse Model - Irradiance Data (Advanced)', 'collapsible'=true, 'collapsible_var'='pv.radmode.is_shown'} ]], 
 	           { 'sidebar'='Location and Resource', 'help'='pv_location_and_resource' });
-	addpage( [['Simple Efficiency Module Model - Copy'],
-			  ['CEC Performance Model with Module Database - Copy'],
-			  ['CEC Performance Model with User Entered Specifications - Copy'],
+	addpage( [['Simple Efficiency Module Model'],
+			  ['CEC Performance Model with Module Database'],
+			  ['CEC Performance Model with User Entered Specifications'],
 			  ['Sandia PV Array Performance Model with Module Database'],
 			  ['IEC61853 Single Diode Model'] ], 
 			  {'sidebar'='Module', 'help'='pv_module', 'exclusive_var'='module_model'});
@@ -938,9 +938,9 @@ setconfig('PV UI','None');
 	           'Solar Resource Information', 
 	           {'name'='PV Albedo and Radiation', 'caption' = 'Albedo - Sky Diffuse Model - Irradiance Data (Advanced)', 'collapsible'=true, 'collapsible_var'='pv.radmode.is_shown'} ]], 
 	           { 'sidebar'='Location and Resource', 'help'='pv_location_and_resource' });
-	addpage( [['Simple Efficiency Module Model - Copy'],
-			  ['CEC Performance Model with Module Database - Copy'],
-			  ['CEC Performance Model with User Entered Specifications - Copy'],
+	addpage( [['Simple Efficiency Module Model'],
+			  ['CEC Performance Model with Module Database'],
+			  ['CEC Performance Model with User Entered Specifications'],
 			  ['Sandia PV Array Performance Model with Module Database'],
 			  ['IEC61853 Single Diode Model'] ], 
 			  {'sidebar'='Module', 'help'='pv_module', 'exclusive_var'='module_model'});
