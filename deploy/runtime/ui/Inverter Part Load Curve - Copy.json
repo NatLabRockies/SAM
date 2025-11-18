@@ -1,5 +1,5 @@
 {
-    "Name": "Inverter Part Load Curve",
+    "Name": "Inverter Part Load Curve - Copy",
     "Width": 782.0,
     "Height": 714.0,
     "FormObjects": {
@@ -2883,19 +2883,6 @@
             "IndexLabels": "",
             "Flags": 2.0,
             "DefaultValue": 250.0,
-            "UIObject": "Numeric",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "inv_pd_num_mppt": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Number of MPPT inputs",
-            "Units": " ",
-            "Group": "PV Inverter (Part Load Curve)",
-            "IndexLabels": "",
-            "Flags": 0.0,
-            "DefaultValue": 1.0,
             "UIObject": "Numeric",
             "sscVariableName": "",
             "sscVariableValue": ""

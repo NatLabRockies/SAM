@@ -1,5 +1,5 @@
 {
-    "Name": "Inverter CEC Database",
+    "Name": "Inverter CEC Database - Copy",
     "Width": 993.0,
     "Height": 643.0,
     "FormObjects": {
@@ -2242,7 +2242,6 @@
         "\t{\r",
         "\t\ten = false;\r",
         "\t}",
-        "\tenable('inv_snl_num_mppt', en );\r",
         "};",
         "",
         "on_change{'inv_cec_name'} = define()",

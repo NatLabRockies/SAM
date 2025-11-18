@@ -11051,7 +11051,6 @@
     "inv_pd_idcmax": 18.0,
     "inv_pd_mppt_hi": 480.0,
     "inv_pd_mppt_low": 250.0,
-    "inv_pd_num_mppt": 1.0,
     "inv_pd_paco": 4000.0,
     "inv_pd_partload": [
         0.0,
