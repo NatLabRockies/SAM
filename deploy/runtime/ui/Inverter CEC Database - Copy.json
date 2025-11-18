@@ -2229,7 +2229,7 @@
         "\taxis('y1', {'label'='Efficiency (%)', 'min'=70, 'max'=100});",
         "}",
         "",
-        "on_load{'Inverter CEC Database'} = define()",
+        "on_load{'Inverter CEC Database - Copy'} = define()",
         "{",
         "\tplot_inverter_curve();",
         "\t// inverter_count not an input for HCPV\r",

@@ -1710,7 +1710,7 @@
         "\tenable('ui_land_area_per_mw', check == 1);",
         "}",
         "",
-        "on_load{'PV Land Area'} = define() {",
+        "on_load{'PV UI Land Area'} = define() {",
         "\tland_area_choice();",
         "};",
         "\r",

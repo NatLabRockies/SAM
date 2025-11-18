@@ -3128,7 +3128,7 @@
         "",
         "}",
         "",
-        "on_load{\"Inverter Part Load Curve\"}=define(){",
+        "on_load{'Inverter Part Load Curve - Copy'}=define(){",
         "\tpd_inverter_replot_efficiency();",
         "\tpd_inverter_calculate_weighted_efficiencies();",
         "};\t",

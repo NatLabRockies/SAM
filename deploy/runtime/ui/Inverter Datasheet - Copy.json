@@ -1,5 +1,5 @@
 {
-    "Name": "Inverter Datasheet",
+    "Name": "Inverter Datasheet - Copy",
     "Width": 776.0,
     "Height": 587.0,
     "FormObjects": {
@@ -2317,7 +2317,7 @@
         "",
         "}",
         "\r",
-        "on_load{\"Inverter Datasheet\"}=define(){\r",
+        "on_load{'Inverter Datasheet - Copy'}=define(){\r",
         "\tinverter_datasheet_value_change();\t\r",
         "};\r",
         "",

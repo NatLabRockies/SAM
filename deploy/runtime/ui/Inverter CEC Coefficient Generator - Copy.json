@@ -1,5 +1,5 @@
 {
-    "Name": "Inverter CEC Coefficient Generator",
+    "Name": "Inverter CEC Coefficient Generator - Copy",
     "Width": 1265.0,
     "Height": 974.0,
     "FormObjects": {
@@ -2399,7 +2399,7 @@
         "\t}",
         "};",
         "",
-        "on_load{\"Inverter CEC Coefficient Generator\"} = define()",
+        "on_load{'Inverter CEC Coefficient Generator - Copy'} = define()",
         "{",
         "\tcalc_coefficients();",
         "};",
