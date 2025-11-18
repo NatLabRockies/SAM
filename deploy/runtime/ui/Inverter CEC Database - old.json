@@ -1,5 +1,5 @@
 {
-    "Name": "Inverter CEC Database - Copy",
+    "Name": "Inverter CEC Database",
     "Width": 993.0,
     "Height": 643.0,
     "FormObjects": {
@@ -230,7 +230,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 396.0
+                    "Integer": 423.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -645,7 +645,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 216.0
+                    "Integer": 243.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -728,7 +728,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 243.0
+                    "Integer": 270.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -811,7 +811,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 450.0
+                    "Integer": 477.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -894,7 +894,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 531.0
+                    "Integer": 558.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -977,7 +977,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 477.0
+                    "Integer": 504.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1052,6 +1052,89 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
+                    "String": "inv_snl_num_mppt"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 666.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 216.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 2.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
                     "String": "inv_snl_paco"
                 },
                 "X": {
@@ -1060,7 +1143,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 288.0
+                    "Integer": 315.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1143,7 +1226,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 315.0
+                    "Integer": 342.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1226,7 +1309,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 369.0
+                    "Integer": 396.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1309,7 +1392,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 342.0
+                    "Integer": 369.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1392,7 +1475,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 423.0
+                    "Integer": 450.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1475,7 +1558,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 504.0
+                    "Integer": 531.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1542,6 +1625,68 @@
                 "TabOrder": {
                     "Type": 3.0,
                     "Integer": 15.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "msg_mppt"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 807.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 216.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 177.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 63.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
                 }
             }
         },
@@ -1645,11 +1790,11 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 270.0
+                    "Integer": 297.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 537.0
+                    "Integer": 360.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -1761,7 +1906,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "If you are modeling a system with microinverters or DC power optimizers, see the Losses page to adjust the system losses accordingly. For multiple MPPTs see the System Sizing page."
+                    "String": "If you are modeling a system with microinverters or DC power optimizers, see the Losses page to adjust the system losses accordingly."
                 },
                 "TextColour": {
                     "Type": 4.0,
@@ -2007,6 +2152,19 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
+        "inv_snl_num_mppt": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Number of MPPT inputs",
+            "Units": " ",
+            "Group": "PV Inverter (CEC Database)",
+            "IndexLabels": "",
+            "Flags": 0.0,
+            "DefaultValue": 1.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "inv_snl_paco": {
             "Version": 4.0,
             "Type": 1.0,
@@ -2229,9 +2387,31 @@
         "\taxis('y1', {'label'='Efficiency (%)', 'min'=70, 'max'=100});",
         "}",
         "",
-        "on_load{'Inverter CEC Database - Copy'} = define()",
+        "function show_mppt_msg() {\r",
+        "\tmsg = '';\r",
+        "\tclr = 'black';\r",
+        "\tif ( technology() == 'High-X Concentrating PV' ) \r",
+        "\t{ \r",
+        "\t\tmsg = 'The HCPV model does not support multiple MPPT inputs.';\r",
+        "\t}\r",
+        "\telseif ( value('inverter_count') != 1 )\r",
+        "\t{\r",
+        "\t\tmsg = 'Number of MPPT Inputs is only available for systems with one inverter as specified on System Design page.';\r",
+        "\t\tclr = 'black';\r",
+        "\t}",
+        "\telseif ( value('inv_snl_num_mppt') > 4 || value('inv_snl_num_mppt') < 1 )\r",
+        "\t{\r",
+        "\t\tmsg = 'Number of MPPT inputs must be between 1 and 4.';\r",
+        "\t\tclr = 'red';\r",
+        "\t}\r",
+        "\tproperty('msg_mppt','TextColour',clr);\r",
+        "\tproperty('msg_mppt','Caption',msg);",
+        "}",
+        "",
+        "on_load{'Inverter CEC Database'} = define()",
         "{",
         "\tplot_inverter_curve();",
+        "\tshow_mppt_msg();\r",
         "\t// inverter_count not an input for HCPV\r",
         "\ten = true;\r",
         "\tif ( technology() == 'High-X Concentrating PV' )\r",
@@ -2242,11 +2422,13 @@
         "\t{\r",
         "\t\ten = false;\r",
         "\t}",
+        "\tenable('inv_snl_num_mppt', en );\r",
         "};",
         "",
         "on_change{'inv_cec_name'} = define()",
         "{",
         "\tplot_inverter_curve();",
+        "\tshow_mppt_msg();\r",
         "};",
         "\r",
         "on_change{'inv_snl_vdcmax'} = define() {\r",
@@ -2270,6 +2452,10 @@
         "\telse { return; }\t\r",
         "};\r",
         "",
+        "on_change{'inv_snl_num_mppt'} = define()",
+        "{",
+        "\tshow_mppt_msg();",
+        "};",
         ""
     ]
 }

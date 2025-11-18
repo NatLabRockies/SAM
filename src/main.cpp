@@ -2022,9 +2022,11 @@ void ConfigDatabase::CachePagesInConfiguration( std::vector<PageInfo> &Pages, Co
 			VarDatabase &vars = ipd->Variables();
 			for( VarDatabase::iterator it = vars.begin();it != vars.end();++it )	{
 				if ( !ci->Variables[ndx].Add(it->first, it->second))	{
-					wxMessageBox("Internal error in configuration.\n\n" + ci->TechnologyFullName  + ", " + ci->Financing + "   [ " + pi.Name + " ]\n\n"
-						"An error occurred when attempting to instantiate variable: '" + it->first + "'\n"
-						"Duplicate variables within a configuration are not allowed.", "sam-engine", wxICON_ERROR|wxOK );
+					//wxMessageBox("Internal error in configuration.\n\n" + ci->TechnologyFullName  + ", " + ci->Financing + "   [ " + pi.Name + " ]\n\n"
+					//	"An error occurred when attempting to instantiate variable: '" + it->first + "'\n"
+					//	"Duplicate variables within a configuration are not allowed.", "sam-engine", wxICON_ERROR|wxOK );
+						wxLogStatus("Configuration error: Unable to instantiate " +  it->first + ". Duplicate variables not allowed within a configuration.");
+
 				}
 				/*
                 // TODO: hybrid additional variables - need general way to handle - in startup.lk

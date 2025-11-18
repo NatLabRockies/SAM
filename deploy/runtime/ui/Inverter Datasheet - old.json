@@ -1,9 +1,9 @@
 {
-    "Name": "PV UI Land Area",
-    "Width": 1013.0,
-    "Height": 254.0,
+    "Name": "Inverter Datasheet",
+    "Width": 776.0,
+    "Height": 587.0,
     "FormObjects": {
-        "Label": {
+        "GroupBox": {
             "Visible": 1.0,
             "ObjectProperties": {
                 "Name": {
@@ -12,19 +12,19 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 396.0
+                    "Integer": 9.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 153.0
+                    "Integer": 456.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 255.0
+                    "Integer": 764.0
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 24.0
+                    "Integer": 63.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -32,206 +32,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "Total module area"
-                },
-                "TextColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "Bold": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "FontSize": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "WordWrap": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "AlignRight": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "AlignTop": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                }
-            }
-        },
-        "Label": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "4"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 396.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 189.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 255.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Caption": {
-                    "Type": 5.0,
-                    "String": "Ground area occupied by array"
-                },
-                "TextColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "Bold": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "FontSize": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "WordWrap": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "AlignRight": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "AlignTop": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                }
-            }
-        },
-        "Label": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "88"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 396.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 216.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 255.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Caption": {
-                    "Type": 5.0,
-                    "String": "Total estimated land area"
-                },
-                "TextColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "Bold": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "FontSize": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "WordWrap": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "AlignRight": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "AlignTop": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                }
-            }
-        },
-        "Divider": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "object 21"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 15.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 171.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 970.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 16.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Orientation": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Colour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 120.0,
-                        "Green": 120.0,
-                        "Blue": 120.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "Caption": {
-                    "Type": 5.0,
-                    "String": "Land Area Estimate"
+                    "String": "Copy Inverter Specifications from Current Library Selection"
                 },
                 "Bold": {
                     "Type": 2.0,
@@ -244,7 +45,7 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "object 4"
+                    "String": "GroupBox1"
                 },
                 "X": {
                     "Type": 3.0,
@@ -252,15 +53,15 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 6.0
+                    "Integer": 3.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 1000.0
+                    "Integer": 764.0
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 243.0
+                    "Integer": 137.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -268,7 +69,118 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "Land Area Estimate"
+                    "String": "Power Ratings"
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "GroupBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "GroupBox2"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 9.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 519.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 764.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 63.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Save / Load Data"
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "GroupBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "GroupBox3"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 9.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 141.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 764.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 127.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Operating Ranges"
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "GroupBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "GroupBox4"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 9.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 270.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 764.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 182.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Losses"
                 },
                 "Bold": {
                     "Type": 2.0,
@@ -281,19 +193,19 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "object 7"
+                    "String": "Label1"
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 654.0
+                    "Integer": 437.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 129.0
+                    "Integer": 285.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 90.0
+                    "Integer": 131.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -305,7 +217,69 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "acres"
+                    "String": "Suggested value"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "Label2"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 426.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 27.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 341.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 104.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "You can specify either a weighted or nominal efficiency. The weighted efficiency can be either CEC or European. The manufacturer efficiency can be either peak or nominal. See Help for details."
                 },
                 "TextColour": {
                     "Type": 4.0,
@@ -330,11 +304,11 @@
                 },
                 "AlignRight": {
                     "Type": 2.0,
-                    "Boolean": 1.0
+                    "Boolean": 0.0
                 },
                 "AlignTop": {
                     "Type": 2.0,
-                    "Boolean": 0.0
+                    "Boolean": 1.0
                 }
             }
         },
@@ -343,7 +317,7 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "object 713"
+                    "String": "Label21"
                 },
                 "X": {
                     "Type": 3.0,
@@ -351,15 +325,15 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 24.0
+                    "Integer": 366.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 846.0
+                    "Integer": 750.0
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 36.0
+                    "Integer": 38.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -367,7 +341,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "SAM uses the total estimated land area in acres to calculate land purchase and/or land lease costs when those costs are specified on the Installation Costs and Operating Costs pages, respectively. See Help for details."
+                    "String": "If the datasheet does not specify loss values, you can use the suggested values to approximate the losses. See Help for details."
                 },
                 "TextColour": {
                     "Type": 4.0,
@@ -405,19 +379,19 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "object 79"
+                    "String": "Label211"
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 747.0
+                    "Integer": 351.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 129.0
+                    "Integer": 54.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 90.0
+                    "Integer": 32.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -429,14 +403,14 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "hectares"
+                    "String": "%"
                 },
                 "TextColour": {
                     "Type": 4.0,
                     "Color": {
                         "Red": 0.0,
                         "Green": 0.0,
-                        "Blue": 0.0,
+                        "Blue": 255.0,
                         "Alpha": 255.0
                     }
                 },
@@ -450,11 +424,11 @@
                 },
                 "WordWrap": {
                     "Type": 2.0,
-                    "Boolean": 1.0
+                    "Boolean": 0.0
                 },
                 "AlignRight": {
                     "Type": 2.0,
-                    "Boolean": 1.0
+                    "Boolean": 0.0
                 },
                 "AlignTop": {
                     "Type": 2.0,
@@ -462,24 +436,197 @@
                 }
             }
         },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "Label2111"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 351.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 81.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 32.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "%"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Button": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "btnLoadInvDSData"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 186.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 543.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 153.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 28.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Load data from file..."
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "Button": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "btnSaveInvDSData"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 543.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 153.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 28.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Save data to file..."
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "Button": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "btn_copy_from_library"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 489.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 477.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 267.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 28.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Copy specifications"
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
         "Numeric": {
             "Visible": 1.0,
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "total_land_area"
+                    "String": "inv_ds_ac_voltage"
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 654.0
+                    "Integer": 246.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 216.0
+                    "Integer": 156.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 90.0
+                    "Integer": 100.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -499,7 +646,7 @@
                 },
                 "Format": {
                     "Type": 3.0,
-                    "Integer": 0.0
+                    "Integer": 1.0
                 },
                 "Decimals": {
                     "Type": 3.0,
@@ -515,11 +662,70 @@
                 },
                 "ThousandsSep": {
                     "Type": 2.0,
-                    "Boolean": 1.0
+                    "Boolean": 0.0
                 },
                 "Editable": {
                     "Type": 2.0,
                     "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 8.0
+                }
+            }
+        },
+        "TextEntry": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "inv_ds_data_filename"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 345.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 543.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 386.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Text": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
                 },
                 "ForeColour": {
                     "Type": 4.0,
@@ -550,19 +756,19 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "ui_ac_capacity"
+                    "String": "inv_ds_eff_peak_or_nom"
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 498.0
+                    "Integer": 246.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 96.0
+                    "Integer": 81.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 90.0
+                    "Integer": 100.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -582,91 +788,8 @@
                 },
                 "Format": {
                     "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "ui_array_land_area_acres"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 654.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 189.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 90.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
                     "Integer": 1.0
                 },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
                 "Decimals": {
                     "Type": 3.0,
                     "Integer": 3.0
@@ -681,256 +804,7 @@
                 },
                 "ThousandsSep": {
                     "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "ui_array_land_area_ha"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 747.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 189.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 90.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "ui_array_land_area_multiplier"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 216.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 189.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 90.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "ui_land_area_additional"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 216.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 216.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 90.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
+                    "Boolean": 0.0
                 },
                 "Editable": {
                     "Type": 2.0,
@@ -960,484 +834,28 @@
                 }
             }
         },
-        "Choice": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "ui_land_area_additional_units"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 306.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 216.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 75.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Items": {
-                    "Type": 6.0,
-                    "StringList": "acres|ha"
-                },
-                "Selection": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "ui_land_area_per_mw"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 216.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 138.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 90.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": 2.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "ui_total_land_area_ha"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 747.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 216.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 90.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "ui_total_module_area"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 498.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 69.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 90.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "ui_total_module_area_acres"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 654.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 153.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 90.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "ui_total_module_area_ha"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 747.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 153.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 90.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                }
-            }
-        },
         "RadioChoice": {
             "Visible": 1.0,
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "ui_use_acre_per_mw"
+                    "String": "inv_ds_eff_type"
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 24.0
+                    "Integer": 21.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 69.0
+                    "Integer": 54.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 273.0
+                    "Integer": 224.0
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 54.0
+                    "Integer": 50.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -1445,11 +863,11 @@
                 },
                 "Selection": {
                     "Type": 3.0,
-                    "Integer": 0.0
+                    "Integer": -1.0
                 },
                 "Items": {
                     "Type": 6.0,
-                    "StringList": "Automatically calculate from module area|Enter area per capacity in acres/MWac"
+                    "StringList": "Weighted efficiency|Manufacturer efficiency"
                 },
                 "ShowCaptions": {
                     "Type": 2.0,
@@ -1461,31 +879,1364 @@
                 },
                 "TabOrder": {
                     "Type": 3.0,
+                    "Integer": 0.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "inv_ds_eff_weighted"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 246.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 54.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
                     "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 4.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "inv_ds_idcmax"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 246.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 210.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 9.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "inv_ds_mppt_hi"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 594.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 210.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 16.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "inv_ds_mppt_low"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 594.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 156.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 14.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "inv_ds_num_mppt"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 594.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 237.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "inv_ds_paco"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 246.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 27.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 4.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "inv_ds_pdco"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 246.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 108.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 5.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "inv_ds_pnt"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 330.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 339.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 7.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "inv_ds_pnt_suggested"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 468.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 339.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 7.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "inv_ds_pso"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 330.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 312.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 6.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "inv_ds_pso_suggested"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 468.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 312.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 6.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "inv_ds_vdcmax"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 246.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 183.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 8.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "inv_ds_vdco"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 594.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 183.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 15.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 7"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 474.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 465.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 36.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Click Copy Specifications to copy inverter data from the inverter currently selected for the Inverter CEC Database option."
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 731"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 18.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 405.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 750.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 42.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "If you are modeling a system with microinverters or DC power optimizers, see the Losses page to adjust the system losses accordingly."
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
                 }
             }
         }
     },
     "VarDatabase": {
-        "total_land_area": {
+        "inv_ds_ac_voltage": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "Total land area estimate",
-            "Units": "acres",
-            "Group": "PV Land Area",
+            "Label": "Nominal AC voltage",
+            "Units": "Vac",
+            "Group": "PV Inverter (Datasheet)",
             "IndexLabels": "",
-            "Flags": 9.0,
-            "DefaultValue": 0.0,
+            "Flags": 2.0,
+            "DefaultValue": 240.0,
             "UIObject": "Numeric",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
-        "ui_ac_capacity": {
+        "inv_ds_data_filename": {
+            "Version": 4.0,
+            "Type": 4.0,
+            "Label": "Inverter data filename",
+            "Units": " ",
+            "Group": "PV Inverter (Datasheet)",
+            "IndexLabels": "",
+            "Flags": 9.0,
+            "DefaultValue": "",
+            "UIObject": "TextEntry",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "inv_ds_eff": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "AC capacity",
-            "Units": "MWac",
-            "Group": "PV Land Area",
+            "Label": "Inverter efficiency",
+            "Units": "%",
+            "Group": "PV Inverter (Datasheet)",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": 1.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "inv_ds_eff_peak_or_nom": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Manufacturer efficiency",
+            "Units": "%",
+            "Group": "PV Inverter (Datasheet)",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 96.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "inv_ds_eff_type": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Use weighted or manufacturer efficiency",
+            "Units": " ",
+            "Group": "PV Inverter (Datasheet)",
+            "IndexLabels": "",
+            "Flags": 1.0,
+            "DefaultValue": 0.0,
+            "UIObject": "RadioChoice",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "inv_ds_eff_weighted": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Weighted efficiency",
+            "Units": "%",
+            "Group": "PV Inverter (Datasheet)",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 96.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "inv_ds_idcmax": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Maximum DC current",
+            "Units": "Adc",
+            "Group": "PV Inverter (Datasheet)",
+            "IndexLabels": "",
+            "Flags": 2.0,
+            "DefaultValue": 18.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "inv_ds_mppt_hi": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Maximum MPPT DC voltage",
+            "Units": "Vdc",
+            "Group": "PV Inverter (Datasheet)",
+            "IndexLabels": "",
+            "Flags": 2.0,
+            "DefaultValue": 480.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "inv_ds_mppt_low": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Minimum MPPT DC voltage",
+            "Units": "Vdc",
+            "Group": "PV Inverter (Datasheet)",
+            "IndexLabels": "",
+            "Flags": 2.0,
+            "DefaultValue": 250.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "inv_ds_num_mppt": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Number of MPPT inputs",
+            "Units": " ",
+            "Group": "PV Inverter (Datasheet)",
+            "IndexLabels": "",
+            "Flags": 0.0,
+            "DefaultValue": 1.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "inv_ds_paco": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Maximum AC output power",
+            "Units": "Wac",
+            "Group": "PV Inverter (Datasheet)",
+            "IndexLabels": "",
+            "Flags": 2.0,
+            "DefaultValue": 4000.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "inv_ds_pdco": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Maximum DC input power",
+            "Units": "Wdc",
+            "Group": "PV Inverter (Datasheet)",
             "IndexLabels": "",
             "Flags": 8.0,
             "DefaultValue": 0.0,
@@ -1493,38 +2244,12 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
-        "ui_array_land_area_acres": {
+        "inv_ds_pnt": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "Ground area occupied by array",
-            "Units": "acres",
-            "Group": "PV Land Area",
-            "IndexLabels": "",
-            "Flags": 9.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Numeric",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "ui_array_land_area_ha": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Array land area",
-            "Units": "ha",
-            "Group": "PV Land Area",
-            "IndexLabels": "",
-            "Flags": 9.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Numeric",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "ui_array_land_area_multiplier": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Land area multiplier",
-            "Units": "",
-            "Group": "PV Land Area",
+            "Label": "Power consumption at night",
+            "Units": "Wac",
+            "Group": "PV Inverter (Datasheet)",
             "IndexLabels": "",
             "Flags": 2.0,
             "DefaultValue": 1.0,
@@ -1532,12 +2257,25 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
-        "ui_land_area_additional": {
+        "inv_ds_pnt_suggested": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "Additional land area",
-            "Units": "",
-            "Group": "PV Land Area",
+            "Label": "Suggested power consumption at night",
+            "Units": "Wac",
+            "Group": "PV Inverter (Datasheet)",
+            "IndexLabels": "",
+            "Flags": 9.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "inv_ds_pso": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Power consumption during operation",
+            "Units": "Wdc",
+            "Group": "PV Inverter (Datasheet)",
             "IndexLabels": "",
             "Flags": 2.0,
             "DefaultValue": 0.0,
@@ -1545,38 +2283,12 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
-        "ui_land_area_additional_units": {
+        "inv_ds_pso_suggested": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "Additional and area units",
-            "Units": "0=acre,1=ha",
-            "Group": "PV Land Area",
-            "IndexLabels": "acres|ha",
-            "Flags": 3.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Choice",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "ui_land_area_per_mw": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Land area per system capacity",
-            "Units": "acres/MWac",
-            "Group": "PV Land Area",
-            "IndexLabels": "",
-            "Flags": 0.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "ui_total_land_area_ha": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Total land area",
-            "Units": "ha",
-            "Group": "PV Land Area",
+            "Label": "Suggested power consumption during operation",
+            "Units": "Wdc",
+            "Group": "PV Inverter (Datasheet)",
             "IndexLabels": "",
             "Flags": 9.0,
             "DefaultValue": 0.0,
@@ -1584,139 +2296,169 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
-        "ui_total_module_area": {
+        "inv_ds_vdcmax": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "Total module area",
-            "Units": "m²",
-            "Group": "PV Land Area",
+            "Label": "Maximum DC voltage",
+            "Units": "Vdc",
+            "Group": "PV Inverter (Datasheet)",
             "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": 0.0,
+            "Flags": 2.0,
+            "DefaultValue": 600.0,
             "UIObject": "Numeric",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
-        "ui_total_module_area_acres": {
+        "inv_ds_vdco": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "Total module area",
-            "Units": "acres",
-            "Group": "PV Land Area",
+            "Label": "Nominal DC voltage",
+            "Units": "Vdc",
+            "Group": "PV Inverter (Datasheet)",
             "IndexLabels": "",
-            "Flags": 9.0,
-            "DefaultValue": 0.0,
+            "Flags": 2.0,
+            "DefaultValue": 310.0,
             "UIObject": "Numeric",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "ui_total_module_area_ha": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Total module area",
-            "Units": "ha",
-            "Group": "PV Land Area",
-            "IndexLabels": "",
-            "Flags": 9.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Numeric",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "ui_use_acre_per_mw": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Use acre per MW input",
-            "Units": "0/1",
-            "Group": "PV Land Area",
-            "IndexLabels": "Automatically calculate from module area|Enter area per capacity in acres/MWe",
-            "Flags": 1.0,
-            "DefaultValue": 0.0,
-            "UIObject": "RadioChoice",
             "sscVariableName": "",
             "sscVariableValue": ""
         }
     },
     "Equations": [
-        "equations{ 'ui_ac_capacity' } = define() {\r",
-        "// TO DO Remove PV UI\r",
-        "\tif (technology() == 'PV UI' || technology() == 'Flat Plate PV' || technology() == 'PV Battery' || technology() == 'Photovoltaic Wind Battery Hybrid' ) {\r",
-        "\t\treturn ${total_inverter_capacity}/1000;",
-        "\t}\r",
-        "\telse {",
-        "\t\treturn ${ac_nameplate}/1000;",
-        "\t}\t",
+        "equations{ 'inv_ds_pnt_suggested' } = define() {",
+        "\treturn 0.00025*${inv_ds_paco}; };",
+        "",
+        "equations{ 'inv_ds_pso_suggested' } = define() {",
+        "\treturn 0.008*${inv_ds_paco}; \r",
         "};",
         "",
-        "equations{ 'ui_total_module_area' } = define() {",
-        "\treturn ${total_module_area};",
-        "};",
+        "equations{ 'inv_ds_eff' } = define() {",
+        "\treturn ?${inv_ds_eff_type}",
+        "[ ${inv_ds_eff_weighted},",
+        "  ${inv_ds_eff_peak_or_nom} ]; };",
         "",
-        "equations{ 'ui_total_module_area_acres' } = define() {",
-        "\treturn ${total_module_area} / 4046.86;",
-        "};",
-        "",
-        "equations{ 'ui_total_module_area_ha' } = define() {",
-        "\treturn ${total_module_area} / 10000;",
-        "};",
-        "",
-        "equations{ 'ui_array_land_area_acres' } = define() {\r",
-        "\tif (${ui_use_acre_per_mw} == 0)  // calculate from module area",
-        "\t{\t\r",
-        "// TO DO Remove PV UI\r",
-        "\t\tif (technology() == 'PV UI' || technology() == 'Flat Plate PV' || technology() == 'PV Battery' || technology() == 'Photovoltaic Wind Battery Hybrid'  ) {\r",
-        "\t\t\ttotal_land_area_meters = ${subarray1_land_area};",
-        "\t\t\tif (${subarray2_enable}) {",
-        "\t\t\t\ttotal_land_area_meters += ${subarray2_land_area};\r",
-        "\t\t\t}\t",
-        "\t\t\tif (${subarray3_enable}) {",
-        "\t\t\t\ttotal_land_area_meters += ${subarray3_land_area};\r",
-        "\t\t\t}\t",
-        "\t\t\tif (${subarray4_enable}) {",
-        "\t\t\t\ttotal_land_area_meters += ${subarray4_land_area};\r",
-        "\t\t\t}\t",
-        "\t\t\treturn total_land_area_meters / 4046.86;",
-        "\t\t}",
-        "\t\telse { // pvwatts\r",
-        "\t\t\tarea = ${ui_total_module_area} / ${gcr};",
-        "\t\t\treturn area / 4046.86;",
-        "\t\t}",
-        "\t}",
-        "\telse { // calculate from user entered acres/MWac",
-        "\t\tif (technology() == 'Flat Plate PV' || technology() == 'PV Battery' || technology() == 'Photovoltaic Wind Battery Hybrid' ) {\r",
-        "\t\t\treturn ${ui_land_area_per_mw} * ${total_inverter_capacity}/1000;",
-        "\t\t}",
-        "\t\telse {",
-        "\t\t\treturn ${ui_land_area_per_mw} * ${ac_nameplate}/1000;",
-        "\t\t}\r",
-        "\t}",
-        "};",
-        "",
-        "equations{ 'ui_array_land_area_ha' } = define() {",
-        "\treturn ${ui_array_land_area_acres} / 2.47105;",
-        "};",
-        "",
-        "equations{ 'total_land_area' } = define() {",
-        "\treturn ${ui_array_land_area_acres} * ${ui_array_land_area_multiplier} + ?${ui_land_area_additional_units}[${ui_land_area_additional},${ui_land_area_additional}*2.47105];",
-        "};",
-        "",
-        "equations{ 'ui_total_land_area_ha' } = define() {",
-        "\treturn ${total_land_area} / 2.47105;",
-        "};"
+        "equations{ 'inv_ds_pdco' } = define() {",
+        "\treturn ${inv_ds_paco}/(${inv_ds_eff}/100.0); };"
     ],
     "Callbacks": [
-        "function land_area_choice() {",
-        "\tcheck = value('ui_use_acre_per_mw');",
-        "\tenable('ui_land_area_per_mw', check == 1);",
-        "}",
+        "function inverter_datasheet_value_change()",
+        "{",
+        "\tefficiency_type = value('inv_ds_eff_type');",
         "",
-        "on_load{'PV UI Land Area'} = define() {",
-        "\tland_area_choice();",
+        "\tweighted_efficiency = (efficiency_type == 0);",
+        "\t",
+        "\tenable('inv_ds_eff_weighted',weighted_efficiency);",
+        "\tenable('inv_ds_eff_peak_or_nom',!weighted_efficiency);",
+        "",
+        "}",
+        "\r",
+        "on_load{\"Inverter Datasheet\"}=define(){\r",
+        "\tinverter_datasheet_value_change();\t\r",
+        "};\r",
+        "",
+        "on_change{'btn_copy_from_library'} = define()",
+        "{",
+        "",
+        "    value('inv_ds_paco', value('inv_snl_paco'));",
+        "    value('inv_ds_pnt', value('inv_snl_pnt'));",
+        "    value('inv_ds_pso', value('inv_snl_pso'));",
+        "    value('inv_ds_vdco', value('inv_snl_vdco'));",
+        "    value('inv_ds_vdcmax', value('inv_snl_vdcmax'));",
+        "    ",
+        "    value('inv_ds_eff_type', 1);",
+        "    value('inv_ds_eff_peak_or_nom', value('inv_snl_paco') / value('inv_snl_pdco') * 100 );",
+        "    value('inv_ds_eff', value('inv_snl_eff_cec'));",
+        "    ",
+        "    value('inv_ds_ac_voltage', value('inv_snl_ac_voltage'));",
+        "    value('inv_ds_idcmax', value('inv_snl_idcmax'));",
+        "    value('inv_ds_mppt_low', value('inv_snl_mppt_low'));",
+        "    value('inv_ds_mppt_hi', value('inv_snl_mppt_hi'));",
+        "    value('inv_ds_num_mppt', value('inv_snl_num_mppt'));",
+        "    value('inv_ds_eff_weighted', value('inv_snl_eff_cec'));",
+        "",
+        "\tmsgbox('Inverter data copied.\\nCopied data for ' + value('inv_cec_name') + ' from the inverter library.');",
+        "",
+        "};\t",
+        "\t",
+        "on_change{'inv_ds_eff_type'} = define()",
+        "{",
+        "\tefficiency_type = value('inv_ds_eff_type');",
+        "",
+        "\tweighted_efficiency = (efficiency_type == 0);",
+        "\t",
+        "\tinverter_datasheet_value_change();",
         "};",
         "\r",
-        "on_change{'ui_use_acre_per_mw'} = define() {\r",
-        "\tland_area_choice();\r",
+        "on_change{'inv_ds_vdcmax'} = define() {\r",
+        "\tif ( technology() != 'High-X Concentrating PV') {\r",
+        "\t\treset_inverter_voltages(); // defined in PV System Design callback\r",
+        "\t}\r",
+        "\telse { return; }\t\r",
         "};\r",
+        "\r",
+        "on_change{'inv_ds_mppt_low'} = define() {\r",
+        "\tif ( technology() != 'High-X Concentrating PV') {\r",
+        "\t\treset_inverter_voltages(); // defined in PV System Design callback\r",
+        "\t}\r",
+        "\telse { return; }\t\r",
+        "};\r",
+        "\r",
+        "on_change{'inv_ds_mppt_hi'} = define() {\r",
+        "\tif ( technology() != 'High-X Concentrating PV') {\r",
+        "\t\treset_inverter_voltages(); // defined in PV System Design callback\r",
+        "\t}\r",
+        "\telse { return; }\t\r",
+        "};\r",
+        "",
+        "on_change{'btnSaveInvDSData'} = define() {",
+        "\tlogmsg('running btnSaveInvDSData');",
+        "\tfile = choose_file( '', 'Save Inverter Datasheet Data As', ",
+        "\t\t'Data Files (*.csv)|*.csv', true);",
+        "\tif ( file != '' ) {",
+        "\t\tfile = replace(file, '\\\\', '/');",
+        "\t\tif (group_write('PV Inverter (Datasheet)',file))",
+        "\t\t{\t",
+        "\t\t\tvalue( 'inv_ds_data_filename', file );",
+        "\t\t\tmsgbox('Data saved!\\n' + file);",
+        "\t\t}",
+        "\t\telse",
+        "\t\t{",
+        "\t\t\tvalue( 'inv_ds_data_filename', \"\" );",
+        "\t\t\tmsgbox('Data save failed!\\n' + file);",
+        "\t\t}",
+        "\t}",
+        "};",
+        "",
+        "on_change{'btnLoadInvDSData'} = define() {",
+        "\tlogmsg('running btnLoadInvDSData');",
+        "\tfile = choose_file( '', 'Open Inverter Datasheet File', ",
+        "\t\t'Data Files (*.csv)|*.csv');",
+        "\tif ( file != '' ) {",
+        "\t\tfile = replace(file, '\\\\', '/');\r",
+        "\t\tstr = '';\t\r",
+        "\t\tif (group_read('PV Inverter (Datasheet)',file))",
+        "\t\t{\t",
+        "\t\t\tf = open(file,'r');\r",
+        "\t\t\tok = read_line( f, str );\r",
+        "\t\t\tclose(f);\r",
+        "\t\t\tif ( ok && (strpos(str, 'inv_ds') > -1) ) \r",
+        "\t\t\t{\r",
+        "\t\t\t\tvalue( 'inv_ds_data_filename', file );\r",
+        "\t\t\t\tmsgbox( 'Data loaded!\\n' );\r",
+        "\t\t\t}\r",
+        "\t\t\telse\r",
+        "\t\t\t{\t\t\t\r",
+        "\t\t\t\tvalue( 'inv_ds_data_filename', '' );",
+        "\t\t\t\tmsgbox('Data load failed!\\nFile does not contain valid inverter data.' + file);\r",
+        "\t\t\t}",
+        "\t\t}",
+        "\t\telse",
+        "\t\t{",
+        "\t\t\tvalue( 'inv_ds_data_filename', \"\" );",
+        "\t\t\tmsgbox('Data load failed!\\nFailed to read data from file.\\n\\n' + file);",
+        "\t\t}",
+        "\t}",
+        "};",
+        "",
         ""
     ]
 }

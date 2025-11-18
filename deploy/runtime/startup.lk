@@ -321,10 +321,10 @@ function setup_detailed_pv_pages()
 			  ['Sandia PV Array Performance Model with Module Database'],
 			  ['IEC61853 Single Diode Model'] ], 
 			  {'sidebar'='Module', 'help'='pv_module', 'exclusive_var'='module_model'});
-	addpage( [['Inverter CEC Database - Copy', 'Inverter Temp Derate CEC DB'],
-			  ['Inverter Datasheet - Copy', 'Inverter Temp Derate DS'],
-			  ['Inverter Part Load Curve - Copy', 'Inverter Temp Derate PLC'],
-			  ['Inverter CEC Coefficient Generator - Copy', 'Inverter Temp Derate CEC CG']],
+	addpage( [['Inverter CEC Database', 'Inverter Temp Derate CEC DB'],
+			  ['Inverter Datasheet', 'Inverter Temp Derate DS'],
+			  ['Inverter Part Load Curve', 'Inverter Temp Derate PLC'],
+			  ['Inverter CEC Coefficient Generator', 'Inverter Temp Derate CEC CG']],
 			  {'sidebar'='Inverter', 'help'='pv_inverter', 'exclusive_var'='inverter_model'});
 	// System Sizing
 	addpage( [['PV System Size',
@@ -336,7 +336,7 @@ function setup_detailed_pv_pages()
 	addpage( [['PV Tracking and Orientation', 
 	          'PV Row Dimensions and Spacing', 
 	          'PV Terrain Slope', 
-	          'PV UI Land Area']], 
+	          'PV Land Area']], 
 	          {'sidebar'='Tracking Layout Land', 'help'='pv_xxx'});
 	// Soiling Shading Snow
 	addpage( [['PV Soiling Shading Snow'] ], 
@@ -944,10 +944,10 @@ setconfig('PV UI','None');
 			  ['Sandia PV Array Performance Model with Module Database'],
 			  ['IEC61853 Single Diode Model'] ], 
 			  {'sidebar'='Module', 'help'='pv_module', 'exclusive_var'='module_model'});
-	addpage( [['Inverter CEC Database - Copy', 'Inverter Temp Derate CEC DB'],
-			  ['Inverter Datasheet - Copy', 'Inverter Temp Derate DS'],
-			  ['Inverter Part Load Curve - Copy', 'Inverter Temp Derate PLC'],
-			  ['Inverter CEC Coefficient Generator - Copy', 'Inverter Temp Derate CEC CG']],
+	addpage( [['Inverter CEC Database', 'Inverter Temp Derate CEC DB'],
+			  ['Inverter Datasheet', 'Inverter Temp Derate DS'],
+			  ['Inverter Part Load Curve', 'Inverter Temp Derate PLC'],
+			  ['Inverter CEC Coefficient Generator', 'Inverter Temp Derate CEC CG']],
 			  {'sidebar'='Inverter', 'help'='pv_inverter', 'exclusive_var'='inverter_model'});
 	// System Sizing
 	addpage( [['PV System Size',
@@ -959,7 +959,7 @@ setconfig('PV UI','None');
 	addpage( [['PV Tracking and Orientation', 
 	          'PV Row Dimensions and Spacing', 
 	          'PV Terrain Slope', 
-	          'PV UI Land Area']], 
+	          'PV Land Area']], 
 	          {'sidebar'='Tracking Layout Land', 'help'='pv_xxx'});
 	// Soiling Shading Snow
 	addpage( [['PV Soiling Shading Snow'] ], 
@@ -988,8 +988,18 @@ setup_grid_limits_page();
 setup_lcoefcr_pages();
 setmodules( ['pvsamv1', 'grid', 'lcoefcr'] );
 
+// ** TEST FOR NEW PV UI DESIGN ** //
 setconfig( 'Flat Plate PV', 'None' );
-setup_detailed_pv_pages();
+// forms for current configuration (some of these UI forms have modified variables, e.g., deleted inv_snl_num_mppt from Inverter CEC Database form -- requires updating versions.lk.)
+addpage( [['Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information', {'name'='PV Albedo and Radiation', 'caption' = 'Albedo - Sky Diffuse Model - Irradiance Data (Advanced)', 'collapsible'=true, 'collapsible_var'='pv.radmode.is_shown'} ]], { 'sidebar'='Location and Resource', 'help'='pv_location_and_resource' } );
+addpage( [['Simple Efficiency Module Model'], ['CEC Performance Model with Module Database'], ['CEC Performance Model with User Entered Specifications'], ['Sandia PV Array Performance Model with Module Database'], ['IEC61853 Single Diode Model'] ], { 'sidebar'='Module', 'help'='pv_module', 'exclusive_var'='module_model' } );
+addpage( [['Inverter CEC Database', 'Inverter Temp Derate CEC DB'], ['Inverter Datasheet', 'Inverter Temp Derate DS'], ['Inverter Part Load Curve', 'Inverter Temp Derate PLC'], ['Inverter CEC Coefficient Generator', 'Inverter Temp Derate CEC CG'] ], { 'sidebar'='Inverter', 'help'='pv_inverter', 'exclusive_var'='inverter_model' } );
+addpage( [['PV System Design', {'name'='PV Land Area', 'caption' = 'Land Area', 'collapsible'=true, 'collapsible_var'='pv_land_area_is_shown'}, {'name'='PV Subarray Voltage Mismatch', 'collapsible'=true, 'collapsible_var' = 'mismatch_shown'}, 'Battery Enable'] ], { 'sidebar'='System Design', 'help'='pv_system_design' } );
+addpage( [['PV Shading']], { 'sidebar'='Shading and Layout', 'help'='pv_shading' } );
+addpage( [['PV Losses']], { 'sidebar'='Losses', 'help'='pv_losses' } );
+// new forms for modified configuration (these contain duplicate variables that also exist in old forms)
+// start by adding a single page for testing
+addpage( [['PV System Size']], {'sidebar'='Test', 'help'='na'});
 setup_grid_limits_page();
 setmodules( ['pvsamv1', 'grid'] );
 
