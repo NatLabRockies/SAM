@@ -989,7 +989,7 @@ setup_lcoefcr_pages();
 setmodules( ['pvsamv1', 'grid', 'lcoefcr'] );
 
 setconfig( 'Flat Plate PV', 'None' );
-setup_flat_plate_pv_pages();
+setup_detailed_pv_pages();
 setup_grid_limits_page();
 setmodules( ['pvsamv1', 'grid'] );
 
