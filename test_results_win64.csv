@@ -3,13 +3,13 @@ Flat Plate PV,Residential,14982,10.0439,NA,;
 Flat Plate PV,Commercial,1.10797e+06,3.29402,NA,; 
 Flat Plate PV,Third Party,14982,NA,NA,; 
 Flat Plate PV,Host Developer,1.10797e+06,8.5834,11.4567,; 
-Flat Plate PV,Single Owner,235722032,3.47716,4.32454,; 
+Flat Plate PV,Single Owner,238224208,3.41199,4.32513,; 
 Flat Plate PV,Merchant Plant,235722032,3.25046,NA,; Warning: NPV is $-2.38378e+07. A negative NPV indicates project costs are higher than revenues.
 Flat Plate PV,Leveraged Partnership Flip,235722032,3.6085,4.32454,; Warning: IRR at end of analysis period is not a number (NaN). This can indicate that revenues are too low to cover costs, or that they are excessively high compared to costs.
 Flat Plate PV,All Equity Partnership Flip,235722032,4.09852,4.32454,; Warning: IRR at end of analysis period is not a number (NaN). This can indicate that revenues are too low to cover costs, or that they are excessively high compared to costs. Warning: IRR in target year is not a number (NaN). This can indicate that revenues are too low to cover costs, or that they are excessively high compared to costs.
 Flat Plate PV,Sale Leaseback,235722032,4.72857,4.32454,; Warning: IRR at end of analysis period is not a number (NaN). This can indicate that revenues are too low to cover costs, or that they are excessively high compared to costs. Warning: NPV is $-9.19125e+06. A negative NPV indicates project costs are higher than revenues.
-Flat Plate PV,LCOE Calculator,235722032,NA,NA,; 
-Flat Plate PV,None,155941152,NA,NA,; 
+Flat Plate PV,LCOE Calculator,238236784,NA,NA,; 
+Flat Plate PV,None,175782288,NA,NA,; 
 PVWatts,Residential,13916.2,10.8929,NA,; 
 PVWatts,Commercial,939340,3.76959,NA,; 
 PVWatts,Third Party,11132.9,NA,NA,; 
@@ -33,7 +33,7 @@ PV Battery,Residential,14867.8,17.9988,NA,;
 PV Battery,Commercial,1.10017e+06,7.41913,NA,; 
 PV Battery,Third Party,14867.8,NA,NA,; 
 PV Battery,Host Developer,1.10017e+06,11.8926,16.2124,; 
-PV Battery,Single Owner,229096800,9.01635,9.728,; 
+PV Battery,Single Owner,231607616,8.88125,9.71521,; 
 PV Battery,Merchant Plant,229096800,8.31227,NA,; Warning: IRR at end of analysis period is not a number (NaN). This can indicate that revenues are too low to cover costs, or that they are excessively high compared to costs. Warning: IRR in target year is not a number (NaN). This can indicate that revenues are too low to cover costs, or that they are excessively high compared to costs. Warning: NPV is $-1.17756e+08. A negative NPV indicates project costs are higher than revenues.
 PV Battery,Leveraged Partnership Flip,229096800,8.59547,9.728,; Warning: IRR at end of analysis period is not a number (NaN). This can indicate that revenues are too low to cover costs, or that they are excessively high compared to costs.
 PV Battery,All Equity Partnership Flip,229096800,10.3591,9.728,; Warning: IRR at end of analysis period is not a number (NaN). This can indicate that revenues are too low to cover costs, or that they are excessively high compared to costs. Warning: IRR in target year is not a number (NaN). This can indicate that revenues are too low to cover costs, or that they are excessively high compared to costs. Warning: NPV is $-1.71685e+07. A negative NPV indicates project costs are higher than revenues.
@@ -174,8 +174,8 @@ PVWatts Wind Battery Hybrid,Single Owner,571509504,9.05417,6.19689,; Notice: Sim
 PVWatts Wind Battery Hybrid,Host Developer,1119067,15.2982,16.5422,; Notice: Simulation time step is 60 minutes for pvwattsv8. Notice: Simulation time step is 60 minutes for windpower.
 PVWatts Wind FuelCell Battery Hybrid,Single Owner,574976896,9.01877,6.10819,; Notice: Simulation time step is 60 minutes for pvwattsv8. Notice: Simulation time step is 60 minutes for windpower.
 PVWatts Wind FuelCell Battery Hybrid,Host Developer,2.68756e+06,39.3376,40.0341,; Notice: Simulation time step is 60 minutes for pvwattsv8. Notice: Simulation time step is 60 minutes for windpower.
-Photovoltaic Wind Battery Hybrid,Single Owner,599155200,8.61241,5.92617,; Notice: Simulation time step is 60 minutes for pvsamv1. Notice: Simulation time step is 60 minutes for windpower.
-Photovoltaic Wind Battery Hybrid,Host Developer,1.28827e+06,13.2168,16.5416,; Notice: Simulation time step is 60 minutes for pvsamv1. Notice: Simulation time step is 60 minutes for windpower.
+Photovoltaic Wind Battery Hybrid,Single Owner,599155200,8.51709,5.92852,; Notice: Simulation time step is 60 minutes for pvsamv1. Notice: Simulation time step is 60 minutes for windpower.
+Photovoltaic Wind Battery Hybrid,Host Developer,1.28827e+06,12.8301,16.5711,; Notice: Simulation time step is 60 minutes for pvsamv1. Notice: Simulation time step is 60 minutes for windpower.
 CustomGeneration PVWatts Wind FuelCell Battery Hybrid,Single Owner,1332349312,11.5544,5.88111,; Notice: Simulation time step is 60 minutes for custom_generation. Notice: Simulation time step is 60 minutes for pvwattsv8. Notice: Simulation time step is 60 minutes for windpower.
 CustomGeneration PVWatts Wind FuelCell Battery Hybrid,Host Developer,759754816,14.566,14.6375,; Notice: Simulation time step is 60 minutes for custom_generation. Notice: Simulation time step is 60 minutes for pvwattsv8. Notice: Simulation time step is 60 minutes for windpower.
 final_configuration_eof,none,NA,NA,NA,
