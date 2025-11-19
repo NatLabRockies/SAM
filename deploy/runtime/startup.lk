@@ -14,8 +14,6 @@ const FOM = false;
 addconfig( 'Flat Plate PV', ['Residential', 'Commercial', 'Third Party', 'Host Developer', 'Single Owner', 'Merchant Plant', 'Leveraged Partnership Flip', 'All Equity Partnership Flip', 'Sale Leaseback', 'LCOE Calculator', 'None'] );
 addconfig( 'PVWatts', [ 'Residential', 'Commercial', 'Third Party', 'Host Developer', 'Single Owner', 'Community Solar', 'Merchant Plant', 'Leveraged Partnership Flip', 'All Equity Partnership Flip', 'Sale Leaseback', 'LCOE Calculator', 'None' ] );
 addconfig( 'High-X Concentrating PV', ['Single Owner', 'Merchant Plant', 'Leveraged Partnership Flip', 'All Equity Partnership Flip', 'Sale Leaseback', 'LCOE Calculator', 'None']);
-// test pv ui
-addconfig('PV UI', ['None']);
 // Energy Storage
 addconfig( 'PV Battery', ['Residential', 'Commercial', 'Third Party', 'Host Developer', 'Single Owner', 'Merchant Plant', 'Leveraged Partnership Flip', 'All Equity Partnership Flip', 'Sale Leaseback'] );
 addconfig( 'PVWatts Battery', ['Residential', 'Commercial', 'Third Party', 'Host Developer', 'Single Owner', 'Merchant Plant', 'Leveraged Partnership Flip', 'All Equity Partnership Flip', 'Sale Leaseback'] );
@@ -68,9 +66,6 @@ configopt("TechnologyTreeOrder", {'description' = 'Photovoltaic,Energy Storage,H
 
 // group names 'tree_parent' for performance models are defined in PopulateTech() in main.cpp
 configopt( 'Flat Plate PV', { 'tree_parent'='Photovoltaic', 'long_name'='Detailed PV Model', 'short_name'='Photovoltaic', 'description'='Photovoltaic system using detailed photovoltaic model with separate module and inverter component models' } );
-// test pv ui
-configopt( 'PV UI', { 'long_name'='PV UI TEST', 'short_name'='PV UI', 'description'='Test PV UI' } );
-
 configopt( 'PVWatts', { 'tree_parent'='Photovoltaic','long_name'='PVWatts', 'short_name'='PVWatts', 'description'='Photovoltaic system using basic NREL PVWatts V8 algorithm. Does not do detailed degradation or loss modeling. If those are important, please use pvsamv1.' } );
 configopt( 'High-X Concentrating PV', { 'tree_parent'='Photovoltaic', 'long_name'='High Concentration PV', 'short_name'='HCPV', 'description'='Concentrating photovoltaic system with a high concentration photovoltaic module model and separate inverter model' } );
 configopt( 'PV Battery', { 'tree_parent'='Energy Storage', 'long_name'='Detailed PV-Battery', 'short_name'='PV-Battery', 'description'='Detailed photovoltaic model with battery storage' } );
@@ -308,44 +303,44 @@ function setup_flat_plate_pv_pages()
 	addpage( [ ['PV Losses']], { 'sidebar'='Losses', 'help'='pv_losses' } );
 }
 
-function setup_detailed_pv_pages() 
+function setup_detailed_pv_pages(bin) 
 {
 	addpage( [['Solar Resource Download', 
 	           'Solar Resource Library', 
 	           'Solar Resource Information', 
 	           {'name'='PV Albedo and Radiation', 'caption' = 'Albedo - Sky Diffuse Model - Irradiance Data (Advanced)', 'collapsible'=true, 'collapsible_var'='pv.radmode.is_shown'} ]], 
-	           { 'sidebar'='Location and Resource', 'help'='pv_location_and_resource' });
+	           { 'sidebar'='Location and Resource', 'help'='pv_location_and_resource', 'bin_name' = bin});
 	addpage( [['Simple Efficiency Module Model'],
 			  ['CEC Performance Model with Module Database'],
 			  ['CEC Performance Model with User Entered Specifications'],
 			  ['Sandia PV Array Performance Model with Module Database'],
 			  ['IEC61853 Single Diode Model'] ], 
-			  {'sidebar'='Module', 'help'='pv_module', 'exclusive_var'='module_model'});
+			  {'sidebar'='Module', 'help'='pv_module', 'exclusive_var'='module_model' , 'bin_name' = bin});
 	addpage( [['Inverter CEC Database', 'Inverter Temp Derate CEC DB'],
 			  ['Inverter Datasheet', 'Inverter Temp Derate DS'],
 			  ['Inverter Part Load Curve', 'Inverter Temp Derate PLC'],
 			  ['Inverter CEC Coefficient Generator', 'Inverter Temp Derate CEC CG']],
-			  {'sidebar'='Inverter', 'help'='pv_inverter', 'exclusive_var'='inverter_model'});
-	// System Sizing
+			  {'sidebar'='Inverter', 'help'='pv_inverter', 'exclusive_var'='inverter_model', 'bin_name' = bin});
+	// System Size
 	addpage( [['PV System Size',
 	           'PV Subarrays and String Size' , 
 	           'PV Inverter Input Voltage',
 	           'Battery Enable']], 
-	          {'sidebar'='System Sizing', 'help'='pv_xxx'});
+	          {'sidebar'='System Size', 'help'='pv_xxx', 'bin_name' = bin});
 	// Tracking Layout Land
 	addpage( [['PV Tracking and Orientation', 
 	          'PV Row Dimensions and Spacing', 
 	          'PV Terrain Slope', 
 	          'PV Land Area']], 
-	          {'sidebar'='Tracking Layout Land', 'help'='pv_xxx'});
+	          {'sidebar'='Tracking Layout Land', 'help'='pv_xxx', 'bin_name' = bin});
 	// Soiling Shading Snow
 	addpage( [['PV Soiling Shading Snow'] ], 
-	          {'sidebar'='Soiling Shading Snow', 'help'='pv_xxx'});
+	          {'sidebar'='Soiling Shading Snow', 'help'='pv_xxx', 'bin_name' = bin});
 	// Electrical losses
 	addpage( [['PV DC Losses', 
 	          'PV AC Losses', 
 	          'PV System Availability']], 
-	          {'sidebar'='Electrical Losses', 'help'='pv_xxx'});
+	          {'sidebar'='Electrical Losses', 'help'='pv_xxx', 'bin_name' = bin});
 	// Battery Enable form stores hidden en_batt variable required by some UI forms to determine if there is a battery
 }
 
@@ -932,80 +927,21 @@ addpage( [[ 'Operating Costs Fuel', 'Operating Costs Land Lease' ]], {'sidebar' 
 setup_all_equity_partnership_flip_pages();
 setup_electricity_purchases();
 
-setconfig('PV UI','None');
-	addpage( [['Solar Resource Download', 
-	           'Solar Resource Library', 
-	           'Solar Resource Information', 
-	           {'name'='PV Albedo and Radiation', 'caption' = 'Albedo - Sky Diffuse Model - Irradiance Data (Advanced)', 'collapsible'=true, 'collapsible_var'='pv.radmode.is_shown'} ]], 
-	           { 'sidebar'='Location and Resource', 'help'='pv_location_and_resource' });
-	addpage( [['Simple Efficiency Module Model'],
-			  ['CEC Performance Model with Module Database'],
-			  ['CEC Performance Model with User Entered Specifications'],
-			  ['Sandia PV Array Performance Model with Module Database'],
-			  ['IEC61853 Single Diode Model'] ], 
-			  {'sidebar'='Module', 'help'='pv_module', 'exclusive_var'='module_model'});
-	addpage( [['Inverter CEC Database', 'Inverter Temp Derate CEC DB'],
-			  ['Inverter Datasheet', 'Inverter Temp Derate DS'],
-			  ['Inverter Part Load Curve', 'Inverter Temp Derate PLC'],
-			  ['Inverter CEC Coefficient Generator', 'Inverter Temp Derate CEC CG']],
-			  {'sidebar'='Inverter', 'help'='pv_inverter', 'exclusive_var'='inverter_model'});
-	// System Sizing
-	addpage( [['PV System Size',
-	           'PV Subarrays and String Size' , 
-	           'PV Inverter Input Voltage',
-	           'Battery Enable']], 
-	          {'sidebar'='System Sizing', 'help'='pv_xxx'});
-	// Tracking Layout Land
-	addpage( [['PV Tracking and Orientation', 
-	          'PV Row Dimensions and Spacing', 
-	          'PV Terrain Slope', 
-	          'PV Land Area']], 
-	          {'sidebar'='Tracking Layout Land', 'help'='pv_xxx'});
-	// Soiling Shading Snow
-	addpage( [['PV Soiling Shading Snow'] ], 
-	          {'sidebar'='Soiling Shading Snow', 'help'='pv_xxx'});
-	// Electrical losses
-	addpage( [['PV DC Losses', 
-	          'PV AC Losses', 
-	          'PV System Availability']], 
-	          {'sidebar'='Electrical Losses', 'help'='pv_xxx'});
-	 
-	// Battery Enable form stores hidden en_batt variable required by some UI forms to determine if there is a battery
-	/*addpage( [ ['PV System Design', 
-	           {'name'='PV Land Area', 'caption' = 'Land Area', 'collapsible'=true, 'collapsible_var'='pv_land_area_is_shown'},
-			   {'name'='PV Subarray Voltage Mismatch', 'collapsible'=true, 'collapsible_var' = 'mismatch_shown'},
-	            'Battery Enable'] ], { 'sidebar'='System Design', 'help'='pv_system_design' } );
-	addpage( [ ['PV Shading'] ], { 'sidebar'='Shading and Layout', 'help'='pv_shading' } );
-	addpage( [ ['PV Losses']], { 'sidebar'='Losses', 'help'='pv_losses' } );*/
-	setup_grid_limits_page();
-
-setmodules( ['pvsamv1', 'grid'] );
-
 // Flat Plate PV ////////////////////////////////////////////////////////////////
 setconfig( 'Flat Plate PV', 'LCOE Calculator' );
-setup_flat_plate_pv_pages();
+setup_detailed_pv_pages('');
 setup_grid_limits_page();
 setup_lcoefcr_pages();
 setmodules( ['pvsamv1', 'grid', 'lcoefcr'] );
 
-// ** TEST FOR NEW PV UI DESIGN ** //
 setconfig( 'Flat Plate PV', 'None' );
-// forms for current configuration (some of these UI forms have modified variables, e.g., deleted inv_snl_num_mppt from Inverter CEC Database form -- requires updating versions.lk.)
-addpage( [['Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information', {'name'='PV Albedo and Radiation', 'caption' = 'Albedo - Sky Diffuse Model - Irradiance Data (Advanced)', 'collapsible'=true, 'collapsible_var'='pv.radmode.is_shown'} ]], { 'sidebar'='Location and Resource', 'help'='pv_location_and_resource' } );
-addpage( [['Simple Efficiency Module Model'], ['CEC Performance Model with Module Database'], ['CEC Performance Model with User Entered Specifications'], ['Sandia PV Array Performance Model with Module Database'], ['IEC61853 Single Diode Model'] ], { 'sidebar'='Module', 'help'='pv_module', 'exclusive_var'='module_model' } );
-addpage( [['Inverter CEC Database', 'Inverter Temp Derate CEC DB'], ['Inverter Datasheet', 'Inverter Temp Derate DS'], ['Inverter Part Load Curve', 'Inverter Temp Derate PLC'], ['Inverter CEC Coefficient Generator', 'Inverter Temp Derate CEC CG'] ], { 'sidebar'='Inverter', 'help'='pv_inverter', 'exclusive_var'='inverter_model' } );
-addpage( [['PV System Design', {'name'='PV Land Area', 'caption' = 'Land Area', 'collapsible'=true, 'collapsible_var'='pv_land_area_is_shown'}, {'name'='PV Subarray Voltage Mismatch', 'collapsible'=true, 'collapsible_var' = 'mismatch_shown'}, 'Battery Enable'] ], { 'sidebar'='System Design', 'help'='pv_system_design' } );
-addpage( [['PV Shading']], { 'sidebar'='Shading and Layout', 'help'='pv_shading' } );
-addpage( [['PV Losses']], { 'sidebar'='Losses', 'help'='pv_losses' } );
-// new forms for modified configuration (these contain duplicate variables that also exist in old forms)
-// start by adding a single page for testing
-addpage( [['PV System Size']], {'sidebar'='Test', 'help'='na'});
+setup_detailed_pv_pages('');
 setup_grid_limits_page();
 setmodules( ['pvsamv1', 'grid'] );
 
 setconfig( 'Flat Plate PV', 'Residential' );
 setmodules( ['belpe', 'pvsamv1', 'grid', 'utilityrate5', 'cashloan']);
-setup_flat_plate_pv_pages();
+setup_detailed_pv_pages('');
 setup_grid_limits_page();
 setup_lifetime_page( DEGRADATION_PVSAM );
 addpage( [[ 'PV Capital Costs' ],
@@ -1016,14 +952,14 @@ setup_residential_pages( LOAD_BELPE ); //includes building load calculator
 
 setconfig( 'Flat Plate PV', 'Third Party' );
 setmodules( ['belpe', 'pvsamv1', 'grid', 'utilityrate5', 'thirdpartyownership']);
-setup_flat_plate_pv_pages();
+setup_detailed_pv_pages('');
 setup_grid_limits_page();
 setup_lifetime_page( DEGRADATION_PVSAM );
 setup_thirdparty_pages( LOAD_BELPE ); //includes building load calculator by default in this function
 
 setconfig( 'Flat Plate PV', 'Host Developer' );
 setmodules( ['pvsamv1', 'grid', 'utilityrate5', 'host_developer']);
-setup_flat_plate_pv_pages();
+setup_detailed_pv_pages('');
 setup_grid_limits_page();
 setup_lifetime_page( DEGRADATION_PVSAM );
 addpage( [[ 'PV Capital Costs' ],
@@ -1034,7 +970,7 @@ setup_host_developer_pages( LOAD_SIMPLE );
 
 setconfig( 'Flat Plate PV', 'Commercial' );
 setmodules( ['pvsamv1', 'grid', 'utilityrate5', 'cashloan']);
-setup_flat_plate_pv_pages();
+setup_detailed_pv_pages('');
 setup_grid_limits_page();
 setup_lifetime_page( DEGRADATION_PVSAM );
 addpage( [[ 'PV Capital Costs' ],
@@ -1047,7 +983,7 @@ setconfig( 'Flat Plate PV', 'Single Owner' );
 // TO DO include utilityrate5 for inverter nighttime consumption? update all PPA and Merchant Plant configs accordingly
 //setmodules( ['pvsamv1', 'grid', 'utilityrate5', 'singleowner'] );
 setmodules( ['pvsamv1', 'grid', 'utilityrate5', 'singleowner'] );
-setup_flat_plate_pv_pages();
+setup_detailed_pv_pages('');
 setup_grid_limits_page();
 setup_lifetime_page( DEGRADATION_PVSAM );
 addpage( [[ 'PV Capital Costs' ],
@@ -1060,7 +996,7 @@ setup_electricity_purchases(); // required if utilityrate5 included in config
 
 setconfig( 'Flat Plate PV', 'Merchant Plant' );
 setmodules( ['pvsamv1', 'grid', 'utilityrate5', 'merchantplant']);
-setup_flat_plate_pv_pages();
+setup_detailed_pv_pages('');
 setup_grid_limits_page();
 setup_lifetime_page( DEGRADATION_PVSAM );
 addpage( [[ 'PV Capital Costs' ],
@@ -1072,7 +1008,7 @@ setup_electricity_purchases();
 
 setconfig( 'Flat Plate PV', 'Leveraged Partnership Flip' );
 setmodules( ['pvsamv1', 'grid', 'utilityrate5', 'levpartflip']);
-setup_flat_plate_pv_pages();
+setup_detailed_pv_pages('');
 setup_grid_limits_page();
 setup_lifetime_page( DEGRADATION_PVSAM );
 addpage( [[ 'PV Capital Costs' ],
@@ -1084,7 +1020,7 @@ setup_electricity_purchases();
 
 setconfig( 'Flat Plate PV', 'All Equity Partnership Flip' );
 setmodules( ['pvsamv1', 'grid', 'utilityrate5', 'equpartflip']);
-setup_flat_plate_pv_pages();
+setup_detailed_pv_pages('');
 setup_grid_limits_page();
 setup_lifetime_page( DEGRADATION_PVSAM );
 addpage( [[ 'PV Capital Costs' ],
@@ -1096,7 +1032,7 @@ setup_electricity_purchases();
 
 setconfig( 'Flat Plate PV', 'Sale Leaseback' );
 setmodules( ['pvsamv1', 'grid', 'utilityrate5', 'saleleaseback']);
-setup_flat_plate_pv_pages();
+setup_detailed_pv_pages('');
 setup_grid_limits_page();
 setup_lifetime_page( DEGRADATION_PVSAM );
 addpage( [[ 'PV Capital Costs' ],
@@ -2607,7 +2543,7 @@ setup_metidal_pages(0);
 
 function setup_pv_battery_pages(is_btm)
 {
-	setup_flat_plate_pv_pages();
+	setup_detailed_pv_pages('PV System');
 	if (is_btm)
 	{
 		setup_pages_battery_cell_and_system(true,true); // REopt and BTM
@@ -3318,13 +3254,7 @@ sethybridvariabledependencies([
 ]);
 addpage([['Hybrid System']], {'sidebar'='Hybrid System', 'help'='hybrid_system', 'top_page'=true});
 // detailed pv
-addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information', {'name'='PV Albedo and Radiation', 'caption' = 'Albedo - Sky Diffuse Model - Irradiance Data (Advanced)', 'collapsible'=true, 'collapsible_var'='pv.radmode.is_shown'} ]], { 'sidebar'='PV Location and Resource', 'help'='pv_location_and_resource', 'bin_name'='Photovoltaic' } );
-addpage( [ ['Simple Efficiency Module Model'], ['CEC Performance Model with Module Database'], ['CEC Performance Model with User Entered Specifications'], ['Sandia PV Array Performance Model with Module Database'], ['IEC61853 Single Diode Model'] ], { 'sidebar'='PV Module', 'help'='pv_module', 'exclusive_var'='module_model', 'bin_name'='Photovoltaic' } );
-addpage( [ ['Inverter CEC Database', 'Inverter Temp Derate CEC DB'], ['Inverter Datasheet', 'Inverter Temp Derate DS'], ['Inverter Part Load Curve', 'Inverter Temp Derate PLC'], ['Inverter CEC Coefficient Generator', 'Inverter Temp Derate CEC CG'] ], { 'sidebar'='PV Inverter', 'help'='pv_inverter', 'exclusive_var'='inverter_model', 'bin_name'='Photovoltaic' } );
-addpage( [ ['PV System Design', {'name'='PV Land Area', 'caption' = 'Land Area', 'collapsible'=true, 'collapsible_var'='pv_land_area_is_shown'}, {'name'='PV Subarray Voltage Mismatch', 'collapsible'=true, 'collapsible_var' = 'mismatch_shown'}, 'Battery Enable'] ], { 'sidebar'='PV System Design', 'help'='pv_system_design', 'bin_name'='Photovoltaic' } );
-addpage( [ ['PV Shading'] ], { 'sidebar'='PV Shading and Layout', 'help'='pv_shading', 'bin_name'='Photovoltaic' } ); 
-addpage( [ ['PV Losses'] ], { 'sidebar'='PV Losses', 'help'='pv_losses', 'bin_name'='Photovoltaic' } );
-addpage( [ [ 'Degradation DC Lifetime', 'Degradation AC DC Lifetime Daily', 'Degradation Lifetime Variables'], ], { 'sidebar'='PV Degradation','help'='degradation_dc' , 'bin_name'='Photovoltaic' } );
+setup_detailed_pv_pages('Photovoltaic');
 addpage( [[ 'PV Capital Costs' ]], { 'sidebar'='PV Installation Costs', 'help'='cc_pv', 'bin_name'='Photovoltaic'} );
 addpage( [[ 'Operating Costs', 'Operating Costs Land Lease' ]], {'sidebar' = 'PV Operating Costs', 'help'='oc_operating', 'bin_name'='Photovoltaic'} );
 // wind
@@ -3380,13 +3310,7 @@ sethybridvariabledependencies([
 ]);
 addpage([['Hybrid System']], {'sidebar'='Hybrid System', 'help'='hybrid_system', 'top_page'=true});
 // detailed pv
-addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information', {'name'='PV Albedo and Radiation', 'caption' = 'Albedo - Sky Diffuse Model - Irradiance Data (Advanced)', 'collapsible'=true, 'collapsible_var'='pv.radmode.is_shown'} ]], { 'sidebar'='Location and Resource', 'help'='pv_location_and_resource', 'bin_name'='Photovoltaic' } );
-addpage( [ ['Simple Efficiency Module Model'], ['CEC Performance Model with Module Database'], ['CEC Performance Model with User Entered Specifications'], ['Sandia PV Array Performance Model with Module Database'], ['IEC61853 Single Diode Model'] ], { 'sidebar'='PV Module', 'help'='pv_module', 'exclusive_var'='module_model', 'bin_name'='Photovoltaic' } );
-addpage( [ ['Inverter CEC Database', 'Inverter Temp Derate CEC DB'], ['Inverter Datasheet', 'Inverter Temp Derate DS'], ['Inverter Part Load Curve', 'Inverter Temp Derate PLC'], ['Inverter CEC Coefficient Generator', 'Inverter Temp Derate CEC CG'] ], { 'sidebar'='PV Inverter', 'help'='pv_inverter', 'exclusive_var'='inverter_model', 'bin_name'='Photovoltaic' } );
-addpage( [ ['PV System Design', {'name'='PV Land Area', 'caption' = 'Land Area', 'collapsible'=true, 'collapsible_var'='pv_land_area_is_shown'}, {'name'='PV Subarray Voltage Mismatch', 'collapsible'=true, 'collapsible_var' = 'mismatch_shown'}, 'Battery Enable'] ], { 'sidebar'='PV System Design', 'help'='pv_system_design', 'bin_name'='Photovoltaic' } );
-addpage( [ ['PV Shading'] ], { 'sidebar'='PV Shading and Layout', 'help'='pv_shading', 'bin_name'='Photovoltaic' } ); 
-addpage( [ ['PV Losses'] ], { 'sidebar'='PV Losses', 'help'='pv_losses', 'bin_name'='Photovoltaic' } );
-addpage( [ [ 'Degradation DC Lifetime', 'Degradation AC DC Lifetime Daily', 'Degradation Lifetime Variables'], ], { 'sidebar'='PV Degradation','help'='degradation_dc' , 'bin_name'='Photovoltaic' } );
+setup_detailed_pv_pages('Photovoltaic');
 addpage( [[ 'PV Capital Costs' ]], { 'sidebar'='PV Installation Costs', 'help'='cc_pv', 'bin_name'='Photovoltaic'} );
 addpage( [[ 'Operating Costs' ]], {'sidebar' = 'PV Operating Costs', 'help'='oc_operating', 'bin_name'='Photovoltaic'} );
 // wind
