@@ -2436,10 +2436,10 @@ setmodules( ['wave_file_reader', 'mhk_wave']);
 setup_mewave_pages(0);
 
 setconfig( 'MEwave', 'Single Owner' );
-setmodules( ['wave_file_reader', 'mhk_wave', 'grid', 'utilityrate5','singleowner']);
+setmodules( ['wave_file_reader', 'mhk_wave', 'grid', 'singleowner']);
 setup_mewave_so();
 setup_single_owner_pages( );
-setup_electricity_purchases();
+//setup_electricity_purchases();
 
 setconfig('MEwave Battery', 'Single Owner' );
 setmodules( ['wave_file_reader', 'mhk_wave', 'battery', 'grid', 'utilityrate5', 'singleowner']);
