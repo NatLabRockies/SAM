@@ -40325,7 +40325,7 @@
     "subarray1_gcr": 0.3,
     "subarray1_land_area": 1620343.2000000005,
     "subarray1_mismatch_loss": 2.0,
-    "subarray1_mod_orient": 0.0,
+    "subarray1_mod_orient": 3.335046e-317,
     "subarray1_modules_per_string": 28.0,
     "subarray1_monthly_tilt": [
         40.0,
@@ -40411,7 +40411,7 @@
     "subarray2_gcr": 0.3,
     "subarray2_land_area": 0.0,
     "subarray2_mismatch_loss": 2.0,
-    "subarray2_mod_orient": 0.0,
+    "subarray2_mod_orient": 3.335046e-317,
     "subarray2_modules_per_string": 1.0,
     "subarray2_monthly_tilt": [
         40.0,
@@ -40497,7 +40497,7 @@
     "subarray3_gcr": 0.3,
     "subarray3_land_area": 0.0,
     "subarray3_mismatch_loss": 2.0,
-    "subarray3_mod_orient": 0.0,
+    "subarray3_mod_orient": 3.335046e-317,
     "subarray3_modules_per_string": 1.0,
     "subarray3_monthly_tilt": [
         40.0,
@@ -40583,7 +40583,7 @@
     "subarray4_gcr": 0.3,
     "subarray4_land_area": 0.0,
     "subarray4_mismatch_loss": 2.0,
-    "subarray4_mod_orient": 0.0,
+    "subarray4_mod_orient": 3.335046e-317,
     "subarray4_modules_per_string": 1.0,
     "subarray4_monthly_tilt": [
         40.0,

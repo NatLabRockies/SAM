@@ -211,7 +211,7 @@
 		},
 		"Layout": {
 			"module_aspect_ratio": 2.01,
-			"subarray1_mod_orient": 1,
+			"subarray1_mod_orient": 0,
 			"subarray1_nmodx": 42,
 			"subarray1_nmody": 2,
 			"subarray2_mod_orient": 0,
