@@ -23,9 +23,7 @@ This script makes use of the LK `csvread()` function and uses a multidimensional
 
 1. Open the SAM file dview-lk-example.sam.
 
-<img src="open-script.png" alt="screenshot of Open Script command" />
-
-2.	From the Start menu, click Open script and open one of the scripts listed above. Note that you can open the script from any SAM file.
+2.	From the File menu, click **Open script** and open one of the scripts listed above. Note that you can open the script from any SAM file.
  
 ## Overview of the `dview()` function
  
