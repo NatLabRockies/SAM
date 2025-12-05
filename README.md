@@ -1,7 +1,7 @@
 # System Advisor Model (SAM)
 ![Build](https://github.com/NREL/SAM/actions/workflows/ci.yml/badge.svg)
 
-The SAM Open Source Project repository contains the source code, tools, and instructions to build a desktop version of the National Laboratory of the Rockies System Advisor Model™ (SAM™). SAM is a simulation program for electricity generation projects. It has models for different kinds of renewable energy systems and financial models for residential, commercial, and utility-scale projects. For more details about SAM's capabilities, see the SAM website at [https://sam.nrel.gov/](https://sam.nrel.gov/).
+The SAM Open Source Project repository contains the source code, tools, and instructions to build a desktop version of the National Laboratory of the Rockies' System Advisor Model™ (SAM™). SAM is a simulation program for electricity generation projects. It has models for different kinds of renewable energy systems and financial models for residential, commercial, and utility-scale projects. For more details about SAM's capabilities, see the SAM website at [https://sam.nrel.gov/](https://sam.nrel.gov/).
 
 For a short video describing the SAM repositories, see https://youtu.be/E5z1iiZfZ3M.
 
