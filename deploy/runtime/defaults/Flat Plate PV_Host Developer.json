@@ -57897,7 +57897,7 @@
     "subarray1_gcr": 0.3,
     "subarray1_land_area": 9030.0,
     "subarray1_mismatch_loss": 2.0,
-    "subarray1_mod_orient": 3.335046e-317,
+    "subarray1_mod_orient": 0.0,
     "subarray1_modules_per_string": 25.0,
     "subarray1_monthly_tilt": [
         40.0,
@@ -57917,7 +57917,7 @@
     "subarray1_nameplate_loss": 0.0,
     "subarray1_nmodules": 1050.0,
     "subarray1_nmodx": 25.0,
-    "subarray1_nmody": 2.0,
+    "subarray1_nmody": 1.0,
     "subarray1_nstrings": 42.0,
     "subarray1_rack_shading": 4.0,
     "subarray1_rear_soiling_loss": 0.0,
@@ -57971,7 +57971,7 @@
     "subarray1_tracking_loss": 0.0,
     "subarray1_ui_length_side": 4.188555837039779,
     "subarray1_ui_nmodules": 1050.0,
-    "subarray1_ui_nrows": 21.0,
+    "subarray1_ui_nrows": 42.0,
     "subarray1_ui_row_spacing": 13.961852790132597,
     "subarray2_azimuth": 180.0,
     "subarray2_backtrack": 0.0,
@@ -57983,7 +57983,7 @@
     "subarray2_gcr": 0.3,
     "subarray2_land_area": 0.0,
     "subarray2_mismatch_loss": 2.0,
-    "subarray2_mod_orient": 3.335046e-317,
+    "subarray2_mod_orient": 0.0,
     "subarray2_modules_per_string": 1.0,
     "subarray2_monthly_tilt": [
         40.0,
@@ -58069,7 +58069,7 @@
     "subarray3_gcr": 0.3,
     "subarray3_land_area": 0.0,
     "subarray3_mismatch_loss": 2.0,
-    "subarray3_mod_orient": 3.335046e-317,
+    "subarray3_mod_orient": 0.0,
     "subarray3_modules_per_string": 1.0,
     "subarray3_monthly_tilt": [
         40.0,
@@ -58155,7 +58155,7 @@
     "subarray4_gcr": 0.3,
     "subarray4_land_area": 0.0,
     "subarray4_mismatch_loss": 2.0,
-    "subarray4_mod_orient": 3.335046e-317,
+    "subarray4_mod_orient": 0.0,
     "subarray4_modules_per_string": 1.0,
     "subarray4_monthly_tilt": [
         40.0,
