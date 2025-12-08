@@ -278,31 +278,6 @@ function setup_pvwatts_pages()
 	setup_grid_limits_page();
 }
 
-function setup_flat_plate_pv_pages()
-{
-	//addpage( [ ['AA Widgets'] ], { 'sidebar'='Widgets' } ); // use for widget testing
-
-	addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information', {'name'='PV Albedo and Radiation', 'caption' = 'Albedo - Sky Diffuse Model - Irradiance Data (Advanced)', 'collapsible'=true, 'collapsible_var'='pv.radmode.is_shown'} ]], { 'sidebar'='Location and Resource', 'help'='pv_location_and_resource' } );
-	addpage( [ ['Simple Efficiency Module Model'],
-				['CEC Performance Model with Module Database'],
-				['CEC Performance Model with User Entered Specifications'],
-				['Sandia PV Array Performance Model with Module Database'],
-				['IEC61853 Single Diode Model'] ],
-			{ 'sidebar'='Module', 'help'='pv_module', 'exclusive_var'='module_model' } );
-	addpage( [ ['Inverter CEC Database', 'Inverter Temp Derate CEC DB'],
-			 ['Inverter Datasheet', 'Inverter Temp Derate DS'],
-			 ['Inverter Part Load Curve', 'Inverter Temp Derate PLC'],
-			 ['Inverter CEC Coefficient Generator', 'Inverter Temp Derate CEC CG'] ],
-			{ 'sidebar'='Inverter', 'help'='pv_inverter', 'exclusive_var'='inverter_model' } );
-	// Battery Enable form stores hidden en_batt variable required by some UI forms to determine if there is a battery
-	addpage( [ ['PV System Design', 
-	           {'name'='PV Land Area', 'caption' = 'Land Area', 'collapsible'=true, 'collapsible_var'='pv_land_area_is_shown'},
-			   {'name'='PV Subarray Voltage Mismatch', 'collapsible'=true, 'collapsible_var' = 'mismatch_shown'},
-	            'Battery Enable'] ], { 'sidebar'='System Design', 'help'='pv_system_design' } );
-	addpage( [ ['PV Shading'] ], { 'sidebar'='Shading and Layout', 'help'='pv_shading' } );
-	addpage( [ ['PV Losses']], { 'sidebar'='Losses', 'help'='pv_losses' } );
-}
-
 function setup_detailed_pv_pages(bin) 
 {
 	addpage( [['Solar Resource Download', 
