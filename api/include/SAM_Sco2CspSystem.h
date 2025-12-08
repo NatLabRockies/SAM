@@ -40,12 +40,28 @@ extern "C"
 	SAM_EXPORT void SAM_Sco2CspSystem_SystemDesign_T_amb_des_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
+	 * Set T_bypass_target: HTR BP Cycle Target Temperature [C]
+	 * options: None
+	 * constraints: None
+	 * required if: cycle_config=3
+	 */
+	SAM_EXPORT void SAM_Sco2CspSystem_SystemDesign_T_bypass_target_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
 	 * Set T_htf_hot_des: HTF design hot temperature (PHX inlet) [C]
 	 * options: None
 	 * constraints: None
 	 * required if: *
 	 */
 	SAM_EXPORT void SAM_Sco2CspSystem_SystemDesign_T_htf_hot_des_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
+	 * Set T_target_is_HTF: Target Temperature is HTF (1) or cold sco2 at BP
+	 * options: None
+	 * constraints: None
+	 * required if: ?=1
+	 */
+	SAM_EXPORT void SAM_Sco2CspSystem_SystemDesign_T_target_is_HTF_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
 	 * Set W_dot_net_des: Design cycle power output (no cooling parasitics) [MWe]
@@ -72,12 +88,28 @@ extern "C"
 	SAM_EXPORT void SAM_Sco2CspSystem_SystemDesign_dT_mc_approach_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
+	 * Set deltaT_bypass: sco2 Bypass Outlet Temp - HTR_HP_OUT Temp [C]
+	 * options: None
+	 * constraints: None
+	 * required if: ?=0
+	 */
+	SAM_EXPORT void SAM_Sco2CspSystem_SystemDesign_deltaT_bypass_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
 	 * Set design_method: 1 = Specify efficiency, 2 = Specify total recup UA, 3 = Specify each recup design
 	 * options: None
 	 * constraints: None
 	 * required if: *
 	 */
 	SAM_EXPORT void SAM_Sco2CspSystem_SystemDesign_design_method_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
+	 * Set eta_thermal_cutoff: Minimum eta allowable to solve and return cmod success
+	 * options: None
+	 * constraints: None
+	 * required if: ?=0
+	 */
+	SAM_EXPORT void SAM_Sco2CspSystem_SystemDesign_eta_thermal_cutoff_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
 	 * Set eta_thermal_des: Power cycle thermal efficiency
@@ -104,12 +136,36 @@ extern "C"
 	SAM_EXPORT void SAM_Sco2CspSystem_SystemDesign_htf_props_mset(SAM_table ptr, double* mat, int nrows, int ncols, SAM_error *err);
 
 	/**
+	 * Set is_bypass_ok: 1 = Yes, 0 = No Bypass, < 0 = fix bp_frac to abs(input)
+	 * options: None
+	 * constraints: None
+	 * required if: ?=1
+	 */
+	SAM_EXPORT void SAM_Sco2CspSystem_SystemDesign_is_bypass_ok_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
+	 * Set set_HTF_mdot: For HTR Bypass ONLY, 0 = calculate HTF mdot (need to set dT_PHX_cold_approach), > 0 = HTF mdot kg/s [kg/s]
+	 * options: None
+	 * constraints: None
+	 * required if: ?=0
+	 */
+	SAM_EXPORT void SAM_Sco2CspSystem_SystemDesign_set_HTF_mdot_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
 	 * Set site_elevation: Site elevation [m]
 	 * options: None
 	 * constraints: None
 	 * required if: *
 	 */
 	SAM_EXPORT void SAM_Sco2CspSystem_SystemDesign_site_elevation_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
+	 * Set yr_inflation: Inflation target year [yr]
+	 * options: None
+	 * constraints: None
+	 * required if: ?=0
+	 */
+	SAM_EXPORT void SAM_Sco2CspSystem_SystemDesign_yr_inflation_nset(SAM_table ptr, double number, SAM_error *err);
 
 
 	//
@@ -269,7 +325,7 @@ extern "C"
 	SAM_EXPORT void SAM_Sco2CspSystem_HeatExchangerDesign_UA_recup_tot_des_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set cycle_config: 1 = recompression, 2 = partial cooling
+	 * Set cycle_config: 1 = recompression, 2 = partial cooling, 3 = recomp with htr bypass, 4 = turbine split flow
 	 * options: High temperature recuperator
 	 * constraints: None
 	 * required if: ?=1
@@ -402,12 +458,28 @@ extern "C"
 	SAM_EXPORT void SAM_Sco2CspSystem_Common_eta_isen_t_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
+	 * Set eta_isen_t2: Design secondary turbine isentropic efficiency (TSF only) [-]
+	 * options: None
+	 * constraints: None
+	 * required if: cycle_config=4
+	 */
+	SAM_EXPORT void SAM_Sco2CspSystem_Common_eta_isen_t2_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
 	 * Set is_gen_od_polynomials: Generate off-design polynomials for Generic CSP models? 1 = Yes, 0 = No
 	 * options: None
 	 * constraints: None
 	 * required if: ?=0
 	 */
 	SAM_EXPORT void SAM_Sco2CspSystem_Common_is_gen_od_polynomials_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
+	 * Set is_turbine_split_ok: 1 = Yes, 0 = No Second Turbine, < 0 = fix split_frac to abs(input)
+	 * options: None
+	 * constraints: None
+	 * required if: ?=1
+	 */
+	SAM_EXPORT void SAM_Sco2CspSystem_Common_is_turbine_split_ok_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
 	 * Set mc_comp_type: Main compressor compressor type 1: SNL 2: CompA [-]
@@ -562,7 +634,11 @@ extern "C"
 
 	SAM_EXPORT double SAM_Sco2CspSystem_SystemDesign_T_amb_des_nget(SAM_table ptr, SAM_error *err);
 
+	SAM_EXPORT double SAM_Sco2CspSystem_SystemDesign_T_bypass_target_nget(SAM_table ptr, SAM_error *err);
+
 	SAM_EXPORT double SAM_Sco2CspSystem_SystemDesign_T_htf_hot_des_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_SystemDesign_T_target_is_HTF_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Sco2CspSystem_SystemDesign_W_dot_net_des_nget(SAM_table ptr, SAM_error *err);
 
@@ -570,7 +646,11 @@ extern "C"
 
 	SAM_EXPORT double SAM_Sco2CspSystem_SystemDesign_dT_mc_approach_nget(SAM_table ptr, SAM_error *err);
 
+	SAM_EXPORT double SAM_Sco2CspSystem_SystemDesign_deltaT_bypass_nget(SAM_table ptr, SAM_error *err);
+
 	SAM_EXPORT double SAM_Sco2CspSystem_SystemDesign_design_method_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_SystemDesign_eta_thermal_cutoff_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Sco2CspSystem_SystemDesign_eta_thermal_des_nget(SAM_table ptr, SAM_error *err);
 
@@ -578,7 +658,13 @@ extern "C"
 
 	SAM_EXPORT double* SAM_Sco2CspSystem_SystemDesign_htf_props_mget(SAM_table ptr, int* nrows, int* ncols, SAM_error *err);
 
+	SAM_EXPORT double SAM_Sco2CspSystem_SystemDesign_is_bypass_ok_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_SystemDesign_set_HTF_mdot_nget(SAM_table ptr, SAM_error *err);
+
 	SAM_EXPORT double SAM_Sco2CspSystem_SystemDesign_site_elevation_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_SystemDesign_yr_inflation_nget(SAM_table ptr, SAM_error *err);
 
 
 	/**
@@ -660,7 +746,11 @@ extern "C"
 
 	SAM_EXPORT double SAM_Sco2CspSystem_Common_eta_isen_t_nget(SAM_table ptr, SAM_error *err);
 
+	SAM_EXPORT double SAM_Sco2CspSystem_Common_eta_isen_t2_nget(SAM_table ptr, SAM_error *err);
+
 	SAM_EXPORT double SAM_Sco2CspSystem_Common_is_gen_od_polynomials_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Common_is_turbine_split_ok_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Sco2CspSystem_Common_mc_comp_type_nget(SAM_table ptr, SAM_error *err);
 
@@ -711,6 +801,16 @@ extern "C"
 	 * Outputs Getters
 	 */
 
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_BPX_co2_deltaP_des_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_BPX_cost_bare_erected_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_BPX_cost_equipment_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_BPX_m_dot_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_BPX_min_dT_nget(SAM_table ptr, SAM_error *err);
+
 	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_HTR_HP_T_in_des_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_HTR_HP_T_in_od_aget(SAM_table ptr, int* length, SAM_error *err);
@@ -718,6 +818,8 @@ extern "C"
 	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_HTR_HP_deltaP_des_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_HTR_HP_deltaP_od_aget(SAM_table ptr, int* length, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_HTR_HP_m_dot_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_HTR_LP_T_out_des_nget(SAM_table ptr, SAM_error *err);
 
@@ -763,6 +865,8 @@ extern "C"
 
 	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_LTR_min_dT_od_aget(SAM_table ptr, int* length, SAM_error *err);
 
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_NTU_BPX_nget(SAM_table ptr, SAM_error *err);
+
 	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_NTU_HTR_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_NTU_LTR_nget(SAM_table ptr, SAM_error *err);
@@ -776,6 +880,8 @@ extern "C"
 	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_PHX_cost_equipment_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_PHX_min_dT_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_P_co2_BPX_in_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_P_co2_PHX_in_nget(SAM_table ptr, SAM_error *err);
 
@@ -797,6 +903,8 @@ extern "C"
 
 	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_P_state_points_aget(SAM_table ptr, int* length, SAM_error *err);
 
+	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_P_t2_data_aget(SAM_table ptr, int* length, SAM_error *err);
+
 	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_P_t_data_aget(SAM_table ptr, int* length, SAM_error *err);
 
 	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_Q_dot_od_aget(SAM_table ptr, int* length, SAM_error *err);
@@ -813,6 +921,8 @@ extern "C"
 
 	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_T_amb_od_aget(SAM_table ptr, int* length, SAM_error *err);
 
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_T_co2_BPX_in_nget(SAM_table ptr, SAM_error *err);
+
 	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_T_co2_PHX_in_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_T_co2_PHX_in_od_aget(SAM_table ptr, int* length, SAM_error *err);
@@ -821,11 +931,15 @@ extern "C"
 
 	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_T_comp_in_nget(SAM_table ptr, SAM_error *err);
 
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_T_htf_bp_out_des_nget(SAM_table ptr, SAM_error *err);
+
 	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_T_htf_cold_des_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_T_htf_cold_od_aget(SAM_table ptr, int* length, SAM_error *err);
 
 	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_T_htf_hot_od_aget(SAM_table ptr, int* length, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_T_htf_phx_out_des_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_T_main_cooler_data_aget(SAM_table ptr, int* length, SAM_error *err);
 
@@ -835,7 +949,11 @@ extern "C"
 
 	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_T_state_points_aget(SAM_table ptr, int* length, SAM_error *err);
 
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_T_turb2_in_nget(SAM_table ptr, SAM_error *err);
+
 	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_T_turb_in_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_UA_BPX_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_UA_PHX_nget(SAM_table ptr, SAM_error *err);
 
@@ -844,6 +962,10 @@ extern "C"
 	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_W_dot_net_less_cooling_od_aget(SAM_table ptr, int* length, SAM_error *err);
 
 	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_W_dot_net_od_aget(SAM_table ptr, int* length, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_back_work_ratio_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_bypass_frac_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_c_tot_W_dot_nget(SAM_table ptr, SAM_error *err);
 
@@ -867,6 +989,12 @@ extern "C"
 
 	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_cycle_spec_cost_thermal_nget(SAM_table ptr, SAM_error *err);
 
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_cycle_success_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_dT_htf_des_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_deltaT_HTF_BPX_nget(SAM_table ptr, SAM_error *err);
+
 	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_deltaT_HTF_PHX_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_deltaT_HTF_PHX_od_aget(SAM_table ptr, int* length, SAM_error *err);
@@ -879,6 +1007,8 @@ extern "C"
 
 	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_diff_m_dot_od_aget(SAM_table ptr, int* length, SAM_error *err);
 
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_eff_BPX_nget(SAM_table ptr, SAM_error *err);
+
 	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_eff_HTR_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_eff_HTR_od_aget(SAM_table ptr, int* length, SAM_error *err);
@@ -888,6 +1018,10 @@ extern "C"
 	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_eff_LTR_od_aget(SAM_table ptr, int* length, SAM_error *err);
 
 	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_eff_PHX_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_error_int_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT const char* SAM_Sco2CspSystem_Outputs_error_msg_sget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_eta_thermal_calc_nget(SAM_table ptr, SAM_error *err);
 
@@ -904,6 +1038,8 @@ extern "C"
 	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_h_rc_data_aget(SAM_table ptr, int* length, SAM_error *err);
 
 	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_h_state_points_aget(SAM_table ptr, int* length, SAM_error *err);
+
+	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_h_t2_data_aget(SAM_table ptr, int* length, SAM_error *err);
 
 	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_h_t_data_aget(SAM_table ptr, int* length, SAM_error *err);
 
@@ -1085,6 +1221,8 @@ extern "C"
 
 	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_piping_inventory_etc_cost_nget(SAM_table ptr, SAM_error *err);
 
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_q_dot_BPX_nget(SAM_table ptr, SAM_error *err);
+
 	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_q_dot_HTR_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_q_dot_HTR_od_aget(SAM_table ptr, int* length, SAM_error *err);
@@ -1094,6 +1232,8 @@ extern "C"
 	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_q_dot_LTR_od_aget(SAM_table ptr, int* length, SAM_error *err);
 
 	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_q_dot_PHX_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_q_dot_in_total_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_rc_D_aget(SAM_table ptr, int* length, SAM_error *err);
 
@@ -1187,6 +1327,32 @@ extern "C"
 
 	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_sim_time_od_aget(SAM_table ptr, int* length, SAM_error *err);
 
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_t2_D_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_t2_N_des_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_t2_P_in_des_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_t2_P_out_des_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_t2_T_out_des_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_t2_W_dot_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_t2_cost_bare_erected_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_t2_cost_equipment_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_t2_delta_h_isen_des_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_t2_m_dot_des_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_t2_nu_des_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_t2_rho_in_des_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_t2_tip_ratio_des_nget(SAM_table ptr, SAM_error *err);
+
 	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_t_D_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_t_N_des_nget(SAM_table ptr, SAM_error *err);
@@ -1234,6 +1400,12 @@ extern "C"
 	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_t_tip_ratio_des_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double* SAM_Sco2CspSystem_Outputs_t_tip_ratio_od_aget(SAM_table ptr, int* length, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_t_tot_W_dot_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_t_tot_cost_equip_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_turbine_split_frac_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Sco2CspSystem_Outputs_udpc_n_T_amb_nget(SAM_table ptr, SAM_error *err);
 

@@ -1953,7 +1953,7 @@
             "Units": "seconds",
             "Group": "Location and Resource",
             "IndexLabels": "",
-            "Flags": 4.0,
+            "Flags": 8.0,
             "DefaultValue": 3600.0,
             "UIObject": "Default",
             "sscVariableName": "",
