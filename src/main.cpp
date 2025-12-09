@@ -137,8 +137,7 @@ enum { __idFirst = wxID_HIGHEST+592,
 
 BEGIN_EVENT_TABLE( MainWindow, wxFrame )
 	EVT_CLOSE( MainWindow::OnClose )
-	EVT_MENU( wxID_ABOUT, MainWindow::OnCommand )
-	EVT_MENU( wxID_HELP, MainWindow::OnCommand )
+	//EVT_MENU( wxID_HELP, MainWindow::OnCommand )
 	EVT_MENU( ID_SAVE_HOURLY, MainWindow::OnCommand )
 	EVT_MENU( ID_IMPORT_CASES, MainWindow::OnCommand )
 	EVT_MENU( wxID_NEW, MainWindow::OnCommand )
@@ -156,6 +155,7 @@ BEGIN_EVENT_TABLE( MainWindow, wxFrame )
 	EVT_BUTTON(ID_MAIN_MENU, MainWindow::OnCommand)
 	EVT_LISTBOX( ID_CASE_TABS, MainWindow::OnCaseTabChange )
 	EVT_BUTTON( ID_CASE_TABS, MainWindow::OnCaseTabButton )
+	EVT_BUTTON(wxID_ABOUT, MainWindow::OnCommand)
 	EVT_BUTTON( wxID_HELP, MainWindow::OnCommand )
 	EVT_BUTTON( ID_PAGE_NOTES, MainWindow::OnCommand )
 	EVT_MENU_RANGE( __idCaseMenuFirst, __idCaseMenuLast, MainWindow::OnCaseMenu )
@@ -238,7 +238,8 @@ MainWindow::MainWindow()
 	tools->Add( metbut = new wxMetroButton( m_caseTabPanel, ID_PAGE_NOTES, wxEmptyString, wxBITMAP_PNG_FROM_DATA( notes_white ), wxDefaultPosition, wxDefaultSize), 0, wxALL|wxEXPAND, 0 );
 	metbut->SetToolTip( "Add a page note" );
 
-	tools->Add( new wxMetroButton( m_caseTabPanel, wxID_HELP, "Help",/* wxBITMAP_PNG_FROM_DATA(qmark) */ wxNullBitmap, wxDefaultPosition, wxDefaultSize), 0, wxALL|wxEXPAND, 0 );
+	tools->Add(new wxMetroButton(m_caseTabPanel, wxID_ABOUT, "About",wxNullBitmap, wxDefaultPosition, wxDefaultSize), 0, wxALL | wxEXPAND, 0);
+	tools->Add( new wxMetroButton( m_caseTabPanel, wxID_HELP, "Help",/*wxBITMAP_PNG_FROM_DATA(qmark)*/ wxNullBitmap, wxDefaultPosition, wxDefaultSize), 0, wxALL | wxEXPAND, 0);
 
 	m_caseNotebook = new wxSimplebook( m_caseTabPanel, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxBORDER_NONE );
 
@@ -2466,15 +2467,15 @@ void SamApp::ShowHelp( const wxString &context )
 		wxFileName fn( SamApp::GetRuntimePath() + "/help/html/" );
 		fn.MakeAbsolute();
 		url = "file:///" + fn.GetFullPath( wxPATH_NATIVE ) + "index.html";
-#ifdef __WXGTK__
+//#ifdef __WXGTK__
 		if ( ! context.IsEmpty() )
 			url = "file:///" + fn.GetFullPath( wxPATH_NATIVE ) + context + ".html";
 		wxLaunchDefaultBrowser( url );
 		return;
-#else
-		if ( ! context.IsEmpty() )
-			url += "?" + context + ".html";
-#endif
+//#else
+//		if ( ! context.IsEmpty() )
+//			url += "?" + context + ".html";
+//#endif
 	}
 
 	wxWindow *modal_active = 0;

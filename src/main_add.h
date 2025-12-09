@@ -473,37 +473,21 @@ extern void RegisterReportObjectTypes();
 
 class HelpWin : public wxFrame
 {
-#if defined(__WXMSW__)||defined(__WXOSX__)
-	wxWebView *m_webView;
-#else
 	wxHtmlWindow *m_htmlView;
-#endif
 
 	wxString m_aboutHtml;
 public:
 	HelpWin( wxWindow *parent )
-		: wxFrame(parent, wxID_ANY, "System Advisor Model (Open Source) Help", wxDefaultPosition, wxScaleSize(1000, 600))
+		: wxFrame(parent, wxID_ANY, "About System Advisor Model (SAM)", wxDefaultPosition, wxScaleSize(1000, 600))
 	{
 		CreateAboutHtml();
 
-#ifdef __WXMSW__
-		SetIcon( wxICON( appicon ) );
-#endif
 		SetBackgroundColour( wxMetroTheme::Colour( wxMT_FOREGROUND ) );
 
-#if defined(__WXMSW__)||defined(__WXOSX__)
-		m_webView = wxWebView::New( this, ID_BROWSER, ::wxWebViewDefaultURLStr, wxDefaultPosition, wxDefaultSize,
-			::wxWebViewBackendDefault, wxBORDER_NONE );
-		m_webView->SetPage( m_aboutHtml, "About SAM" );
-#else
 		m_htmlView = new wxHtmlWindow( this, ID_BROWSER );
 		m_htmlView->SetPage( m_aboutHtml );
-#endif
-
-		wxBoxSizer *tools = new wxBoxSizer( wxHORIZONTAL );
-//#if defined(__WXMSW__)||defined(__WXOSX__)
-//		tools->Add( new wxMetroButton( this, ID_BACK, "Back" ), 0, wxALL|wxEXPAND, 0 );
-//#endif
+		/*
+		wxBoxSizer* tools = new wxBoxSizer(wxHORIZONTAL);
 		tools->Add( new wxMetroButton( this, ID_HOME, "Home" ), 0, wxALL|wxEXPAND, 0 );
 //		tools->Add( new wxMetroButton( this, ID_WEBSITE, "Web site" ), 0, wxALL|wxEXPAND, 0 );
 //		tools->Add( new wxMetroButton( this, ID_FORUM, "Forum" ), 0, wxALL|wxEXPAND, 0 );
@@ -513,14 +497,10 @@ public:
 		tools->AddStretchSpacer();
 		tools->Add( new wxMetroButton( this, wxID_ABOUT, "About" ), 0, wxALL|wxEXPAND, 0 );
 		tools->Add( new wxMetroButton( this, wxID_CLOSE, "Close" ), 0, wxALL|wxEXPAND, 0 );
-
+		*/
 		wxBoxSizer *sizer = new wxBoxSizer( wxVERTICAL );
-		sizer->Add( tools, 0, wxALL|wxEXPAND, 0 );
-#if defined(__WXMSW__)||defined(__WXOSX__)
-		sizer->Add( m_webView, 1, wxALL|wxEXPAND, 0 );
-#else
+		//sizer->Add( tools, 0, wxALL|wxEXPAND, 0 );
 		sizer->Add( m_htmlView, 1, wxALL|wxEXPAND, 0 );
-#endif
 		SetSizer( sizer );
 	}
 
@@ -537,31 +517,25 @@ public:
 			patchStr.Printf( ", updated to revision %d", patch );
 
 		// int nbit = (sizeof(void*) == 8) ? 64 : 32;
-		m_aboutHtml = "<html><body bgcolor=#ffffff>"
-			"<font color=#a9a9a9 face=\"Segoe UI Light\" size=10>System Advisor Model (Open Source)</font><br><p>"
-			"BSD 3-Clause License<br><br>Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE <br>	All rights reserved. <br>"
-
-			"Redistribution and use in source and binary forms, with or without	modification, are permitted provided that the following conditions are met :<br><br>"
-
-			"1. Redistributions of source code must retain the above copyright notice, this	list of conditions and the following disclaimer.<br><br>"
-
-			"2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation	and /or other materials provided with the distribution.<br><br>"
-
-			"3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.<br><br>"
-
-			"THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,	OR TORT(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
-			"</p></font></body></html>";
+		m_aboutHtml = "<html><body>"
+			"<h1>System Advisor Model (SAM)</h1>"
+			"<h2>Open Source Build</h2>"
+			"<p>BSD 3-Clause License<br><br>Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE.</p>"
+			"<p>All rights reserved.</p>"
+			"<p>Redistribution and use in source and binary forms, with or without	modification, are permitted provided that the following conditions are met:</p>"
+			"<ol>"
+			"<li>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</li>"
+			"<li>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</li>"
+			"<li>Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</li>"
+			"</ol>"
+			"<p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,	OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>"
+			"</body></html>";
 	}
 	void LoadPage( wxString url )
 	{
 		if ( url == ":about" )
 		{
-#if defined(__WXMSW__)||defined(__WXOSX__)
-			m_webView->SetPage( m_aboutHtml, "About SAM" );
-#else
 			m_htmlView->SetPage( m_aboutHtml );
-#endif
-
 			return;
 		}
 		else if ( url == ":release_notes" )
@@ -585,11 +559,7 @@ public:
 		else if ( url == ":website" )
 			url = SamApp::WebApi( "website" );
 
-#if defined(__WXMSW__)||defined(__WXOSX__)
-		m_webView->LoadURL( url );
-#else
 		wxLaunchDefaultBrowser( url );
-#endif
 	}
 
 
@@ -604,9 +574,6 @@ public:
 		switch( evt.GetId() )
 		{
 		case ID_BACK:
-#if defined(__WXMSW__)||defined(__WXOSX__)
-			if ( m_webView->CanGoBack() ) m_webView->GoBack();
-#endif
 			break;
 		case ID_WEBSITE:
 			LoadPage( ":website" );
