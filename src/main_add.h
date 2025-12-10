@@ -470,7 +470,7 @@ extern void RegisterReportObjectTypes();
 }
 
 
-
+/*
 class HelpWin : public wxFrame
 {
 	wxHtmlWindow *m_htmlView;
@@ -486,18 +486,18 @@ public:
 
 		m_htmlView = new wxHtmlWindow( this, ID_BROWSER );
 		m_htmlView->SetPage( m_aboutHtml );
-		/*
-		wxBoxSizer* tools = new wxBoxSizer(wxHORIZONTAL);
-		tools->Add( new wxMetroButton( this, ID_HOME, "Home" ), 0, wxALL|wxEXPAND, 0 );
+		
+////		wxBoxSizer* tools = new wxBoxSizer(wxHORIZONTAL);
+////		tools->Add( new wxMetroButton( this, ID_HOME, "Home" ), 0, wxALL|wxEXPAND, 0 );
 //		tools->Add( new wxMetroButton( this, ID_WEBSITE, "Web site" ), 0, wxALL|wxEXPAND, 0 );
 //		tools->Add( new wxMetroButton( this, ID_FORUM, "Forum" ), 0, wxALL|wxEXPAND, 0 );
 //		tools->Add( new wxMetroButton( this, ID_EMAIL_SUPPORT, "Email support" ), 0, wxALL|wxEXPAND, 0 );
 //		tools->Add( new wxMetroButton( this, ID_RELEASE_NOTES, "Release notes" ), 0, wxALL|wxEXPAND, 0 );
 //		tools->Add( new wxMetroButton( this, ID_SCRIPT_REFERENCE, "Scripting reference" ), 0, wxALL|wxEXPAND, 0 );
-		tools->AddStretchSpacer();
-		tools->Add( new wxMetroButton( this, wxID_ABOUT, "About" ), 0, wxALL|wxEXPAND, 0 );
-		tools->Add( new wxMetroButton( this, wxID_CLOSE, "Close" ), 0, wxALL|wxEXPAND, 0 );
-		*/
+////		tools->AddStretchSpacer();
+////		tools->Add( new wxMetroButton( this, wxID_ABOUT, "About" ), 0, wxALL|wxEXPAND, 0 );
+////		tools->Add( new wxMetroButton( this, wxID_CLOSE, "Close" ), 0, wxALL|wxEXPAND, 0 );
+		
 		wxBoxSizer *sizer = new wxBoxSizer( wxVERTICAL );
 		//sizer->Add( tools, 0, wxALL|wxEXPAND, 0 );
 		sizer->Add( m_htmlView, 1, wxALL|wxEXPAND, 0 );
@@ -635,3 +635,31 @@ END_EVENT_TABLE()
 
 class HelpWin;
 static HelpWin* gs_helpWin = 0;
+*/
+wxString SamApp::AboutSAM()
+{
+
+	wxString proxy(wxEasyCurl::GetProxyForURL(SamApp::WebApi("website")));
+	if (proxy.IsEmpty()) proxy = "default";
+	else proxy = "proxy: " + proxy;
+
+	int patch = SamApp::RevisionNumber();
+	wxString patchStr;
+	if (patch > 0)
+		patchStr.Printf(", updated to revision %d", patch);
+
+	// int nbit = (sizeof(void*) == 8) ? 64 : 32;
+	return "<html><body>"
+		"<h1>System Advisor Model (SAM)</h1>"
+		"<h2>Open Source Build</h2>"
+		"<p>BSD 3-Clause License<br><br>Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE.</p>"
+		"<p>All rights reserved.</p>"
+		"<p>Redistribution and use in source and binary forms, with or without	modification, are permitted provided that the following conditions are met:</p>"
+		"<ol>"
+		"<li>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</li>"
+		"<li>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</li>"
+		"<li>Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</li>"
+		"</ol>"
+		"<p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,	OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>"
+		"</body></html>";
+}
