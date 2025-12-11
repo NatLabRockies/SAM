@@ -106,13 +106,20 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 static PythonConfig pythonConfig;
 
-
 enum { __idFirst = wxID_HIGHEST+592,
 
-	ID_MAIN_MENU, ID_CASE_TABS, ID_PAGE_NOTES,
-	ID_CASE_CREATE, ID_RUN_ALL_CASES, ID_SAVE_HOURLY,
+	ID_MAIN_MENU, 
+	ID_CASE_TABS, 
+	ID_PAGE_NOTES, 
+	ID_RELEASE_NOTES, 
+	ID_BROWSER,
+	ID_CASE_CREATE, 
+	ID_RUN_ALL_CASES, 
+	ID_SAVE_HOURLY,
 	ID_IMPORT_CASES,
-	ID_NEW_SCRIPT, ID_OPEN_SCRIPT, ID_BROWSE_INPUTS,
+	ID_NEW_SCRIPT, 
+	ID_OPEN_SCRIPT, 
+	ID_BROWSE_INPUTS,
 	__idCaseMenuFirst,
 	ID_CASE_CONFIG,
 	ID_CASE_RENAME,
@@ -2506,11 +2513,15 @@ public:
 			m_htmlView->SetPage(m_aboutHtml);
 			//return;
 		}
-		/*else if (url == ":release_notes")
+		else if (url == ":release_notes")
 		{
-			url = SamApp::WebApi("release_notes");
+			wxLaunchDefaultBrowser(SamApp::WebApi("release_notes"));
 		}
-		else if (url == ":email_support")
+		else
+		{
+			wxLaunchDefaultBrowser(url);
+		}
+		/*else if (url == ":email_support")
 		{
 			wxLaunchDefaultBrowser(SamApp::WebApi("support_email"));
 			return;
@@ -2541,7 +2552,7 @@ public:
 	{
 		switch (evt.GetId())
 		{
-		case ID_BACK:
+		/*case ID_BACK:
 			break;
 		case ID_WEBSITE:
 			LoadPage(":website");
@@ -2551,11 +2562,11 @@ public:
 			break;
 		case ID_EMAIL_SUPPORT:
 			LoadPage(":email_support");
-			break;
+			break;*/
 		case ID_RELEASE_NOTES:
 			LoadPage(":release_notes");
 			break;
-		case ID_SCRIPT_REFERENCE:
+		/*case ID_SCRIPT_REFERENCE:
 			LoadPage(":script_ref");
 			break;
 		case ID_HOME:
@@ -2570,7 +2581,7 @@ public:
 			break;
 		case wxID_CLOSE:
 			Close();
-			break;
+			break;*/
 		}
 	}
 
@@ -2585,18 +2596,18 @@ public:
 };
 
 BEGIN_EVENT_TABLE(HelpWin, wxFrame)
-EVT_BUTTON(ID_BACK, HelpWin::OnCommand)
-EVT_BUTTON(ID_HOME, HelpWin::OnCommand)
-EVT_BUTTON(ID_WEBSITE, HelpWin::OnCommand)
-EVT_BUTTON(ID_FORUM, HelpWin::OnCommand)
+//EVT_BUTTON(ID_BACK, HelpWin::OnCommand)
+//EVT_BUTTON(ID_HOME, HelpWin::OnCommand)
+//EVT_BUTTON(ID_WEBSITE, HelpWin::OnCommand)
+//EVT_BUTTON(ID_FORUM, HelpWin::OnCommand)
 EVT_BUTTON(ID_RELEASE_NOTES, HelpWin::OnCommand)
-EVT_BUTTON(ID_SCRIPT_REFERENCE, HelpWin::OnCommand)
-EVT_BUTTON(ID_EMAIL_SUPPORT, HelpWin::OnCommand)
-EVT_BUTTON(wxID_CLOSE, HelpWin::OnCommand)
-EVT_BUTTON(wxID_ABOUT, HelpWin::OnCommand)
-#if defined(__WXMSW__)||defined(__WXOSX__)
-EVT_WEBVIEW_NEWWINDOW(ID_BROWSER, HelpWin::OnNewWindow)
-#endif
+//EVT_BUTTON(ID_SCRIPT_REFERENCE, HelpWin::OnCommand)
+//EVT_BUTTON(ID_EMAIL_SUPPORT, HelpWin::OnCommand)
+//EVT_BUTTON(wxID_CLOSE, HelpWin::OnCommand)
+//EVT_BUTTON(wxID_ABOUT, HelpWin::OnCommand)
+//#if defined(__WXMSW__)||defined(__WXOSX__)
+//EVT_WEBVIEW_NEWWINDOW(ID_BROWSER, HelpWin::OnNewWindow)
+//#endif
 EVT_CLOSE(HelpWin::OnClose)
 END_EVENT_TABLE()
 
