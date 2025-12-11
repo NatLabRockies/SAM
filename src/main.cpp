@@ -2479,7 +2479,7 @@ public:
 //		tools->Add( new wxMetroButton( this, ID_FORUM, "Forum" ), 0, wxALL|wxEXPAND, 0 );
 //		tools->Add( new wxMetroButton( this, ID_EMAIL_SUPPORT, "Email support" ), 0, wxALL|wxEXPAND, 0 );
 		tools->AddStretchSpacer();
-		tools->Add( new wxMetroButton( this, ID_RELEASE_NOTES, "Release Notes" ), 0, wxALL|wxEXPAND, 0 );
+		tools->Add( new wxMetroButton( this, ID_RELEASE_NOTES, "Open NLR release notes..." ), 0, wxALL|wxEXPAND, 0 );
 //		tools->Add( new wxMetroButton( this, ID_SCRIPT_REFERENCE, "Scripting reference" ), 0, wxALL|wxEXPAND, 0 );
 //		tools->Add( new wxMetroButton( this, wxID_ABOUT, "About" ), 0, wxALL|wxEXPAND, 0 );
 //		tools->Add( new wxMetroButton( this, wxID_CLOSE, "Close" ), 0, wxALL|wxEXPAND, 0 );
@@ -2500,9 +2500,9 @@ public:
 		if (url == ":about")
 		{
 			m_htmlView->SetPage(m_aboutHtml);
-			return;
+			//return;
 		}
-		else if (url == ":release_notes")
+		/*else if (url == ":release_notes")
 		{
 			url = SamApp::WebApi("release_notes");
 		}
@@ -2523,7 +2523,7 @@ public:
 		else if (url == ":website")
 			url = SamApp::WebApi("website");
 
-		wxLaunchDefaultBrowser(url);
+		wxLaunchDefaultBrowser(url);*/
 	}
 
 
@@ -2599,67 +2599,62 @@ END_EVENT_TABLE()
 class HelpWin;
 static HelpWin* gs_helpWin = 0;
 
-void SamApp::ShowHelp( const wxString &context )
+void SamApp::ShowHelp( const wxString &help_context )
 {
-	wxString url;
-	if ( context.Left(1) == ":" )
-		url = context; // for things like :about, etc
-	else
+    wxString url;
+    url = help_context;
+    if ( url.Left(1) == ":" ) // display things like :about in custom window
+    {
+        wxWindow *modal_active = 0;
+        wxWindow *nonmodal_tlw = 0;
+        for( wxWindowList::iterator wl = wxTopLevelWindows.begin(); wl != wxTopLevelWindows.end(); ++wl )
+        {
+            wxTopLevelWindow *tlw = dynamic_cast<wxTopLevelWindow*>( *wl );
+            wxDialog *dia = dynamic_cast<wxDialog*>( *wl );
+            
+            if ( tlw != 0 && (dia == 0  || !dia->IsModal()) )
+                nonmodal_tlw = tlw;
+            
+            if ( dia != 0 && dia->IsActive() && dia->IsModal() )
+                modal_active = dia;
+        }
+        
+        // try several different parent windows for the help window
+        // if possible, use the SAM main window
+        // otherwise, choose any top level window that is not modal
+        // last resort, choose a currently modal dialog box
+        wxWindow *parent = SamApp::Window();
+        if ( !parent ) parent = nonmodal_tlw;
+        if ( !parent ) parent = modal_active;
+        
+        if ( modal_active && gs_helpWin != 0 && gs_helpWin->IsShown() )
+        {
+            wxRect h_rect = gs_helpWin->GetRect();
+            
+            if (gs_helpWin->Destroy())
+            {
+                gs_helpWin = new HelpWin( parent );
+                gs_helpWin->SetSize(h_rect);
+            }
+        }
+        else if ( 0 == gs_helpWin )
+            gs_helpWin = new HelpWin( parent );
+        
+        gs_helpWin->Show( );
+        gs_helpWin->LoadPage( url );
+        gs_helpWin->Raise();
+    }
+    else // display help topics in default browser
 	{
 		wxFileName fn( SamApp::GetRuntimePath() + "/help/html/" );
 		fn.MakeAbsolute();
-		url = "file:///" + fn.GetFullPath( wxPATH_NATIVE ) + "index.html";
-//#ifdef __WXGTK__
-		if ( ! context.IsEmpty() )
-			url = "file:///" + fn.GetFullPath( wxPATH_NATIVE ) + context + ".html";
-		wxLaunchDefaultBrowser( url );
-		return;
-//#else
-//		if ( ! context.IsEmpty() )
-//			url += "?" + context + ".html";
-//#endif
+		if ( help_context.IsEmpty() )
+            url = "file:///" + fn.GetFullPath( wxPATH_NATIVE ) + "index.html";
+        else
+            url = "file:///" + fn.GetFullPath( wxPATH_NATIVE ) + help_context + ".html";
+        wxLaunchDefaultBrowser( url );
 	}
 
-	wxWindow *modal_active = 0;
-	wxWindow *nonmodal_tlw = 0;
-	for( wxWindowList::iterator wl = wxTopLevelWindows.begin();
-		wl != wxTopLevelWindows.end();
-		++wl )
-	{
-		wxTopLevelWindow *tlw = dynamic_cast<wxTopLevelWindow*>( *wl );
-		wxDialog *dia = dynamic_cast<wxDialog*>( *wl );
-
-		if ( tlw != 0 && (dia == 0  || !dia->IsModal()) )
-			nonmodal_tlw = tlw;
-
-		if ( dia != 0 && dia->IsActive() && dia->IsModal() )
-			modal_active = dia;
-	}
-
-	// try several different parent windows for the help window
-	// if possible, use the SAM main window
-	// otherwise, choose any top level window that is not modal
-	// last resort, choose a currently modal dialog box
-	wxWindow *parent = SamApp::Window();
-	if ( !parent ) parent = nonmodal_tlw;
-	if ( !parent ) parent = modal_active;
-
-	if ( modal_active && gs_helpWin != 0 && gs_helpWin->IsShown() )
-	{
-		wxRect h_rect = gs_helpWin->GetRect();
-
-		if (gs_helpWin->Destroy())
-		{
-			gs_helpWin = new HelpWin( parent );
-			gs_helpWin->SetSize(h_rect);
-		}
-	}
-	else if ( 0 == gs_helpWin )
-		gs_helpWin = new HelpWin( parent );
-
-	gs_helpWin->Show( );
-	gs_helpWin->LoadPage( url );
-	gs_helpWin->Raise();
 }
 
 int SamApp::RevisionNumber()
