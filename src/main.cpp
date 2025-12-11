@@ -2468,6 +2468,10 @@ public:
 	{
 		CreateAboutHtml();
 
+#ifdef __WXMSW__
+		SetIcon(wxICON(appicon));
+#endif
+
 		SetBackgroundColour(wxMetroTheme::Colour(wxMT_FOREGROUND));
 
 		m_htmlView = new wxHtmlWindow(this, ID_BROWSER);
