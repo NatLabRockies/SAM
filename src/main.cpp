@@ -145,7 +145,6 @@ enum { __idFirst = wxID_HIGHEST+592,
 
 BEGIN_EVENT_TABLE( MainWindow, wxFrame )
 	EVT_CLOSE( MainWindow::OnClose )
-	//EVT_MENU( wxID_HELP, MainWindow::OnCommand )
 	EVT_MENU( ID_SAVE_HOURLY, MainWindow::OnCommand )
 	EVT_MENU( ID_IMPORT_CASES, MainWindow::OnCommand )
 	EVT_MENU( wxID_NEW, MainWindow::OnCommand )
@@ -2486,15 +2485,8 @@ public:
 		m_htmlView->SetPage(m_aboutHtml);
 		
 		wxBoxSizer* tools = new wxBoxSizer(wxHORIZONTAL);
-//		tools->Add( new wxMetroButton( this, ID_HOME, "Home" ), 0, wxALL|wxEXPAND, 0 );
-//		tools->Add( new wxMetroButton( this, ID_WEBSITE, "Web site" ), 0, wxALL|wxEXPAND, 0 );
-//		tools->Add( new wxMetroButton( this, ID_FORUM, "Forum" ), 0, wxALL|wxEXPAND, 0 );
-//		tools->Add( new wxMetroButton( this, ID_EMAIL_SUPPORT, "Email support" ), 0, wxALL|wxEXPAND, 0 );
 		tools->AddStretchSpacer();
 		tools->Add( new wxMetroButton( this, ID_RELEASE_NOTES, "Open NLR release notes..." ), 0, wxALL|wxEXPAND, 0 );
-//		tools->Add( new wxMetroButton( this, ID_SCRIPT_REFERENCE, "Scripting reference" ), 0, wxALL|wxEXPAND, 0 );
-//		tools->Add( new wxMetroButton( this, wxID_ABOUT, "About" ), 0, wxALL|wxEXPAND, 0 );
-//		tools->Add( new wxMetroButton( this, wxID_CLOSE, "Close" ), 0, wxALL|wxEXPAND, 0 );
 		
 		wxBoxSizer* sizer = new wxBoxSizer(wxVERTICAL);
 		sizer->Add( tools, 0, wxALL|wxEXPAND, 0 );
@@ -2512,7 +2504,6 @@ public:
 		if (url == ":about")
 		{
 			m_htmlView->SetPage(m_aboutHtml);
-			//return;
 		}
 		else if (url == ":release_notes")
 		{
@@ -2522,24 +2513,6 @@ public:
 		{
 			wxLaunchDefaultBrowser(url);
 		}
-		/*else if (url == ":email_support")
-		{
-			wxLaunchDefaultBrowser(SamApp::WebApi("support_email"));
-			return;
-		}
-		else if (url == ":script_ref")
-		{
-			wxFileName file(SamApp::GetRuntimePath() + "/help/lk_guide.pdf");
-			file.Normalize();
-			wxLaunchDefaultBrowser(file.GetFullPath());
-			return;
-		}
-		else if (url == ":forum")
-			url = SamApp::WebApi("website") + "/forum.html";
-		else if (url == ":website")
-			url = SamApp::WebApi("website");
-
-		wxLaunchDefaultBrowser(url);*/
 	}
 
 
@@ -2553,62 +2526,17 @@ public:
 	{
 		switch (evt.GetId())
 		{
-		/*case ID_BACK:
-			break;
-		case ID_WEBSITE:
-			LoadPage(":website");
-			break;
-		case ID_FORUM:
-			LoadPage(":forum");
-			break;
-		case ID_EMAIL_SUPPORT:
-			LoadPage(":email_support");
-			break;*/
 		case ID_RELEASE_NOTES:
 			LoadPage(":release_notes");
 			break;
-		/*case ID_SCRIPT_REFERENCE:
-			LoadPage(":script_ref");
-			break;
-		case ID_HOME:
-		{
-			wxFileName fn(SamApp::GetRuntimePath() + "/help/html/index.html");
-			fn.MakeAbsolute();
-			LoadPage("file:///" + fn.GetFullPath());
-		}
-		break;
-		case wxID_ABOUT:
-			LoadPage(":about");
-			break;
-		case wxID_CLOSE:
-			Close();
-			break;*/
 		}
 	}
-/*
-#if defined(__WXMSW__)||defined(__WXOSX__)
-	void OnNewWindow(wxWebViewEvent& evt)
-	{
-		wxLaunchDefaultBrowser(evt.GetURL());
-	}
-#endif
-*/
+
 	DECLARE_EVENT_TABLE();
 };
 
 BEGIN_EVENT_TABLE(HelpWin, wxFrame)
-//EVT_BUTTON(ID_BACK, HelpWin::OnCommand)
-//EVT_BUTTON(ID_HOME, HelpWin::OnCommand)
-//EVT_BUTTON(ID_WEBSITE, HelpWin::OnCommand)
-//EVT_BUTTON(ID_FORUM, HelpWin::OnCommand)
 EVT_BUTTON(ID_RELEASE_NOTES, HelpWin::OnCommand)
-//EVT_BUTTON(ID_SCRIPT_REFERENCE, HelpWin::OnCommand)
-//EVT_BUTTON(ID_EMAIL_SUPPORT, HelpWin::OnCommand)
-//EVT_BUTTON(wxID_CLOSE, HelpWin::OnCommand)
-//EVT_BUTTON(wxID_ABOUT, HelpWin::OnCommand)
-//#if defined(__WXMSW__)||defined(__WXOSX__)
-//EVT_WEBVIEW_NEWWINDOW(ID_BROWSER, HelpWin::OnNewWindow)
-//#endif
 EVT_CLOSE(HelpWin::OnClose)
 END_EVENT_TABLE()
 
