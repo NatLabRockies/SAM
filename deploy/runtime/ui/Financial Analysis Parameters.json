@@ -632,10 +632,12 @@
         "  txt = analysis_period_message();",
         "  property('analysis_period_warning','caption',txt);\r",
         "  change_tax_array_length();\r",
-        "  if  ( financing() != 'Merchant Plant') {\r",
+        "  if  ( financing() == 'Single Owner') {\r",
         "\tchange_curtailment_price_length();\r",
         "  }\r",
-        "  change_depreciation_length();",
+        "  if (financing() != 'Residential' && financing() != 'LCOE Calculator' && financing() != 'None') {\r",
+        "\tchange_depreciation_length();\r",
+        "  }",
         "};",
         ""
     ]
