@@ -20,7 +20,7 @@ Dispatch Options
   For the fixed output option, specify the percentage of the fuel cell rated capacity from the :doc:`Fuel Cell <fuelcell_fuel_cell>`   page. This input is disabled unless you choose the **Fixed output** dispatch option.
 
 **Follow electric load**
-  Operate the fuel cell to follow the electric load defined on the :doc:`Electric Load <../electricity-rates-and-load/electric_load>`   page.
+  Operate the fuel cell to follow the electric load defined on the :doc:`Electric Load <../electricity-rates-and-load/electricity_load>`   page.
 
 .. note:: This option does not apply to the front of meter configuration (PPA single owner financial model).
 

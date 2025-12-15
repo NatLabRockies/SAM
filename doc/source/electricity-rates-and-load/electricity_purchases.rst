@@ -3,7 +3,7 @@ Electricity Purchases
 
 The options on the Electricity Purchases page determine how front-of-meter projects pay for electricity required by the system when it is not generating electricity, such as to charge batteries, meet photovoltaic inverter night-time loads, or meet concentrating solar power or industrial process heat parasitic loads for freeze protection and other equipment.
 
-The cost of purchasing electricity is treated as a tax-deductible operating expense in the project :doc:`cash flow <../results/cashflow>`. You can explore the cost details in the :doc:`electricity bill results <utility_bill_results>`.
+The cost of purchasing electricity is treated as a tax-deductible operating expense in the project :doc:`cash flow <../results/cashflow>`. You can explore the cost details in the :doc:`electricity bill results <electricity_bill_results>`.
 
 Electricity Purchases
 ~~~~~~~~~~~~~~~~~~~~~
@@ -108,7 +108,7 @@ Minimum charges apply when either the monthly or annual electricity bill falls b
 **Annual minimum charge, $**
   The minimum annual charge for Year 1. If the annual electricity bill with system for Year 1 is less than the minimum value, SAM sets the Year 1 annual bill to the minimum value. For the purposes of the annual minimum charge, the year starts January 1 and ends December 31. The annual minimum charge does not affect the monthly electricity bill.
 
-.. note:: Like all of the dollar values on the Electricity Rates page, the minimum charge amounts are Year 1 values. If you apply an annual minimum charge, the monthly electricity bill with system data shown in the :doc:`Results <utility_bill_results>` does not reflect the annual minimum charge.
+.. note:: Like all of the dollar values on the Electricity Rates page, the minimum charge amounts are Year 1 values. If you apply an annual minimum charge, the monthly electricity bill with system data shown in the :doc:`Results <electricity_bill_results>` does not reflect the annual minimum charge.
 
 Annual Escalation
 ~~~~~~~~~~~~~~~~~

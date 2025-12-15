@@ -21,7 +21,7 @@ The fuel cell performance model uses the following input pages to describe the c
 
 When you combine the fuel cell model with the Commercial financial model, you must also provide information about the electricity and thermal loads and retail rates for electricity and heat: retail electricity and heat costs:
 
-* An :doc:`electric load <../electricity-rates-and-load/electric_load>` hourly or subhourly profile.
+* An :doc:`electric load <../electricity-rates-and-load/electricity_load>` hourly or subhourly profile.
 
 * A :doc:`thermal load <../thermal-rates-and-load/thermal_load>` (heat) hourly or subhourly profile.
 

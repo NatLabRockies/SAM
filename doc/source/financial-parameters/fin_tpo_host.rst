@@ -64,7 +64,7 @@ Analysis Parameters
   The number of years in the lease agreement or PPA. This is the period over which the system operates and the host makes payments to the third party owner.
 
 **Inflation rate**
-  The annual rate of inflation. Inflation applies to the electricity rates paid by the host as defined on the :doc:`Electricity Rates <../electricity-rates-and-load/electric_load>`   page. It does not apply to the lease payments.
+  The annual rate of inflation. Inflation applies to the electricity rates paid by the host as defined on the :doc:`Electricity Rates <../electricity-rates-and-load/electricity_load>`   page. It does not apply to the lease payments.
 
 **Real discount rate**
   A measure of the time value of money expressed as an annual rate.

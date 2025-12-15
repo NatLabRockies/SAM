@@ -36,7 +36,7 @@ SAM's :doc:`Electricity Rates <../electricity-rates-and-load/electricity_rates>`
 
 * Fixed monthly charges
 
-For projects with demand charges and tiered rates, SAM requires electric load data, which is specified on the :doc:`Electric Load <../electricity-rates-and-load/electric_load>` page.
+For projects with demand charges and tiered rates, SAM requires electric load data, which is specified on the :doc:`Electric Load <../electricity-rates-and-load/electricity_load>` page.
 
 .. _thirdparty:
 

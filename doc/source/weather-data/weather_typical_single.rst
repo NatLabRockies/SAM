@@ -39,7 +39,7 @@ The NSRDB PSM dataset also includes typical global horizontal irradiance (TGY) a
 Single Year Data
 ~~~~~~~~~~~~~~~~
 
-Single year data represents the weather at a location for a specific year. Single year data is appropriate for analysis of a system's performance in a particular year, and may be appropriate for analyses involving time-dependent :doc:`electricity pricing <../electricity-rates-and-load/electricity_rates>` or :doc:`electric loads <../electricity-rates-and-load/electric_load>` for a given year.
+Single year data represents the weather at a location for a specific year. Single year data is appropriate for analysis of a system's performance in a particular year, and may be appropriate for analyses involving time-dependent :doc:`electricity pricing <../electricity-rates-and-load/electricity_rates>` or :doc:`electric loads <../electricity-rates-and-load/electricity_load>` for a given year.
 
 The following are examples of weather files that contain single-year data:
 

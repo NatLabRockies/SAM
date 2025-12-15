@@ -4,10 +4,10 @@ IPH Parabolic Trough
 .. toctree::
 
    iph_trough
-   iph_trough-location_and_resource
-   iph_trough-system_design
-   iph_trough-solar_field
-   iph_trough-collectors
-   iph_trough-receivers
-   iph_trough-tes
-   iph_trough-system_control
+   iph_trough_location_and_resource
+   iph_trough_system_design
+   iph_trough_solar_field
+   iph_trough_collectors
+   iph_trough_receivers
+   iph_trough_tes
+   iph_trough_system_control

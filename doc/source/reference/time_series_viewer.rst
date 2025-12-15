@@ -9,7 +9,7 @@ The data viewer is available in SAM from the following input pages:
 
 * Location and Resource for all solar performance models.
 
-* :doc:`Electric Load <../electricity-rates-and-load/electric_load>` for the residential and commercial financial models.
+* :doc:`Electric Load <../electricity-rates-and-load/electricity_load>` for the residential and commercial financial models.
 
 * The viewer is also integrated into the :doc:`Results <../getting-started/results_page>` page.
 

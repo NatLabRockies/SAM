@@ -61,7 +61,7 @@ Electricity Rates and Load:
 
 * :doc:`Electricity Rates <../electricity-rates-and-load/electricity_rates>` (residential and commercial models): Retail electricity pricing.
 
-* :doc:`Electric Load <../electricity-rates-and-load/electric_load>` (residential and commercial models): Building electricity usage.
+* :doc:`Electric Load <../electricity-rates-and-load/electricity_load>` (residential and commercial models): Building electricity usage.
 
 Thermal Rates and Load:
 

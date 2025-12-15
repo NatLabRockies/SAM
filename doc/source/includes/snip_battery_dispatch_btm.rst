@@ -93,7 +93,7 @@ Load Forecast Horizon
 .....................
 
 **Perfect look ahead**
-  For each day, dispatch the battery based on the load specified on the :doc:`Electric Load <../electricity-rates-and-load/electric_load>`   page over the next 24 hours and the solar resource over the period specified above.
+  For each day, dispatch the battery based on the load specified on the :doc:`Electric Load <../electricity-rates-and-load/electricity_load>`   page over the next 24 hours and the solar resource over the period specified above.
 
 **One day look behind**
   Similar to perfect look ahead, but based on the previous 24 hours of load data.
@@ -160,7 +160,7 @@ For the manual dispatch option, you specify the timing of battery charges and di
 
 .. note:: For subhourly simulations, the charge and discharge percentages apply to the subhourly time step even though the periods are defined in hours.
 
-  For a behind-the-meter application, if **Charge from grid** and **Charge from system** are both checked for a given period, and if in a time step in that period the system power is greater than the :doc:`load <../electricity-rates-and-load/electric_load>`, power from the grid supplements the system power to meet the battery charge requirement.
+  For a behind-the-meter application, if **Charge from grid** and **Charge from system** are both checked for a given period, and if in a time step in that period the system power is greater than the :doc:`load <../electricity-rates-and-load/electricity_load>`, power from the grid supplements the system power to meet the battery charge requirement.
 
   If **Charge from grid** and one or both of the discharge options is also checked for a given period, and if in that period the battery state of charge is above the minimum state of charge, the battery discharges until it reaches the minimum state of charge, at which point it starts charging from the grid, either until it reaches the maximum state of charge, or until the time period changes to one that does not allow charging from the grid.
 
@@ -230,7 +230,7 @@ Load Forecast Horizon
 The generation forecast horizon determines whether the battery dispatch responds to a perfect forecast of the building or facility's electric load, or to a forecast that is different from the load over the forecast period.
 
 **Perfect look ahead**
-  For each day, dispatch the battery based on the load specified on the :doc:`Electric Load <../electricity-rates-and-load/electric_load>`   page over the next 24 hours.
+  For each day, dispatch the battery based on the load specified on the :doc:`Electric Load <../electricity-rates-and-load/electricity_load>`   page over the next 24 hours.
 
 **One day look behind**
   Similar to perfect look ahead, but based on the previous 24 hours of load data.

@@ -4,7 +4,7 @@ Solar Field
 System Design Point Parameters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-These values are from the :doc:`System Design page <iph_trough-system_design>` are for reference.
+These values are from the :doc:`System Design page <iph_trough_system_design>` are for reference.
 
 Solar Field Design Point
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -76,7 +76,7 @@ Solar Field Parameters
   The amount of electrical power consumed by a single collector tracking mechanism. SAM only calculates tracking losses during hours when collectors are actively tracking the sun. The total field tracking power is calculated by multiplying this value by the number of loops in the field and number of assemblies per loop.
 
 **Total tracking power**
-  Calculated as the product of the tracking power and number of collectors from the :doc:`Collectors page <iph_trough-collectors>`  .
+  Calculated as the product of the tracking power and number of collectors from the :doc:`Collectors page <iph_trough_collectors>`  .
 
 **Number of field subsections**
   SAM assumes that the solar field is divided into between two and 12 subsections. Examples of solar field with 2, 4, and 6 subsections are shown below:

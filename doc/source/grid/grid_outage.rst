@@ -83,7 +83,7 @@ How SAM uses grid outage and critical load data in the simulation calculations d
 Critical Electric Load
 ~~~~~~~~~~~~~~~~~~~~~~
 
-A critical electric load is either a fixed percentage of the electric load specified on the :doc:`Electric Load <../electricity-rates-and-load/electric_load>` page or an array of kW values that represents electric usage the system must meet during grid outages.
+A critical electric load is either a fixed percentage of the electric load specified on the :doc:`Electric Load <../electricity-rates-and-load/electricity_load>` page or an array of kW values that represents electric usage the system must meet during grid outages.
 
 .. note:: You must specify a critical load to model grid outages.
 
