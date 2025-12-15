@@ -32,18 +32,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include <set>
 //#include <chrono>
+#include <fstream>
 
 #include <wx/wx.h>
 #include <wx/frame.h>
 #include <wx/stc/stc.h>
-#include <fstream>
-
-//#if defined(__WXMSW__)||defined(__WXOSX__)
-//#include <wx/webview.h>
-//#else
-//#include <wx/html/htmlwin.h> // for linux - avoid webkitgtk dependencies
-//#endif
-
 #include <wx/html/htmlwin.h>
 #include <wx/simplebook.h>
 #include <wx/panel.h>
@@ -54,7 +47,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <wx/datstrm.h>
 #include <wx/grid.h>
 #include <wx/stdpaths.h>
-//#include <wx/webview.h>
 #include <wx/txtstrm.h>
 #include <wx/buffer.h>
 #include <wx/display.h>
@@ -66,7 +58,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <wex/icons/cirplus.cpng>
 #include <wex/icons/qmark.cpng>
 #include <wex/utils.h>
-
 
 #include "../resource/menu.cpng"
 #include "../resource/notes_white.cpng"
