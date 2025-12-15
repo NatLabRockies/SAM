@@ -483,7 +483,7 @@ void WelcomeScreen::OnCommand( wxCommandEvent &evt )
 		break;
 
 	case wxID_HELP:
-		SamApp::ShowHelp( "welcome_page" );
+		SamApp::ShowHelp( "getting-started/welcome_page" );
 		break;
 
 	case wxID_EXIT:

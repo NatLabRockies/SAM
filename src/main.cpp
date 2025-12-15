@@ -949,7 +949,7 @@ void MainWindow::OnCommand( wxCommandEvent &evt )
 	switch( evt.GetId() )
 	{
 	case wxID_HELP:
-		SamApp::ShowHelp( cwin ? cwin->GetCurrentContext() : wxString("welcome_page") );
+		SamApp::ShowHelp( cwin ? cwin->GetCurrentContext() : wxString("index") );
 		break;
 	case wxID_ABOUT:
 		SamApp::ShowHelp( ":about" );

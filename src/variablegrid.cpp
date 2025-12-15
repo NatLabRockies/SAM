@@ -1245,7 +1245,7 @@ void VariableGridFrame::OnCommand(wxCommandEvent &evt)
 		SendToExcel();
 		break;
 	case wxID_HELP:
-		SamApp::ShowHelp( "inputs_browser" );
+		SamApp::ShowHelp( "reference/inputs_browser" );
 		break;
 	case ID_FILTER:
 		UpdateGrid();

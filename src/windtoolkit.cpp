@@ -160,7 +160,7 @@ void WindToolkitDialog::OnEvt( wxCommandEvent &e )
 	switch( e.GetId() )
 	{
 	case wxID_HELP:
-		SamApp::ShowHelp("wind_toolkit_download");
+		SamApp::ShowHelp("window-reference/win_wind_toolkit_download");
 		break;
 	case ID_radAddress:
 	case ID_radLatLon:

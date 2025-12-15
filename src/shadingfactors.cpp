@@ -479,7 +479,7 @@ public:
 		switch( e.GetId() )
 		{
 		case wxID_HELP:
-			SamApp::ShowHelp("edit_shading_data");
+			SamApp::ShowHelp("window-reference/win_edit_shading_data");
 			break;
 		case ID_ENABLE_HOURLY:
 		case ID_ENABLE_MXH:

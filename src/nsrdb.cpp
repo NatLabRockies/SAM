@@ -185,7 +185,7 @@ void NSRDBDialog::OnEvt( wxCommandEvent &e )
 	switch( e.GetId() )
 	{
 		case wxID_HELP:
-			SamApp::ShowHelp("nsrdb_advanced_download");
+			SamApp::ShowHelp("window-reference/win_nsrdb_advanced_download");
 			break;
 		case ID_btnResources:
 			{
