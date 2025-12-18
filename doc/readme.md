@@ -2,23 +2,31 @@
 
 These instructions are for writing and editing content and building SAM's Help system.
 
-Writing and editing content requires knowledge of reStructuredText (.rst) format. ReStructuredText is a text markup language, see https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html.
+The Help system is built with the Sphinx documentation generator that converts .rst source files into structured html documents.
 
-The build process uses the Sphinx documentation generator. Sphinx is a Python package that converts .rst files into structured html documents and documents in other formats, see https://www.sphinx-doc.org/en/master/.
+Help content is written in the reStructuredText (.rst) text markup language: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html.
+
+Sphinx is a Python package that converts the content to HTML: https://www.sphinx-doc.org/en/master/.
+
+SAM Help uses Sphinx Book Theme to apply formatting to the HTML: https://sphinx-book-theme.readthedocs.io/en/stable/index.html.
+
+The Sphinx Book Theme, Sphinx, and reStructuredText are all well documented. The documentation below describes the application of these tools to build SAM Help. Refer to the documentation above for detailed descriptions and for information about modifying or adding more features to SAM Help.
 
 ## Requirements
 
 * Python
+* A virtual environment like `venv` or `conda` (recommended)
 * Python packages listed in `requirements.txt`
 * Make
+* A good text editor that can open a folder as a workspace and has syntax highlighting for reStructuredText (VS Code works well)
 
 Tested on Windows with Python 3.12.10 and GNU Make 4.4.1.
 
 ## Build Instructions
 
-1. Set up a Python virtual environment and install the packages listed in requirements.txt.
+1. Set up a virtual environment and install the packages listed in requirements.txt.
 
-   You only need to build the environment once. After the environment is built, you can start with Step 2 to bulid Help.
+   You only need to build the virtual environment once. After it is built, you can start with Step 2 to build Help.
 
 2. Open a terminal window and go to the SAM doc folder.
 
@@ -28,7 +36,7 @@ Tested on Windows with Python 3.12.10 and GNU Make 4.4.1.
 
 3. Activate the Python environment.
 
-   For example, using Python's virtual environment manager `venv`:
+   For example, using Python `venv`:
 
    ```
    path/to/sam-help-venv/Scripts/activate
@@ -44,23 +52,25 @@ Tested on Windows with Python 3.12.10 and GNU Make 4.4.1.
 
 4. If there are any build errors, fix them by editing the appropriate .rst file(s).
 
-5. When the build finishes, HTML and associated files should be in the `path/to/sam_dev/SAM/deploy/runtime/help/html` folder.
+5. When the build finishes, HTML and associated files should be in the `../doc/build/html` folder. (The `../doc/build/doctrees` folder is used during the build and not needed to display the HTML files.)
 
-To see Help, open the index.html file.
+To see Help, open the `../doc/html/index.html` file.
 
-## Help Context IDs
+## Help Context IDs in SAM
 
-Help context IDs are defined in different places depending on the context.
+SAM uses Help Context IDs to open context-specific Help files from the SAM user interface.
 
-The Help context ID consists of the folder and file name of the HTML for the Help topic.
+The Help context ID is a string "chapter-name/topic_name" that points to the folder and file name of the HTML for the Help topic.
+
+Help context IDs are defined in different places in the SAM code depending on the context.
 
 For example, the Help topic for the behind-the-meter Battery Dispatch input page is "battery-storage/battery_dispatch_btm".
 
 The Help ID is the path to the HTML file without the `.html` extension. The extension is added by the `ShowHelp()` function in `SAM/main.cpp`.
 
-## SAM Input Pages
+### SAM Input Pages
 
-Help IDs for SAM input pages are defined in `startup.lk`. The `addpage()` function for the input page "help" parameter points to the folder and file name of the HMTL file for the page's Help topic.
+Help context IDs for SAM input pages are defined in `startup.lk`. The `addpage()` function for the input page "help" parameter points to the folder and file name of the HMTL file for the page's Help topic.
 
 For example, for the **Battery Dispatch** page for behind the meter batteries, the help id is defined by the `'help' = 'battery-storage/battery_dispatch_btm'` parameter:
 
@@ -77,8 +87,7 @@ addpage( [[ {'name'='Battery Dispatch Peak Shaving BTM', 'caption'='Peak Shaving
             'exclusive_tabs'=true, 'exclusive_hide'=true, 'bin_name'='Battery' } );
 ```
 
-
-## SAM Windows
+### SAM Windows
 
 Help IDs for SAM windows are defined by the event handler in the window definition.
 
@@ -108,50 +117,218 @@ For the "Edit Losses" window (`SAM/lossadj.cpp`):
 		case wxID_HELP:
 			SamApp::ShowHelp("window-reference/win_edit_losses");
 			break;
+...
 ```
-
-HTML files generated by Sphinx are organized into folders of related topics.
 
 To find all SAM window Help IDs, search the SAM project for "wxID_HELP", or more specifically "case wxID_HELP" and "if (evt.GetId() == wxID_HELP)".
 
-## Editing .rst Files
+## File Structure
 
-recommend text editor that can open folder as workspace to open `SAM/doc` folder.
+SAM's Help system is organized into chapters like "Introduction", "Getting Started", etc. Each model has its own chapter like "Detailed Photovoltaic Model".
 
-## Notes
+All files required to build the SAM Help system are in the `../doc/source` folder.
 
-Do not include labels (`.. _label-name`) and references to labels `\`:doc: <>\`` in snip files in the includes folder.
+Topic files are `.rst` text files that contain text for a topic. Each SAM input page has its own topic file. Other topic files are not associated with a SAM input page, for example the "Getting Started" and "SAM CSV Format for Solar" topics.
 
-## Headers
+Folders contain topic files for a chapter. For example, topic files for the "Detailed Photovoltaic Model" chapter are in the `..doc/source/detailed-photovoltaic-model` folder.
+
+Folder names use hyphens (-) to separate words, for example `detailed-photovoltaic-model`.
+
+Topic file names use underscores (_) to separate words, for example `pv_sizing_instructions.rst`.
+
+In addition to a folder for each chapter, the `source` folder contains the following folders:
+
+* `../doc/source/images` contains .png image files.
+
+* `../doc/source/archive` contains source files for models that were removed from SAM. These topics can be added back in to the Help system if the models are ever reinstated in SAM.
+
+## Theme Configuration
+
+SAM Help uses the Sphinx Book theme. There are many other themes available. The theme is set by the `html_theme` option in the `conf.py` file. Options specific to the Sphinx Book theme are set by `html_theme_options`.
+
+The `conf.py` file contains configurations settings for the Sphinx documentation project.
+
+The `../_static/custom.css` file contains a few custom styles that modify the default Sphinx Book Theme styles. 
+
+## Table of Contents
+
+SAM Help has a main table of contents that appears to the left of the topic content, and chapter tables of contents that appear at the right of the topic content.
+
+Sphinx builds the main table of contents from the `toctree` directive in the `../source/index.rst` file.
+
+For each chapter, Sphinx uses the `toctree` directive in the `../source/chapter-title/index.rst` file to build the table of contents for that chapter.
+
+If the browser window displaying Help is too narrow to display the table of contents, it hides them so that only the content is visible.
+
+This folder structure and behavior is specific to Sphinx Book Theme and may work differently for a different theme.
+
+## Editing Content
+
+Use text editor to edit the topic content `.rst` files in the `..doc/source`.
+
+To add a new chapter:
+
+1. Create a new folder with hyphen-separated words.
+2. Create a section for the chapter in `../source/index.rst`.
+3. Create a new `index.rst` file in the new chapter's folder. Use the index file in other folders as an example.
+
+To add a new topic to a chapter:
+
+1. Create a new `.rst` file with underscore-separated words in the appropriate folder.
+2. Add a topic title to the file underlined with "=". The length of the underline must equal the length of the title.
+3. Add the file to the chapter's `../source/chapter-name/index.rst` file so that it appears in the chapter's table of contents.
+4. Add the file to the appriopriate section of `../source/index.rst` so that it appears in the main table of contents.
+
+## Archiving a Chapter
+
+When a model or feature that has a Help chapter is removed from SAM, archive the chapter:
+
+1. Move the folder to the `../source/archive` folder.
+2. Remove the chapter's section from the main table of contents in `..source/index.rst`.
+3. Use Find in Files to remove any cross references to files in the archived chapter by searching for file names and any targets (`.. _target-name`) in those files.
+
+## Includes
+
+The `../doc/includes` folder contains files with text "snippets" or reusable text.
+
+For example the `../doc/includes/snip_system_availability.rst` is a description of the system availability losses that is used in descriptions of each of the performance models, such as in the Detailed PV model's "Electrical Losses" topic, and the Physical Trough model's "System Control" topic.
+
+**Important note about snippets**: Do not include targets (`.. _target-name-in-snippet`), cross references references to targets in other snippet files, or cross references to other snippet files in snippet files. Doing so results in duplicate target names which breaks the Sphinx build. You can include cross references in snippet files to topic files that are not in the `../doc/includes` folder.
+
+## Headings
+
+Limit section headings to three levels, plus Level 4 for procedure titles.
+
+In reStructuredText, headings are identified by underline characters (https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#sections). The character used to underline the text determines the heading level based on the "succession of headings" in each file. This means that each file can use different characters to represent heading levels.
+
+For SAM Help, the convention is to use the order defined below for heading levels. However, if a given file uses a different order, for example (~,-,'), then, for that  file an underline of "~" would be for Heading 1, "-" for Heading 2, and "'" for Heading 3, even if other files use the convention below.
 
 ```
-if level == 1:
-	char = '='
-if level == 2:
-	char = '-'
-if level == 3:
-	char = '~'
-if level == 4:
-	char = '`'
-if level == 4:
-	char = '.'
+Heading 1: Topic Title
+======================
+
+The topic title goes at the top of the file and is used to construct tables of contents and as text for cross-reference hyperlinks. No text should precede the topic title.
+
+Heading 2: Section Title
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The section title is for sections of the topic and for labels of group boxes in the user interface.
+
+Heading 3: Subsection Title
+---------------------------
+
+A subsection title correlates with divider labels in the user interface.
+
+Heading 2: Another Section Title
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The "~" character now represents Heading 2 because of the order above.
+
+Heading 4: Step-by-step instructions:
+.....................................
+
+#. This is Step 1.
+
+#. It is followed by Step 2.
+
+#. Etc.
+```
+
+## Variable Definitions
+
+Use this format for variable descriptions and definitions. Note definition lines are preceded by two (2) spaces. There must not be a blank line before the first line of the definition.
+
+```
+**Variable Name**
+  This is the definition of variable name and is indented by two spaces.
+
+  Multiline variable definition is preceded by one line and also indented by two spaces.
 ```
 
 ## Cross References
 
-Cross references to targets like `.. _clipping` do not require a path. Each target in the entire project must be unique.
+Cross references can be to a target or topic file.
 
-Cross references to files must have a path. For example, references to the `create_project` file in the `getting-started` folder:`<create_project>` or `Create a Project <create_project>` must have a path. For example:
+When creating and editing cross references, you may need to clean and rebuild the HTML for them to work properly.
 
-* From another file in the same folder, use `<create_project>`
+### Cross Reference to a File
 
-* From a file in a different folder, use `<../getting-started/create_project>`
+Use `:doc:` for a cross reference to a topic file to create a hyperlink that points to the beginning of the file.
 
+Use the file's title as the hyperlink text:
+
+```
+This is a reference to :doc:`path/to/filename`
+```
+
+Use custom hyperlink text:
+
+```
+This is a reference to :doc:`hyperlink text <path/to/filename>`
+```
+
+A cross reference to a file must have a path. For example, a reference to the `create_project` file in the `getting-started` folder:
+
+* From another file in the `getting-started` folder, use the path `create_project`.
+
+* From a file in a different folder, use the path `../getting-started/create_project`.
+
+### Cross Reference to a Target
+
+Use `:ref:` for a cross reference to a target to create a hyperlink that points to the target in a topic file.
+
+A target is defined like this. It should be followed by a blank line and precede a section heading:
+
+```
+Text for previous topic. Blah blah blah.
+
+.. _pvavailability:
+
+System Availability
+~~~~~~~~~~~~~~~~~~~
+
+This is text about PV system availability.
+```
+
+The target does not require a path. Each target in the entire project must be unique.
+
+A reference to that target automatically inserts the heading "System Availability" with a hyperlink to that place in the document:
+
+```
+This is a reference to a target :ref:`pvavailability`
+```
+
+Or, you can set the hyperlink text to "PV System Availability" like this:
+
+```
+This is a reference to a target :ref:`PV System Availability <pvavailability?`
+```
+## Web Links
+
+Web links are follwed by **two (2) underscores (__)**.
+
+URL as link text:
+
+```
+For links to legacy datasets, see `<https://nsrdb.nrel.gov/data-sets/archives.html>`__.
+```
+
+Custom link text examples:
+
+```
+MacAlpine, S.; Deline, C. (2015) Simplified Method for Modeling the Impact of Arbitrary Partial Shading Conditions on PV Array Performance. National Renewable Energy Laboratory. 8 pp.; NREL/CP-5J00-64570. (`PDF 699 KB <http://www.nrel.gov/docs/fy15osti/64570.pdf>`__)
+```
+
+```
+For more information about SAM, see the `SAM website <https://sam.nrel.gov>`__.
+```
 ## Indentation
 
 Sphinx is very sensitive to spacing and indentation.
 
 ** Do not use tabs ** Sphinx counts number of spaces, so tabs will break documentation builds.
+
+## Table of Contents
 
 for `toctree`, lines following the directive should be preceded by three spaces:
 
@@ -165,4 +342,42 @@ for `toctree`, lines following the directive should be preceded by three spaces:
    reference/index
    window-reference/index
    simulation-options/index
+```
+
+## Notes and Highlighted Text Boxes
+
+Use Sphix "admonitions" to highlight text in boxes. The SAM documentation uses the `admonition` and `note` admonition, but there are several others described at https://sphinx-book-theme.readthedocs.io/en/stable/reference/kitchen-sink/admonitions.html.
+
+Use the `note` directive for text in a box notes:
+
+```
+.. note:: This note will be rendered in a box with an information (i) icon and the word "Note" in a blue title bar.
+```
+
+Admonitions can have more than one line. Each subseqent line is preceded by three spaces:
+
+```
+.. note:: First line of a multiline note.
+
+   Second line of multiline note.
+
+   Third line of multiline note.
+```
+
+Use the `admonition` directive to use a custom title instead of "Note:"
+
+```
+.. admonition:: Custom title goes here and will be rendered with a bell icon.
+
+   First line in box.
+
+   Second line in box.
+```
+
+You can also use `topic` to create a text box with a custom title. This can be useful to make an example stand out.
+
+```
+.. topic:: Value Mode Example
+  
+   An AC degradation rate of 1% for a system with a net annual AC output of 100,000 kWh in Year one results in annual output values of 100,000 kWh in year 1, 99,000 kWh in year 2, 98,010 kWh in year 3, 97,029.9 kWh in year 4, etc.
 ```

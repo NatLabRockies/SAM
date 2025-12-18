@@ -23,6 +23,7 @@ exclude_patterns = ['archive']
 
 html_theme = 'sphinx_book_theme'
 html_static_path = ['_static']
+html_css_files = ['custom.css',]
 
 html_logo = 'images/SAM-logo-horizontal.png'
 html_title = 'SAM Help'

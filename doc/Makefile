@@ -1,13 +1,13 @@
-# Minimal makefile for Sphinx documentation
+# Makefile for generating SAM documentation from Sphinx
 
-# You can set these variables from the command line, and also
-# from the environment for the first two.
-SPHINXOPTS    ?=--doctree-dir ../deploy/runtime/help/html/_doctrees
-SPHINXBUILD   ?= sphinx-build
-SOURCEDIR     = source
-BUILDDIR      = ../deploy/runtime/help
+SOURCEDIR = source
+BUILDDIR = build
 
-# Put it first so that "make" without argument is like "make help".
+# These can also be set from the environment
+SPHINXOPTS ?= 
+SPHINXBUILD ?= sphinx-build
+
+# Put this first so that "make" without argument is like "make help".
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
@@ -17,3 +17,5 @@ help:
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
+#	echo "For Windows copy HTML files from build/html to deploy/runtime/help/html folder."

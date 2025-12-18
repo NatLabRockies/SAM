@@ -19,3 +19,5 @@ Update excess generation option descriptions pending update to dgrules field in 
 DSCR debt sizing note, see Brian email 10/31/2025 "Addtional thoughts on debt sizing error message".
 
 ## Complete
+
+Revise AC and DC degradation pages. 12/17/2025
