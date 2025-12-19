@@ -300,21 +300,21 @@ function setup_detailed_pv_pages(bin)
 	           'PV Subarrays and String Size' , 
 	           'PV Inverter Input Voltage',
 	           'Battery Enable']], 
-	          {'sidebar'='System Size', 'help'='detailed-photovoltaic-model/pv_xxx', 'bin_name' = bin});
+	          {'sidebar'='System Size', 'help'='detailed-photovoltaic-model/pv_system_size', 'bin_name' = bin});
 	// Tracking Layout Land
 	addpage( [['PV Tracking and Orientation', 
 	          'PV Row Dimensions and Spacing', 
 	          'PV Terrain Slope', 
 	          'PV Land Area']], 
-	          {'sidebar'='Tracking Layout Land', 'help'='detailed-photovoltaic-model/pv_xxx', 'bin_name' = bin});
+	          {'sidebar'='Tracking Layout Land', 'help'='detailed-photovoltaic-model/pv_tracking_layout_land', 'bin_name' = bin});
 	// Soiling Shading Snow
 	addpage( [['PV Soiling Shading Snow'] ], 
-	          {'sidebar'='Soiling Shading Snow', 'help'='detailed-photovoltaic-model/pv_xxx', 'bin_name' = bin});
+	          {'sidebar'='Soiling Shading Snow', 'help'='detailed-photovoltaic-model/pv_soiling_shading_snow', 'bin_name' = bin});
 	// Electrical losses
 	addpage( [['PV DC Losses', 
 	          'PV AC Losses', 
 	          'PV System Availability']], 
-	          {'sidebar'='Electrical Losses', 'help'='detailed-photovoltaic-model/pv_xxx', 'bin_name' = bin});
+	          {'sidebar'='Electrical Losses', 'help'='detailed-photovoltaic-model/pv_electrical_losses', 'bin_name' = bin});
 	// Battery Enable form stores hidden en_batt variable required by some UI forms to determine if there is a battery
 }
 
