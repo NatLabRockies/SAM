@@ -46,4 +46,4 @@ SAM can automatically calculate the land area based on the system design paramet
 **Total estimated land area, acres or ha**
   The total land area for land purchase or land lease calculations including the total array projected onto the ground and any addition land area.
 
-*Total Estimated Land Area (acres) = Ground Area (acres) + Additional Land Area (acres)*
+  *Total Estimated Land Area (acres) = Ground Area (acres) + Additional Land Area (acres)*

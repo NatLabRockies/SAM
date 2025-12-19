@@ -14,10 +14,10 @@ A Building with Two Rectangular Active Surfaces in 3D Scene View
   Descriptive name for the active surface to help you identify it. Does not affect shade analysis.
 
 **Subarray**
-  The subarray number (1-4) for the active surface. Each active surface in the shading scene should correspond to a subarray defined on the :doc:`System Design <../detailed-photovoltaic-model/pv_system_design>`   page. You can assign more than one active surface to a single subarray.
+  The subarray number (1-4) for the active surface. Each active surface in the shading scene should correspond to a subarray defined on the :doc:`System Size<../detailed-photovoltaic-model/pv_system_size>`   page. You can assign more than one active surface to a single subarray.
 
 **String**
-  The string number (1-8) for the active surface. The 3D shade calculator can generate shade factors for up to eight strings, so the number of strings in parallel on the :doc:`System Design <../detailed-photovoltaic-model/pv_system_design>`   page must be 8 or less.
+  The string number (1-8) for the active surface. The 3D shade calculator can generate shade factors for up to eight strings, so the number of strings in parallel on the :doc:`System Size<../detailed-photovoltaic-model/pv_system_size>`   page must be 8 or less.
 
  
 

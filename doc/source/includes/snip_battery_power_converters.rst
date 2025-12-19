@@ -16,7 +16,7 @@ DC Connected (PV Battery Only)
 
   Choose **DC Connected** for a battery connected to the DC side of a hybrid photovoltaic inverter as shown in the diagram above.
 
-  To account for electrical losses from a DC-DC converter between the photovoltaic array and inverter, be sure to assign an appropriate value to the **DC power optimizer loss** on the :doc:`Losses <../detailed-photovoltaic-model/pv_losses>`   page.
+  To account for electrical losses from a DC-DC converter between the photovoltaic array and inverter, be sure to assign an appropriate value to the **DC power optimizer loss** on the :doc:`Losses <../detailed-photovoltaic-model/pv_electrical_losses>`   page.
 
   For a DC-connected battery, during time steps when the total power from the photovoltaic array and battery is greater than the inverter's nameplate capacity, the inverter limits its output power to the nameplate capacity. For the dispatch options with **Battery can charge from clipped system power** enabled on the Battery Dispatch page, if the battery is not fully charged and is not discharging, the array power in excess of the inverter's nominal capacity charges the battery.
 

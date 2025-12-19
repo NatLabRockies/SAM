@@ -15,7 +15,7 @@ Module Cost, $/Wdc or $/Unit
 
 For the detailed photovoltaic model, the module cost is expressed per unit or per DC Watt:
 
-* Dollars per DC watt multiplied by **Nameplate Capacity (at reference conditions)** on the :doc:`System Design <../detailed-photovoltaic-model/pv_system_design>` page, or
+* Dollars per DC watt multiplied by **Nameplate Capacity (at reference conditions)** on the :doc:`System Size<../detailed-photovoltaic-model/pv_system_size>` page, or
 
 * Dollars per unit multiplied by Total Modules on the System Design page.
 
@@ -30,7 +30,7 @@ Inverter, $/Wac or $/Unit
 
 For the detailed photovoltaic model, the cost of inverters in the system is expressed in dollars per AC Watt or dollars per inverter:
 
-* Dollars per AC watt multiplied by **Total Inverter Capacity** on the :doc:`System Design <../detailed-photovoltaic-model/pv_system_design>` page, or
+* Dollars per AC watt multiplied by **Total Inverter Capacity** on the :doc:`System Size<../detailed-photovoltaic-model/pv_system_size>` page, or
 
 * Dollars per unit multiplied by **Number of Inverters** in the **Actual Layout** column on the System Design page.
 
@@ -66,10 +66,10 @@ The other direct capital cost categories, **Tracking Equipment** (HCPV only), **
   A fixed cost in dollars.
 
 **$/Wdc**
-  A cost proportional to the system's DC nameplate capacity, equal to the **Nameplate Capacity** on the :doc:`System Design <../detailed-photovoltaic-model/pv_system_design>`   page for the detailed photovoltaic model, or the **DC Rating** on the :doc:`PVWatts System Design <../pvwatts/pvwatts_system_design>`   page for the PVWatts model.
+  A cost proportional to the system's DC nameplate capacity, equal to the **Nameplate Capacity** on the :doc:`System Size<../detailed-photovoltaic-model/pv_system_size>`   page for the detailed photovoltaic model, or the **DC Rating** on the :doc:`PVWatts System Design <../pvwatts/pvwatts_system_design>`   page for the PVWatts model.
 
 **$/m2**
-  Applies only to the detailed photovoltaic model. A cost proportional to the total module area of the array in square meters, equal to the **Total Area** on the :doc:`System Design <../detailed-photovoltaic-model/pv_system_design>`   page. This option is not active for the PVWatts model.
+  Applies only to the detailed photovoltaic model. A cost proportional to the total module area of the array in square meters, equal to the **Total Area** on the :doc:`System Size<../detailed-photovoltaic-model/pv_system_size>`   page. This option is not active for the PVWatts model.
 
 Contingency (%)
 ...............
@@ -98,7 +98,7 @@ A percentage of the **Total Direct Cost** value shown under Direct Capital costs
 Cost $/Wdc
 ..........
 
-A cost proportional to the system's DC nameplate capacity, equal to the **Nameplate Capacity** on the :doc:`System Design <../detailed-photovoltaic-model/pv_system_design>` page for the   detailed photovoltaic model, or the **DC Rating** on the :doc:`PVWatts System Design <../pvwatts/pvwatts_system_design>` page for the PVWatts model.
+A cost proportional to the system's DC nameplate capacity, equal to the **Nameplate Capacity** on the :doc:`System Size<../detailed-photovoltaic-model/pv_system_size>` page for the   detailed photovoltaic model, or the **DC Rating** on the :doc:`PVWatts System Design <../pvwatts/pvwatts_system_design>` page for the PVWatts model.
 
 Fixed Cost
 ..........
@@ -118,7 +118,7 @@ Land costs
 SAM calculates the total land cost as the sum of **Land** and **Land Preparation**. The land cost categories use the Cost $/acre category in addition to the categories for the other indirect costs (% of Direct Cost, Cost $/Wdc, Fixed Cost).
 
 **Total Land Area**
-  The total land area from the :doc:`System Design <../detailed-photovoltaic-model/pv_system_design>`   page.
+  The total land area from the :doc:`System Size<../detailed-photovoltaic-model/pv_system_size>`   page.
 
 **Cost $/acre**
   A cost in dollars per acre of total land area.

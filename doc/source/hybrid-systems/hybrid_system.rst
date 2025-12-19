@@ -15,7 +15,7 @@ The AC generation capacity of each subsystem in the hybrid system.
 
   For hybrid systems with the PVWatts model, **Rated inverter size** from the :doc:`PVWatts System Design <../pvwatts/pvwatts_system_design>`   page.
 
-  For the Detailed PV model, **Total AC capacity** from the :doc:`Photovoltaic System Design <../detailed-photovoltaic-model/pv_system_design>`   page.
+  For the Detailed PV model, **Total AC capacity** from the :doc:`Photovoltaic System Design <../detailed-photovoltaic-model/pv_system_size>`   page.
 
 .. note:: For hybrid systems, the total generation capacity is based on the photovoltaic subsystem's total inverter capacity in AC kilowatts. However, the capacity-based incentive (CBI) and capacity-based operating cost, if defined, are calculated from the total array capacity in DC kilowatts.
 

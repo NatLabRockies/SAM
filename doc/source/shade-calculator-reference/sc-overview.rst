@@ -21,7 +21,7 @@ The SAM 3D Shade Calculator uses a sun position algorithm and a three-dimensiona
 
 To use the SAM shade analysis calculator:
 
-#. On the :doc:`Shading and Layout <../detailed-photovoltaic-model/pv_shading>` page (detailed photovoltaic model) or :doc:`System Design <../pvwatts/pvwatts_system_design>` page (PVWatts), click **Open 3D shade calculator**.
+#. On the :doc:`../detailed-photovoltaic-model/pv_soiling_shading_snow` page (detailed photovoltaic model) or :doc:`System Design <../pvwatts/pvwatts_system_design>` page (PVWatts), click **Open 3D shade calculator**.
 
 #. :doc:`Define the scene location <../shade-calculator-howto/sc-define-location>` (latitude, longitude, time zone).
 
@@ -29,7 +29,7 @@ To use the SAM shade analysis calculator:
 
 #. :doc:`Add active surface <../shade-calculator-howto/sc-active-surface>` objects to the scene to represent the photovoltaic array or subarrays.
 
-#. Save and close the calculator to apply shading factor values to the SAM :doc:`shading <../detailed-photovoltaic-model/pv_shading>` inputs.
+#. Save and close the calculator to apply shading factor values to the SAM :doc:`../detailed-photovoltaic-model/pv_soiling_shading_snow` inputs.
 
 #. :doc:`Generate shade data <../shade-calculator-howto/sc-generate-data>`.
 

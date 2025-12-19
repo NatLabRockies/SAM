@@ -22,13 +22,13 @@ Basic Steps
 
    Use the Inverter CEC Database option. For an inverter that is not in the list, if you have the manufacturer's data sheet, choose the Inverter Datasheet model.
 
-#. On the :doc:`System Design <pv_system_design>` page, specify the system's size and array tracking options.
+#. On the :doc:`pv_system_size` page, specify the system's size and array tracking options.
 
    Use the specify desired array size option for preliminary analysis, and then use specify modules and inverters to refine the system design.
 
-#. If you want to account for shading losses, use the :doc:`Shading and Layout <pv_shading>` page for external shading by nearby objects, array self-shading, or to account for losses due to the array being covered by snow when your weather data includes snow depth data.
+#. If you want to account for shading losses, use the :doc:`pv_soiling_shading_snow` page for external shading by nearby objects, array self-shading, or to account for losses due to the array being covered by snow when your weather data includes snow depth data.
 
-#. Account for soiling losses, DC power losses, AC power losses, and losses due to system availability requirements on the :doc:`Losses <pv_losses>` page. You can use the default values if you do not have detailed information about those losses for your system.
+#. Account for soiling losses, DC power losses, AC power losses, and losses due to system availability requirements on the :doc:`pv_electrical_losses` page. You can use the default values if you do not have detailed information about those losses for your system.
 
 **3. Specify the project costs**
 

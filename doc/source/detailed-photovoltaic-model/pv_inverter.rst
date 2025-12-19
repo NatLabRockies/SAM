@@ -3,7 +3,7 @@ Inverter
 
 The Inverter page allows you to choose an inverter performance model and either choose an inverter from a list, or enter inverter parameters from a manufacturer's data sheet using either a weighted efficiency or a table of part-load efficiency values.
 
-SAM can only model a photovoltaic system with a single type of inverter. Specify the number of inverters in the system on the :doc:`System Design <pv_system_design>` page.
+SAM can only model a photovoltaic system with a single type of inverter. Specify the number of inverters in the system on the :doc:`pv_system_size` page.
 
 SAM displays the name of the active inverter model at the top of the Inverter page. Click the model name to choose a different model:
 
@@ -21,7 +21,7 @@ You can choose from three different inverter performance models:
 
 * :ref:`Inverter CEC Coefficient Generator <coefficientgenerator>` generates coefficients for the Sandia inverter model when you have inverter test data.
 
-Each of the three inverter models calculates a DC to AC conversion efficiency, assuming that the DC power input to the inverter is equal to the DC output of the photovoltaic array. SAM uses the inverter operating ranges parameters to either :ref:`size the system <pv-sizing>` or display sizing suggestion messages on the :doc:`System Design <pv_system_design>` page.
+Each of the three inverter models calculates a DC to AC conversion efficiency, assuming that the DC power input to the inverter is equal to the DC output of the photovoltaic array. SAM uses the inverter operating ranges parameters to either :ref:`size the system <pv-sizing>` or display sizing suggestion messages on the :doc:`pv_system_size` page.
 
 The inverter model reports several hourly sim ulation results on the :doc:`Results <../results/results>` page that you can use to understand how SAM models the inverter or to troubleshoot your analyses:
 
@@ -36,14 +36,14 @@ SAM models two types of inverter clipping loss.
 
 * Power limiting losses occur in time steps when the inverter's AC power output exceeds the total inverter nameplate AC capacity. During those time steps, SAM adjusts the inverter output to the inverter nameplate capacity (it does not adjust the inverter's input voltage). 
 
-* MPPT voltage limit losses occur in time steps when the Array's DC voltage falls outside the rated inverter minimum and maximum MPPT voltage limits on the :doc:`System Design <pv_system_design>` page. In those time steps, SAM adjusts the array DC voltage to the inverter's maximum or minimum MPPT voltage limit as appropriate.
+* MPPT voltage limit losses occur in time steps when the Array's DC voltage falls outside the rated inverter minimum and maximum MPPT voltage limits on the :doc:`pv_system_size` page. In those time steps, SAM adjusts the array DC voltage to the inverter's maximum or minimum MPPT voltage limit as appropriate.
 
 You can see inverter clipping losses in the :doc:`results <pv_results>` and in the :doc:`loss diagram <../results/losses>`.
 
  
 
 
-.. note:: The inverter MPPT voltage limits are specified on the :doc:`System Design <pv_system_design>` page.
+.. note:: The inverter MPPT voltage limits are specified on the :doc:`pv_system_size` page.
 
 
 .. note:: SAM uses the inverter maximum DC voltage rating to display a simulation message when the operating voltage is greater than the maximum rating. (This should never happen if the maximum voltage rating is greater than or equal to the maximum MPPT voltage rating.)
@@ -170,7 +170,7 @@ The following list briefly describes the each parameter that SAM displays on the
  
 
 
-.. note:: You can modify the MPPT voltage limits and maximum DC voltage ratings on the :doc:`System Design <pv_system_design>` page. SAM uses the values from the System Design page to calculate voltage clipping losses, and to display a warning if the array output is greater than the maximum DC voltage rating.
+.. note:: You can modify the MPPT voltage limits and maximum DC voltage ratings on the :doc:`pv_system_size` page. SAM uses the values from the System Design page to calculate voltage clipping losses, and to display a warning if the array output is greater than the maximum DC voltage rating.
 
 
 .. note:: During a simulation, SAM limits the inverter's DC operating voltage to the MPPT voltage ratings, so the operating voltage at an inverter MPPT input is never less than the inverter's MPPT minimum rating (MPPT-low) or greater than the MPPT maximum rating (MPPT-hi). 
@@ -230,12 +230,12 @@ Power Ratings
 
 *Maximum DC Input Power (Wdc) = Maximum AC Output Power (Wac) ÷ Efficiency (%) × 100%*
 
-  SAM uses the maximum DC input power value to size the array when you choose **Specify desired array size** on the :doc:`System Design <pv_system_design>`   page, and to display sizing messages when you choose **Specify modules and inverters**.
+  SAM uses the maximum DC input power value to size the array when you choose **Specify desired array size** on the :doc:`pv_system_size` page, and to display sizing messages when you choose **Specify modules and inverters**.
 
 Operating Ranges
 ................
 
-SAM uses the operating range variables to help you size the system on the :doc:`System Design <pv_system_design>` page.
+SAM uses the operating range variables to help you size the system on the :doc:`pv_system_size` page.
 
 **Nominal AC operating voltage**
   The inverter's nominal AC output voltage.
@@ -258,7 +258,7 @@ SAM uses the operating range variables to help you size the system on the :doc:`
  
 
 
-.. note:: You can modify the MPPT voltage limits and maximum DC voltage ratings on the :doc:`System Design <pv_system_design>` page. SAM uses the values from the System Design page to calculate voltage clipping losses, and to display a warning if the array output is greater than the maximum DC voltage rating.
+.. note:: You can modify the MPPT voltage limits and maximum DC voltage ratings on the :doc:`pv_system_size` page. SAM uses the values from the System Design page to calculate voltage clipping losses, and to display a warning if the array output is greater than the maximum DC voltage rating.
 
 
 .. note:: During a simulation, SAM limits the inverter's DC operating voltage to the MPPT voltage ratings, so the operating voltage at an inverter MPPT input is never less than the inverter's MPPT minimum rating (MPPT-low) or greater than the MPPT maximum rating (MPPT-hi). 
@@ -335,12 +335,12 @@ Power Ratings
 
 *Maximum DC Input Power (Wdc) = Maximum AC Output Power (Wac) ÷ Efficiency (%) × 100%*
 
-  SAM uses the maximum DC input power value to size the array when you choose **Specify desired array size** on the :doc:`System Design <pv_system_design>`   page, and to display sizing messages when you choose **Specify modules and inverters**.
+  SAM uses the maximum DC input power value to size the array when you choose **Specify desired array size** on the :doc:`pv_system_size`   page, and to display sizing messages when you choose **Specify modules and inverters**.
 
 Operating Ranges
 ................
 
-SAM uses the operating range variables to help you size the system on the :doc:`System Design <pv_system_design>` page.
+SAM uses the operating range variables to help you size the system on the :doc:`pv_system_size` page.
 
 **Nominal AC operating voltage**
   The inverter's nominal AC output voltage.
@@ -637,7 +637,7 @@ Compare the module's maximum power (Pmp) rating to the inverter's maximum DC pow
 
 Consult the manufacturer data sheet or design guidelines for more specific details.
 
-#. On the :doc:`System Design <pv_system_design>` page, clear **Estimate Subarray 1 configuration** if it is checked.
+#. On the :doc:`pv_system_size` page, clear **Estimate Subarray 1 configuration** if it is checked.
 
 #. For Subarray 1, for **Modules per String in subarray**, enter 1.
 
@@ -649,8 +649,8 @@ Consult the manufacturer data sheet or design guidelines for more specific detai
 
 *Number of Inverters = Strings in Parallel*
 
-#. On the :doc:`Losses <pv_losses>` page, for **Module Mismatch**, enter zero. You can also click **Microinverters** to apply default loss values.
+#. On the :doc:`Losses <pv_electrical_losses>` page, for **Module Mismatch**, enter zero. You can also click **Microinverters** to apply default loss values.
 
-#. On the :doc:`Installation costs <../installation-costs/cc_pv>` page,  be sure that the inverter cost is appropriate for the microinverter.
+#. On the :doc:`Installation costs <../installation-costs/cc_pv>` page, ebe sure that the inverter cost is appropriate for the microinverter.
 
-#. On the :doc:`Shading and Layout <pv_shading>` page, be sure to clear the **Enable Self-Shading Calculator** check box.
+#. On the :doc:`pv_soiling_shading_snow` page, be sure to clear the **Enable Self-Shading Calculator** check box.

@@ -9,7 +9,7 @@ SAM's bifacial model is adapted from Marion, B, et. al (2017) A Practical Irradi
 .. note:: The CEC module library indicates whether the module is bifacial. You can sort the library table by clicking the Bifacial column heading: Bifacial modules have a value of one.
 
 
-.. note:: When you enable the bifacial model, SAM enables inputs for rear-side irradiance and bifacial electrical mismatch losses on the :doc:`Losses <../detailed-photovoltaic-model/pv_losses>` page, and provide an option for spatial albedo values on the Location and Resource page.
+.. note:: When you enable the bifacial model, SAM enables inputs for rear-side irradiance and bifacial electrical mismatch losses on the :doc:`Losses <../detailed-photovoltaic-model/pv_electrical_losses>` page, and provide an option for spatial albedo values on the Location and Resource page.
 
 **Transmission Fraction**
   The ratio of area of each row that allows light to reach the surface behind the row to the area that blocks light, expressed as a fraction between 0 and 1. The row area is the total area occupied by the modules in a single row, including space between the modules. Light passes through space between modules, and, for modules made of glass or other transparent material, may also pass through the space between cells in each module.

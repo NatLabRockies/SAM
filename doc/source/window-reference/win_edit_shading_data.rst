@@ -1,9 +1,9 @@
 Edit Shading Data
 =================
 
-The Edit Shading Data window is where you define beam and sky diffuse shading losses. To open the window, click **Edit Shading** from either the Detailed Photovoltaic Model's :doc:`Shading and Layout <../detailed-photovoltaic-model/pv_shading>` page, or from the PVWatts model :doc:`System Design <../pvwatts/pvwatts_system_design>` page.
+The Edit Shading Data window is where you define beam and sky diffuse shading losses. To open the window, click **Edit Shading** from either the Detailed Photovoltaic Model's :doc:`../detailed-photovoltaic-model/pv_soiling_shading_snow` page, or from the PVWatts model :doc:`System Design <../pvwatts/pvwatts_system_design>` page.
 
-.. note:: For more information about the Detailed PV model'sshading options, see :doc:`Shading and Layout <../detailed-photovoltaic-model/pv_shading>`.
+.. note:: For more information about the Detailed PV model's shading options, see :doc:`../detailed-photovoltaic-model/pv_soiling_shading_snow`.
 
 Each shading loss is a percentage that represents the portion of the solar radiation component (either beam or diffuse) that is prevented from reaching the array by a nearby shading object:
 
@@ -50,7 +50,7 @@ To import a "Near Shadings" table from PVsyst:
 
 #. In PVsyst, follow the procedure to create and export a "Near Shadings" table. The table in PVsyst should look similar to the one below. SAM will recognize any of the delimiter options: tab, comma, or semicolon.
 
-#. In SAM, click **Edit shading** (on the :doc:`PV Shading and Layout <../detailed-photovoltaic-model/pv_losses>` page or :doc:`PVWatts System Design <../pvwatts/pvwatts_system_design>` page) to open the Edit Shading Data window, and click the **PVsyst near shading** and navigate to the folder containing the shading file.
+#. In SAM, click **Edit shading** (on the :doc:`../detailed-photovoltaic-model/pv_soiling_shading_snow` page or :doc:`PVWatts System Design <../pvwatts/pvwatts_system_design>` page) to open the Edit Shading Data window, and click the **PVsyst near shading** and navigate to the folder containing the shading file.
 
 When SAM imports data from the file, it displays the message "Azimuth-Altitude Table and Diffuse loss update" and populates the azimuth-altitude shading table, the sky diffuse shading loss, and enables both options.
 
@@ -71,7 +71,7 @@ To import a SunEye obstruction table:
 
 The SunEye software creates a set of files, and assigns a default name like *Sky01ObstructionElevations.csv* to the obstruction data file. By default, the files are in a folder named *ExportedFiles* in the exported report folder.
 
-#. In SAM, click **Edit shading** (on the Detailed Photovoltaic model's :doc:`Shading and Layout <../detailed-photovoltaic-model/pv_losses>` page or the PVWatts :doc:`System Design <../pvwatts/pvwatts_system_design>` page) to open the Edit Shading Data window, and click **Suneye obstructions table**, and navigate to the folder containing the file you want to import.
+#. In SAM, click **Edit shading** (on the Detailed Photovoltaic model's :doc:`../detailed-photovoltaic-model/pv_soiling_shading_snow` page or the PVWatts :doc:`System Design <../pvwatts/pvwatts_system_design>` page) to open the Edit Shading Data window, and click **Suneye obstructions table**, and navigate to the folder containing the file you want to import.
 
 #. Open the obstruction data file for any of the available skies (Sky01ObstructionElevations, Sky02ObstructionElevations, etc.). 
 
@@ -87,7 +87,7 @@ To import a SunEye hourly shading file:
 
 The SunEye software creates a set of files, and assigns a default name like *Sky01Shading.csv* to the hourly shading file. By default, the files are in a folder named *ExportedFiles* in the exported report folder.
 
-#. In SAM, click **Edit shading** (on the Detailed Photovoltaic model :doc:`Shading and Layout <../detailed-photovoltaic-model/pv_losses>` page or PVWatts :doc:`System Design <../pvwatts/pvwatts_system_design>` page) to open the Edit Shading Data window, and click **Suneye hourly shading**, and navigate to the folder containing the shading file.
+#. In SAM, click **Edit shading** (on the Detailed Photovoltaic model :doc:`../detailed-photovoltaic-model/pv_soiling_shading_snow` page or PVWatts :doc:`System Design <../pvwatts/pvwatts_system_design>` page) to open the Edit Shading Data window, and click **Suneye hourly shading**, and navigate to the folder containing the shading file.
 
 #. Open the shading file for any of the available skies (Sky01Shading, Sky02Shading, etc.). To use average shading for multiple skylines, open AverageShading.csv.
 
@@ -114,7 +114,7 @@ To import a Solar Pathfinder obstruction table:
 
 #. In the Save window, specify the location and name of the data file.
 
-#. In SAM, click **Edit shading** (on the Detailed Photovoltaic model :doc:`Shading and Layout <../detailed-photovoltaic-model/pv_losses>` page or PVWatts :doc:`System Design <../pvwatts/pvwatts_system_design>` page) to open the Edit Shading Data window, and click **Solar Pathfinder obstructions**, and navigate to the folder containing the file you want to import.
+#. In SAM, click **Edit shading** (on the Detailed Photovoltaic model :doc:`../detailed-photovoltaic-model/pv_soiling_shading_snow` page or PVWatts :doc:`System Design <../pvwatts/pvwatts_system_design>` page) to open the Edit Shading Data window, and click **Solar Pathfinder obstructions**, and navigate to the folder containing the file you want to import.
 
 #. Open the obstruction data file you saved in Step 2. 
 
@@ -128,7 +128,7 @@ SAM displays the message "Azimuth-Altitude Table updated," populates the azimuth
 
 #. In the Save window, specify the location and name of the data file.
 
-#. In SAM, click **Edit shading** (on the Detailed Photovoltaic model :doc:`Shading and Layout <../detailed-photovoltaic-model/pv_losses>` page or PVWatts :doc:`System Design <../pvwatts/pvwatts_system_design>` page) to open the Edit Shading Data window, and click **Solar Pathfinder month by hour shading**, and navigate to the folder containing the shading file.
+#. In SAM, click **Edit shading** (on the Detailed Photovoltaic model :doc:`../detailed-photovoltaic-model/pv_soiling_shading_snow` page or PVWatts :doc:`System Design <../pvwatts/pvwatts_system_design>` page) to open the Edit Shading Data window, and click **Solar Pathfinder month by hour shading**, and navigate to the folder containing the shading file.
 
 #. Open the shading file you saved in Step 2.
 
@@ -169,7 +169,7 @@ To specify time series beam shading factors:
 
 #. If you are modeling a system with crystalline silicon modules, check **Enable partial shading model (c-Si modules only)** to estimate the impact of partial shading on the subarray's DC output.
 
-If you have separate shading data for each string in the subarray, for **Strings in Subarray [n]** enter the number of strings in parallel from the :doc:`System Design <../detailed-photovoltaic-model/pv_system_design>` page. If the subarray has more than eight strings, or you do not have shading data for individual strings, enter a one to model losses for a single string.
+If you have separate shading data for each string in the subarray, for **Strings in Subarray [n]** enter the number of strings in parallel from the :doc:`System Size<../detailed-photovoltaic-model/pv_system_size>` page. If the subarray has more than eight strings, or you do not have shading data for individual strings, enter a one to model losses for a single string.
 
 For thin-film modules, or to model the effect of partial shading as a linear relationship between the beam shading loss (size of shadow on subarray) and the subarray's DC output, do not enable the partial shading model.
 

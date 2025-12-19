@@ -1,47 +1,12 @@
-Losses
-======
+Electrical Losses
+=================
 
-The losses inputs account for soiling and electrical losses that the module and inverter models do not account for. After running a simulation, you can see the effect of these losses on  :doc:`results <../getting-started/results_page>` by displaying the results variables described below in :doc:`data tables <../results/data>` and :doc:`time series graphs <../results/timeseries>`.
+Electrical losses account for losses that the module and inverter models do not account for. After running a simulation, you can see the effect of these losses on  :doc:`results <../getting-started/results_page>` by displaying the results variables described below in :doc:`data tables <../results/data>` and :doc:`time series graphs <../results/timeseries>`.
 
-Irradiance Losses
-~~~~~~~~~~~~~~~~~
+Subarrays
+~~~~~~~~~
 
-Irradiance losses account for reduction in incident solar irradiance caused by dust or other seasonal soiling of the module surface   that reduce the radiation incident on the subarray. Soiling losses cause a uniform reduction in the total irradiance incident on each subarray. 
-
-SAM calculates the nominal incident irradiance value for each time step using solar irradiance values from the weather file, and sun and subarray angles. When you specify soiling losses, SAM adjusts the nominal incident irradiance value by each soiling loss percentage that applies to the time step. You can see the effect of soiling losses in hourly results by comparing values of the nominal POA irradiance with the "after shading only" and "after shading and soiling" values. The radiation incident on the subarray is the POA total irradiance after shading and soling value (W/m\ :sup:`2`\ ).
-
-.. note::  Soiling losses apply in addition to any losses you specify on the :doc:`Shading and Layout <pv_shading>` page.
-
-**Monthly soiling loss**
-  Click **Edit values** to specify a set of monthly soiling losses. To apply a single soiling loss to all months to represent a constant loss throughout the year, in the Edit Values window, type a value for **Enter single value** and then click **Apply**.
-
-  For example, a soiling loss of 5% for January would reduce the plane-of-array irradiance for the front of the array by 5% for all time steps in January.
-
-**Average annual soiling loss**
-  SAM shows the average of the twelve monthly soiling loss values for your reference. It applies the monthly soiling losses during simulations, not the average annual value.
-
-Rear-side Shading and Soiling for Bifacial Modules
-..................................................
-
-When you enable the bifacial model on the :doc:`Module <pv_module>` page, SAM enables two additional irradiance losses to account for soiling on the rear side of the array that differ from front-side soiling.   SAM reduces the irradiance incident on the rear-side of the array by the bifacial rear soiling and bifacial rack shading percentage. The bifacial soiling losses are constant and do not change from month to month.
-
-  Peláez, S.; Deline, C.; Stein, Joshua.; Marion, B.; Anderson, K; Muller, M. (2019) Effect of torque-tube parameters on rear-irradiance and rear-shading loss for bifacial PV performance on single-axis tracking systems. IEEE 46th Photovoltaic Specialists Conference (PVSC), vol. 2, pp. 1-6. IEEE. (`PDF 835 KB <https://www.nrel.gov/docs/fy20osti/73203.pdf>`__  )
-
-**Bifacial rear soiling (%)**
-  A percentage of the irradiance incident on the rear-side of the bifacial array to account for soiling on the rear side of the array.
-
-**Bifacial rack shading (%)**
-  A percentage of the irradiance incident on the rear-side of the bifacial array to account for shadows of racking equipment on the rear side of the array.
-
-The following results show the effect of these losses, which you can see on the :doc:`Losses <../results/losses>`, :doc:`Data Tables <../results/data>`, and :doc:`Time Series <../results/timeseries>` tabs on the Results page. See :doc:`Detailed PV model Results <pv_results>` for descriptions of these and other variables.:
-
-* **POA blocked by rear soiling (kWh/yr)**
-
-* **POA rear-side rack shaded loss (%)**
-
-* **Array POA rear-side radiation blocked by rear soiling (kW)**
-
-* **Array POA rear-side radiation blocked by racks (kW)**
+To enable and disable subarrays, use the check boxes under "Subarrays" on the :doc:`pv_system_size` page.
 
 .. _dclosses:
 
@@ -87,16 +52,10 @@ The total DC power loss for each subarray represents the subarray's total DC ele
 **Total DC power loss, %**
   The total DC power loss is the total loss that applies to each subarray:
 
-*Total DC power loss = 100% × { 1 - [ ( 1 - Mismatch ÷ 100% )*
- *× ( 1 - Diodes and connections ÷ 100% )*
- *× ( 1 - DC wiring ÷ 100% )*
- *× ( 1 - Tracking error ÷ 100% )*
- *× ( 1 - Nameplate ÷ 100% )*
- *× ( 1 - Bifacial electrical mismatch ÷ 100% )*
- *× ( 1 - DC power optimizer loss ÷ 100% )] }*
+  *Total DC power loss = 100% × { 1 - [ ( 1 - Mismatch ÷ 100% ) × ( 1 - Diodes and connections ÷ 100% ) × ( 1 - DC wiring ÷ 100% ) × ( 1 - Tracking error ÷ 100% ) × ( 1 - Nameplate ÷ 100% ) × ( 1 - Bifacial electrical mismatch ÷ 100% ) × ( 1 - DC power optimizer loss ÷ 100% )] }*
 
 Default DC Losses
-.................
+-----------------
 
 If you are not sure what values to use for the DC loss percentages, you can apply default losses appropriate for your system design.
 
@@ -160,11 +119,11 @@ The AC losses account for electrical wiring losses on the AC side of the system 
   For PV-Battery systems and AC-connected batteries, the AC Wiring loss is not applied, so should be included in the DC to AC conversion efficiency on the Battery Cell and System page. The AC wiring loss is applied for DC-connected batteries.
 
 Subhourly Clipping Loss Correction
-..................................
+----------------------------------
 
-  Subhourly clipping loss correction accounts for inverter power limiting that may occur within the hour. For a real system, on partly cloudy days, there may be several times during an hour when the instantaneous array DC power is greater than the inverter's rated nameplate power and the inverter limits its output power to the rated power. Without subhourly clipping correction, SAM's power output value may overestimate the actual output of the system. 
+Subhourly clipping loss correction accounts for inverter power limiting that may occur within the hour. For a real system, on partly cloudy days, there may be several times during an hour when the instantaneous array DC power is greater than the inverter's rated nameplate power and the inverter limits its output power to the rated power. Without subhourly clipping correction, SAM's power output value may overestimate the actual output of the system. 
 
-  Subhourly clipping loss correction is only available for hourly simulations. The time step of weather file on the Location and Resource page determines the simulation time step: SAM runs hourly simulations when the weather file contains hourly data, and subhourly simulations when the weather file contains subhourly data (data in 1, 5, 10, 15, or 30-minute time steps).
+Subhourly clipping loss correction is only available for hourly simulations. The time step of weather file on the Location and Resource page determines the simulation time step: SAM runs hourly simulations when the weather file contains hourly data, and subhourly simulations when the weather file contains subhourly data (data in 1, 5, 10, 15, or 30-minute time steps).
 
 **Enable subhourly clipping loss correction**
   Choose this option to enable subhourly clipping loss correction. The option is only available for hourly simulations.
@@ -181,12 +140,12 @@ Subhourly Clipping Loss Correction
 
 *   Walker, A.; Desai, J.; McDonald, B. (2020) Solar Photovoltaic Systems Time-Series Simulation: Subinterval Distribution vs. Steady-State Assumption. ASME 14th International Conference on Energy Sustainability. (`PDF 1.8 MB <https://www.nrel.gov/docs/fy20osti/76859.pdf>`__  )
 
-Transformer and Transmission Losses
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Transformer Losses
+------------------
 
-Use transformer and transmission losses to calculate electrical losses from a distribution or substation transformer or from transmission lines in a large photovoltaic system.
+Use transformer losses to calculate electrical losses from a distribution or substation transformer in a large photovoltaic system.
 
-SAM assumes that the transformer capacity is equal to the total inverter rated capacity from the :doc:`System Design page <pv_system_design>`. To see the effect of these losses on the inputs, see the **Transformer load loss**, **Transformer no load loss**, and **Transformer total loss** outputs on the :doc:`Results <../getting-started/results_page>` page.
+SAM assumes that the transformer capacity is equal to the total AC capacity from the :doc:`pv_system_size` page. To see the effect of these losses on the inputs, see the **Transformer load loss**, **Transformer no load loss**, and **Transformer total loss** outputs on the :doc:`Results <../getting-started/results_page>` page.
 
 .. note:: For PV-Battery systems with AC-connected batteries, SAM does not apply the transformer losses, so you should account for these losses using the DC to AC conversion efficiency on the Battery Cell and System page. The transformer losses are applied for DC-connected batteries.
 
@@ -196,11 +155,17 @@ SAM assumes that the transformer capacity is equal to the total inverter rated c
 **Transformer load loss**
   The transformer's rated load loss as a percentage of the inverter's AC output. These represent losses in the transformer's primary and secondary coil wiring that vary with the inverter's electrical output.
 
+Transmission Losses
+-------------------
+
+Use transmission losses to calculate electrical losses from transmission lines in a large photovoltaic system.
+
 **Transmission losses**
   A reduction of the photovoltaic system's AC output due to wire losses in a transmission line.
+
+.. _pvavailability:
 
 System Availability
 ~~~~~~~~~~~~~~~~~~~
 
 .. include:: ../includes/snip_system_availability.rst
-

@@ -1,5 +1,5 @@
-Detailed Photovoltaic Model Results
-===================================
+Detailed PV Model Results
+=========================
 
 You can find the Detailed Photovoltaic model time series results on the :doc:`Results <../getting-started/results_page>` page after running a simulation. SAM displays time series data under time series data under Lifetime and Hourly (or n-minute) headings, depending on the simulation time step. 
 
@@ -13,15 +13,11 @@ The time series results are available on the following tabs of the Results page:
 
 * :doc:`Time series <../results/timeseries>`
 
-
 * :doc:`Profiles <../results/profiles>`
-
 
 * :doc:`Statistics <../results/statistics>`
 
-
 * :doc:`Heat map <../results/heatmap>`
-
 
 * :doc:`PDF/CDF <../results/pdfcdf>`
 
@@ -257,7 +253,7 @@ Detailed Photovoltaic Time Series Results
      - Reduction in the subarray’s DC electrical output caused by snow covering the array, reported with **Estimate snow losses** is checked on the Shading and Layout page.
    * - Subarray 1..4 Soiling beam irradiance factor
      - 
-     - Loss factor applied to the incident beam irradiance to account for soiling of modules in the subarray, determined by the soiling losses from the :doc:`Losses <pv_losses>` page.. 
+     - Loss factor applied to the incident beam irradiance to account for soiling of modules in the subarray, determined by the soiling losses from the :doc:`pv_electrical_losses` page.. 
    * - Subarray 1..4 String short circuit DC current
      - A
      - The short circuit current for this subarray. This is a theoretical value used to help with string sizing. SAM does not report the operating DC current, but it can be calculated by dividing the subarray DC gross power by the operating DC voltage.

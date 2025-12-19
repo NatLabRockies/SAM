@@ -73,7 +73,7 @@ Shading
 
 External shading losses are matrices of loss values that represent reduction in incident irradiance caused by shadows from nearby objects on the array.
 
-* Click **Edit shading** to specify :ref:`external shading losses <externalshading>`.
+* Click **Edit shading** to specify :ref:`external shading losses <pvexternalshading>`.
 
 The 3D shade calculator calculates a set of shade loss values from a three-dimensional scene, which is a drawing of the array and nearby objects.
 
@@ -81,6 +81,7 @@ The 3D shade calculator calculates a set of shade loss values from a three-dimen
 
 Curtailment and Availability
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. include:: ../includes/snip_system_availability.rst
 
 Collector

@@ -15,7 +15,7 @@ PV
 The PV operating costs account for the cost of operating and maintaining the photovoltaic system, including modules, inverters, and balance-of-system components.
 
 **Capacity**
-  The nominal capacity of the photovoltaic array in DC kilowatts from the :doc:`System Design <../detailed-photovoltaic-model/pv_system_design>` page  .
+  The nominal capacity of the photovoltaic array in DC kilowatts from the :doc:`System Size<../detailed-photovoltaic-model/pv_system_size>` page  .
 
 **Fixed annual cost, $/yr**
   A fixed annual cost that applied to each year in the project cash flow to account for photovoltaic system operating costs.

@@ -170,4 +170,4 @@ SAM downloads weather files with the following hourly data from the NSRDB:
 
 * Albedo
 
-.. note:: Weather files with snow depth data for the Detailed Photovoltaic model are not available from the NSRDB PSM dataset. They are available for 239 locations in the United States from the legacy MTS1 (TMY2) files in the original format, which cover the period 1961 - 1990. See :ref:`Snow Losses <snow>` for details.
+.. note:: Weather files with snow depth data for the Detailed Photovoltaic model are not available from the NSRDB PSM dataset. They are available for 239 locations in the United States from the legacy MTS1 (TMY2) files in the original format, which cover the period 1961 - 1990. See :ref:`Snow Losses <pvsnowlosses>` for details.

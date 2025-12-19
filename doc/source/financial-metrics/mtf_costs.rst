@@ -25,7 +25,7 @@ For the PPA financial models, the net capital cost is the sum of the total insta
  *- total CBI*
 
 costs and Fees
-..............
+--------------
 
 costs and fees are costs that you specify on the Financial Parameters page. SAM adds these costs to the total installed cost on the Installation costs page to calculate the net capital cost for the PPA financial models:
 

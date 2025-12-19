@@ -15,10 +15,10 @@ Table . Nameplate system capacity values for each technology.
      - Input Page
    * - Detailed Photovoltaic (DC)
      - Nameplate DC capacity (kWdc)
-     - :doc:`System Design <../detailed-photovoltaic-model/pv_system_design>`
+     - :doc:`System Size <../detailed-photovoltaic-model/pv_system_size>`
    * - Detailed Photovoltaic (AC)
      - Total AC capacity (kWac) (for AC capacity factor)
-     - :doc:`System Design <../detailed-photovoltaic-model/pv_system_design>`
+     - :doc:`System Size<../detailed-photovoltaic-model/pv_system_size>`
    * - PVWatts (DC)
      - DC rating (kWdc)
      - :doc:`System Design <../pvwatts/pvwatts_system_design>`
@@ -30,7 +30,7 @@ Table . Nameplate system capacity values for each technology.
      - :doc:`Array <../high-concentration-photovoltaic/hcpv_array>`
    * - Detailed PV-Battery (DC)
      - Nameplate DC capacity (kWdc) (does not include battery nominal bank power)
-     - :doc:`System Design <../detailed-photovoltaic-model/pv_system_design>`
+     - :doc:`System Size<../detailed-photovoltaic-model/pv_system_size>`
    * - PVWatts-Battery (DC)
      - System nameplate capacity (kWdc) (does not include battery power)
      - :doc:`System Design <../pvwatts/pvwatts_system_design>`

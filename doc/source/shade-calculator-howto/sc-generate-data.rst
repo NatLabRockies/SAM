@@ -16,13 +16,13 @@ Once you have created a scene with shading objects and active objects, you can g
 Generating Shade Data to use In SAM
 ...................................
 
-When you :doc:`close <../shade-calculator-reference/sc-save-close>` the shade calculator, it automatically applies shading losses to SAM's :doc:`shading <../detailed-photovoltaic-model/pv_shading>` inputs.
+When you :doc:`close <../shade-calculator-reference/sc-save-close>` the shade calculator, it automatically applies shading losses to SAM's :doc:`../detailed-photovoltaic-model/pv_soiling_shading_snow` inputs.
 
 To apply shading data to SAM's shading inputs:
 
 #. Click **Save and Close**. 
 
-#. To see the shade data in SAM, on the :doc:`Shading <../detailed-photovoltaic-model/pv_shading>` page (or :doc:`System Design <../pvwatts/pvwatts_system_design>` page for PVWatts), click **Edit Shading**. The 3D shade calculator populates the time step beam irradiance shading losses table and assigns a constant sky diffuse shading loss value.
+#. To see the shade data in SAM, on the :doc:`../detailed-photovoltaic-model/pv_soiling_shading_snow` page (or :doc:`System Design <../pvwatts/pvwatts_system_design>` page for PVWatts), click **Edit Shading**. The 3D shade calculator populates the time step beam irradiance shading losses table and assigns a constant sky diffuse shading loss value.
 
 .. image:: ../images/ss-generate-shade-data-in-sam.png
    :align: center

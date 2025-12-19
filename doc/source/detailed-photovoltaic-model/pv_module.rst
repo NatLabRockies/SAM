@@ -3,7 +3,7 @@ Module
 
 The Module page allows you to choose a model to represent the photovoltaic module's performance. For each time step of the simulation, the module model calculates the DC electrical output of a single module based on the design parameters and the incident solar radiation (plane-of-array irradiance) calculated from data in the weather file. 
 
-SAM assumes that the system is made up of an array of identical modules, which can be wired into up to four DC subarrays. The photovoltaic array's electric output depends on the number of modules in the system and the orientation, tracking, shading, and other parameters on the :doc:`System Design <pv_system_design>` page, and any losses you specify on the :doc:`Shading and Layout <pv_shading>` and :doc:`Losses <pv_losses>` pages. The array's electrical output is fed to a bank of one or more inverters, whose characteristics appear on the :doc:`Inverter page <pv_inverter>`. 
+SAM assumes that the system is made up of an array of identical modules, which can be wired into up to four DC subarrays. The photovoltaic array's electric output depends on the number of modules in the system and the orientation, tracking, shading, and other parameters. The array's electrical output is fed to a bank of one or more inverters, whose characteristics appear on the :doc:`Inverter page <pv_inverter>`. 
 
 SAM displays the name of the active module model at the top of the Module page. Click the model name to choose a different model:
 
@@ -155,8 +155,6 @@ When you choose array dimensions for the heat transfer dimensions, you must also
 
 **Columns of modules in array (array heat transfer dimensions only)**
   Assuming a rectangular array, the number of modules along the side perpendicular to the line defined by the module width variable.
-
-.. note:: The rows and columns of modules variables are independent of the similar variables on the :doc:`System Design <pv_system_design>` page and :doc:`Shading and Layout <pv_shading>` page. Before running a simulation, verify that the values on the different pages are consistent.
 
 **Temperature behind the module (integrated mounting configuration only)**
   The indoor air temperature for the integrated mounting configuration option. SAM assumes a constant indoor air temperature.
@@ -527,7 +525,7 @@ To use the simple efficiency module model:
 
 #. Enter the module's total cell area in square meters, equivalent to the product of the cell area and number of cells.
 
-#. Type values for the module's maximum power and open circuit voltages. SAM uses these values for array sizing on the :doc:`System Design <pv_system_design>` page.
+#. Type values for the module's maximum power and open circuit voltages. SAM uses these values for array sizing on the :doc:`pv_system_size` page.
 
 #. Choose a module structure from the three available options (displayed as front material / cell / back material). See :ref:`Sandia Temperature Correction <module-tempcorr-sandia>` for details.
 
@@ -613,7 +611,7 @@ The CEC Performance Model with User Entered Specifications allows you to run the
 Overview
 ~~~~~~~~
 
-When you use the model, you first enter a set of specifications to generate a set of coefficients for the module on the Module page, and then run a simulation of the PV system after specifying the rest of the system on the :doc:`System Design <pv_system_design>`, :doc:`Inverter <pv_inverter>`, and other input pages.
+When you use the model, you first enter a set of specifications to generate a set of coefficients for the module on the Module page, and then run a simulation of the PV system after specifying the rest of the system on the :doc:`pv_system_size`, :doc:`Inverter <pv_inverter>`, and other input pages.
 
 SAM uses the module specifications you provide to calculate a set of parameters at reference conditions for the CEC module model. During a simulation, the model adjusts temperature and incident irradiance coefficients to calculate the module efficiency at operating conditions other than STC. Note that the model does not account for all non-linear effects in the relationship of module power and irradiance.
 

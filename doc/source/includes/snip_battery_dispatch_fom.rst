@@ -123,7 +123,7 @@ The PV smoothing algorithm dispatches the battery to reduce rapid fluctuations i
 
 .. note:: Simulations with PV smoothing can take several minutes to run, depending on your computer and the weather file time step.
 
-After running a simulation, you can find results of the PV smoothing algorithm on the Results page Data Tables, Time Series, and other tabs by searching for "pv smoothing." The relevant results all start with **PV smoothing...**. **PV smoothing outpower** is the battery target power for PV smoothing algorithm: It attempts to dispatch the battery to meet the target, but constraints such as battery state of charge may prevent the target from being met in some time steps. **Electricity to grid** is power delivered by the PV system and/or battery to the grid, which may be subject to grid constraints or AC losses specified on the :doc:`Battery Cell and System <../battery-storage/battery_storage_fom>`, :doc:`Grid <../grid/grid_limits>` and :doc:`Losses <../detailed-photovoltaic-model/pv_losses>` pages.
+After running a simulation, you can find results of the PV smoothing algorithm on the Results page Data Tables, Time Series, and other tabs by searching for "pv smoothing." The relevant results all start with **PV smoothing...**. **PV smoothing outpower** is the battery target power for PV smoothing algorithm: It attempts to dispatch the battery to meet the target, but constraints such as battery state of charge may prevent the target from being met in some time steps. **Electricity to grid** is power delivered by the PV system and/or battery to the grid, which may be subject to grid constraints or AC losses specified on the :doc:`Battery Cell and System <../battery-storage/battery_storage_fom>`, :doc:`Grid <../grid/grid_limits>` and :doc:`Losses <../detailed-photovoltaic-model/pv_electrical_losses>` pages.
 
 For more information about the algorithm, see:
 
@@ -170,7 +170,7 @@ For more information about the algorithm, see:
 *Battery Round Trip Efficiency (%) = ( AC to DC Conversion Efficiency (%) × DC to AC Conversion Efficiency (%) ) ÷ 100%*
 
 **Nameplate for PV smoothing, kWac**
-  The PV array's nameplate capacity in AC kilowatts, from the :doc:`System Design <../detailed-photovoltaic-model/pv_system_design>`   page.
+  The PV array's nameplate capacity in AC kilowatts, from the :doc:`System Size <../detailed-photovoltaic-model/pv_system_size>`   page.
 
 **Interconnection limit, kWac**
   The grid interconnection limit from the :doc:`Grid <../grid/grid_limits>`   page. Used to calculate the maximum ramp rate. See description above.
