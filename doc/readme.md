@@ -17,7 +17,7 @@ The Sphinx Book Theme, Sphinx, and reStructuredText are all well documented. The
 * Python
 * A virtual environment like `venv` or `conda` (recommended)
 * Python packages listed in `requirements.txt`
-* Make
+* Make  (optional)
 * A good text editor that can open a folder as a workspace and has syntax highlighting for reStructuredText (VS Code works well)
 
 Tested on Windows with Python 3.12.10 and GNU Make 4.4.1.
@@ -42,13 +42,33 @@ Tested on Windows with Python 3.12.10 and GNU Make 4.4.1.
    path/to/sam-help-venv/Scripts/activate
    ```
 
-3. Run Make.
+3. Build Help from the `path/to/sam_dev/SAM/doc` folder.
+
+   ```
+   sphinx-build -M html source build
+   ```
+
+   If there are changes to table of contents or other structural changes, clean the build first:
+
+   Windows:
+
+   ```
+   rmdir /s /q build
+   ```
+
+   Mac or Linux:
+
+   ```
+   rm -rf build
+   ```
+
+   As an alternative, run Make, assuming Make is installed and `Makefile` is in the `doc` folder.
 
    ```
    make html
    ```
 
-   To clean the build first, run `make clean`.
+   To clean the build using Make, run `make clean`.
 
 4. If there are any build errors, fix them by editing the appropriate .rst file(s).
 
