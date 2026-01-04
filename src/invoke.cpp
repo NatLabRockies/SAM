@@ -4129,7 +4129,7 @@ void fcall_editscene3d(lk::invoke_t &cxt)
 	if (!vv)
 	{
 		cxt.result().hash_item("ierr").assign(1.0);
-		cxt.result().hash_item("message").assign(wxString("no variable with that name"));
+		cxt.result().hash_item("message").assign(wxString::Format("no variable with that name: %s", name));
 		return;
 	}
 
@@ -4152,10 +4152,10 @@ void fcall_editscene3d(lk::invoke_t &cxt)
 		wxString addr = cxt.arg(4).as_string();
 		st->GetLocationSetup()->SetLocation(addr, lat, lon, tz);
 
-		wxMessageBox("The 3D scene requires detailed information about your location to calculate shading losses.\n\n"
-			"By default, information about the location you selected in the weather file has been transferred.\n\n"
-			"If you update your weather file in the future, please manually ensure that the address, "
-			"latitude, longitude, and time zone in the 3D scene editor (Location tab) are updated as necessary.", "Notice",
+		wxMessageBox("3D Shade Calculator\n\nThe 3D shade calculator uses the latitude, longitude, and time zone\n"
+			"data from the weather file on the Location and Resource page. If you change\n"
+			"the weather file after generating shading data, be sure to update the\n" 
+			"information on the 3D shade calculator Location tab as needed.", "Notice",
 			wxICON_INFORMATION | wxOK, SamApp::Window());
 	}
 
@@ -4175,7 +4175,7 @@ void fcall_editscene3d(lk::invoke_t &cxt)
 		|| lon != cxt.arg(2).as_number()
 		|| tz != cxt.arg(3).as_number())
 	{
-		if (wxYES == wxMessageBox("The location information in the shading tool does not match the currently selected weather file.\n\nDo you want to update your location settings in the shading tool to match?", "Query", wxYES_NO))
+		if (wxYES == wxMessageBox("The location information in the 3D shade calculator does not match the currently selected weather file.\n\nDo you want to update the location information in the 3D shade calculator to match the weather file?", "Query", wxYES_NO))
 		{
 			lat = cxt.arg(1).as_number();
 			lon = cxt.arg(2).as_number();

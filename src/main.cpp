@@ -32,19 +32,12 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 #include <set>
 //#include <chrono>
+#include <fstream>
 
 #include <wx/wx.h>
 #include <wx/frame.h>
 #include <wx/stc/stc.h>
-#include <fstream>
-#include <sstream>
-
-#if defined(__WXMSW__)||defined(__WXOSX__)
-#include <wx/webview.h>
-#else
-#include <wx/html/htmlwin.h> // for linux - avoid webkitgtk dependencies
-#endif
-
+#include <wx/html/htmlwin.h>
 #include <wx/simplebook.h>
 #include <wx/panel.h>
 #include <wx/busyinfo.h>
@@ -54,7 +47,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <wx/datstrm.h>
 #include <wx/grid.h>
 #include <wx/stdpaths.h>
-#include <wx/webview.h>
 #include <wx/txtstrm.h>
 #include <wx/buffer.h>
 #include <wx/display.h>
@@ -66,7 +58,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <wex/icons/cirplus.cpng>
 #include <wex/icons/qmark.cpng>
 #include <wex/utils.h>
-
 
 #include "../resource/menu.cpng"
 #include "../resource/notes_white.cpng"
@@ -109,13 +100,20 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 static PythonConfig pythonConfig;
 
-
 enum { __idFirst = wxID_HIGHEST+592,
 
-	ID_MAIN_MENU, ID_CASE_TABS, ID_PAGE_NOTES,
-	ID_CASE_CREATE, ID_RUN_ALL_CASES, ID_SAVE_HOURLY,
+	ID_MAIN_MENU, 
+	ID_CASE_TABS, 
+	ID_PAGE_NOTES, 
+	ID_RELEASE_NOTES, 
+	ID_BROWSER,
+	ID_CASE_CREATE, 
+	ID_RUN_ALL_CASES, 
+	ID_SAVE_HOURLY,
 	ID_IMPORT_CASES,
-	ID_NEW_SCRIPT, ID_OPEN_SCRIPT, ID_BROWSE_INPUTS,
+	ID_NEW_SCRIPT, 
+	ID_OPEN_SCRIPT, 
+	ID_BROWSE_INPUTS,
 	__idCaseMenuFirst,
 	ID_CASE_CONFIG,
 	ID_CASE_RENAME,
@@ -142,8 +140,6 @@ enum { __idFirst = wxID_HIGHEST+592,
 
 BEGIN_EVENT_TABLE( MainWindow, wxFrame )
 	EVT_CLOSE( MainWindow::OnClose )
-	EVT_MENU( wxID_ABOUT, MainWindow::OnCommand )
-	EVT_MENU( wxID_HELP, MainWindow::OnCommand )
 	EVT_MENU( ID_SAVE_HOURLY, MainWindow::OnCommand )
 	EVT_MENU( ID_IMPORT_CASES, MainWindow::OnCommand )
 	EVT_MENU( wxID_NEW, MainWindow::OnCommand )
@@ -161,6 +157,7 @@ BEGIN_EVENT_TABLE( MainWindow, wxFrame )
 	EVT_BUTTON(ID_MAIN_MENU, MainWindow::OnCommand)
 	EVT_LISTBOX( ID_CASE_TABS, MainWindow::OnCaseTabChange )
 	EVT_BUTTON( ID_CASE_TABS, MainWindow::OnCaseTabButton )
+	EVT_BUTTON(wxID_ABOUT, MainWindow::OnCommand)
 	EVT_BUTTON( wxID_HELP, MainWindow::OnCommand )
 	EVT_BUTTON( ID_PAGE_NOTES, MainWindow::OnCommand )
 	EVT_MENU_RANGE( __idCaseMenuFirst, __idCaseMenuLast, MainWindow::OnCaseMenu )
@@ -243,7 +240,8 @@ MainWindow::MainWindow()
 	tools->Add( metbut = new wxMetroButton( m_caseTabPanel, ID_PAGE_NOTES, wxEmptyString, wxBITMAP_PNG_FROM_DATA( notes_white ), wxDefaultPosition, wxDefaultSize), 0, wxALL|wxEXPAND, 0 );
 	metbut->SetToolTip( "Add a page note" );
 
-	tools->Add( new wxMetroButton( m_caseTabPanel, wxID_HELP, "Help",/* wxBITMAP_PNG_FROM_DATA(qmark) */ wxNullBitmap, wxDefaultPosition, wxDefaultSize), 0, wxALL|wxEXPAND, 0 );
+	tools->Add(new wxMetroButton(m_caseTabPanel, wxID_ABOUT, "About",wxNullBitmap, wxDefaultPosition, wxDefaultSize), 0, wxALL | wxEXPAND, 0);
+	tools->Add( new wxMetroButton( m_caseTabPanel, wxID_HELP, "Help",/*wxBITMAP_PNG_FROM_DATA(qmark)*/ wxNullBitmap, wxDefaultPosition, wxDefaultSize), 0, wxALL | wxEXPAND, 0);
 
 	m_caseNotebook = new wxSimplebook( m_caseTabPanel, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxBORDER_NONE );
 
@@ -2470,67 +2468,141 @@ wxArrayString SamApp::RecentFiles()
 	return files;
 }
 
-void SamApp::ShowHelp( const wxString &context )
+class HelpWin : public wxFrame
 {
-	wxString url;
-	if ( context.Left(1) == ":" )
-		url = context; // for things like :about, etc
-	else
+	wxHtmlWindow* m_htmlView;
+
+	wxString m_aboutHtml;
+public:
+	HelpWin(wxWindow* parent)
+		: wxFrame(parent, wxID_ANY, "About System Advisor Model (SAM)", wxDefaultPosition, wxScaleSize(1000, 600))
+	{
+		CreateAboutHtml();
+
+#ifdef __WXMSW__
+		SetIcon(wxICON(appicon));
+#endif
+
+		SetBackgroundColour(wxMetroTheme::Colour(wxMT_FOREGROUND));
+
+		m_htmlView = new wxHtmlWindow(this, ID_BROWSER);
+		m_htmlView->SetPage(m_aboutHtml);
+		
+		wxBoxSizer* tools = new wxBoxSizer(wxHORIZONTAL);
+		tools->AddStretchSpacer();
+		tools->Add( new wxMetroButton( this, ID_RELEASE_NOTES, "Open NLR release notes..." ), 0, wxALL|wxEXPAND, 0 );
+		
+		wxBoxSizer* sizer = new wxBoxSizer(wxVERTICAL);
+		sizer->Add( tools, 0, wxALL|wxEXPAND, 0 );
+		sizer->Add(m_htmlView, 1, wxALL | wxEXPAND, 0);
+		SetSizer(sizer);
+	}
+
+	void CreateAboutHtml()
+	{
+		m_aboutHtml = SamApp::AboutSAM();
+	}
+
+	void LoadPage(wxString url)
+	{
+		if (url == ":about")
+		{
+			m_htmlView->SetPage(m_aboutHtml);
+		}
+		else if (url == ":release_notes")
+		{
+			wxLaunchDefaultBrowser(SamApp::WebApi("release_notes"));
+		}
+		else
+		{
+			wxLaunchDefaultBrowser(url);
+		}
+	}
+
+
+	void OnClose(wxCloseEvent& evt)
+	{
+		Hide();
+		evt.Veto();
+	}
+
+	void OnCommand(wxCommandEvent& evt)
+	{
+		switch (evt.GetId())
+		{
+		case ID_RELEASE_NOTES:
+			LoadPage(":release_notes");
+			break;
+		}
+	}
+
+	DECLARE_EVENT_TABLE();
+};
+
+BEGIN_EVENT_TABLE(HelpWin, wxFrame)
+EVT_BUTTON(ID_RELEASE_NOTES, HelpWin::OnCommand)
+EVT_CLOSE(HelpWin::OnClose)
+END_EVENT_TABLE()
+
+class HelpWin;
+static HelpWin* gs_helpWin = 0;
+
+void SamApp::ShowHelp( const wxString &help_context )
+{
+    wxString url;
+    url = help_context;
+    if ( url.Left(1) == ":" ) // display things like :about in custom window
+    {
+        wxWindow *modal_active = 0;
+        wxWindow *nonmodal_tlw = 0;
+        for( wxWindowList::iterator wl = wxTopLevelWindows.begin(); wl != wxTopLevelWindows.end(); ++wl )
+        {
+            wxTopLevelWindow *tlw = dynamic_cast<wxTopLevelWindow*>( *wl );
+            wxDialog *dia = dynamic_cast<wxDialog*>( *wl );
+            
+            if ( tlw != 0 && (dia == 0  || !dia->IsModal()) )
+                nonmodal_tlw = tlw;
+            
+            if ( dia != 0 && dia->IsActive() && dia->IsModal() )
+                modal_active = dia;
+        }
+        
+        // try several different parent windows for the help window
+        // if possible, use the SAM main window
+        // otherwise, choose any top level window that is not modal
+        // last resort, choose a currently modal dialog box
+        wxWindow *parent = SamApp::Window();
+        if ( !parent ) parent = nonmodal_tlw;
+        if ( !parent ) parent = modal_active;
+        
+        if ( modal_active && gs_helpWin != 0 && gs_helpWin->IsShown() )
+        {
+            wxRect h_rect = gs_helpWin->GetRect();
+            
+            if (gs_helpWin->Destroy())
+            {
+                gs_helpWin = new HelpWin( parent );
+                gs_helpWin->SetSize(h_rect);
+            }
+        }
+        else if ( 0 == gs_helpWin )
+            gs_helpWin = new HelpWin( parent );
+        
+        gs_helpWin->Show( );
+        gs_helpWin->LoadPage( url );
+        gs_helpWin->Raise();
+    }
+    else // display help topics in default browser
 	{
 		wxFileName fn( SamApp::GetRuntimePath() + "/help/html/" );
 		fn.MakeAbsolute();
-		url = "file:///" + fn.GetFullPath( wxPATH_NATIVE ) + "index.html";
-#ifdef __WXGTK__
-		if ( ! context.IsEmpty() )
-			url = "file:///" + fn.GetFullPath( wxPATH_NATIVE ) + context + ".html";
-		wxLaunchDefaultBrowser( url );
-		return;
-#else
-		if ( ! context.IsEmpty() )
-			url += "?" + context + ".html";
-#endif
+		if ( help_context.IsEmpty() )
+            url = "file:///" + fn.GetFullPath( wxPATH_NATIVE ) + "index.html";
+        else
+            url = "file:///" + fn.GetFullPath( wxPATH_NATIVE ) + help_context + ".html";
+        wxLaunchDefaultBrowser( url );
 	}
 
-	wxWindow *modal_active = 0;
-	wxWindow *nonmodal_tlw = 0;
-	for( wxWindowList::iterator wl = wxTopLevelWindows.begin();
-		wl != wxTopLevelWindows.end();
-		++wl )
-	{
-		wxTopLevelWindow *tlw = dynamic_cast<wxTopLevelWindow*>( *wl );
-		wxDialog *dia = dynamic_cast<wxDialog*>( *wl );
-
-		if ( tlw != 0 && (dia == 0  || !dia->IsModal()) )
-			nonmodal_tlw = tlw;
-
-		if ( dia != 0 && dia->IsActive() && dia->IsModal() )
-			modal_active = dia;
-	}
-
-	// try several different parent windows for the help window
-	// if possible, use the SAM main window
-	// otherwise, choose any top level window that is not modal
-	// last resort, choose a currently modal dialog box
-	wxWindow *parent = SamApp::Window();
-	if ( !parent ) parent = nonmodal_tlw;
-	if ( !parent ) parent = modal_active;
-
-	if ( modal_active && gs_helpWin != 0 && gs_helpWin->IsShown() )
-	{
-		wxRect h_rect = gs_helpWin->GetRect();
-
-		if (gs_helpWin->Destroy())
-		{
-			gs_helpWin = new HelpWin( parent );
-			gs_helpWin->SetSize(h_rect);
-		}
-	}
-	else if ( 0 == gs_helpWin )
-		gs_helpWin = new HelpWin( parent );
-
-	gs_helpWin->Show( );
-	gs_helpWin->LoadPage( url );
-	gs_helpWin->Raise();
 }
 
 int SamApp::RevisionNumber()

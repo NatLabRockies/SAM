@@ -17857,7 +17857,6 @@
     "inv_snl_idcmax": 1263.77,
     "inv_snl_mppt_hi": 820.0,
     "inv_snl_mppt_low": 545.0,
-    "inv_snl_num_mppt": 1.0,
     "inv_snl_paco": 753200.0,
     "inv_snl_pdco": 777216.0,
     "inv_snl_pnt": 122.55,
