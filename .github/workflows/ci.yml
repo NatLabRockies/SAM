@@ -54,7 +54,6 @@ jobs:
           mesa-common-dev \
           unzip
 
-
     - name: Download OR-Tools
       if: steps.cached-ortools-restore.outputs.cache-hit != 'true'
       shell: bash
@@ -165,7 +164,7 @@ jobs:
       if: steps.cachedssc.outputs.cache-hit != 'true'
       run: |
         cd $GITHUB_WORKSPACE/ssc
-        cmake -Bbuild -DCMAKE_CONFIGURATION_TYPES="Release" -DENABLE_COVERAGE=1 -DSAM_SKIP_AUTOGEN=0 -DSAMAPI_EXPORT=1 -DSAM_SKIP_TOOLS=1 -DSAM_SKIP_TESTS=1 -DSAMPRIVATE=1 -DUSE_XPRESS=0 -DUSE_COINOR=1 -DCMAKE_SYSTEM_VERSION=10.0 -DCMAKE_SYSTEM_PREFIX_PATH=${ORTOOLSDIR} -Dabsl_DIR=${ORTOOLSDIR}\lib\cmake\absl" -Dutf8_range_DIR=${ORTOOLSDIR}\lib\cmake\utf8_range"
+        cmake -Bbuild -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DSAM_SKIP_TESTS=1 -DSAM_SKIP_TOOLS=1 -DSAMAPI_EXPORT=0 -DUSE_XPRESS=0 -DUSE_COINOR=1 -DCMAKE_SYSTEM_VERSION=10.0 -DCMAKE_SYSTEM_PREFIX_PATH=${ORTOOLSDIR} -Dabsl_DIR=${ORTOOLSDIR}\lib\cmake\absl" -Dutf8_range_DIR=${ORTOOLSDIR}\lib\cmake\utf8_range"
         cmake --build build -j4 --target ssc
       
     - name: Checkout SAM       
@@ -240,6 +239,16 @@ jobs:
         echo "SAMNTDIR=$SAMNTDIR" >> $GITHUB_ENV
         WXMSW3=$HOME/wx-$WX_VERSION
         echo "WXMSW3=$WXMSW3" >> $GITHUB_ENV
+        ORTOOLSDIR=$GITHUB_WORKSPACE/or-tools_x64_VisualStudio2022_cpp_v$ORTOOLS_VER.$ORTOOLS_RELEASE
+        echo "ORTOOLSDIR=$ORTOOLSDIR" >> $GITHUB_ENV
+
+    - name: Download OR-Tools
+      if: steps.cached-ortools-restore.outputs.cache-hit != 'true'
+      shell: bash
+      run: |
+        curl -L https://github.com/google/or-tools/releases/download/v$ORTOOLS_VER/or-tools_x64_VisualStudio2022_cpp_v$ORTOOLS_VER.$ORTOOLS_RELEASE.zip -o or-tools-$ORTOOLS_VER.zip
+        7z x or-tools-$ORTOOLS_VER.zip
+
     - name: Get cached build of wxWidgets
       uses: actions/cache@v4
       id: cachedwx
@@ -357,7 +366,7 @@ jobs:
         cd ssc
         mkdir build
         cd build
-        cmake -G "Visual Studio 17 2022" -DCMAKE_CONFIGURATION_TYPES="Release;Debug" -DCMAKE_SYSTEM_VERSION=10 -DSAM_SKIP_TESTS=1 -DSAM_SKIP_TOOLS=1 -DSAMAPI_EXPORT=0 ..
+        cmake -G "Visual Studio 17 2022" -DCMAKE_CONFIGURATION_TYPES="Release;Debug" -DCMAKE_SYSTEM_VERSION=10 -DSAM_SKIP_TESTS=1 -DSAM_SKIP_TOOLS=1 -DSAMAPI_EXPORT=0 -DUSE_XPRESS=0 -DUSE_COINOR=1 -DCMAKE_SYSTEM_VERSION=10.0 -DCMAKE_SYSTEM_PREFIX_PATH=${ORTOOLSDIR} -Dabsl_DIR=${ORTOOLSDIR}\lib\cmake\absl" -Dutf8_range_DIR=${ORTOOLSDIR}\lib\cmake\utf8_range" ..
         MSBuild.exe .\sam_simulation_core.sln /t:Build /p:Configuration=Release
         MSBuild.exe .\sam_simulation_core.sln /t:Build /p:Configuration=Debug
 
@@ -435,7 +444,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [macos-14-large, macos-latest]
+        os: [macos-14-large]
 
     steps:
     - name: Setup cmake
@@ -454,6 +463,16 @@ jobs:
         echo "RAPIDJSONDIR=$RAPIDJSONDIR" >> $GITHUB_ENV
         SAMNTDIR=$GITHUB_WORKSPACE/sam
         echo "SAMNTDIR=$SAMNTDIR" >> $GITHUB_ENV
+        ORTOOLSDIR=$GITHUB_WORKSPACE/or-tools_x86_64_macOS-15.5_cpp_v$ORTOOLS_VER.$ORTOOLS_RELEASE
+        echo "ORTOOLSDIR=$ORTOOLSDIR" >> $GITHUB_ENV
+
+
+    - name: Download OR-Tools
+      if: steps.cached-ortools-restore.outputs.cache-hit != 'true'
+      shell: bash
+      run: |
+        curl -L https://github.com/google/or-tools/releases/download/v$ORTOOLS_VER/or-tools_x86_64_macOS-15.5_cpp_v$ORTOOLS_VER.$ORTOOLS_RELEASE.tar.gz -o or-tools-$ORTOOLS_VER.tar.gz
+        tar xvzf or-tools-$ORTOOLS_VER.tar.gz
 
     - name: Set relative paths
       run: | 
@@ -562,7 +581,7 @@ jobs:
       if: steps.cachedssc.outputs.cache-hit != 'true'
       run: |
         cd $GITHUB_WORKSPACE/ssc
-        cmake -Bbuild -DCMAKE_BUILD_TYPE=$BUILD_TYPE  -DSAM_SKIP_TESTS=1 -DSAM_SKIP_TOOLS=1 -DSAMAPI_EXPORT=0
+        cmake -Bbuild -DCMAKE_BUILD_TYPE=$BUILD_TYPE  -DSAM_SKIP_TESTS=1 -DSAM_SKIP_TOOLS=1 -DSAMAPI_EXPORT=0 -DUSE_XPRESS=0 -DUSE_COINOR=1 -DCMAKE_SYSTEM_VERSION=10.0 -DCMAKE_SYSTEM_PREFIX_PATH=${ORTOOLSDIR} -Dabsl_DIR=${ORTOOLSDIR}\lib\cmake\absl" -Dutf8_range_DIR=${ORTOOLSDIR}\lib\cmake\utf8_range"
         cmake --build build -j4 --target ssc
 
     - name: Checkout SAM       
