@@ -4586,6 +4586,7 @@ void fcall_make_jpd_multiyear(lk::invoke_t& cxt)
             wxLogStatus("error scanning '" + wf + "'");
             //cxt.error(err);
             cxt.result().assign(err);
+            has_more = dir.GetNext(&file);
             continue;
         }
         else
