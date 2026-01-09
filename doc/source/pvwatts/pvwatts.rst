@@ -11,7 +11,7 @@ SAM's PVWatts model uses the same underlying code as NREL's online `PVWatts® Ca
 
 * When you combine PVWatts with the Residential or Commercial financial model, you can include a battery in the system design.
 
-For a detailed descriptions of the model, see publications listed under "PVWatts" on the `PV Publications <https://sam.nrel.gov/photovoltaic/pv-sub-page-2.html>`__ page of the SAM website.
+For a detailed descriptions of the model, see publications listed under "PVWatts" on the `PV Publications <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__ page of the SAM website.
 
 Basic steps to run PVWatts:
 

@@ -15,9 +15,9 @@ SAM uses the Latin Hypercube Sampling (LHS) and STEPWISE packages from Sandia Na
 
 * Helton, J.; Davis, F.; (2000). "Sampling-Based Methods for Uncertainty and Sensitivity Analysis." SAND99-2240. 121 pp. (`PDF 5 MB <https://doi.org/10.2172/760743>`__)
 
-* The LHS package is hosted on Sandia's Dakota platform https://dakota.sandia.gov/content/packages/lhs.
+* SAM's LHS implementation is here: https://github.com/NREL/lhs.
 
-* For the stochastic simulation regression results, SAM uses the STEPWISE package also hosted on Dakota at https://dakota.sandia.gov/content/packages/stepwise.
+* For the stochastic simulation regression results, SAM uses the STEPWISE package, https://github.com/sandialabs/stepwise/.
 
 SAM's :doc:`LK scripting language <../reference/macros>` includes LHS functions so you can create input distributions from your LK scripts. See the `LK samples on the SAM GitHub.com <https://github.com/NREL/SAM/tree/develop/samples/LK%20Scripts%20for%20SAM>`__ repository for an example.
 

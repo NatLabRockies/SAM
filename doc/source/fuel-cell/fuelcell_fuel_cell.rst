@@ -167,7 +167,7 @@ Efficiency
 Default Parameter Values
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-The default parameters for the three fuel cell types are from the `Fuel Cell Power Model <https://www.nrel.gov/hydrogen/fuel-cell-power-model.html>`__.
+The default parameters for the three fuel cell types are from the `Fuel Cell Power Model <https://research-hub.nrel.gov/en/publications/fuel-cell-power-model-version-2-startup-guide-system-designs-and-/>`__.
 
 Default Size and Dynamic Response Parameters
 ............................................

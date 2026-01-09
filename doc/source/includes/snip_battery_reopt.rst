@@ -1,5 +1,5 @@
 
-For photovoltaic behind-the-meter systems with battery storage, you can use Optimal Sizing and Dispatch from REopt to automatically size the battery bank and calculate an hour-by-hour dispatch schedule: SAM sends information from your SAM file to the online `REopt API <https://developer.nrel.gov/docs/energy-optimization/reopt-v1/>`__, runs an optimization remotely, and replaces the SAM inputs for battery size and dispatch with data from the optimization.
+For photovoltaic behind-the-meter systems with battery storage, you can use Optimal Sizing and Dispatch from REopt to automatically size the battery bank and calculate an hour-by-hour dispatch schedule: SAM sends information from your SAM file to the online `REopt API <https://developer.nrel.gov/docs/energy-optimization/reopt/>`__, runs an optimization remotely, and replaces the SAM inputs for battery size and dispatch with data from the optimization.
 
 .. note:: The dispatch schedule REopt calculates is based on a different representation of the photovoltaic-battery system and weather file than SAM uses for simulations.
 

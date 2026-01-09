@@ -30,7 +30,7 @@ The plant configuration describes the plant's conversion technology and how SAM 
   The Flash option allows you to choose from four subtypes that determine the plant efficiency. 
 
 **Temperature Loss in Prod. Well**
-  Constant temperature decrease of the fluid temperature as it exits the production well. Check this option to use the Ramey wellbore model to automatically calculate the temperature loss at each time step of the simulation. https://onepetro.org/JPT/article/14/04/427/162715/Wellbore-Heat-Transmission.
+  Constant temperature decrease of the fluid temperature as it exits the production well. Check this option to use the `Ramey wellbore model <https://www.opengeosys.org/stable/docs/benchmarks/heat-transport-bhe/pipe_flow_ebhe/>`__ to automatically calculate the temperature loss at each time step of the simulation.
 
 System Availability
 ~~~~~~~~~~~~~~~~~~~
@@ -46,7 +46,7 @@ Temperature Decline
 
 The temperature decline parameters determine when and how often the project will require that new wells be drilled, and are related to the total resource potential specified on the :doc:`Resource page <geo_geothermal_resource>`. 
 
-For a description of the temperature decline inputs, see page 90 of the `GETEM User's Manual <https://workingincaes.inl.gov/SiteAssets/CAES%20Files/FORGE/inl_ext-16-38751%20GETEM%20User%20Manual%20Final.pdf>`__ (2016)
+For a description of the temperature decline inputs, see page 90 of the `GETEM User's Manual <https://www1.eere.energy.gov/geothermal/pdfs/getem_vol_i_technical_manual.pdf>`__ (2016)
 
 Flash Technology
 ~~~~~~~~~~~~~~~~

@@ -151,7 +151,7 @@ Capacity Payments
 NREL Cambium Hourly Price Data Download
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you do not have time series price data for your analysis, you can download hourly marginal cost data for modeled futures of the U.S. electricity sector from the `NREL Cambium database <https://cambium.nrel.gov/>`__.
+If you do not have time series price data for your analysis, you can download hourly marginal cost data for modeled futures of the U.S. electricity sector from the `NREL Scenario Viewer <https://scenarioviewer.nrel.gov/>`__.
 
 To download Cambium price data:
 

@@ -141,7 +141,7 @@ After you click **Calculate BOS**, when the LandBOSSE model finishes running, it
   The cost of personnel to manage contracts during the warranty period and make any required claims as a percentage of the total balance-of-system costs.
 
 **Sales and Use Tax**
-  Taxes on projects vary dramatically by counties and states, with some having Renewable Energy Zones without taxes.  For more information on sales and use taxes in the United States, see the `Tax Foundation <http://taxfoundation.org/article/state-and-local-sales-tax-rates-2013>`__   and `DSIRE USA <http://www.dsireusa.org/summarytables/finre.cfm>`__   websites.
+  Taxes on projects vary dramatically by counties and states, with some having Renewable Energy Zones without taxes.
 
 **Overhead**
   Percentage of the project budget for overhead costs such as administration, trailer rental, utilities, etc.
@@ -150,7 +150,7 @@ After you click **Calculate BOS**, when the LandBOSSE model finishes running, it
   Percentage of the BOS project that is being considered as the project profit margin for the BOS activities.
 
 **Development Fee**
-  This is the accumulation of different costs of developing a project such as real estate, wind resource study, interconnection costs, environmental and permitting, etc.  This could also include project profits created by the sale of the project from one developer to another developer.
+  This is the accumulation of different costs of developing a project such as real estate, wind resource study, interconnection costs, environmental and permitting, etc. This could also include project profits created by the sale of the project from one developer to another developer.
 
 Balance of System Detailed Results
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -163,6 +163,6 @@ Offshore Balance of System Cost Model
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The offshore balance-of-system cost model is for a wind farm installed offshore, in a body of water such as coastal ocean waters or lake. The model calculates a value for the **Balance of System** cost input in $/kW based on the data you provide for the detailed costs.
 
-For a description of the model and its inputs, see Maness, M.; Maples, B.; Smith, A.; NREL Offshore Balance-of-System Model. National Renewable Energy Laboratory, NREL/TP-6A20-66874. (`PDF 4.7 MB <http://www.nrel.gov/docs/fy17osti/66874.pdf>`__).
+For a description of the model and its inputs, see Maness, M.; Maples, B.; Smith, A.; NREL Offshore Balance-of-System Model. National Renewable Energy Laboratory, NREL/TP-6A20-66874. (`PDF 4.7 MB <https://docs.nrel.gov/docs/fy17osti/66874.pdf>`__).
 
 After you specify values for the detailed inputs, click **Apply BOS Estimate** to calculate the BOS cost and automatically apply it to the **Balance of System Cost**.

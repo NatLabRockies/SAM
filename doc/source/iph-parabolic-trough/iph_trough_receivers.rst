@@ -9,7 +9,7 @@ On the Receivers page, you define the characteristics of up to four receiver typ
 
 For each receiver type, you also specify up to four variations. You can use the variations to describe different conditions of the receiver type. For example, you may use one variation to describe the receiver type in good condition, and another to describe the receiver type with a damaged glass envelope.
 
-.. note:: For a detailed explanation of the physical trough model, see Wagner, M. J.; Gilman, P. (2011). *Technical Manual for the SAM Physical Trough Model*. 124 pp.; NREL Report No. TP-5500-51825. http://www.nrel.gov/docs/fy11osti/51825.pdf (3.7 MB)
+.. note:: For a detailed explanation of the physical trough model, see Wagner, M. J.; Gilman, P. (2011). *Technical Manual for the SAM Physical Trough Model*. 124 pp.; NREL Report No. TP-5500-51825. https://docs.nrel.gov/docs/fy11osti/51825.pdf (3.7 MB)
 
 .. _physicaltrough_hceinputs:
 

@@ -8,7 +8,7 @@ The Time Series tab displays the same data shown in tables on the :doc:`Data Tab
 
 When you run a simulation for the first time after opening or creating a .sam file, SAM automatically displays either system power generated for most configurations, or battery state of charge with electricity to load from battery, system, and grid for behind-the-meter battery configurations. To change the graph, use the check boxes to add and remove variables and buttons in the toolbar at the bottom right of the graph to control stacked graphs, axis scale, and other settings.
  
-.. note:: SAM's time series data viewer is also available as a standalone application. For details, see `BEopt Download DView <https://beopt.nrel.gov/downloadDView>`__.
+.. note:: SAM's time series data viewer is also available as a standalone application. For details, see https://github.com/NREL/wex/wiki/DView.
 
 To view the Time Series graphs:
 

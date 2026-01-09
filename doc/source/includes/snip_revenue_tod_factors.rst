@@ -20,7 +20,7 @@ SAM calculates the PPA price for each hour by multiplying the Year 1 :doc:`PPA p
 .. note:: When you click **Apply values from library**, SAM replaces the TOD data with data from the library. If you are using your own TOD data, you can use the **Save data to file** button at the bottom of the Time of Delivery Factors page to save your data.
 
 **Download forecast price data from Cambium**
-  If you do not have time series price data for your analysis, you can download hourly marginal cost data for modeled futures of the U.S. electricity sector from the `NREL Cambium database <https://cambium.nrel.gov/>`__  . SAM runs the Cambium Time Series Prices :doc:`macro <../reference/macros>`, which prompts you to choose from the available price data, and then automatically sets the following inputs:
+  If you do not have time series price data for your analysis, you can download hourly marginal cost data for modeled futures of the U.S. electricity sector from the `NREL Scenario Viewer <https://scenarioviewer.nrel.gov/>`__  . SAM runs the Cambium Time Series Prices :doc:`macro <../reference/macros>`, which prompts you to choose from the available price data, and then automatically sets the following inputs:
 
 * Chooses the **Specify PPA price** option.
 
@@ -30,7 +30,7 @@ SAM calculates the PPA price for each hour by multiplying the Year 1 :doc:`PPA p
 
 * Converts the price data from $/MWh to $/kWh and set the **TOD factors by time step** to the downloaded price data.
 
-  For a discussion of how to use Cambium modeled price data in your analysis, see https://emp.lbl.gov/publications/integrating-cambium-marginal-costs  .
+  For a discussion of how to use Cambium modeled price data in your analysis, see https://energyanalysis.lbl.gov/publications/integrating-cambium-marginal-costs.
 
 To populate values from the library:
 
@@ -87,17 +87,17 @@ The library is stored as a CSV file in the libraries folder of your SAM installa
   This schedule is based on data from an NREL California low carbon grid study for 2030 assuming 50% of the state's electricity generation is from renewable energy sources. See Brinkman, G.; Jorgenson, J. (2016) Low carbon grid study: Analysis of a 50% emission reduction in California. National Renewable Energy Laboratory. NREL/TP-6A20-64884. (`PDF 2.2 MB <https://www.nrel.gov/docs/fy16osti/64884.pdf>`__  )
 
 **California PUC Advice Letter Data**
-  For the 2015 and 2016 data in the library, the factors are from the following California Public Utilities Commission `Renewable Auction Mechanism Program <https://www.cpuc.ca.gov/industries-and-topics/electrical-energy/electric-power-procurement/rps/rps-procurement-programs/rps-renewable-auction-mechanism>`__   advice letters:
+  For the 2015 and 2016 data in the library, the factors are from the following California Public Utilities Commission `Renewable Auction Mechanism Program <https://www.cpuc.ca.gov/industries-and-topics/electrical-energy/electric-power-procurement/rps/rps-procurement-programs/rps-renewable-auction-mechanism>`__ advice letters:
 
-*   PG&E 2016: `Advice Letter 4780-E <https://www.pge.com/nots/rates/tariffs/tm2/pdf/ELEC_4780-E.pdf>`__   (January 22, 2016)
+  * PG&E 2016: Advice Letter 4780-E (January 22, 2016)
 
-*   SCE 2015: `Advice Letter 3244-E <https://www.sce.com/NR/sc3/tm2/pdf/3244-E.pdf>`__   (August 6, 2015)
+  * SCE 2015: Advice Letter 3244-E (August 6, 2015)
 
-*   SDG&E 2015: `Advice Letter 2717-E <https://www.sdge.com/sites/default/files/documents/732220627/SDG&E%20Summer%202015%20RAM%206%20RFO%20Protocol.pdf?nid=15046>`__   Attachment A (July 13, 2015)
+  * SDG&E 2015: Advice Letter 2717-E Attachment A (July 13, 2015)
 
-.. note:: PG&E and SDG&E offer different TOD options for projects that meet "energy only" or "full capacity deliverability" requirements, and SDG&E has options for "local" and "system" projects. Use your interconnection application and other documents to determine which TOD factors are appropriate for your project so you can choose the correct option in SAM.
+  PG&E and SDG&E offer different TOD options for projects that meet "energy only" or "full capacity deliverability" requirements, and SDG&E has options for "local" and "system" projects. Use your interconnection application and other documents to determine which TOD factors are appropriate for your project so you can choose the correct option in SAM.
 
-  For the 2009 and 2011 data, the factors are from the Market Price Referent (MPR) documents available on the `California Public Utilities Commission website <http://www.cpuc.ca.gov/General.aspx?id=5599>`__  . The SAM library includes values from Appendix B of Resolution E-4442 (2011) and Resolution E-4298 (2009).
+  For the 2009 and 2011 data, the factors are California Energy Commission Market Price Referent (MPR) values adopted by the California Public Utilities Commission (CPUC) in 2011. The SAM library includes values from Appendix B of Resolution E-4442 (2011) and Resolution E-4298 (2009). See the `CPUC Resolution Search Form <https://docs.cpuc.ca.gov/resolutionsearchform.aspx>`__ to find these documents.
 
 Time of Delivery Factors in Results
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

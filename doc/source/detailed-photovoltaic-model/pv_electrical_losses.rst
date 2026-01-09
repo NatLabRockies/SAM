@@ -42,7 +42,7 @@ The five DC loss categories represent the following sources of DC electrical los
 **Bifacial electrical mismatch, %**
   For bifacial modules, accounts for electrical mismatch between modules in the array caused by variation of irradiance on the the rear-side of the array.
 
-  Click **Calculate** to automatically calculate the bifacial electrical mismatch based on the method described in Deline, C.; Silvana Ayala P.; Sara M.; Carlos O. (2020) `Estimating and parameterizing mismatch power loss in bifacial photovoltaic systems <https://doi.org/10.1002/pip.3259>`__. *Progress in Photovoltaics: Research and Applications* 28, no. 7 (2020): 691-703.
+  Click **Calculate** to automatically calculate the bifacial electrical mismatch based on the method described in Deline, C.; Silvana Ayala P.; Sara M.; Carlos O. (2020) `Estimating and parameterizing mismatch power loss in bifacial photovoltaic systems <https://www.osti.gov/servlets/purl/1606308>`__. *Progress in Photovoltaics: Research and Applications* 28, no. 7 (2020): 691-703.
 
 **DC power optimizer loss, %**
   Accounts for power losses of any power conditioning equipment installed with the array. SAM does not explicitly model DC/DC conversion losses, but you can account for them here.

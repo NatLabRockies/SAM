@@ -3,11 +3,9 @@ Feedstock
 
 The Feedstock page inputs define the biomass resource of the location you specify on the :doc:`Ambient Conditions <biopower_location_ambient_conditions>` page, and the physical content of the resource. 
 
-For a technical description of the biopower model, see Jorgenson, J.; Gilman, P.; Dobos, A. (2011). Technical Manual for the SAM Biomass Power Generation Model. 40 pp.; NREL Report No. TP-6A20-52688. http://www.nrel.gov/docs/fy11osti/52688.pdf
+For a technical description of the biopower model, see Jorgenson, J.; Gilman, P.; Dobos, A. (2011). Technical Manual for the SAM Biomass Power Generation Model. 40 pp.; NREL Report No. TP-6A20-52688. https://docs.nrel.gov/docs/fy11osti/52688.pdf
 
 You can use any combination of the following options to specify the feedstock:
-
-* Download feedstock data from the NREL Biofuels Atlas (http://maps.nrel.gov/biomass) to determine the feedstock available for common agricultural and wood residues at the location you specify on the :doc:`Location and Ambient Conditions <biopower_location_ambient_conditions>` page.
 
 * Specify feedstock availability, obtainability, and moisture content by hand.
 
@@ -23,7 +21,7 @@ Describes the amount of biomass available as an energy resource within a certain
 **Collection radius, miles**
   The collection radius defines a circle with the location specified on the Location and Ambient Conditions page at its center. 
 
-  Increasing the collection radius increases the amount of available biomass, but also causes the distance-dependent feedstock delivery costs (specified on the :doc:`Feedstock costs <biopower_feedstock_costs>`   page) to increase. Generally, a collection radius of greater than 50 miles is unrealistic.
+  Increasing the collection radius increases the amount of available biomass, but also causes the distance-dependent feedstock delivery costs (specified on the :doc:`Feedstock costs <biopower_feedstock_costs>` page) to increase. Generally, a collection radius of greater than 50 miles is unrealistic.
 
 **Resource Available**
   Quantity of each resource available in bone dry tons/year.

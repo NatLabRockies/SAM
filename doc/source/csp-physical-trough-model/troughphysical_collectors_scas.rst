@@ -5,7 +5,7 @@ A collector (SCA, solar collector assembly) is an individually tracking componen
 
 On the Collectors page, you can define the characteristics of up to four collector types. On the Solar Field page :ref:`single loop configuration <physical_sfloopconfiguration>`, you specify how the different collector types are distributed in each loop of the field, assuming that the field consists of identical loops. SAM only uses data for collector types that you have included in the single loop configuration on the Solar Field page
 
-.. note:: For a detailed explanation of the physical trough model, see Wagner, M. J.; Gilman, P. (2011). *Technical Manual for the SAM Physical Trough Model*. 124 pp.; NREL Report No. TP-5500-51825. http://www.nrel.gov/docs/fy11osti/51825.pdf (3.7 MB)
+.. note:: For a detailed explanation of the physical trough model, see Wagner, M. J.; Gilman, P. (2011). *Technical Manual for the SAM Physical Trough Model*. 124 pp.; NREL Report No. TP-5500-51825. https://docs.nrel.gov/docs/fy11osti/51825.pdf (3.7 MB)
 
 Collector Library
 ~~~~~~~~~~~~~~~~~

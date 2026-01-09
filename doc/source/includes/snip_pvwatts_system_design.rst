@@ -288,7 +288,7 @@ Snow
 
 If you are using a weather file with snow depth data, you can enable the snow model to estimate reduction in the system's output due to snow covering the array. For a description of SAM's snow model, see
 
-* Ryberg, D.; Freeman, J. (2017).  Integration, Validation and Application of a PV Snow Coverage Model in SAM. National Renewable Energy Laboratory. 33 pp. TP-6A20-68705 available along with other technical documentation from the `SAM website <https://sam.nrel.gov/photovoltaic/pv-sub-page-2.html>`__.
+* Ryberg, D.; Freeman, J. (2017).  Integration, Validation and Application of a PV Snow Coverage Model in SAM. National Renewable Energy Laboratory. 33 pp. TP-6A20-68705 available along with other technical documentation from the `SAM website <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__.
 
 .. note:: Snow depth data is not available in the NSRDB PSM V3 dataset. It is available in the `NSRDB 1961 - 1990 Archive Data <https://nsrdb.nrel.gov/data-sets/archives.html>`__. This older data does not represent the best up-to-date data from the NSRDB, but may be useful for testing SAM's snow loss model.
 

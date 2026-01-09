@@ -1,7 +1,7 @@
 Geothermal
 ==========
 
-SAM's geothermal power model is based on the U.S. Department of Energy's Geothermal Electricity Technology Evaluation Model (GETEM), https://energy.gov/eere/geothermal/geothermal-electricity-technology-evaluation-model. The model calculates the annual and lifetime electrical output of a utility-scale geothermal power plant, and the levelized cost of energy (LCOE) and other economic metrics for the plant.
+SAM's geothermal power model is based on the U.S. Department of Energy's Geothermal Electricity Technology Evaluation Model (GETEM), https://www.energy.gov/eere/geothermal/geothermal-electricity-technology-evaluation-model. The model calculates the annual and lifetime electrical output of a utility-scale geothermal power plant, and the levelized cost of energy (LCOE) and other economic metrics for the plant.
 
 For more details about the model, see the SAM website Geothermal page at https://sam.nrel.gov/geothermal.html. 
 

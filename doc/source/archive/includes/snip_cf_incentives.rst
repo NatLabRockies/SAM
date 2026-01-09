@@ -49,7 +49,7 @@ The incentive cash flow rows show the value of cash incentives and tax credits, 
 
   Where *Amount*, *Term*, and *Escalation*   are the values you specify on the :doc:`Incentives <../incentives-and-depreciation/incentives>`   page, and *Energy*   is the value displayed in the Energy row of the cash flow table (described above).
 
-  SAM rounds the product *Amount ($/kWh) × (1 + Escalation)^(n-1)*   to the nearest multiple of 0.1 cent as described in Notice 2010-37 of `IRS Bulletin 2010-18 <http://www.irs.gov/irb/2010-18_IRB/ar11.html#d0e3799>`__  .
+  SAM rounds the product *Amount ($/kWh) × (1 + Escalation)^(n-1)*   to the nearest multiple of 0.1 cent as described in Notice 2010-37 of `IRS Bulletin 2010-18 <https://www.irs.gov/irb/2010-18_IRB/ar11.html>`__  .
 
 .. note:: If you specify year-by-year PTC rates on the Incentives page using an Annual Schedule instead of a single value, SAM ignores the PTC escalation rate.
 

@@ -9,7 +9,7 @@ As with all of the SAM models, the Geothermal Installation costs page is used to
 
 This is an overview of the geothermal cost inputs (which come from the GETEM model). For more details of how geothermal system costs are specified in the SAM's geothermal model, see the following sections of the GETEM documentation at the following link: https://www.energy.gov/eere/geothermal/geothermal-electricity-technology-evaluation-model.
 
-Details on the inputs and models used for geothermal cost calculations can be found in the `GETEM User Manual <https://workingincaes.inl.gov/SiteAssets/CAES%20Files/FORGE/inl_ext-16-38751%20GETEM%20User%20Manual%20Final.pdf>`__ (2016).
+Details on the inputs and models used for geothermal cost calculations can be found in the `GETEM User Manual <https://www1.eere.energy.gov/geothermal/pdfs/getem_vol_i_technical_manual.pdf>`__ (2016).
 
 Number of Wells to Drill
 ~~~~~~~~~~~~~~~~~~~~~~~~

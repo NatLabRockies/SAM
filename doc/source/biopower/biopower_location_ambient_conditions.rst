@@ -65,7 +65,7 @@ See also
 
 .. note:: For more information about weather data, including where to find data for locations outside of the United States, see the `SAM website <https://sam.nrel.gov/weather>`__.
 
-.. note:: For a helpful discussion of weather data and power system simulation, see Sengupta et al., (2015) "Best Practices Handbook for the Collection and Use of Solar Resource Data for Solar Energy Applications," NREL Report No. TP-5D00-63112 (`PDF 8.9 MB <http://www.nrel.gov/docs/fy15osti/63112.pdf>`__).
+.. note:: For a helpful discussion of weather data and power system simulation, see Sengupta et al., (2015) "Best Practices Handbook for the Collection and Use of Solar Resource Data for Solar Energy Applications," NREL Report No. TP-5D00-63112 (`PDF 8.9 MB <https://docs.nrel.gov/docs/fy15osti/63112.pdf>`__).
 
 .. _bio-ambient-library:
 

@@ -3,7 +3,7 @@ CSP Power Tower Molten Salt
 
 A power tower system (also called a central receiver system) is a type of concentrating solar power (CSP) system that consists of a heliostat field, tower and receiver, power block, and optional thermal energy storage system. The field of flat, sun-tracking mirrors called heliostats focus direct normal solar radiation onto a receiver at the top of the tower, where a heat-transfer fluid is heated and pumped to the power block. The power block generates steam that drives a conventional steam turbine and generator to convert the thermal energy to electricity.
 
-The code for SAM's power tower performance model, including the Rankine cycle model, is adapted from the model developed at the University of Wisconsin and described in *Simulation and Predictive Performance Modeling of Utility-Scale Central Receiver System Power Plants*, Wagner (2008) (`ZIP 32 MB <http://sel.me.wisc.edu/publications/theses/wagner08.zip>`__).
+The code for SAM's power tower performance model, including the Rankine cycle model, is adapted from the model developed at the University of Wisconsin and described in *Simulation and Predictive Performance Modeling of Utility-Scale Central Receiver System Power Plants*, Wagner (2008) (`ZIP 32 MB <http://digital.library.wisc.edu/1793/45001>`__).
 
 The solar field optimization algorithm uses `SolarPILOT™ <https://www.nrel.gov/csp/solarpilot.html>`__ to generate the heliostat field layout and characterize optical performance.
 

@@ -20,4 +20,10 @@ DSCR debt sizing note, see Brian email 10/31/2025 "Addtional thoughts on debt si
 
 ## Complete
 
+Fix broken URLs. 1/9/2026
+
+Update URL list in Configure Proxy Server topic to match files in SAM and SAM-private repos. 1/8/2026
+
 Revise AC and DC degradation pages. 12/17/2025
+
+Migrate Help authoring from proprietary Help & Manual to open source Sphinx with Sphinx Book Theme. 12/15/2026

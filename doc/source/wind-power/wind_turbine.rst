@@ -5,11 +5,11 @@ The wind turbine parameters specify the turbine power curve and hub height of a 
 
 For a project with multiple turbines, SAM assumes that the :doc:`wind farm <wind_farm>` consists of identical turbines.
 
-For a technical description of the wind turbine models, see Chapters 5-7 of Freeman, J.; Gilman, P.; Jorgenson, J.; Ferguson, T. (2014). "Reference Manual for the System Advisor Model's Wind Performance Model." National Renewable Energy Laboratory, NREL/TP-6A20-60570. (`PDF 738 KB <http://www.nrel.gov/docs/fy14osti/60570.pdf>`__)
+For a technical description of the wind turbine models, see Chapters 5-7 of Freeman, J.; Gilman, P.; Jorgenson, J.; Ferguson, T. (2014). "Reference Manual for the System Advisor Model's Wind Performance Model." National Renewable Energy Laboratory, NREL/TP-6A20-60570. (`PDF 738 KB <https://docs.nrel.gov/docs/fy14osti/60570.pdf>`__)
 
 For information about small wind certification, see:
 
-* `Small Wind Certification Council <http://smallwindcertification.org/certified-small-turbines/>`__
+* `Small Wind Certification Council <https://smallwindcertification.org/certified-small-turbines/>`__
 
 
 * `IREC Certified Wind Turbines <https://irecusa.org/workforce-development/credentials-qa/certified-wind-turbines/>`__
@@ -50,7 +50,7 @@ Wind Turbine Design Characteristics
 
 The wind turbine design parameters are the input variables that are active when you choose the **Define the turbine design characteristics** option.
 
-For a description of how SAM uses these inputs to calculate the turbine's power curve, see Section 5.2 of Freeman, J.; Gilman, P.; Jorgenson, J.; Ferguson, T. (2014). "Reference Manual for the System Advisor Model's Wind Performance Model." National Renewable Energy Laboratory, NREL/TP-6A20-60570. (`PDF 738 KB <http://www.nrel.gov/docs/fy14osti/60570.pdf>`__)
+For a description of how SAM uses these inputs to calculate the turbine's power curve, see Section 5.2 of Freeman, J.; Gilman, P.; Jorgenson, J.; Ferguson, T. (2014). "Reference Manual for the System Advisor Model's Wind Performance Model." National Renewable Energy Laboratory, NREL/TP-6A20-60570. (`PDF 738 KB <https://docs.nrel.gov/docs/fy14osti/60570.pdf>`__)
 
 **User-defined Rated Output**
   The turbine's nameplate capacity in kW.

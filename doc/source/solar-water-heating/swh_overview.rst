@@ -10,13 +10,13 @@ See the `SAM website <https://sam.nrel.gov/solar-water-heating>`__ for additiona
 Solar Water Heating Model Notes
 ...............................
 
-* SAM calculates the water mains inlet temperature based on the correlation to local air temperature used in the Building America Benchmark. The algorithm is described in Burch and Christensen (2007) `Towards Development of an Algorithm for Mains Water Temperature <http://nrelpubs.nrel.gov/Webtop/ws/nich/www/public/Record?rpp=25&upp=0&m=1&w=NATIVE('TITLE_V+ph+words+''water+mains''')&order=native('pubyear/Descend')>`__. SAM reports the hourly water mains temperatures on :doc:`Tables <../results/data>` on the :doc:`Results <../results/results>` page as **T mains (C)**. If you have your own mains temperature data, you can override the mains inlet temperature calculation import an 8,760 hourly mains profile on the :doc:`SWH System <swh_system>` page.
+* SAM calculates the water mains inlet temperature based on the correlation to local air temperature used in the Building America Benchmark. The algorithm is described in Burch and Christensen (2007) `Towards Development of an Algorithm for Mains Water Temperature <https://research-hub.nrel.gov/en/publications/towards-development-of-an-algorithm-for-mains-water-temperature/>`__. SAM reports the hourly water mains temperatures on :doc:`Tables <../results/data>` on the :doc:`Results <../results/results>` page as **T mains (C)**. If you have your own mains temperature data, you can override the mains inlet temperature calculation import an 8,760 hourly mains profile on the :doc:`SWH System <swh_system>` page.
 
 * SAM assumes that the flow rate is constant over each hour, using values from the hourly hot water draw profile that you specify. SAM calculates the flow rate in kg/hr as the draw volume converted to kg for a given hour divided by one hour.
 
 * Collectors are assumed to be flat plate collectors plumbed in parallel, with uniform flow through each collector at the tested flow rate.
 
-* Collectors are characterized by the linear form of the collector efficiency and IAM (incident angle modifier) equations with parameters available from test data such as those available at `www.solar-rating.org <https://www.solar-rating.org>`__.
+* Collectors are characterized by the linear form of the collector efficiency and IAM (incident angle modifier) equations with parameters available from test data such as those available at `www.solar-rating.org <https://www.solar-rating.org/>`__.
 
 * The collector loop is assumed to be charged with water having *Cp = 4.18 kJ/kG-ºC* or glycol having *Cp = 3.4 kJ/kG-ºC*. You can specify which fluid to use.
 

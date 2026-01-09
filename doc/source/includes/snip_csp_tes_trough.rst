@@ -8,7 +8,7 @@ The storage system variables describe the thermal energy storage system. The inp
  
 
 
-.. note:: For a detailed explanation of the physical trough model, see Wagner, M. J.; Gilman, P. (2011). *Technical Manual for the SAM Physical Trough Model*. 124 pp.; NREL Report No. TP-5500-51825. http://www.nrel.gov/docs/fy11osti/51825.pdf (3.7 MB)
+.. note:: For a detailed explanation of the physical trough model, see Wagner, M. J.; Gilman, P. (2011). *Technical Manual for the SAM Physical Trough Model*. 124 pp.; NREL Report No. TP-5500-51825. https://docs.nrel.gov/docs/fy11osti/51825.pdf (3.7 MB)
 
 
 .. note:: In versions of SAM released after February 2020, fossil backup is not available for the Physical Trough model because it was not incorporated into the new dispatch controller logic at the time of the software release. If you want to use fossil backup, use version SAM 2018.11.11, available on the SAM website Download page.
@@ -154,7 +154,7 @@ The packed bed storage technology consists of a tank filled with a packed bed of
 
 The tank model is subdivided spatially along the thermal gradient. The solid media and HTF are assumed to have equal temperatures in each subsection. The SAM timestep is divided into subtimesteps. This one-temperature model is based on the work of Vortmeyer and Schaefer.
 
-* Vortmeyer, D., and R. J. Schaefer. “Equivalence of One- and Two-Phase Models for Heat Transfer Processes in Packed Beds: One Dimensional Theory.” Chemical Engineering Science 29, no. 2 (February 1, 1974): 485–91. https://doi.org/10.1016/0009-2509(74)80059-X.
+* Vortmeyer, D., and R. J. Schaefer. “Equivalence of One- and Two-Phase Models for Heat Transfer Processes in Packed Beds: One Dimensional Theory.” Chemical Engineering Science 29, no. 2 (February 1, 1974): 485–91. https://linkinghub.elsevier.com/retrieve/pii/000925097480059X.
 
 Packed Bed TES Parameters
 .........................

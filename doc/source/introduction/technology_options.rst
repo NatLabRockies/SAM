@@ -20,7 +20,7 @@ Use the detailed photovoltaic model when you have information about the equipmen
 PVWatts Model
 .............
 
-The :doc:`PVWatts model <../pvwatts/pvwatts>` is an implementation of NREL's popular `online photovoltaic calculator <http://pvwatts.nrel.gov/>`__. It models a grid-connected photovoltaic system using a few basic inputs to describe the system's nameplate capacity, array orientation and mounting type, and system losses. PVWatts makes internal assumptions about module and inverter characteristics for three types of modules. SAM's implementation of PVWatts includes options for modeling shading that are not available with the online version.
+The :doc:`PVWatts model <../pvwatts/pvwatts>` is an implementation of NREL's popular `online photovoltaic calculator <https://pvwatts.nrel.gov/>`__. It models a grid-connected photovoltaic system using a few basic inputs to describe the system's nameplate capacity, array orientation and mounting type, and system losses. PVWatts makes internal assumptions about module and inverter characteristics for three types of modules. SAM's implementation of PVWatts includes options for modeling shading that are not available with the online version.
 
 Use the PVWatts model for preliminary project analysis before you have information about the type of equipment you plan to use in the system, or for other analyses that require a reasonable estimate of a photovoltaic system's electrical output.
 

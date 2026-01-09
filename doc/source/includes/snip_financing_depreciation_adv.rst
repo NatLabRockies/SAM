@@ -18,7 +18,7 @@ SAM makes the following simplifying assumptions:
 * Investment-based incentives and capacity-based incentives reduce the depreciation basis proportionally.
 
 **Depreciation Classes**
-  Each row in the Depreciation Classes box represents a recovery period (5, 15, 20, or 39 years) and depreciation method (MACRS or Straight Line) based on the guidelines in the United States tax code. See U.S. Internal Revenue Service Publication 946 (http://www.irs.gov/pub/irs-pdf/p946.pdf  ) for details. 
+  Each row in the Depreciation Classes box represents a recovery period (5, 15, 20, or 39 years) and depreciation method (MACRS or Straight Line) based on the guidelines in the United States tax code. See U.S. Internal Revenue Service Publication 946 (https://www.irs.gov/pub/irs-pdf/p946.pdf) for details. 
 
   The following table shows the depreciation percentage by year for each depreciation class:
 

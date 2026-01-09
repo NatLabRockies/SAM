@@ -9,14 +9,13 @@ Because SAM does not track voltage levels in the system, it assumes that for eac
 
 The inverter single-point efficiency model calculates the inverter's AC output by multiplying the DC input (equivalent to the array's DC electrical output) by a fixed DC-to-AC conversion efficiency that you specify on the Inverter page. Unlike the Sandia inverter model, the single-point efficiency model assumes that the inverter's efficiency does not vary under different operating conditions.
 
-.. note:: SAM's Sandia inverter library contains parameters for inverters in the List of Eligible Inverters per SB1 Guidelines at http://www.gosolarcalifornia.org/equipment/inverters.php. We try to keep the library as current as possible, but there may be periods when SAM's library is out of date. If the library appears to be out of date, you can check for updates by clicking the link on the Help menu to see if we have prepared a new module library.
+.. note:: SAM's Sandia inverter library contains parameters for inverters in the List of Eligible Inverters per SB1 Guidelines at https://solarequipment.energy.ca.gov/Home/InvertersList. We try to keep the library as current as possible, but there may be periods when SAM's library is out of date. If the library appears to be out of date, you can check for updates by clicking the link on the Help menu to see if we have prepared a new module library.
 
+   If you are an inverter manufacturer and would like to add your inverter to the list, you should contact the California Energy Commission (CEC) or Sandia National Laboratories directly.
 
-.. note:: If you are an inverter manufacturer and would like to add your inverter to the list, you should contact the California Energy Commission (CEC) or Sandia National Laboratories directly. For information about the Sandia Test and Evaluation program, see http://energy.sandia.gov/?page_id=279. For a list of Sandia contacts, see http://energy.sandia.gov/?page_id=2772. For CEC contacts, see http://www.gosolarcalifornia.ca.gov/equipment/add.php.
+The Sandia inverter model is described in King D et al, 2007. *Performance Model for Grid-Connected Photovoltaic Inverters*. Sandia National Laboratories. SAND2007-5036. https://doi.org/10.2172/920449.
 
-The Sandia inverter model is described in King D et al, 2007. *Performance Model for Grid-Connected Photovoltaic Inverters*. Sandia National Laboratories. SAND2007-5036. http://infoserve.sandia.gov/sand_doc/2007/075036.pdf. Also see the Sandia PV Modeling and Analysis website at http://energy.sandia.gov/?page_id=2493 for more on PV system performance modeling.
-
-The CEC inverter test protocol is described in Bower W et al, 2004. *Performance Test Protocol for Evaluating Inverters Used in Grid-Connected Photovoltaic Systems*. http://bewengineering.com/docs/index.htm
+The CEC inverter test protocol is described in Bower W et al, 2004. *Performance Test Protocol for Evaluating Inverters Used in Grid-Connected Photovoltaic Systems*. https://www.energy.ca.gov/sites/default/files/2020-06/2004-11-22_Sandia_Test_Protocol_ada.pdf
 
 To use the Sandia inverter model:
 

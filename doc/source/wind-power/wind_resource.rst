@@ -29,7 +29,7 @@ Choose a representative typical wind resource file
 
 .. _filerepresentative:
 
-SAM comes with a set of representative typical wind resource files that are appropriate for very preliminary studies to explore the feasibility of potential projects, or for policy studies. The files were developed in 2012 for NREL by `AWS Truepower <http://www.awstruepower.com/>`__. Each file contains simulated hourly resource data and includes wind speed, wind direction, ambient temperature, and atmospheric pressure data at 50, 80, and 110 meters above the ground.
+SAM comes with a set of representative typical wind resource files that are appropriate for very preliminary studies to explore the feasibility of potential projects, or for policy studies. The files were developed in 2012 for NREL by AWS Truepower, which is now part of `UL Solutions <https://www.ul.com/industries/energy-and-utilities/renewables>`__. Each file contains simulated hourly resource data and includes wind speed, wind direction, ambient temperature, and atmospheric pressure data at 50, 80, and 110 meters above the ground.
 
 Choose a representative typical wind resource file:
 

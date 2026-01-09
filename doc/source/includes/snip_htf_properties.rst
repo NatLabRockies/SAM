@@ -68,10 +68,10 @@
      - The maximum optimal operating temperature is the value reported as "maximum bulk temperature" on the product data sheets.
 
 **Data Sources for HTF Properties**
-  Hitec fluids: Raade J, Padowitz D, Vaughn J. `Low Melting Point Molten Salt Heat Transfer Fluid with Reduced Cost <http://www.halotechnics.com/technology/publications.html>`__  . Halotechnics. Presented at SolarPaces 2011 in Granada, Spain.
+  Hitec fluids: Raade J, Padowitz D, Vaughn J. "Low Melting Point Molten Salt Heat Transfer Fluid with Reduced Cost". Halotechnics. Presented at SolarPaces 2011 in Granada, Spain.
 
-  Caloria HT 43: `Product comparison tool <http://www.heat-transfer-fluid.com/resources/compare.php>`__   on Duratherm website.
+  Caloria HT 43: Product comparison tool originally available on Duratherm website.
 
-  Therminol Fluids: Solutia `Technical Bulletins <http://www.therminol.com/pages/region/na/>`__   7239115C, 7239271A, 7239146D.
+  Therminol Fluids: Solutia `Technical Bulletins <https://www.eastman.com/en/products/brands/therminol>`__  7239115C, 7239271A, 7239146D.
 
-  Dowtherm Fluids: Dow `Data Sheet <http://www.dow.com/heattrans/products/synthetic/dowtherm.htm>`__   for Q, no data sheet available for RP (high temp is from website): http://www.dow.com/heattrans/products/synthetic/dowtherm.htm)  .
+  Dowtherm Fluids: Dow `Data Sheet <https://www.dow.com/en-us/brand/dowtherm.html>`__ for Q, no data sheet available for RP (high temp is from website): https://www.dow.com/en-us/brand/dowtherm.html)  .

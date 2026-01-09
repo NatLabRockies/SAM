@@ -3,7 +3,7 @@ Wind
 
 The Wind Power model is for projects involving one or more large or small turbines with any of the financial models for residential, commercial, or utility-scale PPA projects.
 
-For a technical description of the wind power model, see Freeman, J.; Gilman, P.; Jorgenson, J.; Ferguson, T. (2014). "Reference Manual for the System Advisor Model's Wind Performance Model." National Renewable Energy Laboratory, NREL/TP-6A20-60570. (`PDF 738 KB <http://www.nrel.gov/docs/fy14osti/60570.pdf>`__)
+For a technical description of the wind power model, see Freeman, J.; Gilman, P.; Jorgenson, J.; Ferguson, T. (2014). "Reference Manual for the System Advisor Model's Wind Performance Model." National Renewable Energy Laboratory, NREL/TP-6A20-60570. (`PDF 738 KB <https://docs.nrel.gov/docs/fy14osti/60570.pdf>`__)
 
 .. note:: If you are new to SAM, you can use the Wind Wizard to create a wind case. The Wizard steps you through the inputs you need to create a basic case. To run the Wind Wizard, either start SAM and click **Quick start for new users** at the bottom left corner of the Welcome page, and then click **Wind Wizard**. If SAM is running, on the File menu, click **Close** to return to the Welcome page.
 
@@ -102,9 +102,9 @@ SAM allows you to choose from three different wake effect models to estimate the
 
 * **Simple Wake Model** is described below, and in more detail in Chapter 3 of Quinlan P (M.S., 1996), *Time Series Modeling of Hybrid Wind Photovoltaic Diesel Power Systems,* University of Wisconsin-Madison. (`ZIP 2.1 MB <http://sel.me.wisc.edu/publications/theses/quinlan_updated_96.zip>`__).
 
-* **Park (WAsP)** is described in `Open Wind Theoretical Basis and Validation <http://www.awsopenwind.org/downloads/documentation/OpenWindTheoryAndValidation.pdf/view>`__ (Version 1.3, April 2010), 2.1 Park Model, p. 6.
+* **Park (WAsP)** is described in `Open Wind Theoretical Basis and Validation <https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://collateral-library-production.s3.amazonaws.com/uploads/asset_file/attachment/51094/OpenWind_Theory_and_Validation-v3_HH_ULSolutions.pdf>`__ (Version 1.3, April 2010), 2.1 Park Model, p. 6.
 
-* **Eddy-Viscosity** is described in `Open Wind Theoretical Basis and Validation <http://www.awsopenwind.org/downloads/documentation/OpenWindTheoryAndValidation.pdf/view>`__ (Version 1.3, April 2010), 2.3 Eddy-Viscocity Wake Model, p. 7.
+* **Eddy-Viscosity** is described in `Open Wind Theoretical Basis and Validation <https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://collateral-library-production.s3.amazonaws.com/uploads/asset_file/attachment/51094/OpenWind_Theory_and_Validation-v3_HH_ULSolutions.pdf>`__ (Version 1.3, April 2010), 2.3 Eddy-Viscocity Wake Model, p. 7.
 
 Simple Wake Model
 .................

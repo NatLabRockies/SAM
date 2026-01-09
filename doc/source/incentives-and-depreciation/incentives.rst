@@ -85,7 +85,7 @@ To see the effect of the PTC on the :doc:`cash flow <../results/cashflow>`, for 
 **Escalation, %/year**
   The annual escalation rate that applies to the tax credit. SAM applies the escalation rate to years 2 and later of the project :doc:`cash flow <../results/cashflow>`  . SAM does not apply the inflation rate that you specify on the :doc:`Financial Parameters <../financial-parameters/fin_overview>`   page to the PTC. For example, for a tax credit with a ten year term and two percent escalation rate, the tax credit in year 2 would be 2% greater than in year 1, and in year 3, 2% greater than in year 2, and so on.
 
-  For both the state and federal PTC, SAM rounds the annual PTC rate in cents/kWh to the nearest 0.1 cent as described in Notice 2010-37 of `IRS Bulletin 2010-18 <http://www.irs.gov/irb/2010-18_IRB/ar11.html#d0e3799>`__  .
+  For both the state and federal PTC, SAM rounds the annual PTC rate in cents/kWh to the nearest 0.1 cent as described in Notice 2010-37 of `IRS Bulletin 2010-18 <https://www.irs.gov/irb/2010-18_IRB/ar11.html>`__  .
 
 Specifying Annual PTC Tax Credit Values
 .......................................

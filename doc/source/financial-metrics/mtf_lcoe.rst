@@ -60,7 +60,7 @@ For all financial models, SAM calculates both a real and nominal LCOE values. Th
 
 The choice of real or nominal LCOE depends on the analysis. Real (constant) dollars may be appropriate for long-term analyses to account for many years of inflation over the project life, while nominal (current) dollars may be more appropriate for short-term analyses. 
 
-Some industries prefer to use one form over the other. For example, when discussing LCOE for parabolic trough projects, analysts have tended to use the nominal LCOE (see `Current and Future costs for Parabolic Trough and Power Tower Systems in the US Market <http://www.nrel.gov/docs/fy11osti/49303.pdf>`__), while the U.S. Department of Energy has used the real LCOE in its comparative analysis of photovoltaic project costs (`Solar Energy Technologies Program Multi-Year Program Plan 2007-2011 <http://www1.eere.energy.gov/solar/pdfs/set_myp_2007-2011_proof_1.pdf>`__).
+Some industries prefer to use one form over the other. For example, when discussing LCOE for parabolic trough projects, analysts have tended to use the nominal LCOE (see `Current and Future costs for Parabolic Trough and Power Tower Systems in the US Market <https://docs.nrel.gov/docs/fy11osti/49303.pdf>`__), while the U.S. Department of Energy has used the real LCOE in its comparative analysis of photovoltaic project costs (`Solar Energy Technologies Program Multi-Year Program Plan 2007-2011 <http://www1.eere.energy.gov/solar/pdfs/set_myp_2007-2011_proof_1.pdf>`__).
 
 Be sure to use the same form of the LCOE when comparing costs for different alternatives: Never compare a real LCOE of one alternative with a nominal LCOE of another.
 
@@ -105,7 +105,7 @@ Where,
 Levelized Cost of Energy Definition
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This description of the LCOE of energy uses the vocabulary and equations described in the *Manual for the Economic Evaluation of Energy Efficiency and Renewable Energy Technologies*. (Short 1995) http://www.nrel.gov/docs/legosti/old/5173.pdf.
+This description of the LCOE of energy uses the vocabulary and equations described in the *Manual for the Economic Evaluation of Energy Efficiency and Renewable Energy Technologies*. (Short 1995) https://docs.nrel.gov/docs/legosti/old/5173.pdf.
 
 By definition, a project's annual cost *C*\ :sub:`n`\  is the product of the LCOE and the quantity of electricity delivered by the system to the grid and/or load in that year, *Q*\ :sub:`n`\ : 
 

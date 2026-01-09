@@ -62,7 +62,7 @@ SAM's detailed photovoltaic model uses DNI and DHI data with sun and subarray an
 
 The isotropic model tends to under-predict the global radiation on a tilted surface, and is included as an option for analysis comparing SAM results with those from other models using this approach. The HDKR and Perez methods provide comparable estimates of the incident diffuse irradiance.
 
-For more details about these methods, see the photovoltaic reference manual, which is available for download from the `SAM website <https://sam.nrel.gov/photovoltaic/pv-sub-page-2.html>`__.
+For more details about these methods, see the photovoltaic reference manual, which is available for download from the `SAM website <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__.
 
 **Isotropic**
   The isotropic method assumes that diffuse radiation is uniformly distributed across the sky, called isotropic diffuse radiation.

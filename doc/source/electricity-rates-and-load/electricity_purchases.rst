@@ -62,7 +62,7 @@ NREL's Open Energy Information (OpenEI) `Utility Rate Database (URDB) <https://o
 
 .. note:: SAM does not use location information from the weather file to determine the utility service provider for your analysis. You can type a zip code in the OpenEI Utility Rate Database window to list service providers for a particular address.
 
-.. note:: In some cases, the data in the OpenEI database may be incorrect. This is especially true for rates structures with **ratcheting demand rates**. Be sure to compare the data you import to the information on the utility service provider's rate sheet. You can provide feedback to the database team: Join the database community at http://en.openei.org/community/group/utility-rate.
+.. note:: In some cases, the data in the OpenEI database may be incorrect. This is especially true for rates structures with **ratcheting demand rates**. Be sure to compare the data you import to the information on the utility service provider's rate sheet.
 
 .. note:: Some rate structures have elements or use units that SAM cannot model, such as a fixed charge in $/day units. In this case, SAM displays a red message "This rate from the URDB contains items that SAM's electricity bill calculator does not consider. See Unused Items below. If you see that message, expand the Unused Items panel at the bottom of the page to see the unused information, and if necessary, modify the rate inputs to approximate the item. For example, you could multiply the $/day fixed charge by 365 days/yr ÷ 12 months/yr to estimate a value to add to SAM's fixed monthly charge input.
 

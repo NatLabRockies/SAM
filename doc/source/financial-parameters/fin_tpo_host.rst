@@ -13,7 +13,7 @@ You can use the Third Party Ownership - Host model to:
 
 * Investigate the value of different electricity rate structures and load profiles under a third party ownership agreement.
 
-For an overview of third party ownership financing, see the `Solar Energy Industries Association Issues and Policies page <http://www.seia.org/policy/finance-tax/third-party-financing>`__ on the topic.
+For an overview of third party ownership financing, see the `Solar Energy Industries Association Issues and Policies page <https://seia.org/third-party-solar-financing/>`__ on the topic.
 
 SAM's Third Party Ownership - Host model makes the following assumptions:
 

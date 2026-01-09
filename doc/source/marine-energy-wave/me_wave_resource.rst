@@ -20,7 +20,7 @@ For more about wave energy resource data and its application for wave energy con
 For information about sources of wave energy resource data, see the following websites:
 
 * `Marine Energy Data Repository <https://mhkdr.openei.org/>`__
-* `OpenEI NREL Wave Energy Assessment for the United States and Puerto Rico <https://openei.org/doe-opendata/dataset/nrel-wave-energy-assessment-for-the-us>`__
+* `Water Power Technologies Office Wave Hindcast Dataset <https://www.nrel.gov/water/wave-hindcast-dataset>`__
 
 .. _wavelibrary:
 

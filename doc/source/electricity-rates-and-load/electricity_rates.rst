@@ -23,7 +23,7 @@ Overview
 
 SAM's rate structure model is designed to have enough detail to model most features found on electricity service providers' rate sheets, but not so many details to make it too complicated to use. For example, SAM has a single fixed monthly charge input, while a rate sheet might have several fixed charges. To model those charges in SAM, you would add them up to a single value. SAM's rate structure model is also designed to be compatible with the OpenEI Utility Rate Database, so the inputs for fixed charges, energy and demand rates follow the data structure of the online database. There may be some features of your service provider's rate structure that SAM cannot model.
  
-.. note:: SAM can import retail electricity rate data from the online `OpenEI Electric U.S. Utility Rate Database <http://en.openei.org/wiki/Utility_Rate_Database>`__ database.
+.. note:: SAM can import retail electricity rate data from the online `OpenEI Utility Rate Database <https://en.openei.org/wiki/Utility_Rate_Database>`__ database.
 
 .. note:: All rates and charges on the Electricity Rates page are in Year 1 dollars. SAM applies both the inflation rate from the :doc:`Financial Parameters <../financial-parameters/fin_overview>` page and the optional electricity bill escalation rate to calculate the electricity bill in Years 2 and later.
 
@@ -184,7 +184,7 @@ NREL's Open Energy Information (OpenEI) `Utility Rate Database (URDB) <https://o
 
 .. note:: SAM does not use location information from the weather file to determine the utility service provider for your analysis. You can type a zip code in the OpenEI Utility Rate Database window to list service providers for a particular address.
 
-.. note:: In some cases, the data in the OpenEI database may be incorrect. This is especially true for rates structures with **ratcheting demand rates**. Be sure to compare the data you import to the information on the utility service provider's rate sheet. You can provide feedback to the database team: Join the database community at http://en.openei.org/community/group/utility-rate.
+.. note:: In some cases, the data in the OpenEI database may be incorrect. This is especially true for rates structures with **ratcheting demand rates**. Be sure to compare the data you import to the information on the utility service provider's rate sheet. For information about contacting the database team, see https://openei.org/wiki/OpenEI:About.
 
 .. note:: Some rate structures have elements or use units that SAM cannot model, such as a fixed charge in $/day units. In this case, SAM displays a red message "This rate from the URDB contains items that SAM's electricity bill calculator does not consider. See Unused Items below. If you see that message, expand the Unused Items panel at the bottom of the page to see the unused information, and if necessary, modify the rate inputs to approximate the item. For example, you could multiply the $/day fixed charge by 365 days/yr ÷ 12 months/yr to estimate a value to add to SAM's fixed monthly charge input.
 

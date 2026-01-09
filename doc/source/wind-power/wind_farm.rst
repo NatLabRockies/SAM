@@ -3,7 +3,7 @@ Wind Farm
 
 The Wind Farm page allows you to specify the number of turbines in the project and includes a simple representation of the wind farm layout to estimate wake effect losses that result when upwind turbines interfere with wind flow to downwind turbines.
 
-For a technical description of the wind farm model, see Chapter 8 of Freeman, J.; Gilman, P.; Jorgenson, J.; Ferguson, T. (2014). "Reference Manual for the System Advisor Model's Wind Performance Model." National Renewable Energy Laboratory, NREL/TP-6A20-60570. (`PDF 738 KB <http://www.nrel.gov/docs/fy14osti/60570.pdf>`__)
+For a technical description of the wind farm model, see Chapter 8 of Freeman, J.; Gilman, P.; Jorgenson, J.; Ferguson, T. (2014). "Reference Manual for the System Advisor Model's Wind Performance Model." National Renewable Energy Laboratory, NREL/TP-6A20-60570. (`PDF 738 KB <https://docs.nrel.gov/docs/fy14osti/60570.pdf>`__)
 
 System Sizing
 ~~~~~~~~~~~~~
@@ -72,7 +72,7 @@ The following output variables report wake losses. You can find them after runni
 
 * **Simple Wake Model** uses a thrust coefficient to calculate the wind speed deficit at each turbine due to wake effects of the upwind turbines. This is the original wake effect model used in SAM versions 2013.1.15 and earlier.
 
-* **Park (WAsP)** calculates the wind speed deficit behind each turbine using a decay constant, and calculates the overlap of that wake profile with the downwind turbine to calculate the wind speed at the downwind turbine. This model was originally developed for the `Risø DTU WAsP <http://www.wasp.dk/>`__ wind farm model.
+* **Park (WAsP)** calculates the wind speed deficit behind each turbine using a decay constant, and calculates the overlap of that wake profile with the downwind turbine to calculate the wind speed at the downwind turbine. This model was originally developed for the `Risø DTU WAsP <https://www.wasp.dk/>`__ wind farm model.
 
 * **Eddy-Viscosity** is similar to the Park model, except that the wind speed deficit behind each turbine is assumed to have a Gaussian shape (there is no decay constant).
 

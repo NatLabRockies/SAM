@@ -3,7 +3,7 @@ Time Series Data Viewer
 
 The time series data viewer displays graphs of time series data.
 
-.. note:: SAM's data viewer is also available as a standalone application called DView. You can download it from NREL at https://beopt.nrel.gov/downloadDView.
+.. note:: SAM's data viewer is also available as a standalone application called DView. You can download it from NREL at https://github.com/NREL/wex/wiki/DView.
 
 The data viewer is available in SAM from the following input pages:
 

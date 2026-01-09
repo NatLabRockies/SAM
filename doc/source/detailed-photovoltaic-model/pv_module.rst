@@ -23,7 +23,7 @@ You can choose from five different module performance models:
 
 * :ref:`IEC61853 Single Diode Model <module-iec61853>` calculates the module conversion efficiency from a set of detailed parameters describing the module's characteristics, consistent with the International Electrotechnical Commission (IEC) power and rating standard, `IEC 61853 <http://www.solarabcs.org/about/publications/reports/pv-mod-power-rating/>`__, *Irradiance and Temperature Performance Measurements and Power Rating*.
 
-For a complete technical description of SAM's photovoltaic model, see Gilman, P.; Dobos, A.; DiOrio, N.; Freeman, J.; Janzou, S.; Ryberg, D. (2018) SAM Photovoltaic Model Technical Reference Update. 93 pp.; NREL/TP-6A20-67399 available along with other technical documentation from the `SAM website <https://sam.nrel.gov/photovoltaic/pv-sub-page-2.html>`__.
+For a complete technical description of SAM's photovoltaic model, see Gilman, P.; Dobos, A.; DiOrio, N.; Freeman, J.; Janzou, S.; Ryberg, D. (2018) SAM Photovoltaic Model Technical Reference Update. 93 pp.; NREL/TP-6A20-67399 available along with other technical documentation from the `SAM website <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__.
 
 .. note:: You can also model a photovoltaic system using the simpler :doc:`PVWatts model <../pvwatts/pvwatts>`, or a high concentration photovoltaic (HCPV) system using the :doc:`concentrating photovoltaic model <../high-concentration-photovoltaic/hcpv_overview>`. To use these models you must :doc:`choose the models <../getting-started/choose_models>` when you create a new file or case. (You can also :ref:`choose a different <changemodel>` model for the current case.)
 
@@ -36,9 +36,9 @@ The California Energy Commission (CEC) Performance Model uses the University of 
 
 The five-parameter single-diode model calculates a module's current and voltage under a range of solar resource conditions (represented by an I-V curve) using an equivalent electrical circuit whose electrical properties can be determined from a set of five reference parameters. These five parameters, in turn, are determined from standard reference condition data provided by either the module manufacturer or an independent testing laboratory, such as the Arizona State University Photovoltaic Testing Laboratory. 
 
-.. note:: SAM's CEC module library contains parameters for the modules in the List of Eligible SB1 Guidelines Compliant Photovoltaic Modules at http://www.gosolarcalifornia.org/equipment/pv_modules.php as of the date of the SAM software release for the current version.
+.. note:: SAM's CEC module library contains parameters for the modules in the List of Eligible SB1 Guidelines Compliant Photovoltaic Modules at https://solarequipment.energy.ca.gov/Home/PVModuleList as of the date of the SAM software release for the current version.
 
-   If you represent a module manufacturer and would like to add your module to the CEC database, you should contact the CEC directly. See http://www.gosolarcalifornia.ca.gov/equipment/add.php.
+   If you represent a module manufacturer and would like to add your module to the CEC database, you should contact the CEC directly. See https://www.energy.ca.gov/programs-and-topics/programs/solar-equipment-lists.
 
    To model a module that is not in the database, you can use the :ref:`CEC Performance Model with User Entered Specifications <module-cec-user>`.
 
@@ -46,7 +46,7 @@ The five-parameter single-diode model calculates a module's current and voltage 
 
 The CEC Module model uses the `air mass model <https://pvpmc.sandia.gov/modeling-guide/2-dc-module-iv/effective-irradiance/spectral-mismatch-models/>`__ for spectral mismatch from the Sandia Array Performance Model with "a" coefficients for polycrystalline modules from Table A1 of De Soto W.; Klein, S.; Beckman, W.; (2006) `Improvement and validation of a model for photovoltaic array performance <https://www.sciencedirect.com/science/article/abs/pii/S0038092X05002410>`__. Solar Energy. Vol 80 Issue 1. pp 78-88.
 
-The five-parameter single-diode model is described in Gilman, P. (2015). SAM Photovoltaic Model Technical Reference. National Renewable Energy Laboratory. 59 pp.; NREL/TP-6A20-64102. (`PDF 840 KB <http://www.nrel.gov/docs/fy15osti/64102.pdf>`__), and in De Soto 2004, `Improvement and Validation of a Model for Photovoltaic Array Performance <http://minds.wisconsin.edu/handle/1793/7602>`__, Master of Science Thesis, University of Wisconsin-Madison.
+The five-parameter single-diode model is described in Gilman, P. (2015). SAM Photovoltaic Model Technical Reference. National Renewable Energy Laboratory. 59 pp.; NREL/TP-6A20-64102. (`PDF 840 KB <https://docs.nrel.gov/docs/fy15osti/64102.pdf>`__), and in De Soto 2004, `Improvement and Validation of a Model for Photovoltaic Array Performance <https://minds.wisconsin.edu/handle/1793/7602>`__, Master of Science Thesis, University of Wisconsin-Madison.
 
 To use the CEC photovoltaic model:
 
@@ -104,12 +104,12 @@ The CEC model provides two modes for modeling the effect of cell temperature on 
 The NOCT Method
 ~~~~~~~~~~~~~~~
 
-This method determines the cell temperature based on the nominal operating cell temperature (NOCT) specified in the module parameters. In SAM 2010.11.9 and earlier versions, this was the only available temperature correction option for the CEC model. De Soto (2004) listed on the `PV Publications <https://sam.nrel.gov/photovoltaic/pv-sub-page-2.html>`__ page of the SAM website.
+This method determines the cell temperature based on the nominal operating cell temperature (NOCT) specified in the module parameters. In SAM 2010.11.9 and earlier versions, this was the only available temperature correction option for the CEC model. De Soto (2004) listed on the `PV Publications <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__ page of the SAM website.
 
 **Mounting standoff**
   Choose the option that best describes how the module is mounted: Ground or rack mounted when there is a when there is a lot of space between the module back and the ground or roof surface; For roof-mounted modules, choose a distance between the module back and roof in inches; or choose building-integrated for a module that is part of the building structure.
 
-  For standoff heights less than 0.5 inches, and between 0.5 inches and 3.5 inches, SAM increases the NOCT value by several degrees as the standoff height decreases to account for reduced airflow between the module and roof surface. This is the same approach as is used in the `CECPV Calculator Spreadsheet <https://www.energy.ca.gov/programs-and-topics/programs/new-solar-homes-partnership-program-nshp>`__  .
+  For standoff heights less than 0.5 inches, and between 0.5 inches and 3.5 inches, SAM increases the NOCT value by several degrees as the standoff height decreases to account for reduced airflow between the module and roof surface. This is the same approach as was used in the California Energy Commission's New Solar Homes Partnership (NSHP) program's "CECPV Calculator Spreadsheet".
 
 **Array height**
   Choose the option that best describes the height of the array from the ground.
@@ -121,7 +121,7 @@ This method determines the cell temperature based on the nominal operating cell 
 Heat transfer method
 ~~~~~~~~~~~~~~~~~~~~
 
-The heat transfer method uses a steady state heat transfer model to calculate cell temperatures described in Neises (2010). When the simulation time step is less than 20 minutes and you choose the gap mounting configuration for the heat transfer model, it applies the transient weighted average model for the back surface-temperature described in Prilliman (2020). References to both publications are available under "Module/Cell Temperature Models" on the `PV Publications <https://sam.nrel.gov/photovoltaic/pv-sub-page-2.html>`__   page of the SAM website.
+The heat transfer method uses a steady state heat transfer model to calculate cell temperatures described in Neises (2010). When the simulation time step is less than 20 minutes and you choose the gap mounting configuration for the heat transfer model, it applies the transient weighted average model for the back surface-temperature described in Prilliman (2020). References to both publications are available under "Module/Cell Temperature Models" on the `PV Publications <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__   page of the SAM website.
 
 .. note:: The temperature correction algorithms use wind speed and ambient (dry-bulb) temperature data from the weather file, assumed to be measured at 2 meters above the ground. 
 
@@ -222,9 +222,9 @@ Sandia PV Array Performance Model with Module Database
 
 The Sandia PV Array Performance model consists of a set of equations that provide values for five points on a module's I-V curve and a database of coefficients for the equations whose values are stored in the Sandia Modules library. The coefficients have been empirically determined based on a set of manufacturer specifications and measurements taken from modules installed outdoors in real, operating photovoltaic systems.
 
-.. note:: SAM's Sandia module library contains parameters for modules involved in `Sandia's Test and Evaluation program <http://energy.sandia.gov/?page_id=279>`__, If you represent a module manufacturer and would like to add your equipment to the Sandia database, you should `contact the program <http://energy.sandia.gov/?page_id=2772>`__.
+.. note:: SAM's Sandia module library contains parameters for modules that were involved in Sandia's Test and Evaluation program. The newest module in the library was tested in 2015. For information about the Sandia Photovoltaic Systems Evaluation Laboratory (PSEL), see `<https://energy.sandia.gov/facilities/photovoltaic-systems-evaluation-laboratory-psel/>`__.
 
-The Sandia model is described in King et al, 2004. Photovoltaic Array Performance Model. Sandia National Laboratories. SAND2004-3535. (`PDF 1.8 MB <http://prod.sandia.gov/techlib/access-control.cgi/2004/043535.pdf>`__). Also see the `Sandia PV Modeling and Analysis <http://energy.sandia.gov/?page_id=2493>`__ website for more on PV system performance modeling.
+The Sandia model is described in King et al, 2004. Photovoltaic Array Performance Model. Sandia National Laboratories. SAND2004-3535. (`PDF 1.8 MB <https://doi.org/10.2172/919131>`__).
 
 Overview
 ~~~~~~~~
@@ -321,7 +321,7 @@ Sandia Temperature Correction
 
 The Sandia temperature correction algorithm calculates a temperature correction factor that accounts for efficiency losses due to heating of the module during the day when the sun is shining. The algorithm calculates an hourly module temperature as a function of the solar radiation, ambient temperature, and wind speed in a given hour, and a set of properties describing the thermal characteristics of the cell and module.
 
-For more details about the algorithm, see King et al, 2004. *Photovoltaic Array Performance Model*. Sandia National Laboratories. SAND2004-3535. http://prod.sandia.gov/techlib/access-control.cgi/2004/043535.pdf
+For more details about the algorithm, see King et al, 2004. *Photovoltaic Array Performance Model*. Sandia National Laboratories. SAND2004-3535. https://doi.org/10.2172/919131
 
 .. note:: The SAM temperature correction algorithms do not account for cooling strategies used in some innovative photovoltaic systems.
 
@@ -817,7 +817,7 @@ SAM displays a message details about how it determines the STC, Rsh, Rs, and tem
 Thermal Behavior
 ~~~~~~~~~~~~~~~~
 
-The thermal model is the same as the CEC module model's `NOCT cell temperature option <https://pvpmc.sandia.gov/modeling-guide/2-dc-module-iv/cell-temperature/noct-cell-temperature/>`__, and is described in De Soto, W.L. (M.S. 2004). Improvement and Validation of a Model for Photovoltaic Array Performance. University of Wisconsin-Madison. (`ZIP 1.8 MB <http://sel.me.wisc.edu/publications/theses/desoto04.zip>`__). 
+The thermal model is the same as the CEC module model's `NOCT cell temperature option <https://pvpmc.sandia.gov/modeling-guide/2-dc-module-iv/cell-temperature/noct-cell-temperature/>`__, and is described in De Soto, W.L. (M.S. 2004). Improvement and Validation of a Model for Photovoltaic Array Performance. University of Wisconsin-Madison. (`ZIP 1.8 MB <https://sel.me.wisc.edu/publications/theses/desoto04.zip>`__). 
 
 **Nominal operating cell temp, °C**
   The nominal operating cell temperature (NOCT) of the module is the measured cell temperature of the module at NOCT test conditions: 800 W/m² incident irradiance, 20 degrees Celsius ambient temperature, and 1 m/s wind speed. The mounting configuration under test conditions is typically open rack, except building-integrated (BIPV) modules which are tested in a building-integrated configuration.
@@ -833,7 +833,7 @@ The thermal model is the same as the CEC module model's `NOCT cell temperature o
 Optical and Spectral Behavior
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To account for reflection losses in the module cover, the IEC 61853 module model applies an angle-of-incidence correction to the direct normal irradiance. It uses the module cover model from PVWatts V5 described in Section 8 of Dobos, A. (2014). PVWatts Version 5 Manual. 20 pp.; NREL Report No. TP-6A20-62641. (`PDF 714 KB <http://www.nrel.gov/docs/fy14osti/62641.pdf>`__), which is adapted from the DeSoto `Physical IAM model <https://pvpmc.sandia.gov/modeling-guide/1-weather-design-inputs/shading-soiling-and-reflection-losses/incident-angle-reflection-losses/physical-iam-model/>`__.
+To account for reflection losses in the module cover, the IEC 61853 module model applies an angle-of-incidence correction to the direct normal irradiance. It uses the module cover model from PVWatts V5 described in Section 8 of Dobos, A. (2014). PVWatts Version 5 Manual. 20 pp.; NREL Report No. TP-6A20-62641. (`PDF 714 KB <https://docs.nrel.gov/docs/fy14osti/62641.pdf>`__), which is adapted from the DeSoto `Physical IAM model <https://pvpmc.sandia.gov/modeling-guide/1-weather-design-inputs/shading-soiling-and-reflection-losses/incident-angle-reflection-losses/physical-iam-model/>`__.
 
 It accounts for spectral effects by applying an air mass modifier to the plane-of-array (POA) irradiance from the `Sandia Array Performance Model air mass model <https://pvpmc.sandia.gov/modeling-guide/2-dc-module-iv/effective-irradiance/spectral-mismatch-models/>`__ as described in King, D.L.; Boyson, W.E.; and Kratochvil, J.A. (2004). `Photovoltaic Array Performance Model <https://www.osti.gov/biblio/919131/>`__. 41 pp.; Sandia Report No. 2004-3535.
 

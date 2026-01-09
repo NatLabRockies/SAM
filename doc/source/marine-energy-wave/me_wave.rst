@@ -51,4 +51,4 @@ Marine Energy References
 For information about sources of wave energy resource data, see the following websites:
 
 * `OpenEI NREL Wave Energy Assessment for the United States and Puerto Rico <https://openei.org/doe-opendata/dataset/nrel-wave-energy-assessment-for-the-us>`__
-* `Marine Energy Data from NREL <https://www.nrel.gov/gis/data-marine.html>`__
+* `Water Power Technologies Office Wave Hindcast Dataset <https://www.nrel.gov/water/wave-hindcast-dataset>`__

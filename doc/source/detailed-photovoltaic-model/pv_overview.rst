@@ -3,7 +3,7 @@ Detailed Photovoltaic Model
 
 The following overview is to help you get started modeling  a photovoltaic system with the detailed photovoltaic model. For a description of the model, see :doc:`Performance Models <../introduction/technology_options>`.
 
-For a complete technical description of SAM's photovoltaic model, see Gilman, P. (2015). SAM Photovoltaic Model Technical Reference. National Renewable Energy Laboratory. 59 pp.; NREL/TP-6A20-64102. (`PDF 840 KB <http://www.nrel.gov/docs/fy15osti/64102.pdf>`__)
+For a complete technical description of SAM's photovoltaic model, see Gilman, P. (2015). SAM Photovoltaic Model Technical Reference. National Renewable Energy Laboratory. 59 pp.; NREL/TP-6A20-64102. (`PDF 840 KB <https://docs.nrel.gov/docs/fy15osti/64102.pdf>`__)
 
 Basic Steps
 -----------

@@ -19,7 +19,7 @@ Power Block Model
 
 *   The GETEM option calculates the power block's monthly output.
 
-*   The Power Block Monthly and Power Block Hourly options calculate either monthly or hourly power block output values, and use a more sophisticated algorithm based on physical principles using the power block model developed for SAM's physical parabolic trough model. For a detailed description, see Chapter 4 of Wagner M, 2008. Simulation and Predictive Performance Modeling of Utility-Scale Central Receiver System Power Plants. Master of Science Thesis. University of Wisconsin-Madison. http://sel.me.wisc.edu/theses/wagner08.zip.
+*   The Power Block Monthly and Power Block Hourly options calculate either monthly or hourly power block output values, and use a more sophisticated algorithm based on physical principles using the power block model developed for SAM's physical parabolic trough model. For a detailed description, see Chapter 4 of Wagner M, 2008. Simulation and Predictive Performance Modeling of Utility-Scale Central Receiver System Power Plants. Master of Science Thesis. University of Wisconsin-Madison. (`PDF 13.6 MB <http://digital.library.wisc.edu/1793/45001>`__.
 
 Power Block Design Point
 ~~~~~~~~~~~~~~~~~~~~~~~~

@@ -25,7 +25,7 @@ Each of the three inverter models calculates a DC to AC conversion efficiency, a
 
 The inverter model reports several hourly sim ulation results on the :doc:`Results <../results/results>` page that you can use to understand how SAM models the inverter or to troubleshoot your analyses:
 
-For a complete technical description of SAM's photovoltaic model, see Gilman, P.; Dobos, A.; DiOrio, N.; Freeman, J.; Janzou, S.; Ryberg, D. (2018) SAM Photovoltaic Model Technical Reference Update. 93 pp.; NREL/TP-6A20-67399 available along with other technical documentation from the `SAM website <https://sam.nrel.gov/photovoltaic/pv-sub-page-2.html>`__.
+For a complete technical description of SAM's photovoltaic model, see Gilman, P.; Dobos, A.; DiOrio, N.; Freeman, J.; Janzou, S.; Ryberg, D. (2018) SAM Photovoltaic Model Technical Reference Update. 93 pp.; NREL/TP-6A20-67399 available along with other technical documentation from the `SAM website <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__.
 
 .. _clipping:
 
@@ -82,17 +82,15 @@ The Inverter CEC Database model consists of a set of equations that SAM uses to 
 
 The Sandia inverter model is described in the following documents:
 
-* King D et al (2007) Performance Model for Grid-Connected Photovoltaic Inverters, Sandia National Laboratories, SAND2007-5036 (`PDF 1.3 MB <http://infoserve.sandia.gov/sand_doc/2007/075036.pdf>`__)
+* King D et al (2007) Performance Model for Grid-Connected Photovoltaic Inverters, Sandia National Laboratories, SAND2007-5036 (`PDF 1.3 MB <https://www.osti.gov/servlets/purl/920449>`__)
 
-* On the `PV Performance Modeling Collaborative website <http://pvpmc.org/modeling-steps/dc-to-ac-conversion-2/inverter-efficiency/sandia-inverter-model/>`__* Gilman, P. et al (2018). SAM Photovoltaic Model Technical Reference. National Renewable Energy Laboratory Update. 59 pp.; NREL/TP-6A20-67399. (Available on the `SAM website <https://sam.nrel.gov/photovoltaic/pv-sub-page-2.html>`__.)
+* On the `PV Performance Modeling Collaborative website <http://pvpmc.org/modeling-steps/dc-to-ac-conversion-2/inverter-efficiency/sandia-inverter-model/>`__* Gilman, P. et al (2018). SAM Photovoltaic Model Technical Reference. National Renewable Energy Laboratory Update. 59 pp.; NREL/TP-6A20-67399. (Available on the `SAM website <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__.)
 
 The CEC inverter test protocol is described in:
 
 * Bower W et al (Draft 2004) Performance Test Protocol for Evaluating Inverters Used in Grid-Connected Photovoltaic Systems (`PDF 584 KB <https://gosolarcalifornia.com/equipment/documents/2004-11-22_Test_Protocol.pdf>`__)
 
-* `PV Performance Modeling Collaborative website <http://pvpmc.org/modeling-steps/dc-to-ac-conversion-2/inverter-efficiency/cec-inverter-test-protocol/>`__
- 
-
+* `PV Performance Modeling Collaborative website <https://pvpmc.sandia.gov/modeling-guide/dc-to-ac-conversion/cec-inverter-test-protocol/>`__
 
 .. note:: The inverter library stores data from the `California Energy Commission solar equipment lists <https://www.energy.ca.gov/programs-and-topics/topics/renewable-energy/solar-equipment-lists>`__, as of the date of the SAM software release.
 
@@ -100,7 +98,7 @@ The CEC inverter test protocol is described in:
 .. note:: To modify library parameters, choose the inverter you want to model from the library, and then switch the model option at the top of the Inverter page from **Inverter CEC Database** to **Inverter Datasheet** and click **Copy specifications**. This will copy the parameter values from the library to inputs that you can edit.
 
 
-.. note:: If you represent an inverter manufacturer and would like to add equipment to the list, you should contact the California Energy Commission (CEC) at the link above.
+.. note:: If you represent an inverter manufacturer and would like to add equipment to the list, you should contact the California Energy Commission (CEC). See https://www.energy.ca.gov/programs-and-topics/programs/solar-equipment-lists.
 
 
 .. note:: To model an inverter that is not in the database, use the :ref:`Inverter Datasheet <datasheet>` model.
@@ -441,13 +439,9 @@ Inverter CEC Coefficient Generator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The CEC Coefficient Generator model generates coefficients for the CEC (Sandia) inverter model from data that you provide from results of inverter performance tests.
 
-* For a description of the Sandia inverter model, see King D et al (2007) Performance Model for Grid-Connected Photovoltaic Inverters, Sandia National Laboratories, SAND2007-5036 (`PDF 1.3 MB <http://infoserve.sandia.gov/sand_doc/2007/075036.pdf>`__)
+* For a description of the Sandia inverter model, see King D et al (2007) Performance Model for Grid-Connected Photovoltaic Inverters, Sandia National Laboratories, SAND2007-5036 (`PDF 1.3 MB <https://doi.org/10.2172/920449>`__)
 
-* For a description of the protocol for the inverter performance tests, see Bower, W.; Whitaker, C.; Erdman, W.; Fitzgerald, M. (Draft 2014). Performance Test Protocol for Evaluating Inverters Used in Grid-Connected Photovoltaic Systems. (`PDF 584 KB <http://www.gosolarcalifornia.ca.gov/equipment/documents/2004-11-22_Test_Protocol.pdf>`__).
-
-* Examples of test data for inverters are available from the Go Solar California website at: http://www.gosolarcalifornia.ca.gov/equipment/inverter_tests/summaries/.
-
-* The default test data is from the SMA America SB3800TL-US-22 (240V) inverter's April 8, 2013 test data published on the Go Solar California website (`PDF 100 KB <http://www.gosolarcalifornia.ca.gov/equipment/inverter_tests/summaries/SMA%20SB3800TL-US-22%20(240V).pdf>`__). This is the same inverter as the default choice for the :ref:`Inverter CEC Database <pv-inverter-sandia>`, so you can use the defaults for comparisons between the different models, and to learn how to use the test data in SAM.
+* For a description of the protocol for the inverter performance tests, see Bower, W.; Whitaker, C.; Erdman, W.; Fitzgerald, M. (Draft 2004). Performance Test Protocol for Evaluating Inverters Used in Grid-Connected Photovoltaic Systems. (`PDF 584 KB <https://www.energy.ca.gov/sites/default/files/2020-06/2004-11-22_Sandia_Test_Protocol_ada.pdf>`__).
 
 To use the Inverter CEC Coefficient Generator model:
 
@@ -549,7 +543,7 @@ When you use either the Inverter Datasheet model or the Inverter Part Load Curve
 
 Inverter manufacturers often show several efficiency values on an inverter's data sheet. Weighted efficiency values are more accurate representations of an inverter's efficiency over a range of output levels than an efficiency value at a single operating point.
 
-Many inverter data sheets will show two versions of the weighted efficiency value: The CEC weighted efficiency, which comes from the `CEC Inverter Test Protocol <https://pvpmc.sandia.gov/modeling-steps/dc-to-ac-conversion/cec-inverter-test-protocol/>`__ and is discussed in Newmiller (2014) Sandia Inverter Performance Test Protocol Efficiency Weighting Alternatives (`PDF 200 KB <http://energy.sandia.gov/wp-content/gallery/uploads/EffWeightingPaper_SAND2014-18446C.pdf>`__), or the European weighted efficiency discussed in Ongun (2013) `Weighted Efficiency Measurement of PV Inverters: Introducting ηismir <https://www.researchgate.net/publication/292828203_Weighted_efficiency_measurement_of_PV_inverters_Introducing_eIZMIR>`__ (`PDF 1.8 MB <https://www.researchgate.net/publication/292828203_Weighted_efficiency_measurement_of_PV_inverters_Introducing_eIZMIR>`__). The table below shows the weighting factors used to determine both versions of the weighted efficiency. In general, you should use the CEC weighted efficiency to model a system in a sunny location, and you should use the European weighted efficiency for less sunny locations. The following equation shows how the weighted efficiency is calculated, where *η* weighted is the weighted efficiency value, F1..F7 are shown in the table below, and η5, η10... are the inverter part-load efficiencies at 5%, 10%... of maximum AC output:
+Many inverter data sheets will show two versions of the weighted efficiency value: The CEC weighted efficiency, which comes from the `CEC Inverter Test Protocol <https://pvpmc.sandia.gov/modeling-steps/dc-to-ac-conversion/cec-inverter-test-protocol/>`__ and is discussed in Newmiller (2014) Sandia Inverter Performance Test Protocol Efficiency Weighting Alternatives (`PDF 200 KB <https://ieeexplore.ieee.org/document/6925058>`__), or the European weighted efficiency discussed in Ongun (2013) `Weighted Efficiency Measurement of PV Inverters: Introducting ηismir <https://www.researchgate.net/publication/292828203_Weighted_efficiency_measurement_of_PV_inverters_Introducing_eIZMIR>`__. The table below shows the weighting factors used to determine both versions of the weighted efficiency. In general, you should use the CEC weighted efficiency to model a system in a sunny location, and you should use the European weighted efficiency for less sunny locations. The following equation shows how the weighted efficiency is calculated, where *η* weighted is the weighted efficiency value, F1..F7 are shown in the table below, and η5, η10... are the inverter part-load efficiencies at 5%, 10%... of maximum AC output:
 
 *η**weighted**= F1 × η5 + F2 × η10 + F3 × η20 + F4 × η30 + F5 × η50 + F6 × η75 + F7 × η100*
 
