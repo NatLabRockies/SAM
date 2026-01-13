@@ -1,17 +1,15 @@
 Inverter 
 =========
 
-The Inverter page allows you to choose an inverter performance model and either choose an inverter from a list, or enter inverter parameters from a manufacturer's data sheet using either a weighted efficiency or a table of part-load efficiency values.
+The Inverter page allows you to choose a model to represent the inverter's performance. The inverter converts DC electricity from the photovoltaic array into AC electricity. The inverter model calculates the DC to AC conversion efficiency in each simulation time step.
 
 SAM can only model a photovoltaic system with a single type of inverter. Specify the number of inverters in the system on the :doc:`pv_system_size` page.
 
-SAM displays the name of the active inverter model at the top of the Inverter page. Click the model name to choose a different model:
+You can choose from four different inverter model options. SAM displays the name of the current option in the blue box at top of the Inverter page. Click the box to choose a different option:
 
 .. image:: ../images/SS_PVInverter-ChooseModel.png
    :align: center
    :alt: SS_PVInverter-ChooseModel.png
-
-You can choose from three different inverter performance models:
 
 * :ref:`Inverter CEC Database <pv-inverter-sandia>` calculates the system's AC output using parameters from SAM's CEC database of inverter parameters with the Sandia inverter model. To use this model, you simply choose an inverter from the list. Use this model for most analyses.
 
@@ -21,70 +19,84 @@ You can choose from three different inverter performance models:
 
 * :ref:`Inverter CEC Coefficient Generator <coefficientgenerator>` generates coefficients for the Sandia inverter model when you have inverter test data.
 
-Each of the three inverter models calculates a DC to AC conversion efficiency, assuming that the DC power input to the inverter is equal to the DC output of the photovoltaic array. SAM uses the inverter operating ranges parameters to either :ref:`size the system <pv-sizing>` or display sizing suggestion messages on the :doc:`pv_system_size` page.
-
-The inverter model reports several hourly sim ulation results on the :doc:`Results <../results/results>` page that you can use to understand how SAM models the inverter or to troubleshoot your analyses:
-
-For a complete technical description of SAM's photovoltaic model, see Gilman, P.; Dobos, A.; DiOrio, N.; Freeman, J.; Janzou, S.; Ryberg, D. (2018) SAM Photovoltaic Model Technical Reference Update. 93 pp.; NREL/TP-6A20-67399 available along with other technical documentation from the `SAM website <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__.
+For a technical description of the inverter model options, see Gilman, P.; Dobos, A.; DiOrio, N.; Freeman, J.; Janzou, S.; Ryberg, D. (2018) SAM Photovoltaic Model Technical Reference Update. 93 pp.; NREL/TP-6A20-67399 available along with other technical documentation from the `SAM website <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__.
 
 .. _clipping:
 
-Inverter Clipping Loss
-......................
+Inverter Voltage Clipping and Power Limiting
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-SAM models two types of inverter clipping loss. 
+The term "clipping" may refer to one of two inverter functions:
 
-* Power limiting losses occur in time steps when the inverter's AC power output exceeds the total inverter nameplate AC capacity. During those time steps, SAM adjusts the inverter output to the inverter nameplate capacity (it does not adjust the inverter's input voltage). 
+* Power limiting occurs in time steps when the inverter's AC power exceeds the total inverter nameplate AC capacity. During those time steps, SAM adjusts the inverter AC power to the inverter nameplate capacity (it does not adjust the inverter's input voltage). 
 
-* MPPT voltage limit losses occur in time steps when the Array's DC voltage falls outside the rated inverter minimum and maximum MPPT voltage limits on the :doc:`pv_system_size` page. In those time steps, SAM adjusts the array DC voltage to the inverter's maximum or minimum MPPT voltage limit as appropriate.
+* Voltage clipping occurs in time steps when the array DC voltage is less than the minimum maximum power-point tracking (MPPT) voltage rating or greater than the maximum MPPT voltage rating on the :doc:`pv_system_size` page. In those time steps, SAM sets the array DC voltage to the inverter's maximum or minimum MPPT voltage rating as appropriate. (SAM cannot model voltage clipping with the Sandia or Simple Efficiency :doc:`module models <pv_module>` because those models assume that the module operates at its maximum power point, and do not allow the module's operating voltage to be changed from the maximum power point.)
 
-You can see inverter clipping losses in the :doc:`results <pv_results>` and in the :doc:`loss diagram <../results/losses>`.
+.. note:: Inputs for MPPT voltage ratings and multiple MPPTs are on the :doc:`pv_system_size` page.
 
- 
+After running a simulation, you can explore the effect of power limiting and voltage clipping in the :doc:`PV loss diagram <../results/losses>` on the Results page or using the following output variables:
 
+* **AC inverter power clipping loss (%)** Year 1 power limiting loss as a percentage of total DC power output.
+* **DC inverter MPPT clipping loss (%)** Year 1 voltage clipping loss as a percentage of total DC power output.
+* **Inverter clipping loss AC power limit (kWh/yr)** Year 1 power limiting loss.
+* **Inverter clipping loss DC MPPT voltage limits (kWh/yr)** Year 1 voltage clipping loss.
+* **Inverter clipping loss AC power limit (kW)** Time series power limiting loss.
+* **Inverter clipping loss DC MPPT voltage limits (kW)** Time series voltage clipping loss.
 
-.. note:: The inverter MPPT voltage limits are specified on the :doc:`pv_system_size` page.
-
-
-.. note:: SAM uses the inverter maximum DC voltage rating to display a simulation message when the operating voltage is greater than the maximum rating. (This should never happen if the maximum voltage rating is greater than or equal to the maximum MPPT voltage rating.)
-
-
-.. note:: SAM cannot model MPPT voltage limit losses with the Sandia or Simple Efficiency :doc:`module <pv_module>` models because those models assume that the module operates at its maximum power point, and do not allow the module's operating voltage to be changed from the maximum power point.
-
+For a complete list of detailed photovoltaic model time series outputs, see :doc:`pv_results`.
 
 You can run the **System Sizing** :doc:`macro <../reference/macros>` to generate a detailed report about clipping losses and the inverter's MPPT performance.
 
-Inverter Temperature Derate Curves
-..................................
+.. _postsimulationwarnings:
 
-SAM adjusts the inverter efficiency based on the ambient temperature in the weather file based on the Efficiency - Ambient Temperature curve under **Inverter Temperature Derate Curves**. The default curve decreases the inverter efficiency as the ambient temperature increases above 52.8 degrees Celsius at a rate of 0.021% per degree of temperature increases. You can edit the values in the efficiency table to change the shape of the curve.
+SAM reports the following simulation warning messages on the :doc:`Notices <../results/notices>` tab of the Results page when inverter power limiting occurs.
 
-Multiple MPPT Inputs
-....................
+**Inverter undersized**
+  The array output is greater than inverter rated capacity for one or more of the 8,760 hours in one year. SAM reports the number of hours that the array's simulated DC output is greater than the inverter's AC rated capacity.
 
-SAM can model up to four   maximum power point tracking (MPPT) inputs, but only for a system with a single inverter.
+  If the number of hours is small compared to the 8,760 hours in a year, you may choose to ignore the message. Otherwise, you may want to try increasing the inverter capacity.
 
-.. note:: The Number of MPPT inputs is disabled for systems with more than one inverter.
+  For example, for a system with 400 kWdc array capacity and 150 kWac total inverter capacity, SAM displays the following warning message: "pvsamv1: Inverter undersized: The array output exceeded the inverter rating 157.62 kWdc for 2128 hours."
 
-**Number of MPPT inputs**
-  The number of MPPT inputs in the system. In the actual system, the MPPT hardware may be integrated with the inverter, or separate devices.
+  The following :doc:`time series graphs <../results/timeseries>` show the array's DC output in red, and the system's AC output in blue, indicating that the inverter capacity is limiting the system's AC output.
+  
+  This graph shows the time series data for one year:
 
-  In order to model the operating voltage of each input separately, you should assign each MPPT input to a separate subarray on the :ref:`System Design <multiplemppt>`   page.
+  .. image:: ../images/IMG_PVError-time-series-inverter-undersized.png
+     :align: center
+     :alt: IMG_PVError-time-series-inverter-undersized.png
+
+  And this one shows the same data zoomed in to five days:
+
+  .. image:: ../images/IMG_PVError-days-inverter-undersized.png
+     :align: center
+     :alt: IMG_PVError-days-inverter-undersized.png
+
+**Inverter output less than 75 percent of inverter rated capacity**
+  SAM compares the inverter's maximum AC output to the total inverter AC capacity and displays a simulation warning if the inverter's maximum AC output is less than 75% of the total inverter rated AC capacity.
+
+  For example, for a system with 400 kWdc array capacity and 750 kWac inverter capacity, SAM displays the following warning message: "pvsamv1: Inverter oversized: The maximum inverter output was 43.13% of the rated value 750 kWac."
+
+  In this case, the time series graph of gross AC output shows that the inverter output never reaches the 750 kWac capacity.
+
+  .. image:: ../images/IMG_PVError-time-series-inverter-oversized.png
+     :align: center
+     :alt: IMG_PVError-time-series-inverter-oversized.png
 
 .. _pv-inverter-sandia:
 
 Inverter CEC Database
 ~~~~~~~~~~~~~~~~~~~~~
 
-The Inverter CEC Database model is an implementation of the Sandia Model for Grid-Connected PV Inverters (Sandia inverter model). It is an empirically-based performance model of inverter performance that uses parameters from a database of commercially available inverters maintained by the California Energy Commission (CEC).
-
-The Inverter CEC Database model consists of a set of equations that SAM uses to calculate the inverter's hourly AC output based on the DC input (equivalent to the electrical output of the photovoltaic array) and a set of empirically-determined coefficients that describe the inverter's performance characteristics. The coefficients for each inverter are empirically determined from data provided by the inverter's manufacturer and either field measurements from an inverter of the same type installed in an operating photovoltaic system, or laboratory measurements. Measured values are taken using the CEC inverter test protocol.
+The Inverter CEC Database model is an implementation of the Sandia Model for Grid-Connected PV Inverters (Sandia inverter model). It is an empirically-based performance model that uses parameters from a database of commercially available inverters maintained by the California Energy Commission (CEC).
 
 The Sandia inverter model is described in the following documents:
 
 * King D et al (2007) Performance Model for Grid-Connected Photovoltaic Inverters, Sandia National Laboratories, SAND2007-5036 (`PDF 1.3 MB <https://www.osti.gov/servlets/purl/920449>`__)
 
-* On the `PV Performance Modeling Collaborative website <http://pvpmc.org/modeling-steps/dc-to-ac-conversion-2/inverter-efficiency/sandia-inverter-model/>`__* Gilman, P. et al (2018). SAM Photovoltaic Model Technical Reference. National Renewable Energy Laboratory Update. 59 pp.; NREL/TP-6A20-67399. (Available on the `SAM website <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__.)
+* On the `PV Performance Modeling Collaborative website <http://pvpmc.org/modeling-steps/dc-to-ac-conversion-2/inverter-efficiency/sandia-inverter-model/>`__
+
+* Gilman, P. et al (2018). SAM Photovoltaic Model Technical Reference. National Renewable Energy Laboratory Update. 59 pp.; NREL/TP-6A20-67399. (Available on the `SAM website <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__.)
 
 The CEC inverter test protocol is described in:
 
@@ -94,17 +106,14 @@ The CEC inverter test protocol is described in:
 
 .. note:: The inverter library stores data from the `California Energy Commission solar equipment lists <https://www.energy.ca.gov/programs-and-topics/topics/renewable-energy/solar-equipment-lists>`__, as of the date of the SAM software release.
 
+   To modify library parameters, choose the inverter you want to model from the library, and then switch the model option at the top of the Inverter page from **Inverter CEC Database** to **Inverter Datasheet** and click **Copy specifications**. This will copy the parameter values from the library to inputs that you can edit.
 
-.. note:: To modify library parameters, choose the inverter you want to model from the library, and then switch the model option at the top of the Inverter page from **Inverter CEC Database** to **Inverter Datasheet** and click **Copy specifications**. This will copy the parameter values from the library to inputs that you can edit.
-
-
-.. note:: If you represent an inverter manufacturer and would like to add equipment to the list, you should contact the California Energy Commission (CEC). See https://www.energy.ca.gov/programs-and-topics/programs/solar-equipment-lists.
+   If you represent an inverter manufacturer and would like to add equipment to the list, you should contact the California Energy Commission (CEC). See https://www.energy.ca.gov/programs-and-topics/programs/solar-equipment-lists.
 
 
-.. note:: To model an inverter that is not in the database, use the :ref:`Inverter Datasheet <datasheet>` model.
+   To model an inverter that is not in the database, use the :ref:`Inverter Datasheet <datasheet>` model.
 
-
-.. note:: If you have inverter test data, you can use the :ref:`Inverter CEC Coefficient Generator <coefficientgenerator>` model.
+   If you have inverter test data, you can use the :ref:`Inverter CEC Coefficient Generator <coefficientgenerator>` model.
 
 To use the Inverter CEC Database model:
 
@@ -117,7 +126,7 @@ If you are modeling an inverter not included in the database and want to use the
 Each inverter listing shows the manufacturer name, model number and AC voltage rating, and information in brackets about the organization responsible for generating the test data and the year the data was generated. "CEC" indicates that test data was generated by the California Energy Commission.
 
 Efficiency Curve and Characteristics
-....................................
+------------------------------------
 
 When you select an inverter from the list, SAM displays an efficiency curve and the inverter's parameters for your reference. The parameter values are from the Sandia inverter library, and are values that the Sandia inverter model uses as inputs.
 
@@ -165,9 +174,6 @@ The following list briefly describes the each parameter that SAM displays on the
 **Maximum MPPT DC voltage [MPPT-hi], Vdc**
   Manufacturer-specified maximum DC operating voltage. The test protocol referenced above specifies that the inverter's maximum DC voltage should not exceed 80% of the array's maximum allowable open circuit voltage.
 
- 
-
-
 .. note:: You can modify the MPPT voltage limits and maximum DC voltage ratings on the :doc:`pv_system_size` page. SAM uses the values from the System Design page to calculate voltage clipping losses, and to display a warning if the array output is greater than the maximum DC voltage rating.
 
 
@@ -192,12 +198,16 @@ The four coefficients C0..C3 are empirically-determined coefficients that are in
 **C3, 1/V**
   Defines the value of Coefficient C0.
 
+Inverter Temperature Derate Curves
+----------------------------------
+
 .. include:: ../includes/snip_pv_inverter_temperature_curves.rst
 
 .. _datasheet:
 
 Inverter Datasheet
 ~~~~~~~~~~~~~~~~~~
+
 The Inverter Datasheet model is an implementation of the Sandia Model for Grid-Connected PV Inverters that allows you to model an inverter by entering data from a manufacturer's data sheet.
 
 The Inverter Datasheet model consists of a set of equations that SAM uses to calculate the inverter's hourly AC output based on the DC input (equivalent to the electrical output of the photovoltaic array) and performance parameters from the inverter manufacturer's datasheet. The model works by setting the :ref:`C coefficients <sandiaccoeffs>` of the Sandia inverter model to zero.
@@ -211,7 +221,7 @@ On the Inverter page, click **Change**, and choose **Inverter Datasheet**.
 * Enter input values from the manufacturer's data sheet. See below for descriptions of the inputs.
 
 Power Ratings
-.............
+-------------
 
 **Maximum AC output power**
   The inverter's rated maximum AC output in Watts. Manufacturers may use different names for this value, such as continuous output power, rated active power, peak output, etc.
@@ -231,7 +241,7 @@ Power Ratings
   SAM uses the maximum DC input power value to size the array when you choose **Specify desired array size** on the :doc:`pv_system_size` page, and to display sizing messages when you choose **Specify modules and inverters**.
 
 Operating Ranges
-................
+----------------
 
 SAM uses the operating range variables to help you size the system on the :doc:`pv_system_size` page.
 
@@ -253,8 +263,6 @@ SAM uses the operating range variables to help you size the system on the :doc:`
 **Maximum MPPT DC voltage**
   The inverter's maximum DC operating voltage.
 
- 
-
 
 .. note:: You can modify the MPPT voltage limits and maximum DC voltage ratings on the :doc:`pv_system_size` page. SAM uses the values from the System Design page to calculate voltage clipping losses, and to display a warning if the array output is greater than the maximum DC voltage rating.
 
@@ -265,7 +273,7 @@ SAM uses the operating range variables to help you size the system on the :doc:`
 .. note:: The maximum DC voltage (Vdcmax) is often shown on manufacturer datasheets, but is not provided in the data from the California Energy Commission. SAM populates this input with the maximum MPPT DC Voltage value from the database.
 
 Losses
-......
+------
 
 The two loss variables account for electricity consumed by inverter components during operation and to keep the inverter in standby mode at night when the array is not generating electricity.
 
@@ -288,14 +296,17 @@ SAM displays a suggested value for each loss variable, which is based on an anal
 *Suggested Value for Consumption at Night (Wac) = 0.025% × Maximum AC Output Power (Wac)*
 
 Copy Inverter Specifications from Current Library Selection
-...........................................................
+-----------------------------------------------------------
 
 Use the **Copy specifications** button to overwrite inverter parameters with data from the Inverter CEC Database option to the Inverter Datasheet option: Choose **Inverter CEC Database** from the model option list at the top of the Inverter page, and choose the inverter whose parameters you want to copy from the library. Then choose **Inverter Datasheet** and click **Copy specifications**.
 
 Save / Load Data
-................
+----------------
 
 Use the **Save to file** and **Load from file** buttons to save the module parameters to a text file that you can use to share data between different SAM files. SAM saves a list of variable name, values, and labels in a simple comma-separated format.
+
+Inverter Temperature Derate Curves
+----------------------------------
 
 .. include:: ../includes/snip_pv_inverter_temperature_curves.rst
 
@@ -303,6 +314,7 @@ Use the **Save to file** and **Load from file** buttons to save the module param
 
 Inverter Part Load Curve
 ~~~~~~~~~~~~~~~~~~~~~~~~
+
 The Inverter Part Load Curve model allows you to model an inverter by entering part-load efficiency and other data from a manufacturer's data sheet. Unlike the CEC Database and Inverter Datasheet inverter models, this model is not based on the Sandia inverter model. Instead, it determines the inverter's hourly conversion efficiency based on the part-load efficiency data points and night-time loss values you provide.
 
 .. note:: If you do not have a table of part-load efficiency values for the inverter, you may want to use the :ref:`Inverter Datasheet model <datasheet>` instead of the Part Load Curve model.
@@ -320,7 +332,7 @@ To use the Inverter Part Load Curve model:
 See below for descriptions of the variables, and more detailed instructions for working with the part-load efficiency table.
 
 Power Ratings
-.............
+-------------
 
 **Maximum AC output power**
   The inverter's rated maximum AC output in Watts. Manufacturers may use different names for this value, such as continuous output power, rated active power, peak output, etc.
@@ -336,7 +348,7 @@ Power Ratings
   SAM uses the maximum DC input power value to size the array when you choose **Specify desired array size** on the :doc:`pv_system_size`   page, and to display sizing messages when you choose **Specify modules and inverters**.
 
 Operating Ranges
-................
+----------------
 
 SAM uses the operating range variables to help you size the system on the :doc:`pv_system_size` page.
 
@@ -364,7 +376,7 @@ SAM uses the operating range variables to help you size the system on the :doc:`
   In order to model the operating voltage of each input separately, you should assign each MPPT input to a separate subarray on the :ref:`System Design <multiplemppt>`   page.
 
 Losses
-......
+------
 
 The two loss variables account for electricity consumed by inverter components to keep the inverter in standby mode at night when the array is not generating electricity.
 
@@ -372,16 +384,24 @@ The two loss variables account for electricity consumed by inverter components t
   Electricity consumed by the inverter during the night when the photovoltaic array is not generating power. This value is sometimes also called tare loss or standby loss.
 
 Part Load Efficiency
-....................
+--------------------
 
 SAM uses the part-load efficiency table you specify to determine the inverter's efficiency during a simulation. You can either type values in the table by hand, import values to the table from a properly formatted text file, or paste data to the table from your computer's clipboard.
 
 SAM uses linear interpolation to calculate efficiency values for output power levels between the points in the table. If you specify only a single row, SAM assumes that the inverter's efficiency is constant over its full output power range.
 
+Save / Load Data
+----------------
+
+Use the **Save to file** and **Load from file** buttons to save the module parameters to a text file that you can use to share data between different SAM files. SAM saves a list of variable name, values, and labels in a simple comma-separated format.
+
+Inverter Temperature Derate Curves
+----------------------------------
+
 .. include:: ../includes/snip_pv_inverter_temperature_curves.rst
 
 Tips for Working with the Part-load Efficiency Table
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------------------
 
 * To clear the table, change **Rows** to 1, and then change it to the number of rows in your data set.
 
@@ -405,15 +425,11 @@ To import part-load efficiency data from a text file:
 
 #. Prepare a text file of comma-separated values. The file should have one line for each output-efficiency value pair separated by a comma with no header rows. For example:
 
-0,0
-
-10,96.1
-
-20,97.55
-
-30,97.87
-
-...
+   0,0
+   10,96.1
+   20,97.55
+   30,97.87
+   ...
 
 The output percentages should increase from the first row to the last, but not necessarily in equal increments.
 
@@ -437,6 +453,7 @@ SAM populates the part-load efficiency table with data from the clipboard.
 
 Inverter CEC Coefficient Generator
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 The CEC Coefficient Generator model generates coefficients for the CEC (Sandia) inverter model from data that you provide from results of inverter performance tests.
 
 * For a description of the Sandia inverter model, see King D et al (2007) Performance Model for Grid-Connected Photovoltaic Inverters, Sandia National Laboratories, SAND2007-5036 (`PDF 1.3 MB <https://doi.org/10.2172/920449>`__)
@@ -456,7 +473,7 @@ To use the Inverter CEC Coefficient Generator model:
 #. Choose inputs to design the rest of the photovoltaic system and run a simulation.
 
 Coefficient Generator Inputs
-............................
+----------------------------
 
 These are the data from the test results.
 
@@ -476,12 +493,12 @@ These are the data from the test results.
   Use these buttons to import data from a CSV file, or to export the data to a CSV file. To see the format of the CSV file, export the default data to a file, and then open it in a text editor or spreadsheet program.
 
 Inverter Efficiency Data Table
-..............................
+------------------------------
 
   The inverter efficiency data table consists of output power and input voltage measured in Step 6 of the procedure described in Section 5.5.1 of the CEC test protocol, and the efficiency from Table 5-3 of the protocol.
 
 Array Sizing Inputs
-...................
+-------------------
 
 SAM uses the array sizing inputs to display sizing messages on the System Design page, and to calculate inverter clipping losses.
 
@@ -503,7 +520,7 @@ SAM uses the array sizing inputs to display sizing messages on the System Design
   In order to model the operating voltage of each input separately, you should assign each MPPT input to a separate subarray on the :ref:`System Design <multiplemppt>`   page.
 
 Results - Efficiency Curve and Characteristics
-..............................................
+----------------------------------------------
 
 The results are the Sandia inverter model input parameters. For details, see King (2007) referenced above.
 
@@ -538,7 +555,8 @@ The four coefficients C0..C3 are empirically-determined coefficients calculated 
 .. _weightedefficiency:
 
 Weighted Efficiency
-~~~~~~~~~~~~~~~~~~~
+-------------------
+
 When you use either the Inverter Datasheet model or the Inverter Part Load Curve model, you must provide SAM with an efficiency value that determines the inverter's maximum DC input power that SAM uses for sizing the photovoltaic array. 
 
 Inverter manufacturers often show several efficiency values on an inverter's data sheet. Weighted efficiency values are more accurate representations of an inverter's efficiency over a range of output levels than an efficiency value at a single operating point.
@@ -591,10 +609,9 @@ Weighting Factors for CEC and European Weighted Inverter Efficiencies
 
 Microinverters
 ~~~~~~~~~~~~~~
+
 A microinverter is an inverter designed to be connected to a single module. A PV system with microinverters has a single inverter for each module. Microinverters track each module’s maximum power point independently, and minimize shading and module mismatch losses associated with string inverters. 
 
-
- 
 .. note:: SAM assumes that all modules in the array operate at their maximum power point. The electrical loss associated with module voltage mismatch is an input on the Losses page. When you model a system with microinverters, you should change the mismatch loss to zero as described in the procedure below.
 
 

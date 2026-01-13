@@ -3,63 +3,67 @@ Module
 
 The Module page allows you to choose a model to represent the photovoltaic module's performance. For each time step of the simulation, the module model calculates the DC electrical output of a single module based on the design parameters and the incident solar radiation (plane-of-array irradiance) calculated from data in the weather file. 
 
-SAM assumes that the system is made up of an array of identical modules, which can be wired into up to four DC subarrays. The photovoltaic array's electric output depends on the number of modules in the system and the orientation, tracking, shading, and other parameters. The array's electrical output is fed to a bank of one or more inverters, whose characteristics appear on the :doc:`Inverter page <pv_inverter>`. 
+SAM assumes that the system is made up of an array of identical modules, which can be wired into up to four DC subarrays. The photovoltaic array's electric output depends on the number of modules in the system, and the orientation, tracking, shading, and other parameters.
 
-SAM displays the name of the active module model at the top of the Module page. Click the model name to choose a different model:
+You can choose from five different module model option. SAM displays the name of the current option in the blue box at top of the Module page. Click the box to choose a different option:
 
 .. image:: ../images/SS_PVModule-ChooseModel.png
    :align: center
    :alt: SS_PVModule-ChooseModel.png
 
-You can choose from five different module performance models:
+* :ref:`module-spe` is a simple representation of module performance that requires you to provide the module area, conversion efficiency data, and temperature correction parameters. The simple efficiency model is the least accurate of the three models for predicting the performance of specific modules, but is useful for exploring the relationship between module efficiency and the system's performance and cost of energy.
 
-* :ref:`Simple Efficiency Module Model <module-spe>` is a simple representation of module performance that requires you to provide the module area, a set of conversion efficiency values, and temperature correction parameters. The simple efficiency model is the least accurate of the three models for predicting the performance of specific modules, but is useful for analyses involving explorations of the relationship between module efficiency and the system's performance and cost of energy because it allows you to specify the module efficiency as an input.
+* :ref:`module-cec-database` calculates module solar energy-to-electricity conversion efficiency from data stored in a library of module parameters for thousands of commercially available modules. It is a single-diode equivalent circuit model originally developed at the University of Wisconsin and used in the California Energy Commission New Solar Homes Partnership Calculator. This option has an up-to-date module library and is the best option for most analyses.
 
-* :ref:`CEC Performance Model with Module Database <module-cec-database>` calculates module solar energy-to-electricity conversion efficiency from data stored in a library of module parameters for thousands of commercially available modules. It is an implementation of the six-parameter single-diode equivalent circuit model used in the California Energy Commission New Solar Homes Partnership Calculator, and is an extension of the five-parameter originally developed model developed at the University of Wisconsin.
+* :ref:`module-cec-user` uses the same algorithms as the CEC Performance Model with Module Database, but allows you to enter your own module specifications from a manufacturer's data sheet. Use this option to model a module that is not in the CEC Performance Model with Module Database library.
 
-* :ref:`CEC Performance Model with User Entered Specifications <module-cec-user>` uses the same algorithms as the CEC model with Module Database, but allows you to enter your own module specifications from a manufacturer's data sheet.
+* :ref:`module-sandia` calculates module conversion efficiency based on data measured from modules and arrays in realistic outdoor operating conditions. It is an empirically-derived model developed by Sandia National Laboratories. The Sandia module library is out-of-date, so this option may not be suitable if you want to model specific modules available on the current market.
 
-* :ref:`Sandia PV Array Performance Model with Module Database <module-sandia>` calculates module conversion efficiency based on data measured from modules and arrays in realistic outdoor operating conditions. The database includes modules with different cell types, including crystalline silicon, and various thin film technologies. It is an empirically-derived model developed by Sandia National Laboratories.
+* :ref:`module-iec61853` calculates the module conversion efficiency from a set of detailed parameters describing the module's characteristics, consistent with the International Electrotechnical Commission (IEC) power and rating standard, `IEC 61853 <http://www.solarabcs.org/about/publications/reports/pv-mod-power-rating/>`__, *Irradiance and Temperature Performance Measurements and Power Rating*. Use this option when you have IEC test data.
 
-* :ref:`IEC61853 Single Diode Model <module-iec61853>` calculates the module conversion efficiency from a set of detailed parameters describing the module's characteristics, consistent with the International Electrotechnical Commission (IEC) power and rating standard, `IEC 61853 <http://www.solarabcs.org/about/publications/reports/pv-mod-power-rating/>`__, *Irradiance and Temperature Performance Measurements and Power Rating*.
-
-For a complete technical description of SAM's photovoltaic model, see Gilman, P.; Dobos, A.; DiOrio, N.; Freeman, J.; Janzou, S.; Ryberg, D. (2018) SAM Photovoltaic Model Technical Reference Update. 93 pp.; NREL/TP-6A20-67399 available along with other technical documentation from the `SAM website <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__.
-
-.. note:: You can also model a photovoltaic system using the simpler :doc:`PVWatts model <../pvwatts/pvwatts>`, or a high concentration photovoltaic (HCPV) system using the :doc:`concentrating photovoltaic model <../high-concentration-photovoltaic/hcpv_overview>`. To use these models you must :doc:`choose the models <../getting-started/choose_models>` when you create a new file or case. (You can also :ref:`choose a different <changemodel>` model for the current case.)
+For complete technical descriptions of the five module model options, see Gilman, P.; Dobos, A.; DiOrio, N.; Freeman, J.; Janzou, S.; Ryberg, D. (2018) SAM Photovoltaic Model Technical Reference Update. 93 pp.; NREL/TP-6A20-67399 available along with other technical documentation from the `SAM website <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__.
 
 .. _module-cec-database:
 
 CEC Performance Model with Module Database
-------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The California Energy Commission (CEC) Performance Model uses the University of Wisconsin-Madison Solar Energy Laboratory's five-parameter single-diode model with a database of module parameters for modules from the database of eligible photovoltaic modules maintained by the California Energy Commission (CEC) for the California Solar Initiative.
+The California Energy Commission (CEC) Performance Model uses a modified version of the University of Wisconsin-Madison Solar Energy Laboratory's five-parameter single-diode model with a database of module parameters for modules from the database of eligible photovoltaic modules maintained by the California Energy Commission (CEC). The model calculates a module's current and voltage under a range of solar resource conditions represented by an I-V curve using an equivalent electrical circuit whose electrical properties can be determined from the five parameters. These five parameters are determined from standard reference condition data provided by either the module manufacturer or an independent testing laboratory. 
 
-The five-parameter single-diode model calculates a module's current and voltage under a range of solar resource conditions (represented by an I-V curve) using an equivalent electrical circuit whose electrical properties can be determined from a set of five reference parameters. These five parameters, in turn, are determined from standard reference condition data provided by either the module manufacturer or an independent testing laboratory, such as the Arizona State University Photovoltaic Testing Laboratory. 
+The model is described in Gilman, P. (2015). SAM Photovoltaic Model Technical Reference. National Renewable Energy Laboratory. 59 pp.; NREL/TP-6A20-64102. (`PDF 840 KB <https://docs.nrel.gov/docs/fy15osti/64102.pdf>`__), and in De Soto 2004, `Improvement and Validation of a Model for Photovoltaic Array Performance <https://minds.wisconsin.edu/handle/1793/7602>`__, Master of Science Thesis, University of Wisconsin-Madison.
 
-.. note:: SAM's CEC module library contains parameters for the modules in the List of Eligible SB1 Guidelines Compliant Photovoltaic Modules at https://solarequipment.energy.ca.gov/Home/PVModuleList as of the date of the SAM software release for the current version.
+.. note:: SAM's CEC module library contains data from the `California Energy Commission (CEC) Solar Equipment Lists Program <https://www.energy.ca.gov/programs-and-topics/programs/solar-equipment-lists>`__ as of the date of the SAM software release for the current version.
 
-   If you represent a module manufacturer and would like to add your module to the CEC database, you should contact the CEC directly. See https://www.energy.ca.gov/programs-and-topics/programs/solar-equipment-lists.
+   For scripts and data NLR uses to generate the module library, see https://github.com/NREL/SAM/tree/develop/samples/CEC%20Module%20and%20Inverter%20Libraries/CEC%20Modules.
 
-   To model a module that is not in the database, you can use the :ref:`CEC Performance Model with User Entered Specifications <module-cec-user>`.
+   If you represent a module manufacturer and would like to add your module to the CEC database, you should contact the CEC directly.
+
+   To model a module that is not in the database, you can use the :ref:`module-cec-user`.
 
    To modify library parameters, choose the module you want to model from the library, and then switch the model option at the top of the Module page from **CEC Performance Model with Module Database** to **CEC Performance Model with User Entered Specifications** and click **Copy module specs from currently selected CEC database module**. This will copy the parameter values from the library to inputs that you can edit.
 
-The CEC Module model uses the `air mass model <https://pvpmc.sandia.gov/modeling-guide/2-dc-module-iv/effective-irradiance/spectral-mismatch-models/>`__ for spectral mismatch from the Sandia Array Performance Model with "a" coefficients for polycrystalline modules from Table A1 of De Soto W.; Klein, S.; Beckman, W.; (2006) `Improvement and validation of a model for photovoltaic array performance <https://www.sciencedirect.com/science/article/abs/pii/S0038092X05002410>`__. Solar Energy. Vol 80 Issue 1. pp 78-88.
+SAM's implementation of the model uses the `air mass model <https://pvpmc.sandia.gov/modeling-guide/2-dc-module-iv/effective-irradiance/spectral-mismatch-models/>`__ for spectral mismatch from the Sandia Array Performance Model with "a" coefficients for polycrystalline modules from Table A1 of De Soto W.; Klein, S.; Beckman, W.; (2006) `Improvement and validation of a model for photovoltaic array performance <https://www.sciencedirect.com/science/article/abs/pii/S0038092X05002410>`__. Solar Energy. Vol 80 Issue 1. pp 78-88.
 
-The five-parameter single-diode model is described in Gilman, P. (2015). SAM Photovoltaic Model Technical Reference. National Renewable Energy Laboratory. 59 pp.; NREL/TP-6A20-64102. (`PDF 840 KB <https://docs.nrel.gov/docs/fy15osti/64102.pdf>`__), and in De Soto 2004, `Improvement and Validation of a Model for Photovoltaic Array Performance <https://minds.wisconsin.edu/handle/1793/7602>`__, Master of Science Thesis, University of Wisconsin-Madison.
-
-To use the CEC photovoltaic model:
+To use the CEC Performance Model with Module Database:
 
 #. On the Module page, choose **CEC Performance Model**.
 
-#. Choose a module from the list of available modules. SAM displays the model's characteristics and model coefficients.
+#. Choose a module from the library. SAM displays the model's characteristics and model coefficients.
 
-When you select a module from the CEC database on the Module page, SAM displays module's parameters. You can see the complete set of parameters in the Module library by using SAM's :doc:`library editor <../reference/libraries>`.
+.. note:: The data for module library is stored in a CSV text file. See :doc:`../reference/libraries` for information about how SAM stores library data and how you can access the data directly.
 
 Module Characteristics at Reference Conditions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------------
 
 The characteristics at reference conditions are module ratings, and as such are nominal values. During a simulation, SAM calculates module parameters under operating conditions, which you can see in the :doc:`Results <pv_results>`.
+
+When you choose a module from the library, SAM calculates and displays the module's I-V curve from the parameters in the library. You can compare SAM's I-V curve to the one on the manufacturer's datasheet to verify that the library parameters are consistent with the datasheet parameters.
+
+**Material**
+  A description of the semiconductor technology used in the photovoltaic cells.
+
+**Number of cells**
+  The number of photovoltaic cells in series for the module.
 
 **Reference conditions**
   The total irradiance and cell temperature at which the rated module characteristics apply.
@@ -67,44 +71,54 @@ The characteristics at reference conditions are module ratings, and as such are 
 **Nominal efficiency, %**
   The module's rated efficiency at reference conditions. SAM displays this value for reference only. During a simulation, the model calculates an efficiency value for each hour, which you can see in the time series output data.
 
-**Maximum Power (Pmp), Wdc**
+**Maximum power (Pmp), Wdc**
   The module rated power. Equal to the product of the maximum power voltage and maximum power current.
 
-**Max Power Voltage (Vmp), Vdc**
+**Max power voltage (Vmp), Vdc**
   Reference maximum power voltage at the reference conditions.
 
-**Max Power Current (Imp), Adc**
+**Max power current (Imp), Adc**
   Reference maximum power current at the reference conditions.
 
-**Open Circuit Voltage (Voc), Vdc**
+**Open circuit voltage (Voc), Vdc**
   Reference open circuit voltage at the reference conditions.
 
-**Short Circuit Current (Isc), Adc**
+**Short circuit current (Isc), Adc**
   Reference short circuit current at the reference conditions.
 
-**Temperature Coefficients**
-  SAM displays the temperature coefficients in %/°C and W/°C at maximum power, open circuit, and short circuit.
+**Temperature coefficients**
+  The module temperature coefficients in %/°C and W/°C at maximum power, open circuit, and short circuit.
 
   The temperature coefficients are based on data collected from laboratory test results and may not match coefficients provided by the manufacturer on the module's data sheet.
 
-Bifacial Specifications
-~~~~~~~~~~~~~~~~~~~~~~~
+Bifacial
+--------
 
 .. include:: ../includes/snip_pv_bifacial.rst
 
 .. _module-tempcorr-cec-options:
 
 Temperature Correction
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
-The CEC model provides two modes for modeling the effect of cell temperature on module performance:
+The CEC model provides two options for modeling the effect of cell temperature on module performance:
+
+The nominal operating cell temperature (NOCT) method determines the cell temperature based on the NOCT specified in the module parameters. In SAM 2010.11.9 and earlier versions, this was the only available temperature correction option for the CEC model. De Soto (2004) listed on the `PV Publications <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__ page of the SAM website.
+
+The heat transfer method uses a steady state heat transfer model to calculate cell temperatures described in Neises (2010). When the simulation time step is less than 20 minutes and you choose the gap mounting configuration for the heat transfer model, it applies the transient weighted average model for the back surface-temperature described in Prilliman (2020). References to both publications are available under "Module/Cell Temperature Models" on the `PV Publications <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__   page of the SAM website.
+
+.. note:: The cell temperature models use wind speed and ambient (dry-bulb) temperature data from the weather file, assumed to be measured at 2 meters above the ground. 
+
+   The heat transfer method also uses atmospheric pressure and wet-bulb temperature data, and generates a simulation error if that data is missing from the weather file.
+
+   When you specify a vertical or horizontal mounting structure option, SAM also uses wind direction data in the cell temperature calculation.
 
 .. _module-tempcorr-noct:
 
-The NOCT Method
-~~~~~~~~~~~~~~~
+NOCT Method Parameters
+......................
 
-This method determines the cell temperature based on the nominal operating cell temperature (NOCT) specified in the module parameters. In SAM 2010.11.9 and earlier versions, this was the only available temperature correction option for the CEC model. De Soto (2004) listed on the `PV Publications <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__ page of the SAM website.
+The NOCT method parameters are enabled for the **Nominal operating cell (NOCT) method** option.
 
 **Mounting standoff**
   Choose the option that best describes how the module is mounted: Ground or rack mounted when there is a when there is a lot of space between the module back and the ground or roof surface; For roof-mounted modules, choose a distance between the module back and roof in inches; or choose building-integrated for a module that is part of the building structure.
@@ -114,20 +128,15 @@ This method determines the cell temperature based on the nominal operating cell 
 **Array height**
   Choose the option that best describes the height of the array from the ground.
 
-.. include:: ../includes/snip_pv_transient_thermal_model.rst
+**T_noct**
+  The nominal operating cell temperature (NOCT) from the module library.
 
 .. _module-tempcorr-heat-transfer:
 
-Heat transfer method
-~~~~~~~~~~~~~~~~~~~~
+Heat Transfer Method Parameters
+...............................
 
-The heat transfer method uses a steady state heat transfer model to calculate cell temperatures described in Neises (2010). When the simulation time step is less than 20 minutes and you choose the gap mounting configuration for the heat transfer model, it applies the transient weighted average model for the back surface-temperature described in Prilliman (2020). References to both publications are available under "Module/Cell Temperature Models" on the `PV Publications <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__   page of the SAM website.
-
-.. note:: The temperature correction algorithms use wind speed and ambient (dry-bulb) temperature data from the weather file, assumed to be measured at 2 meters above the ground. 
-
-   The heat transfer method also uses atmospheric pressure and wet-bulb temperature data, and will generate a simulation error if that data is missing from the weather file.
-
-   When you specify a vertical or horizontal mounting structure option, SAM also uses wind direction data in the cell temperature calculation.
+The heat transfer method parameters are enabled for the **Heat transfer method** option.
 
 **Mounting configuration**
   Choose the option that best describes how the modules are mounted: Rack when modules are mounted on open racks that allow ambient air to flow freely over the front and back of the modules; Flush when modules are in direct contact with a roof or wall, preventing air from flowing over the back of the module; Integrated when modules form part of the roof or wall so that the back of the module is in contact with the indoor air (when you specify integrated mounting, you must also specify the temperature behind the module); Gap for modules that are mounted with a space between the module and building surface that allows limited air flow over the back of each module (when you specify gap mounting, you must also specify the mounting structure orientation and gap spacing).
@@ -140,85 +149,72 @@ The heat transfer method uses a steady state heat transfer model to calculate ce
 **Mounting structure orientation**
   This option is only available for the gap mounting configuration only. Choose how the mounting structure interferes with airflow under the modules for the gap mounting configuration: None if the mounting structure does not impede air flow over the back of the modules; vertical supporting structures if the mounting structures on module back are perpendicular to the roof ridge and impede air flow parallel to the ridge; or horizontal supporting structures if the mounting structures are parallel to the roof ridge and impede air flow perpendicular to the ridge.
 
-**Module width**
-  Length of side of module parallel to the ground.
+**Rows of modules in array**
+  Enabled when **Heat transfer dimensions** is **Array Dimensions**. Assuming a rectangular array, the number of rows of modules, where a row is parallel to the line defined by the Module Width variable.
 
-**Module length**
-  SAM calculates this value by dividing the module area from the parameter library by the module width that you specify.
+**Columns of modules in array**
+  Enabled when **Heat transfer dimensions** is **Array Dimensions**. Assuming a rectangular array, the number of modules along the side perpendicular to the line defined by the module width variable.
 
-*Module Length (m) = Module Area (m²) ÷ Module Width*
+**Temperature behind the module**
+  Enabled when **Mounting configuration** is **Integrated**. The indoor air temperature for the integrated mounting configuration option. SAM assumes a constant indoor air temperature regardless of the temperature data in the weather file..
 
-When you choose array dimensions for the heat transfer dimensions, you must also specify how modules are physically configured in the array.
+**Spacing between module back and roof surface**
+  Enabled when **Mounting configuratino** is **gap**. The distance between the back of the modules and the roof or wall surface behind the module.
 
-**Rows of modules in array (array heat transfer dimensions only)**
-  Assuming a rectangular array, the number of rows of modules, where a row is parallel to the line defined by the Module Width variable.
+Transient Thermal Model Correction
+..................................
 
-**Columns of modules in array (array heat transfer dimensions only)**
-  Assuming a rectangular array, the number of modules along the side perpendicular to the line defined by the module width variable.
+.. include:: ../includes/snip_pv_transient_thermal_model.rst
 
-**Temperature behind the module (integrated mounting configuration only)**
-  The indoor air temperature for the integrated mounting configuration option. SAM assumes a constant indoor air temperature.
-
-**Spacing between module back and roof surface (gap mounting configuration only)**
-  The distance between the back of the modules and the roof or wall surface for the gap mounting configuration option.
-
-Physical Characteristics
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-**Material**
-  A description of the semiconductor technology used in the photovoltaic cells.
-
-  1-a-Si: single-junction amorphous silicon
-
-  2-a-Si: dual-junction amorphous silicon
-
-  3-a-Si: triple-junction amorphous silicon
-
-  a-Si/nc: amorphous silicon - microcrystalline silicon tandem module
-
-  CdTe: cadmium telluride
-
-  CIGS: copper indium gallium sulfide
-
-  CIS: copper indium diselenide
-
-  HIT-Si: amorphous silicon heterojunction
-
-  Mono-c-Si: single-crystal silicon
-
-  Multi-c-Si: multi-crystalline silicon
+Module Dimensions
+-----------------
 
 **Module area**
-  The total area of the module, including spaces between cells and the frame.
+  The total area of the module, including spaces between cells and the frame. This value is from the "A_c" column in module library.
 
-**Number of cells**
-  Number of cells per module.
+**Module aspect ratio**
+  The ratio of module length to module width.
 
-Additional Parameters
-~~~~~~~~~~~~~~~~~~~~~
+  For modules with length and width data in the library, SAM disables the input and calculates the aspect ratio value from the length and width values from the library.
 
-**T_noct**
-  Nominal operating cell temperature
+  For modules with only area data in the library, SAM enables the input so you can specify a value. You can calculate the module aspect ratio from the manufacturer's datasheet, or use the default value of 2.01.
 
-**A_ref**
-  Modified ideality factor at reference conditions
+  *Module Aspect Ratio = Module Length ÷ Module Width*
+
+**Module width**
+  The length of the module's short side.
+
+  *Module Length = √ (Aspect Ratio × Module Area )*
+
+**Module length**
+  The length of the modules long side.
+
+  *Module Width = √ (Aspect Ratio ÷ Module Area )*
+
+Single-diode Model Parameters
+-----------------------------
+
+These are input parameters for the single-diode module model. They are calculated from the module characteristics at reference conditions in the process of generating data for the module library. For details, see https://github.com/NREL/SAM/tree/develop/samples/CEC%20Module%20and%20Inverter%20Libraries/CEC%20Modules.
 
 **I_L_ref**
-  Photocurrent at reference conditions 
+  Photocurrent at reference conditions. 
 
 **I_o_ref**
-  Reverse saturation current at reference conditions 
+  Reverse saturation current at reference conditions.
 
 **R_s**
-  Series resistance (constant)
+  Series resistance (constant).
 
 **R_sh_ref**
-  Shunt resistance at reference conditions
+  Shunt resistance at reference conditions.
+
+**a_ref**
+  Modified ideality factor at reference conditions.
 
 .. _module-sandia:
 
 Sandia PV Array Performance Model with Module Database
--------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The Sandia PV Array Performance model consists of a set of equations that provide values for five points on a module's I-V curve and a database of coefficients for the equations whose values are stored in the Sandia Modules library. The coefficients have been empirically determined based on a set of manufacturer specifications and measurements taken from modules installed outdoors in real, operating photovoltaic systems.
 
@@ -227,7 +223,7 @@ The Sandia PV Array Performance model consists of a set of equations that provid
 The Sandia model is described in King et al, 2004. Photovoltaic Array Performance Model. Sandia National Laboratories. SAND2004-3535. (`PDF 1.8 MB <https://doi.org/10.2172/919131>`__).
 
 Overview
-~~~~~~~~
+--------
 
 To use the Sandia photovoltaic model:
 
@@ -244,7 +240,7 @@ When you choose a module from the list, SAM displays the module characteristics 
 .. note:: The current version of the Sandia database contains a single low concentration photovoltaic module, listed as Entech 22X Concentrator [1994].
 
 Module Characteristics at Reference Conditions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------------
 
 SAM displays the module characteristics so that you can compare modules in the database to manufacturer specifications or to different modules in the database. These are nominal ratings. SAM calculates the operating values of these parameters during a simulation and displays them in the :doc:`Results <pv_results>`.
 
@@ -276,7 +272,7 @@ SAM displays the module characteristics so that you can compare modules in the d
   This option determines the coefficients that SAM uses to calculate the cell temperature in each hour of the simulation. The default option is **Use Database Values**, which displays the coefficients from the measured data at reference conditions. See :ref:`Temperature Correction <module-tempcorr-sandia>`   for details.
 
 Physical Characteristics
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 **Material**
   A description of the semiconductor technology used in the photovoltaic cells.
@@ -317,7 +313,7 @@ Physical Characteristics
 .. _module-tempcorr-sandia:
 
 Sandia Temperature Correction
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------
 
 The Sandia temperature correction algorithm calculates a temperature correction factor that accounts for efficiency losses due to heating of the module during the day when the sun is shining. The algorithm calculates an hourly module temperature as a function of the solar radiation, ambient temperature, and wind speed in a given hour, and a set of properties describing the thermal characteristics of the cell and module.
 
@@ -326,7 +322,7 @@ For more details about the algorithm, see King et al, 2004. *Photovoltaic Array 
 .. note:: The SAM temperature correction algorithms do not account for cooling strategies used in some innovative photovoltaic systems.
 
 Guidelines for choosing the Module Structure - Mounting (a, b, dT) parameters
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------------------------------------------------
 
 The *a*, *b*, and *dT* parameters determine the relationship between ambient temperature and module temperature. See :ref:`Sandia Temperature Correction Equations <module-tempcorr-sandia>` for equation details.
 
@@ -363,9 +359,9 @@ The table bleow describes the module structure and mounting options.
 .. include:: ../includes/snip_pv_transient_thermal_model.rst
 
 Sandia Temperature Correction Method
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------
 
-SAM uses the Sandia temperature correction method to calculate a module and cell temperature and temperature correction factor for the Sandia, :ref:`Simple Efficiency Module Model <module-spe>` and :doc:`high concentration photovoltaic (HCPV) <../high-concentration-photovoltaic/hcpv_module>` models. The model uses the temperature correction factor to adjust each hour's module efficiency value: The higher the module's temperature in a given hour, the lower the module's efficiency in that hour.
+SAM uses the Sandia temperature correction method to calculate a module and cell temperature and temperature correction factor for the Sandia, :ref:`module-spe` and :doc:`high concentration photovoltaic (HCPV) <../high-concentration-photovoltaic/hcpv_module>` models. The model uses the temperature correction factor to adjust each hour's module efficiency value: The higher the module's temperature in a given hour, the lower the module's efficiency in that hour.
 
 You can explore temperature effects on the array's performance in the time series output data. The data shows the hourly cell temperature, along with the solar radiation, wind speed, and ambient temperature.
 
@@ -450,7 +446,7 @@ The following table lists sample temperature coefficient values for different ce
      - -0.25
 
 Sandia Temperature Correction Equations
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------
 
 The temperature correction algorithm first calculates the module back temperature based on the incident solar radiation, *a* and *b* coefficients, and the ambient temperature and wind speed:
 
@@ -510,12 +506,12 @@ Where,
 .. _module-spe:
 
 Simple Efficiency Module Model
-------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The flat-plate photovoltaic simple efficiency module model calculates the module's hourly DC output assuming that the module efficiency varies with radiation incident on the module as defined by the radiation level and efficiency table. The model makes an adjustment for cell temperature using the :ref:`Sandia Temperature Correction Model <module-tempcorr-sandia>`.
 
 Overview
-~~~~~~~~
+--------
 
 To use the simple efficiency module model:
 
@@ -538,7 +534,7 @@ Module manufacturers typically include a description of the front material, and 
 SAM uses the reference value to calculate the module's rated power, displayed as the Power variable on the Module page.
 
 Characteristics
-~~~~~~~~~~~~~~~
+---------------
 
 The module characteristics define the module's capacity, efficiency, and thermal characteristics.
 
@@ -561,12 +557,12 @@ The module characteristics define the module's capacity, efficiency, and thermal
   The module's front and back materials (front material/cell/back material) used in the :ref:`Sandia Temperature Correction Equations <module-tempcorr-sandia>`.
 
 Bifacial Specifications
-~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------
 
 .. include:: ../includes/snip_pv_bifacial.rst
 
 Radiation Level and Efficiency Table
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------
 
 **Irradiance (W/m2)**
   The plane-of-array total (beam and diffuse) irradiance level at which the given efficiency value applies.
@@ -604,12 +600,12 @@ Where,
 .. _module-cec-user:
 
 CEC Performance Model with User Entered Specifications
-------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The CEC Performance Model with User Entered Specifications allows you to run the CEC module model with module specifications from a module manufacturer's data sheet.
 
 Overview
-~~~~~~~~
+--------
 
 When you use the model, you first enter a set of specifications to generate a set of coefficients for the module on the Module page, and then run a simulation of the PV system after specifying the rest of the system on the :doc:`pv_system_size`, :doc:`Inverter <pv_inverter>`, and other input pages.
 
@@ -640,7 +636,7 @@ After solving the module model equations, SAM displays a current-voltage (I-V) c
 #. Under **Mounting Configuration**, choose the standoff height and array's height above ground.
 
 General Information
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 **Module description**
   An optional string describing the module.
@@ -667,7 +663,7 @@ General Information
   The nominal operating cell temperature (NOCT) of the module is the measured cell temperature of the module at NOCT test conditions: 800 W/m² incident irradiance, 20 degrees Celsius ambient temperature, and 1 m/s wind speed. The mounting configuration under test conditions is typically open rack, except building-integrated (BIPV) modules which are tested in a building-integrated configuration.
 
 Electrical Specifications
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 **Maximum power point voltage (Vmp), V**
   The reference maximum power point voltage at STC.
@@ -697,12 +693,12 @@ Electrical Specifications
   Use this button to overwrite inputs with values copied from the current selection in the module library for the CEC Performance Model with Module Database model option: Choose **CEC Performance Model with Module Database** from the list of model options at the top of the page, choose the module whose parameters you want to copy from the library list, and then switch back to **CEC Performance Model with User Entered Specifications** and click **Copy module specs from currently selected CEC database module**.
 
 Bifacial Specifications
-~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------
 
 .. include:: ../includes/snip_pv_bifacial.rst
 
 Mounting Configuration
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 SAM's CEC Performance Model with User Entered Specifications uses the :ref:`The NOCT Method <module-tempcorr-noct>` from the CEC Performance Model with Module Database model.
 
@@ -715,7 +711,7 @@ SAM's CEC Performance Model with User Entered Specifications uses the :ref:`The 
   SAM uses the installation height option to make an adjustment to the effect of wind speed on the cell temperature calculation. SAM assumes that an array with an installation height of one story or lower experiences lower wind speeds than those in the weather file because of the effect of nearby trees and structures. For the two story building or higher option, the wind is less impeded.
 
 Nominal Maximum Power Ratings at STC
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------
 
 **Power, Wdc**
    The module’s rated maximum power point power at STC. This is equal to the product of the maximum power point voltage and maximum power point current.
@@ -726,19 +722,19 @@ Nominal Maximum Power Ratings at STC
 .. include:: ../includes/snip_pv_transient_thermal_model.rst
 
 Save / Load Data
-~~~~~~~~~~~~~~~~
+----------------
 
 Use the **Save to file** and **Load from file** buttons to save the module parameters to a text file that you can use to share data between different SAM files. SAM saves a list of variable name, values, and labels in a simple comma-separated format.
 
 .. _module-iec61853:
 
 IEC 61853 Single Diode Model
-----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The IEC-61853 Single Diode model is a detailed method for predicting the performance of flat plate photovoltaic modules. 
 
 Overview
-~~~~~~~~
+--------
 
 The model uses data from modules tested according to the International Electrotechnical Commission (IEC) power and rating standard, `IEC 61853 <http://www.solarabcs.org/about/publications/reports/pv-mod-power-rating/>`__, *Irradiance and Temperature Performance Measurements and Power Rating*. The standard describes requirements for testing PV module performance at maximum power operation for a set of 23 operational conditions, denoted by an asterisk (\*) in the table below.
 
@@ -815,7 +811,7 @@ SAM displays a message details about how it determines the STC, Rsh, Rs, and tem
 #. If you have data available, you can change the spectral response by adjusting the air mass modifier polynomial coefficients. 
 
 Thermal Behavior
-~~~~~~~~~~~~~~~~
+----------------
 
 The thermal model is the same as the CEC module model's `NOCT cell temperature option <https://pvpmc.sandia.gov/modeling-guide/2-dc-module-iv/cell-temperature/noct-cell-temperature/>`__, and is described in De Soto, W.L. (M.S. 2004). Improvement and Validation of a Model for Photovoltaic Array Performance. University of Wisconsin-Madison. (`ZIP 1.8 MB <https://sel.me.wisc.edu/publications/theses/desoto04.zip>`__). 
 
@@ -831,7 +827,7 @@ The thermal model is the same as the CEC module model's `NOCT cell temperature o
   The thermal model uses the mounting height option to make an adjustment to the effect of wind speed on the cell temperature calculation. SAM assumes that an array with an installation height of one story or lower experiences lower wind speeds than those in the weather file because of the effect of nearby trees and structures. For the two story building or higher option, the wind is less impeded.
 
 Optical and Spectral Behavior
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------
 
 To account for reflection losses in the module cover, the IEC 61853 module model applies an angle-of-incidence correction to the direct normal irradiance. It uses the module cover model from PVWatts V5 described in Section 8 of Dobos, A. (2014). PVWatts Version 5 Manual. 20 pp.; NREL Report No. TP-6A20-62641. (`PDF 714 KB <https://docs.nrel.gov/docs/fy14osti/62641.pdf>`__), which is adapted from the DeSoto `Physical IAM model <https://pvpmc.sandia.gov/modeling-guide/1-weather-design-inputs/shading-soiling-and-reflection-losses/incident-angle-reflection-losses/physical-iam-model/>`__.
 

@@ -1,16 +1,16 @@
-# SAM Help
+# SAM Help Build Guide
 
 These instructions are for writing and editing content and building SAM's Help system.
 
-The Help system is built with the Sphinx documentation generator that converts .rst source files into structured html documents.
-
 Help content is written in the reStructuredText (.rst) text markup language: https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html.
 
-Sphinx is a Python package that converts the content to HTML: https://www.sphinx-doc.org/en/master/.
+The Sphinx documentation generator converts .rst source files into structured HTML.
+
+Sphinx is a Python package: https://www.sphinx-doc.org/en/master/.
 
 SAM Help uses Sphinx Book Theme to apply formatting to the HTML: https://sphinx-book-theme.readthedocs.io/en/stable/index.html.
 
-The Sphinx Book Theme, Sphinx, and reStructuredText are all well documented. The documentation below describes the application of these tools to build SAM Help. Refer to the documentation above for detailed descriptions and for information about modifying or adding more features to SAM Help.
+Complete documentation for the Sphinx Book Theme, Sphinx, and reStructuredText is available at the links above. The documentation below describes the application of these tools to build SAM Help.
 
 ## Requirements
 
@@ -69,6 +69,8 @@ Tested on Windows with Python 3.12.10 and GNU Make 4.4.1.
    ```
 
    To clean the build using Make, run `make clean`.
+
+   To see a list of Make targets, run `make`.
 
 4. If there are any build errors, fix them by editing the appropriate .rst file(s).
 
@@ -212,6 +214,12 @@ When a model or feature that has a Help chapter is removed from SAM, archive the
 The `../doc/includes` folder contains files with text "snippets" or reusable text.
 
 For example the `../doc/includes/snip_system_availability.rst` is a description of the system availability losses that is used in descriptions of each of the performance models, such as in the Detailed PV model's "Electrical Losses" topic, and the Physical Trough model's "System Control" topic.
+
+To insert the content of `snip_system_availability.rst` from a file in a `../doc/source` subfolder:
+
+```
+.. include:: ../includes/snip_system_availability.rst
+```
 
 **Important note about snippets**: Do not include targets (`.. _target-name-in-snippet`), cross references references to targets in other snippet files, or cross references to other snippet files in snippet files. Doing so results in duplicate target names which breaks the Sphinx build. You can include cross references in snippet files to topic files that are not in the `../doc/includes` folder.
 

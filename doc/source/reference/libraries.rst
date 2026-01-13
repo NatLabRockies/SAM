@@ -1,9 +1,11 @@
 Libraries
 =========
 
-A library is a text file of comma-separated values that stores sets of data associated with a SAM input in the libraries folder of your SAM installation folder. SAM displays the library contents in a :ref:`library browser <librarybrowser>` where you choose an item from the library to populate values of a set of input variables. For example, the detailed photovoltaic model uses a library to store inverter parameters. By choosing an inverter name, you populate the 16 input variables required to specify an inverter using the CEC inverter model.
+A library is a text file of comma-separated values (CSV) that stores sets of data associated with a SAM input in the libraries folder of your SAM installation folder. SAM displays the library contents in a :ref:`library browser <librarybrowser>` where you choose an item from the library to populate values of a set of input variables. For example, the detailed photovoltaic model uses a library to store inverter parameters. By choosing an inverter name, you populate the 16 input variables required to specify an inverter using the CEC inverter model.
 
 .. note:: In addition to the parameter libraries shown in the table below, SAM also creates libraries as temporary files on your computer to store information about your wind and solar resource data files. For more about weather file libraries, see :doc:`Weather Files and Libraries <../weather-data/weather_manage_folders>`.
+
+   You can find copies of the SAM library CSV files at https://github.com/NREL/SAM/tree/develop/deploy/libraries.
 
 .. list-table::
    :width: 100%
@@ -17,11 +19,11 @@ A library is a text file of comma-separated values that stores sets of data asso
    * - CEC Inverters
      - Photovoltaic inverters
      - Detailed photovoltaic
-     - Go Solar California
+     - California Energy Commission
    * - CEC Modules
      - Photovoltaic modules
      - Detailed photovoltaic
-     - Go Solar California
+     - California Energy Commission
    * - Empirical Trough HCEs
      - Parabolic trough receivers
      - Empirical trough
@@ -91,9 +93,11 @@ For most applications, you do not need to modify libraries. However, if you have
 
 .. note:: If you modify a library, do not change the first three rows of the library file.
 
+   Each version of SAM has a separate installation folder. If you modify a library file for one version of SAM, it will only affect that version, and may be deleted when you remove (uninstall) that version.
+
 The library file format is defined as follows:
 
-* Library files use the .csv file name extension and are stored in the Libraries folder of your SAM installation.
+* Library files use the .csv extension and are stored in the Libraries folder in the :ref:`installationfolder`.
 
 * The first row of a library file is a list of the labels describing the input variables stored in the library. SAM displays these labels in the library browser. It does not use these labels in calculations.
 
