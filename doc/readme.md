@@ -221,7 +221,9 @@ To insert the content of `snip_system_availability.rst` from a file in a `../doc
 .. include:: ../includes/snip_system_availability.rst
 ```
 
-**Important note about snippets**: Do not include targets (`.. _target-name-in-snippet`), cross references references to targets in other snippet files, or cross references to other snippet files in snippet files. Doing so results in duplicate target names which breaks the Sphinx build. You can include cross references in snippet files to topic files that are not in the `../doc/includes` folder.
+If possible, avoid using headings in snippet files to avoid inconsistencies between the heading level in the snippet file and the file it is being inserted to. 
+
+**Important note about snippets**: Do not include targets (`.. _target-name-in-snippet`), cross references, references to targets in other snippet files, or cross references to other snippet files in snippet files. Doing so results in duplicate target names which breaks the Sphinx build. You can include cross references in snippet files to topic files that are not in the `../doc/includes` folder.
 
 ## Headings
 
@@ -251,15 +253,25 @@ Heading 2: Another Section Title
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The "~" character now represents Heading 2 because of the order above.
+```
 
+## Lists and Step-by-step Instructions
+
+Use `#` to automatically number lists. Use `*` for bulleted lists. Lines in a list can be separated by a blank line or not.
+
+```
 Heading 4: Step-by-step instructions:
 .....................................
 
-#. This is Step 1.
+#. This is Step 1 with automatically numbered lines.
 
 #. It is followed by Step 2.
 
-#. Etc.
+   This line is indented by three spaces and will be correctly indented without a number.
+
+#. This is Step 3.
+
+#. This is Step 4.
 ```
 
 ## Variable Definitions
@@ -270,7 +282,7 @@ Use this format for variable descriptions and definitions. Note definition lines
 **Variable Name**
   This is the definition of variable name and is indented by two spaces.
 
-  Multiline variable definition is preceded by one line and also indented by two spaces.
+  Multiline variable definition is preceded by one line and indented by two spaces.
 ```
 
 ## Cross References
@@ -295,11 +307,15 @@ Use custom hyperlink text:
 This is a reference to :doc:`hyperlink text <path/to/filename>`
 ```
 
-A cross reference to a file must have a path. For example, a reference to the `create_project` file in the `getting-started` folder:
+Do not include the `.rst` extension in the filename.
 
-* From another file in the `getting-started` folder, use the path `create_project`.
+Include a path to reference a file in a different folder.
 
-* From a file in a different folder, use the path `../getting-started/create_project`.
+For example, a reference to the `create_project` file in the `getting-started` folder:
+
+* From another file in the `getting-started` folder, use only the file name (without the extension): `create_project`.
+
+* From a file in a different folder, include the path: `../getting-started/create_project`.
 
 ### Cross Reference to a Target
 
@@ -329,7 +345,7 @@ This is a reference to a target :ref:`pvavailability`
 Or, you can set the hyperlink text to "PV System Availability" like this:
 
 ```
-This is a reference to a target :ref:`PV System Availability <pvavailability?`
+This is a reference to a target :ref:`PV System Availability <pvavailability>`
 ```
 ## Web Links
 
@@ -350,11 +366,12 @@ MacAlpine, S.; Deline, C. (2015) Simplified Method for Modeling the Impact of Ar
 ```
 For more information about SAM, see the `SAM website <https://sam.nrel.gov>`__.
 ```
+
 ## Indentation
 
 Sphinx is very sensitive to spacing and indentation.
 
-** Do not use tabs ** Sphinx counts number of spaces, so tabs will break documentation builds.
+**Do not use tabs!** Sphinx counts number of spaces, so tabs will break documentation builds.
 
 ## Table of Contents
 
@@ -374,7 +391,7 @@ for `toctree`, lines following the directive should be preceded by three spaces:
 
 ## Notes and Highlighted Text Boxes
 
-Use Sphix "admonitions" to highlight text in boxes. The SAM documentation uses the `admonition` and `note` admonition, but there are several others described at https://sphinx-book-theme.readthedocs.io/en/stable/reference/kitchen-sink/admonitions.html.
+Use Sphix "admonitions" to highlight text in boxes: https://sphinx-book-theme.readthedocs.io/en/stable/reference/kitchen-sink/admonitions.html.
 
 Use the `note` directive for text in a box notes:
 
@@ -382,7 +399,7 @@ Use the `note` directive for text in a box notes:
 .. note:: This note will be rendered in a box with an information (i) icon and the word "Note" in a blue title bar.
 ```
 
-Admonitions can have more than one line. Each subseqent line is preceded by three spaces:
+Admonitions can have more than one line. Each subsequent line is indented by three spaces:
 
 ```
 .. note:: First line of a multiline note.
@@ -391,6 +408,29 @@ Admonitions can have more than one line. Each subseqent line is preceded by thre
 
    Third line of multiline note.
 ```
+
+When Help was originally converted from Help and Manual's XML format to ReStructured text, multi-line notes were exported as separate notes and rendered in separate text boxes. If you encounter several notes in a row, you can combine them into a single note.
+
+Before:
+
+```
+.. note:: First note before combining.
+
+.. note:: Second note before combining.
+
+.. note:: Third note before combining.
+```
+
+After:
+
+```
+.. note:: First note after combining.
+
+   Second note after combining is now Line 2 in a single text box. (This line is indented by three spaces.)
+
+   Third note after combining is now Line 3 in a single text box. (This line is also indented by three spaces.)
+```
+
 
 Use the `admonition` directive to use a custom title instead of "Note:"
 

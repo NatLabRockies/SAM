@@ -35,6 +35,5 @@ The following example shows SAM derating data for the inverter described in the 
   After changing values in the table, click **Update plot** to change the graph.
 
 .. note:: To avoid excessive temperature derating losses for large inverters, make sure the highest Vdc voltage value in the temperature derate curves is greater than or equal to the inverter's maximum VDC voltage rating.
-
-
-.. note:: The temperature derating model is not part of the original Sandia Performance Model for Grid-Connected Photovoltaic Inverter. It is a special implementation for SAM's Detailed PV model.
+  
+   The temperature derating model is not part of the original Sandia Performance Model for Grid-Connected Photovoltaic Inverter. It is a special implementation for SAM's Detailed PV model.

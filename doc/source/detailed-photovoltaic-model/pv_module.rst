@@ -1,11 +1,11 @@
 Module
 ======
 
-The Module page allows you to choose a model to represent the photovoltaic module's performance. For each time step of the simulation, the module model calculates the DC electrical output of a single module based on the design parameters and the incident solar radiation (plane-of-array irradiance) calculated from data in the weather file. 
+The Module page allows you to choose a model to represent the photovoltaic module's performance. The module converts solar radiation into DC electricity. For each time step of the simulation, the module model calculates the DC electrical output of a single module based on the design parameters and the incident solar radiation (plane-of-array irradiance) calculated from data in the weather file. 
 
-SAM assumes that the system is made up of an array of identical modules, which can be wired into up to four DC subarrays. The photovoltaic array's electric output depends on the number of modules in the system, and the orientation, tracking, shading, and other parameters.
+SAM can only model an array with a single type of module. Specify the number of modules in the array on the doc:`pv_system_size` page.
 
-You can choose from five different module model option. SAM displays the name of the current option in the blue box at top of the Module page. Click the box to choose a different option:
+You can choose from five different module model options. SAM displays the name of the current option in the blue box at top of the Module page. Click the box to choose a different option:
 
 .. image:: ../images/SS_PVModule-ChooseModel.png
    :align: center
@@ -21,7 +21,7 @@ You can choose from five different module model option. SAM displays the name of
 
 * :ref:`module-iec61853` calculates the module conversion efficiency from a set of detailed parameters describing the module's characteristics, consistent with the International Electrotechnical Commission (IEC) power and rating standard, `IEC 61853 <http://www.solarabcs.org/about/publications/reports/pv-mod-power-rating/>`__, *Irradiance and Temperature Performance Measurements and Power Rating*. Use this option when you have IEC test data.
 
-For complete technical descriptions of the five module model options, see Gilman, P.; Dobos, A.; DiOrio, N.; Freeman, J.; Janzou, S.; Ryberg, D. (2018) SAM Photovoltaic Model Technical Reference Update. 93 pp.; NREL/TP-6A20-67399 available along with other technical documentation from the `SAM website <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__.
+For technical descriptions of the module model options, see Gilman, P.; Dobos, A.; DiOrio, N.; Freeman, J.; Janzou, S.; Ryberg, D. (2018) SAM Photovoltaic Model Technical Reference Update. 93 pp.; NREL/TP-6A20-67399 available along with other technical documentation from the `SAM website <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__.
 
 .. _module-cec-database:
 
@@ -45,6 +45,7 @@ The model is described in Gilman, P. (2015). SAM Photovoltaic Model Technical Re
 SAM's implementation of the model uses the `air mass model <https://pvpmc.sandia.gov/modeling-guide/2-dc-module-iv/effective-irradiance/spectral-mismatch-models/>`__ for spectral mismatch from the Sandia Array Performance Model with "a" coefficients for polycrystalline modules from Table A1 of De Soto W.; Klein, S.; Beckman, W.; (2006) `Improvement and validation of a model for photovoltaic array performance <https://www.sciencedirect.com/science/article/abs/pii/S0038092X05002410>`__. Solar Energy. Vol 80 Issue 1. pp 78-88.
 
 To use the CEC Performance Model with Module Database:
+......................................................
 
 #. On the Module page, choose **CEC Performance Model**.
 

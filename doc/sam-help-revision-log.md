@@ -2,6 +2,8 @@
 
 ## To Do
 
+Change NREL to NLR (abbreviations and spelled out) after SAM website URL is updated.
+
 Copy content from "Custom HTF" to new `window-reference/win_edit_material_properties` and revise. Topic is broke in SAM 2025.4.16.
 
 New Help topic for Advanced NOHRSC Download window, see https://github.com/NREL/SAM/pull/2089.
@@ -19,6 +21,10 @@ Update excess generation option descriptions pending update to dgrules field in 
 DSCR debt sizing note, see Brian email 10/31/2025 "Addtional thoughts on debt sizing error message".
 
 ## Complete
+
+New topic for snow download window. 2/3/2026
+
+New revised topics for PV UI redesign. 2/3/2026
 
 Fix broken URLs. 1/9/2026
 

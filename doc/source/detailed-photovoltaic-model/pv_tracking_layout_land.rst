@@ -3,6 +3,10 @@ Tracking Layout Land
 
 The Tracking Layout Land inputs are for array tracking and orientation, physical layout, and land area calculations.
 
+.. note:: SAM does not adjust installation or operating costs on the Installation costs or Operating costs pages based on the Tracking and Orientation, Row Dimensons and Spacing, or Terrain Slope inputs, so you should adjust the cost inputs as appropriate. For example, if you change the tracking option from **Fixed** to **One-axis tracking**, you should also change installation and operating costs to account for differences in equipment, labor, and maintenance costs.
+
+   If you specify land-related costs in $/acre on the Installation Costs page, the land area estimate does affect the total installed cost. Similarly, if you specify or land lease costs on the Operating Costs page (available for front-of-meter financial models), the land area estimate affects project operating expenses.
+
 Subarrays
 ~~~~~~~~~
 
@@ -15,9 +19,8 @@ Tracking and Orientation
 
 The tracking options allow you specify whether and how modules in each subarray follow the movement of the sun across the sky.
 
-.. note:: SAM does not adjust installation or operating costs on the Installation costs or Operating costs pages based on the tracking options you specify. When you change the tracking option, be sure to also change costs as appropriate.
 
-.. tip:: Use the following output variables to explore the effect of tracking and orientation inputs (see :doc:`Results <pv_results>` for detailed descriptions):
+.. tip:: Use the following output variables to explore the effect of tracking and orientation inputs (see :doc:`pv_results` for detailed descriptions):
 
    * **Subarray [n] Angle of incidence**
    * **Subarray [n] Angle of incidence modifier**
@@ -39,29 +42,32 @@ The tracking options allow you specify whether and how modules in each subarray 
      :align: center
      :alt: IMG_PVArray-fixed-tilt.png
 
-**1 Axis**
+**One-axis tracking**
   The subarray is fixed at the angle from the horizontal defined by the value of **Tilt** and rotates about the tilted axis from east in the morning to west in the evening to track the daily movement of the sun across the sky. **Azimuth** determines the array's orientation with respect to a line perpendicular to the equator. For a horizontal subarray with one-axis tracking and a north-south axis of rotation that rotates from east to west, use a **Tilt** value of zero and **Azimuth** value of 180 degrees.
 
   .. image:: ../images/IMG_PVArray-one-axis.png
      :align: center
      :alt: IMG_PVArray-one-axis.png
 
-**2 Axis**
-  The subarray rotates from east in the morning to west in the evening to track the daily movement of the sun across the sky, and north-south to track the sun's seasonal movement throughout the year. For two-axis tracking, SAM ignores the values of the **Tilt** and **Azimuth** inputs.
+**Two-axis tracking**
+  The subarray rotates from east in the morning to west in the evening to track the daily movement of the sun across the sky, and north-south to track the sun's seasonal movement throughout the year. For two-axis tracking, **Tilt** and **Azimuth** are disabled.
 
   .. image:: ../images/IMG_PVArray-two-axis.png
      :align: center
      :alt: IMG_PVArray-two-axis.png
 
-**Azimuth Axis**
-  The subarray rotates in a horizontal plane to track the daily movement of the sun. SAM ignores the value of the **Azimuth** input.
+**Azimuth tracking**
+  The subarray rotates in a horizontal plane to track the daily movement of the sun. **Azimuth** is disabled.
 
   .. image:: ../images/IMG_PVArray-azimuth-axis.png
      :align: center
      :alt: IMG_PVArray-azimuth-axis.png
 
-**Tilt = Latitude**
-  Assigns the latitude value stored in the weather file and displayed on the :doc:`Location and Resource <pv_location_and_resource>`   page to the tilt angle. Note that SAM does not display the tilt value on the System Design page, but does use the correct value during the simulation.
+**Seasonal tilt**
+  Equivalent to **Fixed**, but allows you to set a different tilt angle for each month of the year. See **Seasonal tilt angles** below.
+
+**Tilt=latitude**
+  Assigns the latitude value stored in the weather file and displayed on the :doc:`pv_location_and_resource` page to the tilt angle. Note that SAM does not display the tilt value on the System Design page, but does use the correct value during the simulation.
 
   The value of the Tilt input must be positive, so for southern latitudes, SAM sets the tilt angle to the negative value of the latitude.
 
@@ -70,42 +76,41 @@ The tracking options allow you specify whether and how modules in each subarray 
 **Tilt angle, degrees**
   The array's tilt angle in degrees from horizontal, where zero degrees is a horizontal array, and 90 degrees is a vertical array. The tilt value must be between zero and 90 degrees, inclusive.
 
-  As a rule of thumb, system designers sometimes use the location's latitude (shown on the Location and Resource page) as the optimal array tilt angle. The actual tilt angle will vary based on project requirements. You can run a :doc:`parametric analysis <../simulation-options/parametrics>`   on tilt to find its optimal value.
+  As a rule of thumb, system designers sometimes use the location's latitude (shown on the Location and Resource page) as the optimal array tilt angle. The actual tilt angle will vary based on project requirements. You can run a :doc:`parametric analysis <../simulation-options/parametrics>` on tilt to find its optimal value.
 
   The effect of the tilt angle depends on the tracking option:
 
-* **Fixed**: The tilt angle is the angle formed between the surface of the array and a horizontal line parallel to the azimuth. An array with an azimuth angle of 180° and a tilt angle of 20° would be tilted from the horizontal at 20° facing south. An array with an azimuth angle of 0° and a tilt angle of 20° would be tilted from the horizontal at 20° facing north. For a horizontal array, use a tilt angle of zero.
+  * Fixed and seasonal tilt: The tilt angle is the angle formed between the surface of the array and a horizontal line parallel to the array azimuth. An array with an azimuth angle of 180° and a tilt angle of 20° would be tilted from the horizontal at 20° and face south. An array with an azimuth angle of 0° and a tilt angle of 20° would be tilted from the horizontal at 20° and face north. For a horizontal array, use a tilt angle of zero.
 
-* **1 Axis**: The tilt angle is the angle between the axis of rotation and the horizontal. One-axis trackers typically have a tilt angle of zero for a horizontal tracking axis.
+  * One-axis tracking: The tilt angle is the angle between the tracker's axis of rotation and the horizontal. One-axis trackers typically have a tilt angle of zero for a horizontal tracking axis.
 
-* **2 Axis**: The Tilt input is disabled because the tracker sets the tilt and azimuth angle so the array follows the movement of the sun.
+  * Two-axis tracking: The tilt angle input is disabled. SAM calculates the tilt and azimuth angle in each simulation time step based on sun angles.
 
-* **Azimuth Axis**: The tilt angle is fixed, and is the angle formed between the surface of the array and a line perpendicular to the bottom edge of the array.
+  * Azimuth tracking: The tilt angle is fixed, and is the angle formed between the surface of the array and a horizontal line perpendicular to the bottom edge of the array.
 
-* **Seasonal Tilt**: You can specify a fixed tilt angle for each month of the year.
+**Seasonal tilt angles, degrees**
+  Enabled for the **Seasonal tilt** option. Click **Edit values** to enter a tilt angle value for each month of the year. (The azimuth angle does not change by month.)
 
 **Azimuth angle, degrees**
   The azimuth angle in degrees determines the array's east-west orientation, where 0 = North, 90 = East, 180 = South, and 270 = West, regardless of whether the array is in the northern or southern hemisphere. The azimuth value must be greater than or equal to zero and less than 360.
 
   The effect of the azimuth angle depends on the tracking option:
 
-* **Fixed**: The azimuth angle determines the direction the array faces. North of the equator, the azimuth for a south-facing array is 180 degrees. South of the equator, the azimuth for a north-facing array is 0 degrees.
+  * Fixed and seasonal tilt: The azimuth angle determines the direction the array faces. North of the equator, the azimuth for a south-facing array is 180 degrees. South of the equator, the azimuth for a north-facing array is 0 degrees.
 
-* **1 Axis**: The azimuth angle determines the orientation of the rotation axis. An azimuth of 180 is for a tracker with a North-South rotation axis that rotates from East to West. When the azimuth angle is 180°, the rotation angles reported in the results are negative when the tracker faces east and positive when it faces west. When the azimuth angle is 0°, rotation angles are positive when the tracker faces east and negative when it faces west.
+  * One-axis tracking: The azimuth angle determines the orientation of the rotation axis. An azimuth of 180 is for a tracker with a North-South rotation axis that rotates from East to West. When the azimuth angle is 180°, the rotation angles reported in the results are negative when the tracker faces east and positive when it faces west. When the azimuth angle is 0°, rotation angles are positive when the tracker faces east and negative when it faces west.
 
-* **2 Axis**, **Azimuth Axis**: The Azimuth input is disabled because the tracker sets the azimuth angle so the array follows the movement of the sun.
-
-* **Seasonal Tilt**: The azimuth definition is the same as for the Fixed option. The azimuth angle does not change for the seasonal tilt option.
+* Two-axis tracking and azimuth tracking: The Azimuth input is disabled. SAM calculates the tilt and azimuth angle in each simulation time step based on sun angles.
 
 **Tracker Rotation Limit, degrees**
-  For one-axis trackers, the maximum and minimum allowable rotation angle. A value of 45 degrees would allow the tracker to rotate 45 degrees about the center line in both directions from the horizontal.
+  For one-axis trackers, the maximum and minimum allowable rotation angle. A value of 45 degrees would allow the tracker to rotate 45 degrees about the center line in both directions from the horizontal. The tracker rotation limit must be between 0 and 85 degrees.
 
 .. _backtracking:
 
 **Backtracking**
-  Backtracking is a one-axis tracking strategy that avoids row-to-row shading.
+  Backtracking is enabled for one-axis tracking only.
 
-  Without backtracking, a one-axis tracker points the modules toward at the sun. For an array with closely spaced rows, modules in adjacent rows will shade each other at certain sun angle. With backtracking, under these conditions, the tracker orients the modules away from the sun to avoid shading.
+  Without backtracking, a one-axis tracker points the modules toward at the sun. For an array with closely spaced rows, modules in adjacent rows will shade each other at certain sun angles. With backtracking, under these conditions, the tracker orients the modules away from the sun to avoid shading.
 
   The following diagram illustrates how backtracking avoids row-to-row shading for a simple array with two rows:
 
@@ -118,13 +123,11 @@ The tracking options allow you specify whether and how modules in each subarray 
 Row Dimensions and Spacing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To model the effects of self shading and snow cover, SAM needs basic information about the arrangement of modules and rows in each subarray. The total number of modules in each subarray is defined on the :doc:`pv_system_size` page.
+SAM needs basic information about the arrangement of modules and rows in each subarray to model the effects of self shading and snow cover, and to calculate irradiance on the back of the array for bifacial modules.
 
-.. note:: The Array Dimensions input are only active for a subarray when you either choose a self-shading option, or check the Snow Losses check box.
+The number of modules in the array and its electrical layout is defined on the :doc:`pv_system_size` page.
 
-  SAM assumes that modules in each subarray are laid out in rectangles. It cannot calculate self shading or snow coverage losses for subarrays with irregular shapes.
-
-  The array dimensions for self shading and snow coverage are different from the electrical wiring of strings defined on the :doc:`pv_system_size` page.
+SAM assumes that each subarray is a rectangle of modules. For a subarray with more than one row, it assumes that rectangular rows have the same dimensions and row spacing. 
 
 .. image:: ../images/IMG_SelfShad-definitions.png
    :align: center
@@ -137,77 +140,86 @@ To model the effects of self shading and snow cover, SAM needs basic information
 Dimensions from Module Page
 ---------------------------
 
-**Module width, m**
-  The width of the short side of the module.
+The module dimensions from the :doc:`pv_module` page are shown here to help you determine values for row dimensions or row spacing.
 
-  module width = *√( module area ÷ module aspect ratio )*
+**Module width, m**
+  The width of the short side of a single module.
 
 **Module length, m**
-  The length of the long side of the module.
-
-  *module length = √( module area × module aspect ratio )*
+  The length of the long side of a single module.
 
 **Module area, m²**
-  The module area from the :doc:`Module page <pv_module>`  .
-
+  The area of a single module.
 
 **Module aspect ratio**
   The ratio of the module length to module width. 
 
-  The built-in module libraries for the CEC and Sandia module models contain data for the area of each module, but not for the module length and width. For this reason, you must provide the aspect ratio as an input for the self-shading calculations. You can use the module dimensions for your module from the manufacturer data sheet to calculate the aspect ratio, and compare SAM's calculated values to the values on the data sheet to check your work.
-
 Row Dimensions
 --------------
 
+The row dimension inputs determine the physical layout of each subarray. They are used for self shading, snow loss, and bifacial module calculations.
+
+Row dimension inputs are disabled for the **Specify GCR** option.
+
+.. note:: For a residential rooftop system or other system with modules in a single plane that are not arranged in rows, set the number of modules along side and bottom of row so that the number of rows is one.
+
 **Module orientation**
-  The module orientation determines whether the short or long side of the module is parallel to the ground, assuming that all modules in the array are mounted at a fixed angle from the horizontal equal to the tilt angle specified on the :doc:`pv_system_size`   page.
+  The module orientation determines whether the short or long side of the module is parallel to the ground, or at the bottom of the array.
 
-  Portrait orientation means the short end of the module is parallel to the ground, or at the bottom of the module.
+  * Portrait: The short end of the module is parallel to the ground.
 
-  Landscape orientation means the long end of the module is parallel to the ground, or at the bottom of the module.
+  * Landscape: The long end of the module is parallel to the ground.
 
-**Number of modlues in subarray**
-  The total number of modules in each subarray, as defined on the :doc:`pv_system_size`   page.
+**Number of modules in subarray**
+  The total number of modules in each subarray, the product of the number of modules per string and strings in parallel in the subarray from the :doc:`pv_system_size` page.
 
 **Number of modules along side of row**
-  The number of modules along the edge of the subarray array perpendicular to the bottom of the array as defined below.
+  The number of modules along the edge of the row perpendicular to the row's bottom as defined below.
 
 **Number of modules along bottom of row**
-  The number of modules along the bottom of a row, which is the edge of the row nearest to the ground.
+  The number of modules along the bottom of a row. For a tilted row, the bottom is the edge of the row nearest to the ground.
 
   For fixed arrays, the bottom edge is perpendicular to the azimuth angle. For example, for a fixed array in the northern hemisphere and an azimuth angle of 180 degrees, the bottom of the row is the southernmost edge of the row.
 
   For arrays with one-axis tracking, the bottom edge is parallel to the tracking axis, which is determined by the azimuth angle. For example, for a one-axis tracking array with an azimuth angle of 180 degrees, the bottom of each row is the edge closest to the east in the morning.
 
 **Number of rows**
-  The number of rows given the number of modules in the subarray from the :doc:`pv_system_size`   page and the numbers of modules along the side and bottom of row that you specify.
+  The number of rows given the number of modules in the subarray and the number of modules along the side and bottom of row.
 
-*Number of Rows = Number of Modules in Subarray ÷ Number of Modules along Side ÷ Number of Modules along Bottom*
+  *Number of Rows = Number of Modules in Subarray ÷ Number of Modules along Side ÷ Number of Modules along Bottom*
 
-  To model a realistic rectangular arrangement of modules, the number of rows should be an integer: The product of the number of modules along the side and bottom of each subarray should be a divisor of the total number of modules in the subarray.
+  To model a realistic rectangular arrangement of modules, the number of rows should be an integer. If the number of is not an integer, SAM generates a simulation message but  still runs and generate results.
 
 .. note:: A subarray with only one row will not experience any self shading.
-
-   If the number of rows is one or is not an integer, SAM generates a simulation message but will still run and generate results.
 
 Row Spacing
 -----------
 
+The row spacing inputs determine the distance between rows of modules in each subarray. You can either specify the row spacing explitly or use the ground coverage ratio (GCR) to specifiy row spaing.
+
+SAM uses row spacing to estimate :ref:`self-shading losses <pvselfshading>` for fixed and one-axis trackers, determine when to backtrack for one-axis trackers with backtracking enabled, and to estimate the array's land requirement for :doc:`installation cost <../installation-costs/cc_pv>` calculations.
+
+For bifacial modules, SAM also uses row spacing to calculate irradiance on the rear of the array .
+
+To see the effect of row spacing on the system's performance, after running a simulation, you can compare the time series results Nominal POA total irradiance (kW/m²) and POA total irradiance after shading only (kW/m²). You can also run a :doc:`parametric analysis <../simulation-options/parametrics>` on the ground coverage ratio value to find its optimal value.
+
+**Specify row spacing**
+  Choose this option to specify the row spacing in meters. SAM calculates the GCR.
+
+**Specify GCR**
+  Choose this option to specify the row spacing using the GCR. SAM calculates the row spacing.
+
 **GCR**
-  The ratio of the photovoltaic array area to the ground area occupied by the array. For an array configured in rows of modules, the GCR is the length of the side of one row divided by the distance between the bottom of one row and the bottom of its neighboring row. Increasing the GCR decreases the spacing between rows.
+  The ratio of the subarray area to the ground area occupied by the subarray. Increasing the GCR decreases the spacing between rows.
 
   The ground coverage ratio must be a value greater than 0.01 and less than 0.99.
 
-  SAM uses the GCR to estimate :ref:`self-shading losses <pvselfshading>`   for fixed and one-axis trackers, determine when to backtrack for one-axis trackers with backtracking enabled, and to estimate the array's land requirement for :doc:`installation cost <../installation-costs/cc_pv>`   calculations.
-
-  For bifacial modules, SAM also uses the GCR to calculate irradiance on the rear of the array .
-
-  To see the effect of the ground coverage ratio on the system's performance, after running a simulation, you can compare the time series results Nominal POA total irradiance (kW/m  \ :sup:`2`\   ) and POA total irradiance after shading only (kW/m  \ :sup:`2`\   ). You can also run a :doc:`parametric analysis <../simulation-options/parametrics>`   on the ground coverage ratio value to find its optimal value.
-
-**Row spacing, m**
-  The distance in meters between the bottom of any two rows in the subarray. SAM displays this value for reference. The self-shading calculations use the module area and GCR.
+  SAM assumes that the subarray consists of uniform recangular rows of modules, so the GCR is the length of the side of a row divided by the distance between the bottom of the row and the bottom of its neighboring row.
 
   *row spacing estimate = length of side ÷ GCR*
+
+  **Row spacing, m**
+  The distance in meters between the bottom of any two rows in the subarray.
 
 **Length of side, m**
   The length of the side of a row. The bottom of the row is parallel to the ground, and the side is perpendicular to the bottom.
@@ -231,7 +243,7 @@ The terrain slope and azimuth angles describe the inclination of the ground with
 
 * Non-linear self shading enabled with no backtracking: Terrain angles do not affect the self-shading calculations.
 
-.. note:: The terrain angles are not available for fixed (no tracking) subarrays, or subarrays with two axis, azimuth axis, or seasonal tilt tracking options.
+.. note:: The terrain angles are not available for fixed (no tracking) subarrays, or subarrays with two-axis, azimuth, or seasonal tilt tracking options.
 
 The terrain slope model is described in Anderson, K.; Mikofski, M. (2020) Slope-aware Backtracking for Single-axis Trackers. National Renewable Energy Laboratory. 24 pp. NREL/TP-5K00-76626. (`PDF 783 KB <https://www.nrel.gov/docs/fy20osti/76626.pdf>`__), also listed at https://sam.nrel.gov/photovoltaic/pv-publications.html.
 

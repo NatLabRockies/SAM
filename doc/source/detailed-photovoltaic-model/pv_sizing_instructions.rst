@@ -156,6 +156,20 @@ Example 6: Three strings (two identical), one inverter, two MPPTs
    * - Strings in parallel in subarray 2
      - 1
 
+**TO DO from original System Design page**
+
+For example, to configure strings for a 10 MW system consisting of SunPower SPR-305 modules, and Advanced Energy Solaron 333 inverters with two subarrays of 5 MW each with different azimuth angles:
+
+#. On the :doc:`Module <pv_module>` and :doc:`Inverter <pv_inverter>` pages, choose the SunPower module and Solaron inverter, respectively.
+
+#. On the :doc:`pv_system_size` page, under **AC Sizing**, type 4 for **Number of inverters**.
+
+#. Clear **Estimate Subarray 1 configuration**. It is not possible for SAM to automatically size a system with more than one subarray.
+
+#. Under **DC Sizing and Configuration**, for **Subarray 1**, specify 8 modules per string and 220 strings in parallel, and an azimuth angle of 180.
+
+#. Enable Subarray 2, and specify 8 modules per string and 220 strings in parallel for Subarray 2, and an azimuth angle of 170.
+
 .. _manual:
 
 Specify Numbers of Modules and Inverters
