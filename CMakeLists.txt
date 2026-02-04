@@ -27,7 +27,7 @@ if (SAMAPI_EXPORT)
 	add_subdirectory(api)
 endif()
 
-include_directories(src $ENV{WEXDIR}/include $ENV{LKDIR}/include $ENV{SSCDIR} $ENV{RAPIDJSONDIR} ../tcs )
+include_directories(src $ENV{WEXDIR}/include $ENV{LKDIR}/include $ENV{SSCDIR} $ENV{RAPIDJSONDIR} $ENV{ORTOOLSDIR}/include ../tcs )
 
 set(SAM_SRC src/private.h
     src/main_add.h
@@ -271,6 +271,11 @@ else()
 endif()
 
 target_link_libraries(${SAM_EXE} ${wxWidgets_LIBRARIES})
+
+
+find_package(ortools NO_MODULE REQUIRED)
+target_link_libraries(shared ortools::ortools)
+
 
 if (UNIX)
 	target_link_libraries(${SAM_EXE} -lm -lcurl)
