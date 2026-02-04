@@ -76,7 +76,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <rapidjson/filewritestream.h>
 #include <rapidjson/istreamwrapper.h>
 
-#include "ortools/linear_solver/linear_solver.h"
+#include <ortools/linear_solver/linear_solver.h>
 
 
 //#include "private.h"
