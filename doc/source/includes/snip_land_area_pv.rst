@@ -36,7 +36,7 @@ SAM can automatically calculate the land area based on the system design paramet
 **Ground area occupied by array, acres or ha**
   An estimate of the land area occupied by the array, including space between rows determined by the ground coverage ratio (GCR) and any additional land specified by the land area multiplier.
 
-*Ground Area (acres) = Total Module Area (acres) / GCR × Land Area Multiplier*
+  *Ground Area (acres) = Total Module Area (acres) / GCR × Land Area Multiplier*
 
   This estimate assumes that modules are arranged in rectangular rows, that all rows have the same dimensions, and that spacing between rows is uniform.
 

@@ -1,13 +1,7 @@
 Soiling Shading Snow
 ====================
 
-Shading and snow losses are reductions in the incident irradiance caused by shadows or snow on the photovoltaic modules in the array.
-
-SAM can model the impact of a reduction in plane-of-array irradiance on each subarray caused by external shading, self shading, and snow cover. This overview describes each, with links to the sections below that list and describe the inputs.
-
-.. note:: The monthly soiling losses on the :doc:`pv_electrical_losses` page also reduce the irradiance incident on the array. When comparing incident plane-of-array irradiance data, be sure to take soiling losses into account.
-
-   The self-shading model does not work with the **Simple Efficiency Module** model on the :doc:`Module <pv_module>` page.
+The inputs on the Soiling Shading Snow page determine how SAM calculates the effect of reductions in the irradiance incident on each subarray caused by module soiling, shadows, or snow.
 
 Subarrays
 ~~~~~~~~~
@@ -17,26 +11,24 @@ To enable and disable subarrays, use the check boxes under "Subarrays" on the :d
 Soiling Losses
 ~~~~~~~~~~~~~~
 
-Soiling losses account for reduction in incident solar irradiance caused by dust or other seasonal soiling of the module surface   that reduce the radiation incident on the subarray. Soiling losses cause a uniform reduction in the total irradiance incident on each subarray. 
+Soiling losses account for the reduction in incident solar irradiance caused by dust or other seasonal soiling of the module surface. SAM models soiling as a uniform reduction in the total irradiance incident on each subarray. 
 
-SAM calculates the nominal incident irradiance value for each time step using solar irradiance values from the weather file, and sun and subarray angles. When you specify soiling losses, SAM adjusts the nominal incident irradiance value by each soiling loss percentage that applies to the time step. You can see the effect of soiling losses in hourly results by comparing values of the nominal POA irradiance with the "after shading only" and "after shading and soiling" values. The radiation incident on the subarray is the POA total irradiance after shading and soling value (W/m\ :sup:`2`\ ).
-
-.. note:: Soiling losses apply in addition to any losses you specify on the :doc:`pv_soiling_shading_snow` page.
+You can see the effect of soiling losses in hourly results by comparing values of the nominal POA irradiance with the "after shading only" and "after shading and soiling" values. The radiation incident on the subarray is the POA total irradiance after shading and soling value (W/m²).
 
 **Monthly soiling loss**
-  Click **Edit values** to specify a set of monthly soiling losses. To apply a single soiling loss to all months to represent a constant loss throughout the year, in the Edit Values window, type a value for **Enter single value** and then click **Apply**.
+  Click **Edit values** to specify a set of monthly soiling losses. To apply a single soiling loss to all months, in the Edit Values window, type a value for **Enter single value** and then click **Apply**.
 
   For example, a soiling loss of 5% for January would reduce the plane-of-array irradiance for the front of the array by 5% for all time steps in January.
 
 **Average annual soiling loss**
-  SAM shows the average of the twelve monthly soiling loss values for your reference. It applies the monthly soiling losses during simulations, not the average annual value.
+  SAM shows the average of the twelve monthly soiling loss values for your reference so you can tell if there are soiling losses without clicking the **Edit values** button. SAM does not use the average annual value for simulations.
 
 Rear-side Shading and Soiling for Bifacial Modules
 --------------------------------------------------
 
-When you enable the bifacial model on the :doc:`Module <pv_module>` page, SAM enables two additional irradiance losses to account for soiling on the rear side of the array that differ from front-side soiling.   SAM reduces the irradiance incident on the rear-side of the array by the bifacial rear soiling and bifacial rack shading percentage. The bifacial soiling losses are constant and do not change from month to month.
+When you enable the bifacial model on the :doc:`Module <pv_module>` page, SAM enables two additional irradiance losses to account for soiling on the rear side of the array that differ from front-side soiling. SAM reduces the irradiance incident on the rear-side of the array by the bifacial rear soiling and bifacial rack shading percentage. The bifacial soiling losses are constant and do not change from month to month.
 
-  Peláez, S.; Deline, C.; Stein, Joshua.; Marion, B.; Anderson, K; Muller, M. (2019) Effect of torque-tube parameters on rear-irradiance and rear-shading loss for bifacial PV performance on single-axis tracking systems. IEEE 46th Photovoltaic Specialists Conference (PVSC), vol. 2, pp. 1-6. IEEE. (`PDF 835 KB <https://www.nrel.gov/docs/fy20osti/73203.pdf>`__  )
+Peláez, S.; Deline, C.; Stein, Joshua.; Marion, B.; Anderson, K; Muller, M. (2019) Effect of torque-tube parameters on rear-irradiance and rear-shading loss for bifacial PV performance on single-axis tracking systems. IEEE 46th Photovoltaic Specialists Conference (PVSC), vol. 2, pp. 1-6. IEEE. (`PDF 835 KB <https://www.nrel.gov/docs/fy20osti/73203.pdf>`__  )
 
 **Bifacial rear soiling (%)**
   A percentage of the irradiance incident on the rear-side of the bifacial array to account for soiling on the rear side of the array.
@@ -44,7 +36,7 @@ When you enable the bifacial model on the :doc:`Module <pv_module>` page, SAM en
 **Bifacial rack shading (%)**
   A percentage of the irradiance incident on the rear-side of the bifacial array to account for shadows of racking equipment on the rear side of the array.
 
-The following results show the effect of these losses, which you can see on the :doc:`Losses <../results/losses>`, :doc:`Data Tables <../results/data>`, and :doc:`Time Series <../results/timeseries>` tabs on the Results page. See :doc:`Detailed PV model Results <pv_results>` for descriptions of these and other variables.:
+The following results show the effect of these losses, which you can see on the :doc:`Losses <../results/losses>`, :doc:`Data Tables <../results/data>`, and :doc:`Time Series <../results/timeseries>` tabs on the Results page. See :doc:`Detailed PV model Results <pv_results>` for descriptions of these and other variables.
 
 * **POA blocked by rear soiling (kWh/yr)**
 
@@ -112,8 +104,6 @@ Use the following output variables to explore the effect of self shading (see :d
 
 * **Subarray [1..4] Self-shading non-linear ground diffuse irradiance factor** (thin film linear and standard non-linear)
 
-The self-shading model estimates the reduction in the array's DC output due to row-to-row shading of modules within the subarray, where shadows from modules in adjacent rows of the array block sunlight from parts of other modules in the array during certain times of day.
-
 The response of a real photovoltaic module to shading is complex, and depends on several factors, including photovoltaic cell material, shape and layout of cells in the module, and configuration of bypass diodes in the module. SAM's self-shading model makes the following simplifying assumptions.
 
 For the **Standard (non-linear)** option:
@@ -128,14 +118,14 @@ For the **Thin film (linear)** option, the subarray's DC output responds linearl
 
 .. note:: Self shading is only available for fixed subarrays, or for subarrays with one-axis tracking.
 
-.. note:: Self shading is not available with the :ref:`Simple Efficiency Module Model <module-spe>` on the Module page.
+   Self shading is not available with the :ref:`Simple Efficiency Module Model <module-spe>` on the Module page.
  
 For one-axis tracking subarrays with backtracking and/or with non-linear self-shading, you can use the terrain inputs on the :doc:`pv_tracking_layout_land` page to specify the slope of the ground.
 
 Self Shading Inputs
 -------------------
 
-The self-shading inputs consist of the :ref:`array dimension inputs <arraydimensions>` that apply to both the self shading and snow loss, and the self-shading inputs described below.
+The self-shading inputs consist of the :ref:`row dimensions and spacing inputs <arraydimensions>` on the Tracking Layout Land page and the self-shading inputs described below.
 
 **Self shading**
   **None** uses the approach of versions of SAM before SAM 2014.1.14. Because this option does not account for any self-shading, it tends to overestimate the array's production. We included this option to allow for comparison between the different options to see the effect of the self-shaded and backtracking options, and for comparison between results from this version and older versions of SAM.
@@ -144,19 +134,20 @@ The self-shading inputs consist of the :ref:`array dimension inputs <arraydimens
 
   **Thin film (linear)** is for modules with thin-film cells or for specially-designed modules with cells and bypass diodes wired in such a way that the modules output varies linearly with shaded area of the module.
 
-
 .. _pvsnowlosses:
 
 Snow Losses
 ~~~~~~~~~~~
 
-When your weather file contains snow depth data, SAM can estimate snow losses in the array's output caused by snow covering the modules in the subarray.
+SAM can estimate snow losses in the array's output caused by snow covering the modules in the subarray when snow depth data is available. You can use snow depth data from the weather file on the Location and Resource page, download snow depth data for U.S. locations, or provide your own snow depth data.
 
-For a description of the snow model, see the following publications available along with other technical documentation from the `SAM website <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__:
+SAM's snow model estimates the loss in system output during time steps when the array is covered in snow using snow depth data, the subarray's tilt angle, plane-of-array irradiance, and ambient temperature. The model assumes that the subarray is completely covered with snow when the snow depth data indicates a snowfall, and that snow slides off the array as the ambient temperature increases. For a detailed description of the snow model, see the following publications available from the from the SAM website's `PV Publications page <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__.:
 
 * Gilman, P.; Dobos, A.; DiOrio, N.; Freeman, J.; Janzou, S.; Ryberg, D. (2018) SAM Photovoltaic Model Technical Reference Update. 93 pp.; NREL/TP-6A20-67399
 
 * Ryberg, D.; Freeman, J. (2017).  Integration, Validation and Application of a PV Snow Coverage Model in SAM. National Renewable Energy Laboratory. 33 pp. TP-6A20-68705 available along with other technical documentation from the `SAM website <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__.
+
+.. note:: The Ryberg (2017) paper includes a United States map of annual average snow loss values that could be used to estimate snow loss using inputs on the Losses page instead of the snow model when snow depth data is not available.
 
 Use the following output variables to explore the effect of snow cover (see :doc:`Results <../detailed-photovoltaic-model/pv_results>` for descriptions of the variables):
 
@@ -164,11 +155,17 @@ Use the following output variables to explore the effect of snow cover (see :doc
 
 * **Weather file snow depth file (cm)**
 
-.. note:: Snow depth data is not available in the NSRDB PSM V3 dataset. It is available in the `NSRDB 1961 - 1990 Archive Data <https://nsrdb.nrel.gov/data-sets/archives.html>`__. This older data does not represent the best up-to-date data from the NSRDB, but may be useful for testing SAM's snow loss model.
-
-The Ryberg (2017) paper cited above includes a United States map of annual average snow loss values that could be used to estimate snow loss using inputs on the Losses page instead of the snow model when snow depth data is not available.
-
-SAM's snow model for photovoltaic systems estimates the loss in system output during time steps when the array is covered in snow. It uses snow depth data from the weather file, and for time steps with snow, estimates the percentage of the photovoltaic array that is covered with snow based on the array's tilt angle, plane-of-array irradiance, and ambient temperature. The model assumes that the array is completely covered with snow when the snow depth data indicates a snowfall, and that snow slides off the array as the ambient temperature increases.
-
 **Estimate snow losses**
-  Check this option to model snow losses if the weather file on the   Location and Resource page includes snow depth data.
+  Check this box to model snow losses. The snow loss inputs are disabled unless this box is checked.
+
+**Enter or download time series snow data**
+  Choose this option to download snow data from an online database or to enter your own snow depth data.
+
+**Use snow data from weather file**
+  Choose this option to use snow depth data from the weather file on the :doc:`pv_location_and_resource` page when the file contains snow depth data.
+
+**Download Snow Data**
+  Enabled for the **Enter or download time series snow data** option. Click this button to find online databases with snow depth data for a given location.
+
+**Edit array**
+  Enabled for the **Enter or download time series snow data** option. Click this button to enter or view your own snow depth data, or to view downloaded data.

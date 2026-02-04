@@ -133,12 +133,12 @@ Subhourly clipping loss correction is only available for hourly simulations. The
 **Matrix lookup method**
   The matrix lookup method uses an empirical matrix-based model that uses clipping potential and clearness index to estimate Average-then-Clip (AtC) bias.
 
-*   For a Python implementation of this method and a list of technical references, see Allen, J.; Dhakal, R.; Hobbs, W.; Li, W. (2024). `Allen Method for PV Subhourly Clipping Correction <https://github.com/epri-dev/allen-subhourly-clipping-correction>`__  .
+* For a Python implementation of this method and a list of technical references, see Allen, J.; Dhakal, R.; Hobbs, W.; Li, W. (2024). `Allen Method for PV Subhourly Clipping Correction <https://github.com/epri-dev/allen-subhourly-clipping-correction>`__  .
 
 **Distribution of PV output method**
-  The  distribution of PV Output method uses a distribution function of power output to estimate the power limiting loss.
+  The distribution of PV Output method uses a distribution function of power output to estimate the power limiting loss.
 
-*   Walker, A.; Desai, J.; McDonald, B. (2020) Solar Photovoltaic Systems Time-Series Simulation: Subinterval Distribution vs. Steady-State Assumption. ASME 14th International Conference on Energy Sustainability. (`PDF 1.8 MB <https://www.nrel.gov/docs/fy20osti/76859.pdf>`__  )
+* Walker, A.; Desai, J.; McDonald, B. (2020) Solar Photovoltaic Systems Time-Series Simulation: Subinterval Distribution vs. Steady-State Assumption. ASME 14th International Conference on Energy Sustainability. (`PDF 1.8 MB <https://www.nrel.gov/docs/fy20osti/76859.pdf>`__  )
 
 Transformer Losses
 ------------------
