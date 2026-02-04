@@ -864,8 +864,7 @@
         "  property('analysis_period_warning','caption',txt);",
         "  refresh();\r",
         "  change_tax_array_length();\r",
-        "  change_depreciation_length();\r",
-        "  change_curtailment_price_length();",
+        "  change_depreciation_length();",
         "};",
         ""
     ]
