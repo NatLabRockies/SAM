@@ -273,10 +273,6 @@ endif()
 target_link_libraries(${SAM_EXE} ${wxWidgets_LIBRARIES})
 
 
-find_package(ortools NO_MODULE REQUIRED)
-target_link_libraries(shared ortools::ortools)
-
-
 if (UNIX)
 	target_link_libraries(${SAM_EXE} -lm -lcurl)
 elseif (MSVC)
