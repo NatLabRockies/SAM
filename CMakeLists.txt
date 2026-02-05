@@ -287,6 +287,10 @@ elseif (MSVC)
 endif()
 
 
+find_package(ortools NO_MODULE REQUIRED)
+target_link_libraries(shared ortools::ortools)
+
+
 #####################################################################################################################
 #
 # Target Installation
@@ -350,29 +354,6 @@ if (UNIX)
                 COMMAND cp ${SSC_SO} ${SAM_APP}/linux_64
         )
 
-        #		install(TARGETS ${SAM_EXE}
-        #			RUNTIME DESTINATION linux_64)
-        #		install(FILES ${SSC_LIB}
-        #			DESTINATION linux_64)
-        #		install(FILES Sandia/linux/lhs.bin Sandia/linux/stepwise.bin
-        #			DESTINATION runtime/bin)
-        #		install(DIRECTORY build_linux/GtkTheme
-        #			DESTINATION linux_64)
-        #		install(DIRECTORY deploy/libraries deploy/runtime deploy/solar_resource deploy/wind_resource
-        #			DESTINATION .)
-
-        #		set(CPACK_GENERATOR "STGZ;TGZ")
-        #		set(CPACK_PACKAGE_FILE_NAME "sam.deploy")
-        #		set(CPACK)
-        #		include(CPack)
-        #		add_custom_target( installer
-        #			COMMAND "rm" "-f" "install0"
-        #			COMMAND "echo" "#!/bin/sh" ">" "install0"
-        #			COMMAND "echo" "SAMVER=Open.Source" ">>" "install0"
-        #			COMMAND "cat" "install0" "${CMAKE_SOURCE_DIR}/build_linux/install.sh" "sam.deploy.tar.gz" ">" "sam-linux-$(SAMVER).run"
-        #			COMMAND "chmod" "a+x" "sam-linux-$(SAMVER).run"
-        #			COMMAND "./sam-linux-$(SAMVER).run"
-        #			DEPENDS SAM)
     endif()
 else()
     set( LIBCURL_FILES
