@@ -288,7 +288,7 @@ endif()
 
 
 find_package(ortools NO_MODULE REQUIRED)
-target_link_libraries((${SAM_EXE} ortools::ortools)
+target_link_libraries(${SAM_EXE} ortools::ortools)
 
 
 #####################################################################################################################
