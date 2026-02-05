@@ -1,8 +1,6 @@
 About SAM
 =========
 
-This Help system describes  and was last revised on .
-
 The System Advisor Model™ (SAM™) is a performance and financial model designed to facilitate decision making for people involved in the renewable energy industry:
 
 * Project managers and engineers
