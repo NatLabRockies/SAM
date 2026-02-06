@@ -144,7 +144,7 @@ if (UNIX)
     endif()
 else()
 	set(wxWidgets_ROOT_DIR $ENV{WXMSW3})
-	find_package(wxWidgets QUIET  REQUIRED xrc webview stc richtext ribbon propgrid aui gl html qa adv core xml net base scintilla)
+	find_package(wxWidgets REQUIRED xrc webview stc richtext ribbon propgrid aui gl html qa adv core xml net base scintilla)
 endif()
 
 include(${wxWidgets_USE_FILE})
