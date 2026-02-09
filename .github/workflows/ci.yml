@@ -383,14 +383,13 @@ jobs:
       with:
         path: sam
     - name: Build sam
-      shell: bash
       if: steps.cachedsam.outputs.cache-hit != 'true'
       run: |
         cd sam
         mkdir build
         cd build
         cmake -G "Visual Studio 17 2022" -DCMAKE_CONFIGURATION_TYPES="Release" -DCMAKE_SYSTEM_VERSION=10 -DSAMAPI_EXPORT=0 -DCMAKE_SYSTEM_PREFIX_PATH=${ORTOOLSDIR} -Dabsl_DIR=${ORTOOLSDIR}\lib\cmake\absl" -Dutf8_range_DIR=${ORTOOLSDIR}\lib\cmake\utf8_range" ..
-        MSBuild.exe ./samos.sln \/t:Build \/p:Configuration=Release
+        MSBuild.exe ./samos.sln /t:Build /p:Configuration=Release
 
     # - name: Download RunProcess
     #   shell: bash {0}
