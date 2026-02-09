@@ -360,7 +360,7 @@ jobs:
         cmake -G "Visual Studio 17 2022" -DCMAKE_CONFIGURATION_TYPES="Release;Debug" -DCMAKE_SYSTEM_VERSION=10 -DSAM_SKIP_TOOLS=1  ..
         MSBuild.exe .\wex.sln /t:Build /p:Configuration=Release
         MSBuild.exe .\wex.sln /t:Build /p:Configuration=Debug
-    - name: Build SSC
+    - name: Configure SSC
       shell: bash
       if: steps.cachedssc.outputs.cache-hit != 'true'
       run: |
@@ -368,6 +368,11 @@ jobs:
         mkdir build
         cd build
         cmake -G "Visual Studio 17 2022" -DCMAKE_CONFIGURATION_TYPES="Release;Debug"  -DSAM_SKIP_TESTS=1 -DSAMAPI_EXPORT=0 -DSAM_SKIP_TOOLS=1 -DUSE_XPRESS=0 -DUSE_COINOR=1 -DCMAKE_SYSTEM_VERSION=10.0 -DCMAKE_SYSTEM_PREFIX_PATH=${ORTOOLSDIR} -Dabsl_DIR=${ORTOOLSDIR}\lib\cmake\absl" -Dutf8_range_DIR=${ORTOOLSDIR}\lib\cmake\utf8_range"  ..
+    - name: Build SSC
+      if: steps.cachedssc.outputs.cache-hit != 'true'
+      run: |
+        cd ssc
+        cd build
         MSBuild.exe ./sam_simulation_core.sln /t:Build /p:Configuration=Release
         MSBuild.exe ./sam_simulation_core.sln /t:Build /p:Configuration=Debug
 
