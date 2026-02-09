@@ -393,8 +393,10 @@ jobs:
     - name: build sam
       if: steps.cachedsam.outputs.cache-hit != 'true'
       run: |
+        cd sam
+        cd build
         MSBuild.exe ./samos.sln /t:Build /p:Configuration=Release
-      
+
 
     # - name: Download RunProcess
     #   shell: bash {0}
