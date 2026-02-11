@@ -361,7 +361,7 @@ function setup_residential_pages( mode ) // mode determines whether or not the b
   addpage( [[ 'Financial DSIRE Download',
               { 'name'='Financial Tax Credits','caption'='Tax Credits','collapsible'=true,'collapsible_var'='show_tax_credits', 'collapsed_by_default'=false },
               { 'name'='Financial Cash Incentives','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false } ]],
-           { 'sidebar'='Incentives','help'='incentives/incentives' } );
+           { 'sidebar'='Incentives','help'='incentives-and-depreciation/incentives' } );
   setup_utility_rate();
   setup_elec_load_page( mode );
 }
@@ -390,9 +390,9 @@ function setup_host_developer_pages(mode) // third party host-developer
   addpage( [[ 'Financial TOD Factors' ]], { 'sidebar'='Time of Delivery Factors', 'help'='revenue/revenue_tod_factors' });
 
   addpage( [[ 'Financial Tax Credits','Financial Cash Incentives']],
-           { 'sidebar'='Incentives', 'help'='incentives/incentives' } );
+           { 'sidebar'='Incentives', 'help'='incentives-and-depreciation/incentives' } );
   addpage( [['Financial Depreciation Detailed' ]],
-           { 'sidebar'='Depreciation', 'help'='incentives/depreciation' });
+           { 'sidebar'='Depreciation', 'help'='incentives-and-depreciation/depreciation' });
   setup_utility_rate();
   setup_elec_load_page( mode );
 }
@@ -435,7 +435,7 @@ function setup_commercial_pages( mode ) // mode determines whether or not the bu
   addpage( [[ 'Financial DSIRE Download',
               { 'name'='Financial Tax Credits','caption'='Tax Credits','collapsible'=true,'collapsible_var'='show_tax_credits', 'collapsed_by_default'=false },
               { 'name'='Financial Cash Incentives','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false } ]],
-		   { 'sidebar'='Incentives', 'help'='incentives/incentives' } );
+		   { 'sidebar'='Incentives', 'help'='incentives-and-depreciation/incentives' } );
  setup_utility_rate();
   setup_elec_load_page( mode );
 }
@@ -497,9 +497,9 @@ function setup_single_owner_pages()
 			    { 'name'='Financial Curtailment Price', 'caption'='Curtailment Payments', 'collapsible'=true, 'collapsible_var'='revenue_curtailment_is_shown', 'collapsed_by_default'=true } ]],
             { 'sidebar'='Revenue', 'help'='revenue/revenue_ppa' } );
   addpage( [[ 'Financial Tax Credits','Financial Cash Incentives']],
-           { 'sidebar'='Incentives', 'help'='incentives/incentives' } );
+           { 'sidebar'='Incentives', 'help'='incentives-and-depreciation/incentives' } );
   addpage( [['Financial Depreciation Detailed' ]],
-           { 'sidebar'='Depreciation', 'help'='incentives/depreciation' });
+           { 'sidebar'='Depreciation', 'help'='incentives-and-depreciation/depreciation' });
 }
 
 
@@ -519,9 +519,9 @@ function setup_community_solar_pages()
               {'name'='Financial Reserve Accounts', 'caption'='Reserve Accounts','collapsible'=true,'collapsible_var'='show_ReserveAccounts'} ]],
            { 'sidebar'='Financial Parameters', 'help'='financial-parameters/fin_single_owner' }  );
   addpage( [[ 'Financial Tax Credits','Financial Cash Incentives']],
-           { 'sidebar'='Incentives', 'help'='incentives/incentives' } );
+           { 'sidebar'='Incentives', 'help'='incentives-and-depreciation/incentives' } );
   addpage( [['Financial Depreciation Detailed' ]],
-           { 'sidebar'='Depreciation', 'help'='incentives/depreciation' });
+           { 'sidebar'='Depreciation', 'help'='incentives-and-depreciation/depreciation' });
 }
 
 function setup_single_owner_dispatch_pages()
@@ -546,9 +546,9 @@ function setup_single_owner_dispatch_pages()
 			    { 'name'='Financial Capacity Payments', 'caption'='Capacity Payments', 'collapsible'=true, 'collapsible_var'='revenue_capacity_payments_is_shown', 'collapsed_by_default'=true } ]],
             { 'sidebar'='Revenue', 'help'='revenue/revenue_ppa' } );
   addpage( [[ 'Financial Tax Credits','Financial Cash Incentives']],
-           { 'sidebar'='Incentives', 'help'='incentives/incentives' } );
+           { 'sidebar'='Incentives', 'help'='incentives-and-depreciation/incentives' } );
   addpage( [['Financial Depreciation Detailed' ]],
-           { 'sidebar'='Depreciation', 'help'='incentives/depreciation' });
+           { 'sidebar'='Depreciation', 'help'='incentives-and-depreciation/depreciation' });
 }
 
 
@@ -573,9 +573,9 @@ function setup_merchant_plant_pages()
 			  'exclusive_header_pages' = ['Financial Merchant Plant Description','Financial Capacity Payments','Cambium API Data'],  'exclusive_tabs'=true, 'exclusive_hide' = false} );
 
   addpage( [[ 'Financial Tax Credits','Financial Cash Incentives']],
-           { 'sidebar'='Incentives', 'help'='incentives/incentives' } );
+           { 'sidebar'='Incentives', 'help'='incentives-and-depreciation/incentives' } );
   addpage( [['Financial Depreciation Detailed' ]],
-           { 'sidebar'='Depreciation', 'help'='incentives/depreciation' });
+           { 'sidebar'='Depreciation', 'help'='incentives-and-depreciation/depreciation' });
 }
 
 function setup_leveraged_partnership_flip_pages()
@@ -597,9 +597,9 @@ function setup_leveraged_partnership_flip_pages()
            {  'sidebar'='Time of Delivery Factors','help'='revenue/revenue_tod_factors', 'exclusive_var'='ppa_multiplier_model' } );*/
   addpage( [[ 'Financial Tax Credits',
               'Financial Cash Incentives']],
-           { 'sidebar'='Incentives', 'help'='incentives/incentives' } );
+           { 'sidebar'='Incentives', 'help'='incentives-and-depreciation/incentives' } );
   addpage( [['Financial Depreciation Detailed' ]],
-           { 'sidebar'='Depreciation', 'help'='incentives/depreciation' });
+           { 'sidebar'='Depreciation', 'help'='incentives-and-depreciation/depreciation' });
 }
 
 function setup_all_equity_partnership_flip_pages()
@@ -621,9 +621,9 @@ function setup_all_equity_partnership_flip_pages()
            {  'sidebar'='Time of Delivery Factors','help'='revenue/revenue_tod_factors', 'exclusive_var'='ppa_multiplier_model' } );*/
   addpage( [[ 'Financial Tax Credits',
               'Financial Cash Incentives']],
-           { 'sidebar'='Incentives', 'help'='incentives/incentives' } );
+           { 'sidebar'='Incentives', 'help'='incentives-and-depreciation/incentives' } );
   addpage( [['Financial Depreciation Detailed' ]],
-           { 'sidebar'='Depreciation', 'help'='incentives/depreciation' });
+           { 'sidebar'='Depreciation', 'help'='incentives-and-depreciation/depreciation' });
 }
 
 function setup_sale_leaseback_pages()
@@ -644,9 +644,9 @@ function setup_sale_leaseback_pages()
            {  'sidebar'='Time of Delivery Factors','help'='revenue/revenue_tod_factors', 'exclusive_var'='ppa_multiplier_model' } );*/
   addpage( [[ 'Financial Tax Credits',
               'Financial Cash Incentives']],
-           { 'sidebar'='Incentives', 'help'='incentives/incentives' } );
+           { 'sidebar'='Incentives', 'help'='incentives-and-depreciation/incentives' } );
   addpage ( [['Financial Depreciation Detailed' ]],
-            { 'sidebar'='Depreciation', 'help'='incentives/depreciation' });
+            { 'sidebar'='Depreciation', 'help'='incentives-and-depreciation/depreciation' });
 }
 
 function setup_windpower_pages()
@@ -1094,9 +1094,9 @@ addpage( [[ 'Financial Solution Mode Single Owner IPH',
 			{ 'name'='Financial TOD Factors', 'caption'='Time of Delivery', 'collapsible'=true, 'collapsible_var'='revenue_TOD_is_shown', 'collapsed_by_default'=true }]],
             { 'sidebar'='Revenue', 'help'='revenue/revenue_iph' } );
 addpage( [[ 'Financial Tax Credits IPH','Financial Cash Incentives IPH']],
-           { 'sidebar'='Incentives', 'help'='incentives/incentives' } );
+           { 'sidebar'='Incentives', 'help'='incentives-and-depreciation/incentives' } );
 addpage( [['Financial Depreciation Detailed' ]],
-           { 'sidebar'='Depreciation', 'help'='incentives/depreciation' });
+           { 'sidebar'='Depreciation', 'help'='incentives-and-depreciation/depreciation' });
 
 setconfig( 'Physical Trough IPH', 'Commercial' );
 setmodules( ['trough_physical_iph', 'utilityrate5', 'thermalrate_iph', 'cashloan_heat']);
@@ -1116,7 +1116,7 @@ addpage( [[ 'Financial Debt Min DSCR',
 		  'Financial Depreciation Simple', ]],
 	   { 'sidebar'='Financial Parameters','help'='financial-parameters/fin_commercial'} );
 addpage( [[ 'Financial Tax Credits IPH','Financial Cash Incentives IPH']],
-           { 'sidebar'='Incentives', 'help'='incentives/incentives' } );
+           { 'sidebar'='Incentives', 'help'='incentives-and-depreciation/incentives' } );
 addpage( [[ 'Utility Rate - Flat',
 			    { 'name'='Utility Rate - Description', 'caption'='Description and Applicability', 'collapsible'=true, 'collapsible_var'='ur_desc_is_shown', 'collapsed_by_default'=true },
 			    { 'name'='Utility Rate - Energy Charge', 'caption'='Energy Charges', 'collapsible'=true, 'collapsible_var'='ur_ec_is_shown', 'collapsed_by_default'=false },
@@ -1979,9 +1979,9 @@ addpage( [[ 'Financial Solution Mode Single Owner IPH',
 			{ 'name'='Financial TOD Factors', 'caption'='Time of Delivery', 'collapsible'=true, 'collapsible_var'='revenue_TOD_is_shown', 'collapsed_by_default'=true }]],
             { 'sidebar'='Revenue', 'help'='revenue/revenue_iph' } );
 addpage( [[ 'Financial Tax Credits IPH','Financial Cash Incentives IPH']],
-           { 'sidebar'='Incentives', 'help'='incentives/incentives' } );
+           { 'sidebar'='Incentives', 'help'='incentives-and-depreciation/incentives' } );
 addpage( [['Financial Depreciation Detailed' ]],
-           { 'sidebar'='Depreciation', 'help'='incentives/depreciation' });
+           { 'sidebar'='Depreciation', 'help'='incentives-and-depreciation/depreciation' });
 
 //-----------------------------------------------------
 setconfig( 'MSPT', 'Leveraged Partnership Flip' );
@@ -2075,9 +2075,9 @@ addpage( [[ 'Financial Solution Mode Single Owner IPH',
 			{ 'name'='Financial TOD Factors', 'caption'='Time of Delivery', 'collapsible'=true, 'collapsible_var'='revenue_TOD_is_shown', 'collapsed_by_default'=true }]],
             { 'sidebar'='Revenue', 'help'='revenue/revenue_iph' } );
 addpage( [[ 'Financial Tax Credits IPH','Financial Cash Incentives IPH']],
-           { 'sidebar'='Incentives', 'help'='incentives/incentives' } );
+           { 'sidebar'='Incentives', 'help'='incentives-and-depreciation/incentives' } );
 addpage( [['Financial Depreciation Detailed' ]],
-           { 'sidebar'='Depreciation', 'help'='incentives/depreciation' });
+           { 'sidebar'='Depreciation', 'help'='incentives-and-depreciation/depreciation' });
 
 
 // Direct Steam Linear Fresnel ////////////////////////////////////////////////////////////////////
@@ -2314,9 +2314,9 @@ addpage( [[ 'Financial Solution Mode Single Owner IPH',
 			{ 'name'='Financial TOD Factors', 'caption'='Time of Delivery', 'collapsible'=true, 'collapsible_var'='revenue_TOD_is_shown', 'collapsed_by_default'=true }]],
             { 'sidebar'='Revenue', 'help'='revenue/revenue_iph' } );
 addpage( [[ 'Financial Tax Credits IPH','Financial Cash Incentives IPH']],
-           { 'sidebar'='Incentives', 'help'='incentives/incentives' } );
+           { 'sidebar'='Incentives', 'help'='incentives-and-depreciation/incentives' } );
 addpage( [['Financial Depreciation Detailed' ]],
-           { 'sidebar'='Depreciation', 'help'='incentives/depreciation' });
+           { 'sidebar'='Depreciation', 'help'='incentives-and-depreciation/depreciation' });
 //setup_single_owner_dispatch_pages();
 
 //-------------------------------------------------------
@@ -2337,7 +2337,7 @@ addpage( [[ 'Financial Debt Min DSCR',
 		  'Financial Depreciation Simple', ]],
 	   { 'sidebar'='Financial Parameters','help'='financial-parameters/fin_commercial'} );
 addpage( [[ 'Financial Tax Credits IPH','Financial Cash Incentives IPH']],
-           { 'sidebar'='Incentives', 'help'='incentives/incentives' } );
+           { 'sidebar'='Incentives', 'help'='incentives-and-depreciation/incentives' } );
 addpage( [[ 'Utility Rate - Flat',
 			    { 'name'='Utility Rate - Description', 'caption'='Description and Applicability', 'collapsible'=true, 'collapsible_var'='ur_desc_is_shown', 'collapsed_by_default'=true },
 			    { 'name'='Utility Rate - Energy Charge', 'caption'='Energy Charges', 'collapsible'=true, 'collapsible_var'='ur_ec_is_shown', 'collapsed_by_default'=false },

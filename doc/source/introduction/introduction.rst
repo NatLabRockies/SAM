@@ -11,6 +11,7 @@ The System Advisor Model™ (SAM™) is a performance and financial model design
 
 * Researchers
 
+
 SAM makes performance predictions and cost of energy estimates for grid-connected power projects based on installation and operating costs and system design parameters that you specify as inputs to the model.
 
 Projects can be either behind the meter (on the customer side of the utility meter), buying and selling electricity at retail rates, or front of meter (on the utility side of the meter), selling electricity at a price negotiated through a power purchase agreement (PPA) or at market prices.

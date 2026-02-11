@@ -8,7 +8,7 @@ SAM Help
 
 This is the user documentation for the System Advisor Model™ (SAM™), developed by the National Renewable Energy Laboratory (NREL).
 
-.. important:: To display SAM Help correctly in the Safari web browser on a Mac, go to Settings, Advanced Settings, and enable **Show features for web developers**. Developer mode is required in Safari to load CSS and Javascript from local files.
+ .. important:: To display SAM Help correctly in the Safari web browser on a Mac, go to Settings, Advanced Settings, and enable **Show features for web developers**. Developer mode is required in Safari to load CSS and Javascript from local files.
 
 See https://sam.nrel.gov for general information about SAM and links to technical references for SAM's performance and financial models
 
