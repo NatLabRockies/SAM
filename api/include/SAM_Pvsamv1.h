@@ -583,22 +583,6 @@ extern "C"
 	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray1_azimuth_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set subarray1_azmlim: Sub-array 1 Azimuth rotation limit [degrees]
-	 * options: None
-	 * constraints: MIN=0,MAX=359
-	 * required if: ?=90
-	 */
-	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray1_azmlim_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
-	 * Set subarray1_azmref: Sub-array 1 Azimuth reference angle [degrees]
-	 * options: None
-	 * constraints: MIN=0,MAX=359
-	 * required if: ?=90
-	 */
-	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray1_azmref_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
 	 * Set subarray1_backtrack: Sub-array 1 Backtracking enabled
 	 * options: 0=no backtracking,1=backtrack
 	 * constraints: BOOLEAN
@@ -727,52 +711,12 @@ extern "C"
 	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray1_use_custom_rot_angles_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set subarray1_windstow_azm: Sub-array 1 Wind stow azimuth [degrees]
-	 * options: None
-	 * constraints: MIN=0,MAX=359
-	 * required if: ?=90
-	 */
-	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray1_windstow_azm_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
-	 * Set subarray1_windstow_limit: Sub-array 1 Wind stow limit [m/s]
-	 * options: None
-	 * constraints: MIN=0,MAX=359
-	 * required if: ?=90
-	 */
-	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray1_windstow_limit_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
-	 * Set subarray1_windstow_tilt: Sub-array 1 Wind stow tilt [degrees]
-	 * options: None
-	 * constraints: MIN=0,MAX=359
-	 * required if: ?=90
-	 */
-	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray1_windstow_tilt_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
 	 * Set subarray2_azimuth: Sub-array 2 Azimuth [degrees]
 	 * options: 0=N,90=E,180=S,270=W
 	 * constraints: MIN=0,MAX=359.9
 	 * required if: subarray2_enable=1&subarray2_track_mode~2&subarray2_track_mode~3
 	 */
 	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray2_azimuth_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
-	 * Set subarray2_azmlim: Sub-array 2 Azimuth rotation limit [degrees]
-	 * options: None
-	 * constraints: MIN=0,MAX=85
-	 * required if: ?=45
-	 */
-	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray2_azmlim_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
-	 * Set subarray2_azmref: Sub-array 2 Azimuth reference angle [degrees]
-	 * options: None
-	 * constraints: MIN=0,MAX=359
-	 * required if: ?=90
-	 */
-	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray2_azmref_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
 	 * Set subarray2_backtrack: Sub-array 2 Backtracking enabled
@@ -911,52 +855,12 @@ extern "C"
 	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray2_use_custom_rot_angles_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set subarray2_windstow_azm: Sub-array 2 Wind stow azimuth [degrees]
-	 * options: None
-	 * constraints: MIN=0,MAX=359
-	 * required if: ?=90
-	 */
-	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray2_windstow_azm_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
-	 * Set subarray2_windstow_limit: Sub-array 2 Wind stow limit [m/s]
-	 * options: None
-	 * constraints: MIN=0,MAX=359
-	 * required if: ?=90
-	 */
-	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray2_windstow_limit_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
-	 * Set subarray2_windstow_tilt: Sub-array 2 Wind stow tilt [degrees]
-	 * options: None
-	 * constraints: MIN=0,MAX=359
-	 * required if: ?=90
-	 */
-	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray2_windstow_tilt_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
 	 * Set subarray3_azimuth: Sub-array 3 Azimuth [degrees]
 	 * options: 0=N,90=E,180=S,270=W
 	 * constraints: MIN=0,MAX=359.9
 	 * required if: subarray3_enable=1&subarray3_track_mode~2&subarray3_track_mode~3
 	 */
 	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray3_azimuth_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
-	 * Set subarray3_azmlim: Sub-array 3 Azimuth rotation limit [degrees]
-	 * options: None
-	 * constraints: MIN=0,MAX=85
-	 * required if: ?=45
-	 */
-	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray3_azmlim_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
-	 * Set subarray3_azmref: Sub-array 3 Azimuth reference angle [degrees]
-	 * options: None
-	 * constraints: MIN=0,MAX=359
-	 * required if: ?=90
-	 */
-	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray3_azmref_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
 	 * Set subarray3_backtrack: Sub-array 3 Backtracking enabled
@@ -1095,52 +999,12 @@ extern "C"
 	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray3_use_custom_rot_angles_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set subarray3_windstow_azm: Sub-array 3 Wind stow azimuth [degrees]
-	 * options: None
-	 * constraints: MIN=0,MAX=359
-	 * required if: ?=90
-	 */
-	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray3_windstow_azm_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
-	 * Set subarray3_windstow_limit: Sub-array 3 Wind stow limit [m/s]
-	 * options: None
-	 * constraints: MIN=0,MAX=359
-	 * required if: ?=90
-	 */
-	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray3_windstow_limit_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
-	 * Set subarray3_windstow_tilt: Sub-array 3 Wind stow tilt [degrees]
-	 * options: None
-	 * constraints: MIN=0,MAX=359
-	 * required if: ?=90
-	 */
-	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray3_windstow_tilt_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
 	 * Set subarray4_azimuth: Sub-array 4 Azimuth [degrees]
 	 * options: 0=N,90=E,180=S,270=W
 	 * constraints: MIN=0,MAX=359.9
 	 * required if: subarray4_enable=1&subarray4_track_mode~2&subarray4_track_mode~3
 	 */
 	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray4_azimuth_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
-	 * Set subarray4_azmlim: Sub-array 4 Azimuth rotation limit [degrees]
-	 * options: None
-	 * constraints: MIN=0,MAX=85
-	 * required if: ?=45
-	 */
-	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray4_azmlim_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
-	 * Set subarray4_azmref: Sub-array 4 Azimuth reference angle [degrees]
-	 * options: None
-	 * constraints: MIN=0,MAX=359
-	 * required if: ?=90
-	 */
-	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray4_azmref_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
 	 * Set subarray4_backtrack: Sub-array 4 Backtracking enabled
@@ -1277,30 +1141,6 @@ extern "C"
 	 * required if: ?=0
 	 */
 	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray4_use_custom_rot_angles_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
-	 * Set subarray4_windstow_azm: Sub-array 4 Wind stow azimuth [degrees]
-	 * options: None
-	 * constraints: MIN=0,MAX=359
-	 * required if: ?=90
-	 */
-	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray4_windstow_azm_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
-	 * Set subarray4_windstow_limit: Sub-array 4 Wind stow limit [m/s]
-	 * options: None
-	 * constraints: MIN=0,MAX=359
-	 * required if: ?=90
-	 */
-	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray4_windstow_limit_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
-	 * Set subarray4_windstow_tilt: Sub-array 4 Wind stow tilt [degrees]
-	 * options: None
-	 * constraints: MIN=0,MAX=359
-	 * required if: ?=90
-	 */
-	SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray4_windstow_tilt_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
 	 * Set system_capacity: DC Nameplate capacity [kWdc]
@@ -6116,10 +5956,6 @@ extern "C"
 
 	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray1_azimuth_nget(SAM_table ptr, SAM_error *err);
 
-	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray1_azmlim_nget(SAM_table ptr, SAM_error *err);
-
-	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray1_azmref_nget(SAM_table ptr, SAM_error *err);
-
 	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray1_backtrack_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double* SAM_Pvsamv1_SystemDesign_subarray1_custom_cell_temp_array_aget(SAM_table ptr, int* length, SAM_error *err);
@@ -6152,17 +5988,7 @@ extern "C"
 
 	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray1_use_custom_rot_angles_nget(SAM_table ptr, SAM_error *err);
 
-	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray1_windstow_azm_nget(SAM_table ptr, SAM_error *err);
-
-	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray1_windstow_limit_nget(SAM_table ptr, SAM_error *err);
-
-	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray1_windstow_tilt_nget(SAM_table ptr, SAM_error *err);
-
 	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray2_azimuth_nget(SAM_table ptr, SAM_error *err);
-
-	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray2_azmlim_nget(SAM_table ptr, SAM_error *err);
-
-	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray2_azmref_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray2_backtrack_nget(SAM_table ptr, SAM_error *err);
 
@@ -6198,17 +6024,7 @@ extern "C"
 
 	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray2_use_custom_rot_angles_nget(SAM_table ptr, SAM_error *err);
 
-	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray2_windstow_azm_nget(SAM_table ptr, SAM_error *err);
-
-	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray2_windstow_limit_nget(SAM_table ptr, SAM_error *err);
-
-	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray2_windstow_tilt_nget(SAM_table ptr, SAM_error *err);
-
 	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray3_azimuth_nget(SAM_table ptr, SAM_error *err);
-
-	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray3_azmlim_nget(SAM_table ptr, SAM_error *err);
-
-	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray3_azmref_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray3_backtrack_nget(SAM_table ptr, SAM_error *err);
 
@@ -6244,17 +6060,7 @@ extern "C"
 
 	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray3_use_custom_rot_angles_nget(SAM_table ptr, SAM_error *err);
 
-	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray3_windstow_azm_nget(SAM_table ptr, SAM_error *err);
-
-	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray3_windstow_limit_nget(SAM_table ptr, SAM_error *err);
-
-	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray3_windstow_tilt_nget(SAM_table ptr, SAM_error *err);
-
 	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray4_azimuth_nget(SAM_table ptr, SAM_error *err);
-
-	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray4_azmlim_nget(SAM_table ptr, SAM_error *err);
-
-	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray4_azmref_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray4_backtrack_nget(SAM_table ptr, SAM_error *err);
 
@@ -6289,12 +6095,6 @@ extern "C"
 	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray4_use_custom_cell_temp_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray4_use_custom_rot_angles_nget(SAM_table ptr, SAM_error *err);
-
-	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray4_windstow_azm_nget(SAM_table ptr, SAM_error *err);
-
-	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray4_windstow_limit_nget(SAM_table ptr, SAM_error *err);
-
-	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray4_windstow_tilt_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Pvsamv1_SystemDesign_system_capacity_nget(SAM_table ptr, SAM_error *err);
 
