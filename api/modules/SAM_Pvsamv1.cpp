@@ -416,6 +416,18 @@ SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray1_azimuth_nset(SAM_table ptr, d
 	});
 }
 
+SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray1_azmlim_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "subarray1_azmlim", number);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray1_azmref_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "subarray1_azmref", number);
+	});
+}
+
 SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray1_backtrack_nset(SAM_table ptr, double number, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_number(ptr, "subarray1_backtrack", number);
@@ -512,9 +524,39 @@ SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray1_use_custom_rot_angles_nset(SA
 	});
 }
 
+SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray1_windstow_azm_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "subarray1_windstow_azm", number);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray1_windstow_limit_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "subarray1_windstow_limit", number);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray1_windstow_tilt_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "subarray1_windstow_tilt", number);
+	});
+}
+
 SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray2_azimuth_nset(SAM_table ptr, double number, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_number(ptr, "subarray2_azimuth", number);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray2_azmlim_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "subarray2_azmlim", number);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray2_azmref_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "subarray2_azmref", number);
 	});
 }
 
@@ -620,9 +662,39 @@ SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray2_use_custom_rot_angles_nset(SA
 	});
 }
 
+SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray2_windstow_azm_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "subarray2_windstow_azm", number);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray2_windstow_limit_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "subarray2_windstow_limit", number);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray2_windstow_tilt_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "subarray2_windstow_tilt", number);
+	});
+}
+
 SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray3_azimuth_nset(SAM_table ptr, double number, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_number(ptr, "subarray3_azimuth", number);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray3_azmlim_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "subarray3_azmlim", number);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray3_azmref_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "subarray3_azmref", number);
 	});
 }
 
@@ -728,9 +800,39 @@ SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray3_use_custom_rot_angles_nset(SA
 	});
 }
 
+SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray3_windstow_azm_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "subarray3_windstow_azm", number);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray3_windstow_limit_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "subarray3_windstow_limit", number);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray3_windstow_tilt_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "subarray3_windstow_tilt", number);
+	});
+}
+
 SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray4_azimuth_nset(SAM_table ptr, double number, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_number(ptr, "subarray4_azimuth", number);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray4_azmlim_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "subarray4_azmlim", number);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray4_azmref_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "subarray4_azmref", number);
 	});
 }
 
@@ -833,6 +935,24 @@ SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray4_use_custom_cell_temp_nset(SAM
 SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray4_use_custom_rot_angles_nset(SAM_table ptr, double number, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_number(ptr, "subarray4_use_custom_rot_angles", number);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray4_windstow_azm_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "subarray4_windstow_azm", number);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray4_windstow_limit_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "subarray4_windstow_limit", number);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_SystemDesign_subarray4_windstow_tilt_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "subarray4_windstow_tilt", number);
 	});
 }
 
@@ -4841,6 +4961,24 @@ SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray1_azimuth_nget(SAM_table ptr,
 	return result;
 }
 
+SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray1_azmlim_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "subarray1_azmlim", &result))
+		make_access_error("SAM_Pvsamv1", "subarray1_azmlim");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray1_azmref_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "subarray1_azmref", &result))
+		make_access_error("SAM_Pvsamv1", "subarray1_azmref");
+	});
+	return result;
+}
+
 SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray1_backtrack_nget(SAM_table ptr, SAM_error *err){
 	double result;
 	translateExceptions(err, [&]{
@@ -4988,11 +5126,56 @@ SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray1_use_custom_rot_angles_nget(
 	return result;
 }
 
+SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray1_windstow_azm_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "subarray1_windstow_azm", &result))
+		make_access_error("SAM_Pvsamv1", "subarray1_windstow_azm");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray1_windstow_limit_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "subarray1_windstow_limit", &result))
+		make_access_error("SAM_Pvsamv1", "subarray1_windstow_limit");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray1_windstow_tilt_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "subarray1_windstow_tilt", &result))
+		make_access_error("SAM_Pvsamv1", "subarray1_windstow_tilt");
+	});
+	return result;
+}
+
 SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray2_azimuth_nget(SAM_table ptr, SAM_error *err){
 	double result;
 	translateExceptions(err, [&]{
 	if (!ssc_data_get_number(ptr, "subarray2_azimuth", &result))
 		make_access_error("SAM_Pvsamv1", "subarray2_azimuth");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray2_azmlim_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "subarray2_azmlim", &result))
+		make_access_error("SAM_Pvsamv1", "subarray2_azmlim");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray2_azmref_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "subarray2_azmref", &result))
+		make_access_error("SAM_Pvsamv1", "subarray2_azmref");
 	});
 	return result;
 }
@@ -5153,11 +5336,56 @@ SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray2_use_custom_rot_angles_nget(
 	return result;
 }
 
+SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray2_windstow_azm_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "subarray2_windstow_azm", &result))
+		make_access_error("SAM_Pvsamv1", "subarray2_windstow_azm");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray2_windstow_limit_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "subarray2_windstow_limit", &result))
+		make_access_error("SAM_Pvsamv1", "subarray2_windstow_limit");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray2_windstow_tilt_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "subarray2_windstow_tilt", &result))
+		make_access_error("SAM_Pvsamv1", "subarray2_windstow_tilt");
+	});
+	return result;
+}
+
 SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray3_azimuth_nget(SAM_table ptr, SAM_error *err){
 	double result;
 	translateExceptions(err, [&]{
 	if (!ssc_data_get_number(ptr, "subarray3_azimuth", &result))
 		make_access_error("SAM_Pvsamv1", "subarray3_azimuth");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray3_azmlim_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "subarray3_azmlim", &result))
+		make_access_error("SAM_Pvsamv1", "subarray3_azmlim");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray3_azmref_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "subarray3_azmref", &result))
+		make_access_error("SAM_Pvsamv1", "subarray3_azmref");
 	});
 	return result;
 }
@@ -5318,11 +5546,56 @@ SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray3_use_custom_rot_angles_nget(
 	return result;
 }
 
+SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray3_windstow_azm_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "subarray3_windstow_azm", &result))
+		make_access_error("SAM_Pvsamv1", "subarray3_windstow_azm");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray3_windstow_limit_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "subarray3_windstow_limit", &result))
+		make_access_error("SAM_Pvsamv1", "subarray3_windstow_limit");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray3_windstow_tilt_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "subarray3_windstow_tilt", &result))
+		make_access_error("SAM_Pvsamv1", "subarray3_windstow_tilt");
+	});
+	return result;
+}
+
 SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray4_azimuth_nget(SAM_table ptr, SAM_error *err){
 	double result;
 	translateExceptions(err, [&]{
 	if (!ssc_data_get_number(ptr, "subarray4_azimuth", &result))
 		make_access_error("SAM_Pvsamv1", "subarray4_azimuth");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray4_azmlim_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "subarray4_azmlim", &result))
+		make_access_error("SAM_Pvsamv1", "subarray4_azmlim");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray4_azmref_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "subarray4_azmref", &result))
+		make_access_error("SAM_Pvsamv1", "subarray4_azmref");
 	});
 	return result;
 }
@@ -5479,6 +5752,33 @@ SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray4_use_custom_rot_angles_nget(
 	translateExceptions(err, [&]{
 	if (!ssc_data_get_number(ptr, "subarray4_use_custom_rot_angles", &result))
 		make_access_error("SAM_Pvsamv1", "subarray4_use_custom_rot_angles");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray4_windstow_azm_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "subarray4_windstow_azm", &result))
+		make_access_error("SAM_Pvsamv1", "subarray4_windstow_azm");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray4_windstow_limit_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "subarray4_windstow_limit", &result))
+		make_access_error("SAM_Pvsamv1", "subarray4_windstow_limit");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_SystemDesign_subarray4_windstow_tilt_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "subarray4_windstow_tilt", &result))
+		make_access_error("SAM_Pvsamv1", "subarray4_windstow_tilt");
 	});
 	return result;
 }
