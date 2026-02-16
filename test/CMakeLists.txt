@@ -39,6 +39,11 @@ set(SAM_SRC
 # Compile Options per Platform
 #
 #####################################################################################################################
+if(MSVC)
+  set(CMAKE_CXX_STANDARD 20)
+else()
+  set(CMAKE_CXX_STANDARD 17)
+endif()
 
 if(MSVC)
 	add_compile_options(/W4 /MP)
@@ -57,7 +62,7 @@ else(MSVC)
 	else()
 		add_compile_options(-Wno-deprecated -Wno-misleading-indentation)
 	endif()
-	add_compile_options(-Wall -Wno-unknown-pragmas -Wno-overloaded-virtual -std=c++11)
+	add_compile_options(-Wall -Wno-unknown-pragmas -Wno-overloaded-virtual)
 	if(CMAKE_BUILD_TYPE STREQUAL "Debug")
 		add_compile_definitions(_DEBUG)
 	else()

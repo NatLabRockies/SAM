@@ -10,7 +10,12 @@ set(CMAKE_OSX_DEPLOYMENT_TARGET "12" CACHE STRING "Minimum OS X deployment versi
 
 set(CMAKE_XCODE_ATTRIBUTE_OTHER_CODE_SIGN_FLAGS "-o linker-signed")
 
-set(CMAKE_CXX_STANDARD 20)
+if(MSVC)
+  set(CMAKE_CXX_STANDARD 20)
+else()
+  set(CMAKE_CXX_STANDARD 17)
+endif()
+
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF) 
 
@@ -95,6 +100,7 @@ set(SAM_SRC src/private.h
 #
 #####################################################################################################################
 
+
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 if(MSVC)
@@ -112,7 +118,7 @@ else(MSVC)
 	else()
 		add_compile_options(-Wno-deprecated)
 	endif()
-	add_compile_options(-Wall -Wno-unknown-pragmas -Wno-overloaded-virtual -std=c++20)
+	add_compile_options(-Wall -Wno-unknown-pragmas -Wno-overloaded-virtual)
 	if(CMAKE_BUILD_TYPE STREQUAL "Debug")
 		add_compile_definitions(_DEBUG)
 	else()
