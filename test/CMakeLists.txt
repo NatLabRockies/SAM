@@ -39,11 +39,7 @@ set(SAM_SRC
 # Compile Options per Platform
 #
 #####################################################################################################################
-if(MSVC)
-  set(CMAKE_CXX_STANDARD 20)
-else()
-  set(CMAKE_CXX_STANDARD 17)
-endif()
+set(CMAKE_CXX_STANDARD 20)
 
 if(MSVC)
 	add_compile_options(/W4 /MP)
