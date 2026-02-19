@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -485,7 +485,7 @@ wxString SamApp::AboutSAM()
 	return "<html><body>"
 		"<h1>System Advisor Model (SAM)</h1>"
 		"<h2>Open Source Build</h2>"
-		"<p>BSD 3-Clause License<br><br>Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE.</p>"
+		"<p>BSD 3-Clause License<br><br>Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE.</p>"
 		"<p>All rights reserved.</p>"
 		"<p>Redistribution and use in source and binary forms, with or without	modification, are permitted provided that the following conditions are met:</p>"
 		"<ol>"

@@ -42,7 +42,7 @@ If you would like to report an issue with SAM or make a feature request, please 
 If you would like to submit code to fix an issue or add a feature, you can use GitHub to do so. Please see [Contributing](CONTRIBUTING.md) for instructions.
 
 # License
-SAM's open source code is copyrighted by the Alliance for Sustainable Energy and licensed with BSD-3-Clause terms, found [here](https://github.com/NREL/SAM/blob/develop/LICENSE).
+SAM's open source code is copyrighted by the Alliance for Energy Innovation and licensed with BSD-3-Clause terms, found [here](https://github.com/NREL/SAM/blob/develop/LICENSE).
 
 The stepwise and LHS [LGPL](https://www.gnu.org/licenses/lgpl-3.0.en.html) licensed libraries from Sandia National Laboratories are pre-compiled Fortran libraries that are included in the SAM repository as binaries in the [Sandia folder](https://github.com/NREL/SAM/tree/develop/Sandia). You can replace the binaries with different versions by compiling your own version and replacing the binary/executable viles in the Sandia folder.
 
