@@ -55,7 +55,7 @@ function variable_name_change(new, old){
 	value(new, oldvalue(old), 'Variable name changed from \"' + old + '\" to \"' +  new + '\"');
 }
 
-version_upgrade{'2025.10.27'} = define() {
+version_upgrade{'2026.2.19'} = define() {
 	const cfg = config();
 
 	if (cfg.tech == 'Flat Plate PV' || cfg.tech == 'PV Battery' || cfg.tech == 'Photovoltaic Wind Battery Hybrid' ) {
