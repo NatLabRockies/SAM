@@ -19,6 +19,8 @@ The desktop version of SAM for Windows, Mac, or Linux builds from the following 
 
 * [Google Test](https://github.com/google/googletest) is a C++ test framework that enables comprehensive unit-testing of software.  Contributions to the project will eventually be required to have associated unit tests written in this framework.
 
+* [Google OR-Tools](https://github.com/google/or-tools) is a software suite for optimization, including vehicle routing, flows, integer and linear programming, and contraint programming. 
+
 * [jsoncpp](https://github.com/open-source-parsers/jsoncpp) is a C++ library that allows manipulating JSON values, including serialization and deserialization to and from strings.
 
 * [Python](https://www.python.org)/[Miniconda](https://docs.conda.io/) is for integration of Python scripts with the SAM user interface.
