@@ -1,5 +1,5 @@
 {
-    "Name": "ETES Capital Costs",
+    "Name": "Reactor Capital Costs",
     "Width": 828.0,
     "Height": 628.0,
     "FormObjects": {
@@ -919,89 +919,6 @@
                 "TabOrder": {
                     "Type": 3.0,
                     "Integer": 15.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "heater_spec_cost"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 474.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 48.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 115.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
                 }
             }
         },
@@ -1969,6 +1886,89 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
+                    "String": "reactor_spec_cost"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 474.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 115.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
                     "String": "sales_tax_frac"
                 },
                 "X": {
@@ -2633,172 +2633,6 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "ui_etes_cost__nameplate"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 477.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 345.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 100.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "ui_etes_cost__q_dot_heater"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 141.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 48.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 100.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
                     "String": "ui_etes_cost__sales_tax"
                 },
                 "X": {
@@ -2965,89 +2799,6 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "ui_heater_cost_calc"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 642.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 48.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 136.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 2.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": "$ "
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
                     "String": "ui_installed_per_capacity_cost_calc"
                 },
                 "X": {
@@ -3206,6 +2957,255 @@
                 "TabOrder": {
                     "Type": 3.0,
                     "Integer": 0.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "ui_reactor_cost__nameplate"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 477.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 345.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "ui_reactor_cost__q_dot_reactor"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 141.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "ui_reactor_cost_calc"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 642.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 136.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 2.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": "$ "
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
                 }
             }
         },
@@ -3704,19 +3704,6 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
-        "heater_spec_cost": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Heater cost",
-            "Units": "$/kWt",
-            "Group": "ETES Capital Costs",
-            "IndexLabels": "",
-            "Flags": 2.0,
-            "DefaultValue": 100.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
         "land_cost_fixed": {
             "Version": 4.0,
             "Type": 1.0,
@@ -3752,6 +3739,19 @@
             "IndexLabels": "",
             "Flags": 3.0,
             "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "reactor_spec_cost": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Reactor cost",
+            "Units": "$/kWt",
+            "Group": "Reactor Capital Costs",
+            "IndexLabels": "",
+            "Flags": 2.0,
+            "DefaultValue": 100.0,
             "UIObject": "Default",
             "sscVariableName": "",
             "sscVariableValue": ""
@@ -3873,32 +3873,6 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
-        "ui_etes_cost__nameplate": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Cycle net (nameplate) capacity",
-            "Units": "MWe",
-            "Group": "ETES Capital Costs",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": -999.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "ui_etes_cost__q_dot_heater": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Heater capacity",
-            "Units": "MWt",
-            "Group": "ETES Capital Costs",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": -999.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
         "ui_etes_cost__sales_tax": {
             "Version": 4.0,
             "Type": 1.0,
@@ -3925,19 +3899,6 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
-        "ui_heater_cost_calc": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Total heater cost",
-            "Units": "$",
-            "Group": "ETES Capital Costs",
-            "IndexLabels": "",
-            "Flags": 9.0,
-            "DefaultValue": -999.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
         "ui_installed_per_capacity_cost_calc": {
             "Version": 4.0,
             "Type": 1.0,
@@ -3957,6 +3918,45 @@
             "Label": "Land cost total",
             "Units": "$",
             "Group": "ETES Capital Costs",
+            "IndexLabels": "",
+            "Flags": 9.0,
+            "DefaultValue": -999.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "ui_reactor_cost__nameplate": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Cycle net (nameplate) capacity",
+            "Units": "MWe",
+            "Group": "Reactor Capital Costs",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": -999.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "ui_reactor_cost__q_dot_reactor": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Reactor capacity",
+            "Units": "MWt",
+            "Group": "Reactor Capital Costs",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": -999.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "ui_reactor_cost_calc": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Total reactor cost",
+            "Units": "$",
+            "Group": "Reactor Capital Costs",
             "IndexLabels": "",
             "Flags": 9.0,
             "DefaultValue": -999.0,
@@ -4032,13 +4032,13 @@
     },
     "Equations": [
         "// ui only",
-        "equations{ 'ui_etes_cost__nameplate' } = define() {",
+        "equations{ 'ui_reactor_cost__nameplate' } = define() {",
         "\treturn ${nameplate};",
         "};",
         "",
         "// ui only",
-        "equations{ 'ui_etes_cost__q_dot_heater' } = define() {",
-        "\treturn ${q_dot_heater_des};",
+        "equations{ 'ui_reactor_cost__q_dot_reactor' } = define() {",
+        "\treturn ${q_dot_reactor_des};",
         "};",
         "",
         "// ui only",
@@ -4062,8 +4062,8 @@
         "};",
         "",
         "",
-        "equations {'ui_heater_cost_calc'} = define() {",
-        "\treturn ${cb_heater_cost_calc};};",
+        "equations {'ui_reactor_cost_calc'} = define() {",
+        "\treturn ${cb_reactor_cost_calc};};",
         "",
         "equations {'ui_storage_cost_calc'} = define() {",
         "\treturn ${cb_storage_cost_calc};};",
@@ -4103,7 +4103,7 @@
         "\t"
     ],
     "Callbacks": [
-        "on_load{\"ETES Capital Costs\"}=define()",
+        "on_load{\"Reactor Capital Costs\"}=define()",
         "{",
         "\tfin = financing();",
         "\t",

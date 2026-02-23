@@ -1,5 +1,5 @@
 {
-    "Name": "ETES Heater",
+    "Name": "Reactor Reactor",
     "Width": 881.0,
     "Height": 322.0,
     "FormObjects": {
@@ -45,90 +45,7 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "HEATER_COPY_E_heater_su_des"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 384.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 240.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 100.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "HEATER_COPY_T_htf_cold_des"
+                    "String": "REACTOR_COPY_T_htf_cold_des"
                 },
                 "X": {
                     "Type": 3.0,
@@ -211,7 +128,7 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "HEATER_COPY_T_htf_hot_des"
+                    "String": "REACTOR_COPY_T_htf_hot_des"
                 },
                 "X": {
                     "Type": 3.0,
@@ -294,173 +211,7 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "HEATER_COPY_W_dot_heater_des"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 384.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 168.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 100.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "HEATER_COPY_heater_mult"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 258.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 100.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 2.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "HEATER_COPY_q_dot_heater_des"
+                    "String": "REACTOR_COPY_q_dot_reactor_des"
                 },
                 "X": {
                     "Type": 3.0,
@@ -538,61 +289,20 @@
                 }
             }
         },
-        "Choice": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "etes_hot_htf_type_dd"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 609.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 27.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 217.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Items": {
-                    "Type": 6.0,
-                    "StringList": "Salt (60% NaNO3, 40% KNO3)|Salt (46.5% LiF, 11.5% NaF, 42% KF)|User-defined..."
-                },
-                "Selection": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": 23.0
-                }
-            }
-        },
         "Numeric": {
             "Visible": 1.0,
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "f_q_dot_des_allowable_su"
+                    "String": "REACTOR_COPY_reactor_mult"
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 384.0
+                    "Integer": 258.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 192.0
+                    "Integer": 24.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -616,177 +326,11 @@
                 },
                 "Format": {
                     "Type": 3.0,
-                    "Integer": 1.0
+                    "Integer": 0.0
                 },
                 "Decimals": {
                     "Type": 3.0,
                     "Integer": 2.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "f_q_dot_heater_min"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 384.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 264.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 100.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "heater_efficiency"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 384.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 144.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 100.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 1.0
                 },
                 "Prefix": {
                     "Type": 5.0,
@@ -825,89 +369,6 @@
                 "TabOrder": {
                     "Type": 3.0,
                     "Integer": -1.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "hrs_startup_at_max_rate"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 384.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 216.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 100.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 2.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": 2.0
                 }
             }
         },
@@ -985,6 +446,47 @@
                 }
             }
         },
+        "Choice": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "reactor_hot_htf_type_dd"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 609.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 27.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 217.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Items": {
+                    "Type": 6.0,
+                    "StringList": "Salt (60% NaNO3, 40% KNO3)|Salt (46.5% LiF, 11.5% NaF, 42% KF)|User-defined..."
+                },
+                "Selection": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 23.0
+                }
+            }
+        },
         "MaterialProperties": {
             "Visible": 1.0,
             "ObjectProperties": {
@@ -1020,25 +522,12 @@
         }
     },
     "VarDatabase": {
-        "HEATER_COPY_E_heater_su_des": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Heater startup energy",
-            "Units": "MWt-hr",
-            "Group": "ETES Heater",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": -999.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "HEATER_COPY_T_htf_cold_des": {
+        "REACTOR_COPY_T_htf_cold_des": {
             "Version": 4.0,
             "Type": 1.0,
             "Label": "HTF cold temperature",
             "Units": "°C",
-            "Group": "ETES Heater",
+            "Group": "Reactor Reactor",
             "IndexLabels": "",
             "Flags": 8.0,
             "DefaultValue": 0.0,
@@ -1046,12 +535,12 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
-        "HEATER_COPY_T_htf_hot_des": {
+        "REACTOR_COPY_T_htf_hot_des": {
             "Version": 4.0,
             "Type": 1.0,
             "Label": "HTF hot temperature",
             "Units": "°C",
-            "Group": "ETES Heater",
+            "Group": "Reactor Reactor",
             "IndexLabels": "",
             "Flags": 8.0,
             "DefaultValue": 0.0,
@@ -1059,38 +548,12 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
-        "HEATER_COPY_W_dot_heater_des": {
+        "REACTOR_COPY_q_dot_reactor_des": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "Heater electricity consumption at design",
-            "Units": "MWe",
-            "Group": " ",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": -999.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "HEATER_COPY_heater_mult": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Heater multiple",
-            "Units": " ",
-            "Group": "ETES Heater",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "HEATER_COPY_q_dot_heater_des": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Heater thermal power",
+            "Label": "Reactor thermal power",
             "Units": "MWt",
-            "Group": "ETES Heater",
+            "Group": "Reactor Reactor",
             "IndexLabels": "",
             "Flags": 8.0,
             "DefaultValue": 0.0,
@@ -1098,55 +561,16 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
-        "etes_hot_htf_type_dd": {
+        "REACTOR_COPY_reactor_mult": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "HTF Type",
+            "Label": "Reactor multiple",
             "Units": " ",
-            "Group": "ETES Heater",
+            "Group": "Reactor Reactor",
             "IndexLabels": "",
-            "Flags": 2.0,
+            "Flags": 8.0,
             "DefaultValue": 0.0,
-            "UIObject": "Numeric",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "f_q_dot_des_allowable_su": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Fraction of design power allowed during startup",
-            "Units": " ",
-            "Group": "ETES Heater",
-            "IndexLabels": "",
-            "Flags": 2.0,
-            "DefaultValue": 1.0,
             "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "f_q_dot_heater_min": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Minimum heater operating fraction",
-            "Units": " ",
-            "Group": "ETES Heater",
-            "IndexLabels": "",
-            "Flags": 2.0,
-            "DefaultValue": -999.0,
-            "UIObject": "Numeric",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "heater_efficiency": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Heater efficiency",
-            "Units": "%",
-            "Group": " ",
-            "IndexLabels": "",
-            "Flags": 2.0,
-            "DefaultValue": 100.0,
-            "UIObject": "Numeric",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
@@ -1163,16 +587,16 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
-        "hrs_startup_at_max_rate": {
+        "reactor_hot_htf_type_dd": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "Duration of startup at max startup power",
-            "Units": "hr",
-            "Group": "ETES Heater",
+            "Label": "HTF Type",
+            "Units": " ",
+            "Group": "Reactor Reactor",
             "IndexLabels": "",
             "Flags": 2.0,
-            "DefaultValue": 0.25,
-            "UIObject": "Default",
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
@@ -1204,7 +628,7 @@
     },
     "Equations": [
         "equations{ 'hot_htf_code' } = define() {",
-        "\treturn ?${etes_hot_htf_type_dd}",
+        "\treturn ?${reactor_hot_htf_type_dd}",
         "\t[",
         "\t\t17, // 17.) Salt (60% NaNO3, 40% KNO3)",
         "\t\t10, // 10.) Salt (46.5% LiF 11.5% NaF 42% KF)",
@@ -1212,33 +636,27 @@
         "   \t];",
         "};",
         "",
-        "equations{ 'HEATER_COPY_heater_mult' } = define() {",
-        "\treturn ${heater_mult}; };",
+        "equations{ 'REACTOR_COPY_reactor_mult' } = define() {",
+        "\treturn ${reactor_mult}; };",
         "\t",
-        "equations{ 'HEATER_COPY_q_dot_heater_des' } = define() {",
-        "\treturn ${q_dot_heater_des}; };",
+        "equations{ 'REACTOR_COPY_q_dot_reactor_des' } = define() {",
+        "\treturn ${q_dot_reactor_des}; };",
         "\t",
-        "equations{ 'HEATER_COPY_T_htf_hot_des' } = define() {",
+        "equations{ 'REACTOR_COPY_T_htf_hot_des' } = define() {",
         "\treturn ${T_htf_hot_des}; };",
         "\t",
-        "equations{ 'HEATER_COPY_T_htf_cold_des' } = define() {",
+        "equations{ 'REACTOR_COPY_T_htf_cold_des' } = define() {",
         "\treturn ${T_htf_cold_des}; };",
-        "\t",
-        "equations{ 'HEATER_COPY_W_dot_heater_des' } = define() {",
-        "\treturn ${W_dot_heater_des}; };",
-        "",
-        "equations{ 'HEATER_COPY_E_heater_su_des' } = define() {",
-        "\treturn ${E_heater_su_des}; };",
         ""
     ],
     "Callbacks": [
-        "on_load{'ETES Heater'} = define() {",
-        "\ton_change{\"etes_hot_htf_type_dd\"}();",
+        "on_load{'Reactor Reactor'} = define() {",
+        "\ton_change{\"reactor_hot_htf_type_dd\"}();",
         "};",
         "",
-        "on_change{\"etes_hot_htf_type_dd\"}=define(){",
+        "on_change{\"reactor_hot_htf_type_dd\"}=define(){",
         "\t",
-        "    bUserDefined = (value(\"etes_hot_htf_type_dd\") == 2);",
+        "    bUserDefined = (value(\"reactor_hot_htf_type_dd\") == 2);",
         "    enable(\"ud_hot_htf_props\", bUserDefined);",
         "",
         "};",

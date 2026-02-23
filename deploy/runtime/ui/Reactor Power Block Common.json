@@ -1,5 +1,5 @@
 {
-    "Name": "ETES Power Block Common",
+    "Name": "Reactor Power Block Common",
     "Width": 905.0,
     "Height": 286.0,
     "FormObjects": {
@@ -1342,7 +1342,7 @@
         }
     },
     "Equations": [
-        "// Set copy of variables from MSPT System Design page",
+        "// Set copy of variables from System Design page",
         "equations{ 'PB_COPY_P_ref' } = define(){",
         "\treturn ${P_ref}; };",
         "\t",
