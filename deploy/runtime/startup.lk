@@ -53,6 +53,9 @@ addconfig( 'Generic System', ['Residential', 'Commercial', 'Third Party', 'Host 
 addconfig( 'Generic Battery', ['Residential', 'Commercial', 'Third Party', 'Host Developer', 'Single Owner', 'Merchant Plant', 'Leveraged Partnership Flip', 'All Equity Partnership Flip', 'Sale Leaseback'] );
 addconfig( 'Generic PVWatts Wind FuelCell Battery Hybrid', ['Single Owner', 'Host Developer']);
 
+// Nuclear
+addconfig( 'Reactor', ['Single Owner']);
+
 addconfig( 'Retired', ['None']);
 // Hybrid Power
 addconfig('PVWatts Wind Battery Hybrid', ['Single Owner', 'Host Developer']);
@@ -74,6 +77,9 @@ configopt( 'Custom Generation Battery', { 'tree_parent'='Energy Storage', 'long_
 configopt( 'Standalone Battery', { 'tree_parent'='Energy Storage', 'long_name'='Standalone Battery', 'short_name'='Battery', 'description'='Generic standalone battery storage' } );
 configopt( 'ETES', { 'tree_parent'='Energy Storage', 'long_name'='Electric Thermal Energy Storage', 'short_name'='ETES', 'description'='Electric thermal energy storage' } );
 configopt( 'PTES', { 'tree_parent'='Energy Storage', 'long_name'='Pumped Thermal Energy Storage', 'short_name'='PTES', 'description'='Pumped thermal energy storage' } );
+
+configopt( 'Reactor', { 'tree_parent'='Energy Storage', 'long_name'='Reactor', 'short_name'='Reactor', 'description'='Reactor' } );
+
 configopt( 'Wind Power', { 'long_name'='Wind', 'short_name'='Wind', 'description'='Small or large wind power system' } );
 configopt( 'Biopower', { 'long_name'='Biomass Combustion', 'short_name'='Biopower', 'description'='Biomass combustion for electricity generation' } );
 configopt( 'Geothermal Power', { 'long_name'='Geothermal', 'short_name'='Geothermal', 'description'='Geothermal power model for hydrothermal and EGS systems with flash or binary conversion' } );
@@ -684,6 +690,20 @@ function setup_etes_pages()
 	addpage( [[ 'ETES System Control' ]], { 'sidebar'='System Control', 'help'='etes_system_control'});
 }
 
+function setup_reactor_pages()
+{
+	addpage( [['Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information']], { 'sidebar'='Location and Resource', 'help'='etes_location_and_resource' } );
+	addpage( [['Reactor System Design']], { 'sidebar'='System Design', 'help'='etes_system_design'} );
+	addpage( [['Reactor Reactor']], {'sidebar'='Reactor', 'help'='etes_heater' } );
+	addpage( [[ 'Rankine Cycle Air or Evaporative Cooling' ], [ 'User-Defined Power Cycle' ]],
+			{ 'sidebar'='Power Cycle', 'help'='etes_power_cycle', 'exclusive_var' = 'pc_config',
+			  'exclusive_header_pages' = ['Reactor Power Block Common']} );
+	addpage( [[ 'TES Direct Two Tank' ]], { 'sidebar'='Thermal Storage', 'help'='etes_thermal_storage' } );
+	addpage( [[ 'Reactor System Control' ,
+	  {'name' = 'Reactor Dispatch Control', 'caption'='Dispatch Control', 'collapsible'=false, 'collapsible_var'='csp_dispatch_is_shown'} ]],
+	  { 'sidebar'='System Control', 'help'='etes_system_control'});
+}
+
 function setup_ptes_pages()
 {
 	addpage( [['Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information']], { 'sidebar'='Location and Resource', 'help'='ptes_location_and_resource' } );
@@ -1026,6 +1046,16 @@ addpage([['ETES Capital Costs']],{'sidebar'='System Costs','help'='cc_etes'});
 addpage([['Operating Costs']], {'sidebar' = 'Operating Costs', 'help'='oc_operating'} );
 setup_single_owner_dispatch_pages();
 //setup_electricity_purchases();
+
+// Reactor //////
+setconfig('Reactor', 'Single Owner');
+setmodules( ['reactor_tes_power', 'singleowner']);
+setup_reactor_pages();
+setup_lifetime_page(DEGRADATION_AC_SINGLE_YEAR);
+addpage([['Reactor Capital Costs']],{'sidebar'='System Costs','help'='cc_etes'});
+addpage([['Operating Costs']], {'sidebar' = 'Operating Costs', 'help'='oc_operating'} );
+setup_single_owner_pages();
+setup_electricity_purchases();
 
 //setconfig('ETES', 'Merchant Plant');
 //setmodules( ['etes_electric_resistance', 'merchantplant']);

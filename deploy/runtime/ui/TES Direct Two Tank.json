@@ -1994,7 +1994,7 @@
     "Callbacks": [
         "on_load{\"TES Direct Two Tank\"} = define() {",
         "",
-        "\tif ( technology() == 'ETES' ){",
+        "\tif ( technology() == 'ETES' || technology() == 'Reactor' ){",
         "\t\tshow(\"tanks_in_parallel\", false);",
         "\t}",
         "",

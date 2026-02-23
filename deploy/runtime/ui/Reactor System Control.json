@@ -2356,7 +2356,10 @@
     },
     "Equations": [
         "equations{ 'REACTOR_SC_COPY_etes_bop_des_calc' } = define() {",
-        "\treturn ${reactor_bop_des_calc}; };"
+        "\treturn ${reactor_bop_des_calc}; };\r",
+        "\t\r",
+        "equations{ 'is_dispatch' } = define() {\r",
+        "\treturn 0; };"
     ],
     "Callbacks": [
         "on_load{\"Reactor System Control\"} = define()",
@@ -2369,7 +2372,7 @@
         "     en = value(\"is_dispatch\");\r",
         "     \r",
         "     // Disable dispatch optimization until/if reactor cmod enables it\r",
-        "     enable(\"is_dispatch\", en==1);",
+        "     show(\"is_dispatch\", 0);",
         "     ",
         "     enable(\"disp_hsu_cost\", en==1);",
         "     enable(\"disp_csu_cost\", en==1);",

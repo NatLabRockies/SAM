@@ -340,89 +340,6 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "heater_mult"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 219.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 114.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 100.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 2.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": 4.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
                     "String": "nameplate"
                 },
                 "X": {
@@ -913,6 +830,89 @@
                 "TabOrder": {
                     "Type": 3.0,
                     "Integer": -1.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "reactor_mult"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 219.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 114.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 2.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 4.0
                 }
             }
         },
@@ -1448,19 +1448,6 @@
             "sscVariableName": " ",
             "sscVariableValue": ""
         },
-        "heater_mult": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Heater multiple",
-            "Units": " ",
-            "Group": "ETES System Design",
-            "IndexLabels": "",
-            "Flags": 2.0,
-            "DefaultValue": 1.9,
-            "UIObject": "Default",
-            "sscVariableName": " ",
-            "sscVariableValue": ""
-        },
         "m_dot_htf_ND_high_sysdes": {
             "Version": 4.0,
             "Type": 1.0,
@@ -1604,6 +1591,19 @@
             "sscVariableName": " ",
             "sscVariableValue": ""
         },
+        "reactor_bop_des_calc": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "",
+            "Units": "",
+            "Group": "Reactor System Design",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": -789.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "reactor_financial_model": {
             "Version": 4.0,
             "Type": 1.0,
@@ -1613,6 +1613,19 @@
             "IndexLabels": "",
             "Flags": 8.0,
             "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": " ",
+            "sscVariableValue": ""
+        },
+        "reactor_mult": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Reactor multiple",
+            "Units": " ",
+            "Group": "Reactor System Design",
+            "IndexLabels": "",
+            "Flags": 2.0,
+            "DefaultValue": 1.9,
             "UIObject": "Default",
             "sscVariableName": " ",
             "sscVariableValue": ""
@@ -1760,16 +1773,16 @@
         "*/",
         "\tret = ssc_exec(obj, 'reactor_tes_power');",
         "",
-        "\t//ret_d = ssc_dump(obj, 'etes_system_des_mimo_ssc_auto_exec.txt');",
+        "\tret_d = ssc_dump(obj, 'reactor_system_des_mimo_ssc_auto_exec.txt');",
         "",
         "\tif(ret==0) {",
         "\t\t${nameplate} = ssc_var(obj, \"nameplate\");",
         "\t\t${system_capacity} = ssc_var(obj, \"system_capacity\");",
-        "\t\t${q_pb_design} = ssc_var(obj, \"q_pb_design\");\r",
+        "\t\t${q_pb_design} = ssc_var(obj, \"q_dot_cycle_des\");\r",
         "\t\t",
         "\t\t${q_dot_reactor_des} = ssc_var(obj, \"q_dot_reactor_des\");\r",
         "\t\t${tshours_reactor} = ssc_var(obj, \"tshours_reactor\");",
-        "\t\t\r",
+        "\r",
         "\t\t${reactor_bop_des_calc} = ssc_var(obj, \"W_dot_bop_design\");",
         "\t\t\r",
         "\t\t${PB_m_dot_htf_cycle_des} = ssc_var(obj, \"m_dot_htf_cycle_des\");",
@@ -1804,25 +1817,27 @@
         "\t\t${Q_dot_HTF_ND_des_sysdes}= ssc_var(obj, \"Q_dot_HTF_ND_des_calc\");  ",
         "\t\t${W_dot_cooling_ND_des_sysdes}= ssc_var(obj, \"W_dot_cooling_ND_des_calc\");",
         "\t\t${m_dot_water_ND_des_sysdes}= ssc_var(obj, \"m_dot_water_ND_des_calc\");\t\t\t\t\t",
-        "\t\t\t",
+        "",
         "\t\t\t// TES page",
         "\t\t${Q_tes} = ssc_var(obj, \"Q_tes_des\");",
-        "\t\t${tes_avail_vol} = ssc_var(obj, \"V_tes_htf_avail\");",
-        "\t\t${tes_vol_total} = ssc_var(obj, \"V_tes_htf_total\");",
+        "\t\t${tes_avail_vol} = ssc_var(obj, \"V_tes_htf_avail_des\");",
+        "\t\t${tes_vol_total} = ssc_var(obj, \"V_tes_htf_total_des\");",
         "\t\t${tes_tank_diameter} = ssc_var(obj, \"d_tank_tes\");",
         "\t\t${q_dot_tes_est} = ssc_var(obj, \"q_dot_loss_tes_des\");",
-        "\t\t${tes_htf_density} = ssc_var(obj, \"dens_store_htf_at_T_ave\");",
+        "\t\t${tes_htf_density} = ssc_var(obj, \"dens_store_htf_at_T_ave\");\r",
+        "\t",
         "\t}",
         "\telse {",
         "\t\tvf = -789;",
         "\t\t${nameplate} = vf;",
         "\t\t${system_capacity} = vf;",
-        "\t\t${q_pb_design} = vf;",
-        "\t\t${q_dot_heater_des} = vf;",
-        "\t\t${tshours_heater} = vf;",
-        "\t\t${W_dot_heater_des} = vf;",
-        "\t\t${E_heater_su_des} = vf;",
-        "\t\t${etes_bop_des_calc} = vf;",
+        "\t\t${q_pb_design} = vf;\r",
+        "\t\t",
+        "\t\t${q_dot_reactor_des} = vf;",
+        "\t\t${tshours_reactor} = vf;\r",
+        "\t\t\r",
+        "\t\t${reactor_bop_des_calc} = vf;\r",
+        "\t\t",
         "\t\t${PB_m_dot_htf_cycle_des} = vf;",
         "\t\t${cb_reactor_cost_calc} = vf;",
         "\t\t${cb_storage_cost_calc} = vf;",
@@ -1863,7 +1878,9 @@
         "\t\t${tes_vol_total} = vf;",
         "\t\t${tes_tank_diameter} = vf;",
         "\t\t${q_dot_tes_est} = vf;",
-        "\t\t${tes_htf_density} = vf;",
+        "\t\t${tes_htf_density} = vf;\r",
+        "\t\t\r",
+        "\t\t${blah} = vf;",
         "\t}",
         "\t",
         "\tssc_free( obj );",
