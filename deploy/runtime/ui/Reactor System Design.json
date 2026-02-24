@@ -1773,7 +1773,7 @@
         "*/",
         "\tret = ssc_exec(obj, 'reactor_tes_power');",
         "",
-        "\tret_d = ssc_dump(obj, 'reactor_system_des_mimo_ssc_auto_exec.txt');",
+        "\t//ret_d = ssc_dump(obj, 'reactor_system_des_mimo_ssc_auto_exec.txt');",
         "",
         "\tif(ret==0) {",
         "\t\t${nameplate} = ssc_var(obj, \"nameplate\");",
