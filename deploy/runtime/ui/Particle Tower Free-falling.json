@@ -3217,7 +3217,7 @@
             "IndexLabels": "Fixed advective loss coeff|Sandia CFD correlations",
             "Flags": 2.0,
             "DefaultValue": 1.0,
-            "UIObject": "Default",
+            "UIObject": "Choice",
             "sscVariableName": "",
             "sscVariableValue": "0.1"
         },
@@ -3287,7 +3287,7 @@
             "IndexLabels": "Fixed efficiency|FFPR 0D correlation|MFPR 0D correlation|Quasi 2D model",
             "Flags": 2.0,
             "DefaultValue": 3.0,
-            "UIObject": "Default",
+            "UIObject": "Choice",
             "sscVariableName": "",
             "sscVariableValue": "0|1|2|3"
         },

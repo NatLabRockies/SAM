@@ -4182,7 +4182,7 @@
             "IndexLabels": "None|On-axis|Equinox|Summer Solstice|Winter Solstice",
             "Flags": 2.0,
             "DefaultValue": 1.0,
-            "UIObject": "Default",
+            "UIObject": "Choice",
             "sscVariableName": " ",
             "sscVariableValue": ""
         },
@@ -4325,7 +4325,7 @@
             "IndexLabels": "Flat|Ideal",
             "Flags": 2.0,
             "DefaultValue": 1.0,
-            "UIObject": "Default",
+            "UIObject": "Choice",
             "sscVariableName": " ",
             "sscVariableValue": ""
         },
@@ -4768,13 +4768,13 @@
             "Type": 1.0,
             "Label": "Sun location at design point",
             "Units": "",
-            "Group": "",
-            "IndexLabels": "",
+            "Group": "Heliostat Field",
+            "IndexLabels": "Summer Solstice| Equinox| Winter Solstice",
             "Flags": 2.0,
             "DefaultValue": 0.0,
             "UIObject": "Choice",
             "sscVariableName": "",
-            "sscVariableValue": "0|1|2"
+            "sscVariableValue": ""
         },
         "total_land_area": {
             "Version": 4.0,

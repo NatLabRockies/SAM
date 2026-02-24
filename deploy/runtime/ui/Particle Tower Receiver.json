@@ -2256,7 +2256,7 @@
             "IndexLabels": "Bauxite particles|User-defined...",
             "Flags": 2.0,
             "DefaultValue": 0.0,
-            "UIObject": "Default",
+            "UIObject": "Choice",
             "sscVariableName": "rec_htf",
             "sscVariableValue": "36|50"
         },
