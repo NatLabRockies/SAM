@@ -1,0 +1,234 @@
+{
+    "Name": "Financial ITC Depreciation Allocation",
+    "Width": 1040.0,
+    "Height": 550.0,
+    "FormObjects": {
+        "Choice": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "itc_basis_depreciation_allocation"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 306.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 108.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 246.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Items": {
+                    "Type": 6.0,
+                    "StringList": "5-yr MACRS|15-yr MACRS|5-yr Straight Line|15-yr Straight Line|20-yr Straight Line|39-yr Straight Line|Custom|Do Not Set"
+                },
+                "Selection": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "Button": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "itc_basis_depreciation_set"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 333.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 207.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 195.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Set Depreciaton Basis"
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "Choice": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "non_itc_basis_depreciation_allocation"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 306.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 150.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 246.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Items": {
+                    "Type": 6.0,
+                    "StringList": "5-yr MACRS|15-yr MACRS|5-yr Straight Line|15-yr Straight Line|20-yr Straight Line|39-yr Straight Line|Custom|Do not set"
+                },
+                "Selection": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "GroupBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 4"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 9.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 6.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 846.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 279.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Depreciation - ITC allocations"
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        }
+    },
+    "VarDatabase": {
+        "itc_basis_depreciation_allocation": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Use ITC basis for depreciation allocation?",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 0.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Choice",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "non_itc_basis_depreciation_allocation": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Depreciation allocation for non-ITC basis",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 0.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Choice",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        }
+    },
+    "Equations": [],
+    "Callbacks": [
+        "on_load{'Financial ITC Depreciation Allocation'} = define() {\r",
+        "\tfin = financing();\r",
+        "};\r",
+        "\r",
+        "on_change{'itc_basis_depreciation_set'} = define() {\r",
+        "\titc_basis_depreciation_choice();\r",
+        "};\r",
+        "\r",
+        "function itc_basis_depreciation_choice() {\r",
+        "\titc_choice = value('itc_basis_depreciation_allocation');\r",
+        "\tnon_itc_choice = value('non_itc_basis_depreciation_allocation');\r",
+        "\t//calculate inputs\r",
+        "\t/*\r",
+        "\tcelltype= ?${6par_celltech}[\r",
+        "\t\t'monoSi', 'multiSi/polySi', 'cdte', 'cis', 'cigs', 'amorphous'];\r",
+        "\t*/\r",
+        "\titc_depr_choice = ?${itc_choice}[\r",
+        "\t\t'depr_alloc_macrs_5_percent','depr_alloc_macrs_15_percent',\r",
+        "\t\t'depr_alloc_sl_5_percent', 'depr_alloc_sl_15_percent',\r",
+        "\t\t'depr_alloc_sl_20_percent', 'depr_alloc_sl_39_percent',\r",
+        "\t\t'depr_alloc_custom_percent', 'none'];\r",
+        "\tnon_itc_depr_choice = ?${non_itc_choice}[\r",
+        "\t\t'depr_alloc_macrs_5_percent','depr_alloc_macrs_15_percent',\r",
+        "\t\t'depr_alloc_sl_5_percent', 'depr_alloc_sl_15_percent',\r",
+        "\t\t'depr_alloc_sl_20_percent', 'depr_alloc_sl_39_percent',\r",
+        "\t\t'depr_alloc_custom_percent', 'none'];\r",
+        "\tif (itc_choice == non_itc_choice) {\r",
+        "\t\tvalue(itc_depr_choice, 100);\r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\tif (itc_depr_choice != 'none') {\r",
+        "\t\t\tvalue(itc_depr_choice, value('itc_cost_basis_percent'));\r",
+        "\t\t}\r",
+        "\t\tif (non_itc_depr_choice != 'none') {\r",
+        "\t\t\tvalue(non_itc_depr_choice, 100 - value('itc_cost_basis_percent'));\r",
+        "\t\t}\r",
+        "\t}\r",
+        "\t\t\r",
+        "\t\r",
+        "}"
+    ]
+}
