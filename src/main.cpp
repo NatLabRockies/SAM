@@ -94,14 +94,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "uiobjects.h"
 #include "variablegrid.h"
 #include "script.h"
-#include "pythonhandler.h"
 //#include "main_add.h"
 #include <../src/main_add.h>
 
 #define __SAVE_AS_JSON__ 1
 #define __LOAD_AS_JSON__ 1
-
-static PythonConfig pythonConfig;
 
 enum { __idFirst = wxID_HIGHEST+592,
 
@@ -2801,71 +2798,6 @@ bool SamApp::LoadAndRunScriptFile( const wxString &script_file, wxArrayString *e
 
 		return ok;
 	}
-}
-
-std::string SamApp::GetPythonConfigPath(){
-    wxFileName path( GetAppPath() + "/../runtime/python" );
-    path.Normalize();
-    return path.GetFullPath().ToStdString();
-}
-
-void SamApp::LoadPythonConfig(){
-    pythonConfig = ReadPythonConfig(GetPythonConfigPath() + "/python_config.json");
-    if (CheckPythonInstalled(pythonConfig)){
-        std::string python_path = GetPythonConfigPath();
-		set_python_path(python_path.c_str());
-        return;
-    }
-}
-
-bool SamApp::CheckPythonPackage(const std::string& pip_name){
-    if (CheckPythonInstalled(pythonConfig)){
-        if (CheckPythonPackageInstalled(pip_name, pythonConfig))
-            return true;
-    }
-    return false;
-}
-
-void SamApp::InstallPython() {
-    if (pythonConfig.pythonVersion.empty() && pythonConfig.minicondaVersion.empty())
-        LoadPythonConfig();
-
-    auto python_path = GetPythonConfigPath();
-    // already installed and correctly configured
-    if (CheckPythonInstalled(pythonConfig)){
-		set_python_path(python_path.c_str());
-        return;
-    }
-
-#ifdef __WXMSW__
-    // windows
-    bool errors = InstallPythonWindows(python_path, pythonConfig);
-#else
-    bool errors = InstallPythonUnix(python_path, pythonConfig);
-#endif
-    if (errors)
-        throw std::runtime_error("Error installing python.");
-    LoadPythonConfig();
-}
-
-void SamApp::InstallPythonPackage(const std::string& pip_name) {
-    if (CheckPythonPackageInstalled(pip_name, pythonConfig))
-        return;
-    auto packageConfig = ReadPythonPackageConfig(pip_name, GetPythonConfigPath() + "/" + pip_name + ".json");
-
-#ifdef __WXMSW__
-	bool retval = InstallFromPipWindows(GetPythonConfigPath() + "\\" + pythonConfig.pipPath, packageConfig);
-#else
-	std::string pip_exec = GetPythonConfigPath() + "/" + pythonConfig.pipPath;
-	bool retval = InstallFromPip(pip_exec, packageConfig);
-#endif
-    if (retval == 0){
-        pythonConfig.packages.push_back(pip_name);
-        WritePythonConfig(GetPythonConfigPath() + "/python_config.json", pythonConfig);
-    }
-    else {
-        throw std::runtime_error("Error installing " + pip_name);
-    }
 }
 
 enum { ID_TechTree = wxID_HIGHEST+98, ID_FinTree };

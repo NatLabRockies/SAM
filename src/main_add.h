@@ -465,8 +465,6 @@ extern void RegisterReportObjectTypes();
 		}
 	}
 
-	LoadPythonConfig();
-
 	return true;
 }
 
