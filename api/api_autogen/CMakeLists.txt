@@ -64,14 +64,14 @@ add_compile_definitions( LK_USE_WXWIDGETS )
 if (UNIX)
     if (EXISTS /usr/local/bin/wx-config-3)
         set(wxWidgets_CONFIG_EXECUTABLE /usr/local/bin/wx-config-3)
-        find_package(wxWidgets REQUIRED xrc stc richtext ribbon propgrid aui gl html qa adv core xml net base)
+        find_package(wxWidgets QUIET  REQUIRED xrc stc richtext ribbon propgrid aui gl html qa adv core xml net base)
     else ()
         set(wxWidgets_CONFIG_EXECUTABLE $ENV{WXMSW3}/bin/wx-config)
-        find_package(wxWidgets REQUIRED xrc stc richtext ribbon propgrid aui gl html qa adv core xml net base)
+        find_package(wxWidgets QUIET  REQUIRED xrc stc richtext ribbon propgrid aui gl html qa adv core xml net base)
     endif ()
 else()
     set(wxWidgets_ROOT_DIR $ENV{WXMSW3})
-    find_package(wxWidgets COMPONENTS qa webview aui richtext html propgrid adv net stc core base scintilla REQUIRED)
+    find_package(wxWidgets QUIET  COMPONENTS qa webview aui richtext html propgrid adv net stc core base scintilla REQUIRED)
 endif()
 
 include(${wxWidgets_USE_FILE})
@@ -189,6 +189,18 @@ file(TO_NATIVE_PATH $ENV{SAMNTDIR}/api API_DEST)
 set(EXPORT_RUN "$<TARGET_FILE:export_config> --api ${API_DEST} --pysam ${PYSAM}")
 
 if (MSVC)
+
+    file(GLOB ORTOOLS_DLLS "$ENV{ORTOOLSDIR}/bin/*.dll")
+    foreach( file_i ${ORTOOLS_DLLS})
+        add_custom_command(
+        TARGET export_config
+        POST_BUILD
+        COMMAND ${CMAKE_COMMAND}
+        ARGS -E copy ${file_i} "$<TARGET_FILE_DIR:export_config>"
+    )
+    endforeach( file_i )
+
+
 	add_custom_command(
 		TARGET export_config
 		POST_BUILD

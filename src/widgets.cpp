@@ -981,7 +981,7 @@ public:
 
 	virtual wxString GetColLabelValue( int  )
 	{
-		return label.IsEmpty()?"Value":label;
+		return label.IsEmpty()?wxString("Value"):label;
 	}
 
 	virtual wxString GetTypeName( int , int  )
@@ -1129,7 +1129,7 @@ public:
 
 	virtual wxString GetColLabelValue(int)
 	{
-		return label.IsEmpty() ? "Value" : label;
+		return label.IsEmpty() ? wxString("Value") : label;
 	}
 
 	virtual wxString GetTypeName(int, int)
@@ -2108,7 +2108,7 @@ public:
 
 	virtual wxString GetColLabelValue(int)
 	{
-		return label.IsEmpty() ? "Value" : label;
+		return label.IsEmpty() ? wxString("Value") : label;
 	}
 
 	virtual wxString GetTypeName(int, int)

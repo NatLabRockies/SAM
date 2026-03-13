@@ -1817,7 +1817,7 @@ wxString wxShadingFactorsTable::GetRowLabelValue(int row)
 
 wxString wxShadingFactorsTable::GetColLabelValue(int col)
 {
-	wxString col_label = label.IsEmpty() ? "Value" : label;
+	wxString col_label = label.IsEmpty() ? wxString("Value") : label;
 	if (d_mat->ncols() > 1)
 		col_label = wxString::Format("String %d", col + 1);
 	return col_label;
