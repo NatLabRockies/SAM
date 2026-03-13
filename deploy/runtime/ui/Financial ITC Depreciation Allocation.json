@@ -1,7 +1,7 @@
 {
     "Name": "Financial ITC Depreciation Allocation",
-    "Width": 1040.0,
-    "Height": 550.0,
+    "Width": 867.0,
+    "Height": 291.0,
     "FormObjects": {
         "Choice": {
             "Visible": 1.0,
@@ -81,6 +81,89 @@
                 }
             }
         },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "itc_basis_percent_depr"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 570.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 108.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 90.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
         "Choice": {
             "Visible": 1.0,
             "ObjectProperties": {
@@ -115,6 +198,89 @@
                 "Selection": {
                     "Type": 3.0,
                     "Integer": -1.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "non_itc_basis_percent_depr"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 570.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 150.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 90.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
                 },
                 "TabOrder": {
                     "Type": 3.0,
@@ -174,6 +340,19 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
+        "itc_basis_percent_depr": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "",
+            "Units": "%",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "non_itc_basis_depreciation_allocation": {
             "Version": 4.0,
             "Type": 1.0,
@@ -186,48 +365,78 @@
             "UIObject": "Choice",
             "sscVariableName": "",
             "sscVariableValue": ""
+        },
+        "non_itc_basis_percent_depr": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "",
+            "Units": "%",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
         }
     },
-    "Equations": [],
+    "Equations": [
+        "equations{'itc_basis_percent_depr'} = define() {\r",
+        "\treturn ${itc_basis_percent_input};\r",
+        "};\r",
+        "\r",
+        "equations{'non_itc_basis_percent_depr'} = define() {\r",
+        "\treturn 100 - ${itc_basis_percent_input};\r",
+        "};"
+    ],
     "Callbacks": [
         "on_load{'Financial ITC Depreciation Allocation'} = define() {\r",
-        "\tfin = financing();\r",
+        "\tset_itc_basis_choice();\r",
         "};\r",
         "\r",
         "on_change{'itc_basis_depreciation_set'} = define() {\r",
         "\titc_basis_depreciation_choice();\r",
         "};\r",
         "\r",
+        "\r",
         "function itc_basis_depreciation_choice() {\r",
-        "\titc_choice = value('itc_basis_depreciation_allocation');\r",
-        "\tnon_itc_choice = value('non_itc_basis_depreciation_allocation');\r",
+        "\t\r",
+        "\t                        \r",
         "\t//calculate inputs\r",
         "\t/*\r",
         "\tcelltype= ?${6par_celltech}[\r",
         "\t\t'monoSi', 'multiSi/polySi', 'cdte', 'cis', 'cigs', 'amorphous'];\r",
         "\t*/\r",
-        "\titc_depr_choice = ?${itc_choice}[\r",
+        "\tdepr_list = ['depr_alloc_macrs_5_percent','depr_alloc_macrs_15_percent',\r",
+        "\t\t'depr_alloc_sl_5_percent', 'depr_alloc_sl_15_percent',\r",
+        "\t\t'depr_alloc_sl_20_percent', 'depr_alloc_sl_39_percent',\r",
+        "\t\t'depr_alloc_custom_percent'];\r",
+        "\titc_depr_choice = ?${itc_basis_depreciation_allocation}[\r",
         "\t\t'depr_alloc_macrs_5_percent','depr_alloc_macrs_15_percent',\r",
         "\t\t'depr_alloc_sl_5_percent', 'depr_alloc_sl_15_percent',\r",
         "\t\t'depr_alloc_sl_20_percent', 'depr_alloc_sl_39_percent',\r",
         "\t\t'depr_alloc_custom_percent', 'none'];\r",
-        "\tnon_itc_depr_choice = ?${non_itc_choice}[\r",
+        "\tnon_itc_depr_choice = ?${non_itc_basis_depreciation_allocation}[\r",
         "\t\t'depr_alloc_macrs_5_percent','depr_alloc_macrs_15_percent',\r",
         "\t\t'depr_alloc_sl_5_percent', 'depr_alloc_sl_15_percent',\r",
         "\t\t'depr_alloc_sl_20_percent', 'depr_alloc_sl_39_percent',\r",
         "\t\t'depr_alloc_custom_percent', 'none'];\r",
-        "\tif (itc_choice == non_itc_choice) {\r",
+        "\t\r",
+        "\t\r",
+        "\tfor (i = 0; i < #depr_list; i++) {\r",
+        "\t\tvalue(depr_list[i], 0.0); //Set to 0 to avoid non-depreciable equation warning\r",
+        "\t}\r",
+        "\tif (itc_depr_choice == non_itc_depr_choice && itc_depr_choice != 'none') {\r",
         "\t\tvalue(itc_depr_choice, 100);\r",
         "\t}\r",
         "\telse {\r",
         "\t\tif (itc_depr_choice != 'none') {\r",
-        "\t\t\tvalue(itc_depr_choice, value('itc_cost_basis_percent'));\r",
+        "\t\t\tvalue(itc_depr_choice, value('itc_basis_percent_input'));\r",
         "\t\t}\r",
         "\t\tif (non_itc_depr_choice != 'none') {\r",
-        "\t\t\tvalue(non_itc_depr_choice, 100 - value('itc_cost_basis_percent'));\r",
+        "\t\t\tvalue(non_itc_depr_choice, 100 - value('itc_basis_percent_input'));\r",
         "\t\t}\r",
         "\t}\r",
-        "\t\t\r",
         "\t\r",
         "}"
     ]

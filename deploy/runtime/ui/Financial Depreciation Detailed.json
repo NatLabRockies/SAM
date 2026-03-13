@@ -3949,6 +3949,7 @@
         "on_load{'Financial Depreciation Detailed'} = define()\r",
         "{\r",
         "\tchange_depreciation_length();\r",
+        "\tset_itc_basis_choice();\r",
         "};"
     ]
 }

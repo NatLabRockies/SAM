@@ -9506,6 +9506,8 @@
     "annual_tdry": 21.938470319634705,
     "annual_twet": NaN,
     "annual_wspd": 1.786484018864629,
+    "batt_itc_basis_cost": 0.0,
+    "batt_itc_basis_percent": 0.0,
     "batt_max_power": 0.0,
     "batt_salvage_percentage": 0.0,
     "batt_salvage_value": 0.0,
@@ -18903,6 +18905,7 @@
         0.0
     ],
     "depr_fedbas_method": 1.0,
+    "depr_itc_fed_capex": 0.0,
     "depr_itc_fed_custom": 0.0,
     "depr_itc_fed_macrs_15": 0.0,
     "depr_itc_fed_macrs_5": 1.0,
@@ -18910,6 +18913,7 @@
     "depr_itc_fed_sl_20": 0.0,
     "depr_itc_fed_sl_39": 0.0,
     "depr_itc_fed_sl_5": 0.0,
+    "depr_itc_sta_capex": 0.0,
     "depr_itc_sta_custom": 0.0,
     "depr_itc_sta_macrs_15": 0.0,
     "depr_itc_sta_macrs_5": 1.0,
@@ -39345,6 +39349,8 @@
     "irrad_mode": 0.0,
     "is_advanced": 0.0,
     "is_btm": 0.0,
+    "itc_basis_depreciation_allocation": 0.0,
+    "itc_basis_percent_input": 0.0,
     "itc_fed_amount": [
         0.0
     ],
@@ -39358,6 +39364,7 @@
     "itc_fed_percent_maxvalue": [
         1e38
     ],
+    "itc_qualification_choice": 0.0,
     "itc_sta_amount": [
         0.0
     ],
@@ -40059,6 +40066,7 @@
     "nohrsc_station_id": "",
     "nohrsc_year": "",
     "nominal_discount_rate": 9.060000000000004,
+    "non_itc_basis_depreciation_allocation": 0.0,
     "om_capacity": [
         15.0
     ],
@@ -40194,7 +40202,11 @@
     "show_CapitalCostSO": 1.0,
     "show_DebtConstDSCR": 1.0,
     "show_ReserveAccounts": 1.0,
+    "show_cash_incentives": 1.0,
     "show_construction_period": 1.0,
+    "show_depr_alloc": 1.0,
+    "show_itc_qualification": 1.0,
+    "show_tax_credits": 1.0,
     "sky_model": 2.0,
     "snl_a": -3.62,
     "snl_a0": 0.9597,
@@ -40661,6 +40673,8 @@
     "subarray4_ui_row_spacing": 7.590783885739338,
     "subtotal_direct": 98999299.25424,
     "system_capacity": 99999.29217600002,
+    "system_itc_basis_cost": 0.0,
+    "system_itc_basis_percent": 0.0,
     "system_use_lifetime_output": 1.0,
     "term_int_rate": 7.0,
     "term_tenor": 18.0,

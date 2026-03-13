@@ -1,7 +1,7 @@
 {
     "Name": "Financial ITC Qualification",
-    "Width": 1040.0,
-    "Height": 550.0,
+    "Width": 941.0,
+    "Height": 421.0,
     "FormObjects": {
         "Label": {
             "Visible": 1.0,
@@ -12,11 +12,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 570.0
+                    "Integer": 561.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 306.0
+                    "Integer": 330.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -74,11 +74,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 489.0
+                    "Integer": 480.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 306.0
+                    "Integer": 330.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -136,11 +136,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 462.0
+                    "Integer": 453.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 285.0
+                    "Integer": 309.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -194,15 +194,15 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "batt_itc_basis_percent"
+                    "String": "batt_itc_basis_cost"
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 348.0
+                    "Integer": 225.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 216.0
+                    "Integer": 252.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -277,15 +277,15 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "battery_itc_basis_cost"
+                    "String": "batt_itc_basis_percent"
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 225.0
+                    "Integer": 348.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 216.0
+                    "Integer": 252.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -355,6 +355,68 @@
                 }
             }
         },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "batt_itc_percent_lbl"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 441.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 252.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 90.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "%"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
         "CheckBox": {
             "Visible": 1.0,
             "ObjectProperties": {
@@ -364,11 +426,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 519.0
+                    "Integer": 510.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 330.0
+                    "Integer": 354.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -405,11 +467,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 600.0
+                    "Integer": 591.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 330.0
+                    "Integer": 354.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -442,6 +504,89 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
+                    "String": "itc_basis_cost"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 222.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 348.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 90.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
                     "String": "itc_basis_percent_input"
                 },
                 "X": {
@@ -450,7 +595,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 327.0
+                    "Integer": 348.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -677,11 +822,73 @@
                 },
                 "X": {
                     "Type": 3.0,
+                    "Integer": 441.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 219.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 90.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "%"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 713"
+                },
+                "X": {
+                    "Type": 3.0,
                     "Integer": 324.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 294.0
+                    "Integer": 321.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -735,7 +942,7 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "object 713"
+                    "String": "object 71314"
                 },
                 "X": {
                     "Type": 3.0,
@@ -805,7 +1012,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 327.0
+                    "Integer": 294.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -867,7 +1074,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 255.0
+                    "Integer": 219.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -950,7 +1157,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 255.0
+                    "Integer": 219.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1033,7 +1240,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 327.0
+                    "Integer": 294.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1105,6 +1312,19 @@
         }
     },
     "VarDatabase": {
+        "batt_itc_basis_cost": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Battery related installed cost",
+            "Units": "$",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "batt_itc_basis_percent": {
             "Version": 4.0,
             "Type": 1.0,
@@ -1115,19 +1335,6 @@
             "Flags": 8.0,
             "DefaultValue": 0.0,
             "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "battery_itc_basis_cost": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Battery related installed cost",
-            "Units": "$",
-            "Group": "",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Numeric",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
@@ -1154,6 +1361,19 @@
             "Flags": 0.0,
             "DefaultValue": 0.0,
             "UIObject": "CheckBox",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "itc_basis_cost": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "ITC Basis Cost",
+            "Units": "$",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Default",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
@@ -1244,16 +1464,30 @@
         "equations{'system_itc_basis_percent'} = define() {\r",
         "\treturn ${system_itc_basis_cost} / ${total_installed_cost} * 100; //%\r",
         "};\r",
+        "\r",
+        "equations{'itc_basis_cost'} = define() {\r",
+        "\treturn ${itc_basis_percent_input} / 100.0 * ${total_installed_cost};\r",
+        "};\r",
         "\t"
     ],
     "Callbacks": [
         "on_load{'Financial ITC Qualification'} = define() {\r",
         "\tset_itc_basis_choice();\r",
+        "\tshow_battery_itc();\r",
         "};\r",
         "\r",
         "on_change{'itc_qualification_choice'} = define() {\r",
         "\tset_itc_basis_choice();\r",
         "};\r",
+        "\r",
+        "function show_battery_itc() {\r",
+        "\ttech = technology();\r",
+        "\tis_batt = strpos(tech, 'Battery');\r",
+        "\tshow('batt_itc_basis_cost', is_batt);\r",
+        "\tshow('batt_itc_basis_percent', is_batt);\r",
+        "\tshow('batt_itc_percent_lbl', is_batt);\r",
+        "\trefresh();\r",
+        "}\r",
         "\r",
         "function set_itc_basis_choice() {\r",
         "\tchoice = value('itc_qualification_choice');\r",
