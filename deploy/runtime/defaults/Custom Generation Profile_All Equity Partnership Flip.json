@@ -19078,7 +19078,7 @@
     "months_receivables_reserve": 0.0,
     "months_working_reserve": 6.0,
     "nameplate_capacity": 100000.0,
-    "nominal_discount_rate": 9.060000000000004,
+    "nominal_discount_rate": 9.060000000000003,
     "om_capacity": [
         25.0
     ],
@@ -19157,7 +19157,9 @@
     "salvage_value": 0.0,
     "show_CapitalCostSO": 1.0,
     "show_ReserveAccounts": 1.0,
+    "show_cash_incentives": 1.0,
     "show_construction_period": 1.0,
+    "show_tax_credits": 1.0,
     "solution_mode_message": "",
     "spec_mode": 0.0,
     "sponsor_cap_recovery_mode": 0.0,

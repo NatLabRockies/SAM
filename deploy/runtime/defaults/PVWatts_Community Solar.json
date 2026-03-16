@@ -1,5 +1,5 @@
 {
-    "ac_nameplate": 2307.692307692308,
+    "ac_nameplate": 2307.6923076923078,
     "adjust": 0.0,
     "adjust_constant": 0.0,
     "adjust_en_periods": 0.0,
@@ -40,6 +40,8 @@
     "annual_wspd": 1.78648,
     "array_type": 2.0,
     "azimuth": 180.0,
+    "batt_itc_basis_cost": 0.0,
+    "batt_itc_basis_percent": 0.0,
     "batt_salvage_percentage": 0.0,
     "batt_salvage_value": 0.0,
     "batt_simple_enable": 0.0,
@@ -110,7 +112,7 @@
             0.65
         ]
     ],
-    "capex_table_total_installed_ac_cost": 1015384.6153846152,
+    "capex_table_total_installed_ac_cost": 1015384.6153846153,
     "capex_table_total_installed_dc_cost": 2370000.0,
     "cbi_fed_amount": 0.0,
     "cbi_fed_deprbas_fed": 0.0,
@@ -170,7 +172,7 @@
     "const_per_principal4": 0.0,
     "const_per_principal5": 0.0,
     "const_per_principal_total": 4518510.0,
-    "const_per_total1": 118610.8875,
+    "const_per_total1": 118610.88750000001,
     "const_per_total2": 0.0,
     "const_per_total3": 0.0,
     "const_per_total4": 0.0,
@@ -180,7 +182,7 @@
     "const_per_upfront_rate3": 0.0,
     "const_per_upfront_rate4": 0.0,
     "const_per_upfront_rate5": 0.0,
-    "construction_financing_cost": 118610.8875,
+    "construction_financing_cost": 118610.88750000001,
     "contingency": 106200.0,
     "contingency_percent": 3.0,
     "cost_debt_closing": 0.0,
@@ -209,7 +211,7 @@
     "debt_option": 0.0,
     "debt_percent": 60.0,
     "degradation": [
-        0.5
+        0.0
     ],
     "depr_alloc_custom_percent": 0.0,
     "depr_alloc_macrs_15_percent": 1.5,
@@ -239,6 +241,7 @@
         0.0
     ],
     "depr_fedbas_method": 1.0,
+    "depr_itc_fed_capex": 0.0,
     "depr_itc_fed_custom": 0.0,
     "depr_itc_fed_macrs_15": 0.0,
     "depr_itc_fed_macrs_5": 1.0,
@@ -246,6 +249,7 @@
     "depr_itc_fed_sl_20": 0.0,
     "depr_itc_fed_sl_39": 0.0,
     "depr_itc_fed_sl_5": 0.0,
+    "depr_itc_sta_capex": 0.0,
     "depr_itc_sta_custom": 0.0,
     "depr_itc_sta_macrs_15": 0.0,
     "depr_itc_sta_macrs_5": 1.0,
@@ -9109,11 +9113,15 @@
     "inv_eff": 96.0,
     "inverter_costunits": 1.0,
     "inverter_num_units": 1.0,
-    "inverter_power": 2307.692307692308,
+    "inverter_power": 2307.6923076923078,
     "inverter_total": 150000.0,
-    "inverterarray_power": 2307.692307692308,
+    "inverterarray_power": 2307.6923076923078,
     "inverterarray_power_w": 2307692.3076923077,
     "is_advanced": 0.0,
+    "itc_basis_cost": 0.0,
+    "itc_basis_depreciation_allocation": 0.0,
+    "itc_basis_percent_depr": 0.0,
+    "itc_basis_percent_input": 0.0,
     "itc_fed_amount": [
         0.0
     ],
@@ -9127,6 +9135,7 @@
     "itc_fed_percent_maxvalue": [
         1e38
     ],
+    "itc_qualification_choice": 0.0,
     "itc_sta_amount": [
         0.0
     ],
@@ -9179,14 +9188,16 @@
     "module_is_bifacial": 0.0,
     "module_num_units": 1.0,
     "module_power": 3000.0,
-    "module_total": 1020000.0,
+    "module_total": 1020000.0000000001,
     "module_type": 0.0,
-    "modulearray_area": 15789.473684210529,
+    "modulearray_area": 15789.473684210527,
     "modulearray_power": 3000.0,
     "modulearray_power_w": 3000000.0,
     "months_receivables_reserve": 0.0,
     "months_working_reserve": 6.0,
-    "nominal_discount_rate": 9.060000000000004,
+    "nominal_discount_rate": 9.060000000000003,
+    "non_itc_basis_depreciation_allocation": 0.0,
+    "non_itc_basis_percent_depr": 100.0,
     "om_capacity": [
         22.0
     ],
@@ -9297,7 +9308,11 @@
     "show_CapitalCostSO": 1.0,
     "show_DebtConstDSCR": 1.0,
     "show_ReserveAccounts": 1.0,
+    "show_cash_incentives": 1.0,
     "show_construction_period": 1.0,
+    "show_depr_alloc": 1.0,
+    "show_itc_qualification": 1.0,
+    "show_tax_credits": 1.0,
     "soiling": [
         0.0,
         0.0,
@@ -9397,6 +9412,8 @@
     ],
     "subtotal_direct": 3540000.0,
     "system_capacity": 3000.0,
+    "system_itc_basis_cost": 4518510.0,
+    "system_itc_basis_percent": 100.0,
     "system_use_lifetime_output": 1.0,
     "term_int_rate": 7.0,
     "term_tenor": 18.0,
@@ -9405,7 +9422,7 @@
     "total_indirect_cost": 690000.0,
     "total_installed_cost": 4518510.0,
     "total_land_area": 13.005534895540846,
-    "total_module_area": 15789.473684210529,
+    "total_module_area": 15789.473684210527,
     "tz": -7.0,
     "ui_ac_capacity": 2.3076923076923077,
     "ui_array_land_area_acres": 13.005534895540846,
@@ -9435,9 +9452,9 @@
     "ui_subscriber4_name": "",
     "ui_total_capacity": 3000.0,
     "ui_total_land_area_ha": 5.263161366844397,
-    "ui_total_module_area": 15789.473684210529,
+    "ui_total_module_area": 15789.473684210527,
     "ui_total_module_area_acres": 3.901660468662253,
-    "ui_total_module_area_ha": 1.5789473684210529,
+    "ui_total_module_area_ha": 1.5789473684210527,
     "ui_total_unsubscribed_kw": 1200.0,
     "ui_total_unsubscribed_share": 40.0,
     "ui_upfront_cost_by_capacity": 105000.0,

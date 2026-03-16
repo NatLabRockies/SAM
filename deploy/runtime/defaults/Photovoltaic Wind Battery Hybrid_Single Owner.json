@@ -17,7 +17,7 @@
         "6par_imp": 12.82,
         "6par_is_bifacial": 1.0,
         "6par_isc": 13.71,
-        "6par_module_length": 2.277235165721802,
+        "6par_module_length": 2.2772351657218019,
         "6par_module_name": "Aptos Solar Technology LLC DNA-144-BF10-530W (from CEC database)",
         "6par_module_width": 1.1329528187670657,
         "6par_mounting": 0.0,
@@ -408,7 +408,7 @@
         "cec_i_sc_ref": 13.71,
         "cec_is_bifacial": 1.0,
         "cec_material": "Mono-c-Si",
-        "cec_module_length": 2.277235165721802,
+        "cec_module_length": 2.2772351657218019,
         "cec_module_width": 1.1329528187670657,
         "cec_mounting_config": 0.0,
         "cec_mounting_orientation": 0.0,
@@ -3296,7 +3296,7 @@
         "module_area": 2.58,
         "module_aspect_ratio": 2.01,
         "module_costunits": 0.0,
-        "module_length": 2.277235165721802,
+        "module_length": 2.2772351657218019,
         "module_model": 1.0,
         "module_name": "Aptos Solar Technology LLC DNA-144-BF10-530W",
         "module_num_units": 188412.0,
@@ -3478,7 +3478,7 @@
         "spe_eff4": 20.5,
         "spe_fd": 1.0,
         "spe_is_bifacial": 1.0,
-        "spe_module_length": 2.277235165721802,
+        "spe_module_length": 2.2772351657218019,
         "spe_module_structure": 1.0,
         "spe_module_width": 1.1329528187670657,
         "spe_power": 528.9,
@@ -3578,7 +3578,7 @@
         "subarray1_tilt_eq_lat": 0.0,
         "subarray1_track_mode": 1.0,
         "subarray1_tracking_loss": 0.0,
-        "subarray1_ui_length_side": 4.554470331443603,
+        "subarray1_ui_length_side": 2.2772351657218019,
         "subarray1_ui_nmodules": 188412.0,
         "subarray1_ui_nrows": 6729.0,
         "subarray1_ui_row_spacing": 15.181567771478676,
@@ -3664,7 +3664,7 @@
         "subarray2_tilt_eq_lat": 0.0,
         "subarray2_track_mode": 1.0,
         "subarray2_tracking_loss": 0.0,
-        "subarray2_ui_length_side": 2.277235165721802,
+        "subarray2_ui_length_side": 2.2772351657218019,
         "subarray2_ui_nmodules": 0.0,
         "subarray2_ui_nrows": 0.0,
         "subarray2_ui_row_spacing": 7.590783885739338,
@@ -3750,7 +3750,7 @@
         "subarray3_tilt_eq_lat": 0.0,
         "subarray3_track_mode": 1.0,
         "subarray3_tracking_loss": 0.0,
-        "subarray3_ui_length_side": 2.277235165721802,
+        "subarray3_ui_length_side": 2.2772351657218019,
         "subarray3_ui_nmodules": 0.0,
         "subarray3_ui_nrows": 0.0,
         "subarray3_ui_row_spacing": 7.590783885739338,
@@ -3836,7 +3836,7 @@
         "subarray4_tilt_eq_lat": 0.0,
         "subarray4_track_mode": 1.0,
         "subarray4_tracking_loss": 0.0,
-        "subarray4_ui_length_side": 2.277235165721802,
+        "subarray4_ui_length_side": 2.2772351657218019,
         "subarray4_ui_nmodules": 0.0,
         "subarray4_ui_nrows": 0.0,
         "subarray4_ui_row_spacing": 7.590783885739338,
@@ -16194,6 +16194,7 @@
     "Hybrid": {
         "analysis_period": 25.0,
         "analysis_period_warning": "",
+        "batt_itc_basis_percent": 14.77359958373506,
         "batt_power_discharge_max_kwac": 57600.0730368,
         "batt_replacement_option": 1.0,
         "batt_salvage_percentage": 0.0,
@@ -16282,6 +16283,7 @@
         "cp_capacity_payment_esc": 0.0,
         "cp_capacity_payment_type": 0.0,
         "cp_system_nameplate": 275.21582,
+        "customgeneration_itc_basis_percent": 0.0,
         "debt_message": "",
         "debt_option": 1.0,
         "debt_percent": 50.0,
@@ -16313,6 +16315,7 @@
             0.0
         ],
         "depr_fedbas_method": 1.0,
+        "depr_itc_fed_capex": 185.123,
         "depr_itc_fed_custom": 0.0,
         "depr_itc_fed_macrs_15": 0.0,
         "depr_itc_fed_macrs_5": 1.0,
@@ -16320,6 +16323,7 @@
         "depr_itc_fed_sl_20": 0.0,
         "depr_itc_fed_sl_39": 0.0,
         "depr_itc_fed_sl_5": 0.0,
+        "depr_itc_sta_capex": 0.0,
         "depr_itc_sta_custom": 0.0,
         "depr_itc_sta_macrs_15": 0.0,
         "depr_itc_sta_macrs_5": 1.0,
@@ -25136,6 +25140,7 @@
         ],
         "flip_target_percent": 10.0,
         "flip_target_year": 10.0,
+        "fuel_cell_itc_basis_percent": 0.0,
         "grid_curtailment": [
             1e38,
             1e38,
@@ -33903,7 +33908,9 @@
         ],
         "grid_curtailment_price_esc": 0.0,
         "grid_interconnection_limit_kwac": 20000.0,
+        "hybrid_basis_cost": 0.0,
         "hybrid_capital_cost": 0.0,
+        "hybrid_itc_basis_percent": 0.0,
         "ibi_fed_amount": 0.0,
         "ibi_fed_amount_deprbas_fed": 0.0,
         "ibi_fed_amount_deprbas_sta": 0.0,
@@ -33951,6 +33958,10 @@
         "inflation_rate": 2.5,
         "insurance_rate": 0.0,
         "is_btm": 0.0,
+        "itc_basis_cost": 0.0,
+        "itc_basis_depreciation_allocation": 0.0,
+        "itc_basis_percent_depr": 0.0,
+        "itc_basis_percent_input": 0.0,
         "itc_fed_amount": [
             0.0
         ],
@@ -33964,6 +33975,7 @@
         "itc_fed_percent_maxvalue": [
             1e38
         ],
+        "itc_qualification_choice": 0.0,
         "itc_sta_amount": [
             0.0
         ],
@@ -34624,6 +34636,8 @@
         "months_receivables_reserve": 0.0,
         "months_working_reserve": 6.0,
         "nominal_discount_rate": 9.060000000000004,
+        "non_itc_basis_depreciation_allocation": 0.0,
+        "non_itc_basis_percent_depr": 100.0,
         "om_capacity": 0.0,
         "om_fixed": 0.0,
         "om_production": 0.0,
@@ -34680,6 +34694,8 @@
         ],
         "ptc_sta_escal": 0.0,
         "ptc_sta_term": 10.0,
+        "pv_itc_basis_cost": 0.0,
+        "pv_itc_basis_percent": 22.235311932207059,
         "pv_total_installed_cost": 112067706.75226057,
         "rate_escalation": [
             0.0
@@ -34695,7 +34711,11 @@
         "show_CapitalCostSO": 1.0,
         "show_DebtConstDSCR": 1.0,
         "show_ReserveAccounts": 1.0,
+        "show_cash_incentives": 1.0,
         "show_construction_period": 1.0,
+        "show_depr_alloc": 1.0,
+        "show_itc_qualification": 1.0,
+        "show_tax_credits": 1.0,
         "solution_mode_message": "",
         "start_day_of_year": 3.335046e-317,
         "start_day_of_year_tod_ui": 3.335046e-317,
@@ -36274,6 +36294,7 @@
         "ur_yearzero_usage_peaks": [
             0.0
         ],
+        "wind_itc_basis_percent": 62.99108848405789,
         "wind_system_capacity": 200000.0,
         "wind_total_installed_cost": 317480000.0
     }

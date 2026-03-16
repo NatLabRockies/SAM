@@ -65,7 +65,6 @@
     ],
     "COPY_field_thermal_output": 7.927156420127617,
     "COPY_field_thermal_output_ideal": 14.517913337382212,
-    "COPY_system_capacity_heat_btu": 17.060708175665377,
     "COPY_total_aperture": 21120.0,
     "ColperSCA": [
         8.0,
@@ -1153,28 +1152,24 @@
     "bop_par_f": 1.0,
     "calc_design_pipe_vals": 1.0,
     "cbi_fed_amount": 0.0,
-    "cbi_fed_amount_heat_btu": 0.0,
     "cbi_fed_deprbas_fed": 0.0,
     "cbi_fed_deprbas_sta": 0.0,
     "cbi_fed_maxvalue": 1e38,
     "cbi_fed_tax_fed": 1.0,
     "cbi_fed_tax_sta": 1.0,
     "cbi_oth_amount": 0.0,
-    "cbi_oth_amount_heat_btu": 0.0,
     "cbi_oth_deprbas_fed": 0.0,
     "cbi_oth_deprbas_sta": 0.0,
     "cbi_oth_maxvalue": 1e38,
     "cbi_oth_tax_fed": 1.0,
     "cbi_oth_tax_sta": 1.0,
     "cbi_sta_amount": 0.0,
-    "cbi_sta_amount_heat_btu": 0.0,
     "cbi_sta_deprbas_fed": 0.0,
     "cbi_sta_deprbas_sta": 0.0,
     "cbi_sta_maxvalue": 1e38,
     "cbi_sta_tax_fed": 1.0,
     "cbi_sta_tax_sta": 1.0,
     "cbi_uti_amount": 0.0,
-    "cbi_uti_amount_heat_btu": 0.0,
     "cbi_uti_deprbas_fed": 0.0,
     "cbi_uti_deprbas_sta": 0.0,
     "cbi_uti_maxvalue": 1e38,
@@ -1281,7 +1276,7 @@
     "csp.dtr.tes.htf_min_opt_temp": 238.0,
     "csp.dtr.tes.min_fluid_volume": 39.67439516694667,
     "csp.dtr.tes.thermal_capacity": 30.0,
-    "csp.pt.par.calc.aux": 0.12121,
+    "csp.pt.par.calc.aux": 0.12120999999999999,
     "csp.pt.par.calc.bop": 0.0,
     "csp.pt.tes.htf_density": 1872.488,
     "csp.pt.tes.tank_diameter": 7.107391202241459,
@@ -1518,7 +1513,7 @@
     "csp_dtr_hce_var4_rated_heat_loss_2": 0.0,
     "csp_dtr_hce_var4_rated_heat_loss_3": 0.0,
     "csp_dtr_hce_var4_rated_heat_loss_4": 0.0,
-    "csp_dtr_loop_hce_heat_loss": 0.9745454545454548,
+    "csp_dtr_loop_hce_heat_loss": 0.9745454545454547,
     "csp_dtr_sca_ap_length_1": 21.0,
     "csp_dtr_sca_ap_length_2": 14.375,
     "csp_dtr_sca_ap_length_3": 14.375,
@@ -1556,25 +1551,25 @@
             0.0
         ]
     ],
-    "csp_dtr_sca_calc_end_loss_1": 0.9996718942883744,
-    "csp_dtr_sca_calc_end_loss_2": 0.9996434127184016,
-    "csp_dtr_sca_calc_end_loss_3": 0.9996434127184016,
-    "csp_dtr_sca_calc_end_loss_4": 0.9996434127184016,
+    "csp_dtr_sca_calc_end_loss_1": 0.9996718942883743,
+    "csp_dtr_sca_calc_end_loss_2": 0.9996434127184017,
+    "csp_dtr_sca_calc_end_loss_3": 0.9996434127184017,
+    "csp_dtr_sca_calc_end_loss_4": 0.9996434127184017,
     "csp_dtr_sca_calc_end_losses": [
         [
-            0.9996718942883744,
-            0.9996434127184016,
-            0.9996434127184016,
-            0.9996434127184016
+            0.9996718942883743,
+            0.9996434127184017,
+            0.9996434127184017,
+            0.9996434127184017
         ]
     ],
-    "csp_dtr_sca_calc_iam_1": 0.9960610689663656,
+    "csp_dtr_sca_calc_iam_1": 0.9960610689663657,
     "csp_dtr_sca_calc_iam_2": 1.0018753305435045,
     "csp_dtr_sca_calc_iam_3": 1.0018753305435045,
     "csp_dtr_sca_calc_iam_4": 1.0018753305435045,
     "csp_dtr_sca_calc_iams": [
         [
-            0.9960610689663656,
+            0.9960610689663657,
             1.0018753305435045,
             1.0018753305435045,
             1.0018753305435045
@@ -1595,11 +1590,11 @@
         0.8484936096,
         0.8484936096
     ],
-    "csp_dtr_sca_calc_theta": 0.1514182598841343,
-    "csp_dtr_sca_calc_theta_1": 0.1514182598841343,
-    "csp_dtr_sca_calc_theta_2": 0.1514182598841343,
-    "csp_dtr_sca_calc_theta_3": 0.1514182598841343,
-    "csp_dtr_sca_calc_theta_4": 0.1514182598841343,
+    "csp_dtr_sca_calc_theta": 0.15141825988413427,
+    "csp_dtr_sca_calc_theta_1": 0.15141825988413427,
+    "csp_dtr_sca_calc_theta_2": 0.15141825988413427,
+    "csp_dtr_sca_calc_theta_3": 0.15141825988413427,
+    "csp_dtr_sca_calc_theta_4": 0.15141825988413427,
     "csp_dtr_sca_calc_zenith": 0.15062193308923828,
     "csp_dtr_sca_calc_zenith_1": 0.15062193308923828,
     "csp_dtr_sca_calc_zenith_2": 0.15062193308923828,
@@ -10730,7 +10725,7 @@
     "f_htfmax": 1.2,
     "f_htfmax_actual": 0.5460258809863511,
     "f_htfmin": 0.25,
-    "f_htfmin_actual": 0.04550215674886259,
+    "f_htfmin_actual": 0.045502156748862588,
     "f_tc_cold": 2.0,
     "f_turb_tou_periods": [
         1.0,
@@ -11748,7 +11743,7 @@
     "nSCA": 4.0,
     "nameplate": 5.0,
     "nodes": 2000.0,
-    "nominal_discount_rate": 9.060000000000004,
+    "nominal_discount_rate": 9.060000000000003,
     "non_solar_field_land_area_multiplier": 1.1,
     "northsouth_field_sep": 20.0,
     "object 11": 0.0,
@@ -11769,7 +11764,7 @@
     "payment_option": 0.0,
     "pb_fixed_par": 0.0055,
     "pb_pump_coef": 0.55,
-    "pbi_fed_amount_heat_btu": [
+    "pbi_fed_amount": [
         0.0
     ],
     "pbi_fed_escal": 0.0,
@@ -11777,7 +11772,7 @@
     "pbi_fed_tax_fed": 1.0,
     "pbi_fed_tax_sta": 1.0,
     "pbi_fed_term": 0.0,
-    "pbi_oth_amount_heat_btu": [
+    "pbi_oth_amount": [
         0.0
     ],
     "pbi_oth_escal": 0.0,
@@ -11785,7 +11780,7 @@
     "pbi_oth_tax_fed": 1.0,
     "pbi_oth_tax_sta": 1.0,
     "pbi_oth_term": 0.0,
-    "pbi_sta_amount_heat_btu": [
+    "pbi_sta_amount": [
         0.0
     ],
     "pbi_sta_escal": 0.0,
@@ -11793,7 +11788,7 @@
     "pbi_sta_tax_fed": 1.0,
     "pbi_sta_tax_sta": 1.0,
     "pbi_sta_term": 0.0,
-    "pbi_uti_amount_heat_btu": [
+    "pbi_uti_amount": [
         0.0
     ],
     "pbi_uti_escal": 0.0,
@@ -11811,12 +11806,12 @@
     "prop_tax_cost_assessed_percent": 100.0,
     "property_assessed_value": 13674670.15317073,
     "property_tax_rate": 0.0,
-    "ptc_fed_amount_heat_btu": [
+    "ptc_fed_amount": [
         0.0
     ],
     "ptc_fed_escal": 0.0,
     "ptc_fed_term": 10.0,
-    "ptc_sta_amount_heat_btu": [
+    "ptc_sta_amount": [
         0.0
     ],
     "ptc_sta_escal": 0.0,
@@ -11874,7 +11869,9 @@
     "show_CapitalCostSO": 1.0,
     "show_DebtConstDSCR": 1.0,
     "show_ReserveAccounts": 1.0,
+    "show_cash_incentives": 1.0,
     "show_construction_period": 1.0,
+    "show_tax_credits": 1.0,
     "single_loop_aperture": 5280.0,
     "solar_data_file_name": "tucson_az_32.116521_-110.933042_psmv3_60_tmy.csv",
     "solar_data_source": "NSRDB",

@@ -21,6 +21,8 @@
     ],
     "analysis_period": 25.0,
     "analysis_period_warning": "No messages.",
+    "batt_itc_basis_cost": 0.0,
+    "batt_itc_basis_percent": 0.0,
     "batt_salvage_percentage": 0.0,
     "batt_salvage_value": 0.0,
     "capacity_factor_calc": 86.39999999999999,
@@ -158,6 +160,7 @@
         0.0
     ],
     "depr_fedbas_method": 1.0,
+    "depr_itc_fed_capex": 0.0,
     "depr_itc_fed_custom": 0.0,
     "depr_itc_fed_macrs_15": 0.0,
     "depr_itc_fed_macrs_5": 0.0,
@@ -165,6 +168,7 @@
     "depr_itc_fed_sl_20": 0.0,
     "depr_itc_fed_sl_39": 0.0,
     "depr_itc_fed_sl_5": 0.0,
+    "depr_itc_sta_capex": 0.0,
     "depr_itc_sta_custom": 0.0,
     "depr_itc_sta_macrs_15": 0.0,
     "depr_itc_sta_macrs_5": 0.0,
@@ -18419,6 +18423,10 @@
     "inflation_rate": 2.5,
     "insurance_rate": 0.5,
     "is_btm": 0.0,
+    "itc_basis_cost": 0.0,
+    "itc_basis_depreciation_allocation": 0.0,
+    "itc_basis_percent_depr": 0.0,
+    "itc_basis_percent_input": 0.0,
     "itc_fed_amount": [
         0.0
     ],
@@ -18432,6 +18440,7 @@
     "itc_fed_percent_maxvalue": [
         1e38
     ],
+    "itc_qualification_choice": 0.0,
     "itc_sta_amount": [
         0.0
     ],
@@ -19092,7 +19101,9 @@
     "months_receivables_reserve": 0.0,
     "months_working_reserve": 6.0,
     "nameplate_capacity": 100000.0,
-    "nominal_discount_rate": 9.060000000000004,
+    "nominal_discount_rate": 9.060000000000003,
+    "non_itc_basis_depreciation_allocation": 0.0,
+    "non_itc_basis_percent_depr": 100.0,
     "om_capacity": [
         25.0
     ],
@@ -19176,7 +19187,11 @@
     "show_CapitalCostSO": 1.0,
     "show_DebtConstDSCR": 1.0,
     "show_ReserveAccounts": 1.0,
+    "show_cash_incentives": 1.0,
     "show_construction_period": 1.0,
+    "show_depr_alloc": 1.0,
+    "show_itc_qualification": 1.0,
+    "show_tax_credits": 1.0,
     "solution_mode_message": "",
     "spec_mode": 0.0,
     "start_day_of_year": 3.335046e-317,
@@ -19186,6 +19201,8 @@
     ],
     "system_capacity": 100000.0,
     "system_capacity_combined": 0.0,
+    "system_itc_basis_cost": 109200000.0,
+    "system_itc_basis_percent": 100.0,
     "system_use_lifetime_output": 0.0,
     "term_int_rate": 7.0,
     "term_tenor": 18.0,
