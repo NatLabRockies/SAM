@@ -1828,7 +1828,7 @@ bool ShadeScripting::CloseDoc()
 	if (m_script->GetModify())
 	{
 		Raise();
-		wxString id = m_fileName.IsEmpty() ? "untitled" : m_fileName;
+		wxString id = m_fileName.IsEmpty() ? wxString("untitled") : m_fileName;
 		int result = wxMessageBox("Script modified. Save it?\n\n" + id, "Query", wxYES_NO|wxCANCEL);
 		if ( result == wxCANCEL 
 			|| (result == wxYES && !Save()) )

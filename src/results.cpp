@@ -2101,7 +2101,7 @@ void MetricsTable::OnContextMenu(wxCommandEvent& evt)
     wxString tdat;
     for (int r = 0; r < (int)m_table.nrows(); r++)
         for (int c = 0; c < (int)m_table.ncols(); c++)
-            tdat += m_table.at(r, c) + (c == (int)m_table.ncols() - 1 ? "\n" : sep);
+            tdat += m_table.at(r, c) + (c == (int)m_table.ncols() - 1 ? wxString("\n") : sep);
 
     if (wxTheClipboard->Open())
     {
