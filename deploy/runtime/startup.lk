@@ -1340,7 +1340,7 @@ setup_commercial_pages( LOAD_SIMPLE ); //does not include building load calculat
 
 //-----------------------------------------------------
 setconfig( 'Wind Power', 'Leveraged Partnership Flip' );
-setmodules( ['windpower', 'grid', 'wind_landbosse', 'utilityrate5', 'levpartflip']);
+setmodules( ['windpower', 'grid', 'utilityrate5', 'levpartflip']);
 setup_windpower_pages();
 setup_lifetime_page(DEGRADATION_AC_SINGLE_YEAR);
 addpage( [['Wind Farm Costs']],
@@ -1351,7 +1351,7 @@ setup_electricity_purchases();
 
 //-----------------------------------------------------
 setconfig( 'Wind Power', 'All Equity Partnership Flip' );
-setmodules( ['windpower', 'grid', 'wind_landbosse', 'utilityrate5', 'equpartflip']);
+setmodules( ['windpower', 'grid', 'utilityrate5', 'equpartflip']);
 setup_windpower_pages();
 setup_lifetime_page(DEGRADATION_AC_SINGLE_YEAR);
 addpage( [['Wind Farm Costs']],
@@ -1362,7 +1362,7 @@ setup_electricity_purchases();
 
 //-----------------------------------------------------
 setconfig( 'Wind Power', 'Sale Leaseback' );
-setmodules( ['windpower', 'grid', 'wind_landbosse', 'utilityrate5', 'saleleaseback']);
+setmodules( ['windpower', 'grid', 'utilityrate5', 'saleleaseback']);
 setup_windpower_pages();
 setup_lifetime_page(DEGRADATION_AC_SINGLE_YEAR);
 addpage( [['Wind Farm Costs']],
@@ -1373,7 +1373,7 @@ setup_electricity_purchases();
 
 //-----------------------------------------------------
 setconfig( 'Wind Power', 'Single Owner' );
-setmodules( ['windpower', 'grid', 'wind_landbosse', 'utilityrate5', 'singleowner']);
+setmodules( ['windpower', 'grid', 'utilityrate5', 'singleowner']);
 setup_windpower_pages();
 setup_lifetime_page(DEGRADATION_AC_SINGLE_YEAR);
 addpage( [['Wind Farm Costs']],
@@ -1383,7 +1383,7 @@ setup_single_owner_pages();
 setup_electricity_purchases();
 
 setconfig( 'Wind Power', 'Merchant Plant' );
-setmodules( ['windpower', 'grid', 'wind_landbosse', 'utilityrate5', 'merchantplant']);
+setmodules( ['windpower', 'grid', 'utilityrate5', 'merchantplant']);
 setup_windpower_pages();
 setup_lifetime_page(DEGRADATION_AC_SINGLE_YEAR);
 addpage( [['Wind Farm Costs']],

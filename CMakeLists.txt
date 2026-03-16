@@ -84,7 +84,6 @@ set(SAM_SRC src/private.h
 	src/shadingfactors.cpp src/shadingfactors.h
 	src/materials.cpp      src/materials.h
 	src/codegenerator.cpp  src/codegenerator.h
-	src/pythonhandler.cpp src/pythonhandler.h
 	src/combinecases.cpp src/combinecases.h
     src/ptesdesignptdialog.cpp src/ptesdesignptdialog.h
     src/geotools.cpp       src/geotools.h)
