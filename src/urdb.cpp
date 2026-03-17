@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -291,8 +291,8 @@ bool OpenEI::QueryUtilityCompaniesbyZipcode(const wxString &zipcode, wxArrayStri
 	 
 	// NREL Developer API to list utility companies by lat/lon https://developer.nrel.gov/docs/electricity/utility-rates-v3/
 	wxString url = SamApp::WebApi("urdb_companies_by_lat_lon");
-	url.Replace("<LAT>", wxString::Format("%f",lat));
-	url.Replace("<LON>", wxString::Format("%f",lon));
+	url.Replace("<LAT>", wxString::Format("%g",lat));
+	url.Replace("<LON>", wxString::Format("%g",lon));
 
 	wxString json_data = MyGet(url);
 	if (json_data.IsEmpty())

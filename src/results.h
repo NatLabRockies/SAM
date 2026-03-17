@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -191,6 +191,8 @@ public:
 	TabularBrowser *GetTabularBrowser() { return m_tables; }
 	wxString GetCurrentContext() const;
 	
+	void Export(int data, int mechanism);
+
 private:	
 	Simulation *m_sim = nullptr;
 
@@ -227,7 +229,6 @@ private:
 
 	void AddDataSet( wxDVTimeSeriesDataSet *ds, const wxString &group = wxEmptyString, bool update_ui = true );
 	void RemoveAllDataSets();
-	void Export(int data, int mechanism);
 	void GetExportData(int data, matrix_t<wxString> &table);
 	void ExportEqnExcel();
 

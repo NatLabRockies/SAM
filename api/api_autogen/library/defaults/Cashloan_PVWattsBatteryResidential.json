@@ -19,13 +19,13 @@
 			"system_capacity": 8
 		},
 		"SystemCosts": {
-			"om_capacity": [65.040000],
+			"om_capacity": [30.000000],
 			"om_capacity_escal": 0,
 			"om_fixed": [0.000000],
 			"om_fixed_escal": 0,
 			"om_production": [0.000000],
 			"om_production_escal": 0,
-			"total_installed_cost": 40725.5
+			"total_installed_cost": 666254
 		},
 		"LandLease": {
 		},
@@ -144,7 +144,13 @@
 			"pbi_uti_term": 0
 		},
 		"BatterySystem": {
-			"battery_per_kWh": 434
+			"batt_computed_bank_capacity": 12.4564,
+			"batt_replacement_option": 1,
+			"batt_replacement_schedule_percent": [0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000],
+			"battery_per_kWh": 434,
+			"en_batt": 1,
+			"en_standalone_batt": 0,
+			"en_wave_batt": 0
 		},
 		"FuelCell": {
 		},
@@ -168,15 +174,15 @@
 		},
 		"SystemOutput": {
 			"annual_energy_value": [0],
-			"degradation": [0.500000],
+			"degradation": [0.000000],
 			"gen": [0]
 		},
 		"Lifetime": {
-			"system_use_lifetime_output": 0
+			"system_use_lifetime_output": 1
 		},
 		"LCOS": {
 			"batt_salvage_percentage": 0,
-			"battery_total_cost_lcos": 10169.5
+			"battery_total_cost_lcos": 55134.3
 		},
 		"ElectricityRates": {
 			"rate_escalation": [0.000000]

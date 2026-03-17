@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -981,7 +981,7 @@ public:
 
 	virtual wxString GetColLabelValue( int  )
 	{
-		return label.IsEmpty()?"Value":label;
+		return label.IsEmpty()?wxString("Value"):label;
 	}
 
 	virtual wxString GetTypeName( int , int  )
@@ -1129,7 +1129,7 @@ public:
 
 	virtual wxString GetColLabelValue(int)
 	{
-		return label.IsEmpty() ? "Value" : label;
+		return label.IsEmpty() ? wxString("Value") : label;
 	}
 
 	virtual wxString GetTypeName(int, int)
@@ -2108,7 +2108,7 @@ public:
 
 	virtual wxString GetColLabelValue(int)
 	{
-		return label.IsEmpty() ? "Value" : label;
+		return label.IsEmpty() ? wxString("Value") : label;
 	}
 
 	virtual wxString GetTypeName(int, int)

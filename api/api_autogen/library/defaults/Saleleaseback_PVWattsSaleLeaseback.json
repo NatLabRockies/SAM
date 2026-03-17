@@ -34,7 +34,8 @@
 			"ppa_escalation": 1,
 			"ppa_multiplier_model": 0,
 			"ppa_price_input": [0.040000],
-			"ppa_soln_mode": 1
+			"ppa_soln_mode": 1,
+			"start_day_of_year": 0
 		},
 		"FinancialParameters": {
 			"analysis_period": 25,
@@ -243,7 +244,7 @@
 			"salvage_percentage": 0,
 			"sponsor_operating_margin": 20,
 			"sponsor_operating_margin_escalation": 2,
-			"system_use_lifetime_output": 0,
+			"system_use_lifetime_output": 1,
 			"tax_investor_required_lease_reserve": 6,
 			"total_installed_cost": 1.12068e+08
 		},

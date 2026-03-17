@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -203,27 +203,30 @@ void LocationSetup::OnAddressChange( wxCommandEvent & )
 
 	wxYield();
 
-	double lat, lon, tz;
+	double lat = std::numeric_limits<double>::quiet_NaN();
+	double lon = std::numeric_limits<double>::quiet_NaN();
+	double tz = std::numeric_limits<double>::quiet_NaN();
+	
 	// use GeoTools::GeocodeGoogle for non-NREL builds and set google_api_key in private.h
-	// temporary fix for tz to address SAM issue 2092 until NREL Developer API for geocode is modified to return time zone
-	if (GeoTools::GeocodeDeveloper(m_address->GetValue(), &lat, &lon, &tz))
+	if (GeoTools::GeocodeDeveloper(m_address->GetValue(), &lat, &lon))
 	{
 		m_lat->SetValue(lat);
 		m_lon->SetValue(lon);
-		m_tz->SetValue(tz);
-	}
-	else if (GeoTools::GeocodeDeveloper(m_address->GetValue(), &lat, &lon))
-	{
-		m_lat->SetValue(lat);
-		m_lon->SetValue(lon);
-		wxMessageBox("Geocode error!\nTime zone API call failed. Please set time zone value manually.");
 	}
 	else
 	{
 		wxMessageBox("Geocode error!\nFailed to geocode address.");
 		return;
 	}
-
+	if (GeoTools::GetTimeZone(&lat, &lon, &tz))
+	{
+		m_tz->SetValue(tz);
+	}
+	else
+	{
+		wxMessageBox("Geocode error!\nTime zone API call failed. Please set time zone value manually.");
+		return;
+	}
 	DownloadMap();
 }
 
@@ -1825,7 +1828,7 @@ bool ShadeScripting::CloseDoc()
 	if (m_script->GetModify())
 	{
 		Raise();
-		wxString id = m_fileName.IsEmpty() ? "untitled" : m_fileName;
+		wxString id = m_fileName.IsEmpty() ? wxString("untitled") : m_fileName;
 		int result = wxMessageBox("Script modified. Save it?\n\n" + id, "Query", wxYES_NO|wxCANCEL);
 		if ( result == wxCANCEL 
 			|| (result == wxYES && !Save()) )

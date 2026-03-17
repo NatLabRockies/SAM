@@ -199,6 +199,9 @@
     "cp_capacity_payment_type": 0.0,
     "cp_system_nameplate": 100.0,
     "dc_ac_ratio": 1.3,
+    "dc_degradation": [
+        0.5
+    ],
     "debt_message": "",
     "debt_option": 1.0,
     "debt_percent": 60.0,
@@ -18493,7 +18496,7 @@
     "ibi_uti_percent_maxvalue": 1e38,
     "ibi_uti_percent_tax_fed": 1.0,
     "ibi_uti_percent_tax_sta": 1.0,
-    "in_location": "Type a location name, street address, or lat,lon in decimal degrees",
+    "in_location": "",
     "in_location_list": "|||",
     "in_location_options": 0.0,
     "in_nsrdb_options": 0.0,
@@ -19227,7 +19230,7 @@
     "modulearray_power_w": 100000000.0,
     "months_receivables_reserve": 0.0,
     "months_working_reserve": 6.0,
-    "nominal_discount_rate": 9.060000000000003,
+    "nominal_discount_rate": 9.060000000000004,
     "om_capacity": [
         19.0
     ],
@@ -19366,11 +19369,12 @@
         0.0
     ],
     "solar_data_file_name": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
-    "solar_data_file_name_load": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
     "solar_data_source": "NSRDB",
     "solar_resource": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy",
     "solar_resource_file": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
     "solution_mode_message": "",
+    "start_day_of_year": 3.335046e-317,
+    "start_day_of_year_tod_ui": 3.335046e-317,
     "state": "-",
     "state_tax_rate": [
         7.0
@@ -19379,7 +19383,7 @@
     "step": 3600.0,
     "subtotal_direct": 99000000.0,
     "system_capacity": 100000.0,
-    "system_use_lifetime_output": 0.0,
+    "system_use_lifetime_output": 1.0,
     "term_int_rate": 7.0,
     "term_tenor": 18.0,
     "tilt": 0.0,
@@ -19408,7 +19412,7 @@
     "ui_system_nameplate_standalone": 0.0,
     "ui_total_land_area_ha": 175.43871222814654,
     "ui_total_module_area": 526315.7894736842,
-    "ui_total_module_area_acres": 130.05534895540843,
+    "ui_total_module_area_acres": 130.05534895540846,
     "ui_total_module_area_ha": 52.63157894736842,
     "ui_use_acre_per_mw": 0.0,
     "ui_wacc": 6.709740000000002,

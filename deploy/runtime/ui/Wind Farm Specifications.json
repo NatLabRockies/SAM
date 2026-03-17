@@ -1786,7 +1786,7 @@
             "Units": "kW",
             "Group": "Wind Farm",
             "IndexLabels": "",
-            "Flags": 0.0,
+            "Flags": 2.0,
             "DefaultValue": 0.0,
             "UIObject": "Default",
             "sscVariableName": "",

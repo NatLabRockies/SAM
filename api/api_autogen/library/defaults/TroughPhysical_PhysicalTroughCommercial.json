@@ -509,6 +509,7 @@
 		"ElectricityRates": {
 		},
 		"TimeOfDeliveryFactors": {
+			"start_day_of_year": 0
 		},
 		"Revenue": {
 		},

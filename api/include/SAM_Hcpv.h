@@ -28,7 +28,7 @@ extern "C"
 
 
 	//
-	// SolarResourceData parameters
+	// SolarResourceInformation parameters
 	//
 
 	/**
@@ -37,7 +37,7 @@ extern "C"
 	 * constraints: LOCAL_FILE
 	 * required if: *
 	 */
-	SAM_EXPORT void SAM_Hcpv_SolarResourceData_file_name_sset(SAM_table ptr, const char* str, SAM_error *err);
+	SAM_EXPORT void SAM_Hcpv_SolarResourceInformation_file_name_sset(SAM_table ptr, const char* str, SAM_error *err);
 
 
 	//
@@ -474,10 +474,10 @@ extern "C"
 
 
 	/**
-	 * SolarResourceData Getters
+	 * SolarResourceInformation Getters
 	 */
 
-	SAM_EXPORT const char* SAM_Hcpv_SolarResourceData_file_name_sget(SAM_table ptr, SAM_error *err);
+	SAM_EXPORT const char* SAM_Hcpv_SolarResourceInformation_file_name_sget(SAM_table ptr, SAM_error *err);
 
 
 	/**

@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -2069,7 +2069,7 @@ void fcall_ssc_auto_exec(lk::invoke_t& cxt)
 //						if (auto vv = cxt.env()->lookup(name, true))
 //						if (auto vv = c->Values(0).Get(name)) // TODO: hybrids
 /*
-* Note for hybrids - the search starts with the firs case vartable and continues until the first "name" is found in the UI
+* Note for hybrids - the search starts with the first case vartable and continues until the first "name" is found in the UI
 */						auto cfg = c->GetConfiguration();
 						int ndxHybrid = 0;
 						if (cfg->Technology.size() > 1) { // select ndxHybrid based on compute module position in simulations collection
@@ -2878,6 +2878,8 @@ void fcall_wavetoolkit(lk::invoke_t& cxt)
         end_string = "wave_query_hawaii";
     else if (endpoint == "Alaska")
         end_string = "wave_query_alaska";
+    else if (endpoint == "Puerto Rico")
+        end_string = "wave_query_puertorico";
 
     for (size_t i = 0; i < years_final.Count(); i++)
     {
@@ -3133,7 +3135,7 @@ void fcall_windtoolkit(lk::invoke_t &cxt)
 		wxBusyInfo bid("Converting address to lat/lon.");
 
 		// use GeoTools::GeocodeGoogle for non-NREL builds and set google_api_key in private.h
-        if (!GeoTools::GeocodeDeveloper(spd.GetAddress(), &lat, &lon, NULL, false))
+        if (!GeoTools::GeocodeDeveloper(spd.GetAddress(), &lat, &lon, false))
 		{
 			wxMessageDialog* md = new wxMessageDialog(NULL, "Failed to convert address to lat/lon. This may be caused by a geocoding service outage or internet connection problem.", "WIND Toolkit Download Error", wxOK);
 			md->ShowModal();
@@ -3827,33 +3829,103 @@ static bool copy_mat(lk::invoke_t &cxt, wxString sched_name, matrix_t<double> &m
 
 void fcall_geocode(lk::invoke_t& cxt)
 {
-	LK_DOC("geocode",
+  	LK_DOC("geocode",
 		"Given a street address or location name, returns latitude, longitude. Returns optional time zone if get_tz is true. Not designed to take latitude and longitude as input. Uses the MapQuest Geocoding API via a private NREL wrapper. Returned table fields are 'lat', 'lon', 'tz', 'ok'.",
 		"(string:location, [boolean:get_tz]):table");
+
+	double lat, lon, tz;
+	lat = lon = tz = std::numeric_limits<double>::quiet_NaN();
+	bool ok, is_address;
+	ok = is_address = false;
+	wxString err = "";
+
+	cxt.result().empty_hash();
+
+	// if input string contains any non-numeric characters other than n/s/e/w, assume it is an address for geocoding
+	//lk_string str = cxt.arg(0).as_string();
+	lk_string address = cxt.arg(0).as_string();
+	//wxString address;
+
+	//address = wxString::FromUTF8(str);
+
+	if (address.IsEmpty()) { // string contains invalid UTF-8 characters
+		cxt.result().hash_item("lat").assign(lat);
+		cxt.result().hash_item("lon").assign(lon);
+		cxt.result().hash_item("tz").assign(tz);
+		cxt.result().hash_item("ok").assign(ok ? 1.0 : 0.0);
+		//err = wxString::Format("Location name \"%s\" contains invalid characters.", str);
+		err = wxString::Format("Location name \"%s\" contains invalid characters.", address);
+	}
+	else { // string is valid
+		address = address.Lower();
+		address.Replace("north", "n");
+		address.Replace("south", "s");
+		address.Replace("east", "e");
+		address.Replace("west", "w");
+
+		// determine whether address is lat/lon pair
+		wxUniChar c;
+		bool d, a;
+		for (wxString::const_iterator it = address.begin(); it != address.end(); ++it) {
+			c = *it;
+			d = wxIsdigit(c);
+			a = wxIsalpha(c);
+			if (!d && a) {
+				if (c != 'n' && c != 's' && c != 'e' && c != 'w') {
+					is_address = true;
+				}
+			}
+
+		}
+	}
 
 	bool get_tz = false;
 	if (cxt.arg_count() > 1) {
 		get_tz = cxt.arg(1).as_boolean();
 	}
 
-	double lat = std::numeric_limits<double>::quiet_NaN();
-	double lon = std::numeric_limits<double>::quiet_NaN();
-	double tz = std::numeric_limits<double>::quiet_NaN();
-	bool ok = false;
-	cxt.result().empty_hash();
-
 	// use GeoTools::GeocodeGoogle for non-NREL builds and set google_api_key in private.h
- 	if (get_tz) {
-		ok = GeoTools::GeocodeDeveloper(cxt.arg(0).as_string(), &lat, &lon, &tz);
+	if (is_address) {
+		ok = GeoTools::GeocodeDeveloper(cxt.arg(0).as_string(), &lat, &lon);
+		if (!ok) {
+			err = wxString::Format("Call to geocoding API failed for address: %s", address);
+		}
+	}
+	else if (!address.IsEmpty()) { // if address is empty assume input string is lat/lon pair and try to parse
+		wxString coordinates = cxt.arg(0).as_string();
+		wxString lat_str, lon_str;
+		ok = GeoTools::coordinates_to_lat_lon(coordinates, lat_str, lon_str);
+		if (ok) {
+			// degree, minute, seconds
+			double lat_d, lat_m, lat_s;
+			lat_d = lat_m = lat_s = std::numeric_limits<double>::quiet_NaN();
+			double lon_d, lon_m, lon_s; 
+			lon_d = lon_m = lon_s = std::numeric_limits<double>::quiet_NaN();
+			ok = GeoTools::coordinate_to_dms(lat_str, &lat_d, &lat_m, &lat_s) && GeoTools::coordinate_to_dms(lon_str, &lon_d, &lon_m, &lon_s);
+			if (ok) {
+				ok = GeoTools::dms_to_dd(lat_d, lat_m, lat_s, &lat) && GeoTools::dms_to_dd(lon_d, lon_m, lon_s, &lon);
+				if (!ok) {
+					err = wxString::Format("Failed to parse latitude/longitude pair %s.", coordinates);
+				}
+			}
+		}
+	}
+
+	if (get_tz) {
+		ok = GeoTools::GetTimeZone(&lat, &lon, &tz);
+		if (!ok) {
+			err = wxString::Format("Timezone not found for: (%g, %g)", lat, lon);
+		}
 		cxt.result().hash_item("tz").assign(tz);
 	}
-	else {
-		ok = GeoTools::GeocodeDeveloper(cxt.arg(0).as_string(), &lat, &lon);
-	}
+
 	
 	cxt.result().hash_item("lat").assign(lat);
 	cxt.result().hash_item("lon").assign(lon);
 	cxt.result().hash_item("ok").assign(ok ? 1.0 : 0.0);
+
+	if (err != "")
+		wxMessageBox(wxString::Format("Geocode error.\n%s", err));
 }
 
 
@@ -4057,7 +4129,7 @@ void fcall_editscene3d(lk::invoke_t &cxt)
 	if (!vv)
 	{
 		cxt.result().hash_item("ierr").assign(1.0);
-		cxt.result().hash_item("message").assign(wxString("no variable with that name"));
+		cxt.result().hash_item("message").assign(wxString::Format("no variable with that name: %s", name));
 		return;
 	}
 
@@ -4080,10 +4152,10 @@ void fcall_editscene3d(lk::invoke_t &cxt)
 		wxString addr = cxt.arg(4).as_string();
 		st->GetLocationSetup()->SetLocation(addr, lat, lon, tz);
 
-		wxMessageBox("The 3D scene requires detailed information about your location to calculate shading losses.\n\n"
-			"By default, information about the location you selected in the weather file has been transferred.\n\n"
-			"If you update your weather file in the future, please manually ensure that the address, "
-			"latitude, longitude, and time zone in the 3D scene editor (Location tab) are updated as necessary.", "Notice",
+		wxMessageBox("3D Shade Calculator\n\nThe 3D shade calculator uses the latitude, longitude, and time zone\n"
+			"data from the weather file on the Location and Resource page. If you change\n"
+			"the weather file after generating shading data, be sure to update the\n" 
+			"information on the 3D shade calculator Location tab as needed.", "Notice",
 			wxICON_INFORMATION | wxOK, SamApp::Window());
 	}
 
@@ -4103,7 +4175,7 @@ void fcall_editscene3d(lk::invoke_t &cxt)
 		|| lon != cxt.arg(2).as_number()
 		|| tz != cxt.arg(3).as_number())
 	{
-		if (wxYES == wxMessageBox("The location information in the shading tool does not match the currently selected weather file.\n\nDo you want to update your location settings in the shading tool to match?", "Query", wxYES_NO))
+		if (wxYES == wxMessageBox("The location information in the 3D shade calculator does not match the currently selected weather file.\n\nDo you want to update the location information in the 3D shade calculator to match the weather file?", "Query", wxYES_NO))
 		{
 			lat = cxt.arg(1).as_number();
 			lon = cxt.arg(2).as_number();
@@ -4391,20 +4463,20 @@ void fcall_rescanlibrary( lk::invoke_t &cxt )
 	else if (type == "wave")
 	{
 		wxString wave_resource_db = SamApp::GetUserLocalDataDir() + "/WaveResourceData.csv";
-		ScanWaveResourceData(wave_resource_db, true);
+		ScanWaveResourceData(wave_resource_db, false);
 		reloaded = Library::Load(wave_resource_db);
 	}
     else if (type == "wave_ts")
     {
         wxString wave_resource_ts_db = SamApp::GetUserLocalDataDir() + "/WaveResourceTSData.csv";
         wxString wave_resource_db = SamApp::GetRuntimePath() + "../wave_resource/test_time_series_jpd.csv";
-        ScanWaveResourceTSData(wave_resource_ts_db, true);
+        ScanWaveResourceTSData(wave_resource_ts_db, false);
         reloaded = Library::Load(wave_resource_ts_db);
     }
     else if (type == "tidal")
     {
-        wxString tidal_resource_db = SamApp::GetUserLocalDataDir() + "/TidalResourceData.csv";
-        ScanTidalResourceData(tidal_resource_db, true);
+        wxString tidal_resource_db = SamApp::GetUserLocalDataDir() + "/TidalResourceTSData.csv";
+        ScanTidalResourceTSData(tidal_resource_db, false);
         reloaded = Library::Load(tidal_resource_db);
     }
 
@@ -4427,7 +4499,7 @@ void fcall_makejpdfile(lk::invoke_t& cxt)
     UICallbackContext& cc = *(UICallbackContext*)cxt.user_data();
     Library* reloaded = 0;
     wxString file(cxt.arg(0).as_string().Lower());
-    WaveResourceTSData_makeJPD(file, true);
+    WaveResourceTSData_makeJPD(file, 0, true);
     wxString wave_resource_db = SamApp::GetUserLocalDataDir() + "/WaveResourceData.csv";
     ScanWaveResourceData(wave_resource_db, true);
     reloaded = Library::Load(wave_resource_db);
@@ -4461,60 +4533,46 @@ void fcall_make_jpd_multiyear(lk::invoke_t& cxt)
     ssc_number_t* period_arr;
     ssc_number_t* height_bin;
     ssc_number_t* period_bin;
+    ssc_number_t* resource_matrix;
+    ssc_number_t* resource_matrix_total;
+    util::matrix_t<double> resource_matrix_jpd;
+    int matrix_rows = 0;
+    int matrix_cols = 0;
     ssc_number_t* year_arr;
     ssc_number_t* month_arr;
     ssc_number_t* day_arr;
     ssc_number_t* hour_arr;
     ssc_number_t* min_arr;
     const char* str;
-    wxCSVData csv;
-    csv(0, 0) = "Source";
-    csv(0, 1) = "Location ID";
-    csv(0, 2) = "Jurisdiction";
-    csv(1, 2) = "Federal";
-    csv(0, 3) = "Latitude";
-    csv(0, 4) = "Longitude";
-    csv(0, 5) = "Time Zone";
-    csv(1, 5) = "0";
-    csv(0, 6) = "Local Time Zone";
-    csv(0, 7) = "Distance to Shore";
-    csv(0, 8) = "Directionality Coefficient";
-    csv(1, 8) = "-";
-    csv(0, 9) = "Energy Period";
-    csv(1, 9) = "s";
-    csv(0, 10) = "Maximum Energy Direction";
-    csv(1, 10) = "deg";
-    csv(0, 11) = "Mean Absolute Period";
-    csv(1, 11) = "s";
-    csv(0, 12) = "Mean Wave Direction";
-    csv(1, 12) = "deg";
-    csv(0, 13) = "Mean Zero - Crossing Period";
-    csv(1, 13) = "s";
-    csv(0, 14) = "Omni - Directional Wave Power";
-    csv(1, 14) = "W/m";
-    csv(0, 15) = "Peak Period";
-    csv(1, 15) = "s";
-    csv(0, 16) = "Significant Wave Height";
-    csv(1, 16) = "m";
-    csv(0, 17) = "Spectral Width";
-    csv(1, 17) = "-";
-    csv(0, 18) = "Water Depth";
-    csv(0, 19) = "Version";
-    csv(1, 19) = "v1.0.0";
-
-    csv(2, 0) = "Year";
-    csv(2, 1) = "Month";
-    csv(2, 2) = "Day";
-    csv(2, 3) = "Hour";
-    csv(2, 4) = "Minute";
-    csv(2, 5) = "Significant Wave Height";
-    csv(2, 6) = "Energy Period";
 
 
     ssc_number_t val;
     ssc_number_t first_year = 0;
     int nrows;
     int file_count = 0;
+
+    wxCSVData csv;
+    csv(0, 0) = "Name";
+    csv(0, 1) = "City";
+    csv(0, 2) = "State";
+    csv(0, 3) = "Country";
+    csv(0, 4) = "Latitude";
+    csv(0, 5) = "Longitude";
+    csv(0, 6) = "Nearby buoy number";
+    csv(0, 7) = "Average power flux";
+    csv(0, 8) = "Bathymetry";
+    csv(0, 9) = "Sea bed";
+    csv(0, 10) = "Time zone";
+    csv(1, 10) = "tz";
+    csv(0, 11) = "Data source";
+    csv(0, 12) = "Notes";
+
+    ssc_number_t year_min = 9999;
+    ssc_number_t year_max = 9999;
+
+    double num = 0;
+
+
     while (has_more) {
         // process file
         wxString wf = folder + "/" + file;
@@ -4525,55 +4583,71 @@ void fcall_make_jpd_multiyear(lk::invoke_t& cxt)
 
         if (const char* err = ssc_module_exec_simple_nothread("wave_file_reader", pdata))
         {
-            //wxLogStatus("error scanning '" + wf + "'");
+            wxLogStatus("error scanning '" + wf + "'");
             //cxt.error(err);
             cxt.result().assign(err);
-            return;
+            continue;
         }
         else
         {
             if (file_count == 0) {
                 if (ssc_data_get_number(pdata, "location_id", &val))
-                    csv(1, 1) = wxString::Format("%g", val);
+                    csv(1, 0) = wxString::Format("%g", val);
 
-                if (ssc_data_get_number(pdata, "distance_to_shore_file", &val))
-                    csv(1, 7) = wxString::Format("%g", val);
+                
 
-                if (ssc_data_get_number(pdata, "water_depth_file", &val))
-                    csv(1, 18) = wxString::Format("%g", val);
+                
 
                 if (ssc_data_get_number(pdata, "lat", &val)) {
-                    csv(1, 3) = wxString::Format("%g", val);
+                    csv(1, 4) = wxString::Format("%g", val);
+                    //csv(1, 0) = "lat" + wxString::Format("%g", val);
                 }
 
                 if (ssc_data_get_number(pdata, "lon", &val)) {
-                    csv(1, 4) = wxString::Format("%g", val);
+                    csv(1, 5) = wxString::Format("%g", val);
+                    //csv(1, 0) += "_lon" + wxString::Format("%g", val);
                 }
+
+                if ((year_arr = ssc_data_get_array(pdata, "year", &nrows)) != 0)
+                {
+                    year_min = year_arr[0];
+                    year_max = year_arr[0];
+                }
+
+                
                 /*
                 if ((year_arr = ssc_data_get_array(pdata, "year", &nrows)) != 0)
                 {
                     first_year = year_arr[0];
                 }
-                */  
+                */
+
+                //Nearby Buoy
+                csv(1, 6) = "";
+                //Average power flux
+                csv(1, 7) = wxString::Format("%g", std::numeric_limits<double>::quiet_NaN());
+                //Bathymetry
+                csv(1, 8) = "";
+                //Sea Bed
+                csv(1, 9) = "";
 
                 if (ssc_data_get_number(pdata, "tz", &val))
-                    csv(1, 6) = wxString::Format("%g", val);
+                    csv(1, 10) = wxString::Format("%g", val);
                 
                 if ((str = ssc_data_get_string(pdata, "data_source")) != 0)
-                    csv(1, 0) = wxString(str);
+                    csv(1, 11) = wxString(str);
                 
-                if ((str = ssc_data_get_string(pdata, "notes")) != 0)
-                    csv(1, 19) = wxString(str);
+                
             }
             
             if ((year_arr = ssc_data_get_array(pdata, "year", &nrows)) != 0)
             {
                 for (int i = 0; i < nrows; i++) {
-                    csv(nrows * file_count + i + 3, 0) = wxString::Format("%g", year_arr[i]); //No year for typical wave year file
+                    if (year_arr[0] > year_max) year_max = year_arr[0];
                 }
             }
 
-            if ((month_arr = ssc_data_get_array(pdata, "month", &nrows)) != 0)
+            /*if ((month_arr = ssc_data_get_array(pdata, "month", &nrows)) != 0)
             {
                 for (int i = 0; i < nrows; i++) {
                     csv(nrows * file_count + i + 3, 1) = wxString::Format("%g", month_arr[i]);
@@ -4612,30 +4686,117 @@ void fcall_make_jpd_multiyear(lk::invoke_t& cxt)
                 for (int i = 0; i < nrows; i++) {
                     csv(nrows * file_count + i + 3, 6) = wxString::Format("%g", period_arr[i]);
                 }
+            }*/
+            if ((resource_matrix = ssc_data_get_matrix(pdata, "wave_resource_matrix", &matrix_rows, &matrix_cols)) != 0)
+            {
+                if (file_count == 0) {
+                    //resource_matrix_total = resource_matrix;
+                    resource_matrix_jpd.resize(matrix_rows, matrix_cols);
+                    for (int r = 0; r < matrix_rows; r++) {
+                        for (int c = 0; c < matrix_cols; c++) {
+                            resource_matrix_jpd.at(r, c) = resource_matrix[r * matrix_cols + c];
+                        }
+                    }
+                    
+                }
+                else {
+                    for (int r = 0; r < matrix_rows ; r++) {
+                        for (int c = 0; c < matrix_cols; c++) {
+                            if (c != 0 && r != 0) { //Do not sum headers
+                                //num = resource_matrix[i];
+                                resource_matrix_jpd.at(r, c) += resource_matrix[r * matrix_cols + c]; //Sum
+                                //num = resource_matrix_total[i];
+                            }
+                        }
+                    }
+                }
             }
         }
-        ssc_data_free(pdata);
+        //ssc_data_free(pdata);
 
         has_more = dir.GetNext(&file);
-        file_count++;
-    }
-    //csv(1, 0) += "_" + wxString::Format("%g", first_year + file_count - 1);
-    csv.WriteFile(final_file);
-    wxString err = WaveResourceTSData_makeJPD(final_file, true);
-    cxt.result().assign(err); //return name for library indexing
-    wxString wave_resource_db = SamApp::GetUserLocalDataDir() + "/WaveResourceData.csv";
-    ScanWaveResourceData(wave_resource_db, true);
-    //std::remove(final_file); //Remove multiyear time series file as it doesn't make sense to run in SAM
-    reloaded = Library::Load(wave_resource_db);
-    if (reloaded != 0)
-    {
-        if (&cc != NULL) {
-            std::vector<wxUIObject*> objs = cc.InputPage()->GetObjects();
-            for (size_t i = 0; i < objs.size(); i++)
-                if (LibraryCtrl* lc = objs[i]->GetNative<LibraryCtrl>())
-                    lc->ReloadLibrary();
+        if (has_more) {
+            ssc_data_free(pdata); //if there are more files, delete the var table and start over, if not keep going
+            file_count++;
         }
+        else {
+            file_count++; //Count the file that was just read before exiting
+            for (int r = 0; r < matrix_rows; r++)
+            {
+
+                for (int c = 0; c < matrix_cols; c++)
+                {
+                    if (r != 0 && c != 0) {
+                        resource_matrix_jpd.at(r, c) = resource_matrix_jpd.at(r, c) / file_count; //Normalize percentages
+                    }
+                    csv(2 + r, c) = wxString::Format("%g", resource_matrix_jpd.at(r, c));
+                    if (r == 0 && c == 0) csv(2 + r, c) = "Hs/Te";
+                }
+
+                
+            }
+            csv(1, 12) = wxString::Format("%g", year_min);
+            csv(1, 12) += "-" + wxString::Format("%g", year_max);
+
+            csv(1, 1) = "";
+            csv(1, 2) = "";
+            csv(1, 3) = "";
+            wxString final_file_string = wxFileNameFromPath(final_file);
+            csv(1, 0) = wxString(final_file_string).substr(0, wxString(final_file_string).Find(".csv"));
+
+
+            csv.WriteFile(final_file);
+            ssc_data_free(pdata);
+
+        }
+        
     }
+
+    //csv(1, 0) += "_" + wxString::Format("%g", year_min);
+    //csv(1, 0) += "_" + wxString::Format("%g", year_max);
+
+    //csv(1, 1) = "";
+    //csv(1, 2) = "";
+    //csv(1, 3) = "";
+
+    ////for (int i = 0; i < matrix_rows * matrix_cols; i++) {
+    ////    if (i > matrix_cols && fmod(i, matrix_cols) != 0) //Do not sum headers
+    ////        resource_matrix_total[i] = resource_matrix_total[i]/file_count; //Sum 
+    ////}
+
+    //for (int r = 0; r < matrix_rows; r++)
+    //{
+
+    //    for (int c = 0; c < matrix_cols; c++)
+    //    {
+    //        if (r != 0 && c != 0) {
+    //            resource_matrix_total[r * matrix_cols + c] = resource_matrix_total[r * matrix_cols + c] / file_count;
+    //        }
+    //        csv(2 + r, c) = wxString::Format("%g", (resource_matrix_total[r * matrix_cols + c]));
+    //        if (r == 0 && c == 0) csv(2 + r, c) = "Hs/Te";
+    //    }
+
+    //}
+    ////csv(1, 0) += "_" + wxString::Format("%g", first_year + file_count - 1);
+    //ssc_data_free(pdata)
+
+    //csv.WriteFile(final_file);
+    //wxString err = WaveResourceTSData_makeJPD(final_file, resource_matrix_total, true);
+    //cxt.result().assign(err); //return name for library indexing
+    //wxString wave_resource_db = SamApp::GetUserLocalDataDir() + "/WaveResourceData.csv";
+    //ScanWaveResourceData(wave_resource_db, true);
+    ////std::remove(final_file); //Remove multiyear time series file as it doesn't make sense to run in SAM
+    //reloaded = Library::Load(wave_resource_db);
+    //if (reloaded != 0)
+    //{
+    //    if (&cc != NULL) {
+    //        std::vector<wxUIObject*> objs = cc.InputPage()->GetObjects();
+    //        for (size_t i = 0; i < objs.size(); i++)
+    //            if (LibraryCtrl* lc = objs[i]->GetNative<LibraryCtrl>())
+    //                lc->ReloadLibrary();
+    //    }
+    //}
+    cxt.result().assign("");
     return;
 }
 

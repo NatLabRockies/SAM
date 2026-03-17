@@ -8883,7 +8883,7 @@
     "batt_cell_power_charge_max": 2.0,
     "batt_cell_power_discharge_max": 2.0,
     "batt_chem": 1.0,
-    "batt_computed_bank_capacity": 1200.5431199999999,
+    "batt_computed_bank_capacity": 1200.54312,
     "batt_computed_series": 126.0,
     "batt_computed_stacks_series": 1.0,
     "batt_computed_strings": 1064.0,
@@ -9863,9 +9863,9 @@
     "batt_minimum_outage_SOC": 10.0,
     "batt_num_cells": 134064.0,
     "batt_power_charge_max_kwac": 312.64143749999996,
-    "batt_power_charge_max_kwdc": 300.13577999999998,
+    "batt_power_charge_max_kwdc": 300.13578,
     "batt_power_discharge_max_kwac": 288.1303487999999,
-    "batt_power_discharge_max_kwdc": 300.13577999999998,
+    "batt_power_discharge_max_kwdc": 300.13578,
     "batt_pv_ac_forecast": [
         0.0
     ],
@@ -18705,7 +18705,7 @@
     "batt_ui_bank_voltage": 501.48,
     "batt_ui_cell_voltage": 3.98,
     "batt_ui_inverter_eff": 96.0,
-    "batt_ui_nominal_bank_power": 300.13577999999998,
+    "batt_ui_nominal_bank_power": 300.13578,
     "batt_unit_capacity": 400.0,
     "batt_unit_surface_area": 30.0,
     "batt_user_specified_weather_file_peak_shaving": "",
@@ -18717,9 +18717,9 @@
             0.0
         ]
     ],
-    "batt_volume": 2.3950984937655859,
-    "battery_energy": 1200.5431199999999,
-    "battery_energy_kwh": 1200.5431199999999,
+    "batt_volume": 2.395098493765586,
+    "battery_energy": 1200.54312,
+    "battery_energy_kwh": 1200.54312,
     "battery_losses_shown": 0.0,
     "battery_per_kW": 667.0,
     "battery_per_kWh": 184.0,
@@ -55582,7 +55582,7 @@
     "ibi_uti_percent_maxvalue": 1e38,
     "ibi_uti_percent_tax_fed": 1.0,
     "ibi_uti_percent_tax_sta": 1.0,
-    "in_location": "Type a location name, street address, or lat,lon in decimal degrees",
+    "in_location": "",
     "in_location_list": "|||",
     "in_location_options": 0.0,
     "in_nsrdb_options": 0.0,
@@ -55600,7 +55600,7 @@
     "install_margin_perarea": 0.0,
     "install_margin_perwatt": 0.25,
     "install_margin_total": 53750.0,
-    "installed_per_capacity": 13.540743351470141,
+    "installed_per_capacity": 13.54074335147014,
     "insurance_rate": 0.0,
     "inv_eff": 96.0,
     "inverter_costunits": 1.0,
@@ -55653,6 +55653,7 @@
     "landprep_percent": 0.0,
     "landprep_total": 0.0,
     "lat": 33.45,
+    "lbl_btm_dispatch_message": "",
     "library_folder_list": "x",
     "library_paths": "",
     "load": [
@@ -73228,7 +73229,7 @@
         156.2,
         184.05
     ],
-    "nominal_discount_rate": 9.060000000000003,
+    "nominal_discount_rate": 9.060000000000004,
     "normalize_to_thermal_bill": 0.0,
     "normalize_to_utility_bill": 0.0,
     "om_batt_capacity_cost": [
@@ -73237,7 +73238,7 @@
     "om_batt_fixed_cost": [
         0.0
     ],
-    "om_batt_nameplate": 1200.5431199999999,
+    "om_batt_nameplate": 1200.54312,
     "om_batt_replacement_cost": [
         184.0
     ],
@@ -73425,10 +73426,11 @@
         0.0
     ],
     "solar_data_file_name": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
-    "solar_data_file_name_load": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
     "solar_data_source": "NSRDB",
     "solar_resource": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy",
     "solar_resource_file": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
+    "start_day_of_year": 3.335046e-317,
+    "start_day_of_year_load_ui": 0.0,
     "state": "-",
     "state_tax_rate": [
         7.0
@@ -73442,7 +73444,7 @@
     "thermal_10": 664864.1129999992,
     "thermal_11": 566944.4700000023,
     "thermal_12": 466793.0800000013,
-    "thermal_2": 485226.54000000117,
+    "thermal_2": 485226.5400000012,
     "thermal_3": 580314.9830000013,
     "thermal_4": 601906.9489999994,
     "thermal_5": 688796.4460000006,
@@ -126094,7 +126096,7 @@
     "ui_total_land_area_ha": 0.3771932312905151,
     "ui_total_module_area": 1131.578947368421,
     "ui_total_module_area_acres": 0.2796190002541281,
-    "ui_total_module_area_ha": 0.11315789473684211,
+    "ui_total_module_area_ha": 0.11315789473684213,
     "ui_use_acre_per_mw": 0.0,
     "ui_wacc": 5.1429,
     "ur_annual_min_charge": 0.0,
