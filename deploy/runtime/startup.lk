@@ -3517,7 +3517,7 @@ sethybridvariabledependencies([
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'sales_tax_rate', 'DependentVartableIndex' = 2,'DependentVariableName' = 'sales_tax_rate'},
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'system_capacity', 'DependentVartableIndex' = 2,'DependentVariableName' = 'hybrid_system_capacity'} // pv smoothing dispatch
 ]);
-addpage( [[ 'Solar Resource Data' ]], { 'sidebar'='Hybrid Location and Resource', 'help'='pvwatts_location_and_resource', 'top_page'=true} );
+addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='Location and Resource', 'help'='pvwatts_location_and_resource', 'top_page'=true} );
 addpage([['Hybrid System']], {'sidebar'='Hybrid System', 'help'='hybrid_system', 'top_page'=true});
 // pvwatts
 addpage( [[ 'PVWatts', {'name'='PV Land Area', 'caption' = 'Land Area', 'collapsible'=true, 'collapsible_var'='pv_land_area_is_shown'}, {'name'='PVWatts Advanced Inputs', 'caption' = 'Advanced Inputs', 'collapsible'=true, 'collapsible_var'='pvwatts.advanced.is_shown'} ]], { 'sidebar'='PV System Design', 'help'='pvwatts_system_design', 'bin_name'='PVWatts' } );

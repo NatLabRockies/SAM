@@ -2465,6 +2465,7 @@
         "\t}\r",
         "\telseif (technology() == 'PVWatts CSPTowerMoltenSalt Battery Hybrid') {\r",
         "\t\treturn ${hybrid_system_capacity};\r",
+        "\t}\r",
         "\telseif (t == 'PVWatts Battery') {\r",
         "\t\treturn ${ac_nameplate};\r",
         "\t}\r",
