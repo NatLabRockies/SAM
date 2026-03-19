@@ -312,7 +312,7 @@ else()
     endif()
 endif()
 
-#target_link_libraries(${SAM_EXE} ${wxWidgets_LIBRARIES})
+target_link_libraries(${SAM_EXE} ${wxWidgets_LIBRARIES})
 
 
 if (UNIX)
