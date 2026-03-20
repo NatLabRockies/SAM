@@ -194,10 +194,6 @@ void export_files(const std::string& config, std::set<std::string>& processed_cm
     for (auto & primary_cmod : primary_cmods){
         processed_cmods.insert(util::lower_case(primary_cmod));
 
-        // Reviewer - can we delete this?
-        //if (primary_cmod == "wind_landbosse")
-        //    continue;
-
         std::cout << "Exporting for " << config << ": " << primary_cmod << "... ";
         // get all the expressions
         builder_generator b_gen(&ce);
