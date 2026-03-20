@@ -275,10 +275,7 @@
         "env_exposure_loss": 0.0,
         "env_icing_loss": 0.21,
         "env_loss_total": 2.398195120000002,
-        "est_bos_cost": 0.0,
-        "est_turbine_cost": 0.0,
         "inflation_rate": 2.5,
-        "install_type": 0.0,
         "om_capacity": [
             40.0
         ],
@@ -298,7 +295,6 @@
         "ops_strategies_loss": 0.0,
         "reference_capacity": 200000.0,
         "reference_number_turbines": 80.0,
-        "reference_resource_file": "AZ Eastern-Rolling Hills.srw",
         "reference_sales_tax_percent": 5.0,
         "resource_definition_type": 0.0,
         "rows": 1.0,

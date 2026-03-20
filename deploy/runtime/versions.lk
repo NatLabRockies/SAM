@@ -198,6 +198,10 @@ version_upgrade{'2026.2.19'} = define() {
 		value('batt_dispatch_discharge_only_load_exceeds_system', false);
 		
 	}
+	
+	if (cfg.tech == 'Wind Power' || strpos(cfg.tech, "Hybrid") > -1) {
+		message('Wind balance of system cost estimators have been removed. Total capital costs remain the same in this version. Please uses SAM 2025.4.16 or older if you need access to the balance of system cost estimators within SAM.', 'warning');
+	}
 };
 
 version_upgrade{'2024.12.12'} = define() {
