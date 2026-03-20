@@ -145,8 +145,41 @@ if (UNIX)
 	    find_package(wxWidgets QUIET  REQUIRED xrc stc richtext ribbon propgrid aui gl html qa adv core xml net base )
     endif()
 else()
+#    set(wxWidgets_ROOT_DIR $ENV{WXMSW3})
+#    find_package(wxWidgets QUIET REQUIRED xrc stc richtext ribbon propgrid aui gl html qa adv core xml net base scintilla)
+    set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "Debug and Release Builds Configured" FORCE)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /std:c++20")
+    # for linking to Release build of ortools 
+    set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreadedDLL")
+    # Get the current debug flags and remove the /D_DEBUG option.
+    string(REPLACE "/D_DEBUG" "" CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}")
+    # following does not force release libraries for wxWidgets using find_package
+    #set(CMAKE_MAP_IMPORTED_CONFIG_DEBUG RELEASE)
+
     set(wxWidgets_ROOT_DIR $ENV{WXMSW3})
-    find_package(wxWidgets QUIET REQUIRED xrc stc richtext ribbon propgrid aui gl html qa adv core xml net base scintilla)
+    find_package(wxWidgets QUIET  REQUIRED xrc webview stc richtext ribbon propgrid aui gl html qa adv core xml net base scintilla)
+
+    # message("All wxWidgets: " ${wxWidgets_LIBRARIES})
+    set(FOUND "false")
+    foreach(lib ${wxWidgets_LIBRARIES})
+        string(FIND ${lib} "optimized" INDEX)
+        string(FIND ${lib} "debug" INDEX2)
+        string(FIND ${lib} "wxWidgets" INDEX3)
+        if (INDEX GREATER_EQUAL 0) # skip once
+            set(FOUND "true")
+            continue()
+        elseif((INDEX2 LESS 0) AND (INDEX3 LESS 0))
+            set(FOUND "true")
+        endif()
+        if (${FOUND} STREQUAL "true")
+            set(FOUND "false")
+            message("lib: ${lib}")
+            list(APPEND WX_LIBS_LIST ${lib})
+        endif()
+    endforeach()
+
+    list(JOIN WX_LIBS_LIST ";" wxWidgets_LIBRARIES)
+    # message("Link Libraries for wxWidgets: ${wxWidgets_LIBRARIES}")
 endif()
 
 if (wxWidgets_FOUND)
