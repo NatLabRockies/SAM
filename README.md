@@ -1,7 +1,7 @@
 # System Advisor Model (SAM)
 ![Build](https://github.com/NREL/SAM/actions/workflows/ci.yml/badge.svg)
 
-The SAM Open Source Project repository contains the source code, tools, and instructions to build a desktop version of the National Renewable Energy Laboratory's System Advisor Model™ (SAM™). SAM is a simulation program for electricity generation projects. It has models for different kinds of renewable energy systems and financial models for residential, commercial, and utility-scale projects. For more details about SAM's capabilities, see the SAM website at [https://sam.nrel.gov/](https://sam.nrel.gov/).
+The SAM Open Source Project repository contains the source code, tools, and instructions to build a desktop version of the National Laboratory of the Rockies' System Advisor Model™ (SAM™). SAM is a simulation program for electricity generation projects. It has models for different kinds of renewable energy systems and financial models for residential, commercial, and utility-scale projects. For more details about SAM's capabilities, see the SAM website at [https://sam.nrel.gov/](https://sam.nrel.gov/).
 
 For a short video describing the SAM repositories, see https://youtu.be/E5z1iiZfZ3M.
 
@@ -18,6 +18,8 @@ The desktop version of SAM for Windows, Mac, or Linux builds from the following 
 * [WEX](https://github.com/nrel/wex) is a set of extensions to wxWidgets for custom user-interface elements developed specifically for SAM, LK script, and DView.
 
 * [Google Test](https://github.com/google/googletest) is a C++ test framework that enables comprehensive unit-testing of software.  Contributions to the project will eventually be required to have associated unit tests written in this framework.
+
+* [Google OR-Tools](https://github.com/google/or-tools) is a software suite for optimization, including vehicle routing, flows, integer and linear programming, and contraint programming. 
 
 * [jsoncpp](https://github.com/open-source-parsers/jsoncpp) is a C++ library that allows manipulating JSON values, including serialization and deserialization to and from strings.
 
@@ -42,10 +44,10 @@ If you would like to report an issue with SAM or make a feature request, please 
 If you would like to submit code to fix an issue or add a feature, you can use GitHub to do so. Please see [Contributing](CONTRIBUTING.md) for instructions.
 
 # License
-SAM's open source code is copyrighted by the Alliance for Sustainable Energy and licensed with BSD-3-Clause terms, found [here](https://github.com/NREL/SAM/blob/develop/LICENSE).
+SAM's open source code is copyrighted by the Alliance for Energy Innovation and licensed with BSD-3-Clause terms, found [here](https://github.com/NREL/SAM/blob/develop/LICENSE).
 
 The stepwise and LHS [LGPL](https://www.gnu.org/licenses/lgpl-3.0.en.html) licensed libraries from Sandia National Laboratories are pre-compiled Fortran libraries that are included in the SAM repository as binaries in the [Sandia folder](https://github.com/NREL/SAM/tree/develop/Sandia). You can replace the binaries with different versions by compiling your own version and replacing the binary/executable viles in the Sandia folder.
 
 # Citing this package
 
-System Advisor Model Version 2025.4.16 (2025). SAM source code. National Renewable Energy Laboratory. Golden, CO. Accessed April 18, 2025. https://github.com/NREL/SAM
+System Advisor Model Version 2025.4.16 (2025). SAM source code. National Laboratory of the Rockies. Golden, CO. Accessed December 5, 2025. https://github.com/NREL/SAM

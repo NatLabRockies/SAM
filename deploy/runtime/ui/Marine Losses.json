@@ -1,7 +1,7 @@
 {
     "Name": "Marine Losses",
     "Width": 595.0,
-    "Height": 817.0,
+    "Height": 823.0,
     "FormObjects": {
         "GroupBox": {
             "Visible": 1.0,
@@ -16,7 +16,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 681.0
+                    "Integer": 684.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -164,7 +164,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 546.0
+                    "Integer": 549.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -201,7 +201,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 417.0
+                    "Integer": 414.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -238,7 +238,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 636.0
+                    "Integer": 639.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -404,7 +404,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 504.0
+                    "Integer": 501.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -570,7 +570,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 762.0
+                    "Integer": 765.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -736,7 +736,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 702.0
+                    "Integer": 705.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -798,7 +798,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 444.0
+                    "Integer": 441.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1046,7 +1046,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 573.0
+                    "Integer": 576.0
                 },
                 "Width": {
                     "Type": 3.0,

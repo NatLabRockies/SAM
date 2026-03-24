@@ -1,7 +1,7 @@
 {
     "Name": "Marine Wave Resource Header",
-    "Width": 1018.0,
-    "Height": 144.0,
+    "Width": 1118.0,
+    "Height": 148.0,
     "FormObjects": {
         "GroupBox": {
             "Visible": 1.0,
@@ -20,7 +20,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 1000.0
+                    "Integer": 1075.0
                 },
                 "Height": {
                     "Type": 3.0,

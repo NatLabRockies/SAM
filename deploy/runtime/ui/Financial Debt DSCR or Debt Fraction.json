@@ -905,7 +905,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "For a project with no debt, set the either the debt percent or the DSCR to zero."
+                    "String": "For a project with no debt, set either the debt percent or the DSCR to zero."
                 },
                 "TextColour": {
                     "Type": 4.0,

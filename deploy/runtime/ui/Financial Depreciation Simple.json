@@ -930,5 +930,19 @@
         }
     },
     "Equations": [],
-    "Callbacks": []
+    "Callbacks": [
+        "function change_depreciation_length()\r",
+        "{\r",
+        "\tyears = value('analysis_period');\r",
+        "\tproperty('depr_fed_custom', 'FixedLength', years);\r",
+        "\tproperty('depr_sta_custom', 'FixedLength', years);\r",
+        "}\r",
+        "\r",
+        "on_load{'Financial Depreciation Simple'} = define() \r",
+        "{\r",
+        "\tchange_depreciation_length();\r",
+        "};\r",
+        "\r",
+        ""
+    ]
 }
