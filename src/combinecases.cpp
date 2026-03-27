@@ -411,7 +411,7 @@ void CombineCasesDialog::OnEvt(wxCommandEvent& e)
 																								//  sets the hidden 'Nameplate capacity' widget value
 					m_custom_generation_case->Values(0).Get("system_capacity")->Set(nameplate);			// the actual used system_capacity, which corresponds to the
 																								//  'Nameplate capacity' widget that is hidden when combining cases
-					m_custom_generation_case->Values(0).Get("spec_mode")->Set(2);							// specify the third radio button
+					m_custom_generation_case->Values(0).Get("spec_mode")->Set(3);							// specify the third radio button
 					m_custom_generation_case->Values(0).Get("derate")->Set(0);								// no additional losses- losses were computed in the individual models
 					m_custom_generation_case->Values(0).Get("heat_rate")->Set(0);							// no fuel costs- accounted for in O&M fuel costs from subsystem cash flows
 					m_custom_generation_case->Values(0).Get("energy_output_array")->Set(hourly_energy.data(), hourly_energy.ncells());
