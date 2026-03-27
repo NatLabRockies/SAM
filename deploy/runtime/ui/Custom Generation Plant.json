@@ -24,7 +24,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 480.0
+                    "Integer": 456.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -53,7 +53,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 483.0
+                    "Integer": 462.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -127,7 +127,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 513.0
+                    "Integer": 492.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -188,7 +188,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 177.0
+                    "Integer": 150.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -221,449 +221,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 429.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 390.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 120.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "conv_eff"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 450.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 453.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 100.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "derate"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 450.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 294.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 100.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": 5.0
-                }
-            }
-        },
-        "DataArray": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "energy_output_array"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 252.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 117.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 143.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 28.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Label": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Description": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": 4.0
-                }
-            }
-        },
-        "DataLifetimeArray": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "energy_output_array_lifetime"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 252.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 147.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 143.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 28.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Label": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ColumnLabel": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Description": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                },
-                "AnalysisPeriod": {
-                    "Type": 3.0,
-                    "Integer": 25.0
-                },
-                "AnnualEnabled": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "WeeklyEnabled": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "ShowMode": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "first_year_output"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 429.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 336.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 120.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "first_year_output_peak"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 429.0
+                    "Integer": 426.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -742,15 +300,412 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "heat_rate"
+                    "String": "conv_eff"
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 450.0
+                    "Integer": 447.0
                 },
                 "Y": {
                     "Type": 3.0,
                     "Integer": 426.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "derate"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 447.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 267.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 5.0
+                }
+            }
+        },
+        "DataLifetimeArray": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "energy_output_array"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 252.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 120.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 143.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 28.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Label": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ColumnLabel": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Description": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                },
+                "AnalysisPeriod": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "AnnualEnabled": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "WeeklyEnabled": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ShowMode": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "first_year_output"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 426.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 309.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 120.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "first_year_output_peak"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 426.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 336.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 120.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "heat_rate"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 447.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 399.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -833,7 +788,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 222.0
+                    "Integer": 195.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -891,11 +846,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 45.0
+                    "Integer": 42.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 408.0
+                    "Integer": 381.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -941,11 +896,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 45.0
+                    "Integer": 42.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 315.0
+                    "Integer": 288.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -991,11 +946,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 45.0
+                    "Integer": 42.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 276.0
+                    "Integer": 249.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1045,7 +1000,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 513.0
+                    "Integer": 492.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1528,21 +1483,6 @@
             "DefaultValue": [
                 0.0
             ],
-            "UIObject": "DataArray",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "energy_output_array_lifetime": {
-            "Version": 4.0,
-            "Type": 2.0,
-            "Label": "Lifetime generation profile",
-            "Units": "kWac",
-            "Group": "Custom Generation Profile",
-            "IndexLabels": "",
-            "Flags": 0.0,
-            "DefaultValue": [
-                0.0
-            ],
             "UIObject": "DataLifetimeArray",
             "sscVariableName": "",
             "sscVariableValue": ""
@@ -1738,7 +1678,8 @@
         "on_load{\"Custom Generation Plant\"}=define(){",
         "\ton_change{'spec_mode'}();",
         "\ton_change{'system_capacity'}();",
-        "\tloss_adjustment_set();",
+        "\tloss_adjustment_set();\r",
+        "\tlifetime_array_set();",
         "};",
         "\t\t",
         "on_change{'spec_mode'}=define(){",
@@ -1771,23 +1712,21 @@
         "}",
         "",
         "function check_inputs() {",
-        "\tmode = value('spec_mode');",
+        "\tmode = value('spec_mode');\r",
+        "\tsingle_year_tech = financing() == \"LCOE Calculator\" || financing() == \"None\";",
         "\tenable('system_capacity',",
-        "\t\tmode == 0 || mode == 1 || mode == 2);",
+        "\t\tmode != 3);",
         "\tenable('user_capacity_factor', ",
         "\t\tmode == 0 );",
         "\tenable('energy_output_array',",
-        "\t\tmode == 1 ||  mode == 3);\r",
-        "\tenable('energy_output_array_lifetime',\r",
-        "\t\tmode == 2);",
+        "\t\tmode != 0);",
         "\tenable('btn_selectcases',",
         "\t\tmode == 3);",
         "\tenable('system_capacity_combined',",
         "\t\tmode == 3);",
-        "\tcolor = 'black';\t",
-        "\tif ( mode == 1 )",
-        "\t\ttxt = 'Click \"Edit array...\" to import generation data from a file. After importing the data, type a value for the nameplate capacity, which SAM uses to calculate the capacity factor and dollar amounts from any costs or incentives expressed $/W. Use the calculated values below to help you choose a nameplate capacity value. See Help for details.';",
-        "\telseif ( mode == 2 )\r",
+        "\tcolor = 'black';\t\r",
+        "\t// single_year_tech",
+        "\tif ( mode == 1 || mode == 2 )\r",
         "\t\ttxt = 'Click \"Edit lifetime array...\" to import generation data from a file. After importing the data, type a value for the nameplate capacity, which SAM uses to calculate the capacity factor and dollar amounts from any costs or incentives expressed $/W. Use the calculated values below to help you choose a nameplate capacity value. See Help for details.';\r",
         "\telseif ( mode == 3 )",
         "\t\ttxt = 'Click \"Select cases...\" to select open cases, simulate those cases and combine their generation profiles into a single profile to be used with this generic case. Click \"Edit array...\" to view or edit the combined simulated productions.';",
@@ -1797,9 +1736,16 @@
         "\t\t\ttxt += ' Nameplate capacity exceeds 110% of peak generation.';",
         "\t\t\tcolor = 'red';",
         "\t\t}\t",
-        "*/\t\t",
+        "*/\t\r",
+        "\t// Overwrite text with error message\r",
+        "\tif (mode == 2 && single_year_tech) {\r",
+        "\t\tcolor = 'red';\r",
+        "\t\ttxt = 'This financial model only runs single year data. To avoid the model interpreting lifetime data as subhourly, please choose an option besides importing lifetime data.';\r",
+        "\t}\r",
+        "",
         "\tproperty('import_message','caption',txt);",
-        "\tproperty('import_message','TextColour',color);",
+        "\tproperty('import_message','TextColour',color);\r",
+        "\tlifetime_array_set();",
         "}",
         "",
         "function loss_adjustment_set() ",
@@ -1816,6 +1762,21 @@
         "\t\tproperty('adjust', 'AnalysisPeriod', 1);",
         "\t}",
         "}",
-        ""
+        "\r",
+        "function lifetime_array_set()\r",
+        "{\r",
+        "\tis_batt = value('en_batt');\r",
+        "\tif (financing() != \"LCOE Calculator\" && financing() != \"None\") {\r",
+        "\t\tif (value('spec_mode') == 2) {\r",
+        "\t\t\tproperty('energy_output_array', 'AnalysisPeriod', value('analysis_period'));\r",
+        "\t\t}\r",
+        "\t\telse {\r",
+        "\t\t\tproperty('energy_output_array', 'AnalysisPeriod', 1);\r",
+        "\t\t}\r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\tproperty('energy_output_array', 'AnalysisPeriod', 1);\r",
+        "\t}\r",
+        "}"
     ]
 }

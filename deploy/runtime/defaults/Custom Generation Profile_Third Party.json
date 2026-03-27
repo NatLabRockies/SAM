@@ -70,6 +70,9 @@
     ],
     "first_year_output": 30274.56,
     "first_year_output_peak": 3.84,
+    "generic_degradation": [
+        0.0
+    ],
     "grid_curtailment": [
         1e38,
         1e38,
@@ -26409,7 +26412,7 @@
     "start_day_of_year_load_ui": 3.335046e-317,
     "system_capacity": 4.0,
     "system_capacity_combined": 0.0,
-    "system_use_lifetime_output": 0.0,
+    "system_use_lifetime_output": 1.0,
     "ui_annual_load": 0.0,
     "ui_step_minutes": 60.0,
     "ur_annual_min_charge": 0.0,
