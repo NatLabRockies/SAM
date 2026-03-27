@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -73,8 +73,10 @@ static SamApp::ver releases[] = {
 	//intermediate version numbers are required in this list in order for the version upgrade script (versions.lk) to work correctly
 	//please clarify the reason for the new version in a comment. Examples: public release, variable changes, internal release, public beta release, etc.
 	//the top version should always be the current working version
+			{ 2026, 2, 19 }, // Placeholder for OR Tools version upgrade testing (replace with release version number)
             { 2025, 10, 27},   //2025.10.27 ssc 303 public beta
 			{ 2025, 9, 19 }, // Placeholder for PVWatts-Battery upgrade testing (replace with release version number)
+			{ 2025, 4, 29 }, // 2025.4.29 ssc 303 ortools windows beta
 			{ 2025, 4, 16 }, // 2025.4.16 ssc 302 public release
 			{ 2025, 4, 7},	// 2025.4.7 ssc 301 release candidate
 			{ 2024, 12, 12},	// 2024.12.12 ssc 298 public release
@@ -463,8 +465,6 @@ extern void RegisterReportObjectTypes();
 		}
 	}
 
-	LoadPythonConfig();
-
 	return true;
 }
 
@@ -484,7 +484,7 @@ wxString SamApp::AboutSAM()
 	return "<html><body>"
 		"<h1>System Advisor Model (SAM)</h1>"
 		"<h2>Open Source Build</h2>"
-		"<p>BSD 3-Clause License<br><br>Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE.</p>"
+		"<p>BSD 3-Clause License<br><br>Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE.</p>"
 		"<p>All rights reserved.</p>"
 		"<p>Redistribution and use in source and binary forms, with or without	modification, are permitted provided that the following conditions are met:</p>"
 		"<ol>"

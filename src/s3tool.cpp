@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -1828,7 +1828,7 @@ bool ShadeScripting::CloseDoc()
 	if (m_script->GetModify())
 	{
 		Raise();
-		wxString id = m_fileName.IsEmpty() ? "untitled" : m_fileName;
+		wxString id = m_fileName.IsEmpty() ? wxString("untitled") : m_fileName;
 		int result = wxMessageBox("Script modified. Save it?\n\n" + id, "Query", wxYES_NO|wxCANCEL);
 		if ( result == wxCANCEL 
 			|| (result == wxYES && !Save()) )

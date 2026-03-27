@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -29,6 +29,9 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
+
+#define OR_PROTO_DLL
+
 
 #include <set>
 //#include <chrono>
@@ -76,6 +79,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <rapidjson/filewritestream.h>
 #include <rapidjson/istreamwrapper.h>
 
+#include <ortools/linear_solver/linear_solver.h>
+
 
 //#include "private.h"
 //#include "welcome.h"
@@ -89,14 +94,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "uiobjects.h"
 #include "variablegrid.h"
 #include "script.h"
-#include "pythonhandler.h"
 //#include "main_add.h"
 #include <../src/main_add.h>
 
 #define __SAVE_AS_JSON__ 1
 #define __LOAD_AS_JSON__ 1
-
-static PythonConfig pythonConfig;
 
 enum { __idFirst = wxID_HIGHEST+592,
 
@@ -118,6 +120,8 @@ enum { __idFirst = wxID_HIGHEST+592,
 	ID_CASE_DUPLICATE,
 	ID_CASE_DELETE,
 	ID_CASE_REPORT,
+	ID_RUN_TEST,
+	ID_RUN_ORTOOLS_EXAMPLE,
 	ID_CASE_EXCELEXCH,
 	ID_CASE_SIMULATE,
 	ID_CASE_RESET_DEFAULTS,
@@ -274,7 +278,9 @@ MainWindow::MainWindow()
 	entries.push_back( wxAcceleratorEntry( wxACCEL_NORMAL, WXK_F1, wxID_HELP));
 	entries.push_back( wxAcceleratorEntry( wxACCEL_NORMAL, WXK_F2, ID_CASE_RENAME ) );
 	entries.push_back( wxAcceleratorEntry( wxACCEL_NORMAL, WXK_F5, ID_CASE_SIMULATE ) );
-	entries.push_back( wxAcceleratorEntry( wxACCEL_NORMAL, WXK_F6, ID_CASE_REPORT ) );
+	entries.push_back(wxAcceleratorEntry(wxACCEL_NORMAL, WXK_F6, ID_CASE_REPORT));
+	entries.push_back(wxAcceleratorEntry(wxACCEL_ALT, WXK_F5, ID_RUN_TEST));
+	entries.push_back(wxAcceleratorEntry(wxACCEL_ALT, WXK_F6, ID_RUN_ORTOOLS_EXAMPLE));
 	SetAcceleratorTable( wxAcceleratorTable( entries.size(), &entries[0] ) );
 }
 
@@ -1402,6 +1408,13 @@ void MainWindow::OnCaseMenu( wxCommandEvent &evt )
 		break;
 	case ID_CASE_REPORT:
 		cw->GenerateReport();
+		break;
+	case ID_RUN_TEST:
+		wxShell(wxString("cmd /k ") + SamApp::GetAppPath() + wxString("/Test.exe"));
+		wxMessageBox(wxString("Test ortools completed"));
+		break;
+	case ID_RUN_ORTOOLS_EXAMPLE:
+		wxMessageBox(wxString(ORTool_LinearProgrammingExample()), "OR Tools Linear Programming Example");
 		break;
 	case ID_CASE_SIMULATE:
 		cw->RunBaseCase();
@@ -2788,71 +2801,6 @@ bool SamApp::LoadAndRunScriptFile( const wxString &script_file, wxArrayString *e
 	}
 }
 
-std::string SamApp::GetPythonConfigPath(){
-    wxFileName path( GetAppPath() + "/../runtime/python" );
-    path.Normalize();
-    return path.GetFullPath().ToStdString();
-}
-
-void SamApp::LoadPythonConfig(){
-    pythonConfig = ReadPythonConfig(GetPythonConfigPath() + "/python_config.json");
-    if (CheckPythonInstalled(pythonConfig)){
-        std::string python_path = GetPythonConfigPath();
-		set_python_path(python_path.c_str());
-        return;
-    }
-}
-
-bool SamApp::CheckPythonPackage(const std::string& pip_name){
-    if (CheckPythonInstalled(pythonConfig)){
-        if (CheckPythonPackageInstalled(pip_name, pythonConfig))
-            return true;
-    }
-    return false;
-}
-
-void SamApp::InstallPython() {
-    if (pythonConfig.pythonVersion.empty() && pythonConfig.minicondaVersion.empty())
-        LoadPythonConfig();
-
-    auto python_path = GetPythonConfigPath();
-    // already installed and correctly configured
-    if (CheckPythonInstalled(pythonConfig)){
-		set_python_path(python_path.c_str());
-        return;
-    }
-
-#ifdef __WXMSW__
-    // windows
-    bool errors = InstallPythonWindows(python_path, pythonConfig);
-#else
-    bool errors = InstallPythonUnix(python_path, pythonConfig);
-#endif
-    if (errors)
-        throw std::runtime_error("Error installing python.");
-    LoadPythonConfig();
-}
-
-void SamApp::InstallPythonPackage(const std::string& pip_name) {
-    if (CheckPythonPackageInstalled(pip_name, pythonConfig))
-        return;
-    auto packageConfig = ReadPythonPackageConfig(pip_name, GetPythonConfigPath() + "/" + pip_name + ".json");
-
-#ifdef __WXMSW__
-	bool retval = InstallFromPipWindows(GetPythonConfigPath() + "\\" + pythonConfig.pipPath, packageConfig);
-#else
-	std::string pip_exec = GetPythonConfigPath() + "/" + pythonConfig.pipPath;
-	bool retval = InstallFromPip(pip_exec, packageConfig);
-#endif
-    if (retval == 0){
-        pythonConfig.packages.push_back(pip_name);
-        WritePythonConfig(GetPythonConfigPath() + "/python_config.json", pythonConfig);
-    }
-    else {
-        throw std::runtime_error("Error installing " + pip_name);
-    }
-}
-
 enum { ID_TechTree = wxID_HIGHEST+98, ID_FinTree };
 
 BEGIN_EVENT_TABLE(ConfigDialog, wxDialog)
@@ -3306,6 +3254,74 @@ void ConfigDialog::OnCharHook( wxKeyEvent &evt )
 		OnOk( _evt );
 	}
 }
+
+// test example from https://github.com/google/or-tools/blob/stable/ortools/linear_solver/samples/linear_programming_example.cc
+std::string ORTool_LinearProgrammingExample() 
+{
+	std::stringstream ss;
+	// [START solver]
+	std::unique_ptr<operations_research::MPSolver> solver(operations_research::MPSolver::CreateSolver("SCIP"));
+	if (!solver) {
+		ss << "SCIP solver unavailable.";
+		return ss.str();
+	}
+	// [END solver]
+
+	// [START variables]
+	const double infinity = solver->infinity();
+	// x and y are non-negative variables.
+	operations_research::MPVariable* const x = solver->MakeNumVar(0.0, infinity, "x");
+	operations_research::MPVariable* const y = solver->MakeNumVar(0.0, infinity, "y");
+	ss << "Number of variables = " << solver->NumVariables() << std::endl;
+	ss << " x>=0 and y>=0 " << std::endl;
+	// [END variables]
+
+	// [START constraints]
+	// x + 2*y <= 14.
+	ss << " x + 2*y <= 14 " << std::endl;
+	operations_research::MPConstraint* const c0 = solver->MakeRowConstraint(-infinity, 14.0);
+	c0->SetCoefficient(x, 1);
+	c0->SetCoefficient(y, 2);
+
+	// 3*x - y >= 0.
+	ss << " 3*x - y >= 0 " << std::endl;
+	operations_research::MPConstraint* const c1 = solver->MakeRowConstraint(0.0, infinity);
+	c1->SetCoefficient(x, 3);
+	c1->SetCoefficient(y, -1);
+
+	// x - y <= 2.
+	ss << " x - y <= 2 " << std::endl;
+	operations_research::MPConstraint* const c2 = solver->MakeRowConstraint(-infinity, 2.0);
+	c2->SetCoefficient(x, 1);
+	c2->SetCoefficient(y, -1);
+	ss << "Number of constraints = " << solver->NumConstraints() << std::endl;
+	// [END constraints]
+
+	// [START objective]
+	// Objective function: 3x + 4y.
+	operations_research::MPObjective* const objective = solver->MutableObjective();
+	objective->SetCoefficient(x, 3);
+	objective->SetCoefficient(y, 4);
+	objective->SetMaximization();
+	// [END objective]
+
+	// [START solve]
+	const operations_research::MPSolver::ResultStatus result_status = solver->Solve();
+	// Check that the problem has an optimal solution.
+	if (result_status != operations_research::MPSolver::OPTIMAL) {
+		ss << "The problem does not have an optimal solution!" << std::endl;
+	}
+	// [END solve]
+
+	// [START print_solution]
+	ss << "Solution:" << std::endl;
+	ss << "Optimal objective value = " << objective->Value() << std::endl;
+	ss << x->name() << " = " << x->solution_value() << std::endl;
+	ss << y->name() << " = " << y->solution_value() << std::endl;
+	// [END print_solution]
+	return ss.str();
+}
+
 
 bool ShowConfigurationDialog( wxWindow *parent, wxString *tech, wxString *fin, bool *reset )
 {

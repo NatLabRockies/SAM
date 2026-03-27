@@ -39,6 +39,7 @@ set(SAM_SRC
 # Compile Options per Platform
 #
 #####################################################################################################################
+set(CMAKE_CXX_STANDARD 20)
 
 if(MSVC)
 	add_compile_options(/W4 /MP)
@@ -57,7 +58,7 @@ else(MSVC)
 	else()
 		add_compile_options(-Wno-deprecated -Wno-misleading-indentation)
 	endif()
-	add_compile_options(-Wall -Wno-unknown-pragmas -Wno-overloaded-virtual -std=c++11)
+	add_compile_options(-Wall -Wno-unknown-pragmas -Wno-overloaded-virtual)
 	if(CMAKE_BUILD_TYPE STREQUAL "Debug")
 		add_compile_definitions(_DEBUG)
 	else()
@@ -77,10 +78,10 @@ add_definitions(-DLK_USE_WXWIDGETS )
 # setup wxWidgets
 if (UNIX)
 	set(wxWidgets_CONFIG_EXECUTABLE /usr/local/bin/wx-config-3)
-	find_package(wxWidgets REQUIRED xrc stc richtext ribbon propgrid aui gl html qa adv core xml net base)
-else()
-	set(wxWidgets_ROOT_DIR $ENV{WXMSW3})
-	find_package(wxWidgets REQUIRED xrc stc richtext ribbon propgrid aui gl html qa adv core xml net base scintilla)
+	find_package(wxWidgets  QUIET REQUIRED xrc stc richtext ribbon propgrid aui gl html qa adv core xml net base)
+#else()
+#	set(wxWidgets_ROOT_DIR $ENV{WXMSW3})
+#	find_package(wxWidgets QUIET  REQUIRED xrc stc richtext ribbon propgrid aui gl html qa adv core xml net base scintilla)
 endif()
 
 include(${wxWidgets_USE_FILE})

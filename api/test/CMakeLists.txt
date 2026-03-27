@@ -17,7 +17,9 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}")
 
 include_directories(. .. $ENV{SSCDIR} $ENV{SSCDIR}/ssc)
 
-set(CMAKE_CXX_STANDARD 11)
+
+set(CMAKE_CXX_STANDARD 20)
+
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 add_executable(SAM_api_test
@@ -55,9 +57,6 @@ else()
 
 endif()
 
-
-
-
 #setup compile options
 if(MSVC)
     add_compile_definitions( __64BIT__ __WINDOWS__
@@ -69,7 +68,7 @@ if(MSVC)
     set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} 
         PROPERTY VS_STARTUP_PROJECT SAM_api_test)
 else()
-    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -std=c++11" )
+    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3" )
 
     target_link_libraries(SAM_api_test -lm -lcurl)
 endif()

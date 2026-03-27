@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -393,12 +393,6 @@ public:
 
 	static bool LoadAndRunScriptFile( const wxString &script_file, wxArrayString *errors = 0 );
 
-	static std::string GetPythonConfigPath();
-	static void LoadPythonConfig();
-	static bool CheckPythonPackage(const std::string& pip_name);
-	static void InstallPython();
-    static void InstallPythonPackage(const std::string& pip_name);
-
 	static bool VarTablesFromJSONFile(ConfigInfo* ci, std::vector<VarTable>& vt, const std::string& file);
 
 };
@@ -456,7 +450,7 @@ private:
 
 bool ShowConfigurationDialog( wxWindow *parent, wxString *tech, wxString *fin, bool *reset );
 
-
+std::string ORTool_LinearProgrammingExample();
 
 #endif
 

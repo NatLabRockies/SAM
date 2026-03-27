@@ -34,7 +34,7 @@ extern "C"
 	/**
 	 * Set analysis_period: Analyis period [years]
 	 * options: None
-	 * constraints: INTEGER,MIN=0,MAX=50
+	 * constraints: INTEGER,MIN=0,MAX=100
 	 * required if: ?=30
 	 */
 	SAM_EXPORT void SAM_CashloanHeat_FinancialParameters_analysis_period_nset(SAM_table ptr, double number, SAM_error *err);
@@ -82,7 +82,7 @@ extern "C"
 	/**
 	 * Set loan_term: Loan term [years]
 	 * options: None
-	 * constraints: INTEGER,MIN=0,MAX=50
+	 * constraints: INTEGER,MIN=0,MAX=100
 	 * required if: ?=0
 	 */
 	SAM_EXPORT void SAM_CashloanHeat_FinancialParameters_loan_term_nset(SAM_table ptr, double number, SAM_error *err);
