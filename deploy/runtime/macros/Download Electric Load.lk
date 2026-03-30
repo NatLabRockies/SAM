@@ -4,7 +4,7 @@
   Commercial and Residential Hourly Load Profiles for all TMY3 Locations in the United States</a> dataset and imports 
   it to the Electric Load input page.  <em>This dataset has limitations that are described on its web page</em>. The OpenEI load files are a collection of 
   8,760 hourly load profiles for a range of building types for each of the 1,020 
-  U.S. locations in the legacy <a href="https://rredc.nrel.gov/solar/old_data/nsrdb/1991-2005/tmy3/">
+  U.S. locations in the legacy <a href="https://rredc.nlr.gov/solar/old_data/nsrdb/1991-2005/tmy3/">
   NSRDB TMY3 data set</a>. The script identifies the TMY3 location nearest the
   latitude and longitude in your weather file, and downloads the load file for your building
   type for that TMY3 location. If the script cannot identify the latitude and
@@ -30,7 +30,7 @@
 </p>
   
   <p>If you have questions about this script, please post it on the 
-    <a href='https://sam.nrel.gov/forum'> SAM support
+    <a href='https://sam.nlr.gov/forum'> SAM support
   forum</a></p>
 @*/
 
@@ -90,7 +90,7 @@ sector_type = choose_from_list( sectors, 'Are you modeling a residential or comm
 //USE NREL DEVELOPER TO TRANSLATE LAT AND LON TO TMY3 ID
 // delete after test
 key = '<SAMAPIKEY>';
-url = 'https://developer.nrel.gov/api/solar/data_query/v1.json?api_key=' + key + '&lat=' + lat + '&lon=' + lon;
+url = 'https://developer.nlr.gov/api/solar/data_query/v1.json?api_key=' + key + '&lat=' + lat + '&lon=' + lon;
 
 json = curl(url);
 write_text_file( 'C:/Users/gaobo/Desktop/Temp/load.json', json );

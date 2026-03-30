@@ -7,10 +7,10 @@ the SAM CSV format.</p>
 <li><b>TMY2</b> is a non-delimited format developed by NREL for the National 
     Solar Radiation Database (NSRDB) 1961-1990 update. This legacy data is 
     available from the 
-    <a href="https://nsrdb.nrel.gov/data-sets/archives.html">NSRDB Archives</a>.<br></li>
+    <a href="https://nsrdb.nlr.gov/data-sets/archives.html">NSRDB Archives</a>.<br></li>
 <li><b>TMY3</b> is a comma-delimited format developed by NREL for the 
     NSRDB 1991-2010 update. This legacy data is available from the 
-    <a href="https://nsrdb.nrel.gov/data-sets/archives.html">NSRDB Archives</a>.<br></li>
+    <a href="https://nsrdb.nlr.gov/data-sets/archives.html">NSRDB Archives</a>.<br></li>
 <li><b>EPW</b> is a comma-delimited format developed for the U.S. Department
     of Energy's EnergyPlus building simulation software, and available on the
     <a href="https://energyplus.net/weather">EnergyPlus Weather Data page</>.<br></li>
@@ -32,7 +32,7 @@ this macro to convert those files to a "stripped" down version with only the
 data that SAM uses in a file that you can edit or view in a spreadsheet program.</p>
 
 <p>For more information about weather data for SAM, see the
-<a href="https://sam.nrel.gov/weather-data"</a>Weather Data page</a> on the SAM
+<a href="https://sam.nlr.gov/weather-data"</a>Weather Data page</a> on the SAM
 website.</p>
 
 <p><b>To convert a file:</b></p>

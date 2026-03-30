@@ -1,7 +1,7 @@
 # System Advisor Model (SAM)
 ![Build](https://github.com/NREL/SAM/actions/workflows/ci.yml/badge.svg)
 
-The SAM Open Source Project repository contains the source code, tools, and instructions to build a desktop version of the National Renewable Energy Laboratory's System Advisor Model™ (SAM™). SAM is a simulation program for electricity generation projects. It has models for different kinds of renewable energy systems and financial models for residential, commercial, and utility-scale projects. For more details about SAM's capabilities, see the SAM website at [https://sam.nrel.gov/](https://sam.nrel.gov/).
+The SAM Open Source Project repository contains the source code, tools, and instructions to build a desktop version of the National Renewable Energy Laboratory's System Advisor Model™ (SAM™). SAM is a simulation program for electricity generation projects. It has models for different kinds of renewable energy systems and financial models for residential, commercial, and utility-scale projects. For more details about SAM's capabilities, see the SAM website at [https://sam.nlr.gov/](https://sam.nlr.gov/).
 
 For a short video describing the SAM repositories, see https://youtu.be/E5z1iiZfZ3M.
 
@@ -9,7 +9,7 @@ The [SAM release notes](https://nrel.github.io/SAM/doc/releasenotes.html) are in
 
 The desktop version of SAM for Windows, Mac, or Linux builds from the following open source projects:
 
-* [SSC](https://github.com/nrel/ssc) is a set of "compute modules" that simulate different kinds of power systems and financial structures. It can be run directly using the [SAM Software Development Kit](https://sam.nrel.gov/sdk). **This is the source code for SAM's models, and is the repository to use for researching the algorithms underlying the models.**
+* [SSC](https://github.com/nrel/ssc) is a set of "compute modules" that simulate different kinds of power systems and financial structures. It can be run directly using the [SAM Software Development Kit](https://sam.nlr.gov/sdk). **This is the source code for SAM's models, and is the repository to use for researching the algorithms underlying the models.**
 
 * [LK](https://github.com/nrel/lk) is a scripting language that is integrated into SAM. SAM's user interface uses LK to calculate values to display on input pages. The user interface includes a script editor that allows users to write their own scripts from the user interface.
 
