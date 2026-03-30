@@ -11,7 +11,8 @@
 		},
 		"Lifetime": {
 			"analysis_period": 25,
-			"system_use_lifetime_output": 0
+			"generic_degradation": [0.000000],
+			"system_use_lifetime_output": 1
 		},
 		"AdjustmentFactors": {
 			"adjust_constant": 0,

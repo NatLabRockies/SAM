@@ -64,7 +64,7 @@ extern "C"
 	SAM_EXPORT void SAM_CustomGeneration_Plant_heat_rate_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set spec_mode: Spec mode: 0=constant CF,1=profile
+	 * Set spec_mode: Spec mode: 0=constant CF,1=profile,2=lifetime profile 
 	 * options: None
 	 * constraints: None
 	 * required if: *
