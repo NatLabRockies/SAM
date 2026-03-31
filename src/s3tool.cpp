@@ -2418,15 +2418,9 @@ void ShadeTool::OnCommand( wxCommandEvent &evt)
 		break;
 	case wxID_HELP:
 #ifdef S3D_STANDALONE
-		
-#if defined(__WXMSW__)||defined(__WXOSX__)
-		m_book->SetSelection( PG_HELP );
-#else
 		wxLaunchDefaultBrowser( "file:///" + m_dataPath + "/help/index.html" );
-#endif
-
 #else
-		SamApp::ShowHelp( "3d_shade_calculator" );
+		SamApp::ShowHelp( "shade-calculator-reference/sc-overview" );
 #endif
 		break;
 	}

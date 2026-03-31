@@ -2320,7 +2320,7 @@ void NumericRangeDialog::OnCommand(wxCommandEvent &evt)
 	switch(evt.GetId())
 	{
 	case wxID_HELP:
-		SamApp::ShowHelp("edit_parametric_variables");
+		SamApp::ShowHelp("window-reference/win_edit_parametric_variables");
 		break;
 
 	case ID_values:
