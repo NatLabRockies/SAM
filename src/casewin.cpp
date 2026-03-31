@@ -609,7 +609,7 @@ bool CaseWindow::GenerateReport( wxString pdffile, wxString templfile, VarValue 
 		
 		if (validfiles.Count() == 0)
 		{
-			wxMessageBox( "SAM could not find any templates valid for the current technology and financing combination.\n\nPlease contact SAM user support at sam.support@nrel.gov for more information." );
+			wxMessageBox( "SAM could not find any templates valid for the current technology and financing combination.\n\nPlease contact SAM user support at sam.support@nlr.gov for more information." );
 			return false;
 		}
 

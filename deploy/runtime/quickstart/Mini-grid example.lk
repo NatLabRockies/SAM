@@ -43,7 +43,7 @@ exitIf( !msgbox('Welcome to the mini-grid example wizard!\n'+
 			    'When you finish using the wizard, you can modify the inputs in the resulting .sam file for your own project.\n\n'+
 			    'The wizard sets the weather file for San Juan, Puerto Rico, and then prompts you to enter the number of mini-grid participants. It then automatically sets up a parametric simulation for a range of photovoltaic array and battery capacities.\n\n'+
 			    'The parametric results show tables and graphs of total installed cost, LCOE, NPV, total annual energy, and unmet critical load to help you choose the best system design for your mini-grid application.\n\n'+
-			    'This wizard is an initial implementation intended as a proof-of-concept. If you have questions or suggestions for improving the wizard, please contact us at sam.support@nrel.gov', 
+			    'This wizard is an initial implementation intended as a proof-of-concept. If you have questions or suggestions for improving the wizard, please contact us at sam.support@nlr.gov', 
 			 [defaultX, defaultY, 500, 500]) );
 			 
 

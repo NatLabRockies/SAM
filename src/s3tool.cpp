@@ -2414,7 +2414,7 @@ void ShadeTool::OnCommand( wxCommandEvent &evt)
 	case ID_VIEW_XY: m_book->SetSelection( PG_SCENE ); m_view->SetMode( m_view->TOP_VIEW ); break;
 	case ID_VIEW_XZ: m_book->SetSelection( PG_SCENE ); m_view->SetMode( m_view->Z_VIEW ); break;
 	case ID_FEEDBACK:
-		wxLaunchDefaultBrowser( "mailto://sam.support@nrel.gov?subject=Shade Calculator - Beta Feedback" );
+		wxLaunchDefaultBrowser( "mailto://sam.support@nlr.gov?subject=Shade Calculator - Beta Feedback" );
 		break;
 	case wxID_HELP:
 #ifdef S3D_STANDALONE
