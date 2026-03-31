@@ -1362,7 +1362,7 @@ setup_electricity_purchases();
 
 //-----------------------------------------------------
 setconfig( 'Wind Power', 'Sale Leaseback' );
-setmodules( ['windpower', 'grid', 'wind_landbosse', 'utilityrate5', 'saleleaseback']);
+setmodules( ['windpower', 'grid', 'utilityrate5', 'saleleaseback']);
 setup_windpower_pages();
 setup_lifetime_page(DEGRADATION_AC_SINGLE_YEAR);
 addpage( [['Wind Farm Costs']],
