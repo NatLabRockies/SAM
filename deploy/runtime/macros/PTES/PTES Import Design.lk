@@ -1,6 +1,6 @@
 /*@
 
-<p>This macro works with data generated from <a href="https://github.com/NREL/solar-PTES/tree/Kavin"> NREL's detailed design-point PTES model</a>. The design-point model allows user to specify detailed PTES design parameters
+<p>This macro works with data generated from <a href="https://github.com/NatLabRockies/solar-PTES/tree/Kavin"> NLR's detailed design-point PTES model</a>. The design-point model allows user to specify detailed PTES design parameters
 like turbomachinery isentropic efficiency, heat exchanger effectivness,
 pressure ratio, hot TES temperatures. The design-point model then solves 
 the design-point cycle and reports values that can be used as inputs in the SAM PTES model, like charging coefficient of performance, discharging efficiency, round-trip efficiency, cold TES temperatures, parasitics, and costs.</p>

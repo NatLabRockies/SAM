@@ -1,15 +1,15 @@
 ////////////////////////////////////////////////////////////////////////////////
 /*
-This script downloads data from NREL's Puerto Rico SHR (Simulated High Resolution)
+This script downloads data from NLR's Puerto Rico SHR (Simulated High Resolution)
 dataset from the National Solar Radiation Database at
-https://developer.nrel.gov/docs/solar/nsrdb/puerto_rico_data_download/.
+https://developer.nlr.gov/docs/solar/nsrdb/puerto_rico_data_download/.
 
 Instructions:
  
- 1. If you do not have an NREL Developer Network key, get one at 
-    https://developer.nrel.gov/signup/.
+ 1. If you do not have an NLR Developer Network key, get one at 
+    https://developer.nlr.gov/signup/.
     
- 2. Set the values of 'email' and 'key' to your email address and NREL Developer
+ 2. Set the values of 'email' and 'key' to your email address and NLR Developer
     Network key as strings.   
 
  3. Assign values to 'lat' and 'lon' for a location in Puerto Rico.
@@ -48,7 +48,7 @@ if ( !dir_exists( path ) )
 lat = 18.5;
 lon = -66.1;
 
-// NREL Developer API credentials https://developer.nrel.gov/signup/
+// NLR Developer API credentials https://developer.nlr.gov/signup/
 email = '';
 key = '';
 
@@ -69,7 +69,7 @@ available_intervals = [5,30,60];
 interval = choose_from_list( available_intervals, 'Choose a time step:', 'Choose Time Step', 2 );
 
 // request url
-url = 'https://developer.nrel.gov/api/nsrdb_api/solar/';
+url = 'https://developer.nlr.gov/api/nsrdb_api/solar/';
 url += 'nsrdb_puerto_rico_download.csv?'; // use .json? to download as JSON instead of CSV file
 url += '&api_key='+key;
 url += '&email='+email;

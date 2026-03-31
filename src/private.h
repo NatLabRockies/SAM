@@ -37,7 +37,7 @@ static const char *version_label = 0; //"iscc-ge";
 
 // NREL Developer API:
 // For calls to NREL Developer APIs for weather file downloads, REopt calls, etc.
-// Get an API key at https://developer.nrel.gov
+// Get an API key at https://developer.nlr.gov
 const char *sam_api_key = "";
 
 // Email address used to register for NREL Developer API
