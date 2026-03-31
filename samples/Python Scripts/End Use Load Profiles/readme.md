@@ -60,4 +60,4 @@ You will need 15-minute weather data to run a simulation in SAM, which you can d
 
 ## Additional Resources
 
-TMY3 weather files used to generate ResStock and ComStock data are available here: https://data.nrel.gov/submissions/156
+TMY3 weather files used to generate ResStock and ComStock data are available here: https://data.nlr.gov/submissions/156

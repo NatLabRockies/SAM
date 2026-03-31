@@ -289,7 +289,7 @@ bool OpenEI::QueryUtilityCompaniesbyZipcode(const wxString &zipcode, wxArrayStri
 		return false;
 	}
 	 
-	// NREL Developer API to list utility companies by lat/lon https://developer.nrel.gov/docs/electricity/utility-rates-v3/
+	// NREL Developer API to list utility companies by lat/lon https://developer.nlr.gov/docs/electricity/utility-rates-v3/
 	wxString url = SamApp::WebApi("urdb_companies_by_lat_lon");
 	url.Replace("<LAT>", wxString::Format("%g",lat));
 	url.Replace("<LON>", wxString::Format("%g",lon));

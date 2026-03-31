@@ -41,7 +41,7 @@ url = replace( url, '<LAT>', lat );
 url = replace( url, '<LON>', lon );
 
 // curl() replaces <SAMAPIKEY> with SAM's built-in API key
-// you can also get your own key at https://developer.nrel.gov and use replace()
+// you can also get your own key at https://developer.nlr.gov and use replace()
 // to replace <SAMAPIKEY> with your own key.
 json_str = curl( url );
 outln( url );
