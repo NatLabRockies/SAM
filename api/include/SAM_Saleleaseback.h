@@ -143,7 +143,7 @@ extern "C"
 	/**
 	 * Set analysis_period: Analyis period [years]
 	 * options: None
-	 * constraints: INTEGER,MIN=0,MAX=50
+	 * constraints: INTEGER,MIN=0,MAX=100
 	 * required if: ?=30
 	 */
 	SAM_EXPORT void SAM_Saleleaseback_FinancialParameters_analysis_period_nset(SAM_table ptr, double number, SAM_error *err);

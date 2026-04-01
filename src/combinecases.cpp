@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -125,7 +125,7 @@ void CombineCasesDialog::OnEvt(wxCommandEvent& e)
 	switch (e.GetId())
 	{
 		case wxID_HELP:
-			SamApp::ShowHelp("combine_cases");
+			SamApp::ShowHelp("window-reference/win_combine_cases");
 			break;
 		case ID_chlCases:
 			{

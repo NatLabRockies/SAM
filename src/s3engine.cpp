@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -532,12 +532,12 @@ typedef unsigned long ulong;
 #endif
 */
 
-static void debug_out( char* prefix, point3d point)
+static void debug_out(const char* prefix, point3d point)
 {
 	DBOUT( prefix << ": (" << point.x << ","  << point.y << ","  << point.z << ")\n");
 }
 
-static void debug_out( char* prefix, BSPNode* node)
+static void debug_out(const char* prefix, BSPNode* node)
 {
 	DBOUT( prefix << ": m_id=" << node->id << " , m_type=" << node->type << ", m_fill.r=" << node->fill.r <<  ", m_fill.g=" << node->fill.g << ", m_border=" << node->border.r << ", m_thick=" << node->thick << ", m_as_line=" << node->as_line << ", point.size()=" << node->points.size() << ", D=" << node->D << "\n");
 		for( size_t i=0; i< node->points.size(); i++ )

@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -206,7 +206,7 @@ void WaveDownloadDialog::OnEvt( wxCommandEvent &e )
 	switch( e.GetId() )
 	{
 		case wxID_HELP:
-			SamApp::ShowHelp("wave_download");
+			SamApp::ShowHelp("window-reference/win_wave_download");
 			break;
         case ID_radSingleYear:
         case ID_radMultiYear:
