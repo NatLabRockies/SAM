@@ -3,6 +3,55 @@
     "Width": 867.0,
     "Height": 291.0,
     "FormObjects": {
+        "RadioChoice": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "depr_allocation_choice"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 30.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 411.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 90.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Selection": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Items": {
+                    "Type": 6.0,
+                    "StringList": "Calculated (federal)|Calculated (state)|Manual"
+                },
+                "ShowCaptions": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Horizontal": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
         "Choice": {
             "Visible": 1.0,
             "ObjectProperties": {
@@ -12,11 +61,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 306.0
+                    "Integer": 312.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 108.0
+                    "Integer": 123.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -32,48 +81,11 @@
                 },
                 "Items": {
                     "Type": 6.0,
-                    "StringList": "5-yr MACRS|15-yr MACRS|5-yr Straight Line|15-yr Straight Line|20-yr Straight Line|39-yr Straight Line|Custom|Do Not Set"
+                    "StringList": "5-yr MACRS|15-yr MACRS|5-yr Straight Line|15-yr Straight Line|20-yr Straight Line|39-yr Straight Line|Custom|Non-depreciable"
                 },
                 "Selection": {
                     "Type": 3.0,
                     "Integer": -1.0
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                }
-            }
-        },
-        "Button": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "itc_basis_depreciation_set"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 333.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 207.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 195.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Caption": {
-                    "Type": 5.0,
-                    "String": "Set Depreciaton Basis"
                 },
                 "TabOrder": {
                     "Type": 3.0,
@@ -90,11 +102,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 570.0
+                    "Integer": 576.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 108.0
+                    "Integer": 123.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -173,11 +185,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 306.0
+                    "Integer": 312.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 150.0
+                    "Integer": 165.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -193,7 +205,7 @@
                 },
                 "Items": {
                     "Type": 6.0,
-                    "StringList": "5-yr MACRS|15-yr MACRS|5-yr Straight Line|15-yr Straight Line|20-yr Straight Line|39-yr Straight Line|Custom|Do not set"
+                    "StringList": "5-yr MACRS|15-yr MACRS|5-yr Straight Line|15-yr Straight Line|20-yr Straight Line|39-yr Straight Line|Custom|Non-depreciable"
                 },
                 "Selection": {
                     "Type": 3.0,
@@ -214,11 +226,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 570.0
+                    "Integer": 576.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 150.0
+                    "Integer": 165.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -327,6 +339,19 @@
         }
     },
     "VarDatabase": {
+        "depr_allocation_choice": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 0.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "itc_basis_depreciation_allocation": {
             "Version": 4.0,
             "Type": 1.0,
@@ -382,20 +407,52 @@
     },
     "Equations": [
         "equations{'itc_basis_percent_depr'} = define() {\r",
-        "\treturn ${itc_basis_percent_input};\r",
+        "\tchoice = ${depr_allocation_choice};\r",
+        "\tif (choice == 0) return ${itc_basis_cost_percent_fed};\r",
+        "\telse if (choice == 1) return ${itc_basis_cost_percent_sta};\r",
+        "\telse return 0;\r",
         "};\r",
         "\r",
         "equations{'non_itc_basis_percent_depr'} = define() {\r",
-        "\treturn 100 - ${itc_basis_percent_input};\r",
+        "\treturn 100 - ${itc_basis_percent_depr};\r",
         "};"
     ],
     "Callbacks": [
         "on_load{'Financial ITC Depreciation Allocation'} = define() {\r",
         "\tset_itc_basis_choice();\r",
+        "\titc_basis_depreciation_choice();\r",
         "};\r",
         "\r",
-        "on_change{'itc_basis_depreciation_set'} = define() {\r",
+        "on_change{'itc_basis_depreciation_allocation'} = define() {\r",
         "\titc_basis_depreciation_choice();\r",
+        "};\r",
+        "\r",
+        "on_change{'non_itc_basis_depreciation_allocation'} = define() {\r",
+        "\titc_basis_depreciation_choice();\r",
+        "};\r",
+        "\t\r",
+        "\r",
+        "on_change{'depr_allocation_choice'} = define() {\r",
+        "\t\t\r",
+        "\titc_basis_depreciation_choice();\r",
+        "\t\t//Depreciation Driven Controls\r",
+        "\t\t/*\r",
+        "\t\tenable('depr_itc_fed_macrs_5', choice);\r",
+        "\t\tenable('depr_itc_sta_macrs_5', choice);\r",
+        "\t\tenable('depr_itc_fed_macrs_15', choice);\r",
+        "\t\tenable('depr_itc_sta_macrs_15', choice);\r",
+        "\t\tenable('depr_itc_fed_sl_5', choice);\r",
+        "\t\tenable('depr_itc_sta_sl_5', choice);\r",
+        "\t\tenable('depr_itc_fed_sl_15', choice);\r",
+        "\t\tenable('depr_itc_sta_sl_15', choice);\r",
+        "\t\tenable('depr_itc_fed_sl_20', choice);\r",
+        "\t\tenable('depr_itc_sta_sl_20', choice);\r",
+        "\t\tenable('depr_itc_fed_sl_39', choice);\r",
+        "\t\tenable('depr_itc_sta_sl_39', choice);\r",
+        "\t\tenable('depr_itc_fed_custom', choice);\r",
+        "\t\tenable('depr_itc_sta_custom', choice);\r",
+        "\t\t//show('itc_qual_warning', choice);\r",
+        "\t\t*/\r",
         "};\r",
         "\r",
         "\r",
@@ -407,6 +464,19 @@
         "\tcelltype= ?${6par_celltech}[\r",
         "\t\t'monoSi', 'multiSi/polySi', 'cdte', 'cis', 'cigs', 'amorphous'];\r",
         "\t*/\r",
+        "\tchoice = value('depr_allocation_choice');\r",
+        "\tpercent = 0;\r",
+        "\tif (choice == 0) {\r",
+        "\t\tpercent = value('itc_basis_cost_percent_fed');\r",
+        "\t}\r",
+        "\telse if (choice == 1) {\r",
+        "\t\tpercent = value('itc_basis_cost_percent_sta');\r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\tpercent = -1;\r",
+        "\t}\r",
+        "\t\t\r",
+        "\t\t\r",
         "\tdepr_list = ['depr_alloc_macrs_5_percent','depr_alloc_macrs_15_percent',\r",
         "\t\t'depr_alloc_sl_5_percent', 'depr_alloc_sl_15_percent',\r",
         "\t\t'depr_alloc_sl_20_percent', 'depr_alloc_sl_39_percent',\r",
@@ -422,20 +492,27 @@
         "\t\t'depr_alloc_sl_20_percent', 'depr_alloc_sl_39_percent',\r",
         "\t\t'depr_alloc_custom_percent', 'none'];\r",
         "\t\r",
-        "\t\r",
-        "\tfor (i = 0; i < #depr_list; i++) {\r",
-        "\t\tvalue(depr_list[i], 0.0); //Set to 0 to avoid non-depreciable equation warning\r",
-        "\t}\r",
-        "\tif (itc_depr_choice == non_itc_depr_choice && itc_depr_choice != 'none') {\r",
-        "\t\tvalue(itc_depr_choice, 100);\r",
+        "\tif (choice != 2) {\r",
+        "\t\tfor (i = 0; i < #depr_list; i++) {\r",
+        "\t\t\tvalue(depr_list[i], 0.0); //Set to 0 to avoid non-depreciable equation warning\r",
+        "\t\t}\r",
+        "\t\tif (itc_depr_choice == non_itc_depr_choice && itc_depr_choice != 'none') {\r",
+        "\t\t\tvalue(itc_depr_choice, 100);\r",
+        "\t\t}\r",
+        "\t\telse {\r",
+        "\t\t\tif (itc_depr_choice != 'none') {\r",
+        "\t\t\t\tvalue(itc_depr_choice, percent);\r",
+        "\t\t\t}\r",
+        "\t\t\tif (non_itc_depr_choice != 'none') {\r",
+        "\t\t\t\tvalue(non_itc_depr_choice, 100 - percent);\r",
+        "\t\t\t}\r",
+        "\t\t}\r",
+        "\t\tenable('itc_basis_depreciation_allocation', true);\r",
+        "\t\tenable('non_itc_basis_depreciation_allocation', true);\r",
         "\t}\r",
         "\telse {\r",
-        "\t\tif (itc_depr_choice != 'none') {\r",
-        "\t\t\tvalue(itc_depr_choice, value('itc_basis_percent_input'));\r",
-        "\t\t}\r",
-        "\t\tif (non_itc_depr_choice != 'none') {\r",
-        "\t\t\tvalue(non_itc_depr_choice, 100 - value('itc_basis_percent_input'));\r",
-        "\t\t}\r",
+        "\t\tenable('itc_basis_depreciation_allocation', false);\r",
+        "\t\tenable('non_itc_basis_depreciation_allocation', false);\r",
         "\t}\r",
         "\t\r",
         "}"

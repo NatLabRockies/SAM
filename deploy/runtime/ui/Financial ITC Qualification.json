@@ -1,22 +1,22 @@
 {
     "Name": "Financial ITC Qualification",
-    "Width": 941.0,
-    "Height": 421.0,
+    "Width": 1013.0,
+    "Height": 659.0,
     "FormObjects": {
         "Label": {
             "Visible": 1.0,
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "Label12111111"
+                    "String": "Label1211111126"
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 561.0
+                    "Integer": 648.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 330.0
+                    "Integer": 198.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -74,11 +74,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 480.0
+                    "Integer": 567.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 330.0
+                    "Integer": 198.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -132,15 +132,15 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "Label12112121"
+                    "String": "Label1211212127"
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 453.0
+                    "Integer": 540.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 309.0
+                    "Integer": 177.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -269,6 +269,88 @@
                 "TabOrder": {
                     "Type": 3.0,
                     "Integer": -1.0
+                }
+            }
+        },
+        "CheckBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "batt_itc_basis_cost_fed_include"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 597.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 249.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "State": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 27.0
+                }
+            }
+        },
+        "CheckBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "batt_itc_basis_cost_sta_include"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 678.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 249.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "State": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 28.0
                 }
             }
         },
@@ -417,102 +499,20 @@
                 }
             }
         },
-        "CheckBox": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "depr_itc_fed_capex"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 510.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 354.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Caption": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "State": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": 25.0
-                }
-            }
-        },
-        "CheckBox": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "depr_itc_sta_capex"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 591.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 354.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Caption": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "State": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": 26.0
-                }
-            }
-        },
         "Numeric": {
             "Visible": 1.0,
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "itc_basis_cost"
+                    "String": "itc_basis_cost_capex_fed"
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 222.0
+                    "Integer": 528.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 348.0
+                    "Integer": 294.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -587,15 +587,181 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "itc_basis_percent_input"
+                    "String": "itc_basis_cost_capex_sta"
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 348.0
+                    "Integer": 639.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 348.0
+                    "Integer": 294.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 90.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "itc_basis_cost_percent_fed"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 528.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 324.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 90.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "itc_basis_cost_percent_sta"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 639.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 324.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -744,7 +910,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 180.0
+                    "Integer": 345.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -760,7 +926,7 @@
                 },
                 "Items": {
                     "Type": 6.0,
-                    "StringList": "Installed Costs Driven|Depreciation Driven"
+                    "StringList": "Selected from System Components|Selected from depreciation schedules"
                 },
                 "ShowCaptions": {
                     "Type": 2.0,
@@ -785,11 +951,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 12.0
+                    "Integer": 21.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 27.0
+                    "Integer": 12.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -797,7 +963,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 390.0
+                    "Integer": 522.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -880,68 +1046,6 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "object 713"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 324.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 321.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 114.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Caption": {
-                    "Type": 5.0,
-                    "String": "Enter percentage:"
-                },
-                "TextColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "Bold": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "FontSize": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "WordWrap": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "AlignRight": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "AlignTop": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                }
-            }
-        },
-        "Label": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
                     "String": "object 71314"
                 },
                 "X": {
@@ -996,68 +1100,6 @@
                 "AlignTop": {
                     "Type": 2.0,
                     "Boolean": 1.0
-                }
-            }
-        },
-        "Label": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "object 76"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 63.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 294.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 159.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Caption": {
-                    "Type": 5.0,
-                    "String": "Total installed cost"
-                },
-                "TextColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "Bold": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "FontSize": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "WordWrap": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "AlignRight": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "AlignTop": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
                 }
             }
         },
@@ -1144,6 +1186,88 @@
                 }
             }
         },
+        "CheckBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "system_itc_basis_cost_fed_include"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 597.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 222.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "State": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 25.0
+                }
+            }
+        },
+        "CheckBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "system_itc_basis_cost_sta_include"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 678.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 222.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "State": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 26.0
+                }
+            }
+        },
         "Numeric": {
             "Visible": 1.0,
             "ObjectProperties": {
@@ -1158,89 +1282,6 @@
                 "Y": {
                     "Type": 3.0,
                     "Integer": 219.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 90.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "total_installed_cost"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 225.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 294.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1325,6 +1366,32 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
+        "batt_itc_basis_cost_fed_include": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 0.0,
+            "DefaultValue": 0.0,
+            "UIObject": "CheckBox",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "batt_itc_basis_cost_sta_include": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 0.0,
+            "DefaultValue": 0.0,
+            "UIObject": "CheckBox",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "batt_itc_basis_percent": {
             "Version": 4.0,
             "Type": 1.0,
@@ -1332,7 +1399,7 @@
             "Units": "",
             "Group": "",
             "IndexLabels": "",
-            "Flags": 8.0,
+            "Flags": 10.0,
             "DefaultValue": 0.0,
             "UIObject": "Default",
             "sscVariableName": "",
@@ -1364,11 +1431,76 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
-        "itc_basis_cost": {
+        "itc_basis_cost_capex_fed": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "",
+            "Units": "$",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "itc_basis_cost_capex_sta": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "",
+            "Units": "$",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "itc_basis_cost_fed": {
             "Version": 4.0,
             "Type": 1.0,
             "Label": "ITC Basis Cost",
             "Units": "$",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "itc_basis_cost_percent_fed": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "",
+            "Units": "%",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "itc_basis_cost_percent_sta": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "",
+            "Units": "%",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "itc_basis_cost_sta": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "",
+            "Units": "",
             "Group": "",
             "IndexLabels": "",
             "Flags": 8.0,
@@ -1416,6 +1548,32 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
+        "system_itc_basis_cost_fed_include": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 0.0,
+            "DefaultValue": 0.0,
+            "UIObject": "CheckBox",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "system_itc_basis_cost_sta_include": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 0.0,
+            "DefaultValue": 0.0,
+            "UIObject": "CheckBox",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "system_itc_basis_percent": {
             "Version": 4.0,
             "Type": 1.0,
@@ -1423,7 +1581,7 @@
             "Units": "",
             "Group": "",
             "IndexLabels": "",
-            "Flags": 8.0,
+            "Flags": 10.0,
             "DefaultValue": 0.0,
             "UIObject": "Default",
             "sscVariableName": "",
@@ -1465,8 +1623,66 @@
         "\treturn ${system_itc_basis_cost} / ${total_installed_cost} * 100; //%\r",
         "};\r",
         "\r",
-        "equations{'itc_basis_cost'} = define() {\r",
-        "\treturn ${itc_basis_percent_input} / 100.0 * ${total_installed_cost};\r",
+        "equations{'itc_basis_cost_capex_fed'} = define() {\r",
+        "\ttotal = 0;\r",
+        "\tif (${system_itc_basis_cost_fed_include}) {\r",
+        "\t\ttotal += ${system_itc_basis_cost};\r",
+        "\t}\r",
+        "\tif (${batt_itc_basis_cost_fed_include}) {\r",
+        "\t\ttotal+= ${batt_itc_basis_cost};\r",
+        "\t}\r",
+        "\treturn total;\r",
+        "};\r",
+        "\r",
+        "equations{'itc_basis_cost_percent_fed'} = define() {\r",
+        "\treturn ${itc_basis_cost_capex_fed} / ${total_installed_cost} * 100.0;\r",
+        "};\r",
+        "\r",
+        "equations{'itc_basis_cost_capex_sta'} = define() {\r",
+        "\ttotal = 0;\r",
+        "\tif (${system_itc_basis_cost_sta_include}) {\r",
+        "\t\ttotal += ${system_itc_basis_cost};\r",
+        "\t}\r",
+        "\tif (${batt_itc_basis_cost_sta_include}) {\r",
+        "\t\ttotal+= ${batt_itc_basis_cost};\r",
+        "\t}\r",
+        "\treturn total;\r",
+        "};\r",
+        "\r",
+        "equations{'itc_basis_cost_percent_sta'} = define() {\r",
+        "\treturn ${itc_basis_cost_capex_sta} / ${total_installed_cost} * 100.0;\r",
+        "};\r",
+        "\r",
+        "equations{'itc_basis_cost_fed'} = define() {\r",
+        "\tchoice = ${itc_qualification_choice};\r",
+        "\tif (choice == 0) {\r",
+        "\t\treturn ${itc_basis_cost_capex_fed};\r",
+        "\t}\r",
+        "\telse if (choice == 1) {\r",
+        "\t\treturn 0; //Still calculate this in ssc?\r",
+        "\t}\r",
+        "\telse if (choice == 2) {\r",
+        "\t\tif (${depr_itc_fed_capex}) {\r",
+        "\t\t\treturn ${itc_basis_percent_input} / 100.0 * ${total_installed_cost};\r",
+        "\t\t}\r",
+        "\t\telse return 0;\r",
+        "\t}\r",
+        "};\r",
+        "\r",
+        "equations{'itc_basis_cost_sta'} = define() {\r",
+        "\tchoice = ${itc_qualification_choice};\r",
+        "\tif (choice == 0) {\r",
+        "\t\treturn ${itc_basis_cost_capex_sta};\r",
+        "\t}\r",
+        "\telse if (choice == 1) {\r",
+        "\t\treturn 0; //Still calculate this in ssc?\r",
+        "\t}\r",
+        "\telse if (choice == 2) {\r",
+        "\t\tif (${depr_itc_sta_capex}) {\r",
+        "\t\t\treturn ${itc_basis_percent_input} / 100.0 * ${total_installed_cost};\r",
+        "\t\t}\r",
+        "\t\telse return 0;\r",
+        "\t}\r",
         "};\r",
         "\t"
     ],
@@ -1495,9 +1711,13 @@
         "\t//Installed Costs Driven Controls\r",
         "\tenable('depr_itc_fed_capex', !choice);\r",
         "\tenable('depr_itc_sta_capex', !choice);\r",
-        "\tenable('itc_basis_depreciation_allocation', !choice);\r",
-        "\tenable('non_itc_basis_depreciation_allocation', !choice);\r",
-        "\tenable('itc_basis_depreciation_set', !choice);\r",
+        "\tenable('system_itc_basis_cost_fed_include', !choice);\r",
+        "\tenable('system_itc_basis_cost_sta_include', !choice);\r",
+        "\tenable('batt_itc_basis_cost_fed_include', !choice);\r",
+        "\tenable('batt_itc_basis_cost_sta_include', !choice);\r",
+        "\t//enable('itc_basis_depreciation_allocation', !choice);\r",
+        "\t//enable('non_itc_basis_depreciation_allocation', !choice);\r",
+        "\t//enable('itc_basis_depreciation_set', !choice);\r",
         "\tenable('itc_basis_percent_input', !choice);\r",
         "\t\r",
         "\t//Depreciation Driven Controls\r",
