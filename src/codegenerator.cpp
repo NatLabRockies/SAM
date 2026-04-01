@@ -1409,7 +1409,7 @@ bool CodeGen_c::SupportingFiles()
 	fprintf(f, "clean :\n");
 	fprintf(f, "	$(RM) $(PROJ_NAME)$(EXT)\n");
 	fprintf(f, "help:\n");
-	fprintf(f, "	@echo \"Please check the settings for your system.Your system may not be supported.Please contact sam.support@nrel.gov\"\n");
+	fprintf(f, "	@echo \"Please check the settings for your system.Your system may not be supported.Please contact sam.support@nlr.gov\"\n");
 	fclose(f);
 
 	return true;
@@ -4744,7 +4744,7 @@ bool CodeGen_java::SupportingFiles()
 	fprintf(f, "clean :\n");
 	fprintf(f, "	$(RM) $(RM_ALL) $(RM_JAVA)\n");
 	fprintf(f, "help:\n");
-	fprintf(f, "	@echo \"Please check the settings for your system.Your system may not be supported.Please contact sam.support@nrel.gov.System: $(PF) $(VERS)\"\n");
+	fprintf(f, "	@echo \"Please check the settings for your system.Your system may not be supported.Please contact sam.support@nlr.gov.System: $(PF) $(VERS)\"\n");
 	fclose(f);
 	// Manifest file to define main class
 	fn = m_folder + "/" + m_name + ".Manifest.txt";
@@ -5661,7 +5661,7 @@ bool CodeGen_php5::SupportingFiles()
     fprintf(f, "	rm sscphp.dylib\n");
     fprintf(f, "\n");
     fprintf(f, "help:\n");
-    fprintf(f, "	@echo \"Please check the settings for your system.Your system may not be supported.Please contact sam.support@nrel.gov.System: $(PF) $(VERS)\"\n");
+    fprintf(f, "	@echo \"Please check the settings for your system.Your system may not be supported.Please contact sam.support@nlr.gov.System: $(PF) $(VERS)\"\n");
     fclose(f);
     return true;
 #elif defined(__WXGTK__)
@@ -5693,7 +5693,7 @@ bool CodeGen_php5::SupportingFiles()
     fprintf(f, "	rm sscphp.so\n");
     fprintf(f, "\n");
     fprintf(f, "help:\n");
-    fprintf(f, "	@echo \"Please check the settings for your system.Your system may not be supported.Please contact sam.support@nrel.gov.System: $(PF) $(VERS)\"\n");
+    fprintf(f, "	@echo \"Please check the settings for your system.Your system may not be supported.Please contact sam.support@nlr.gov.System: $(PF) $(VERS)\"\n");
     fclose(f);
     return true;
 #else
@@ -6325,7 +6325,7 @@ bool CodeGen_php7::SupportingFiles()
 	fprintf(f, "	rm sscphp.so\n");
 	fprintf(f, "\n");
 	fprintf(f, "help:\n");
-	fprintf(f, "	@echo \"Please check the settings for your system.Your system may not be supported.Please contact sam.support@nrel.gov.System: $(PF) $(VERS)\"\n");
+	fprintf(f, "	@echo \"Please check the settings for your system.Your system may not be supported.Please contact sam.support@nlr.gov.System: $(PF) $(VERS)\"\n");
 	fclose(f);
 	return true;
 #else
@@ -6958,7 +6958,7 @@ bool CodeGen_php8::SupportingFiles()
 	fprintf(f, "	rm sscphp.so\n");
 	fprintf(f, "\n");
 	fprintf(f, "help:\n");
-	fprintf(f, "	@echo \"Please check the settings for your system.Your system may not be supported.Please contact sam.support@nrel.gov.System: $(PF) $(VERS)\"\n");
+	fprintf(f, "	@echo \"Please check the settings for your system.Your system may not be supported.Please contact sam.support@nlr.gov.System: $(PF) $(VERS)\"\n");
 	fclose(f);
 	return true;
 #else
@@ -7834,7 +7834,7 @@ bool CodeGen_ios::SupportingFiles()
 {
 	// for iOS
 	wxString url = SamApp::WebApi("ios_build");
-	if (url.IsEmpty()) url = "https://sam.nrel.gov";
+	if (url.IsEmpty()) url = "https://sam.nlr.gov";
 		wxLaunchDefaultBrowser( url );
 
 #if defined(__WXMSW__)
@@ -8302,7 +8302,7 @@ bool CodeGen_android::SupportingFiles()
 	fclose(f);
 	// library files - in readme
 	wxString url = SamApp::WebApi("android_build");
-	if (url.IsEmpty()) url = "https://sam.nrel.gov/";
+	if (url.IsEmpty()) url = "https://sam.nlr.gov/";
 	wxLaunchDefaultBrowser( url );
 
 #if defined(__WXMSW__)

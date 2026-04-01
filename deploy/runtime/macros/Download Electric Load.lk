@@ -1,10 +1,10 @@
 /*@
   <p>This macro downloads an hourly load file from the
-  NREL OpenEI <a href="https://en.openei.org/datasets/dataset/commercial-and-residential-hourly-load-profiles-for-all-tmy3-locations-in-the-united-states">
+  NLR OpenEI <a href="https://en.openei.org/datasets/dataset/commercial-and-residential-hourly-load-profiles-for-all-tmy3-locations-in-the-united-states">
   Commercial and Residential Hourly Load Profiles for all TMY3 Locations in the United States</a> dataset and imports 
   it to the Electric Load input page.  <em>This dataset has limitations that are described on its web page</em>. The OpenEI load files are a collection of 
   8,760 hourly load profiles for a range of building types for each of the 1,020 
-  U.S. locations in the legacy <a href="https://rredc.nrel.gov/solar/old_data/nsrdb/1991-2005/tmy3/">
+  U.S. locations in the legacy <a href="https://rredc.nlr.gov/solar/old_data/nsrdb/1991-2005/tmy3/">
   NSRDB TMY3 data set</a>. The script identifies the TMY3 location nearest the
   latitude and longitude in your weather file, and downloads the load file for your building
   type for that TMY3 location. If the script cannot identify the latitude and
@@ -21,7 +21,7 @@
    that has been superseded by the <a href="https://data.openei.org/submissions/4520">
    End-Use Load Profiles for the U.S. Building Stock</a>. The new dataset provides
    access to thousands of 15-minute load profiles for many residential and commercial 
-   building types. You can use the <a href="https://github.com/NREL/SAM/tree/patch/samples/Python%20Scripts/End%20Use%20Load%20Profiles">
+   building types. You can use the <a href="https://github.com/NatLabRockies/SAM/tree/patch/samples/Python%20Scripts/End%20Use%20Load%20Profiles">
    End Use Load Profiles</a> Python package to access this data to use with SAM.
    Because of the much larger number of load profiles and building types represented 
    in the data, it is not possible to create a short list of building types for the new dataset to 
@@ -30,7 +30,7 @@
 </p>
   
   <p>If you have questions about this script, please post it on the 
-    <a href='https://sam.nrel.gov/forum'> SAM support
+    <a href='https://sam.nlr.gov/forum'> SAM support
   forum</a></p>
 @*/
 
@@ -87,10 +87,10 @@ if ( lat == null || lon == null ) {
 // SET RESIDENTIAL OR COMMERCIAL SECTOR TYPE
 sector_type = choose_from_list( sectors, 'Are you modeling a residential or commercial building?', 'Choose Sector Type', 0 );
 
-//USE NREL DEVELOPER TO TRANSLATE LAT AND LON TO TMY3 ID
+//USE NLR DEVELOPER TO TRANSLATE LAT AND LON TO TMY3 ID
 // delete after test
 key = '<SAMAPIKEY>';
-url = 'https://developer.nrel.gov/api/solar/data_query/v1.json?api_key=' + key + '&lat=' + lat + '&lon=' + lon;
+url = 'https://developer.nlr.gov/api/solar/data_query/v1.json?api_key=' + key + '&lat=' + lat + '&lon=' + lon;
 
 json = curl(url);
 write_text_file( 'C:/Users/gaobo/Desktop/Temp/load.json', json );
@@ -178,7 +178,7 @@ outln( 'complete.' );
 msgbox(  'Success! OpenEI data imported to the Electric Load page.\nSector type: ' + replace( replace( sector_type, '_', ' ' ), 'load data', '' ) + '\n' + 'Building type: ' + build_type + '\n' + 'TMY3 file: ' + tmy3_location + '');
 show_page( 'Electric Load' );
 
-note = 'Load data downloaded from NREL OpenEI building load database for:\n\n';
+note = 'Load data downloaded from NLR OpenEI building load database for:\n\n';
 note += 'Sector type: ' + replace( replace( sector_type, '_', ' ' ), 'load data', '' ) + '\n' + 'Building type: ' + build_type + '\n' + 'TMY3 file: ' + tmy3_location + '\n\n';
 note += 'Click "View load data" to check the data before using it.\n\n';
 note += 'Use the scaling factor and normalize options to scale the data to match annual or monthly totals.\n\n';
