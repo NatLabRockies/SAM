@@ -1,0 +1,73 @@
+/*
+This script creates a horizontal bar graph of PV loss values for the Detailed
+PV model.
+
+Tested in SAM 2025.4.16
+*/
+
+if (varinfo('annual_poa_shading_loss_percent')== null) {
+	outln('This script must be run from a Detailed PV case.');
+	return;
+}
+elseif (get('annual_energy') == null) {
+	outln('No results to plot. Run a simulation before running this script.');
+	return;
+}
+
+// list of loss variables
+outputs = ['annual_poa_shading_loss_percent',
+'annual_poa_soiling_loss_percent',
+'annual_poa_cover_loss_percent',
+'annual_dc_module_loss_percent',
+'annual_dc_mppt_clip_loss_percent',
+'annual_dc_mismatch_loss_percent',
+'annual_dc_diodes_loss_percent',
+'annual_dc_wiring_loss_percent',
+'annual_dc_tracking_loss_percent',
+'annual_dc_nameplate_loss_percent',
+'annual_dc_optimizer_loss_percent',
+'annual_dc_perf_adj_loss_percent',
+'annual_ac_inv_clip_loss_percent',
+'annual_ac_inv_pso_loss_percent',
+'annual_ac_inv_pnt_loss_percent',
+'annual_ac_inv_eff_loss_percent',
+'annual_xfmr_loss_percent',
+'annual_ac_perf_adj_loss_percent'];
+
+// set data for plot
+y = [];
+x = [];
+xlabels = [];
+for(i=0; i<#outputs; i++ ){
+	y[i] = get(outputs[i]);
+	xlabels[i] = [i+1,varinfo(outputs[i]){'label'}];
+	x[i]=i+1;
+}
+
+// show data for debugging
+outln(y);
+outln(xlabels);
+outln(x);
+
+// create plot
+newplot();
+plot(y, x, {'type'='hbar', 'yap'='left', 'thick'=10, 'color'='grey'});
+plotopt( {'title'='', 'fine' = true, 'coarse' = true, 'scale'=1 } );
+axis( 'y1', {'type'='label', 'labels'=xlabels, 'min'=0,'max'=max(x)+1, 'ticksizes'=[0,0]});
+axis( 'x1', { 'label'='%', 'max'=max(y)+max(y)/10 } );
+
+// save plot as image file
+if ( yesno( 'Save graph as PNG?' ) )
+{
+	f_path=choose_dir(homedir(),'Save Plot');
+	f_name = f_path + '/plot.png';
+	outln(f_name);
+	ok = plotout( f_name , 'png'); // png, pdf, bmp, or jpg. Defaults to png if file type not given.
+	if ( ok == false) {
+		outln('Could not save the plot to ' + f_name);
+	}	
+	else {
+		outln('Saved plot to ' + f_name);
+		browse(f_name);
+	}	
+}
