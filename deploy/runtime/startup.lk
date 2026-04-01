@@ -497,7 +497,6 @@ function setup_single_owner_pages()
   			    { 'name'='Financial TOD Factors', 'caption'='Time of Delivery', 'collapsible'=true, 'collapsible_var'='revenue_TOD_is_shown', 'collapsed_by_default'=true },
 			    { 'name'='Financial Capacity Payments', 'caption'='Capacity Payments', 'collapsible'=true, 'collapsible_var'='revenue_capacity_payments_is_shown', 'collapsed_by_default'=true },
 			    { 'name'='Financial Curtailment Price', 'caption'='Curtailment Payments', 'collapsible'=true, 'collapsible_var'='revenue_curtailment_is_shown', 'collapsed_by_default'=true } ]],
-==== BASE ====
             { 'sidebar'='Revenue', 'help'='revenue/revenue_ppa' } );
   addpage( [[  { 'name'='Financial Tax Credits','caption'='Tax Credits','collapsible'=true,'collapsible_var'='show_tax_credits', 'collapsed_by_default'=false },
 				  { 'name'= 'Financial ITC Qualification', 'caption'='ITC Qualification', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
@@ -609,7 +608,6 @@ function setup_merchant_plant_pages()
   addpage( [[  { 'name'='Financial Tax Credits','caption'='Tax Credits','collapsible'=true,'collapsible_var'='show_tax_credits', 'collapsed_by_default'=false },
               { 'name'='Financial Cash Incentives','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false } ]],
            { 'sidebar'='Incentives', 'help'='incentives-and-depreciation/incentives' } );
-==== BASE ====
   addpage( [['Financial Depreciation Detailed' ]],
            { 'sidebar'='Depreciation', 'help'='incentives-and-depreciation/depreciation' });
 }
