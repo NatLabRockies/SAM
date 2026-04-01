@@ -1,15 +1,15 @@
 /*//////////////////////////////////////////////////////////////////////////////
 
 Given a latitude and longitude for a location, this script generates a CSV file 
-with a list of all weather files available from the NREL National Solar Radiation 
+with a list of all weather files available from the NLR National Solar Radiation 
 Database (NSRDB) API, and downloads the weather files that you request.
 
-See https://developer.nrel.gov/docs/solar/nsrdb/ for API documentation. 
+See https://developer.nlr.gov/docs/solar/nsrdb/ for API documentation. 
 
 Instructions:
  
- 1. Assign values to email and key using information from your NREL Developer
-    Network account. Sign up at https://developer.nrel.gov/.
+ 1. Assign values to email and key using information from your NLR Developer
+    Network account. Sign up at https://developer.nlr.gov/.
 
  2. Assign values to lat and lon for your location. (You can modify this 
     script to use the geocode() function to convert a place name or street 
@@ -35,7 +35,7 @@ should then be able to choose the file from the solar resource library.
 Note About Attributes: To choose data to include in file, add &attributes= 
 to the URL with a list of data. For example the list of available attributes for
 the PSM v3 dataset is listed at 
-https://developer.nrel.gov/docs/solar/nsrdb/psm3-download/.
+https://developer.nlr.gov/docs/solar/nsrdb/psm3-download/.
 
 For SAM photovoltaic and concentrating solar power models, the minimum required 
 attributes are:
@@ -57,9 +57,9 @@ Tested in SAM 2020.2.29 r3
 
 //////////////////////////////////////////////////////////////////////////////*/
 
-// NREL Developer Network credentials.
-// Get a key at https://developer.nrel.gov/
-email = 'sam.support@nrel.gov'; 
+// NLR Developer Network credentials.
+// Get a key at https://developer.nlr.gov/
+email = 'sam.support@nlr.gov'; 
 key = '<SAMAPIKEY>'; 
 
 // folder to store weather files (script creates subfolder for each location).
@@ -80,7 +80,7 @@ lat = us_lat;
 lon = us_lon;
 
 // NSRDB Data Query returns a list of all available datasets for a location
-base_url ='https://developer.nrel.gov/api/nsrdb/v2/solar/';
+base_url ='https://developer.nlr.gov/api/nsrdb/v2/solar/';
 query_url = 'nsrdb-data-query?api_key=' + key + '&wkt=POINT(' + to_string(lon) + '+' + to_string(lat) + ')';
 url = base_url + query_url;
 
@@ -174,37 +174,37 @@ Uncomment parameter assignments below to try downloading different types of file
 *///////////////////////////////////////////////////////////////////////////////
 
 // hourly single year example for PSM v3
-// https://developer.nrel.gov/docs/solar/nsrdb/psm3-download/
+// https://developer.nlr.gov/docs/solar/nsrdb/psm3-download/
 version = 'psm3';
 year = '2014';
 interval = 60;
 
 // 5-minute single year example for PSM v3 - Five Minute Temporal Resolution
-// https://developer.nrel.gov/docs/solar/nsrdb/psm3-5min-download/
+// https://developer.nlr.gov/docs/solar/nsrdb/psm3-5min-download/
 //version = 'psm3-5min';
 //year = '2019';
 //interval = 5;
 
 // tmy example for PSM v3 TMY, most recent TMY
-// https://developer.nrel.gov/docs/solar/nsrdb/psm3-tmy-download/
+// https://developer.nlr.gov/docs/solar/nsrdb/psm3-tmy-download/
 //version = 'psm3-tmy';
 //year = 'tmy';
 //interval = 60;
 
 // tmy example for PSM v3 TMY, 1998 - 2016 TMY
-// https://developer.nrel.gov/docs/solar/nsrdb/psm3-tmy-download/
+// https://developer.nlr.gov/docs/solar/nsrdb/psm3-tmy-download/
 //version = 'psm3-tmy';
 //year = 'tmy-2016';
 //interval = 60;
 
 // tgy example for PSM v3 TMY, 1998 - 2018 TGY
-// https://developer.nrel.gov/docs/solar/nsrdb/psm3-tmy-download/
+// https://developer.nlr.gov/docs/solar/nsrdb/psm3-tmy-download/
 version = 'psm3-tmy';
 year = 'all';
 interval = 60;
 
 // all years example for PSM v3
-// https://developer.nrel.gov/docs/solar/nsrdb/psm3-download/
+// https://developer.nlr.gov/docs/solar/nsrdb/psm3-download/
 //year = 'all';
 //interval = 30;
 //version = 'psm3';

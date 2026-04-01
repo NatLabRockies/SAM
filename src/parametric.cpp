@@ -3630,7 +3630,7 @@ void Parametric_QS::OnCommand(wxCommandEvent &evt)
 		}
 		case wxID_HELP:
 		{
-			SamApp::ShowHelp("parametric_quick_setup");
+			SamApp::ShowHelp("window-reference/win_parametric_quick_setup");
 			break;
 		}
 		case  ID_setupOption:

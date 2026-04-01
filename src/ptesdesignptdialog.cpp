@@ -892,7 +892,7 @@ void PTESDesignPtDialog::OnEvt(wxCommandEvent& e)
         }
         case wxID_HELP:
         {
-            SamApp::ShowHelp("ptes_design_pt");
+            SamApp::ShowHelp("window-reference/win_ptes_design_pt");
             break;
         }
     }

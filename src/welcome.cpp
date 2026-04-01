@@ -225,7 +225,7 @@ void WelcomeScreen::RunWelcomeScript( const wxString &script )
 	env.register_funcs( lk::stdlib_basic() );
 
 	// note: do not register SYSIO functions to improve security when running
-	// LK code downloaded directly from sam.nrel.gov in the welcome window
+	// LK code downloaded directly from sam.nlr.gov in the welcome window
 
 	env.register_funcs( lk::stdlib_string() );
 	env.register_funcs( lk::stdlib_math() );
@@ -483,7 +483,7 @@ void WelcomeScreen::OnCommand( wxCommandEvent &evt )
 		break;
 
 	case wxID_HELP:
-		SamApp::ShowHelp( "welcome_page" );
+		SamApp::ShowHelp( "getting-started/welcome_page" );
 		break;
 
 	case wxID_EXIT:

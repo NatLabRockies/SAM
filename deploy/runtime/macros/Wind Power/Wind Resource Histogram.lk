@@ -3,7 +3,7 @@
 This macro displays a .srw wind data file as histograms for each wind turbine height's
 direction and speed. <br><br>
 File must follow .srw format.
-See <a href = "https://www.nrel.gov/analysis/sam/help/html-php/weather_format.htm">
+See <a href = "https://www.nlr.gov/analysis/sam/help/html-php/weather_format.htm">
 documentation</a> (browser-sensitive) for more info.
 <br><br>
 
