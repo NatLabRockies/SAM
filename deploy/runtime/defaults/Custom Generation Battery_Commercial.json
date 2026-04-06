@@ -37018,6 +37018,9 @@
     "energy_output_array": [
         0.0
     ],
+    "energy_output_array_lifetime": [
+        0.0
+    ],
     "escal_belpe": [
         0.0
     ],

@@ -9602,6 +9602,9 @@
     "energy_output_array": [
         0.0
     ],
+    "energy_output_array_lifetime": [
+        0.0
+    ],
     "equip1_reserve_cost": 0.0,
     "equip1_reserve_freq": 0.0,
     "equip2_reserve_cost": 0.0,
