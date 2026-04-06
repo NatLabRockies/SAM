@@ -56,6 +56,14 @@ extern "C"
 	SAM_EXPORT void SAM_CustomGeneration_Plant_energy_output_array_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
 
 	/**
+	 * Set energy_output_array_lifetime: Array of Energy Output Profile [kW]
+	 * options: None
+	 * constraints: None
+	 * required if: spec_mode=2
+	 */
+	SAM_EXPORT void SAM_CustomGeneration_Plant_energy_output_array_lifetime_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
+
+	/**
 	 * Set heat_rate: Heat Rate [MMBTUs/MWhe]
 	 * options: None
 	 * constraints: None
@@ -288,6 +296,8 @@ extern "C"
 	SAM_EXPORT double SAM_CustomGeneration_Plant_derate_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double* SAM_CustomGeneration_Plant_energy_output_array_aget(SAM_table ptr, int* length, SAM_error *err);
+
+	SAM_EXPORT double* SAM_CustomGeneration_Plant_energy_output_array_lifetime_aget(SAM_table ptr, int* length, SAM_error *err);
 
 	SAM_EXPORT double SAM_CustomGeneration_Plant_heat_rate_nget(SAM_table ptr, SAM_error *err);
 

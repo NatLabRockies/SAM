@@ -32,6 +32,12 @@ SAM_EXPORT void SAM_CustomGeneration_Plant_energy_output_array_aset(SAM_table pt
 	});
 }
 
+SAM_EXPORT void SAM_CustomGeneration_Plant_energy_output_array_lifetime_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_array(ptr, "energy_output_array_lifetime", arr, length);
+	});
+}
+
 SAM_EXPORT void SAM_CustomGeneration_Plant_heat_rate_nset(SAM_table ptr, double number, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_number(ptr, "heat_rate", number);
@@ -212,6 +218,16 @@ SAM_EXPORT double* SAM_CustomGeneration_Plant_energy_output_array_aget(SAM_table
 	result = ssc_data_get_array(ptr, "energy_output_array", length);
 	if (!result)
 		make_access_error("SAM_CustomGeneration", "energy_output_array");
+	});
+	return result;
+}
+
+SAM_EXPORT double* SAM_CustomGeneration_Plant_energy_output_array_lifetime_aget(SAM_table ptr, int* length, SAM_error *err){
+	double* result = nullptr;
+	translateExceptions(err, [&]{
+	result = ssc_data_get_array(ptr, "energy_output_array_lifetime", length);
+	if (!result)
+		make_access_error("SAM_CustomGeneration", "energy_output_array_lifetime");
 	});
 	return result;
 }
