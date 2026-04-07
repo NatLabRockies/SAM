@@ -9451,6 +9451,7 @@
     "depr_alloc_sl_20_percent": 3.0,
     "depr_alloc_sl_39_percent": 0.0,
     "depr_alloc_sl_5_percent": 0.0,
+    "depr_allocation_choice": 0.0,
     "depr_bonus_fed": 0.0,
     "depr_bonus_fed_custom": 0.0,
     "depr_bonus_fed_macrs_15": 1.0,
@@ -27866,6 +27867,8 @@
     "is_dispatch": 0.0,
     "is_timestep_load_fractions": 0.0,
     "is_tod_pc_target_also_pc_max": 0.0,
+    "itc_basis_depreciation_allocation": 0.0,
+    "itc_basis_percent_depr": 0.0,
     "itc_fed_amount": [
         0.0
     ],
@@ -28557,6 +28560,8 @@
     "n_rad_tubes": 100.0,
     "nameplate": 99.99990000000001,
     "nominal_discount_rate": 9.060000000000003,
+    "non_itc_basis_depreciation_allocation": 0.0,
+    "non_itc_basis_percent_depr": 100.0,
     "om_capacity": [
         66.0
     ],
@@ -28666,9 +28671,8 @@
     "show_CapitalCostSO": 1.0,
     "show_DebtConstDSCR": 1.0,
     "show_ReserveAccounts": 1.0,
-    "show_cash_incentives": 1.0,
     "show_construction_period": 1.0,
-    "show_tax_credits": 1.0,
+    "show_depr_alloc": 1.0,
     "site_improvements_spec_cost": 20.0,
     "solar_data_file_name": "tucson_az_32.116521_-110.933042_psmv3_60_tmy.csv",
     "solar_data_source": "NSRDB",

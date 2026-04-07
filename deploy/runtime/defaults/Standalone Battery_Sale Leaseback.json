@@ -9992,6 +9992,7 @@
     "depr_alloc_sl_20_percent": 3.0,
     "depr_alloc_sl_39_percent": 0.0,
     "depr_alloc_sl_5_percent": 0.0,
+    "depr_allocation_choice": 0.0,
     "depr_bonus_fed": 0.0,
     "depr_bonus_fed_custom": 0.0,
     "depr_bonus_fed_macrs_15": 1.0,
@@ -28313,6 +28314,8 @@
     "inflation_rate": 2.5,
     "insurance_rate": 0.0,
     "is_btm": 0.0,
+    "itc_basis_depreciation_allocation": 0.0,
+    "itc_basis_percent_depr": 0.0,
     "itc_fed_amount": [
         0.0
     ],
@@ -28985,6 +28988,8 @@
     "months_receivables_reserve": 0.0,
     "months_working_reserve": 6.0,
     "nominal_discount_rate": 9.060000000000003,
+    "non_itc_basis_depreciation_allocation": 0.0,
+    "non_itc_basis_percent_depr": 100.0,
     "om_batt_capacity_cost": [
         15.0
     ],
@@ -29089,9 +29094,8 @@
     "salvage_value": 0.0,
     "show_CapitalCostSO": 1.0,
     "show_ReserveAccounts": 1.0,
-    "show_cash_incentives": 1.0,
     "show_construction_period": 1.0,
-    "show_tax_credits": 1.0,
+    "show_depr_alloc": 1.0,
     "solution_mode_message": "<invalid>",
     "sponsor_operating_margin": 20.0,
     "sponsor_operating_margin_amount": 1152001.460736,

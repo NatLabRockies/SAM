@@ -65,6 +65,7 @@
     ],
     "COPY_field_thermal_output": 7.927156420127617,
     "COPY_field_thermal_output_ideal": 14.517913337382212,
+    "COPY_system_capacity_heat_btu": 17.060708175665377,
     "COPY_total_aperture": 21120.0,
     "ColperSCA": [
         8.0,
@@ -1152,24 +1153,28 @@
     "bop_par_f": 1.0,
     "calc_design_pipe_vals": 1.0,
     "cbi_fed_amount": 0.0,
+    "cbi_fed_amount_heat_btu": 0.0,
     "cbi_fed_deprbas_fed": 0.0,
     "cbi_fed_deprbas_sta": 0.0,
     "cbi_fed_maxvalue": 1e38,
     "cbi_fed_tax_fed": 1.0,
     "cbi_fed_tax_sta": 1.0,
     "cbi_oth_amount": 0.0,
+    "cbi_oth_amount_heat_btu": 0.0,
     "cbi_oth_deprbas_fed": 0.0,
     "cbi_oth_deprbas_sta": 0.0,
     "cbi_oth_maxvalue": 1e38,
     "cbi_oth_tax_fed": 1.0,
     "cbi_oth_tax_sta": 1.0,
     "cbi_sta_amount": 0.0,
+    "cbi_sta_amount_heat_btu": 0.0,
     "cbi_sta_deprbas_fed": 0.0,
     "cbi_sta_deprbas_sta": 0.0,
     "cbi_sta_maxvalue": 1e38,
     "cbi_sta_tax_fed": 1.0,
     "cbi_sta_tax_sta": 1.0,
     "cbi_uti_amount": 0.0,
+    "cbi_uti_amount_heat_btu": 0.0,
     "cbi_uti_deprbas_fed": 0.0,
     "cbi_uti_deprbas_sta": 0.0,
     "cbi_uti_maxvalue": 1e38,
@@ -11764,7 +11769,7 @@
     "payment_option": 0.0,
     "pb_fixed_par": 0.0055,
     "pb_pump_coef": 0.55,
-    "pbi_fed_amount": [
+    "pbi_fed_amount_heat_btu": [
         0.0
     ],
     "pbi_fed_escal": 0.0,
@@ -11772,7 +11777,7 @@
     "pbi_fed_tax_fed": 1.0,
     "pbi_fed_tax_sta": 1.0,
     "pbi_fed_term": 0.0,
-    "pbi_oth_amount": [
+    "pbi_oth_amount_heat_btu": [
         0.0
     ],
     "pbi_oth_escal": 0.0,
@@ -11780,7 +11785,7 @@
     "pbi_oth_tax_fed": 1.0,
     "pbi_oth_tax_sta": 1.0,
     "pbi_oth_term": 0.0,
-    "pbi_sta_amount": [
+    "pbi_sta_amount_heat_btu": [
         0.0
     ],
     "pbi_sta_escal": 0.0,
@@ -11788,7 +11793,7 @@
     "pbi_sta_tax_fed": 1.0,
     "pbi_sta_tax_sta": 1.0,
     "pbi_sta_term": 0.0,
-    "pbi_uti_amount": [
+    "pbi_uti_amount_heat_btu": [
         0.0
     ],
     "pbi_uti_escal": 0.0,
@@ -11806,12 +11811,12 @@
     "prop_tax_cost_assessed_percent": 100.0,
     "property_assessed_value": 13674670.15317073,
     "property_tax_rate": 0.0,
-    "ptc_fed_amount": [
+    "ptc_fed_amount_heat_btu": [
         0.0
     ],
     "ptc_fed_escal": 0.0,
     "ptc_fed_term": 10.0,
-    "ptc_sta_amount": [
+    "ptc_sta_amount_heat_btu": [
         0.0
     ],
     "ptc_sta_escal": 0.0,
@@ -11869,9 +11874,7 @@
     "show_CapitalCostSO": 1.0,
     "show_DebtConstDSCR": 1.0,
     "show_ReserveAccounts": 1.0,
-    "show_cash_incentives": 1.0,
     "show_construction_period": 1.0,
-    "show_tax_credits": 1.0,
     "single_loop_aperture": 5280.0,
     "solar_data_file_name": "tucson_az_32.116521_-110.933042_psmv3_60_tmy.csv",
     "solar_data_source": "NSRDB",

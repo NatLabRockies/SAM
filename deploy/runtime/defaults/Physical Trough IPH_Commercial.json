@@ -37431,8 +37431,6 @@
         ]
     ],
     "sf_type": 1.0,
-    "show_cash_incentives": 1.0,
-    "show_tax_credits": 1.0,
     "single_loop_aperture": 5280.0,
     "solar_data_file_name": "tucson_az_32.116521_-110.933042_psmv3_60_tmy.csv",
     "solar_data_source": "NSRDB",

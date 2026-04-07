@@ -9133,6 +9133,7 @@
     "depr_alloc_sl_20_percent": 3.5,
     "depr_alloc_sl_39_percent": 0.0,
     "depr_alloc_sl_5_percent": 0.0,
+    "depr_allocation_choice": 0.0,
     "depr_bonus_fed": 0.0,
     "depr_bonus_fed_custom": 0.0,
     "depr_bonus_fed_macrs_15": 1.0,
@@ -27515,6 +27516,8 @@
     "inv_snl_vdco": 615.0,
     "is_advanced": 0.0,
     "is_btm": 0.0,
+    "itc_basis_depreciation_allocation": 0.0,
+    "itc_basis_percent_depr": 0.0,
     "itc_fed_amount": [
         0.0
     ],
@@ -28222,6 +28225,8 @@
     "months_receivables_reserve": 0.0,
     "months_working_reserve": 6.0,
     "nominal_discount_rate": 9.060000000000003,
+    "non_itc_basis_depreciation_allocation": 0.0,
+    "non_itc_basis_percent_depr": 100.0,
     "om_capacity": [
         15.0
     ],
@@ -28300,9 +28305,8 @@
     "salvage_value": 0.0,
     "show_CapitalCostSO": 1.0,
     "show_ReserveAccounts": 1.0,
-    "show_cash_incentives": 1.0,
     "show_construction_period": 1.0,
-    "show_tax_credits": 1.0,
+    "show_depr_alloc": 1.0,
     "solar_data_file_name": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
     "solar_data_source": "NSRDB",
     "solar_resource": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy",
