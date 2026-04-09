@@ -266,6 +266,12 @@ SAM_EXPORT void SAM_TcsmoltenSalt_SystemControl_is_field_tracking_init_nset(SAM_
 	});
 }
 
+SAM_EXPORT void SAM_TcsmoltenSalt_SystemControl_is_hybrid_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "is_hybrid", number);
+	});
+}
+
 SAM_EXPORT void SAM_TcsmoltenSalt_SystemControl_is_parallel_htr_nset(SAM_table ptr, double number, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_number(ptr, "is_parallel_htr", number);
@@ -2370,6 +2376,15 @@ SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_is_field_tracking_init_nget(SA
 	translateExceptions(err, [&]{
 	if (!ssc_data_get_number(ptr, "is_field_tracking_init", &result))
 		make_access_error("SAM_TcsmoltenSalt", "is_field_tracking_init");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_is_hybrid_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "is_hybrid", &result))
+		make_access_error("SAM_TcsmoltenSalt", "is_hybrid");
 	});
 	return result;
 }

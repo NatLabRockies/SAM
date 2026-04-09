@@ -1502,6 +1502,12 @@ SAM_EXPORT void SAM_HostDeveloper_ChargesByMonth_utility_bill_w_sys_aset(SAM_tab
 	});
 }
 
+SAM_EXPORT void SAM_HostDeveloper_ChargesByMonth_utility_bill_wo_sys_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_array(ptr, "utility_bill_wo_sys", arr, length);
+	});
+}
+
 SAM_EXPORT void SAM_HostDeveloper_SystemOutput_annual_thermal_value_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_array(ptr, "annual_thermal_value", arr, length);
@@ -4049,6 +4055,16 @@ SAM_EXPORT double* SAM_HostDeveloper_ChargesByMonth_utility_bill_w_sys_aget(SAM_
 	result = ssc_data_get_array(ptr, "utility_bill_w_sys", length);
 	if (!result)
 		make_access_error("SAM_HostDeveloper", "utility_bill_w_sys");
+	});
+	return result;
+}
+
+SAM_EXPORT double* SAM_HostDeveloper_ChargesByMonth_utility_bill_wo_sys_aget(SAM_table ptr, int* length, SAM_error *err){
+	double* result = nullptr;
+	translateExceptions(err, [&]{
+	result = ssc_data_get_array(ptr, "utility_bill_wo_sys", length);
+	if (!result)
+		make_access_error("SAM_HostDeveloper", "utility_bill_wo_sys");
 	});
 	return result;
 }
