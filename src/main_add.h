@@ -311,7 +311,7 @@ bool SamApp::OnInit()
 	/*wxMSWSetupExceptionHandler(
 		wxString("SAM"),
 		SamApp::VersionStr(),
-		wxString("sam.support@nrel.gov") );
+		wxString("sam.support@nlr.gov") );
 		*/
 #endif
 
@@ -464,8 +464,6 @@ extern void RegisterReportObjectTypes();
 			if (lksw->Load(argv[2])) lksw->RunScript();
 		}
 	}
-
-	LoadPythonConfig();
 
 	return true;
 }

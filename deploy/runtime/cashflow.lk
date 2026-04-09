@@ -1159,7 +1159,7 @@ function xl_set_value( xl, variable)
 {
 	if ( varinfo( variable ) == null )
 	{
-		msgbox( 'Cashflow Error (xl_set_value)\n' + variable + ' does not exist in this context. [' +  technology() + ', ' + financing() + '].\n\nPlease let us know at sam.support@nrel.gov.' );
+		msgbox( 'Cashflow Error (xl_set_value)\n' + variable + ' does not exist in this context. [' +  technology() + ', ' + financing() + '].\n\nPlease let us know at sam.support@nlr.gov.' );
 		return false;
 	}
 	else
@@ -1174,7 +1174,7 @@ function xl_set_value_yesno( xl, variable )
 {
 	if ( varinfo( variable ) == null )
 	{
-		msgbox( 'Cashflow Error (xl_set_value_yesno)\n' + variable + ' does not exist in this context. [' +  technology() + ', ' + financing() + '].\n\nPlease let us know at sam.support@nrel.gov.' );
+		msgbox( 'Cashflow Error (xl_set_value_yesno)\n' + variable + ' does not exist in this context. [' +  technology() + ', ' + financing() + '].\n\nPlease let us know at sam.support@nlr.gov.' );
 		return false;
 	}
 	else
@@ -1191,7 +1191,7 @@ function xl_set_output( xl, variable)
 {
 	if ( varinfo( variable ) == null )
 	{
-		msgbox( 'Cashflow Error (xl_set_output)\n' + variable + ' does not exist in this context. [' +  technology() + ', ' + financing() + '].\n\nPlease let us know at sam.support@nrel.gov.' );
+		msgbox( 'Cashflow Error (xl_set_output)\n' + variable + ' does not exist in this context. [' +  technology() + ', ' + financing() + '].\n\nPlease let us know at sam.support@nlr.gov.' );
 		return false;
 	}
 	else

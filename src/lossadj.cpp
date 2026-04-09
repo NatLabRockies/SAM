@@ -437,7 +437,7 @@ public:
 		switch( e.GetId() )
 		{
 		case wxID_HELP:
-			SamApp::ShowHelp("edit_losses");
+			SamApp::ShowHelp("window-reference/win_edit_losses");
 			break;
 		//case ID_ENABLE_HOURLY:
         case ID_ENABLE_INDEX:
