@@ -150,6 +150,10 @@ PVUncertaintyForm::PVUncertaintyForm( wxWindow *parent, Case *cc )
 
     wxStaticBoxSizer *sizer_changePvalue = new wxStaticBoxSizer( wxHORIZONTAL, this, "Update P value" );
     label = new wxStaticText( this, wxID_ANY, "Custom Px:" );
+    int pValue = static_cast<int>(m_data.pValue);
+    if (pValue < 1) pValue = 1;
+    else if (pValue > 99) pValue = 99;
+    m_data.pValue = pValue;
     m_puser = new wxNumericCtrl( this, wxID_ANY, 90, wxNUMERIC_UNSIGNED );
     m_puser->SetRange(1, 99);
     sizer_changePvalue->AddSpacer( 20 );
