@@ -1321,7 +1321,7 @@ setup_thirdparty_pages( LOAD_BELPE); //includes building load calculator by defa
 setconfig( 'Wind Power', 'Residential' );
 setmodules( ['windpower', 'grid', 'utilityrate5', 'cashloan']);
 setup_windpower_pages();
-setup_lifetime_page(DEGRADATION_AC_SINGLE_YEAR);
+setup_lifetime_page(DEGRADATION_AC_LIFETIME);
 addpage( [['Wind Farm Costs']],
 		{ 'sidebar'='Installation Costs', 'help'='installation-costs/cc_wind' } );
 addpage( [[ 'Operating Costs' ]], {'sidebar' = 'Operating Costs', 'help'='operating-costs/oc_operating'} );
@@ -1331,7 +1331,7 @@ setup_residential_pages( LOAD_SIMPLE ); //does not include building load calcula
 setconfig( 'Wind Power', 'Commercial' );
 setmodules( ['windpower', 'grid', 'utilityrate5', 'cashloan']);
 setup_windpower_pages();
-setup_lifetime_page(DEGRADATION_AC_SINGLE_YEAR);
+setup_lifetime_page(DEGRADATION_AC_LIFETIME);
 addpage( [['Wind Farm Costs']],
 		{ 'sidebar'='Installation Costs', 'help'='installation-costs/cc_wind' } );
 addpage( [[ 'Operating Costs' ]], {'sidebar' = 'Operating Costs', 'help'='operating-costs/oc_operating'} );
@@ -1342,7 +1342,7 @@ setup_commercial_pages( LOAD_SIMPLE ); //does not include building load calculat
 setconfig( 'Wind Power', 'Leveraged Partnership Flip' );
 setmodules( ['windpower', 'grid', 'utilityrate5', 'levpartflip']);
 setup_windpower_pages();
-setup_lifetime_page(DEGRADATION_AC_SINGLE_YEAR);
+setup_lifetime_page(DEGRADATION_AC_LIFETIME);
 addpage( [['Wind Farm Costs']],
 	{ 'sidebar'='Installation Costs', 'help'='installation-costs/cc_wind' } );
 addpage( [[ 'Operating Costs' ]], {'sidebar' = 'Operating Costs', 'help'='operating-costs/oc_operating'} );
@@ -1353,7 +1353,7 @@ setup_electricity_purchases();
 setconfig( 'Wind Power', 'All Equity Partnership Flip' );
 setmodules( ['windpower', 'grid', 'utilityrate5', 'equpartflip']);
 setup_windpower_pages();
-setup_lifetime_page(DEGRADATION_AC_SINGLE_YEAR);
+setup_lifetime_page(DEGRADATION_AC_LIFETIME);
 addpage( [['Wind Farm Costs']],
 		{ 'sidebar'='Installation Costs', 'help'='installation-costs/cc_wind' } );
 addpage( [[ 'Operating Costs' ]], {'sidebar' = 'Operating Costs', 'help'='operating-costs/oc_operating'} );
@@ -1364,7 +1364,7 @@ setup_electricity_purchases();
 setconfig( 'Wind Power', 'Sale Leaseback' );
 setmodules( ['windpower', 'grid', 'utilityrate5', 'saleleaseback']);
 setup_windpower_pages();
-setup_lifetime_page(DEGRADATION_AC_SINGLE_YEAR);
+setup_lifetime_page(DEGRADATION_AC_LIFETIME);
 addpage( [['Wind Farm Costs']],
 		{ 'sidebar'='Installation Costs', 'help'='installation-costs/cc_wind' } );
 addpage( [[ 'Operating Costs' ]], {'sidebar' = 'Operating Costs', 'help'='operating-costs/oc_operating'} );
@@ -1375,7 +1375,7 @@ setup_electricity_purchases();
 setconfig( 'Wind Power', 'Single Owner' );
 setmodules( ['windpower', 'grid', 'utilityrate5', 'singleowner']);
 setup_windpower_pages();
-setup_lifetime_page(DEGRADATION_AC_SINGLE_YEAR);
+setup_lifetime_page(DEGRADATION_AC_LIFETIME);
 addpage( [['Wind Farm Costs']],
 		{ 'sidebar'='Installation Costs', 'help'='installation-costs/cc_wind' } );
 addpage( [[ 'Operating Costs' ]], {'sidebar' = 'Operating Costs', 'help'='operating-costs/oc_operating'} );
@@ -1385,7 +1385,7 @@ setup_electricity_purchases();
 setconfig( 'Wind Power', 'Merchant Plant' );
 setmodules( ['windpower', 'grid', 'utilityrate5', 'merchantplant']);
 setup_windpower_pages();
-setup_lifetime_page(DEGRADATION_AC_SINGLE_YEAR);
+setup_lifetime_page(DEGRADATION_AC_LIFETIME);
 addpage( [['Wind Farm Costs']],
 		{ 'sidebar'='Installation Costs', 'help'='installation-costs/cc_wind' } );
 addpage( [[ 'Operating Costs' ]], {'sidebar' = 'Operating Costs', 'help'='operating-costs/oc_operating'} );

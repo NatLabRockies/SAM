@@ -11212,6 +11212,9 @@
     ],
     "flip_target_percent": 11.0,
     "flip_target_year": 20.0,
+    "generic_degradation": [
+        0.0
+    ],
     "grid_curtailment": [
         1e38,
         1e38,
@@ -20814,7 +20817,7 @@
     ],
     "step": 0.0,
     "system_capacity": 200000.0,
-    "system_use_lifetime_output": 0.0,
+    "system_use_lifetime_output": 1.0,
     "tax_investor_equity_percent": 60.0,
     "tax_investor_postflip_cash_percent": 10.0,
     "tax_investor_postflip_tax_percent": 10.0,
