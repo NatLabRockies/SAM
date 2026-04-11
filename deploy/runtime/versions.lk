@@ -201,6 +201,9 @@ version_upgrade{'2026.2.19'} = define() {
 	
 	if (cfg.tech == 'Wind Power' || strpos(cfg.tech, "Hybrid") > -1) {
 		message('Wind balance of system cost estimators have been removed. Total capital costs remain the same in this version. Please uses SAM 2025.4.16 or older if you need access to the balance of system cost estimators within SAM.', 'warning');
+	
+		wind_degradation = oldvalue('degradation');
+		value('generic_degradation', wind_degradation, 'Wind has been updated to run in lifetime mode, the name of the degradation input has changed to "generic_degrdation"');
 	}
 	
 	if (cfg.tech == 'Custom Generation Profile' || cfg.tech == 'CustomGeneration PVWatts Wind FuelCell Battery Hybrid') {
