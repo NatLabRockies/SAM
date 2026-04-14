@@ -465,16 +465,16 @@ function solaranywhere_to_sam_csv( wf )
 				}
 				else
 				{
-					if ( strpos(lower(to_string(arr[i])),'global') > -1 ) { i_ghi = i; } 
-					if ( strpos(lower(to_string(arr[i])),'direct') > -1 ) { i_dni = i; } 
-					if ( strpos(lower(to_string(arr[i])),'diffuse') > -1 ) { i_dhi = i; } 
-					if ( strpos(lower(to_string(arr[i])),'deg c') > -1 ) { i_tdry = i; } // avoid 'ambient' because AmbientTemperatureObservationType
-					if ( strpos(lower(to_string(arr[i])),'m/s') > -1 ) { i_wspd = i; } // avoid 'wind' because WindSpeedObservationType
-					if ( strpos(lower(to_string(arr[i])),'humid') > -1 ) { i_rh = i; } 
-					if ( strpos(lower(to_string(arr[i])),'snow') > -1 ) { i_snow = i; } // snow depth in meters
+					if ( strpos(lower(to_string(arr[i])),'global horizontal irradiance') > -1 ) { i_ghi = i; } // avoid 'ghi' because clearsky
+					if ( strpos(lower(to_string(arr[i])),'direct normal irradiance') > -1 ) { i_dni = i; } 
+					if ( strpos(lower(to_string(arr[i])),'diffuse horizontal irradiance') > -1 ) { i_dhi = i; } 
+					if ( strpos(lower(to_string(arr[i])),'ambienttemperature (deg c)') > -1 ) { i_tdry = i; } // avoid 'ambient' because AmbientTemperatureObservationType
+					if ( strpos(lower(to_string(arr[i])),'windspeed (m/s)') > -1 ) { i_wspd = i; } // avoid 'wind' because WindSpeedObservationType, note wind-speed 100m
+					if ( strpos(lower(to_string(arr[i])),'relative humidity') > -1 ) { i_rh = i; } 
+					if ( strpos(lower(to_string(arr[i])),'snow depth') > -1 ) { i_snow = i; } // snow depth in meters
 					if ( strpos(lower(to_string(arr[i])),'albedo') > -1 ) { i_albedo = i; }
-					if ( strpos(lower(to_string(arr[i])),'10') > -1 ) { i_pm10 = i; } // Particulate Matter 10 (g/m3), PM not used by SAM but requested by CPR https://github.com/NatLabRockies/SAM/issues/554
-					if ( strpos(lower(to_string(arr[i])),'2.5') > -1 ) { i_pm25 = i; } // Particulate Matter 2.5 (g/m3)
+					if ( strpos(lower(to_string(arr[i])),'matter 10') > -1 ) { i_pm10 = i; } // Particulate Matter 10 (g/m3), PM not used by SAM but requested by CPR https://github.com/NatLabRockies/SAM/issues/554
+					if ( strpos(lower(to_string(arr[i])),'matter 2.5') > -1 ) { i_pm25 = i; } // Particulate Matter 2.5 (g/m3)
 				}
 			}
 			// SAM CSV headers can be in any order: Year,Month,Day,Hour,Minute,GHI,DNI,DHI,Tdry,Tdew,RH,Pres,Wspd,Wdir,Albedo,Snow
