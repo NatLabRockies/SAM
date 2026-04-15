@@ -9783,6 +9783,7 @@
 			"ud_m_dot_water_cool_des": 0
 		},
 		"TimeOfDeliveryFactors": {
+			"is_timestep_load_fractions": 0
 		},
 		"FinancialSolutionMode": {
 		},
