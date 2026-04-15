@@ -1,20 +1,20 @@
 /*
 
-This script downloads solar resource files from the NREL National Solar Radiation
+This script downloads solar resource files from the NLR National Solar Radiation
 Database using the Puerto Rico SHR API and puts them in the SAM Downloaded 
 Weather Files folder on your computer.
 
 For information about the API, see:
 
-https://developer.nrel.gov/docs/solar/nsrdb/puerto-rico-download/
+https://developer.nlr.gov/docs/solar/nsrdb/puerto-rico-download/
 
-This script requires an NREL Developer API key. Register for a free key at:
+This script requires an NLR Developer API key. Register for a free key at:
 
-https://developer.nrel.gov
+https://developer.nlr.gov
 
 To use the script:
 
-1. replace <API_KEY> and <EMAIL> below with your NREL Developer API key and the
+1. replace <API_KEY> and <EMAIL> below with your NLR Developer API key and the
 email address you used to request the key.
 
 2. Set the values of inputs.lat and inputs.lon. If you 
@@ -42,12 +42,12 @@ inputs.lat = 18.5; // Latitude in Puerto Rico
 inputs.lon = -66.1; // Longitude in Puerto Rico
 inputs.interval = 60; // Time interval for data: 60, 30, or 5
 inputs.names = "all"; // Years. Multiple years can be downloaded with a comma seperated list, or use "all" for all hourly data for all available years
-inputs.api_key="<API_KEY>"; // Your API key for developer.nrel.gov 
+inputs.api_key="<API_KEY>"; // Your API key for developer.nlr.gov 
 inputs.email="<EMAIL>"; // The email address associated with your API key
 
 // URLs for the Puerto Rico downloads
-nsrdb_pr_query_csv="https://developer.nrel.gov/api/nsrdb/v2/solar/puerto-rico-download.csv?";
-nsrdb_pr_query_json="https://developer.nrel.gov/api/nsrdb/v2/solar/puerto-rico-download.json?";
+nsrdb_pr_query_csv="https://developer.nlr.gov/api/nsrdb/v2/solar/puerto-rico-download.csv?";
+nsrdb_pr_query_json="https://developer.nlr.gov/api/nsrdb/v2/solar/puerto-rico-download.json?";
 
 // folder to store weather files (script creates subfolder for each location).
 path = wfdownloaddir();

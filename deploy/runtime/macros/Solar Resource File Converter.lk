@@ -4,13 +4,13 @@
 the SAM CSV format.</p>
 <br><br>
 <ul>
-<li><b>TMY2</b> is a non-delimited format developed by NREL for the National 
+<li><b>TMY2</b> is a non-delimited format developed by NLR for the National 
     Solar Radiation Database (NSRDB) 1961-1990 update. This legacy data is 
     available from the 
-    <a href="https://nsrdb.nrel.gov/data-sets/archives.html">NSRDB Archives</a>.<br></li>
-<li><b>TMY3</b> is a comma-delimited format developed by NREL for the 
+    <a href="https://nsrdb.nlr.gov/data-sets/archives.html">NSRDB Archives</a>.<br></li>
+<li><b>TMY3</b> is a comma-delimited format developed by NLR for the 
     NSRDB 1991-2010 update. This legacy data is available from the 
-    <a href="https://nsrdb.nrel.gov/data-sets/archives.html">NSRDB Archives</a>.<br></li>
+    <a href="https://nsrdb.nlr.gov/data-sets/archives.html">NSRDB Archives</a>.<br></li>
 <li><b>EPW</b> is a comma-delimited format developed for the U.S. Department
     of Energy's EnergyPlus building simulation software, and available on the
     <a href="https://energyplus.net/weather">EnergyPlus Weather Data page</>.<br></li>
@@ -32,7 +32,7 @@ this macro to convert those files to a "stripped" down version with only the
 data that SAM uses in a file that you can edit or view in a spreadsheet program.</p>
 
 <p>For more information about weather data for SAM, see the
-<a href="https://sam.nrel.gov/weather-data"</a>Weather Data page</a> on the SAM
+<a href="https://sam.nlr.gov/weather-data"</a>Weather Data page</a> on the SAM
 website.</p>
 
 <p><b>To convert a file:</b></p>
@@ -473,7 +473,7 @@ function solaranywhere_to_sam_csv( wf )
 					if ( strpos(lower(to_string(arr[i])),'humid') > -1 ) { i_rh = i; } 
 					if ( strpos(lower(to_string(arr[i])),'snow') > -1 ) { i_snow = i; } // snow depth in meters
 					if ( strpos(lower(to_string(arr[i])),'albedo') > -1 ) { i_albedo = i; }
-					if ( strpos(lower(to_string(arr[i])),'10') > -1 ) { i_pm10 = i; } // Particulate Matter 10 (g/m3), PM not used by SAM but requested by CPR https://github.com/NREL/SAM/issues/554
+					if ( strpos(lower(to_string(arr[i])),'10') > -1 ) { i_pm10 = i; } // Particulate Matter 10 (g/m3), PM not used by SAM but requested by CPR https://github.com/NatLabRockies/SAM/issues/554
 					if ( strpos(lower(to_string(arr[i])),'2.5') > -1 ) { i_pm25 = i; } // Particulate Matter 2.5 (g/m3)
 				}
 			}

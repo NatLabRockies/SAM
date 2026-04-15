@@ -992,7 +992,7 @@ version_upgrade{'2020.11.29'} = define() {
 		{
 			value("pc_config", 0);
 			message('The Supercritical Carbon Dioxide (sCO2) Power Cycle option has been removed from the Power Cycle page.'
-						'To model an sCO2 cycle, use the sCO2 Cycle Integration macro with the NREL sCO2 Power Cycle Python model. See the macro instructions for details.'
+						'To model an sCO2 cycle, use the sCO2 Cycle Integration macro with the NLR sCO2 Power Cycle Python model. See the macro instructions for details.'
 						' Setting power cycle option to the default Rankine Cycle.','warning');
 		}
 	}
@@ -1005,13 +1005,13 @@ version_upgrade{'2020.11.29'} = define() {
     {
 		retire_tech();
 		//The version upgrade script is set up to delete cases with this technology made from a previous release from the project file. This is done in project.cpp
-		message('The Dish Stirling model is not available in SAM ' + samver() +'. Removing Case \"' + case_name() + '\" from the file. The most recent version with the model is SAM 2020.2.29, which you can download from https://sam.nrel.gov/download/','warning');
+		message('The Dish Stirling model is not available in SAM ' + samver() +'. Removing Case \"' + case_name() + '\" from the file. The most recent version with the model is SAM 2020.2.29, which you can download from https://sam.nlr.gov/download/','warning');
     }
     if (cfg.tech == 'DSPT')
     {
 		retire_tech();
 		//The version upgrade script is set up to delete cases with this technology made from a previous release from the project file. This is done in project.cpp
-		message ('The Direct Steam Power Tower model is not available in SAM ' + samver() +'. Removing Case \"' + case_name() + '\" from the file. The most recent version with the model is SAM 2020.2.29, which you can download from https://sam.nrel.gov/download/','warning');
+		message ('The Direct Steam Power Tower model is not available in SAM ' + samver() +'. Removing Case \"' + case_name() + '\" from the file. The most recent version with the model is SAM 2020.2.29, which you can download from https://sam.nlr.gov/download/','warning');
 	}
     
     // Use en_batt instead of cfg.tech to capture fuel cell configurations
@@ -1021,7 +1021,7 @@ version_upgrade{'2020.11.29'} = define() {
         max_replacements = max(old_replacement_option);
         repl_msg = 'For the battery "Replace at specified schedule" option, "Battery bank replacement schedule (%/year)" replaces the two "Battery bank replacement schedule" and "Battery bank replacement percent" inputs to avoid inconsistencies between the two.';
         if (max_replacements > 1) {
-            message( repl_msg + ' You used the replacement schedule to specify up to ' + max_replacements + ' replacements per year, so you may need to adjust the replacement percentages in the new schedule. Please contact us at sam.support@nrel.gov if you need help with this.', 'warning');
+            message( repl_msg + ' You used the replacement schedule to specify up to ' + max_replacements + ' replacements per year, so you may need to adjust the replacement percentages in the new schedule. Please contact us at sam.support@nlr.gov if you need help with this.', 'warning');
         }
         else if (max_replacements > 0) {
             message(repl_msg);
