@@ -1699,7 +1699,7 @@
         "\r",
         "function show_battery_itc() {\r",
         "\ttech = technology();\r",
-        "\tis_batt = strpos(tech, 'Battery');\r",
+        "\tis_batt = strpos(tech, 'Battery') != -1;\r",
         "\tshow('batt_itc_basis_cost', is_batt);\r",
         "\tshow('batt_itc_basis_percent', is_batt);\r",
         "\tshow('batt_itc_percent_lbl', is_batt);\r",
