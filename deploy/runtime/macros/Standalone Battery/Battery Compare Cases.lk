@@ -527,7 +527,7 @@ reportCode =
 '</section>'
 '</body>'
 '<footer style="text-align:center;">'
-    '<p>This report was generated using the System Advisor Model testMacro on:</P>'
+    '<p>This report was generated using the System Advisor Model Battery Compare Cases macro on:</P>'
     '<p id="demo" ></p>'
 
         '<script>'
@@ -786,7 +786,7 @@ reportCode =
 '</section>'
 '</body>'
 '<footer style="text-align:center;">'
-    '<p>This report was generated using the System Advisor Model testMacro on:</P>'
+    '<p>This report was generated using the System Advisor Model Battery Compare Cases macro on:</P>'
     '<p id="demo" ></p>'
 
         '<script>'
@@ -1070,7 +1070,7 @@ reportCode =
 	
 '</body>'
 '<footer style="text-align:center;">'
-    '<p>This report was generated using the System Advisor Model testMacro on:</P>'
+    '<p>This report was generated using the System Advisor Model Battery Compare Cases macro on:</P>'
     '<p id="demo" ></p>'
 
         '<script>'
