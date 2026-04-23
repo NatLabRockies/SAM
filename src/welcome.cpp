@@ -66,8 +66,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <lk/env.h>
 #include <lk/parse.h>
 
-//#include "../resource/nrel.cpng"
-
 #include "main.h"
 #include "invoke.h"
 #include "script.h"
