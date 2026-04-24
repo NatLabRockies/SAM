@@ -392,11 +392,34 @@ function setup_host_developer_pages(mode) // third party host-developer
 
   addpage( [[  { 'name'='Financial Tax Credits','caption'='Tax Credits','collapsible'=true,'collapsible_var'='show_tax_credits', 'collapsed_by_default'=false },
 				  { 'name'= 'Financial ITC Qualification', 'caption'='ITC Qualification', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
-				  { 'name'='Financial Cash Incentives','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false } ]],
-			   { 'sidebar'='Incentives', 'help'='incentives' } );
-  addpage( [[ {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
-		   'Financial Depreciation Detailed' ]],
-		   { 'sidebar'='Depreciation', 'help'='depreciation' });
+				  { 'name'='Financial Cash Incentives','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false },
+				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
+				'Financial Depreciation Detailed'  ]],
+			   { 'sidebar'='Incentives and Depreciation', 'help'='incentives' } );
+  setup_utility_rate();
+  setup_elec_load_page( mode );
+}
+
+function setup_host_developer_pages_hybrid(mode) // third party host-developer
+{
+  setting( { 'analysis_period_var'='cf_length' } );
+  addpage( [[ 'Financial Solution Mode Single Owner',
+              'Financial Analysis Host Developer Parameters',
+		      'Financial Tax and Insurance Rates',
+		      'Financial Salvage Value',
+		      {'name'='Financial Debt DSCR or Debt Fraction','caption'='Project Term Debt','collapsible'=true,'collapsible_var'='show_DebtConstDSCR'},
+              {'name'='Financial Cost of Financing Single Owner', 'caption'='Cost of Acquiring Financing','collapsible'=true,'collapsible_var'='show_CapitalCostSO'},
+              {'name'='Financial Construction Financing','caption'='Construction Financing','collapsible'=true,'collapsible_var'='show_construction_period', 'collapsed_by_default'=false},
+              {'name'='Financial Reserve Accounts', 'caption'='Reserve Accounts','collapsible'=true,'collapsible_var'='show_ReserveAccounts'},   ]],
+           { 'sidebar'='Financial Parameters', 'help'='financial-parameters/fin_tpo_host_developer' }  );
+  addpage( [[ 'Financial TOD Factors' ]], { 'sidebar'='Time of Delivery Factors', 'help'='revenue/revenue_tod_factors' });
+
+  addpage( [[  { 'name'='Financial Tax Credits','caption'='Tax Credits','collapsible'=true,'collapsible_var'='show_tax_credits', 'collapsed_by_default'=false },
+				  { 'name'= 'Financial ITC Qualification Hybrid', 'caption'='ITC Qualification', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
+				  { 'name'='Financial Cash Incentives','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false },
+				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
+		       'Financial Depreciation Detailed'  ]],
+			   { 'sidebar'='Incentives and Depreciation', 'help'='incentives' } );
   setup_utility_rate();
   setup_elec_load_page( mode );
 }
@@ -509,11 +532,7 @@ function setup_single_owner_pages()
 				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
 				'Financial Depreciation Detailed'  ]],
 			   { 'sidebar'='Incentives and Depreciation', 'help'='incentives' } );
-/*
-  addpage( [[ {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
-		   'Financial Depreciation Detailed' ]],
-		   { 'sidebar'='Depreciation', 'help'='depreciation' });
-		*/
+
 }
 
 function setup_single_owner_pages_hybrid()
@@ -538,10 +557,6 @@ function setup_single_owner_pages_hybrid()
 				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
 		       'Financial Depreciation Detailed'  ]],
 			   { 'sidebar'='Incentives and Depreciation', 'help'='incentives' } );
-  /*
-  addpage( [[ {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
-		   'Financial Depreciation Detailed' ]],
-		   { 'sidebar'='Depreciation', 'help'='depreciation' });*/
 }
 
 
@@ -3067,7 +3082,7 @@ setup_hybrid_battery_pages(BTM);
 addpage( [[ 'Standalone Battery Costs', 'Battery Enable' ]],{ 'sidebar'='Battery Installation Costs', 'help'='installation-costs/cc_standalone_battery', 'bin_name'='Battery' } );
 addpage( [[ 'Operating Costs Standalone Battery']],{ 'sidebar'='Battery Operating Costs', 'help'='operating-costs/oc_battery', 'bin_name'='Battery' } );
 // host developer
-setup_host_developer_pages(LOAD_SIMPLE);
+setup_host_developer_pages_hybrid(LOAD_SIMPLE);
 addpage([['Hybrid Costs']], {'sidebar'='Hybrid System Costs', 'help'='hybrid-systems/hybrid_system_costs', 'top_page'=true});
 
 //PVWatts + Wind + Fuel Cell + Battery
@@ -3215,7 +3230,7 @@ addpage( [[ 'Operating Costs Standalone Battery']],{ 'sidebar'='Battery Operatin
 setup_grid_limits_page();
 setup_grid_outage_page();// host developer
 // host developer
-setup_host_developer_pages(LOAD_SIMPLE);
+setup_host_developer_pages_hybrid(LOAD_SIMPLE);
 addpage( [[ 'Thermal Rate' ]], 
          {'sidebar' = 'Thermal Rates','help'='thermal-rates-and-load/thermal_rates'});
 addpage( [[ 'Thermal Load' ]], 
@@ -3345,7 +3360,7 @@ setup_hybrid_battery_pages(BTM);
 addpage( [[ 'Standalone Battery Costs', 'Battery Enable' ]],{ 'sidebar'='Battery Installation Costs', 'help'='installation-costs/cc_standalone_battery', 'bin_name'='Battery' } );
 addpage( [[ 'Operating Costs Standalone Battery']],{ 'sidebar'='Battery Operating Costs', 'help'='operating-costs/oc_battery', 'bin_name'='Battery' } );
 // host developer
-setup_host_developer_pages(LOAD_SIMPLE);
+setup_host_developer_pages_hybrid(LOAD_SIMPLE);
 addpage([['Hybrid Costs']], {'sidebar'='Hybrid System Costs', 'help'='hybrid-systems/hybrid_system_costs', 'top_page'=true});
 
 //Generic System + PVWatts + Wind + Fuel Cell + Battery
@@ -3513,7 +3528,7 @@ addpage( [[ 'Operating Costs Standalone Battery']],{ 'sidebar'='Battery Operatin
 setup_grid_limits_page();
 setup_grid_outage_page();// host developer
 // host developer
-setup_host_developer_pages(LOAD_SIMPLE);
+setup_host_developer_pages_hybrid(LOAD_SIMPLE);
 addpage( [[ 'Thermal Rate' ]], 
          {'sidebar' = 'Thermal Rates','help'='thermal-rates-and-load/thermal_rates'});
 addpage( [[ 'Thermal Load' ]], 
