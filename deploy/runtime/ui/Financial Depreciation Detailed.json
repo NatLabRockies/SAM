@@ -4609,8 +4609,8 @@
         "\t};",
         "\r",
         "equations{'$MIMO depreciation_calc_or_manual'} = define() {\r",
-        "\tchoice = ${depr_allocation_choice};\r",
-        "\tif (choice != 2) {\r",
+        "\tchoice = ${itc_qualification_choice};\r",
+        "\tif (choice != 1) {\r",
         "\t\t${depr_alloc_macrs_5_percent} = ${depr_alloc_macrs_5_percent_calc};\r",
         "\t\t${depr_alloc_macrs_15_percent} = ${depr_alloc_macrs_15_percent_calc};\r",
         "\t\t${depr_alloc_sl_5_percent} = ${depr_alloc_sl_5_percent_calc};\r",
@@ -4643,6 +4643,7 @@
         "{\r",
         "\tchange_depreciation_length();\r",
         "\tset_itc_basis_choice();\r",
+        "\titc_basis_depreciation_choice();\r",
         "};"
     ]
 }

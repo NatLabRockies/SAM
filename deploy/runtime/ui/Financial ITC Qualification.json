@@ -1,7 +1,7 @@
 {
     "Name": "Financial ITC Qualification",
-    "Width": 1013.0,
-    "Height": 659.0,
+    "Width": 877.0,
+    "Height": 540.0,
     "FormObjects": {
         "Label": {
             "Visible": 1.0,
@@ -959,7 +959,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 918.0
+                    "Integer": 846.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -1697,11 +1697,13 @@
         "on_load{'Financial ITC Qualification'} = define() {\r",
         "\tcheck_residential();\r",
         "\tset_itc_basis_choice();\r",
+        "\titc_basis_depreciation_choice();\r",
         "\tshow_battery_itc();\r",
         "};\r",
         "\r",
         "on_change{'itc_qualification_choice'} = define() {\r",
         "\tset_itc_basis_choice();\r",
+        "\titc_basis_depreciation_choice();\r",
         "};\r",
         "\r",
         "function show_battery_itc() {\r",

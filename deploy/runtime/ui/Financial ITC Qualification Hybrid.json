@@ -1,7 +1,7 @@
 {
     "Name": "Financial ITC Qualification Hybrid",
-    "Width": 949.0,
-    "Height": 706.0,
+    "Width": 869.0,
+    "Height": 616.0,
     "FormObjects": {
         "Label": {
             "Visible": 1.0,
@@ -1521,11 +1521,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 690.0
+                    "Integer": 618.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 78.0
+                    "Integer": 54.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1640,7 +1640,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 918.0
+                    "Integer": 846.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -1731,11 +1731,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 423.0
+                    "Integer": 375.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 51.0
+                    "Integer": 48.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -3243,11 +3243,13 @@
     "Callbacks": [
         "on_load{'Financial ITC Qualification Hybrid'} = define() {\r",
         "\tset_itc_basis_choice();\r",
+        "\titc_basis_depreciation_choice();\r",
         "\tshow_tech_itc();\r",
         "};\r",
         "\r",
         "on_change{'itc_qualification_choice'} = define() {\r",
         "\tset_itc_basis_choice();\r",
+        "\titc_basis_depreciation_choice();\r",
         "};\r",
         "\r",
         "function show_tech_itc() {\r",
