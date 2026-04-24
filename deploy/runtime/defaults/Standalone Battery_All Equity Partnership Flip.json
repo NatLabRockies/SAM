@@ -8875,6 +8875,10 @@
     "batt_h_to_ambient": 100.0,
     "batt_initial_SOC": 50.0,
     "batt_inverter_efficiency_cutoff": 90.0,
+    "batt_itc_basis_cost": 78183099.136044,
+    "batt_itc_basis_cost_fed_include": 0.0,
+    "batt_itc_basis_cost_sta_include": 0.0,
+    "batt_itc_basis_percent": 100.0,
     "batt_life_excl": 0.0,
     "batt_life_model": 0.0,
     "batt_lifetime_matrix": [
@@ -9985,14 +9989,39 @@
         0.0
     ],
     "depr_alloc_custom_percent": 0.0,
-    "depr_alloc_macrs_15_percent": 1.5,
-    "depr_alloc_macrs_5_percent": 90.0,
-    "depr_alloc_none": 3.0,
-    "depr_alloc_sl_15_percent": 2.5,
-    "depr_alloc_sl_20_percent": 3.0,
+    "depr_alloc_custom_percent_calc": 0.0,
+    "depr_alloc_macrs_15_percent": 0.0,
+    "depr_alloc_macrs_15_percent_calc": 0.0,
+    "depr_alloc_macrs_5_percent": 100.0,
+    "depr_alloc_macrs_5_percent_calc": 100.0,
+    "depr_alloc_none": 0.0,
+    "depr_alloc_sl_15_percent": 0.0,
+    "depr_alloc_sl_15_percent_calc": 0.0,
+    "depr_alloc_sl_20_percent": 0.0,
+    "depr_alloc_sl_20_percent_calc": 0.0,
     "depr_alloc_sl_39_percent": 0.0,
+    "depr_alloc_sl_39_percent_calc": 0.0,
     "depr_alloc_sl_5_percent": 0.0,
+    "depr_alloc_sl_5_percent_calc": 0.0,
     "depr_allocation_choice": 0.0,
+    "depr_basis_mat": [
+        [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            2.0,
+            78183099.136044,
+            100.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    ],
     "depr_bonus_fed": 0.0,
     "depr_bonus_fed_custom": 0.0,
     "depr_bonus_fed_macrs_15": 1.0,
@@ -10012,7 +10041,9 @@
     "depr_custom_schedule": [
         0.0
     ],
+    "depr_en_basis_mat": 1.0,
     "depr_fedbas_method": 1.0,
+    "depr_itc_fed_capex": 0.0,
     "depr_itc_fed_custom": 0.0,
     "depr_itc_fed_macrs_15": 0.0,
     "depr_itc_fed_macrs_5": 1.0,
@@ -10020,6 +10051,7 @@
     "depr_itc_fed_sl_20": 0.0,
     "depr_itc_fed_sl_39": 0.0,
     "depr_itc_fed_sl_5": 0.0,
+    "depr_itc_sta_capex": 0.0,
     "depr_itc_sta_custom": 0.0,
     "depr_itc_sta_macrs_15": 0.0,
     "depr_itc_sta_macrs_5": 1.0,
@@ -28319,8 +28351,13 @@
     "inflation_rate": 2.5,
     "insurance_rate": 0.0,
     "is_btm": 0.0,
+    "itc_basis_cost_capex_fed": 0.0,
+    "itc_basis_cost_capex_sta": 0.0,
+    "itc_basis_cost_percent_fed": 0.0,
+    "itc_basis_cost_percent_sta": 0.0,
     "itc_basis_depreciation_allocation": 0.0,
     "itc_basis_percent_depr": 0.0,
+    "itc_basis_percent_input": 0.0,
     "itc_fed_amount": [
         0.0
     ],
@@ -28334,6 +28371,7 @@
     "itc_fed_percent_maxvalue": [
         1e38
     ],
+    "itc_qualification_choice": 0.0,
     "itc_sta_amount": [
         0.0
     ],
@@ -29098,8 +29136,11 @@
     "salvage_value": 0.0,
     "show_CapitalCostSO": 1.0,
     "show_ReserveAccounts": 1.0,
+    "show_cash_incentives": 1.0,
     "show_construction_period": 1.0,
     "show_depr_alloc": 1.0,
+    "show_itc_qualification": 1.0,
+    "show_tax_credits": 1.0,
     "solution_mode_message": "<invalid>",
     "sponsor_cap_recovery_mode": 0.0,
     "sponsor_cap_recovery_year": 3.0,
@@ -29123,6 +29164,10 @@
         7.0
     ],
     "system_capacity": 57600.0730368,
+    "system_itc_basis_cost": 0.0,
+    "system_itc_basis_cost_fed_include": 0.0,
+    "system_itc_basis_cost_sta_include": 0.0,
+    "system_itc_basis_percent": 0.0,
     "system_use_lifetime_output": 1.0,
     "tax_investor_equity_percent": 98.0,
     "tax_investor_postflip_cash_percent": 10.0,
@@ -29142,6 +29187,13 @@
     "ui_copy_batt_discharge_percent_4": 25.0,
     "ui_copy_batt_discharge_percent_5": 25.0,
     "ui_copy_batt_discharge_percent_6": 25.0,
+    "ui_depr_alloc_custom_percent": 0.0,
+    "ui_depr_alloc_macrs_15_percent": 0.0,
+    "ui_depr_alloc_macrs_5_percent": 0.0,
+    "ui_depr_alloc_sl_15_percent": 0.0,
+    "ui_depr_alloc_sl_20_percent": 0.0,
+    "ui_depr_alloc_sl_39_percent": 0.0,
+    "ui_depr_alloc_sl_5_percent": 0.0,
     "ui_electricity_rate_option": 0.0,
     "ur_annual_min_charge": 0.0,
     "ur_billing_demand_is_shown": 0.0,

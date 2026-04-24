@@ -63570,6 +63570,7 @@
     "total_indirect_cost": 523741.960355006,
     "total_installed_cost": 1099962.680231171,
     "total_system_indirect_cost": 418993.5682840048,
+    "total_system_installed_cost": 687565.1091341698,
     "ui_annual_load": 0.0,
     "ui_batt_life_model": 0.0,
     "ui_copy_batt_discharge_percent_1": 25.0,
