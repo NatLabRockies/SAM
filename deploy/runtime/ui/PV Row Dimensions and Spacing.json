@@ -340,39 +340,11 @@
                     "Type": 5.0,
                     "String": ""
                 },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Prefix": {
+                "Caption": {
                     "Type": 5.0,
                     "String": ""
                 },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "ForeColour": {
+                "TextColour": {
                     "Type": 4.0,
                     "Color": {
                         "Red": 0.0,
@@ -381,18 +353,149 @@
                         "Alpha": 255.0
                     }
                 },
-                "BackColour": {
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "Label12111374"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 168.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 477.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 128.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "GCR"
+                },
+                "TextColour": {
                     "Type": 4.0,
                     "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
                         "Alpha": 255.0
                     }
                 },
-                "TabOrder": {
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
                     "Type": 3.0,
-                    "Integer": -1.0
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "Label12111375"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 168.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 531.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 128.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Length of side (m)"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
                 }
             }
         },
@@ -1008,158 +1111,9 @@
                     "Type": 5.0,
                     "String": "Row spacing (m)"
                 },
-                "TextColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "Bold": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "FontSize": {
+                "TabOrder": {
                     "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "WordWrap": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "AlignRight": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "AlignTop": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                }
-            }
-        },
-        "Label": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "Label12111374"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 168.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 477.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 128.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Caption": {
-                    "Type": 5.0,
-                    "String": "GCR"
-                },
-                "TextColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "Bold": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "FontSize": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "WordWrap": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "AlignRight": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "AlignTop": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                }
-            }
-        },
-        "Label": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "Label12111375"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 168.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 531.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 128.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Caption": {
-                    "Type": 5.0,
-                    "String": "Length of side (m)"
-                },
-                "TextColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "Bold": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "FontSize": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "WordWrap": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "AlignRight": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "AlignTop": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
+                    "Integer": -1.0
                 }
             }
         },
@@ -4607,97 +4561,6 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
-        "annual_csky_beam": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "",
-            "Units": "",
-            "Group": "",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "annual_csky_diffuse": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "",
-            "Units": "",
-            "Group": "",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "annual_csky_global": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "",
-            "Units": "",
-            "Group": "",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "annual_diffuse": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Diffuse horizontal",
-            "Units": "kWh/m²/day",
-            "Group": "Location and Resource",
-            "IndexLabels": "",
-            "Flags": 4.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Numeric",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "annual_global": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Global horizontal",
-            "Units": "kWh/m²/day",
-            "Group": "Location and Resource",
-            "IndexLabels": "",
-            "Flags": 20.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Numeric",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "annual_precipitation": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Annual precipitation",
-            "Units": "cm",
-            "Group": "Location and Resource",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "annual_snow": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Maximum snow depth",
-            "Units": "cm",
-            "Group": "Location and Resource",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Numeric",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
         "module_length": {
             "Version": 4.0,
             "Type": 1.0,
@@ -5327,370 +5190,6 @@
         "\t}\r",
         "}\r",
         "\r",
-        "",
-        "function file_to_key( file ) ",
-        "{",
-        "\t\tkey = file_only( file );",
-        "\t\tkey = replace( key, '.' + ext_only( file ), '' );",
-        "\t\treturn key;",
-        "}",
-        "",
-        "function slash_back_to_forward( str )",
-        "{",
-        "\treturn replace( str, '\\\\', '/' );",
-        "}",
-        "",
-        "// given a key or file item from the library, return if exists t/f, key, file, and key for first item",
-        "// is_key = true if library key with no path or extension",
-        "// is_key = false if file name with full path and extension",
-        "// should also work with no parameters to return number of files in library and in deploy/solar_resource folder",
-        "function solar_library( item, is_key )",
-        "{",
-        "\tT = {};",
-        "\tlib_file = userlocaldatadir() + '/SolarResourceData.csv';",
-        "\tlib_data = csvread( lib_file, { 'table' = true } );",
-        "\tfiles = lib_data{'File name'}; files -@ 0; files -@ 0;",
-        "\tfor( i=0; i<#files; i++) { files[i] = lower(slash_back_to_forward(files[i])); }",
-        "\tkeys = lib_data{'Name'}; keys -@ 0; keys -@ 0;",
-        "\tif ( is_key ) { ii = keys ?@ item; }",
-        "\telse { ii = files ?@ lower(item); }",
-        "\tT{'is_in_library'} = false; ",
-        "\tT{'lib_key'} = null;",
-        "\tif ( ii > -1 ) ",
-        "\t{",
-        "\t\tT{'is_in_library'} = true; ",
-        "\t\tT{'lib_key'} = keys[ii];",
-        "\t\tT{'file_name'} = files[ii];",
-        "\t}",
-        "\tT{'num_files_in_library'} = #files;",
-        "\tstr = slash_back_to_forward( appdir() );",
-        "\tarr = split( str, '/' );",
-        "\tarr -@ #arr-1;",
-        "\tarr[#arr] = 'solar_resource';",
-        "\tdefault_path = '';",
-        "\tfor( i=0; i<#arr; i++ ) {default_path += arr[i] + '/'; }",
-        "\tdefault_files = dir_list( default_path, '*', false );",
-        "\tT{'num_default_files'} = #default_files;",
-        "\treturn T;",
-        "}",
-        "",
-        "// update weather file, annual summaries and summary text based on whether file is from library or user specified via LK script",
-        "// ctxt is for testing to see when function was called",
-        "function update_info( ctxt )",
-        "{",
-        "\twf = value('solar_resource_file'); ",
-        "\tL = strlen( value( 'library_folder_list' ) );\r",
-        "\t/*",
-        "\tmsgbox('Hello from update_info() in ' + ctxt + '!\\nsolar_resource_file = ' + value('solar_resource_file')",
-        "\t       + '\\nsolar_data_file_name = ' + value('solar_data_file_name')",
-        "\t       + '\\n\\nsolar_data_file_name_load = ' + value('solar_data_file_name_load')  ",
-        "\t       + '\\n\\nuser_specified_weather_file = ' + value('user_specified_weather_file')",
-        "\t       + '\\n\\nfile_name = ' + value('file_name') ",
-        "\t       + '\\n\\nsolar_resource = ' + value('solar_resource') ",
-        "\t       + '\\n\\nwf is in library = ' + solar_library(value('solar_resource_file'),false){'is_in_library'}",
-        "\t       + '\\n\\ncurrent selection is in library = ' + solar_library(value('solar_resource'),true){'is_in_library'} );",
-        "\t*/",
-        "\t//if selected library file is no longer in library reload library, and exit",
-        "\twf_ok = false;",
-        "\tif (!file_exists(wf) )",
-        "\t{",
-        "\t\tmsg_caption = 'Weather file does not exist. Please choose or download a different file above.';",
-        "\t\tmsg_color = 'red';",
-        "\t\tshow_button = false;",
-        "\t\trescanlibrary('solar'); // remove deleted file from library",
-        "\t}",
-        "\t// display message depending on whether file is in library or is a user-specified file",
-        "\telseif ( wf != value('solar_data_file_name') )",
-        "\t{",
-        "\t\tmsg_caption = 'The weather file is different from the file selected in the library because it was modified by an LK script. Click Add File to Library if you want the file to appear in the library list above.';",
-        "\t\tmsg_color = 'red';",
-        "\t\tshow_button = true;",
-        "\t}",
-        "\telseif ( strlen( value( 'library_folder_list' ) ) < L ) // ** this check should never be true, right???",
-        "\t{",
-        "\t\tmsg_caption = 'Weather file folder not in list? Please choose or download a different file above, or click Add file to library.';",
-        "\t\tmsg_color = 'red';",
-        "\t\tshow_button = true;",
-        "\t}",
-        "\telseif ( !solar_library(slash_back_to_forward(value('solar_resource')),true){'is_in_library'} )",
-        "\t{",
-        "\t\tmsg_caption = 'Weather file is not in library. Please choose or download a different file above, or click Add file to library.';",
-        "\t\tmsg_color = 'red';",
-        "\t\tshow_button = true;",
-        "\t}",
-        "\telse",
-        "\t{",
-        "\t\tmsg_caption = 'The following information describes the data in the highlighted weather file from the Solar Resource library above. This is the file SAM will use when you click Simulate.';",
-        "\t\tmsg_color = 'black';",
-        "\t\tshow_button = false;",
-        "\t\twf_ok = true;",
-        "\t}",
-        "",
-        "\t// show / hide PV only summary data",
-        "\tis_pv = ( technology() == 'Flat Plate PV' || technology() == 'PVWatts' );",
-        "\tproperty( 'summary_caption' , 'Caption' , msg_caption );",
-        "\tproperty( 'summary_caption' , 'TextColour' , msg_color );",
-        "\tshow('btn_add_file_to_library', show_button);",
-        "\tshow('group_optional', is_pv );",
-        "\tshow('annual_snow', is_pv );",
-        "\tshow('annual_albedo',is_pv );\r",
-        "\tshow('annual_precipitation', is_pv );",
-        "\trefresh(''); // always refresh after calling show()",
-        "",
-        "\t// display message for new users if library contains only default files",
-        "\tproperty( 'caption_library', 'Caption', 'The default library comes with only a few weather files to help you get started. Use the download tools below to build a library of locations you frequently model. Once you build your library, it is available for all of your work in SAM.' );",
-        "\tproperty( 'caption_library', 'TextColour', 'black' );",
-        "\tlib = solar_library( 'dummy', false );",
-        "\tif ( lib{'num_files_in_library'} == lib{'num_default_files'} )",
-        "\t{",
-        "\t\tproperty( 'caption_library', 'Caption', 'You have not added any weather files to your library. To add files, use the download tools below to get weather files from the NSRDB, or click Add Remove Weather File folders to add files from your computer. The default library comes with only a few weather files to help you get started.' );",
-        "\t\tproperty( 'caption_library', 'TextColour', 'red' );",
-        "\t}",
-        "",
-        "\t// calculate and display annual summary data",
-        "\tif ( wf_ok )",
-        "\t{",
-        "\t\tobj = ssc_create();",
-        "\t\tssc_var( obj, 'file_name', wf );",
-        "\t\tresult = ssc_exec( obj, 'wfreader' );",
-        "\t\tif ( 0 == result )",
-        "\t\t{",
-        "\t\t\tvalue( 'annual_global', ssc_var(obj, 'annual_glob') );",
-        "\t\t\tvalue( 'annual_beam', ssc_var(obj, 'annual_beam') );",
-        "\t\t\tvalue( 'annual_diffuse', ssc_var(obj, 'annual_diff') );",
-        "\t\t\tvalue( 'annual_tdry', ssc_var(obj, 'annual_tdry') );\r",
-        "\t\t\tvalue( 'annual_twet', ssc_var(obj, 'annual_twet') );",
-        "\t\t\tvalue( 'annual_wspd', ssc_var(obj, 'annual_wspd') );",
-        "\t\t\tvalue( 'annual_snow', ssc_var(obj, 'annual_snow') );",
-        "\t\t\tvalue( 'annual_albedo', ssc_var(obj, 'annual_albedo') );\r",
-        "\t\t\tvalue( 'annual_precipitation', ssc_var(obj, 'annual_precipitation'));\r",
-        "\t\t\tvalue( 'annual_csky_global', ssc_var(obj, 'annual_csky_glob') );\r",
-        "\t\t\tvalue( 'annual_csky_beam', ssc_var(obj, 'annual_csky_beam') );\r",
-        "\t\t\tvalue( 'annual_csky_diffuse', ssc_var(obj, 'annual_csky_diff') );",
-        "\t\t\tvalue( 'step', ssc_var(obj, 'step') );\r",
-        "\t\t\t\r",
-        "\t\t\trhum = ssc_var(obj, 'rhum');",
-        "\t\t\trhum_ok = true;",
-        "\t\t\tif ( isnan( rhum[0] ) ) { rhum_ok = false; }",
-        "\t\t\t// used for timestep calculation in editscene3d",
-        "\t\t\tvalue( 'wf_nrecords', ssc_var(obj, 'nrecords') );",
-        "\t\t}",
-        "\t\telse",
-        "\t\t{",
-        "\t\t\tmsgbox('Weather file reader failed!\\n' ",
-        "\t\t\t+ result",
-        "\t\t\t+ '\\n\\nTo avoid this message, remove  the following file from your weather file folders: \\n' + wf);",
-        "\t\t\tvalue( 'annual_global', nan() );",
-        "\t\t\tvalue( 'annual_beam', nan() );",
-        "\t\t\tvalue( 'annual_diffuse', nan() );",
-        "\t\t\tvalue( 'annual_tdry', nan() );\r",
-        "\t\t\tvalue( 'annual_twet', nan() );",
-        "\t\t\tvalue( 'annual_wspd', nan() );",
-        "\t\t\tvalue( 'annual_snow', nan() );",
-        "\t\t\tvalue( 'annual_albedo', nan() );\r",
-        "\t\t\tvalue( 'annual_precipitation', nan() );\r",
-        "\t\t\tvalue( 'annual_csky_global', nan() );\r",
-        "\t\t\tvalue( 'annual_csky_beam', nan() );\r",
-        "\t\t\tvalue( 'annual_csky_diffuse', nan() );",
-        "\t\t\tvalue( 'wf_nrecords', nan() );",
-        "\t\t}",
-        "\t\tssc_free( obj );",
-        "\t}",
-        "\t",
-        "\tif ( librarygetcurrentselection('solar_resource') == '' )",
-        "\t{",
-        "\t\tlibrarynotifytext('solar_resource','Please choose a file. Nothing selected.');",
-        "\t}",
-        "\telseif ( !solar_library(slash_back_to_forward(value('solar_resource')),true){'is_in_library'} ) ",
-        "\t{",
-        "\t\tlibrarynotifytext('solar_resource', 'Please choose a file. Current selection not in library.');",
-        "\t}",
-        "\telseif (librarygetnumbermatches('solar_resource') < 1)",
-        "\t{",
-        "\t\tvalue('in_location', librarygetfiltertext('solar_resource'));",
-        "\t\tlibrarynotifytext('solar_resource', 'No match found. Try downloading a weather file below.');",
-        "\t}",
-        "\telseif ( librarygetcurrentselection('solar_resource') != file_to_key( value('solar_resource_file')) )",
-        "\t{",
-        "\t\tlibrarynotifytext('solar_resource','Current selection is different from weather file.');",
-        "\t}",
-        "\telse",
-        "\t{",
-        "\t\tlibrarynotifytext('solar_resource', ''); //'Everything is fine.'",
-        "\t\tvalue('in_location', 'Type a location name, street address, or lat,lon in decimal degrees');",
-        "\t}",
-        "\t",
-        "\t//msgbox('libraryget functions'+",
-        "\t//'\\nfiltertext = ' + librarygetfiltertext('solar_resource') ",
-        "\t//+ '\\nnumber matches = ' + librarygetnumbermatches('solar_resource') ",
-        "\t//+ '\\ncurrentselection = ' + librarygetcurrentselection('solar_resource'));",
-        "\t",
-        "\tdisplay_tech_message();",
-        "}",
-        "",
-        "// update ui list of library folders, and optionally add new path to library folders",
-        "function update_library_folders( new_path )",
-        "{",
-        "\t//msgbox('Hello from update_library_folders()');",
-        "\tx = get_settings('solar_data_paths');",
-        "\t// add new path if provided and it doesn't already exist in the library",
-        "\tif ( new_path != '' && dir_exists( new_path ) && ( strpos( x, new_path ) < 0 ) )",
-        "\t{",
-        "\t\tif ( x != '' ) { x += ';'; }",
-        "\t\tx += slash_back_to_forward( new_path );",
-        "\t}",
-        "\t// list of library folders files to display on separate lines",
-        "\tpaths = split( x, ';' );",
-        "\t// put solar download folder at top of list",
-        "\tclean_list = '';",
-        "\t// remove folders in list that no longer exist",
-        "\tfor (i = 0; i<#paths; i++ )",
-        "\t{",
-        "\t\tif ( dir_exists( paths[i] ) )",
-        "\t\t{",
-        "\t\t\tclean_list += paths[i];",
-        "\t\t\tif ( i < #paths-1 ) { clean_list += ';'; }",
-        "\t\t}\t",
-        "\t}\t\t",
-        "\t// update solar_data_paths used by library.cpp and nsrdb.cpp to cleaned list\t\t",
-        "\tset_settings('solar_data_paths', clean_list );",
-        "\t// update list to display",
-        "\tvalue( 'library_folder_list', get_settings('solar_download_path') + '\\n' ",
-        "\t       + replace( clean_list , ';' , '\\n' ) );",
-        "\trescanlibrary( 'solar' );        ",
-        "}",
-        "",
-        "function display_tech_message() ",
-        "{",
-        "\tstr = '';",
-        "\tstr_and = '';",
-        "\ttech = technology();",
-        "\tcsp_techs = ['Physical Trough','Empirical Trough','MSPT','DSPT','MSLF','MSLF_old','DSLF','Dish Stirling','Generic CSP System'];",
-        "\tfor ( i=0; i<#csp_techs; i++ )",
-        "\t{",
-        "\t\tif ( tech == csp_techs[i] ) ",
-        "\t\t{",
-        "\t\t\tstr = 'CSP models use a different time convention than NREL NSRDB data. See Help for details.';",
-        "\t\t}\t",
-        "\t}",
-        "\tif ( tech == 'Biopower' )",
-        "\t{ ",
-        "\t\tif ( isnan( value('annual_global') ) || !rhum_ok )",
-        "\t\t{",
-        "\t\t\tstr = 'The Biopower model requires ';",
-        "\t\t}",
-        "\t\tif ( isnan( value('annual_global' ) ) ) ",
-        "\t\t{",
-        "\t\t\tstr += 'global horizontal irradiance data ';",
-        "\t\t\tstr_and = 'and ';",
-        "\t\t}\t",
-        "\t\tif ( !rhum_ok ) ",
-        "\t\t{",
-        "\t\tstr += str_and + 'relative humidity data. See Help for details.';",
-        "\t\t}\t",
-        "\t}",
-        "\tproperty( 'caption_techs' , 'Caption', str );\t\t",
-        "\tproperty( 'caption_techs' , 'TextColour', 'red' );",
-        "}",
-        "",
-        "// display window for advanced download",
-        "function nsrdb_all() ",
-        "{",
-        "\thash = nsrdbquery();",
-        "\t// meta data",
-        "\tif ( hash != '' )",
-        "\t{ ",
-        "\t\tfn = hash{'file'};",
-        "\t\tdn = hash{'folder'};",
-        "\t\taf = hash{'addfolder'};",
-        "\t\tif ( fn != '' )",
-        "\t\t{",
-        "\t\t\terror = wf_check( fn );",
-        "\t\t}\t",
-        "\t\tif (af == \"no\")",
-        "\t\t{",
-        "\t\t\tif ((fn != '') && (dn != ''))",
-        "\t\t\t{",
-        "\t\t\t\tvalue( 'use_specific_weather_file', 1 );",
-        "\t\t\t\tfn = replace(fn, '\\\\', '/');",
-        "\t\t\t\tvalue( 'user_specified_weather_file', fn );",
-        "\t\t\t}",
-        "\t\t}",
-        "\t\telse",
-        "\t\t{",
-        "\t\t\trescanlibrary( 'solar' );  //** is this necessary??",
-        "\t\t\tif (fn != '')",
-        "\t\t\t{",
-        "\t\t\t\tvalue( 'use_specific_weather_file', 0 );",
-        "\t\t\t\tvalue( 'solar_resource', file_to_key( fn ) );",
-        "\t\t\t}",
-        "\t\t}",
-        "\t}",
-        "}",
-        "",
-        "// clean up location string to use as file name",
-        "function clean_name( location )",
-        "{",
-        "\tname = location;",
-        "\tname = replace( name , ', ' , ',' );",
-        "\tname = replace( name , ',' , '_' );",
-        "\tname = replace( name , '  ' , ' ' );",
-        "\tname = replace( name , ' ' , '_' );",
-        "\treturn lower(name);",
-        "}",
-        "",
-        "// return a set of urls for valid datasets available for a location\r",
-        "function nsrdb( location, is_tmy )\r",
-        "{\r",
-        "\tname = '';\r",
-        "\turl = '';\r",
-        "\tyears = [];\r",
-        "\tmsg = '';\r",
-        "\tis_suny = false;\r",
-        "\tg = {'lat'=null,'lon'=null, tz=null, 'ok'=false};\r",
-        "\tlat = null;\r",
-        "\tlon = null;\r",
-        "\tjson_ok = false; // call to nsrdb API returned valid json with outputs\r",
-        "\tdataset_ok = false; // requested data is available from NSRDB API\r",
-        "\tif ( strpos(lower(location),'type a location name') > -1 )\r",
-        "\t{\r",
-        "\t\tmsg += 'Invalid location name: \\\"' + location + '\\\"\\n\\n';\r",
-        "\t}\r",
-        "\telse\r",
-        "\t{\r",
-        "\t\tloc_test = test_decimal_degrees( location );\r",
-        "\t\t//msgbox('Debug\\nloc_test = ' + loc_test);\r",
-        "\t\tmsg += loc_test.msg + '\\n\\n';\r",
-        "\t\tif (  loc_test.address != null )\r",
-        "\t\t{\r",
-        "\t\t\tlocation = loc_test.address;\r",
-        "\t\t\tg = geocode( location );\r",
-        "\t\t\t// sometimes correct address fails but works on second try\r",
-        "\t\t\tif ( !g.ok ) { g = geocode( location ); }\r",
-        "\t\t\tif ( g.ok ) \r",
-        "\t\t\t{\r",
-        "\t\t\t\tlat = g.lat;\r",
-        "\t\t\t\tlon = g.lon;\r",
-        "\t\t\t}\r",
-        "\t\t}\r",
-        "\t\telseif ( loc_test.lat != null && loc_test.lon != null ) // skip geocoding if lat/lon provided by user\r",
-        "\t\t{\r",
-        "\t\t\tlat = loc_test.lat;\r",
-        "\t\t\tlon = loc_test.lon;\r",
-        "\t\t\tlocation = to_string(lat) + ',' + to_string(lon);\r",
-        "\t\t}\r",
-        "\t\t//msgbox('Debug\\nlat = ' + lat + '\\nlon =' + lon + '\\nlocation = ' + location );\r",
-        "\t}\r",
-        "\tif ( lat != null && lon != null )\r",
-        "\t{\r",
-        "\t\turl = webapi( 'nsrdb_query' );\r",
-        "\t\turl = replace( url, '<LAT>', lat );\r",
-        "\t\turl = replace( url, '<LON>', lon );\r",
-        "\t\t//msgbox('Debug\\nurl = ' + url);\r",
-        "\t\tjson_str = curl( url );\r",
-        "\t\tmsg += 'Latitude / longitude for NSRDB Data Query: ' + lat + ',' + lon +  '\\n\\n';\r",
-        "\t\tmsg += 'URL for NSRDB Data Query: ' + url + '\\n\\n';\r",
-        "\r",
         "function calculate_gcr( n_sub ) {\r",
         "\tif (value('gcr_option') == 0 ) {\r",
         "\t\tif (value('subarray'+to_string(n_sub)+'_ui_row_spacing')==0) {\r",
@@ -6044,7 +5543,8 @@
         "\t{",
         "\t\tshow_log = yesno( 'Download Messages\\n' + msg + '\\nOpen log file?');",
         "\t\tif ( show_log ) { browse( log_file ); }",
-        "\t}",
-        "}"
+        "\t}\r",
+        "}",
+        ""
     ]
 }

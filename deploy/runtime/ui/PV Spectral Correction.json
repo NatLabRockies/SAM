@@ -178,7 +178,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 318.0
+                    "Integer": 402.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -194,7 +194,7 @@
                 },
                 "Items": {
                     "Type": 6.0,
-                    "StringList": "Airmass only|Air mass and precipitable water|Airmass and clearsky index"
+                    "StringList": "Airmass only|Air mass and precipitable water (recommended for thin-film)|Airmass and clearsky index (recommended for thin-film)"
                 },
                 "ShowCaptions": {
                     "Type": 2.0,
