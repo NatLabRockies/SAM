@@ -503,7 +503,8 @@
         "\t\tpsum += resourceMatrix[i][1];",
         "\t}",
         "\treturn psum;",
-        "};",
+        "};\r",
+        "",
         "",
         "",
         ""

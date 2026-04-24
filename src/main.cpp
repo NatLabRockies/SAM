@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -30,20 +30,17 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
+#define OR_PROTO_DLL
+
+
 #include <set>
 //#include <chrono>
+#include <fstream>
 
 #include <wx/wx.h>
 #include <wx/frame.h>
 #include <wx/stc/stc.h>
-#include <fstream>
-
-#if defined(__WXMSW__)||defined(__WXOSX__)
-#include <wx/webview.h>
-#else
-#include <wx/html/htmlwin.h> // for linux - avoid webkitgtk dependencies
-#endif
-
+#include <wx/html/htmlwin.h>
 #include <wx/simplebook.h>
 #include <wx/panel.h>
 #include <wx/busyinfo.h>
@@ -53,7 +50,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <wx/datstrm.h>
 #include <wx/grid.h>
 #include <wx/stdpaths.h>
-#include <wx/webview.h>
 #include <wx/txtstrm.h>
 #include <wx/buffer.h>
 #include <wx/display.h>
@@ -65,7 +61,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <wex/icons/cirplus.cpng>
 #include <wex/icons/qmark.cpng>
 #include <wex/utils.h>
-
 
 #include "../resource/menu.cpng"
 #include "../resource/notes_white.cpng"
@@ -84,6 +79,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <rapidjson/filewritestream.h>
 #include <rapidjson/istreamwrapper.h>
 
+#include <ortools/linear_solver/linear_solver.h>
+
 
 //#include "private.h"
 //#include "welcome.h"
@@ -97,28 +94,34 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "uiobjects.h"
 #include "variablegrid.h"
 #include "script.h"
-#include "pythonhandler.h"
 //#include "main_add.h"
 #include <../src/main_add.h>
 
 #define __SAVE_AS_JSON__ 1
 #define __LOAD_AS_JSON__ 1
 
-static PythonConfig pythonConfig;
-
-
 enum { __idFirst = wxID_HIGHEST+592,
 
-	ID_MAIN_MENU, ID_CASE_TABS, ID_PAGE_NOTES,
-	ID_CASE_CREATE, ID_RUN_ALL_CASES, ID_SAVE_HOURLY,
+	ID_MAIN_MENU, 
+	ID_CASE_TABS, 
+	ID_PAGE_NOTES, 
+	ID_RELEASE_NOTES, 
+	ID_BROWSER,
+	ID_CASE_CREATE, 
+	ID_RUN_ALL_CASES, 
+	ID_SAVE_HOURLY,
 	ID_IMPORT_CASES,
-	ID_NEW_SCRIPT, ID_OPEN_SCRIPT, ID_BROWSE_INPUTS,
+	ID_NEW_SCRIPT, 
+	ID_OPEN_SCRIPT, 
+	ID_BROWSE_INPUTS,
 	__idCaseMenuFirst,
 	ID_CASE_CONFIG,
 	ID_CASE_RENAME,
 	ID_CASE_DUPLICATE,
 	ID_CASE_DELETE,
 	ID_CASE_REPORT,
+	ID_RUN_TEST,
+	ID_RUN_ORTOOLS_EXAMPLE,
 	ID_CASE_EXCELEXCH,
 	ID_CASE_SIMULATE,
 	ID_CASE_RESET_DEFAULTS,
@@ -137,8 +140,6 @@ enum { __idFirst = wxID_HIGHEST+592,
 
 BEGIN_EVENT_TABLE( MainWindow, wxFrame )
 	EVT_CLOSE( MainWindow::OnClose )
-	EVT_MENU( wxID_ABOUT, MainWindow::OnCommand )
-	EVT_MENU( wxID_HELP, MainWindow::OnCommand )
 	EVT_MENU( ID_SAVE_HOURLY, MainWindow::OnCommand )
 	EVT_MENU( ID_IMPORT_CASES, MainWindow::OnCommand )
 	EVT_MENU( wxID_NEW, MainWindow::OnCommand )
@@ -151,11 +152,13 @@ BEGIN_EVENT_TABLE( MainWindow, wxFrame )
 	EVT_MENU( ID_SAVE_HOURLY, MainWindow::OnCommand )
 	EVT_MENU( wxID_CLOSE, MainWindow::OnCommand )
 	EVT_MENU( wxID_EXIT, MainWindow::OnCommand )
+	EVT_MENU(wxID_HELP, MainWindow::OnCommand)
 	EVT_BUTTON(ID_CASE_CREATE, MainWindow::OnCommand)
 	EVT_MENU(ID_RUN_ALL_CASES, MainWindow::OnCommand)
 	EVT_BUTTON(ID_MAIN_MENU, MainWindow::OnCommand)
 	EVT_LISTBOX( ID_CASE_TABS, MainWindow::OnCaseTabChange )
 	EVT_BUTTON( ID_CASE_TABS, MainWindow::OnCaseTabButton )
+	EVT_BUTTON(wxID_ABOUT, MainWindow::OnCommand)
 	EVT_BUTTON( wxID_HELP, MainWindow::OnCommand )
 	EVT_BUTTON( ID_PAGE_NOTES, MainWindow::OnCommand )
 	EVT_MENU_RANGE( __idCaseMenuFirst, __idCaseMenuLast, MainWindow::OnCaseMenu )
@@ -238,7 +241,8 @@ MainWindow::MainWindow()
 	tools->Add( metbut = new wxMetroButton( m_caseTabPanel, ID_PAGE_NOTES, wxEmptyString, wxBITMAP_PNG_FROM_DATA( notes_white ), wxDefaultPosition, wxDefaultSize), 0, wxALL|wxEXPAND, 0 );
 	metbut->SetToolTip( "Add a page note" );
 
-	tools->Add( new wxMetroButton( m_caseTabPanel, wxID_HELP, "Help",/* wxBITMAP_PNG_FROM_DATA(qmark) */ wxNullBitmap, wxDefaultPosition, wxDefaultSize), 0, wxALL|wxEXPAND, 0 );
+	tools->Add(new wxMetroButton(m_caseTabPanel, wxID_ABOUT, "About",wxNullBitmap, wxDefaultPosition, wxDefaultSize), 0, wxALL | wxEXPAND, 0);
+	tools->Add( new wxMetroButton( m_caseTabPanel, wxID_HELP, "Help",/*wxBITMAP_PNG_FROM_DATA(qmark)*/ wxNullBitmap, wxDefaultPosition, wxDefaultSize), 0, wxALL | wxEXPAND, 0);
 
 	m_caseNotebook = new wxSimplebook( m_caseTabPanel, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxBORDER_NONE );
 
@@ -274,7 +278,9 @@ MainWindow::MainWindow()
 	entries.push_back( wxAcceleratorEntry( wxACCEL_NORMAL, WXK_F1, wxID_HELP));
 	entries.push_back( wxAcceleratorEntry( wxACCEL_NORMAL, WXK_F2, ID_CASE_RENAME ) );
 	entries.push_back( wxAcceleratorEntry( wxACCEL_NORMAL, WXK_F5, ID_CASE_SIMULATE ) );
-	entries.push_back( wxAcceleratorEntry( wxACCEL_NORMAL, WXK_F6, ID_CASE_REPORT ) );
+	entries.push_back(wxAcceleratorEntry(wxACCEL_NORMAL, WXK_F6, ID_CASE_REPORT));
+	entries.push_back(wxAcceleratorEntry(wxACCEL_ALT, WXK_F5, ID_RUN_TEST));
+	entries.push_back(wxAcceleratorEntry(wxACCEL_ALT, WXK_F6, ID_RUN_ORTOOLS_EXAMPLE));
 	SetAcceleratorTable( wxAcceleratorTable( entries.size(), &entries[0] ) );
 }
 
@@ -478,6 +484,8 @@ bool MainWindow::CreateNewCase( const wxString &_name, wxString tech, wxString f
 	c->LoadDefaults();
 	m_project.AddCase(GetUniqueCaseName(_name), c);
 	CreateCaseWindow( c );
+	UpdateAllPageNotes();
+
 	return true;
 }
 
@@ -513,9 +521,9 @@ CaseWindow *MainWindow::CreateCaseWindow( Case *c )
         }
 		// load first page of hybrid and non-hybrid configurations
 		if (c->GetConfiguration()->Technology.size() > 1) // hybrid	
-			win->SwitchToInputPage(c->GetConfiguration()->InputPageGroups[c->GetConfiguration()->Technology.size() - 1][0]->SideBarLabel);
+			win->SwitchToNavigationMenu(c->GetConfiguration()->InputPageGroups[c->GetConfiguration()->Technology.size() - 1][0]->SideBarLabel);	
 		else
-			win->SwitchToInputPage(pages[0]);
+			win->SwitchToNavigationMenu(pages[0]);
 
 		// reevaluate all equations address SAM #1583
 		c->EvaluateEquations();
@@ -533,6 +541,11 @@ void MainWindow::DeleteCaseWindow( Case *c )
 	m_caseNotebook->DeletePage( m_caseNotebook->FindPage( cw ) );
 	m_caseTabList->Remove( m_project.GetCaseName( c ) );
 	m_caseTabList->Refresh();
+
+	if (m_caseTabList->Count() > 0) {
+		wxString case_name = m_caseTabList->GetLabel(0);
+		SwitchToCaseWindow(case_name);
+	}
 }
 
 extern void ShowIDEWindow();
@@ -943,7 +956,7 @@ void MainWindow::OnCommand( wxCommandEvent &evt )
 	switch( evt.GetId() )
 	{
 	case wxID_HELP:
-		SamApp::ShowHelp( cwin ? cwin->GetCurrentContext() : wxString("welcome_page") );
+		SamApp::ShowHelp( cwin ? cwin->GetCurrentContext() : wxString("index") );
 		break;
 	case wxID_ABOUT:
 		SamApp::ShowHelp( ":about" );
@@ -1240,15 +1253,20 @@ bool MainWindow::SwitchToCaseWindow( const wxString &case_name )
 			}
 		}
 
-		// update all the page notes so they get
-		// hidden/shown appropriately
-		for( size_t i=0;i<m_caseNotebook->GetPageCount();i++ )
-			if ( CaseWindow *cw = dynamic_cast<CaseWindow*>( m_caseNotebook->GetPage(i) ) )
-				cw->UpdatePageNote();
+		UpdateAllPageNotes();
 
 		return true;
 	}
 	else return false;
+}
+
+void MainWindow::UpdateAllPageNotes()
+{
+	// update all the page notes so they get
+	// hidden/shown appropriately
+	for (size_t i = 0; i<m_caseNotebook->GetPageCount(); i++)
+		if (CaseWindow* cw = dynamic_cast<CaseWindow*>(m_caseNotebook->GetPage(i)))
+			cw->UpdatePageNote();
 }
 
 void MainWindow::OnCaseTabChange( wxCommandEvent &evt )
@@ -1390,6 +1408,13 @@ void MainWindow::OnCaseMenu( wxCommandEvent &evt )
 		break;
 	case ID_CASE_REPORT:
 		cw->GenerateReport();
+		break;
+	case ID_RUN_TEST:
+		wxShell(wxString("cmd /k ") + SamApp::GetAppPath() + wxString("/Test.exe"));
+		wxMessageBox(wxString("Test ortools completed"));
+		break;
+	case ID_RUN_ORTOOLS_EXAMPLE:
+		wxMessageBox(wxString(ORTool_LinearProgrammingExample()), "OR Tools Linear Programming Example");
 		break;
 	case ID_CASE_SIMULATE:
 		cw->RunBaseCase();
@@ -2362,8 +2387,9 @@ void SamApp::Restart()
     Library::Load(wave_resource_ts_db);
 
     wxString tidal_resource_db = SamApp::GetUserLocalDataDir() + "/TidalResourceData.csv";
-    if (!wxFileExists(tidal_resource_db)) ScanTidalResourceData(tidal_resource_db);
+    if (!wxFileExists(tidal_resource_db)) ScanTidalResourceTSData(tidal_resource_db);
     Library::Load(tidal_resource_db);
+
 }
 
 wxString SamApp::WebApi( const wxString &name )
@@ -2443,67 +2469,141 @@ wxArrayString SamApp::RecentFiles()
 	return files;
 }
 
-void SamApp::ShowHelp( const wxString &context )
+class HelpWin : public wxFrame
 {
-	wxString url;
-	if ( context.Left(1) == ":" )
-		url = context; // for things like :about, etc
-	else
+	wxHtmlWindow* m_htmlView;
+
+	wxString m_aboutHtml;
+public:
+	HelpWin(wxWindow* parent)
+		: wxFrame(parent, wxID_ANY, "About System Advisor Model (SAM)", wxDefaultPosition, wxScaleSize(1000, 600))
+	{
+		CreateAboutHtml();
+
+#ifdef __WXMSW__
+		SetIcon(wxICON(appicon));
+#endif
+
+		SetBackgroundColour(wxMetroTheme::Colour(wxMT_FOREGROUND));
+
+		m_htmlView = new wxHtmlWindow(this, ID_BROWSER);
+		m_htmlView->SetPage(m_aboutHtml);
+		
+		wxBoxSizer* tools = new wxBoxSizer(wxHORIZONTAL);
+		tools->AddStretchSpacer();
+		tools->Add( new wxMetroButton( this, ID_RELEASE_NOTES, "Open NLR release notes..." ), 0, wxALL|wxEXPAND, 0 );
+		
+		wxBoxSizer* sizer = new wxBoxSizer(wxVERTICAL);
+		sizer->Add( tools, 0, wxALL|wxEXPAND, 0 );
+		sizer->Add(m_htmlView, 1, wxALL | wxEXPAND, 0);
+		SetSizer(sizer);
+	}
+
+	void CreateAboutHtml()
+	{
+		m_aboutHtml = SamApp::AboutSAM();
+	}
+
+	void LoadPage(wxString url)
+	{
+		if (url == ":about")
+		{
+			m_htmlView->SetPage(m_aboutHtml);
+		}
+		else if (url == ":release_notes")
+		{
+			wxLaunchDefaultBrowser(SamApp::WebApi("release_notes"));
+		}
+		else
+		{
+			wxLaunchDefaultBrowser(url);
+		}
+	}
+
+
+	void OnClose(wxCloseEvent& evt)
+	{
+		Hide();
+		evt.Veto();
+	}
+
+	void OnCommand(wxCommandEvent& evt)
+	{
+		switch (evt.GetId())
+		{
+		case ID_RELEASE_NOTES:
+			LoadPage(":release_notes");
+			break;
+		}
+	}
+
+	DECLARE_EVENT_TABLE();
+};
+
+BEGIN_EVENT_TABLE(HelpWin, wxFrame)
+EVT_BUTTON(ID_RELEASE_NOTES, HelpWin::OnCommand)
+EVT_CLOSE(HelpWin::OnClose)
+END_EVENT_TABLE()
+
+class HelpWin;
+static HelpWin* gs_helpWin = 0;
+
+void SamApp::ShowHelp( const wxString &help_context )
+{
+    wxString url;
+    url = help_context;
+    if ( url.Left(1) == ":" ) // display things like :about in custom window
+    {
+        wxWindow *modal_active = 0;
+        wxWindow *nonmodal_tlw = 0;
+        for( wxWindowList::iterator wl = wxTopLevelWindows.begin(); wl != wxTopLevelWindows.end(); ++wl )
+        {
+            wxTopLevelWindow *tlw = dynamic_cast<wxTopLevelWindow*>( *wl );
+            wxDialog *dia = dynamic_cast<wxDialog*>( *wl );
+            
+            if ( tlw != 0 && (dia == 0  || !dia->IsModal()) )
+                nonmodal_tlw = tlw;
+            
+            if ( dia != 0 && dia->IsActive() && dia->IsModal() )
+                modal_active = dia;
+        }
+        
+        // try several different parent windows for the help window
+        // if possible, use the SAM main window
+        // otherwise, choose any top level window that is not modal
+        // last resort, choose a currently modal dialog box
+        wxWindow *parent = SamApp::Window();
+        if ( !parent ) parent = nonmodal_tlw;
+        if ( !parent ) parent = modal_active;
+        
+        if ( modal_active && gs_helpWin != 0 && gs_helpWin->IsShown() )
+        {
+            wxRect h_rect = gs_helpWin->GetRect();
+            
+            if (gs_helpWin->Destroy())
+            {
+                gs_helpWin = new HelpWin( parent );
+                gs_helpWin->SetSize(h_rect);
+            }
+        }
+        else if ( 0 == gs_helpWin )
+            gs_helpWin = new HelpWin( parent );
+        
+        gs_helpWin->Show( );
+        gs_helpWin->LoadPage( url );
+        gs_helpWin->Raise();
+    }
+    else // display help topics in default browser
 	{
 		wxFileName fn( SamApp::GetRuntimePath() + "/help/html/" );
 		fn.MakeAbsolute();
-		url = "file:///" + fn.GetFullPath( wxPATH_NATIVE ) + "index.html";
-#ifdef __WXGTK__
-		if ( ! context.IsEmpty() )
-			url = "file:///" + fn.GetFullPath( wxPATH_NATIVE ) + context + ".html";
-		wxLaunchDefaultBrowser( url );
-		return;
-#else
-		if ( ! context.IsEmpty() )
-			url += "?" + context + ".html";
-#endif
+		if ( help_context.IsEmpty() )
+            url = "file:///" + fn.GetFullPath( wxPATH_NATIVE ) + "index.html";
+        else
+            url = "file:///" + fn.GetFullPath( wxPATH_NATIVE ) + help_context + ".html";
+        wxLaunchDefaultBrowser( url );
 	}
 
-	wxWindow *modal_active = 0;
-	wxWindow *nonmodal_tlw = 0;
-	for( wxWindowList::iterator wl = wxTopLevelWindows.begin();
-		wl != wxTopLevelWindows.end();
-		++wl )
-	{
-		wxTopLevelWindow *tlw = dynamic_cast<wxTopLevelWindow*>( *wl );
-		wxDialog *dia = dynamic_cast<wxDialog*>( *wl );
-
-		if ( tlw != 0 && (dia == 0  || !dia->IsModal()) )
-			nonmodal_tlw = tlw;
-
-		if ( dia != 0 && dia->IsActive() && dia->IsModal() )
-			modal_active = dia;
-	}
-
-	// try several different parent windows for the help window
-	// if possible, use the SAM main window
-	// otherwise, choose any top level window that is not modal
-	// last resort, choose a currently modal dialog box
-	wxWindow *parent = SamApp::Window();
-	if ( !parent ) parent = nonmodal_tlw;
-	if ( !parent ) parent = modal_active;
-
-	if ( modal_active && gs_helpWin != 0 && gs_helpWin->IsShown() )
-	{
-		wxRect h_rect = gs_helpWin->GetRect();
-
-		if (gs_helpWin->Destroy())
-		{
-			gs_helpWin = new HelpWin( parent );
-			gs_helpWin->SetSize(h_rect);
-		}
-	}
-	else if ( 0 == gs_helpWin )
-		gs_helpWin = new HelpWin( parent );
-
-	gs_helpWin->Show( );
-	gs_helpWin->LoadPage( url );
-	gs_helpWin->Raise();
 }
 
 int SamApp::RevisionNumber()
@@ -2699,71 +2799,6 @@ bool SamApp::LoadAndRunScriptFile( const wxString &script_file, wxArrayString *e
 
 		return ok;
 	}
-}
-
-std::string SamApp::GetPythonConfigPath(){
-    wxFileName path( GetAppPath() + "/../runtime/python" );
-    path.Normalize();
-    return path.GetFullPath().ToStdString();
-}
-
-void SamApp::LoadPythonConfig(){
-    pythonConfig = ReadPythonConfig(GetPythonConfigPath() + "/python_config.json");
-    if (CheckPythonInstalled(pythonConfig)){
-        std::string python_path = GetPythonConfigPath();
-		set_python_path(python_path.c_str());
-        return;
-    }
-}
-
-bool SamApp::CheckPythonPackage(const std::string& pip_name){
-    if (CheckPythonInstalled(pythonConfig)){
-        if (CheckPythonPackageInstalled(pip_name, pythonConfig))
-            return true;
-    }
-    return false;
-}
-
-void SamApp::InstallPython() {
-    if (pythonConfig.pythonVersion.empty() && pythonConfig.minicondaVersion.empty())
-        LoadPythonConfig();
-
-    auto python_path = GetPythonConfigPath();
-    // already installed and correctly configured
-    if (CheckPythonInstalled(pythonConfig)){
-		set_python_path(python_path.c_str());
-        return;
-    }
-
-#ifdef __WXMSW__
-    // windows
-    bool errors = InstallPythonWindows(python_path, pythonConfig);
-#else
-    bool errors = InstallPythonUnix(python_path, pythonConfig);
-#endif
-    if (errors)
-        throw std::runtime_error("Error installing python.");
-    LoadPythonConfig();
-}
-
-void SamApp::InstallPythonPackage(const std::string& pip_name) {
-    if (CheckPythonPackageInstalled(pip_name, pythonConfig))
-        return;
-    auto packageConfig = ReadPythonPackageConfig(pip_name, GetPythonConfigPath() + "/" + pip_name + ".json");
-
-#ifdef __WXMSW__
-	bool retval = InstallFromPipWindows(GetPythonConfigPath() + "\\" + pythonConfig.pipPath, packageConfig);
-#else
-	std::string pip_exec = GetPythonConfigPath() + "/" + pythonConfig.pipPath;
-	bool retval = InstallFromPip(pip_exec, packageConfig);
-#endif
-    if (retval == 0){
-        pythonConfig.packages.push_back(pip_name);
-        WritePythonConfig(GetPythonConfigPath() + "/python_config.json", pythonConfig);
-    }
-    else {
-        throw std::runtime_error("Error installing " + pip_name);
-    }
 }
 
 enum { ID_TechTree = wxID_HIGHEST+98, ID_FinTree };
@@ -3219,6 +3254,74 @@ void ConfigDialog::OnCharHook( wxKeyEvent &evt )
 		OnOk( _evt );
 	}
 }
+
+// test example from https://github.com/google/or-tools/blob/stable/ortools/linear_solver/samples/linear_programming_example.cc
+std::string ORTool_LinearProgrammingExample() 
+{
+	std::stringstream ss;
+	// [START solver]
+	std::unique_ptr<operations_research::MPSolver> solver(operations_research::MPSolver::CreateSolver("SCIP"));
+	if (!solver) {
+		ss << "SCIP solver unavailable.";
+		return ss.str();
+	}
+	// [END solver]
+
+	// [START variables]
+	const double infinity = solver->infinity();
+	// x and y are non-negative variables.
+	operations_research::MPVariable* const x = solver->MakeNumVar(0.0, infinity, "x");
+	operations_research::MPVariable* const y = solver->MakeNumVar(0.0, infinity, "y");
+	ss << "Number of variables = " << solver->NumVariables() << std::endl;
+	ss << " x>=0 and y>=0 " << std::endl;
+	// [END variables]
+
+	// [START constraints]
+	// x + 2*y <= 14.
+	ss << " x + 2*y <= 14 " << std::endl;
+	operations_research::MPConstraint* const c0 = solver->MakeRowConstraint(-infinity, 14.0);
+	c0->SetCoefficient(x, 1);
+	c0->SetCoefficient(y, 2);
+
+	// 3*x - y >= 0.
+	ss << " 3*x - y >= 0 " << std::endl;
+	operations_research::MPConstraint* const c1 = solver->MakeRowConstraint(0.0, infinity);
+	c1->SetCoefficient(x, 3);
+	c1->SetCoefficient(y, -1);
+
+	// x - y <= 2.
+	ss << " x - y <= 2 " << std::endl;
+	operations_research::MPConstraint* const c2 = solver->MakeRowConstraint(-infinity, 2.0);
+	c2->SetCoefficient(x, 1);
+	c2->SetCoefficient(y, -1);
+	ss << "Number of constraints = " << solver->NumConstraints() << std::endl;
+	// [END constraints]
+
+	// [START objective]
+	// Objective function: 3x + 4y.
+	operations_research::MPObjective* const objective = solver->MutableObjective();
+	objective->SetCoefficient(x, 3);
+	objective->SetCoefficient(y, 4);
+	objective->SetMaximization();
+	// [END objective]
+
+	// [START solve]
+	const operations_research::MPSolver::ResultStatus result_status = solver->Solve();
+	// Check that the problem has an optimal solution.
+	if (result_status != operations_research::MPSolver::OPTIMAL) {
+		ss << "The problem does not have an optimal solution!" << std::endl;
+	}
+	// [END solve]
+
+	// [START print_solution]
+	ss << "Solution:" << std::endl;
+	ss << "Optimal objective value = " << objective->Value() << std::endl;
+	ss << x->name() << " = " << x->solution_value() << std::endl;
+	ss << y->name() << " = " << y->solution_value() << std::endl;
+	// [END print_solution]
+	return ss.str();
+}
+
 
 bool ShowConfigurationDialog( wxWindow *parent, wxString *tech, wxString *fin, bool *reset )
 {

@@ -714,7 +714,7 @@
                 },
                 "Decimals": {
                     "Type": 3.0,
-                    "Integer": 3.0
+                    "Integer": 2.0
                 },
                 "Prefix": {
                     "Type": 5.0,
@@ -838,7 +838,7 @@
                 },
                 "Decimals": {
                     "Type": 3.0,
-                    "Integer": 3.0
+                    "Integer": 2.0
                 },
                 "Prefix": {
                     "Type": 5.0,
@@ -1065,7 +1065,7 @@
                 },
                 "Decimals": {
                     "Type": 3.0,
-                    "Integer": 3.0
+                    "Integer": 2.0
                 },
                 "Prefix": {
                     "Type": 5.0,
@@ -1148,7 +1148,7 @@
                 },
                 "Decimals": {
                     "Type": 3.0,
-                    "Integer": 3.0
+                    "Integer": 2.0
                 },
                 "Prefix": {
                     "Type": 5.0,
@@ -1334,7 +1334,7 @@
                 },
                 "Decimals": {
                     "Type": 3.0,
-                    "Integer": 3.0
+                    "Integer": 2.0
                 },
                 "Prefix": {
                     "Type": 5.0,
@@ -2207,7 +2207,7 @@
                 },
                 "Decimals": {
                     "Type": 3.0,
-                    "Integer": 3.0
+                    "Integer": 2.0
                 },
                 "Prefix": {
                     "Type": 5.0,
@@ -2290,7 +2290,7 @@
                 },
                 "Decimals": {
                     "Type": 3.0,
-                    "Integer": 3.0
+                    "Integer": 2.0
                 },
                 "Prefix": {
                     "Type": 5.0,

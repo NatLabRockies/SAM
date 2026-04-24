@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -160,7 +160,7 @@ void WindToolkitDialog::OnEvt( wxCommandEvent &e )
 	switch( e.GetId() )
 	{
 	case wxID_HELP:
-		SamApp::ShowHelp("wind_toolkit_download");
+		SamApp::ShowHelp("window-reference/win_wind_toolkit_download");
 		break;
 	case ID_radAddress:
 	case ID_radLatLon:

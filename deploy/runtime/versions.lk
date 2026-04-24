@@ -55,6 +55,155 @@ function variable_name_change(new, old){
 	value(new, oldvalue(old), 'Variable name changed from \"' + old + '\" to \"' +  new + '\"');
 }
 
+version_upgrade{'2026.2.19'} = define() {
+	const cfg = config();
+
+	if (cfg.tech == 'Flat Plate PV' || cfg.tech == 'PV Battery' || cfg.tech == 'Photovoltaic Wind Battery Hybrid' ) {
+		message('The Detailed PV model input pages have been reorganized to make it easier to find related inputs with improved messages to help you find and fix problems with the system design.', 'error');
+		message('The Detailed PV model has a new option on the Tracking Layout Land input page to define the distance between rows using either the ground coverage ratio (GCR) or row spacing as input. It also has a new option on the System Size page to automatically set the number of modules along bottom of row to the number of modules per string whenever you change then number of modules per string.', 'warning');
+		value('ui_chkbox_nmodx_eq_mod_per_string',0,'Turn off new \"Set row dimensions when modules per string changes\" option on System Size page.');
+	}
+
+
+	if (cfg.tech == 'MEwave' || cfg.tech == 'MEtidal' || cfg.tech == 'MEwave Battery')
+	{
+		//variable name changes
+		variable_name_change('project_contingency_budget_cost', 'project_contingency_cost');
+		variable_name_change('project_contingency_budget_cost_rvalue', 'project_contingency_cost_rvalue');
+		variable_name_change('insurance_during_construction_method', 'insurance_during_construction_cost_method');
+		variable_name_change('insurance_during_construction_modeled', 'insurance_during_construction_cost_modeled');
+	}
+
+	if(cfg.tech == 'PVWatts' || cfg.tech == 'PVWatts Battery') {
+		message('PVWatts now runs in lifetime mode so that time series outputs are over the analysis period instead of one year.', 'warning');
+		message('PVWatts degradation is now modeled as DC degradation instead of AC degradation. DC degradation is an annual reduction in the DC output of the array instead of AC output of the system.', 'warning');
+		old_degradation = oldvalue('degradation');
+
+		value('dc_degradation', old_degradation, 'New DC degradation on DC Degradation page set to old AC degradation value from AC Degradation page.');
+	}
+	if (cfg.tech == 'PVWatts Battery') {
+		message('PVWatts Battery configurations now use the detailed battery inputs to allow for modeling a full range of battery applications instead of only behind-the-meter applications with limited dispatch options.', 'warning');
+		old_kw = oldvalue('batt_simple_kw');
+		old_kwh = oldvalue('batt_simple_kwh');
+		old_dispatch = oldvalue('batt_simple_dispatch');
+		old_chem = oldvalue('batt_simple_chemistry'); // batt_type
+
+		// inputs from simple battery inputs on old PVWatts-Battery System Design page with explanation of where to find inputs
+		value('batt_bank_power', old_kw, 'Desired bank power (kWac) on Battery Cell and System page set to old battery power (kWac).');
+		value('batt_bank_size_ui', old_kwh, 'Desired bank capacity (kWhac) on Battery Cell and System page capacity set to old battery capacity kWhac).');
+		filename = '';
+		if (old_chem == 0) {
+			// Lead Acid
+			value('batt_type', 0, 'New battery type on Battery Cell and System page set to Lead Acid: Flooded from old battery chemistry Lead Acid.');
+			value('batt_chem', 0, 'New battery chemistry on Battery Cell and System page set to Lead Acid.');
+			filename = 'BatteryStateful_LeadAcid.json';
+		}
+		else {
+			// Li-ion NMC
+			value('batt_type', 8, 'New battery type on Battery Cell and System page set to Lithium-ion: NMC/Graphite from old battery chemistry Lithium Ion.' );
+			value('batt_chem', 1, 'New battery chemistry on Battery Cell and System page set to Lithium-ion.');
+			filename = 'BatteryStateful_NMCGraphite.json';
+			
+			value('batt_specific_energy_per_mass',101);
+			value('batt_specific_energy_per_volume',70);
+		}
+		
+		// Get batt defaults from data from Battery Model UI form
+		defaults_dir = replace(appdir(), '\\', '/' ) + '/../libraries/BatteryStateful/';
+		defaults_dir += filename;
+		x = read_json(defaults_dir);
+		defs = x.defaults;
+			
+		cell_params = defs.paramscell;
+		pack_params = defs.paramspack;
+		
+		value('batt_Qfull',cell_params.qfull);
+		value('batt_Vnom_default', cell_params.vnom_default);
+			
+		if (value('batt_chem') == 0) {
+			value('LeadAcid_q20',cell_params.leadacid_q20);
+			value('LeadAcid_q10',cell_params.leadacid_q10);
+			value('LeadAcid_qn',cell_params.leadacid_qn);
+			value('LeadAcid_tn',cell_params.leadacid_tn);
+		}
+		
+		if (cell_params.voltage_choice == 0) {
+			// voltage curve
+			value('batt_C_rate',cell_params.c_rate);
+			value('batt_Vfull',cell_params.vfull);
+			value('batt_Vexp',cell_params.vexp);
+			value('batt_Vnom',cell_params.vnom);
+			value('batt_Vcut',cell_params.vcut);
+			value('batt_Qexp',cell_params.qexp);
+			value('batt_Vnom',cell_params.vnom);
+			value('batt_Qexp_percent', cell_params.qexp/cell_params.qfull/0.01);
+			value('batt_Qnom_percent', cell_params.qnom/cell_params.qfull/0.01);
+		}
+		else {
+			value('batt_voltage_matrix', cell_params.voltage_matrix);
+		}
+		
+		value('batt_resistance', cell_params.resistance); // from UBGC2, and DC400-6
+		value('batt_voltage_choice', cell_params.voltage_choice);
+
+		value('batt_bank_voltage', pack_params.nominal_voltage);
+		
+		// Lifetime
+		value('batt_life_model', cell_params.life_model);
+		value('ui_batt_life_model', cell_params.life_model);
+		value('batt_lifetime_matrix',cell_params.cycling_matrix);
+		
+		// turn calendar life model off
+		value('batt_calendar_choice', cell_params.calendar_choice);
+		
+		// Thermal
+		value('cap_vs_temp', pack_params.cap_vs_temp);
+		value('batt_Cp',pack_params.cp);
+		
+		// ancillary system losses
+		zero_array = [];
+		for (m = 0; m != 12; m++)
+			month_array[m] = 0;
+		value('batt_losses_charging', zero_array);
+		value('batt_losses_discharging', zero_array);
+		value('batt_losses_idle', zero_array);
+
+		value('batt_duration_choice', 0); // sizing choice to kWh (not hours of storage)
+		value('batt_bank_size_dc_ac', 1); // set sizing units to AC to be consistent with simple battery
+
+		if (old_dispatch == 0 || old_dispatch == 1) {
+			value('batt_dispatch_choice_ui', 0, 'Dispatch option on Battery Dispatch page set to Peak Shaving from old Peak Shaving (look ahead) or Peak shaving (look behind) option.');
+			value('batt_dispatch_choice', 0);
+			value('batt_dispatch_excl', 0);
+			msg_pk_shaving = 'Peak shaving dispatch option on Battery Dispatch page set to Perfect Look Ahead.';
+			if ( old_dispatch == 1 ) {
+				msg_pk_shaving = 'Peak shaving dispatch option on Battery Dispatch page set to One Day Look Behind.';
+			}
+			value('peak_shaving_batt_dispatch_choice', old_dispatch, msg_pk_shaving);
+			value('batt_dispatch_load_forecast_choice_peak_shaving', old_dispatch);
+		}
+		else {
+			// Should only be 2 (custom dispatch)
+			value('batt_dispatch_choice_ui', old_dispatch, 'Dispatch option on Battery Dispatch page set to Input Battery Power Targets from old Custom Dispatch option.');
+			value('batt_dispatch_choice', old_dispatch);
+			value('batt_dispatch_excl', old_dispatch);
+		}
+
+		// From cmod_battwatts lines 254 - 259
+		value('batt_dispatch_auto_can_charge', true);
+		value('batt_dispatch_auto_can_gridcharge', true);
+		value('batt_dispatch_auto_btm_can_discharge_to_grid', true);
+		value('batt_dispatch_auto_can_clipcharge', false);
+		value('batt_dispatch_charge_only_system_exceeds_load', false);
+		value('batt_dispatch_discharge_only_load_exceeds_system', false);
+		
+	}
+	
+	if (cfg.tech == 'Wind Power' || strpos(cfg.tech, "Hybrid") > -1) {
+		message('Wind balance of system cost estimators have been removed. Total capital costs remain the same in this version. Please uses SAM 2025.4.16 or older if you need access to the balance of system cost estimators within SAM.', 'warning');
+	}
+};
+
 version_upgrade{'2024.12.12'} = define() {
 	
 	const cfg = config();
@@ -992,7 +1141,7 @@ version_upgrade{'2020.11.29'} = define() {
 		{
 			value("pc_config", 0);
 			message('The Supercritical Carbon Dioxide (sCO2) Power Cycle option has been removed from the Power Cycle page.'
-						'To model an sCO2 cycle, use the sCO2 Cycle Integration macro with the NREL sCO2 Power Cycle Python model. See the macro instructions for details.'
+						'To model an sCO2 cycle, use the sCO2 Cycle Integration macro with the NLR sCO2 Power Cycle Python model. See the macro instructions for details.'
 						' Setting power cycle option to the default Rankine Cycle.','warning');
 		}
 	}
@@ -1005,13 +1154,13 @@ version_upgrade{'2020.11.29'} = define() {
     {
 		retire_tech();
 		//The version upgrade script is set up to delete cases with this technology made from a previous release from the project file. This is done in project.cpp
-		message('The Dish Stirling model is not available in SAM ' + samver() +'. Removing Case \"' + case_name() + '\" from the file. The most recent version with the model is SAM 2020.2.29, which you can download from https://sam.nrel.gov/download/','warning');
+		message('The Dish Stirling model is not available in SAM ' + samver() +'. Removing Case \"' + case_name() + '\" from the file. The most recent version with the model is SAM 2020.2.29, which you can download from https://sam.nlr.gov/download/','warning');
     }
     if (cfg.tech == 'DSPT')
     {
 		retire_tech();
 		//The version upgrade script is set up to delete cases with this technology made from a previous release from the project file. This is done in project.cpp
-		message ('The Direct Steam Power Tower model is not available in SAM ' + samver() +'. Removing Case \"' + case_name() + '\" from the file. The most recent version with the model is SAM 2020.2.29, which you can download from https://sam.nrel.gov/download/','warning');
+		message ('The Direct Steam Power Tower model is not available in SAM ' + samver() +'. Removing Case \"' + case_name() + '\" from the file. The most recent version with the model is SAM 2020.2.29, which you can download from https://sam.nlr.gov/download/','warning');
 	}
     
     // Use en_batt instead of cfg.tech to capture fuel cell configurations
@@ -1021,7 +1170,7 @@ version_upgrade{'2020.11.29'} = define() {
         max_replacements = max(old_replacement_option);
         repl_msg = 'For the battery "Replace at specified schedule" option, "Battery bank replacement schedule (%/year)" replaces the two "Battery bank replacement schedule" and "Battery bank replacement percent" inputs to avoid inconsistencies between the two.';
         if (max_replacements > 1) {
-            message( repl_msg + ' You used the replacement schedule to specify up to ' + max_replacements + ' replacements per year, so you may need to adjust the replacement percentages in the new schedule. Please contact us at sam.support@nrel.gov if you need help with this.', 'warning');
+            message( repl_msg + ' You used the replacement schedule to specify up to ' + max_replacements + ' replacements per year, so you may need to adjust the replacement percentages in the new schedule. Please contact us at sam.support@nlr.gov if you need help with this.', 'warning');
         }
         else if (max_replacements > 0) {
             message(repl_msg);

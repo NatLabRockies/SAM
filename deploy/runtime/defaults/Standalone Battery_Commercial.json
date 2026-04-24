@@ -8838,7 +8838,7 @@
     "batt_cell_power_charge_max": 2.0,
     "batt_cell_power_discharge_max": 2.0,
     "batt_chem": 1.0,
-    "batt_computed_bank_capacity": 1200.5431199999999,
+    "batt_computed_bank_capacity": 1200.54312,
     "batt_computed_series": 126.0,
     "batt_computed_stacks_series": 1.0,
     "batt_computed_strings": 1064.0,
@@ -9813,9 +9813,9 @@
     "batt_minimum_outage_SOC": 10.0,
     "batt_num_cells": 134064.0,
     "batt_power_charge_max_kwac": 312.64143749999996,
-    "batt_power_charge_max_kwdc": 300.13577999999998,
+    "batt_power_charge_max_kwdc": 300.13578,
     "batt_power_discharge_max_kwac": 288.1303487999999,
-    "batt_power_discharge_max_kwdc": 300.13577999999998,
+    "batt_power_discharge_max_kwdc": 300.13578,
     "batt_pv_ac_forecast": [
         0.0
     ],
@@ -18654,7 +18654,7 @@
     "batt_ui_bank_voltage": 501.48,
     "batt_ui_cell_voltage": 3.98,
     "batt_ui_inverter_eff": 96.0,
-    "batt_ui_nominal_bank_power": 300.13577999999998,
+    "batt_ui_nominal_bank_power": 300.13578,
     "batt_unit_capacity": 400.0,
     "batt_unit_surface_area": 30.0,
     "batt_user_specified_weather_file_peak_shaving": "",
@@ -18666,13 +18666,13 @@
             0.0
         ]
     ],
-    "batt_volume": 14.640769756097559,
-    "battery_energy": 1200.5431199999999,
+    "batt_volume": 14.64076975609756,
+    "battery_energy": 1200.54312,
     "battery_indirect_cost_percent": 0.0,
     "battery_losses_shown": 0.0,
     "battery_per_kW": 667.0,
     "battery_per_kWh": 184.0,
-    "battery_power": 300.13577999999998,
+    "battery_power": 300.13578,
     "battery_thermal_shown": 0.0,
     "battery_total": 421090.49934,
     "battery_total_cost_lcos": 464252.27552235,
@@ -63378,7 +63378,7 @@
         156.2,
         184.05
     ],
-    "nominal_discount_rate": 9.060000000000003,
+    "nominal_discount_rate": 9.060000000000004,
     "normalize_to_utility_bill": 0.0,
     "om_batt_capacity_cost": [
         12.0
@@ -63386,7 +63386,7 @@
     "om_batt_fixed_cost": [
         0.0
     ],
-    "om_batt_nameplate": 1200.5431199999999,
+    "om_batt_nameplate": 1200.54312,
     "om_batt_replacement_cost": [
         280.0
     ],
@@ -63505,6 +63505,8 @@
     "standalonebatt.cost.sales_tax.percent": 100.0,
     "standalonebatt.cost.sales_tax.total": 22107.25121535,
     "standalonebatt.cost.sales_tax.value": 5.0,
+    "start_day_of_year": 3.335046e-317,
+    "start_day_of_year_load_ui": 3.335046e-317,
     "state_tax_rate": [
         7.0
     ],

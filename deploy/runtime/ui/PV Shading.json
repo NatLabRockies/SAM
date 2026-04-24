@@ -1,7 +1,7 @@
 {
     "Name": "PV Shading",
-    "Width": 1036.0,
-    "Height": 845.0,
+    "Width": 1035.0,
+    "Height": 947.0,
     "FormObjects": {
         "GroupBox": {
             "Visible": 1.0,
@@ -743,11 +743,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 126.0
+                    "Integer": 27.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 807.0
+                    "Integer": 834.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1355,6 +1355,261 @@
                 }
             }
         },
+        "TextEntry": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "nohrsc_coords"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 849.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 861.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 125.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Text": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "Button": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "nohrsc_downloader"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 393.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 861.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 225.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Download Snow Data"
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "TextEntry": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "nohrsc_station_id"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 849.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 915.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 125.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Text": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "Hyperlink": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "nohrsc_url"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 393.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 915.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 350.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Visit NOHRSC interactive website"
+                },
+                "URL": {
+                    "Type": 5.0,
+                    "String": "https://www.nohrsc.noaa.gov/interactive/html/map.html"
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "TextEntry": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "nohrsc_year"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 849.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 888.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 125.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Text": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
         "Label": {
             "Visible": 1.0,
             "ObjectProperties": {
@@ -1376,7 +1631,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 24.0
+                    "Integer": 48.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -1384,7 +1639,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "Snow losses are caused by snow covering the array. When your weather file includes snow depth data, SAM can estimate losses due to snow.  Losses are calculated for each subarray."
+                    "String": "Snow losses are caused by snow covering the array. When snow depth data is available in the weather file or provided below, SAM can estimate these losses for each subarray. Click Edit Array to enter your own data, or click Download Snow Data to download data from the NOHRSC."
                 },
                 "TextColour": {
                     "Type": 4.0,
@@ -1625,7 +1880,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 72.0
+                    "Integer": 180.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -1985,6 +2240,51 @@
                 "AlignTop": {
                     "Type": 2.0,
                     "Boolean": 1.0
+                }
+            }
+        },
+        "DataArray": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "snow_array"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 393.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 888.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 90.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Label": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Description": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
                 }
             }
         },
@@ -3929,15 +4229,15 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 429.0
+                    "Integer": 393.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 807.0
+                    "Integer": 834.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 414.0
+                    "Integer": 612.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -4977,6 +5277,55 @@
                     "Integer": 40.0
                 }
             }
+        },
+        "RadioChoice": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "use_snow_weather_file"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 42.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 861.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 288.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Selection": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Items": {
+                    "Type": 6.0,
+                    "StringList": "Enter or download time series snow data|Use snow data from weather file"
+                },
+                "ShowCaptions": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Horizontal": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
         }
     },
     "VarDatabase": {
@@ -5045,6 +5394,45 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
+        "nohrsc_coords": {
+            "Version": 4.0,
+            "Type": 4.0,
+            "Label": "Coordinates",
+            "Units": "",
+            "Group": "Shading and Snow",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": "<invalid>",
+            "UIObject": "TextEntry",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "nohrsc_station_id": {
+            "Version": 4.0,
+            "Type": 4.0,
+            "Label": "Station ID:",
+            "Units": "",
+            "Group": "Shading and Snow",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": "",
+            "UIObject": "TextEntry",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "nohrsc_year": {
+            "Version": 4.0,
+            "Type": 4.0,
+            "Label": "Year: ",
+            "Units": "",
+            "Group": "Shading and Snow",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": "",
+            "UIObject": "TextEntry",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "shading_3d_scene": {
             "Version": 4.0,
             "Type": 6.0,
@@ -5058,6 +5446,21 @@
                 "DATA": ""
             },
             "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "snow_array": {
+            "Version": 4.0,
+            "Type": 2.0,
+            "Label": "Snow time series losses",
+            "Units": "",
+            "Group": "Shading and Snow",
+            "IndexLabels": "",
+            "Flags": 1.0,
+            "DefaultValue": [
+                0.0
+            ],
+            "UIObject": "DataArray",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
@@ -6200,6 +6603,19 @@
             "UIObject": "Default",
             "sscVariableName": "",
             "sscVariableValue": ""
+        },
+        "use_snow_weather_file": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Use snow data from weather file",
+            "Units": "",
+            "Group": "Snow Losses",
+            "IndexLabels": "Enter or download time series snow data|Use snow data from weather file",
+            "Flags": 1.0,
+            "DefaultValue": 0.0,
+            "UIObject": "RadioChoice",
+            "sscVariableName": "",
+            "sscVariableValue": ""
         }
     },
     "Equations": [
@@ -6388,14 +6804,43 @@
         "//just run this function anytime anything relevant changes",
         "function input_enabling()",
         "{\r",
-        "",
-        "\t//enable_module_area = false;",
+        "\tmsg_snow = '';\r",
+        "\tif (value('en_snow_model') ==1) {\r",
+        "\t\tif (isnan(value('annual_snow')) && value('use_snow_weather_file') == 1) {\r",
+        "\t\t\tmsg_snow = 'Weather file has no snow data. Simulation will fail.';\r",
+        "\t\t}\r",
+        "\t\tif (value('use_snow_weather_file') == 0) {\r",
+        "\t\t\t// check whether the input array is the same length as the weather file\r",
+        "\t\t\tL = ${snow_array};\r",
+        "\t\t\tts = 60*1.0/(#L/8760); \r",
+        "\t\t\twfp = value('ui_step_minutes');\r",
+        "\t\t\tmultiplier = 0;\r",
+        "\t\t\tif (wfp<round(ts)) {\r",
+        "\t\t\t\tmultiplier = mod(ts, value('ui_step_minutes'));\r",
+        "\t\t\t} else {\r",
+        "\t\t\t\tmultiplier = mod(wfp, ts);\r",
+        "\t\t\t}\r",
+        "\t\t\tif (multiplier != 0) {\r",
+        "\t\t\t\tmsg_snow = 'Weather file time step (' + to_string(wfp) + ' minutes) does not align with snow data time step (' + to_string(ts) + ' minutes).';\r",
+        "\t\t\t} \r",
+        "\t\t\telse {\r",
+        "\t\t\t\t// This condition and the preceding condition are not mutually exclusive\r",
+        "\t\t\t\tif (has_negative_snow_depth()) {\r",
+        "\t\t\t\t\tmsg_snow = 'Snow depth data contains negative values. Click Edit Array to see the data.';\r",
+        "\t\t\t\t}\r",
+        "\t\t\t\tif (!has_positive_snow_depth()) {\r",
+        "\t\t\t\t\tmsg_snow = 'Snow depth data contains no values greater than zero. Click Edit Array to see the data.';\r",
+        "\t\t\t\t}\r",
+        "\t\t\t}\r",
+        "\t\t}\r",
+        "\t}\r",
         "\t",
-        "\tmsg_snow = '';",
-        "\tif ( isnan(value('annual_snow')) == true && value('en_snow_model') == 1 ) {",
-        "\t\tmsg_snow = 'Weather file has no snow data. Simulation will fail.';",
-        "\t}",
-        "\tproperty('ui_msg_snow','Caption',msg_snow);",
+        "\tproperty('ui_msg_snow','Caption',msg_snow);\r",
+        "\t\r",
+        "\t// If the snow loss model is enabled, allow editing of array\r",
+        "\tenable(\"use_snow_weather_file\", value('en_snow_model') == 1);\r",
+        "\tenable(\"snow_array\", value('en_snow_model') == 1 && value('use_snow_weather_file') ==0);",
+        "\tenable(\"nohrsc_downloader\", value('en_snow_model') == 1 && value('use_snow_weather_file') ==0);\r",
         "\r",
         "\tmsg='';\r",
         "\tfor(i=1; i<=4; i++)",
@@ -6476,7 +6921,8 @@
         "on_change{'subarray3_nmodx'} = define() { input_enabling(); };",
         "on_change{'subarray4_nmodx'} = define() { input_enabling(); };",
         "on_change{'en_snow_model'} = define() { input_enabling(); };",
-        "\r",
+        "on_change{'use_snow_weather_file'} = define() { input_enabling(); };\r",
+        "on_change{'snow_array'} = define() { input_enabling(); };\r",
         "on_change{'edit_3d_scene'} = define() {",
         "\t",
         "\tminute_step = 60;",
@@ -6577,6 +7023,40 @@
         "\t",
         "\treturn is_bifacial;",
         "",
-        "}"
+        "}\r",
+        "\r",
+        "function has_negative_snow_depth()\r",
+        "{\r",
+        "\tsd = value('snow_array');\r",
+        "\tfor ( i=0; i<#sd; i++ )\r",
+        "\t{\r",
+        "\t\tif (sd[i]<0) {\r",
+        "\t\t\treturn true;\r",
+        "\t\t}\r",
+        "\t}\r",
+        "\treturn false;\r",
+        "}\r",
+        "\r",
+        "function has_positive_snow_depth()\r",
+        "{\r",
+        "\tsd = value('snow_array');\r",
+        "\tfor ( i=0; i<#sd; i++ )\r",
+        "\t{\r",
+        "\t\tif (sd[i]>0) {\r",
+        "\t\t\treturn true;\r",
+        "\t\t}\r",
+        "\t}\r",
+        "\treturn false;\r",
+        "}\r",
+        "\r",
+        "on_change{'nohrsc_downloader'} = define() {\r",
+        "\thash = nohrscquery();\r",
+        "\tif ( hash == '' ) return;\r",
+        "\tproperty( 'nohrsc_url', 'caption', \r",
+        "\t'View the data for this station on the NOHRSC website' );\r",
+        "\tproperty( 'nohrsc_url', 'url', hash{'stationURL'} );\r",
+        "\tinput_enabling();\r",
+        "};\r",
+        ""
     ]
 }

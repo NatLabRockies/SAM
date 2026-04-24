@@ -1,15 +1,15 @@
 // naming convention with date and github branch used
 // configuration and compute module appended in simulate_ssc_tests
-casename =  "2022.08.08_develop_branch";
+casename =  "2025.10.24_develop_branch";
 
 // update folder based on where you would like the generated json files (one for input and one for output comparison for each configuration)
 // macOS
-folder = "/Users/imacuser/Public/Projects/SAM/Documentation/FinancialMarkets/Tests/generated2";
+//folder = "/Users/imacuser/Public/Projects/SAM/Documentation/FinancialMarkets/Tests/generated2";
 // Windows
-//folder = "C:/Projects/SAM/Documentation/FinancialMarkets/Tests/generated";
+folder = "C:/Users/mprillim/Documents/Marine_energy/";
 
 // to test all financial compute modules
-cmod_list="cashloan,thirdpartyownership,host_developer,singleowner,communitysolar,merchantplant,levpartflip,equpartflip,saleleaseback,lcoefcr";
+cmod_list="mhk_costs";
 
 // to test a technology cmod
 // 1) change cmod_list to the technology cmod name; e.g. cmod_list="fresnel_physical"
@@ -26,7 +26,10 @@ create_case("PVWatts", "None", casename);
 configs=0;
 
 //loop through all technologies
-technologies = 	list_technologies();
+technologies = [];
+technologies[0] = "MEwave";
+technologies[1] = "MEtidal";
+//technologies = 	list_technologies();
 for (t=0; t<#technologies; t++)
 {
 	if ((technologies[t] != "DSPT") 

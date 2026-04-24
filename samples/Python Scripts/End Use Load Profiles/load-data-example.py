@@ -24,7 +24,7 @@ from eulp import get, plot, stats
 #    For example, for 2022, set year = '2022'
 #  
 #  * dataset: For a short description of Resstock and Comstock, see the FAQ at
-#    https://comstock.nrel.gov/page/faq#what-buildings-are-represented-by-each-dataset.
+#    https://natlabrockies.github.io/ComStock.github.io/docs/faq.html.
 #    
 #    Find available datasets in: ../end-use-load-profiles-for-us-building-stock/[year].
 #

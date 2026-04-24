@@ -218,6 +218,9 @@
     "crit_8": 0.0,
     "crit_9": 0.0,
     "dc_ac_ratio": 1.15,
+    "dc_degradation": [
+        0.5
+    ],
     "debt_fraction": 100.0,
     "debt_message": "",
     "degradation": [
@@ -9081,7 +9084,7 @@
     "ibi_uti_percent_maxvalue": 1e38,
     "ibi_uti_percent_tax_fed": 1.0,
     "ibi_uti_percent_tax_sta": 1.0,
-    "in_location": "Type a location name, street address, or lat,lon in decimal degrees",
+    "in_location": "",
     "in_location_list": "|||",
     "in_location_options": 0.0,
     "in_nsrdb_options": 0.0,
@@ -26864,10 +26867,12 @@
         0.0
     ],
     "solar_data_file_name": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
-    "solar_data_file_name_load": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
     "solar_data_source": "NSRDB",
     "solar_resource": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy",
     "solar_resource_file": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
+    "start_day_of_year": 3.335046e-317,
+    "start_day_of_year_belpe_ui": 0.0,
+    "start_day_of_year_load_ui": 3.335046e-317,
     "state": "-",
     "state_tax_rate": [
         7.0
@@ -26876,7 +26881,7 @@
     "step": 3600.0,
     "subtotal_direct": 16400.0,
     "system_capacity": 8.0,
-    "system_use_lifetime_output": 0.0,
+    "system_use_lifetime_output": 1.0,
     "tilt": 20.0,
     "total_direct_cost": 16400.0,
     "total_indirect_cost": 8480.0,

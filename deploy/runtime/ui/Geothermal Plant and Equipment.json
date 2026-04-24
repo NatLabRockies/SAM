@@ -4299,7 +4299,7 @@
         "\t\treturn ${wet_bulb_temp_input};\r",
         "\t}\r",
         "\telseif ( isnan(${wet_bulb_temp_wf}) ) {\r",
-        "\t\treturn 0; // from Solar Resource Data form\r",
+        "\t\treturn 0;\r",
         "\t}\r",
         "\telse {\r",
         "\t\treturn ${wet_bulb_temp_wf}; // annual twet\r",

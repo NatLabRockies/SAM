@@ -71,7 +71,7 @@
         "grid_per_watt": 0.02,
         "grid_percent": 0.0,
         "grid_total": 2000000.0,
-        "in_location": "Type a location name, street address, or lat,lon in decimal degrees",
+        "in_location": "",
         "in_location_list": "",
         "in_location_options": 0.0,
         "in_nsrdb_options": 0.0,
@@ -199,7 +199,6 @@
             0.0
         ],
         "solar_data_file_name": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
-        "solar_data_file_name_load": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
         "solar_data_source": "NSRDB",
         "solar_resource": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy",
         "solar_resource_file": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
@@ -280,10 +279,7 @@
         "env_exposure_loss": 0.0,
         "env_icing_loss": 0.21,
         "env_loss_total": 2.398195120000002,
-        "est_bos_cost": 0.0,
-        "est_turbine_cost": 0.0,
         "inflation_rate": 2.5,
-        "install_type": 0.0,
         "om_capacity": [
             40.0
         ],
@@ -303,7 +299,6 @@
         "ops_strategies_loss": 0.0,
         "reference_capacity": 200000.0,
         "reference_number_turbines": 80.0,
-        "reference_resource_file": "AZ Eastern-Rolling Hills.srw",
         "reference_sales_tax_percent": 5.0,
         "resource_definition_type": 0.0,
         "rows": 1.0,
@@ -12473,6 +12468,7 @@
         "grid_interconnection_limit_kwac": 20000.0,
         "hybrid_system_capacity": 276923.1,
         "inflation_rate": 2.5,
+        "lbl_fom_dispatch_message": "",
         "om_batt_capacity_cost": [
             7.25
         ],
@@ -31056,6 +31052,8 @@
         "show_ReserveAccounts": 1.0,
         "show_construction_period": 1.0,
         "solution_mode_message": "",
+        "start_day_of_year": 3.335046e-317,
+        "start_day_of_year_tod_ui": 3.335046e-317,
         "state_tax_rate": [
             7.0
         ],

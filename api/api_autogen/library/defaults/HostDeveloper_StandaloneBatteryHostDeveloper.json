@@ -36,7 +36,8 @@
 			"ppa_escalation": 1,
 			"ppa_multiplier_model": 0,
 			"ppa_price_input": [0.150000],
-			"ppa_soln_mode": 1
+			"ppa_soln_mode": 1,
+			"start_day_of_year": 0
 		},
 		"FinancialParameters": {
 			"analysis_period": 25,
@@ -265,7 +266,8 @@
 [0]			],
 			"nm_dollars_applied_ym": [
 [0]			],
-			"utility_bill_w_sys": [0]
+			"utility_bill_w_sys": [0],
+			"utility_bill_wo_sys": [0]
 		},
 		"SystemOutput": {
 			"degradation": [0.000000],

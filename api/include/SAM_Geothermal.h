@@ -632,6 +632,14 @@ extern "C"
 	SAM_EXPORT void SAM_Geothermal_GeoHourly_specify_pump_work_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
+	 * Set start_day_of_year: Start day of year for TOD periods [0..6]
+	 * options: 0=Monday, 6=Sunday
+	 * constraints: None
+	 * required if: ?=0
+	 */
+	SAM_EXPORT void SAM_Geothermal_GeoHourly_start_day_of_year_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
 	 * Set startup_frac: % thermal power for startup [%]
 	 * options: None
 	 * constraints: None
@@ -926,6 +934,8 @@ extern "C"
 	SAM_EXPORT double SAM_Geothermal_GeoHourly_specified_pump_work_amount_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Geothermal_GeoHourly_specify_pump_work_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Geothermal_GeoHourly_start_day_of_year_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Geothermal_GeoHourly_startup_frac_nget(SAM_table ptr, SAM_error *err);
 

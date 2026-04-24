@@ -1,0 +1,18 @@
+CSP Direct Steam Tower
+======================
+
+The direct steam power tower consists of the same components and functionality of the molten salt power tower, with two important differences. First, the steam flowing through the tower is both the heat transfer fluid that transfers energy from the receiver and the working fluid of the power cycle (a "direct" system). Secondly, the steam tower is composed of three individual receivers: a boiler, superheater, and reheater; each with a defined role. These differences require additional inputs and changes to the control strategy, which are detailed in this section.
+
+The direct steam power tower is based upon the same concepts as the molten salt power tower: a first-principles energy balance model of the receiver, regression methodology to determine Rankine cycle performance while maintaining flexibility to account for various cycle configurations, and field layout/receiver optimization options. However, the direct steam power tower is characterized by two important differences that result in significant modifications to the molten salt tower model. 
+
+#. The steam flowing through the tower is both the heat transfer fluid that transfers energy from the receiver and the working fluid of the power cycle (a "direct" system). In other words, the flow from receiver travels directly through the power block and back to the receiver. This coupling requires that information describing the power cycle such as pressures, feedwater extraction mass flow rates, and the feedwater outlet temperature be known for the direct steam system. Therefore, you have control over additional information detailing the Rankine cycle for the direct steam power tower. 
+
+#. The steam tower receiver is composed of three individual receivers: a boiler, superheater and reheater, each with a uniquely defined role. The recirculating boiler accepts feedwater from the power cycle and generates a two-phase (boiling) flow at a user-specified quality. The dry steam from the boiler then passes through a superheater where flux heats the steam to a temperature and pressure that you specify. SAM also models a reheat loop, where steam from the high pressure turbine is redirected through a dedication portion of the receiver and reaches a user-specified target temperature before passing through the remainder of the power cycle.
+
+The configuration of multiple receiver sections on the tower requires a strategy to allocate flux from the field to each of the receivers. The strategy developed for the direct steam power tower assumes that all of the flux from the field can be allocated to any one of the receivers at any time. SAM uses an iterative procedure to solve for the flux distribution on the receiver for each simulation time step. The iterative procedure progresses as follows:
+
+* First, a portion of the total flux is assigned to the boiler and superheater. A fraction of this portion is then assigned to the boiler and the mass flow rate of steam that results in the target outlet quality is calculated. 
+
+* The outlet temperature of the superheater is calculated based on the guessed incident flux and the steam conditions. If the calculated temperature does not meet the target, the fraction assigned to the boiler is adjusted. 
+
+* Once the superheater outlet temperature is resolved, SAM determines the reheater performance. If the calculated outlet temperature does not match the target, then the portion of total flux assigned to the boiler and superheater is adjusted once again, and the process is repeated until the target reheater outlet temperature is met.

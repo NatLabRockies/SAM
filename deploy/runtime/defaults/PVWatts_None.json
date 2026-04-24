@@ -17571,7 +17571,7 @@
         1e38
     ],
     "grid_interconnection_limit_kwac": 100000.0,
-    "in_location": "Type a location name, street address, or lat,lon in decimal degrees",
+    "in_location": "",
     "in_location_list": "|||",
     "in_location_options": 0.0,
     "in_nsrdb_options": 0.0,
@@ -17640,7 +17640,6 @@
         0.0
     ],
     "solar_data_file_name": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
-    "solar_data_file_name_load": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
     "solar_data_source": "NSRDB",
     "solar_resource": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy",
     "solar_resource_file": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
@@ -17662,7 +17661,7 @@
     "ui_step_minutes": 60.0,
     "ui_total_land_area_ha": 175.43871222814654,
     "ui_total_module_area": 526315.7894736842,
-    "ui_total_module_area_acres": 130.05534895540843,
+    "ui_total_module_area_acres": 130.05534895540846,
     "ui_total_module_area_ha": 52.63157894736842,
     "ui_use_acre_per_mw": 0.0,
     "use_specific_weather_file": 0.0,

@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -1245,7 +1245,7 @@ void VariableGridFrame::OnCommand(wxCommandEvent &evt)
 		SendToExcel();
 		break;
 	case wxID_HELP:
-		SamApp::ShowHelp( "inputs_browser" );
+		SamApp::ShowHelp( "reference/inputs_browser" );
 		break;
 	case ID_FILTER:
 		UpdateGrid();

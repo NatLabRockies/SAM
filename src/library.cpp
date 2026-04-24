@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -109,7 +109,7 @@ public:
 			break;
 
 		case wxID_HELP:			
-			SamApp::ShowHelp("weather_manage_folders");
+			SamApp::ShowHelp("weather-data/weather_manage_folders");
 			break;
 		}
 	}
@@ -1454,8 +1454,17 @@ bool ScanWaveResourceTSData(const wxString& db_file, bool show_busy)
                 if (ssc_data_get_number(pdata, "location_id", &val))
                     csv(row, 1) = wxString::Format("%g", val);
 
-                if ((str = ssc_data_get_string(pdata, "location_name")) != 0)
-                    csv(row, 2) = wxString(str);
+                if ((str = ssc_data_get_string(pdata, "location_name")) != 0) {
+                    if (wxString(str).StartsWith("b'") && wxString(str).EndsWith("'")) { // strip leading b' and trailing '
+                        wxString mod_str = wxString(str).Mid((size_t)2, size_t((int)wxString(str).Len() - 3));
+                        csv(row, 2) = mod_str;
+                    }
+                    else {
+                        csv(row, 2) = wxString(str);
+                    }
+
+                    
+                }
 
                 if (ssc_data_get_number(pdata, "distance_to_shore_file", &val))
                     csv(row, 3) = wxString::Format("%g", val);
@@ -1550,14 +1559,14 @@ bool ScanTidalResourceData(const wxString& db_file, bool show_busy)
         busy = new wxBusyInfo("Updating tidal resource time series library...");
 
     wxArrayString paths;
-    paths.Add(SamApp::GetRuntimePath() + "../tidal_resource/");
+    paths.Add(SamApp::GetRuntimePath() + "../tidal_resource_dist/");
 
-    
+
     wxString dnpath;
-    if (SamApp::Settings().Read("wave_download_path", &dnpath)
+    if (SamApp::Settings().Read("tidal_download_path", &dnpath)
         && wxDirExists(dnpath))
         paths.Add(dnpath);
-        
+
 
     wxString slist;
     if (SamApp::Settings().Read("tidal_data_paths", &slist))
@@ -1704,6 +1713,199 @@ bool ScanTidalResourceData(const wxString& db_file, bool show_busy)
                     //wstr += "]";
                     csv(row, 11) = wxString(wstr);
                 }*/
+
+                /*
+                if ((mat = ssc_data_get_matrix(pdata, "wave_resource_matrix", &nrows, &ncols)) != 0)
+                {
+                    wxString wstr = "";
+                    for (int r = 0; r < nrows; r++)
+                    {
+                        wstr += "[";
+                        for (int c = 0; c < ncols; c++)
+                        {
+                            wstr += wxString::Format("%g", mat[r * ncols + c]);
+                            if (c < ncols - 1) wstr += ";";
+                        }
+                        wstr += "]";
+                    }
+                    csv(row, 16) = wxString(wstr);
+                }*/
+                row++;
+            }
+
+            ssc_data_free(pdata);
+
+            has_more = dir.GetNext(&file);
+        }
+    }
+
+    if (busy) delete busy;
+
+    return csv.WriteFile(db_file);
+}
+
+bool ScanTidalResourceTSData(const wxString& db_file, bool show_busy)
+{
+    // TODO - update fields based on final file
+    wxBusyInfo* busy = 0;
+    if (show_busy)
+        busy = new wxBusyInfo("Updating tidal resource time series library...");
+
+    wxArrayString paths;
+    paths.Add(SamApp::GetRuntimePath() + "../tidal_resource/");
+
+    
+    wxString dnpath;
+    if (SamApp::Settings().Read("wave_download_path", &dnpath)
+        && wxDirExists(dnpath))
+        paths.Add(dnpath);
+        
+
+    wxString slist;
+    if (SamApp::Settings().Read("tidal_data_paths", &slist))
+    {
+        wxArrayString ll = wxStringTokenize(slist, ";");
+        for (size_t i = 0; i < ll.size(); i++)
+            if (wxDirExists(ll[i]))
+                paths.Add(ll[i]);
+    }
+
+    //wxString path = SamApp::GetRuntimePath() + "../wave_resource_ts/";
+    /*
+    wxDir dir(path);
+    if (!dir.IsOpened()) {
+        if (busy) delete busy;
+        return false;
+    }*/
+
+
+
+    wxCSVData csv;
+    csv(0, 0) = "Name";
+    csv(2, 0) = "[0]";
+
+    csv(0, 1) = "Location ID";
+    csv(2, 1) = "location_id";
+
+    csv(0, 2) = "Location";
+    csv(2, 2) = "location";
+
+    csv(0, 3) = "Distance to shore";
+    csv(1, 3) = "m";
+    csv(2, 3) = "distance_to_shore_file";
+
+    csv(0, 4) = "Water depth";
+    csv(1, 4) = "m";
+    csv(2, 4) = "water_depth_file";
+
+    csv(0, 5) = "Latitude";
+    csv(1, 5) = "deg";
+    csv(2, 5) = "lat";
+
+    csv(0, 6) = "Longitude";
+    csv(1, 6) = "deg";
+    csv(2, 6) = "lon";
+
+    csv(0, 7) = "Time zone";
+    csv(2, 7) = "tz";
+
+    csv(0, 8) = "Data source";
+    csv(2, 8) = "data_source";
+
+    csv(0, 9) = "Notes";
+    csv(2, 9) = "notes";
+
+    csv(0, 10) = "File name";
+    csv(2, 10) = "tidal_resource_filename";
+
+    //csv(0, 11) = "Tidal velocity";
+    //csv(2, 11) = "tidal_velocity";
+
+    //csv(0, 16) = "Frequency distribution";
+    //csv(2, 16) = "wave_resource_matrix";
+
+    int row = 3;
+    wxString file;
+    for (int i = 0; i < paths.size(); i++) {
+        wxString path(paths[i]);
+        wxDir dir(path);
+        if (!dir.IsOpened())
+        {
+            wxLogStatus("ScanTidalResourceTSData: could not open folder " + path);
+            continue;
+        }
+        wxString file;
+        bool has_more = dir.GetFirst(&file, "*.csv", wxDIR_FILES);
+        while (has_more)
+        {
+            // process file
+            wxString wf = paths[i] + "/" + file;
+
+            ssc_data_t pdata = ssc_data_create();
+            ssc_data_set_string(pdata, "tidal_resource_filename", (const char*)wf.c_str());
+            ssc_data_set_number(pdata, "tidal_resource_model_choice", 1);
+
+            if (const char* err = ssc_module_exec_simple_nothread("tidal_file_reader", pdata))
+            {
+                wxLogStatus("error scanning '" + wf + "'");
+                wxLogStatus("\t%s", err);
+            }
+            else
+            {
+                ssc_number_t val;
+                ssc_number_t* vel_arr;
+                ssc_number_t* year_arr;
+                ssc_number_t* mat;
+                int nrows, ncols;
+                const char* str;
+
+                wxFileName ff(wf);
+                ff.Normalize();
+
+                csv(row, 0) = ff.GetName();
+
+                if ((str = ssc_data_get_string(pdata, "location_id")) != 0)
+                    csv(row, 1) = wxString(str);
+
+                if ((str = ssc_data_get_string(pdata, "location")) != 0)
+                    csv(row, 2) = wxString(str);
+
+                if (ssc_data_get_number(pdata, "distance_to_shore_file", &val))
+                    csv(row, 3) = wxString::Format("%g", val);
+
+                if (ssc_data_get_number(pdata, "water_depth_file", &val))
+                    csv(row, 4) = wxString::Format("%g", val);
+
+                if (ssc_data_get_number(pdata, "lat", &val))
+                    csv(row, 5) = wxString::Format("%g", val);
+
+                if (ssc_data_get_number(pdata, "lon", &val))
+                    csv(row, 6) = wxString::Format("%g", val);
+
+                if (ssc_data_get_number(pdata, "tz", &val))
+                    csv(row, 7) = wxString::Format("%g", val);
+
+                if ((str = ssc_data_get_string(pdata, "data_source")) != 0)
+                    csv(row, 8) = wxString(str);
+
+                if ((str = ssc_data_get_string(pdata, "notes")) != 0)
+                    csv(row, 9) = wxString(str);
+
+                csv(row, 10) = ff.GetFullPath();
+                /*
+                if ((vel_arr = ssc_data_get_array(pdata, "tidal_velocity", &nrows)) != 0)
+                {
+                    wxString wstr = "";
+                    //wstr += "[";
+                    for (int r = 0; r < nrows; r++)
+                    {
+                        wstr += wxString::Format("%g", vel_arr[r]);
+                        wstr += ";";
+
+                    }
+                    //wstr += "]";
+                    csv(row, 11) = wxString(wstr);
+                }*/
               
                 /*
                 if ((mat = ssc_data_get_matrix(pdata, "wave_resource_matrix", &nrows, &ncols)) != 0)
@@ -1735,7 +1937,7 @@ bool ScanTidalResourceData(const wxString& db_file, bool show_busy)
     return csv.WriteFile(db_file);
 }
 
-wxString WaveResourceTSData_makeJPD(const wxString& ts_file, bool show_busy)
+wxString WaveResourceTSData_makeJPD(const wxString& ts_file, ssc_number_t* resource_matrix, bool show_busy)
 {
     // TODO - update fields based on final file
     wxBusyInfo* busy = 0;

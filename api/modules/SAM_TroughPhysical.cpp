@@ -1484,6 +1484,12 @@ SAM_EXPORT void SAM_TroughPhysical_TimeOfDeliveryFactors_dispatch_tod_factors_as
 	});
 }
 
+SAM_EXPORT void SAM_TroughPhysical_TimeOfDeliveryFactors_start_day_of_year_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "start_day_of_year", number);
+	});
+}
+
 SAM_EXPORT void SAM_TroughPhysical_Revenue_mp_energy_market_revenue_mset(SAM_table ptr, double* mat, int nrows, int ncols, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_matrix(ptr, "mp_energy_market_revenue", mat, nrows, ncols);
@@ -4081,6 +4087,15 @@ SAM_EXPORT double* SAM_TroughPhysical_TimeOfDeliveryFactors_dispatch_tod_factors
 	result = ssc_data_get_array(ptr, "dispatch_tod_factors", length);
 	if (!result)
 		make_access_error("SAM_TroughPhysical", "dispatch_tod_factors");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_TroughPhysical_TimeOfDeliveryFactors_start_day_of_year_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "start_day_of_year", &result))
+		make_access_error("SAM_TroughPhysical", "start_day_of_year");
 	});
 	return result;
 }
@@ -6894,6 +6909,16 @@ SAM_EXPORT double* SAM_TroughPhysical_Outputs_rec_op_mode_final_aget(SAM_table p
 	result = ssc_data_get_array(ptr, "rec_op_mode_final", length);
 	if (!result)
 		make_access_error("SAM_TroughPhysical", "rec_op_mode_final");
+	});
+	return result;
+}
+
+SAM_EXPORT double* SAM_TroughPhysical_Outputs_rec_time_in_startup_aget(SAM_table ptr, int* length, SAM_error *err){
+	double* result = nullptr;
+	translateExceptions(err, [&]{
+	result = ssc_data_get_array(ptr, "rec_time_in_startup", length);
+	if (!result)
+		make_access_error("SAM_TroughPhysical", "rec_time_in_startup");
 	});
 	return result;
 }
