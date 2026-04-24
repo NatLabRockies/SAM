@@ -45,6 +45,68 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
+                    "String": "deg_mode"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 438.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 15.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 345.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 78.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "In Value mode, the degradation rate is compounded annually starting in Year 2. In Schedule mode, each year's rate applies to the Year 1 value. See Help for details."
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
                     "String": "degrad_sched_warning"
                 },
                 "X": {
@@ -152,68 +214,6 @@
                 "TabOrder": {
                     "Type": 3.0,
                     "Integer": 1.0
-                }
-            }
-        },
-        "Label": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "object 7"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 438.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 15.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 345.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 78.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Caption": {
-                    "Type": 5.0,
-                    "String": "In Value mode, the degradation rate is compounded annually starting in Year 2. In Schedule mode, each year's rate applies to the Year 1 value. See Help for details."
-                },
-                "TextColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "Bold": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "FontSize": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "WordWrap": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "AlignRight": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "AlignTop": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
                 }
             }
         },
@@ -353,7 +353,18 @@
         "on_load{'Degradation AC Lifetime'} = define()",
         "{",
         "\tproperty('generic_degradation','FixedLength',value('analysis_period'));",
-        "\tdisplay_warning();",
+        "\tdisplay_warning();\r",
+        "\t\r",
+        "\ttech = technology();\r",
+        "\r",
+        "\tif (tech == 'Wind Power') {\r",
+        "\t\ttxt = \"In Value mode, the degradation rate is applied linearly starting in Year 2. In Schedule mode, each year's rate applies to the Year 1 value. See Help for details.\";\r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\ttxt = \"In Value mode, the degradation rate is compounded annually starting in Year 2. In Schedule mode, each year's rate applies to the Year 1 value. See Help for details.\";\r",
+        "\t}\r",
+        "\r",
+        "\tproperty('deg_mode','caption',txt);",
         "};",
         "",
         "on_change{'generic_degradation'} = define()",

@@ -11213,7 +11213,7 @@
     "flip_target_percent": 11.0,
     "flip_target_year": 20.0,
     "generic_degradation": [
-        0.0
+        0.6399999856948853
     ],
     "grid_curtailment": [
         1e38,

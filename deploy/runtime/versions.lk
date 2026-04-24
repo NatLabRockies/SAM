@@ -76,7 +76,7 @@ version_upgrade{'2026.2.19'} = define() {
 
 	if(cfg.tech == 'PVWatts' || cfg.tech == 'PVWatts Battery') {
 		message('PVWatts now runs in lifetime mode so that time series outputs are over the analysis period instead of one year.', 'warning');
-		message('PVWatts degradation is now modeled as DC degradation instead of AC degradation. DC degradation is an annual reduction in the DC output of the array instead of AC output of the system.', 'warning');
+		message('PVWatts degradation is now modeled as DC degradation instead of AC degradation. DC degradation is an annual reduction in the DC output of the array instead of AC output of the system. DC degradation is applied linearly.', 'warning');
 		old_degradation = oldvalue('degradation');
 
 		value('dc_degradation', old_degradation, 'New DC degradation on DC Degradation page set to old AC degradation value from AC Degradation page.');
@@ -203,7 +203,7 @@ version_upgrade{'2026.2.19'} = define() {
 		message('Wind balance of system cost estimators have been removed. Total capital costs remain the same in this version. Please uses SAM 2025.4.16 or older if you need access to the balance of system cost estimators within SAM.', 'warning');
 	
 		wind_degradation = oldvalue('degradation');
-		value('generic_degradation', wind_degradation, 'Wind has been updated to run in lifetime mode, the name of the degradation input has changed to "generic_degrdation"');
+		value('generic_degradation', wind_degradation, 'Wind has been updated to run in lifetime mode, the name of the degradation input has changed to "generic_degrdation". For Wind Power, lifetime mode applies degradation linearly.');
 	}
 	
 	if (cfg.tech == 'Custom Generation Profile' || cfg.tech == 'CustomGeneration PVWatts Wind FuelCell Battery Hybrid') {
