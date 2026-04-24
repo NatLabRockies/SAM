@@ -342,7 +342,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": ""
+                    "String": "Row spacing (m)"
                 },
                 "TextColour": {
                     "Type": 4.0,
@@ -367,7 +367,7 @@
                 },
                 "AlignRight": {
                     "Type": 2.0,
-                    "Boolean": 0.0
+                    "Boolean": 1.0
                 },
                 "AlignTop": {
                     "Type": 2.0,
@@ -496,624 +496,6 @@
                 "AlignTop": {
                     "Type": 2.0,
                     "Boolean": 0.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "annual_beam"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 198.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 849.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 103.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 2.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "annual_diffuse"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 198.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 876.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 103.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 2.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "annual_global"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 198.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 822.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 103.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 2.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "annual_precipitation"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 666.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 891.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 103.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "annual_snow"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 666.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 837.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 103.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "annual_tdry"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 198.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 903.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 103.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "annual_wspd"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 198.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 930.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 103.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                }
-            }
-        },
-        "Button": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "btn_add_file_to_library"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 714.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 567.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 153.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 30.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Caption": {
-                    "Type": 5.0,
-                    "String": "Row spacing (m)"
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
                 }
             }
         },
@@ -4551,11 +3933,11 @@
         "module_aspect_ratio": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "Direct normal (beam)",
-            "Units": "kWh/m²/day",
-            "Group": "Location and Resource",
+            "Label": "Module aspect ratio",
+            "Units": "",
+            "Group": "PV Row Dimensions and Shading",
             "IndexLabels": "",
-            "Flags": 4.0,
+            "Flags": 8.0,
             "DefaultValue": 0.0,
             "UIObject": "Numeric",
             "sscVariableName": "",
@@ -5190,6 +4572,13 @@
         "\t}\r",
         "}\r",
         "\r",
+        "function is_bifacial() {\t\r",
+        "\tx = value('module_model');\r",
+        "\tif (x == 0) { return value('spe_is_bifacial'); }\r",
+        "\tif (x == 1) { return value('cec_is_bifacial'); }\r",
+        "\tif (x == 2) { return  value('6par_is_bifacial'); }\r",
+        "}\r",
+        "\r",
         "function calculate_gcr( n_sub ) {\r",
         "\tif (value('gcr_option') == 0 ) {\r",
         "\t\tif (value('subarray'+to_string(n_sub)+'_ui_row_spacing')==0) {\r",
@@ -5248,303 +4637,172 @@
         "\t\tenable(prefix + 'nmody', (en1 && en2 && en3) || en4 || en5 || en6);\r",
         "\t}\r",
         "}\r",
-        "",
-        "function wf_check( wf )",
-        "{",
-        "\tif ( file_exists( wf ) )",
-        "\t{",
-        "\t\tssc = ssc_create();",
-        "\t\tssc_var( ssc, 'input_file', wf );",
-        "\t\tresult = ssc_exec( ssc, 'wfcheck', {'show_dialog'=false} );",
-        "\t\tresult = to_string( result );",
-        "\t\tssc_free( ssc );",
-        "\t}",
-        "\telse",
-        "\t{",
-        "\t\tresult = 'Weather file checker could not find file: ' + wf ;",
-        "\t}",
-        "\treturn result;",
-        "}",
-        "",
-        "// returns a weather file for the current NSRDB data available for a location",
-        "function nsrdb_get()",
-        "{",
-        "\tenum { TMY, SINGLE_YEAR, ALL_YEARS };",
-        "\tenum { ONE_LOCATION, MULTIPLE_LOCATIONS };",
-        "\tenum { HOURLY, HALF_HOURLY };",
-        "\tmsg = '';",
-        "\tdownload_ok = true;",
-        "\tlocation_ok = true;",
-        "\tfolder = slash_back_to_forward( wfdownloaddir() );",
-        "\tlog_file = folder + '/sam_nsrdb_download_log.txt';",
-        "\tif ( file_exists( log_file ) ) { flog = open( log_file , 'a' ); }",
-        "\telse { flog = open( log_file, 'w' ); }",
-        "\twrite_line( flog, 'NSRDB Download ' + date_time());",
-        "\twrite_line( flog, '==========================================================\\n');\t",
-        "\tif ( value( 'in_location_options' ) == ONE_LOCATION )",
-        "\t{\t",
-        "\t\tlocation = [ value('in_location') ];",
-        "\t}",
-        "\telse",
-        "\t{",
-        "\t\tlocation_list = value('in_location_list'); // string with '|' delimiter",
-        "\t\tlocation_list = replace( location_list, '\\\"', '' ); // files from spreadsheets may use quotes for strings",
-        "\t\tlocation = split(location_list, '|');",
-        "\t}",
-        "\tdownload_option = value('in_nsrdb_options');",
-        "\tif ( value( 'in_time_step' ) == HOURLY || download_option == TMY ) // tmy is always hourly",
-        "\t{\t",
-        "\t\ttime_step = '60'; ",
-        "\t}",
-        "\telse",
-        "\t{",
-        "\t\ttime_step = '30'; ",
-        "\t}",
-        "\twrite_line( flog, 'Requested location(s): ' + location + '\\n');",
-        "\tpb_locations = progressbar( { 'title' = 'Download Progress' , 'message' = 'Starting download.' , 'cancelbutton' = false , 'closebutton' = false , 'time' = false , 'max' = #location } );",
-        "\tfor ( n=0; n<#location; n++ )",
-        "\t{",
-        "\t\twrite_line( flog, 'Location ' + to_string(n+1) + ' of ' + #location + ': \\\"' + location[n]  + '\\\"');",
-        "\t\twrite_line( flog, '----------------------------------------------------------\\n');\t",
-        "\t\tprogressbar( pb_locations, { 'message' = 'Getting download information for \\\"' + location[n] + '\\\".' , 'value' = 1+n } );",
-        "\t\tdataset[n] = nsrdb( location[n], download_option == TMY );",
-        "\t\tprogressbar( pb_locations, { 'message' = 'Processing download information for \\\"' + location[n] + '\\\".' , 'value' = 1+n } );",
-        "\t\tif ( !dataset[n].ok )",
-        "\t\t{",
-        "\t\t\tdownload_ok = false;",
-        "\t\t\twrite_line( flog, dataset[n].msg + '\\n');",
-        "\t\t\tmsg += dataset[n].msg + '\\n';",
-        "\t\t\tcontinue;",
-        "\t\t}\t",
-        "\t\tif ( download_option == TMY ) // this needs to work for both nsrdb-GOES-tmy-v4-0-0 and suny-india-tmy",
-        "\t\t{\t",
-        "\t\t\ttype = ['tmy']; // should get newest TMY file for nsrdb-GOES-tmy-v4-0-0, or tmy for suny-india-tmy",
-        "\t\t}",
-        "\t\telseif ( download_option == SINGLE_YEAR ) ",
-        "\t\t{",
-        "\t\t\ty = choose_from_list( dataset[n].years, 'Choose a year', 'Available Years for \\\"' + location[n] +'\\\"', 0 ); ",
-        "\t\t\tif (y == '')",
-        "\t\t\t{",
-        "\t\t\t\tdownload_ok = false;",
-        "\t\t\t\twrite_line( flog, 'Year not valid: Selection cancelled by user.\\n' );",
-        "\t\t\t\tcontinue;",
-        "\t\t\t}",
-        "\t\t\telse\t",
-        "\t\t\t{\t",
-        "\t\t\t\ttype = [to_int( y )]; ",
-        "\t\t\t}",
-        "\t\t}",
-        "\t\telse // all years",
-        "\t\t{\t",
-        "\t\t\ttype = dataset[n].years; ",
-        "\t\t}",
-        "\t\twrite_line( flog, 'Requested year(s): ' + type );",
-        "\t\tif ( dataset[n].ok )",
-        "\t\t{ ",
-        "\t\t\tbase_url = dataset[n].url;",
-        "\t\t\tbase_url += '?api_key=<SAMAPIKEY>';",
-        "\t\t\tbase_url += '&full_name=sam_user';",
-        "\t\t\tbase_url += '&email=<USEREMAIL>';",
-        "\t\t\tbase_url += '&affiliation=unknown'; ",
-        "\t\t\tbase_url += '&mailing_list=false';",
-        "\t\t\tbase_url += '&reason=SAM';",
-        "\t\t\tbase_url += '&interval=' + time_step;",
-        "\t\t\tbase_url += '&utc=false';",
-        "\t\t\tbase_url += '&leap_day=false';",
-        "",
-        "\t\t\t// create folder for multiple years to facilitate",
-        "\t\t\t// p50 p90 and add to library folders list",
-        "\t\t\t// do not put tmy file in multiple year folder",
-        "\t\t\t// use default folder if mdkir() fails",
-        "\t\t\tdefault_download_path = slash_back_to_forward( folder );",
-        "\t\t\ttmy_path = slash_back_to_forward( default_download_path );",
-        "\t\t\tpath = slash_back_to_forward( default_download_path );",
-        "\t\t\tif ( #type > 1 )",
-        "\t\t\t{",
-        "\t\t\t\tpath = path + '/' + clean_name( location[n] ) ;",
-        "\t\t\t\tif ( !dir_exists( path ) )",
-        "\t\t\t\t{",
-        "\t\t\t\t\tif ( !mkdir( path, false ) )",
-        "\t\t\t\t\t{\tpath = default_download_path; }",
-        "\t\t\t\t}",
-        "\t\t\t\tif ( path != default_download_path /*&& i == 0*/)",
-        "\t\t\t\t{\tupdate_library_folders( path ); }",
-        "\t\t\t}",
-        "\t\t\t",
-        "\t\t\tpb_years = progressbar( { 'title' = 'Download Progress for ' + location[n] , 'message' = 'Downloading, please wait...', 'cancelbutton' = false , 'closebutton' = false , 'time' = false , 'max' = #type } );",
-        "\t\t\t\t",
-        "\t\t\t// for each year",
-        "\t\t\tbase = base_url;",
-        "\t\t\tfor( i=0; i<#type; i++ )",
-        "\t\t\t{",
-        "\t\t\t\tbase_url = base;",
-        "\t\t\t\tprogressbar( pb_years, { 'message' = 'Preparing file ' + to_string(i+1) + ' of ' + #type + '.' , 'value' = 1+i } );",
-        "\t\t\t\tfile_skipped = false;",
-        "\t\t\t\tno_current_data = false;",
-        "\t\t\t\t// only get attributes SAM needs for simulations",
-        "\t\t\t\t// otherwise default is to get all attributes",
-        "\t\t\t\t// https://developer.nrel.gov/docs/solar/nsrdb/",
-        "\t\t\t\tif ( dataset[n].name == 'nsrdb-GOES-aggregated-v4-0-0')",
-        "\t\t\t\t{",
-        "\t\t\t\t\tbase_url += '&attributes=dni,dhi,ghi,dew_point,air_temperature,surface_pressure,relative_humidity,wind_direction,wind_speed,surface_albedo,clearsky_dhi,clearsky_dni,clearsky_ghi,total_precipitable_water';",
-        "\t\t\t\t}",
-        "\t\t\t\telseif ( dataset[n].name == 'nsrdb-GOES-tmy-v4-0-0')",
-        "\t\t\t\t{",
-        "\t\t\t\t\tbase_url += '&attributes=dni,dhi,ghi,dew_point,air_temperature,surface_pressure,wind_direction,wind_speed,surface_albedo,clearsky_dhi,clearsky_dni,clearsky_ghi,total_precipitable_water';",
-        "\t\t\t\t}",
-        "\t\t\t\telseif ( dataset[n].name == 'suny-india' )",
-        "\t\t\t\t{",
-        "\t\t\t\t\tbase_url += '&attributes=dni,dhi,ghi,dew_point,surface_temperature,surface_pressure,relative_humidity,wdir,wspd,snow_depth,total_precipitable_water';",
-        "\t\t\t\t}",
-        "\t\t\t\telseif ( dataset[n].name == 'suny-india-tmy' )",
-        "\t\t\t\t{",
-        "\t\t\t\t\tbase_url += '&attributes=dni,dhi,ghi,dew_point,air_temperature,surface_pressure,wind_direction,wind_speed';",
-        "\t\t\t\t}",
-        "\t\t\t\telseif ( dataset[n].name == 'msg-iodc' )",
-        "\t\t\t\t{",
-        "\t\t\t\t\tbase_url += '&attributes=dni,dhi,ghi,dew_point,air_temperature,surface_pressure,relative_humidity,wind_direction,wind_speed,surface_albedo,clearsky_dhi,clearsky_dni,clearsky_ghi,total_precipitable_water';",
-        "\t\t\t\t}",
-        "\t\t\t\twrite_line( flog, '\\nFile ' + to_string(i+1) + ' of ' + #type + ': ' + type[i]);",
-        "\t\t\t\twrite_line( flog, '----------------------------------------------------------\\n');\t",
-        "\t\t\t\turl = base_url + '&names=' + to_string(type[i]);",
-        "\t\t\t\turl += '&wkt=POINT(' + dataset[n].lon + '%20' + dataset[n].lat + ')';",
-        "\t\t\t\twrite_line( flog, url + '\\n');",
-        "\t\t\t\tfname = path + '/' + clean_name( location[n] ) + '_' + dataset[n].lat + '_' + dataset[n].lon + '_' + dataset[n].name + '_' + time_step + '_' + type[i] + '.csv';",
-        "\t\t\t\tif ( type[i] == 'tmy' ) ",
-        "\t\t\t\t{",
-        "\t\t\t\t\tfname = replace( fname, path, tmy_path ); ",
-        "\t\t\t\t\tfname_tmy = fname;",
-        "\t\t\t\t}",
-        "\t\t\t\tif ( solar_library( fname, false ){'is_in_library'} )",
-        "\t\t\t\t{",
-        "\t\t\t\t\tfile_skipped = true;",
-        "\t\t\t\t\tstr = 'File skipped, already exists: ' + fname + '\\n';",
-        "\t\t\t\t\twrite_line( flog, str );",
-        "\t\t\t\t\tmsg += str + '\\n';",
-        "\t\t\t\t\tif ( #location == 1 )",
-        "\t\t\t\t\t{",
-        "\t\t\t\t\t\tvalue( 'solar_resource', file_to_key( fname ) );",
-        "\t\t\t\t\t}\t",
-        "\t\t\t\t}",
-        "\t\t\t\telse // elseif ( !no_current_data )\t",
-        "\t\t\t\t{",
-        "\t\t\t\t\twf_error = '';",
-        "\t\t\t\t\tstart = start_timer();",
-        "\t\t\t\t\tprogressbar( pb_years, { 'message' = 'Downloading file ' + to_string(i+1) + ' of ' + #type + '.' , 'value' = 1+i } );",
-        "\t\t\t\t\tcurl_ok = curl( url , { 'file'= fname } ); // curl() should replace <SAMAPI> from private.h and <USEREMAIL > from registry",
-        "\t\t\t\t\ttime = elapsed_time() / 1000;",
-        "\t\t\t\t\twrite_line( flog, 'Download time: ' + time + ' seconds.\\n' );",
-        "\t\t\t\t\tprogressbar( pb_years, { 'message' = 'Checking file ' + to_string(i+1) + ' of ' + #type + '.' , 'value' = 1+i } );",
-        "\t\t\t\t\tif ( !curl_ok )",
-        "\t\t\t\t\t{",
-        "\t\t\t\t\t\tdownload_ok = false;",
-        "\t\t\t\t\t\twrite_line( flog, 'Failed to download file from NSRDB: cURL failed.');",
-        "\t\t\t\t\t\tmsg += ('Failed to download weather file ' + fname + '\\n');",
-        "\t\t\t\t\t}",
-        "\t\t\t\t\telse",
-        "\t\t\t\t\t{",
-        "\t\t\t\t\t\twf_error = wf_check( fname );",
-        "\t\t\t\t\t\tif ( wf_error != \"0\" ) // usually indicates NSRDB returned a file containing error message instead of weather data",
-        "\t\t\t\t\t\t{",
-        "\t\t\t\t\t\t\tdownload_ok = false;",
-        "\t\t\t\t\t\t\twrite_line( flog, 'Weather file test failed, ' + wf_error + ': ' + fname + '.\\n');",
-        "\t\t\t\t\t\t\tfile_text = read_text_file( fname );",
-        "\t\t\t\t\t\t\tif ( #file_text < 1000 ) // probably JSON returned by NSRDB",
-        "\t\t\t\t\t\t\t{ ",
-        "\t\t\t\t\t\t\t\tvar_err = json_read( file_text );",
-        "\t\t\t\t\t\t\t\tif ( strpos( var_err, 'json-error') > -1 ) // JSON not valid (could be HTML message from server)",
-        "\t\t\t\t\t\t\t\t{",
-        "\t\t\t\t\t\t\t\t\tmsg += 'Expected JSON from NSRDB is not valid. This could indicate that the NSRDB service is down.';",
-        "\t\t\t\t\t\t\t\t\tif ( strpos( file_text, '<html>') > -1 )",
-        "\t\t\t\t\t\t\t\t\t{",
-        "\t\t\t\t\t\t\t\t\t\thtml_dialog( file_text, 'Message from NSRDB' );",
-        "\t\t\t\t\t\t\t\t\t}",
-        "\t\t\t\t\t\t\t\t}",
-        "\t\t\t\t\t\t\t\telse // valid JSON with error message",
-        "\t\t\t\t\t\t\t\t{",
-        "\t\t\t\t\t\t\t\t\tmsg += 'Error message from NSRDB: \\n' + var_err.errors[0] +'\\n\\n';",
-        "\t\t\t\t\t\t\t\t}",
-        "\t\t\t\t\t\t\t\twrite_line( flog, 'Text from file:\\n' +  file_text );",
-        "\t\t\t\t\t\t\t}",
-        "\t\t\t\t\t\t\tmsg += 'Weather file test failed for ' + file_only( fname ) + '.\\n';",
-        "\t\t\t\t\t\t\tfname_new = replace( fname, '.csv' , '_bad.txt' ); // rename file so next download attempt won't detect existing file",
-        "\t\t\t\t\t\t\tok = rename_file( fname , fname_new );",
-        "\t\t\t\t\t\t\tif ( ok )",
-        "\t\t\t\t\t\t\t{ ",
-        "\t\t\t\t\t\t\t\twrite_line( flog, '* File renamed to: ' + fname_new + '.\\n' );",
-        "\t\t\t\t\t\t\t}",
-        "\t\t\t\t\t\t\telse",
-        "\t\t\t\t\t\t\t{",
-        "\t\t\t\t\t\t\t\twrite_line( flog, '* Failed to rename ' + fname + '.\\n' );\t",
-        "\t\t\t\t\t\t\t}\t",
-        "\t\t\t\t\t\t}",
-        "\t\t\t\t\t\t// set library to last file that was downloaded and passed weather file test",
-        "\t\t\t\t\t\telseif ( i == #type - 1 ) ",
-        "\t\t\t\t\t\t{",
-        "\t\t\t\t\t\t\trescanlibrary('solar');",
-        "\t\t\t\t\t\t\tfn = fname;",
-        "\t\t\t\t\t\t\tvalue( 'solar_resource', file_to_key( fn ) );",
-        "\t\t\t\t\t\t\twrite_line( flog, 'Weather file test passed: ' + fname + '.\\n');",
-        "\t\t\t\t\t\t}\t",
-        "\t\t\t\t\t}",
-        "\t\t\t\t}",
-        "\t\t\t}\t",
-        "\t\t\tprogressbar( pb_years );",
-        "\t\t}\t",
-        "\t\telse",
-        "\t\t{",
-        "\t\t\tdownload_ok = false;",
-        "\t\t\twrite_line( flog, dataset[n].msg + '\\n');",
-        "\t\t}",
-        "\t}",
-        "\tprogressbar( pb_locations );",
-        "\tclose ( flog );",
-        "\tif ( download_ok && #type > 1 ) // multiple years",
-        "\t{\r",
-        "\t\tis_uncertainty_tech = (technology() == 'Flat Plate PV' || technology() == 'PVWatts' );",
-        "\t\tstr = 'Download complete!\\n';",
-        "\t\tstr += 'Multiple single-year files downloaded to:\\n  ' + path + '\\n\\n';",
-        "\t\tstr += 'Do you want to show instructions for running ' + ? is_uncertainty_tech ['P50/P90', 'Uncertainty' ] + ' simulations now?';",
-        "\t\tif ( yesno( str ) )",
-        "\t\t{",
-        "\t\t\tfolder = path;",
-        "\t\t\tp50p90_text = 'Instructions for running P50/P90 simulations:\\n\\n'",
-        "\t\t\t+ '1. Click P50 / P90 at the bottom left of the main SAM window.\\n\\n'",
-        "\t\t\t+ '2. Click the ellipses (...) to the right of the Select Weather File Folder box.\\n\\n'",
-        "\t\t\t+ '3. Navigate to ' + folder + '.\\n\\n'",
-        "\t\t\t+ '4. Click \"Run P50/P90 simulations\".\\n'",
-        "\t\t\t+ '\\nIf you want to set a custom P value in addition to P10, P50 and P90, you can type a value for \"Custom Px\" before running the simulations.'",
-        "\t\t\t+ '\\n\\nTo remove this note window, delete all of its contents and close the window.';",
-        "\t\t\tuncertainty_text = 'Instructions for running Uncertainty simulations:\\n\\n'\r",
-        "\t\t\t+ '1. Click Uncertainty at the bottom left of the main SAM window.\\n\\n'\r",
-        "\t\t\t+ '2. Click the Choose Folder button to the right of the Select Weather File Folder box.\\n\\n'\r",
-        "\t\t\t+ '3. Navigate to ' + folder + '.\\n\\n'\r",
-        "\t\t\t+ '4. Click the Run Uncertainty Simulations button at the top of the page.\\n'\r",
-        "\t\t\t+ '\\nIf you want to set a custom P value, type a value for \"Custom Px\" before running the simulations.'\r",
-        "\t\t\t+ '\\n\\nTo remove this note window, delete all of its contents and close the window.';\r",
-        "\t\t\tif ( is_uncertainty_tech ) { pagenote( uncertainty_text ); }\r",
-        "\t\t\telse { pagenote( p50p90_text ); }",
-        "\t\t}",
-        "\t}",
-        "\telseif ( download_ok && !file_skipped && !no_current_data )",
-        "\t{",
-        "\t\tstr = 'Download complete!\\n';",
-        "\t\tstr += 'Weather file(s) downloaded to:\\n' + path + '.\\n';",
-        "\t\tstr += '\\nOpen log file?';",
-        "\t\tshow_log = yesno( str );",
-        "\t\tif ( show_log ) { browse( log_file ); }",
-        "\t}",
-        "\telseif ( download_ok && file_skipped )",
-        "\t{",
-        "\t\tstr = 'File already in library.\\n Download skipped.\\n\\n' + fname;",
-        "\t\tmsgbox( str );",
-        "\t}",
-        "\telse ",
-        "\t{",
-        "\t\tshow_log = yesno( 'Download Messages\\n' + msg + '\\nOpen log file?');",
-        "\t\tif ( show_log ) { browse( log_file ); }",
+        "\r",
+        "function row_dimensions_message() {\r",
+        "\tn = 0;\r",
+        "\tn_subarrays_max = 4;\r",
+        "\tmsg = '';\r",
+        "\tcolor = 'black';\r",
+        "\tenable_row_dimensions =false;\r",
+        "\t\r",
+        "\tfor(i=1; i<=n_subarrays_max; i++) {\r",
+        "\t\tprefix = 'subarray' + to_string(i) + '_';\r",
+        "\t\tself_shading = (value(prefix + 'shade_mode') == 1 || value(prefix + 'shade_mode') == 2); // non-linear or linear self shading\r",
+        "\t\tif ( self_shading || (value('en_snow_model') == 1) || is_bifacial() || (value('gcr_option') == 0) ) { \r",
+        "\t\t\tenable_row_dimensions = true;\r",
+        "\t\t\tnrows = value(prefix + 'ui_nrows');\r",
+        "\t\t\tif ( nrows-to_int(nrows) != 0 ) {\r",
+        "\t\t\t\tif (n>0){msg+=' ';}\r",
+        "\t\t\t\tmsg += 'The number of rows in Subarray ' + i + ' is not an integer. ';\r",
+        "\t\t\t\tcolor = 'red';\r",
+        "\t\t\t\tn++;\r",
+        "\t\t\t}\r",
+        "\t\t\tif ( self_shading ) {\r",
+        "\t\t\t\tif ( nrows == 1 ) {\r",
+        "\t\t\t\t\tmsg += 'Subarray ' + i + ' has only one row. Self shading calculations require two or more rows.';\r",
+        "\t\t\t\t\tcolor = 'red';\r",
+        "\t\t\t\t\tn++;\r",
+        "\t\t\t\t}\r",
+        "\t\t\t}\r",
+        "\t\t}\r",
         "\t}\r",
-        "}",
+        "\t\r",
+        "\tif (enable_row_dimensions == false) {\r",
+        "\t\tmsg = 'Row dimension inputs are disabled unless self shading, snow losses, bifacial modules, or specify row spacing are enabled.';\r",
+        "\t\tcolor = 'black';\r",
+        "\t}\t\r",
+        "\r",
+        "\tif ( color == 'red' ) {\r",
+        "\t\tmsg += ' Adjust the number of modules along side or bottom to correct the problem.'; \r",
+        "\t}\r",
+        "\r",
+        "\tproperty('lbl_row_dimensions_message','Caption',msg);\r",
+        "\tproperty('lbl_row_dimensions_message','TextColour',color);\r",
+        "}\r",
+        "\r",
+        "function row_spacing_message() {\r",
+        "\tmsg = '';\r",
+        "\tcolor = 'black';\r",
+        "\tn_subarrays_max = 4;\r",
+        "\tn = 0;\r",
+        "\tfor(i=1; i<=n_subarrays_max; i++) {\r",
+        "\t\tprefix = 'subarray' + to_string(i) + '_';\r",
+        "\t\tif ( value(prefix + 'gcr') < 0.01 || value(prefix + 'gcr') > 0.99 ) {\r",
+        "\t\t\tif ( value('gcr_option') == 1) {\r",
+        "\t\t\t\tif (n>0) {msg+=' ';}\r",
+        "\t\t\t\tmsg += 'Subarray ' + to_string(i) + ' GCR must be between 0.01 and 0.99.';\r",
+        "\t\t\t\tn++;\r",
+        "\t\t\t\tcolor = 'red';\r",
+        "\t\t\t}\r",
+        "\t\t\telse {\r",
+        "\t\t\t\tif (n>0) {msg+=' ';}\r",
+        "\t\t\t\tmsg += 'Subarray ' + to_string(i) + ' row spacing must be greater than Subarray ' + to_string(i) + ' length of side.';\r",
+        "\t\t\t\tn++;\r",
+        "\t\t\t\tcolor = 'red';\r",
+        "\t\t\t}\r",
+        "\t\t}\r",
+        "\t}\r",
+        "\tproperty('lbl_row_spacing_message','Caption',msg);\r",
+        "\tproperty('lbl_row_spacing_message','TextColour',color);\r",
+        "}\r",
+        "\r",
+        "on_load{'PV Row Dimensions and Spacing'} = define() { \r",
+        "\tn_subarrays_max = 4;\r",
+        "\tvars = [ 'gcr',\r",
+        "\t\t'mod_orient',\r",
+        "\t\t'nmodx',\r",
+        "\t\t'nmody',\r",
+        "\t\t'ui_length_side',\r",
+        "\t\t'ui_nmodules',\r",
+        "\t\t'ui_nrows',\r",
+        "\t\t'ui_row_spacing'];\r",
+        "\t\t\r",
+        "\t// hide inputs for disabled subarrays (always show subarray 1 inputs,so start index at 2)\r",
+        "\tfor ( i=2; i<=n_subarrays_max; i++ ) {\r",
+        "\t\tprefix = 'subarray' + to_string(i) + '_';\r",
+        "\t\tfor (j=0;j<#vars;j++) {\r",
+        "\t\t\tshow( prefix + vars[j], value( prefix + 'enable') == 1 );\r",
+        "\t\t}\r",
+        "\t}\r",
+        "\trefresh();\r",
+        "\r",
+        "\trow_dimensions_enable();\r",
+        "\tgcr_row_spacing_enable();\r",
+        "\r",
+        "\trow_dimensions_message();\r",
+        "\trow_spacing_message();\r",
+        "};\r",
+        "\r",
+        "on_change{'subarray1_ui_nrows'} = define() {\r",
+        "\trow_dimensions_message();\t\r",
+        "};\r",
+        "on_change{'subarray2_ui_nrows'} = define() {\r",
+        "\trow_dimensions_message();\t\r",
+        "};\r",
+        "on_change{'subarray3_ui_nrows'} = define() {\r",
+        "\trow_dimensions_message();\t\r",
+        "};\r",
+        "on_change{'subarray4_ui_nrows'} = define() {\r",
+        "\trow_dimensions_message();\t\r",
+        "};\r",
+        "\r",
+        "on_change{'gcr_option'} = define() {\r",
+        "\tgcr_row_spacing_enable();\r",
+        "\trow_dimensions_enable();\r",
+        "\trow_dimensions_message();\r",
+        "};\r",
+        "\r",
+        "on_change{'subarray1_ui_row_spacing'} = define() {\r",
+        "\tcalculate_gcr(1);\r",
+        "\trow_spacing_message();\r",
+        "};\r",
+        "on_change{'subarray2_ui_row_spacing'} = define() {\r",
+        "\tcalculate_gcr(2);\r",
+        "\trow_spacing_message();\r",
+        "};\r",
+        "on_change{'subarray3_ui_row_spacing'} = define() {\r",
+        "\tcalculate_gcr(3);\r",
+        "\trow_spacing_message();\r",
+        "};\r",
+        "on_change{'subarray4_ui_row_spacing'} = define() {\r",
+        "\tcalculate_gcr(4);\r",
+        "\trow_spacing_message();\r",
+        "};\r",
+        "\r",
+        "on_change{'subarray1_gcr'} = define() {\r",
+        "\tcalculate_row_spacing(1);\r",
+        "\trow_spacing_message();\r",
+        "};\r",
+        "on_change{'subarray2_gcr'} = define() {\r",
+        "\tcalculate_row_spacing(2);\r",
+        "\trow_spacing_message();\r",
+        "};\r",
+        "on_change{'subarray3_gcr'} = define() {\r",
+        "\tcalculate_row_spacing(3);\r",
+        "\trow_spacing_message();\r",
+        "};\r",
+        "on_change{'subarray4_gcr'} = define() {\r",
+        "\tcalculate_row_spacing(4);\r",
+        "\trow_spacing_message();\r",
+        "};\r",
+        "\r",
+        "// length of side might be changed by module orientation, nmodx or nmody.\r",
+        "on_change{'subarray1_ui_length_side'} = define() {\r",
+        "\tif (value('gcr_option')==0) { calculate_gcr(1); }\r",
+        "\telse { calculate_row_spacing(1); }\r",
+        "};\r",
+        "on_change{'subarray2_ui_length_side'} = define() {\r",
+        "\tif (value('gcr_option')==0) { calculate_gcr(2); }\r",
+        "\telse { calculate_row_spacing(2); }\r",
+        "};\r",
+        "on_change{'subarray3_ui_length_side'} = define() {\r",
+        "\tif (value('gcr_option')==0) { calculate_gcr(3); }\r",
+        "\telse { calculate_row_spacing(3); }\r",
+        "};\r",
+        "on_change{'subarray4_ui_length_side'} = define() {\r",
+        "\tif (value('gcr_option')==0) { calculate_gcr(4); }\r",
+        "\telse { calculate_row_spacing(4); }\r",
+        "};\r",
         ""
     ]
 }

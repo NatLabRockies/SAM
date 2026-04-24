@@ -283,7 +283,8 @@ function setup_detailed_pv_pages(bin)
 	addpage( [['Solar Resource Download', 
 	           'Solar Resource Library', 
 	           'Solar Resource Information', 
-	           {'name'='PV Albedo and Radiation', 'caption' = 'Albedo - Sky Diffuse Model - Irradiance Data (Advanced)', 'collapsible'=true, 'collapsible_var'='pv.radmode.is_shown'} ]], 
+	           {'name'='PV Albedo and Radiation', 'caption' = 'Albedo - Sky Diffuse Model - Irradiance Data (Advanced)', 'collapsible'=true, 'collapsible_var'='pv.radmode.is_shown'},
+	           {'name'='PV Spectral Correction', 'caption' = 'Spectral Correction Factors', 'collapsible'=true, 'collapsible_var'= 'pv.specmode.is_shown'} ]], 
 	           { 'sidebar'='Location and Resource', 'help'='detailed-photovoltaic-model/pv_location_and_resource', 'bin_name' = bin});
 	addpage( [['Simple Efficiency Module Model'],
 			  ['CEC Performance Model with Module Database'],
