@@ -3142,7 +3142,7 @@ addpage( [[ 'Operating Costs Standalone Battery']], { 'sidebar'='Battery Operati
 setup_grid_limits_page();
 // single owner
 addpage([['Hybrid Costs']], {'sidebar'='Hybrid System Costs', 'help'='hybrid-systems/hybrid_system_costs', 'top_page'=true});
-setup_single_owner_pages( );
+setup_single_owner_pages_hybrid();
 setup_electricity_purchases();
 
 setconfig('PVWatts Wind FuelCell Battery Hybrid', 'Host Developer' );
@@ -3429,7 +3429,7 @@ addpage( [[ 'Operating Costs Standalone Battery']], { 'sidebar'='Battery Operati
 setup_grid_limits_page();
 // single owner
 addpage([['Hybrid Costs']], {'sidebar'='Hybrid System Costs', 'help'='hybrid-systems/hybrid_system_costs', 'top_page'=true});
-setup_single_owner_pages( );
+setup_single_owner_pages_hybrid();
 setup_electricity_purchases();
 
 setconfig('CustomGeneration PVWatts Wind FuelCell Battery Hybrid', 'Host Developer' );

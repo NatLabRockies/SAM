@@ -421,7 +421,7 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "customgeneration_itc_basis_cost_fed_include10"
+                    "String": "customgeneration_itc_basis_cost_fed_include"
                 },
                 "X": {
                     "Type": 3.0,
@@ -2720,6 +2720,19 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
+        "customgeneration_itc_basis_cost_sta_include": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 0.0,
+            "DefaultValue": 0.0,
+            "UIObject": "CheckBox",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "customgeneration_itc_basis_percent": {
             "Version": 4.0,
             "Type": 1.0,
@@ -2801,13 +2814,13 @@
         "hybrid_basis_cost": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "Hybrid related costs",
-            "Units": "$",
+            "Label": "Hybrid Installed Cost",
+            "Units": "",
             "Group": "",
             "IndexLabels": "",
             "Flags": 8.0,
             "DefaultValue": 0.0,
-            "UIObject": "Default",
+            "UIObject": "Numeric",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
@@ -2865,13 +2878,13 @@
         },
         "itc_basis_cost_capex_fed": {
             "Version": 4.0,
-            "Type": 0.0,
+            "Type": 1.0,
             "Label": "",
             "Units": "$",
             "Group": "",
             "IndexLabels": "",
             "Flags": 8.0,
-            "DefaultValue": "ERROR: unhandled type specified in UI: invalid",
+            "DefaultValue": 0.0,
             "UIObject": "Default",
             "sscVariableName": "",
             "sscVariableValue": ""
@@ -3088,7 +3101,7 @@
         "\t\ttotal+= ${ui_wind_cost};\r",
         "\t}\r",
         "\tif (${batt_itc_basis_cost_fed_include}) {\r",
-        "\t\ttotal+= ${ui_batt_cost};\r",
+        "\t\ttotal+= ${ui_battery_cost};\r",
         "\t}\r",
         "\tif (${fuel_cell_itc_basis_cost_fed_include}) {\r",
         "\t\ttotal+= ${ui_fuel_cell_cost};\r",
@@ -3115,7 +3128,7 @@
         "\t\ttotal+= ${ui_wind_cost};\r",
         "\t}\r",
         "\tif (${batt_itc_basis_cost_sta_include}) {\r",
-        "\t\ttotal+= ${ui_batt_cost};\r",
+        "\t\ttotal+= ${ui_battery_cost};\r",
         "\t}\r",
         "\tif (${fuel_cell_itc_basis_cost_sta_include}) {\r",
         "\t\ttotal+= ${ui_fuel_cell_cost};\r",
