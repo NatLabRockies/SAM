@@ -47,6 +47,9 @@
         "first_year_output": 756864000.0,
         "first_year_output_peak": 96000.0,
         "fixed_plant_input": 0.0,
+        "generic_degradation": [
+            0.0
+        ],
         "heat_rate": 10.0,
         "import_message": "",
         "inflation_rate": 2.5,
@@ -130,6 +133,9 @@
         "contingency_percent": 4.0,
         "country": "-",
         "dc_ac_ratio": 1.15,
+        "dc_degradation": [
+            0.5
+        ],
         "degradation": [
             0.5
         ],
@@ -277,7 +283,7 @@
         "step": 3600.0,
         "subtotal_direct": 676878.2608695652,
         "system_capacity": 540.0,
-        "system_use_lifetime_output": 0.0,
+        "system_use_lifetime_output": 1.0,
         "tilt": 0.0,
         "total_direct_cost": 703953.3913043478,
         "total_indirect_cost": 205200.0,
@@ -376,7 +382,7 @@
         "specify_label": 0.0,
         "step": 3600.0,
         "system_capacity": 100.0,
-        "system_use_lifetime_output": 0.0,
+        "system_use_lifetime_output": 1.0,
         "total_installed_cost": 605500.0,
         "total_installed_cost_per_kw": 6055.0,
         "turb_generic_loss": 1.7,

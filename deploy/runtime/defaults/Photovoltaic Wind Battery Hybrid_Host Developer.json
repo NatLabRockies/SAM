@@ -3299,7 +3299,7 @@
         "specify_label": 0.0,
         "step": 3600.0,
         "system_capacity": 100.0,
-        "system_use_lifetime_output": 0.0,
+        "system_use_lifetime_output": 1.0,
         "total_installed_cost": 635775.0,
         "total_installed_cost_per_kw": 6357.75,
         "turb_generic_loss": 1.7,

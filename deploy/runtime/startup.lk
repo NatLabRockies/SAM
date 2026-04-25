@@ -2941,7 +2941,7 @@ addpage([['Hybrid System']], {'sidebar'='Hybrid System', 'help'='hybrid-systems/
 // pvwatts
 addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='PV Location and Resource', 'help'='pvwatts/pvwatts_location_and_resource', 'bin_name'='PVWatts' } );
 addpage( [[ 'PVWatts', {'name'='PV Land Area', 'caption' = 'Land Area', 'collapsible'=true, 'collapsible_var'='pv_land_area_is_shown'}, {'name'='PVWatts Advanced Inputs', 'caption' = 'Advanced Inputs', 'collapsible'=true, 'collapsible_var'='pvwatts.advanced.is_shown'} ]], { 'sidebar'='PV System Design', 'help'='pvwatts/pvwatts_system_design', 'bin_name'='PVWatts' } );
-addpage( [[ 'Degradation AC Single Year'], ], { 'sidebar'='PV AC Degradation','help'='degradation/degradation_ac', 'bin_name'='PVWatts' } );
+addpage( [[ 'Degradation DC Lifetime' ]], { 'sidebar'='DC Degradation','help'='degradation/degradation_dc', 'bin_name'='PVWatts' } );
 addpage( [[ 'PV Capital Costs' ]], { 'sidebar'='PV Installation Costs', 'help'='installation-costs/cc_pv', 'bin_name'='PVWatts'} );
 addpage( [[ 'Operating Costs', 'Operating Costs Land Lease' ]], {'sidebar' = 'PV Operating Costs', 'help'='operating-costs/oc_operating', 'bin_name'='PVWatts'} );
 // wind
@@ -3001,7 +3001,7 @@ addpage([['Hybrid System']], {'sidebar'='Hybrid System', 'help'='hybrid-systems/
 // pvwatts
 addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='PV Location and Resource', 'help'='pvwatts/pvwatts_location_and_resource', 'bin_name'='PVWatts' } );
 addpage( [[ 'PVWatts', {'name'='PV Land Area', 'caption' = 'Land Area', 'collapsible'=true, 'collapsible_var'='pv_land_area_is_shown'}, {'name'='PVWatts Advanced Inputs', 'caption' = 'Advanced Inputs', 'collapsible'=true, 'collapsible_var'='pvwatts.advanced.is_shown'} ]], { 'sidebar'='PV System Design', 'help'='pvwatts/pvwatts_system_design', 'bin_name'='PVWatts' } );
-addpage( [[ 'Degradation AC Single Year'], ], { 'sidebar'='PV AC Degradation','help'='degradation/degradation_ac', 'bin_name'='PVWatts' } );
+addpage( [[ 'Degradation DC Lifetime' ]], { 'sidebar'='DC Degradation','help'='degradation/degradation_dc', 'bin_name'='PVWatts' } );
 addpage( [[ 'PV Capital Costs' ]], { 'sidebar'='PV Installation Costs', 'help'='installation-costs/cc_pv', 'bin_name'='PVWatts'} );
 addpage( [[ 'Operating Costs']], {'sidebar' = 'PV Operating Costs', 'help'='operating-costs/oc_operating', 'bin_name'='PVWatts'} );
 // wind
@@ -3066,7 +3066,7 @@ addpage([['Hybrid System']], {'sidebar'='Hybrid System', 'help'='hybrid-systems/
 // pvwatts
 addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='PV Location and Resource', 'help'='pvwatts/pvwatts_location_and_resource', 'bin_name'='PVWatts' } );
 addpage( [[ 'PVWatts', {'name'='PV Land Area', 'caption' = 'Land Area', 'collapsible'=true, 'collapsible_var'='pv_land_area_is_shown'}, {'name'='PVWatts Advanced Inputs', 'caption' = 'Advanced Inputs', 'collapsible'=true, 'collapsible_var'='pvwatts.advanced.is_shown'} ]], { 'sidebar'='PV System Design', 'help'='pvwatts/pvwatts_system_design', 'bin_name'='PVWatts' } );
-addpage( [[ 'Degradation AC Single Year'], ], { 'sidebar'='PV AC Degradation','help'='degradation/degradation_ac', 'bin_name'='PVWatts' } );
+addpage( [[ 'Degradation DC Lifetime' ]], { 'sidebar'='DC Degradation','help'='degradation/degradation_dc', 'bin_name'='PVWatts' } );
 addpage( [[ 'PV Capital Costs' ]], { 'sidebar'='PV Installation Costs', 'help'='installation-costs/cc_pv', 'bin_name'='PVWatts'} );
 addpage( [[ 'Operating Costs', 'Operating Costs Land Lease' ]], {'sidebar' = 'PV Operating Costs', 'help'='operating-costs/oc_operating', 'bin_name'='PVWatts'} );
 // wind
@@ -3139,7 +3139,7 @@ addpage([['Hybrid System']], {'sidebar'='Hybrid System', 'help'='hybrid-systems/
 // pvwatts
 addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='PV Location and Resource', 'help'='pvwatts/pvwatts_location_and_resource', 'bin_name'='PVWatts' } );
 addpage( [[ 'PVWatts', {'name'='PV Land Area', 'caption' = 'Land Area', 'collapsible'=true, 'collapsible_var'='pv_land_area_is_shown'}, {'name'='PVWatts Advanced Inputs', 'caption' = 'Advanced Inputs', 'collapsible'=true, 'collapsible_var'='pvwatts.advanced.is_shown'} ]], { 'sidebar'='PV System Design', 'help'='pvwatts/pvwatts_system_design', 'bin_name'='PVWatts' } );
-addpage( [[ 'Degradation AC Single Year'], ], { 'sidebar'='PV AC Degradation','help'='degradation/degradation_ac', 'bin_name'='PVWatts' } );
+addpage( [[ 'Degradation DC Lifetime' ]], { 'sidebar'='DC Degradation','help'='degradation/degradation_dc', 'bin_name'='PVWatts' } );
 addpage( [[ 'PV Capital Costs' ]], { 'sidebar'='PV Installation Costs', 'help'='installation-costs/cc_pv', 'bin_name'='PVWatts'} );
 addpage( [[ 'Operating Costs']], {'sidebar' = 'PV Operating Costs', 'help'='operating-costs/oc_operating', 'bin_name'='PVWatts'} );
 // wind
@@ -3347,13 +3347,13 @@ sethybridvariabledependencies([
 addpage([['Hybrid System']], {'sidebar'='Hybrid System', 'help'='hybrid-systems/hybrid_system', 'top_page'=true});
 //generic
 addpage( [[ 'Custom Generation Plant' ]], { 'sidebar'='Custom Generation Profile' , 'help'='custom-generation/custom_generation_profile', 'bin_name'='CustomGeneration' } );
-addpage( [[ 'Degradation AC Single Year'], ], { 'sidebar'='Custom Generation AC Degradation','help'='degradation/degradation_ac', 'bin_name'='CustomGeneration' } );
+addpage( [[ 'Degradation AC Lifetime'], ], { 'sidebar'='Custom Generation AC Degradation','help'='degradation/degradation_ac', 'bin_name'='CustomGeneration' } );
 addpage( [[ 'Custom Generation Costs']],{ 'sidebar'='Custom Generation Installation Costs', 'help'='installation-costs/cc_custom_generation', 'bin_name'='CustomGeneration' } );
 addpage( [[ 'Operating Costs Fuel' ]], {'sidebar' = 'Custom Generation Operating Costs', 'help'='operating-costs/oc_operating', 'bin_name'='CustomGeneration'} );
 // pvwatts
 addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='PV Location and Resource', 'help'='pvwatts/pvwatts_location_and_resource', 'bin_name'='PVWatts' } );
 addpage( [[ 'PVWatts', {'name'='PV Land Area', 'caption' = 'Land Area', 'collapsible'=true, 'collapsible_var'='pv_land_area_is_shown'}, {'name'='PVWatts Advanced Inputs', 'caption' = 'Advanced Inputs', 'collapsible'=true, 'collapsible_var'='pvwatts.advanced.is_shown'} ]], { 'sidebar'='PV System Design', 'help'='pvwatts/pvwatts_system_design', 'bin_name'='PVWatts' } );
-addpage( [[ 'Degradation AC Single Year'], ], { 'sidebar'='PV AC Degradation','help'='degradation/degradation_ac', 'bin_name'='PVWatts' } );
+addpage( [[ 'Degradation DC Lifetime' ]], { 'sidebar'='DC Degradation','help'='degradation/degradation_dc', 'bin_name'='PVWatts' } );
 addpage( [[ 'PV Capital Costs' ]], { 'sidebar'='PV Installation Costs', 'help'='installation-costs/cc_pv', 'bin_name'='PVWatts'} );
 addpage( [[ 'Operating Costs', 'Operating Costs Land Lease' ]], {'sidebar' = 'PV Operating Costs', 'help'='operating-costs/oc_operating', 'bin_name'='PVWatts'} );
 // wind
@@ -3431,13 +3431,13 @@ sethybridvariabledependencies([
 addpage([['Hybrid System']], {'sidebar'='Hybrid System', 'help'='hybrid-systems/hybrid_system', 'top_page'=true});
 //generic
 addpage( [[ 'Custom Generation Plant' ]], { 'sidebar'='Custom Generation Profile' , 'help'='custom-generation/custom_generation_profile', 'bin_name'='CustomGeneration' } );
-addpage( [[ 'Degradation AC Single Year'], ], { 'sidebar'='Generic AC Degradation','help'='degradation/degradation_ac', 'bin_name'='CustomGeneration' } );
+addpage( [[ 'Degradation AC Lifetime'], ], { 'sidebar'='Generic AC Degradation','help'='degradation/degradation_ac', 'bin_name'='CustomGeneration' } );
 addpage( [[ 'Custom Generation Costs']],{ 'sidebar'='Custom Generation Installation Costs', 'help'='installation-costs/cc_custom_generation', 'bin_name'='CustomGeneration' } );
 addpage( [[ 'Operating Costs Fuel' ]], {'sidebar' = 'Custom Generation Operating Costs', 'help'='operating-costs/oc_operating', 'bin_name'='CustomGeneration'} );
 // pvwatts
 addpage( [[ 'Solar Resource Download', 'Solar Resource Library', 'Solar Resource Information' ]], { 'sidebar'='PV Location and Resource', 'help'='pvwatts/pvwatts_location_and_resource', 'bin_name'='PVWatts' } );
 addpage( [[ 'PVWatts', {'name'='PV Land Area', 'caption' = 'Land Area', 'collapsible'=true, 'collapsible_var'='pv_land_area_is_shown'}, {'name'='PVWatts Advanced Inputs', 'caption' = 'Advanced Inputs', 'collapsible'=true, 'collapsible_var'='pvwatts.advanced.is_shown'} ]], { 'sidebar'='PV System Design', 'help'='pvwatts/pvwatts_system_design', 'bin_name'='PVWatts' } );
-addpage( [[ 'Degradation AC Single Year'], ], { 'sidebar'='PV AC Degradation','help'='degradation/degradation_ac', 'bin_name'='PVWatts' } );
+addpage( [[ 'Degradation DC Lifetime' ]], { 'sidebar'='DC Degradation','help'='degradation/degradation_dc', 'bin_name'='PVWatts' } );
 addpage( [[ 'PV Capital Costs' ]], { 'sidebar'='PV Installation Costs', 'help'='installation-costs/cc_pv', 'bin_name'='PVWatts'} );
 addpage( [[ 'Operating Costs' ]], {'sidebar' = 'PV Operating Costs', 'help'='operating-costs/oc_operating', 'bin_name'='PVWatts'} );
 // wind
