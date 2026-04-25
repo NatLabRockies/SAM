@@ -343,6 +343,9 @@
         "env_exposure_loss": 0.0,
         "env_icing_loss": 0.21,
         "env_loss_total": 2.398195120000002,
+        "generic_degradation": [
+            0.6399999856948853
+        ],
         "inflation_rate": 2.5,
         "om_capacity": [
             39.0
