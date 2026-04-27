@@ -963,7 +963,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 522.0
+                    "Integer": 364.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -1464,7 +1464,7 @@
         "itc_basis_cost_capex_fed": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "Total ITC Qualified Installed Cost",
             "Units": "$",
             "Group": "",
             "IndexLabels": "",
@@ -1712,6 +1712,8 @@
         "\tshow('batt_itc_basis_cost', is_batt);\r",
         "\tshow('batt_itc_basis_percent', is_batt);\r",
         "\tshow('batt_itc_percent_lbl', is_batt);\r",
+        "\tshow('batt_itc_basis_cost_fed_include', is_batt);\r",
+        "\tshow('batt_itc_basis_cost_sta_include', is_batt);\r",
         "\trefresh();\r",
         "}\r",
         "\r",
