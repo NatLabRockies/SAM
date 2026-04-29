@@ -219,6 +219,7 @@ version_upgrade{'2026.2.19'} = define() {
 		message('Wind balance of system cost estimators have been removed. Total capital costs remain the same in this version. Please uses SAM 2025.4.16 or older if you need access to the balance of system cost estimators within SAM.', 'warning');
 	
 		wind_degradation = oldvalue('degradation');
+		msgbox('Wind degradation number ' + wind_degradation); 
 		value('generic_degradation', wind_degradation, 'Wind has been updated to run in lifetime mode, the name of the degradation input has changed to "generic_degrdation". For Wind Power, lifetime mode applies degradation linearly.');
 	}
 	
@@ -228,8 +229,9 @@ version_upgrade{'2026.2.19'} = define() {
 			value('spec_mode', 3, "Additional options have been added to custom generation profile, combined cases is now spec_mode 3");
 		}
 		
-		generic_degradation = oldvalue('degradation');
-		value('generic_degradation', generic_degradation, 'Custom generation profile has been updated to run in lifetime mode, the name of the degradation input has changed to "generic_degrdation". For Wind Power, lifetime mode applies degradation linearly.');
+		generic_degradation = oldvalue('customgeneration_degradation');
+		msgbox('Generic degradation number ' + generic_degradation); 
+		value('customgeneration_generic_degradation', generic_degradation, 'Custom generation profile has been updated to run in lifetime mode, the name of the degradation input has changed to "generic_degrdation". For Wind Power, lifetime mode applies degradation linearly.');
 	
 	}
 };
