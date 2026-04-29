@@ -74,6 +74,10 @@
         8.0
     ],
     "DISCARD_UNUSED_latitude": 0.0,
+    "DISP_opt_model_1": 2.0,
+    "DISP_opt_model_2": 2.0,
+    "DISP_opt_model_3": 2.0,
+    "DISP_opt_model_4": 2.0,
     "D_2": [
         [
             0.076,
@@ -775,6 +779,38 @@
     "Min_rnr_xpans": 1.0,
     "N_hdr_per_xpan": 2.0,
     "N_max_hdr_diams": 10.0,
+    "OpticalTable_1": [
+        [
+            2.0,
+            1.0,
+            2.0,
+            1.0
+        ]
+    ],
+    "OpticalTable_2": [
+        [
+            2.0,
+            1.0,
+            2.0,
+            1.0
+        ]
+    ],
+    "OpticalTable_3": [
+        [
+            2.0,
+            1.0,
+            2.0,
+            1.0
+        ]
+    ],
+    "OpticalTable_4": [
+        [
+            2.0,
+            1.0,
+            2.0,
+            1.0
+        ]
+    ],
     "P_a": [
         [
             0.0001,
@@ -11764,6 +11800,12 @@
     "om_production_escal": 0.0,
     "om_production_heat": [
         2.0
+    ],
+    "opt_model": [
+        0.0,
+        1.0,
+        1.0,
+        1.0
     ],
     "p_start": 0.021,
     "payment_option": 0.0,
