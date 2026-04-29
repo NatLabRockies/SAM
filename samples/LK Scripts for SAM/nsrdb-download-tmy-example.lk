@@ -4,8 +4,8 @@
 	This script downloads a TMY file from the NSRDB PSM V3.2.2 TMY
 	API endpoint given a latitude and longitude value.
 	
-	It uses SAM's built-in NREL Developer API key, so must run from
-	an registered NREL version of SAM, or a version of SAM with valid
+	It uses SAM's built-in NLR Developer API key, so must run from
+	an registered NLR version of SAM, or a version of SAM with valid
 	API keys in private.h.
 	
 	Tested in SAM 2022.11.21 r3
@@ -19,8 +19,8 @@ lat = 45;
 lon = -120;
 
 // base url for PSM V3.2.2 TMY
-// documentation at https://developer.nrel.gov/docs/solar/nsrdb/psm3-2-2-tmy-download/
-url = 'https://developer.nrel.gov/api/nsrdb/v2/solar/psm3-2-2-tmy-download.<FORMAT>?names=<NAMES>&wkt=POINT%28<LON>+<LAT>%29&utc=<UTC>&api_key=<APIKEY>&email=<EMAIL>';
+// documentation at https://developer.nlr.gov/docs/solar/nsrdb/psm3-2-2-tmy-download/
+url = 'https://developer.nlr.gov/api/nsrdb/v2/solar/psm3-2-2-tmy-download.<FORMAT>?names=<NAMES>&wkt=POINT%28<LON>+<LAT>%29&utc=<UTC>&api_key=<APIKEY>&email=<EMAIL>';
 
 url = replace( url, '<FORMAT>', 'csv' );
 url = replace( url, '<NAMES>', 'tmy' );

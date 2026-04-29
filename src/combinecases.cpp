@@ -125,7 +125,7 @@ void CombineCasesDialog::OnEvt(wxCommandEvent& e)
 	switch (e.GetId())
 	{
 		case wxID_HELP:
-			SamApp::ShowHelp("combine_cases");
+			SamApp::ShowHelp("window-reference/win_combine_cases");
 			break;
 		case ID_chlCases:
 			{

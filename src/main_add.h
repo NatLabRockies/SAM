@@ -311,7 +311,7 @@ bool SamApp::OnInit()
 	/*wxMSWSetupExceptionHandler(
 		wxString("SAM"),
 		SamApp::VersionStr(),
-		wxString("sam.support@nrel.gov") );
+		wxString("sam.support@nlr.gov") );
 		*/
 #endif
 

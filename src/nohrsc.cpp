@@ -222,7 +222,7 @@ void NOHRSCDialog::OnEvt(wxCommandEvent& e)
 	switch (e.GetId())
 		{
 		case wxID_HELP:
-			SamApp::ShowHelp("NOHRSC_advanced_download");
+			SamApp::ShowHelp("window-reference/win_nohrsc_advanced_download");
 			break;
 	case ID_btnResources:
 		{

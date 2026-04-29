@@ -205,7 +205,7 @@ void MatPropDialog::OnCommand(wxCommandEvent &evt)
 	{
 	case ID_IMPORT: Import(); break;
 	case ID_EXPORT: Export(); break;
-	case wxID_HELP: SamApp::ShowHelp("edit_material_properties"); break;
+	case wxID_HELP: SamApp::ShowHelp("window-reference/win_edit_material_properties"); break;
 	}
 }
 

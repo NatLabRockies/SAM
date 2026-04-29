@@ -152,6 +152,7 @@ BEGIN_EVENT_TABLE( MainWindow, wxFrame )
 	EVT_MENU( ID_SAVE_HOURLY, MainWindow::OnCommand )
 	EVT_MENU( wxID_CLOSE, MainWindow::OnCommand )
 	EVT_MENU( wxID_EXIT, MainWindow::OnCommand )
+	EVT_MENU(wxID_HELP, MainWindow::OnCommand)
 	EVT_BUTTON(ID_CASE_CREATE, MainWindow::OnCommand)
 	EVT_MENU(ID_RUN_ALL_CASES, MainWindow::OnCommand)
 	EVT_BUTTON(ID_MAIN_MENU, MainWindow::OnCommand)
@@ -955,7 +956,7 @@ void MainWindow::OnCommand( wxCommandEvent &evt )
 	switch( evt.GetId() )
 	{
 	case wxID_HELP:
-		SamApp::ShowHelp( cwin ? cwin->GetCurrentContext() : wxString("welcome_page") );
+		SamApp::ShowHelp( cwin ? cwin->GetCurrentContext() : wxString("index") );
 		break;
 	case wxID_ABOUT:
 		SamApp::ShowHelp( ":about" );

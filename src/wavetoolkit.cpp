@@ -206,7 +206,7 @@ void WaveDownloadDialog::OnEvt( wxCommandEvent &e )
 	switch( e.GetId() )
 	{
 		case wxID_HELP:
-			SamApp::ShowHelp("wave_download");
+			SamApp::ShowHelp("window-reference/win_wave_download");
 			break;
         case ID_radSingleYear:
         case ID_radMultiYear:

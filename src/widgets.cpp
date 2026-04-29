@@ -464,7 +464,7 @@ public:
 	void OnCommand(wxCommandEvent& evt)
 	{
 		if (evt.GetId() == wxID_HELP)
-			SamApp::ShowHelp("edit_data_table_row");
+			SamApp::ShowHelp("window-reference/win_edit_data_table_row");
 	}
 
 	DECLARE_EVENT_TABLE();
@@ -681,7 +681,7 @@ public:
 	{
 		if (evt.GetId() == wxID_HELP)
 		{
-			SamApp::ShowHelp("edit_monthly_values");
+			SamApp::ShowHelp("window-reference/win_edit_monthly_values");
 		}
 	}
 
@@ -1944,7 +1944,7 @@ public:
 		}
 		else if (evt.GetId() == wxID_HELP)
 		{
-			SamApp::ShowHelp("edit_array");
+			SamApp::ShowHelp("window-reference/win_edit_array");
 		}
 
 	}
@@ -2576,7 +2576,7 @@ public:
 		}
 		else if (evt.GetId() == wxID_HELP)
 		{
-			SamApp::ShowHelp("edit_data_lifetime");
+			SamApp::ShowHelp("window-reference/win_edit_data_lifetime");
 		}
 
 	}
@@ -3527,7 +3527,7 @@ public:
 		}
 		else if (evt.GetId() == wxID_HELP)
 		{
-			SamApp::ShowHelp("edit_array");
+			SamApp::ShowHelp("window-reference/win_edit_array");
 		}
 	}
 

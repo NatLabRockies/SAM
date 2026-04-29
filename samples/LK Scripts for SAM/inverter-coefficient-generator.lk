@@ -19,7 +19,7 @@
 	
 	This is the approach SAM uses when you choose the "Inverter CEC Coefficient 
 	Generator" option on the Inverter page for the Detailed PV performance model.
-	It is also the approach NREL uses to build SAM's inverter library from data
+	It is also the approach NLR uses to build SAM's inverter library from data
 	provided by the CEC in the Excel workbooks at 
 	https://www.gosolarcalifornia.ca.gov/equipment/inverters.php.
 	
