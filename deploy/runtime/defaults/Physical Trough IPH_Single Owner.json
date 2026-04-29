@@ -1146,9 +1146,9 @@
     ],
     "analysis_period": 25.0,
     "analysis_period_warning": "",
-    "annual_albedo": 0.21716438274677489,
+    "annual_albedo": 0.21716438274677486,
     "annual_beam": 7.364082191780821,
-    "annual_diffuse": 1.3397808219178085,
+    "annual_diffuse": 1.3397808219178083,
     "annual_global": 5.838191780821918,
     "annual_snow": NaN,
     "annual_tdry": 18.126141552511418,
@@ -1317,7 +1317,7 @@
     "csp.dtr.tes.htf_min_opt_temp": 238.0,
     "csp.dtr.tes.min_fluid_volume": 39.67439516694667,
     "csp.dtr.tes.thermal_capacity": 30.0,
-    "csp.pt.par.calc.aux": 0.12121,
+    "csp.pt.par.calc.aux": 0.12120999999999999,
     "csp.pt.par.calc.bop": 0.0,
     "csp.pt.tes.htf_density": 1872.488,
     "csp.pt.tes.tank_diameter": 7.107391202241459,
@@ -1554,7 +1554,7 @@
     "csp_dtr_hce_var4_rated_heat_loss_2": 0.0,
     "csp_dtr_hce_var4_rated_heat_loss_3": 0.0,
     "csp_dtr_hce_var4_rated_heat_loss_4": 0.0,
-    "csp_dtr_loop_hce_heat_loss": 0.9745454545454548,
+    "csp_dtr_loop_hce_heat_loss": 0.9745454545454547,
     "csp_dtr_sca_ap_length_1": 21.0,
     "csp_dtr_sca_ap_length_2": 14.375,
     "csp_dtr_sca_ap_length_3": 14.375,
@@ -1592,25 +1592,25 @@
             0.0
         ]
     ],
-    "csp_dtr_sca_calc_end_loss_1": 0.9996718942883744,
-    "csp_dtr_sca_calc_end_loss_2": 0.9996434127184016,
-    "csp_dtr_sca_calc_end_loss_3": 0.9996434127184016,
-    "csp_dtr_sca_calc_end_loss_4": 0.9996434127184016,
+    "csp_dtr_sca_calc_end_loss_1": 0.9996718942883743,
+    "csp_dtr_sca_calc_end_loss_2": 0.9996434127184017,
+    "csp_dtr_sca_calc_end_loss_3": 0.9996434127184017,
+    "csp_dtr_sca_calc_end_loss_4": 0.9996434127184017,
     "csp_dtr_sca_calc_end_losses": [
         [
-            0.9996718942883744,
-            0.9996434127184016,
-            0.9996434127184016,
-            0.9996434127184016
+            0.9996718942883743,
+            0.9996434127184017,
+            0.9996434127184017,
+            0.9996434127184017
         ]
     ],
-    "csp_dtr_sca_calc_iam_1": 0.9960610689663656,
+    "csp_dtr_sca_calc_iam_1": 0.9960610689663657,
     "csp_dtr_sca_calc_iam_2": 1.0018753305435045,
     "csp_dtr_sca_calc_iam_3": 1.0018753305435045,
     "csp_dtr_sca_calc_iam_4": 1.0018753305435045,
     "csp_dtr_sca_calc_iams": [
         [
-            0.9960610689663656,
+            0.9960610689663657,
             1.0018753305435045,
             1.0018753305435045,
             1.0018753305435045
@@ -1631,11 +1631,11 @@
         0.8484936096,
         0.8484936096
     ],
-    "csp_dtr_sca_calc_theta": 0.1514182598841343,
-    "csp_dtr_sca_calc_theta_1": 0.1514182598841343,
-    "csp_dtr_sca_calc_theta_2": 0.1514182598841343,
-    "csp_dtr_sca_calc_theta_3": 0.1514182598841343,
-    "csp_dtr_sca_calc_theta_4": 0.1514182598841343,
+    "csp_dtr_sca_calc_theta": 0.15141825988413427,
+    "csp_dtr_sca_calc_theta_1": 0.15141825988413427,
+    "csp_dtr_sca_calc_theta_2": 0.15141825988413427,
+    "csp_dtr_sca_calc_theta_3": 0.15141825988413427,
+    "csp_dtr_sca_calc_theta_4": 0.15141825988413427,
     "csp_dtr_sca_calc_zenith": 0.15062193308923828,
     "csp_dtr_sca_calc_zenith_1": 0.15062193308923828,
     "csp_dtr_sca_calc_zenith_2": 0.15062193308923828,
@@ -10766,7 +10766,7 @@
     "f_htfmax": 1.2,
     "f_htfmax_actual": 0.5460258809863511,
     "f_htfmin": 0.25,
-    "f_htfmin_actual": 0.04550215674886259,
+    "f_htfmin_actual": 0.045502156748862588,
     "f_tc_cold": 2.0,
     "f_turb_tou_periods": [
         1.0,
@@ -11011,7 +11011,7 @@
             0.0
         ]
     ],
-    "lat": 32.13,
+    "lat": 32.130001068115237,
     "lib_A_aperture": 1320.0,
     "lib_AbsorberMaterial": 0.0,
     "lib_AnnulusGas_1": 2.0,
@@ -11755,7 +11755,7 @@
     "library_folder_list": "x",
     "library_paths": "\"\"",
     "loan_moratorium": 0.0,
-    "lon": -110.94,
+    "lon": -110.94000244140625,
     "loop_optical_efficiency": 0.7410044526207242,
     "m_dot_hs_ext_des_ui": NaN,
     "m_dot_htfmax": 12.0,
@@ -11784,7 +11784,7 @@
     "nSCA": 4.0,
     "nameplate": 5.0,
     "nodes": 2000.0,
-    "nominal_discount_rate": 9.060000000000004,
+    "nominal_discount_rate": 9.060000000000003,
     "non_solar_field_land_area_multiplier": 1.1,
     "northsouth_field_sep": 20.0,
     "object 11": 0.0,
@@ -11802,10 +11802,10 @@
         2.0
     ],
     "opt_model": [
-        0.0,
-        1.0,
-        1.0,
-        1.0
+        3.0,
+        3.0,
+        3.0,
+        3.0
     ],
     "p_start": 0.021,
     "payment_option": 0.0,
@@ -11879,6 +11879,7 @@
     "sales_tax_rate": 5.0,
     "salvage_percentage": 0.0,
     "salvage_value": 0.0,
+    "sca_1_is_shown": 1.0,
     "sca_2_is_shown": 1.0,
     "sca_3_is_shown": 1.0,
     "sca_4_is_shown": 1.0,

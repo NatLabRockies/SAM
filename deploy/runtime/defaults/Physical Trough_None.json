@@ -12053,6 +12053,7 @@
     "receivers_in_field": "Cold - 1 - 1 - 1 - 1 - 1 - 1 - 1 - 1 - Hot",
     "required_number_of_loops_for_SM1": 92.0,
     "sales_tax_rate": 5.0,
+    "sca_1_is_shown": 1.0,
     "sca_2_is_shown": 1.0,
     "sca_3_is_shown": 1.0,
     "sca_4_is_shown": 1.0,

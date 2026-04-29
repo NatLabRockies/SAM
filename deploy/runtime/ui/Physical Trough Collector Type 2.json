@@ -1,7 +1,7 @@
 {
     "Name": "Physical Trough Collector Type 2",
-    "Width": 815.0,
-    "Height": 700.0,
+    "Width": 805.0,
+    "Height": 723.0,
     "FormObjects": {
         "RadioChoice": {
             "Visible": 1.0,
@@ -12,19 +12,19 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 30.0
+                    "Integer": 81.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 342.0
+                    "Integer": 360.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 699.0
+                    "Integer": 294.0
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 51.0
+                    "Integer": 66.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -44,7 +44,7 @@
                 },
                 "Horizontal": {
                     "Type": 2.0,
-                    "Boolean": 1.0
+                    "Boolean": 0.0
                 },
                 "TabOrder": {
                     "Type": 3.0,
@@ -172,11 +172,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 270.0
+                    "Integer": 603.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 168.0
+                    "Integer": 363.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -196,7 +196,7 @@
                 },
                 "Label": {
                     "Type": 5.0,
-                    "String": ""
+                    "String": "IAM Coefficients"
                 },
                 "Description": {
                     "Type": 5.0,
@@ -217,19 +217,19 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 30.0
+                    "Integer": 18.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 399.0
+                    "Integer": 432.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 763.0
+                    "Integer": 769.0
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 285.0
+                    "Integer": 273.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -952,7 +952,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 222.0
+                    "Integer": 198.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1509,7 +1509,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 198.0
+                    "Integer": 174.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1659,6 +1659,43 @@
                 "TabOrder": {
                     "Type": 3.0,
                     "Integer": 4.0
+                }
+            }
+        },
+        "GroupBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 4"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 6.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 342.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 792.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 372.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Solar Position/Collector Incidence Angles"
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
                 }
             }
         }
