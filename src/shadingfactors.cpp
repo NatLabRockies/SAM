@@ -479,7 +479,7 @@ public:
 		switch( e.GetId() )
 		{
 		case wxID_HELP:
-			SamApp::ShowHelp("edit_shading_data");
+			SamApp::ShowHelp("window-reference/win_edit_shading_data");
 			break;
 		case ID_ENABLE_HOURLY:
 		case ID_ENABLE_MXH:
@@ -1817,7 +1817,7 @@ wxString wxShadingFactorsTable::GetRowLabelValue(int row)
 
 wxString wxShadingFactorsTable::GetColLabelValue(int col)
 {
-	wxString col_label = label.IsEmpty() ? "Value" : label;
+	wxString col_label = label.IsEmpty() ? wxString("Value") : label;
 	if (d_mat->ncols() > 1)
 		col_label = wxString::Format("String %d", col + 1);
 	return col_label;

@@ -1,7 +1,7 @@
 /*@
 
 <p>This script downloads hourly marginal cost data for modeled futures of the U.S.
-electricity sector from the <a href=https://scenarioviewer.nrel.gov/>NREL Cambium database</a>. This data may be suitable as
+electricity sector from the <a href=https://scenarioviewer.nlr.gov/>NLR Cambium database</a>. This data may be suitable as
 approximations of market power prices for the energy market or ancillary services
 markets when other data is not available.</p>
 

@@ -2,9 +2,9 @@
 /*
 
 	Basic script demonstrating use of webapi(), geocode(), and curl() functions
-	to access the NREL National Solar Radiation Database (NSRDB).
+	to access the NLR National Solar Radiation Database (NSRDB).
 	
-	Note this requires an NREL version of SAM, or a version of SAM with valid
+	Note this requires an NLR version of SAM, or a version of SAM with valid
 	API keys in private.h.
 	
 	Tested in SAM 2020.2.29 r2

@@ -73,9 +73,11 @@ static SamApp::ver releases[] = {
 	//intermediate version numbers are required in this list in order for the version upgrade script (versions.lk) to work correctly
 	//please clarify the reason for the new version in a comment. Examples: public release, variable changes, internal release, public beta release, etc.
 	//the top version should always be the current working version
-            { 2026, 2, 26}, // 2026.2.26 ssc 305 beta release for Longview
-			{ 2025, 10, 27},   //2025.10.27 ssc 303 public beta
+           { 2026, 2, 26}, // 2026.2.26 ssc 305 beta release for Longview	
+		{ 2026, 2, 19 }, // Placeholder for OR Tools version upgrade testing (replace with release version number)
+            { 2025, 10, 27},   //2025.10.27 ssc 303 public beta
 			{ 2025, 9, 19 }, // Placeholder for PVWatts-Battery upgrade testing (replace with release version number)
+			{ 2025, 4, 29 }, // 2025.4.29 ssc 303 ortools windows beta
 			{ 2025, 4, 16 }, // 2025.4.16 ssc 302 public release
 			{ 2025, 4, 7},	// 2025.4.7 ssc 301 release candidate
 			{ 2024, 12, 12},	// 2024.12.12 ssc 298 public release
@@ -310,7 +312,7 @@ bool SamApp::OnInit()
 	/*wxMSWSetupExceptionHandler(
 		wxString("SAM"),
 		SamApp::VersionStr(),
-		wxString("sam.support@nrel.gov") );
+		wxString("sam.support@nlr.gov") );
 		*/
 #endif
 
@@ -463,8 +465,6 @@ extern void RegisterReportObjectTypes();
 			if (lksw->Load(argv[2])) lksw->RunScript();
 		}
 	}
-
-	LoadPythonConfig();
 
 	return true;
 }

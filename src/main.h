@@ -393,12 +393,6 @@ public:
 
 	static bool LoadAndRunScriptFile( const wxString &script_file, wxArrayString *errors = 0 );
 
-	static std::string GetPythonConfigPath();
-	static void LoadPythonConfig();
-	static bool CheckPythonPackage(const std::string& pip_name);
-	static void InstallPython();
-    static void InstallPythonPackage(const std::string& pip_name);
-
 	static bool VarTablesFromJSONFile(ConfigInfo* ci, std::vector<VarTable>& vt, const std::string& file);
 
 };
@@ -456,7 +450,7 @@ private:
 
 bool ShowConfigurationDialog( wxWindow *parent, wxString *tech, wxString *fin, bool *reset );
 
-
+std::string ORTool_LinearProgrammingExample();
 
 #endif
 

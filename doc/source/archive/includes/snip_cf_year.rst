@@ -1,0 +1,2 @@
+
+The cash flow year is displayed in the top row of the cash flow table. In the descriptions below, the letter *n *indicates the cash flow year, where *n = 0* is Year Zero of the cash flow, *n = 1* is year one, *n = 2* is year two, etc.

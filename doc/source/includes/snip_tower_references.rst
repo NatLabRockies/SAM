@@ -1,0 +1,2 @@
+
+Page numbers relevant to this section from references cited with download links under "Power Tower" on the `CSP Publications <https://sam.nrel.gov/concentrating-solar-power/csp-publications>`__ page of the SAM website:
