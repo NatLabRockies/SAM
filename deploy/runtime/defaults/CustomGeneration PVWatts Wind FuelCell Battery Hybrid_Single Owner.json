@@ -40005,7 +40005,7 @@
         ],
         "flip_target_percent": 11.0,
         "flip_target_year": 10.0,
-        "fuel_cell_itc_basis_cost_fed_include": 0.0,
+        "fuel_cell_itc_basis_cost_fed_include": 1.0,
         "fuel_cell_itc_basis_cost_sta_include": 0.0,
         "fuel_cell_itc_basis_percent": 0.3392658027904524,
         "fuelcell_system_capacity": 200.0,

@@ -27561,7 +27561,7 @@
     "itc_fed_amount_deprbas_fed": 1.0,
     "itc_fed_amount_deprbas_sta": 1.0,
     "itc_fed_percent": [
-        30.0
+        0.0
     ],
     "itc_fed_percent_deprbas_fed": 1.0,
     "itc_fed_percent_deprbas_sta": 1.0,
@@ -28327,7 +28327,7 @@
         0.0
     ],
     "ptc_fed_escal": 0.0,
-    "ptc_fed_term": 10.0,
+    "ptc_fed_term": 0.0,
     "ptc_sta_amount": [
         0.0
     ],

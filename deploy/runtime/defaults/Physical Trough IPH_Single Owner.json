@@ -11815,7 +11815,7 @@
         0.0
     ],
     "ptc_fed_escal": 0.0,
-    "ptc_fed_term": 10.0,
+    "ptc_fed_term": 0.0,
     "ptc_sta_amount_heat_btu": [
         0.0
     ],
