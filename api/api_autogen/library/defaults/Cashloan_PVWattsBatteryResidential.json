@@ -25,7 +25,7 @@
 			"om_fixed_escal": 0,
 			"om_production": [0.000000],
 			"om_production_escal": 0,
-			"total_installed_cost": 666254
+			"total_installed_cost": 40698.3
 		},
 		"LandLease": {
 		},
@@ -182,7 +182,7 @@
 		},
 		"LCOS": {
 			"batt_salvage_percentage": 0,
-			"battery_total_cost_lcos": 55134.3
+			"battery_total_cost_lcos": 10142.3
 		},
 		"ElectricityRates": {
 			"rate_escalation": [0.000000]
