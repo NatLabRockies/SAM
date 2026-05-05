@@ -9582,6 +9582,10 @@
     "annual_tdry": 21.938470319634705,
     "annual_twet": NaN,
     "annual_wspd": 1.786484018864629,
+    "batt_itc_basis_cost": 0.0,
+    "batt_itc_basis_cost_fed_include": 0.0,
+    "batt_itc_basis_cost_sta_include": 0.0,
+    "batt_itc_basis_percent": 0.0,
     "batt_max_power": 0.0,
     "batt_salvage_percentage": 0.0,
     "batt_salvage_value": 0.0,
@@ -18889,6 +18893,14 @@
     "degradation": [
         0.0
     ],
+    "depr_basis_mat": [
+        [
+            NaN
+        ]
+    ],
+    "depr_en_basis_mat": 0.0,
+    "depr_itc_fed_capex": 0.0,
+    "depr_itc_sta_capex": 0.0,
     "desired_dcac_ratio": 1.2,
     "desired_size": 4.0,
     "elev": 358.0,
@@ -29929,6 +29941,11 @@
     "irrad_mode": 0.0,
     "is_advanced": 0.0,
     "is_btm": 1.0,
+    "itc_basis_cost_capex_fed": 0.0,
+    "itc_basis_cost_capex_sta": 0.0,
+    "itc_basis_cost_percent_fed": 0.0,
+    "itc_basis_cost_percent_sta": 0.0,
+    "itc_basis_percent_input": 0.0,
     "itc_fed_amount": [
         0.0
     ],
@@ -29942,6 +29959,7 @@
     "itc_fed_percent_maxvalue": [
         1e38
     ],
+    "itc_qualification_choice": 0.0,
     "itc_sta_amount": [
         0.0
     ],
@@ -47688,6 +47706,7 @@
         "DATA": ""
     },
     "show_cash_incentives": 1.0,
+    "show_itc_qualification": 1.0,
     "show_tax_credits": 1.0,
     "sky_model": 2.0,
     "snl_a": -3.62,
@@ -48155,6 +48174,10 @@
     "subarray4_ui_row_spacing": 6.043361831151782,
     "subtotal_direct": 16414.718999999997,
     "system_capacity": 8.00718,
+    "system_itc_basis_cost": 25304.4904155,
+    "system_itc_basis_cost_fed_include": 0.0,
+    "system_itc_basis_cost_sta_include": 0.0,
+    "system_itc_basis_percent": 100.0,
     "system_use_lifetime_output": 1.0,
     "total_direct_cost": 16414.718999999997,
     "total_indirect_cost": 8487.6108,

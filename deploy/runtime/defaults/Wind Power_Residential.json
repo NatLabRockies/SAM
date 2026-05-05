@@ -33,6 +33,10 @@
     "avail_turb_loss": 3.58,
     "avail_turb_uncert": 2.3,
     "avail_uncert_total": 2.5027185219277059,
+    "batt_itc_basis_cost": 0.0,
+    "batt_itc_basis_cost_fed_include": 0.0,
+    "batt_itc_basis_cost_sta_include": 0.0,
+    "batt_itc_basis_percent": 0.0,
     "batt_salvage_percentage": 0.0,
     "batt_salvage_value": 0.0,
     "bos_cost_fixed": 0.0,
@@ -1683,6 +1687,14 @@
     "degradation": [
         0.0
     ],
+    "depr_basis_mat": [
+        [
+            NaN
+        ]
+    ],
+    "depr_en_basis_mat": 0.0,
+    "depr_itc_fed_capex": 0.0,
+    "depr_itc_sta_capex": 0.0,
     "desired_farm_size": 5.0,
     "elec_eff_loss": 1.91,
     "elec_eff_uncert": 1.0,
@@ -10552,6 +10564,11 @@
     "inflation_rate": 2.5,
     "insurance_rate": 0.0,
     "is_btm": 1.0,
+    "itc_basis_cost_capex_fed": 0.0,
+    "itc_basis_cost_capex_sta": 0.0,
+    "itc_basis_cost_percent_fed": 0.0,
+    "itc_basis_cost_percent_sta": 0.0,
+    "itc_basis_percent_input": 0.0,
     "itc_fed_amount": [
         0.0
     ],
@@ -10565,6 +10582,7 @@
     "itc_fed_percent_maxvalue": [
         1e38
     ],
+    "itc_qualification_choice": 0.0,
     "itc_sta_amount": [
         0.0
     ],
@@ -28236,6 +28254,7 @@
     "scale_factor": 1.0,
     "sensitivity_uncert": 1.8,
     "show_cash_incentives": 1.0,
+    "show_itc_qualification": 1.0,
     "show_tax_credits": 1.0,
     "sizing_warning": 0.0,
     "specify_label": 0.0,
@@ -28246,6 +28265,10 @@
     ],
     "step": 0.0,
     "system_capacity": 20.0,
+    "system_itc_basis_cost": 161260.0,
+    "system_itc_basis_cost_fed_include": 0.0,
+    "system_itc_basis_cost_sta_include": 0.0,
+    "system_itc_basis_percent": 100.0,
     "system_use_lifetime_output": 0.0,
     "total_10yr_uncert": 12.0852,
     "total_20yr_uncert": 12.0852,

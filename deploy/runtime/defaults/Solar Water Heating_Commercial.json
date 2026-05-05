@@ -42,6 +42,10 @@
     "annual_wspd": 2.35368,
     "area_coll": 2.98,
     "azimuth": 0.0,
+    "batt_itc_basis_cost": 0.0,
+    "batt_itc_basis_cost_fed_include": 0.0,
+    "batt_itc_basis_cost_sta_include": 0.0,
+    "batt_itc_basis_percent": 0.0,
     "batt_salvage_percentage": 0.0,
     "batt_salvage_value": 0.0,
     "bos": 1000.0,
@@ -17619,11 +17623,40 @@
     "degradation": [
         0.0
     ],
+    "depr_alloc_custom_percent_calc": 0.0,
+    "depr_alloc_macrs_15_percent_calc": 0.0,
+    "depr_alloc_macrs_5_percent_calc": 100.0,
+    "depr_alloc_sl_15_percent_calc": 0.0,
+    "depr_alloc_sl_20_percent_calc": 0.0,
+    "depr_alloc_sl_39_percent_calc": 0.0,
+    "depr_alloc_sl_5_percent_calc": 0.0,
+    "depr_allocation_choice": 0.0,
+    "depr_basis_mat": [
+        [
+            1.0,
+            8059.8,
+            100.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            2.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    ],
+    "depr_en_basis_mat": 1.0,
     "depr_fed_custom": [
         0.0
     ],
     "depr_fed_sl_years": 7.0,
     "depr_fed_type": 1.0,
+    "depr_itc_fed_capex": 0.0,
+    "depr_itc_sta_capex": 0.0,
     "depr_sta_custom": [
         0.0
     ],
@@ -26480,6 +26513,13 @@
     "irrad_mode": 0.0,
     "is_advanced": 0.0,
     "is_btm": 1.0,
+    "itc_basis_cost_capex_fed": 0.0,
+    "itc_basis_cost_capex_sta": 0.0,
+    "itc_basis_cost_percent_fed": 0.0,
+    "itc_basis_cost_percent_sta": 0.0,
+    "itc_basis_depreciation_allocation": 0.0,
+    "itc_basis_percent_depr": 0.0,
+    "itc_basis_percent_input": 0.0,
     "itc_fed_amount": [
         0.0
     ],
@@ -26493,6 +26533,7 @@
     "itc_fed_percent_maxvalue": [
         1e38
     ],
+    "itc_qualification_choice": 0.0,
     "itc_sta_amount": [
         0.0
     ],
@@ -44058,6 +44099,8 @@
     ],
     "ncoll": 2.0,
     "nominal_discount_rate": 9.060000000000003,
+    "non_itc_basis_depreciation_allocation": 0.0,
+    "non_itc_basis_percent_depr": 100.0,
     "normalize_to_utility_bill": 0.0,
     "num_collectors": 2.0,
     "om_capacity": [
@@ -52943,6 +52986,8 @@
         ]
     ],
     "show_cash_incentives": 1.0,
+    "show_depr_alloc": 1.0,
+    "show_itc_qualification": 1.0,
     "show_tax_credits": 1.0,
     "sky_model": 0.0,
     "solar_data_file_name": "tucson_az_32.116521_-110.933042_psmv3_60_tmy.csv",
@@ -52970,6 +53015,10 @@
     "storage": 600.0,
     "storage_cost_units": 0.0,
     "system_capacity": 3.418059999999999,
+    "system_itc_basis_cost": 8059.8,
+    "system_itc_basis_cost_fed_include": 0.0,
+    "system_itc_basis_cost_sta_include": 0.0,
+    "system_itc_basis_percent": 100.0,
     "system_use_lifetime_output": 0.0,
     "tank_h2d_ratio": 2.0,
     "test_flow": 0.045528,

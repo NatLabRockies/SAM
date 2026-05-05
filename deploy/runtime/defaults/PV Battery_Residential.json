@@ -18474,6 +18474,10 @@
     "batt_h_to_ambient": 7.5,
     "batt_initial_SOC": 50.0,
     "batt_inverter_efficiency_cutoff": 90.0,
+    "batt_itc_basis_cost": 10144.4167686,
+    "batt_itc_basis_cost_fed_include": 0.0,
+    "batt_itc_basis_cost_sta_include": 0.0,
+    "batt_itc_basis_percent": 24.907818766395967,
     "batt_life_excl": 0.0,
     "batt_life_model": 0.0,
     "batt_lifetime_matrix": [
@@ -55149,6 +55153,14 @@
     "degradation": [
         0.0
     ],
+    "depr_basis_mat": [
+        [
+            NaN
+        ]
+    ],
+    "depr_en_basis_mat": 0.0,
+    "depr_itc_fed_capex": 0.0,
+    "depr_itc_sta_capex": 0.0,
     "desired_dcac_ratio": 1.2,
     "desired_size": 4.0,
     "dispatch_manual_btm_discharge_to_grid": [
@@ -66863,6 +66875,11 @@
     "irrad_mode": 0.0,
     "is_advanced": 0.0,
     "is_btm": 1.0,
+    "itc_basis_cost_capex_fed": 0.0,
+    "itc_basis_cost_capex_sta": 0.0,
+    "itc_basis_cost_percent_fed": 0.0,
+    "itc_basis_cost_percent_sta": 0.0,
+    "itc_basis_percent_input": 0.0,
     "itc_fed_amount": [
         0.0
     ],
@@ -66876,6 +66893,7 @@
     "itc_fed_percent_maxvalue": [
         1e38
     ],
+    "itc_qualification_choice": 0.0,
     "itc_sta_amount": [
         0.0
     ],
@@ -84670,6 +84688,7 @@
         "DATA": ""
     },
     "show_cash_incentives": 1.0,
+    "show_itc_qualification": 1.0,
     "show_tax_credits": 1.0,
     "sky_model": 2.0,
     "snl_a": -3.62,
@@ -85137,6 +85156,10 @@
     "subarray4_ui_row_spacing": 6.043361831151782,
     "subtotal_direct": 27502.108932000003,
     "system_capacity": 8.00718,
+    "system_itc_basis_cost": 30583.424010000002,
+    "system_itc_basis_cost_fed_include": 0.0,
+    "system_itc_basis_cost_sta_include": 0.0,
+    "system_itc_basis_percent": 75.09218123360404,
     "system_use_lifetime_output": 1.0,
     "total_battery_indirect_cost": 2370.12528,
     "total_direct_cost": 27502.108932000003,
