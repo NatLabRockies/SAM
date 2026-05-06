@@ -61,13 +61,9 @@ version_upgrade{'2026.2.19'} = define() {
 	if (cfg.tech == 'Flat Plate PV' || cfg.tech == 'PV Battery' || cfg.tech == 'Photovoltaic Wind Battery Hybrid' ) {
 		message('The Detailed PV model input pages have been reorganized to make it easier to find related inputs with improved messages to help you find and fix problems with the system design.', 'error');
 		message('The Detailed PV model has a new option on the Tracking Layout Land input page to define the distance between rows using either the ground coverage ratio (GCR) or row spacing as input. It also has a new option on the System Size page to automatically set the number of modules along bottom of row to the number of modules per string whenever you change then number of modules per string.', 'warning');
-		if (cfg.tech == 'Photovoltaic Wind Battery Hybrid' ) {
-			value('photovoltaic_ui_chkbox_nmodx_eq_mod_per_string',0,'Turn off new \"Set row dimensions when modules per string changes\" option on System Size page.');
-		}
-		else {
-			value('ui_chkbox_nmodx_eq_mod_per_string',0,'Turn off new \"Set row dimensions when modules per string changes\" option on System Size page.');
-		}	
+		value('ui_chkbox_nmodx_eq_mod_per_string',0,'Turn off new \"Set row dimensions when modules per string changes\" option on System Size page.');
 	}
+
 
 	if (cfg.tech == 'MEwave' || cfg.tech == 'MEtidal' || cfg.tech == 'MEwave Battery')
 	{
@@ -205,9 +201,9 @@ version_upgrade{'2026.2.19'} = define() {
 	
 	if (cfg.tech == 'Wind Power') {
 		message('Wind balance of system cost estimators have been removed. Total capital costs remain the same in this version. Please uses SAM 2025.4.16 or older if you need access to the balance of system cost estimators within SAM.', 'warning');
-		message('The Wind Power model now runs simulations over the analysis period (lifetime mode) instead of just one year.');
+	
 		wind_degradation = oldvalue('degradation');
-		value('generic_degradation', wind_degradation, 'Wind AC degradation (%) applies linearly. The degradation variable name "degradation" has changed to "generic_degradation".');
+		value('ac_degradation', wind_degradation, 'Wind has been updated to run in lifetime mode, the name of the degradation input has changed to "ac_degrdation". For Wind Power, lifetime mode applies degradation linearly.');
 	}
 	
 	if (strpos(cfg.tech, "Hybrid") > -1) {
@@ -221,9 +217,9 @@ version_upgrade{'2026.2.19'} = define() {
 		}
 	
 		message('Wind balance of system cost estimators have been removed. Total capital costs remain the same in this version. Please uses SAM 2025.4.16 or older if you need access to the balance of system cost estimators within SAM.', 'warning');
-		message('The Wind Power model now runs simulations over the analysis period (lifetime mode) instead of just one year.');
+	
 		wind_degradation = oldvalue('wind_degradation');
-		value('wind_generic_degradation', wind_degradation, 'Wind AC degradation (%) applies linearly. The degradation variable name "degradation" has changed to "wind_generic_degradation".');
+		value('wind_ac_degradation', wind_degradation, 'Wind has been updated to run in lifetime mode, the name of the degradation input has changed to "ac_degrdation". For Wind Power, lifetime mode applies degradation linearly.');
 	}
 	
 	if (cfg.tech == 'Custom Generation Profile' || cfg.tech == 'CustomGeneration PVWatts Wind FuelCell Battery Hybrid') {
@@ -233,8 +229,7 @@ version_upgrade{'2026.2.19'} = define() {
 		}
 		
 		generic_degradation = oldvalue('customgeneration_degradation');
-		msgbox('Generic degradation number ' + generic_degradation); 
-		value('customgeneration_generic_degradation', generic_degradation, 'Custom generation profile has been updated to run in lifetime mode, the name of the degradation input has changed to "generic_degrdation". For Wind Power, lifetime mode applies degradation linearly.');
+		value('customgeneration_ac_degradation', generic_degradation, 'Custom generation profile has been updated to run in lifetime mode, the name of the degradation input has changed to "ac_degrdation". For Wind Power, lifetime mode applies degradation linearly.');
 	
 	}
 };

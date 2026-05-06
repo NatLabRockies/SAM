@@ -1738,7 +1738,7 @@
     "federal_tax_rate": [
         15.0
     ],
-    "generic_degradation": [
+    "ac_degradation": [
         0.6399999856948853
     ],
     "grid_curtailment": [
