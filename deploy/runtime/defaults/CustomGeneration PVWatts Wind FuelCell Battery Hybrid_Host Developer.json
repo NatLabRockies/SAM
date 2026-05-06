@@ -39059,6 +39059,7 @@
         "analysis_period_warning": "",
         "annual_crit": 0.0,
         "annual_peak": 274231.0,
+        "batt_basis_cost": 421090.49934,
         "batt_itc_basis_cost_fed_include": 1.0,
         "batt_itc_basis_cost_include": 0.0,
         "batt_itc_basis_cost_sta_include": 1.0,
@@ -47923,6 +47924,7 @@
         "crit_load_user_data": [
             0.0
         ],
+        "custom_generation_basis_cost": 133874000.0,
         "customgeneration_itc_basis_cost_fed_include": 0.0,
         "customgeneration_itc_basis_cost_sta_include": 0.0,
         "customgeneration_itc_basis_percent": 98.49332447841974,
@@ -56864,6 +56866,7 @@
         ],
         "flip_target_percent": 11.0,
         "flip_target_year": 20.0,
+        "fuel_cell_basis_cost": 84000.0,
         "fuel_cell_itc_basis_cost_fed_include": 1.0,
         "fuel_cell_itc_basis_cost_sta_include": 0.0,
         "fuel_cell_itc_basis_percent": 0.06180019463217098,
@@ -83986,6 +83989,7 @@
         ],
         "ptc_sta_escal": 0.0,
         "ptc_sta_term": 10.0,
+        "pv_basis_cost": 937311.5269565217,
         "pv_itc_basis_cost": 0.0,
         "pv_itc_basis_cost_fed_include": 0.0,
         "pv_itc_basis_cost_sta_include": 0.0,
@@ -120631,6 +120635,7 @@
             300.0,
             300.0
         ],
+        "wind_basis_cost": 605500.0,
         "wind_itc_basis_cost_fed_include": 0.0,
         "wind_itc_basis_cost_sta_include": 0.0,
         "wind_itc_basis_percent": 0.44547640297356586,

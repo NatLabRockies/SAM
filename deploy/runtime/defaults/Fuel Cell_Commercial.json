@@ -8940,6 +8940,10 @@
     "batt_h_to_ambient": 50.0,
     "batt_initial_SOC": 50.0,
     "batt_inverter_efficiency_cutoff": 90.0,
+    "batt_itc_basis_cost": 0.0,
+    "batt_itc_basis_cost_fed_include": 0.0,
+    "batt_itc_basis_cost_sta_include": 0.0,
+    "batt_itc_basis_percent": 0.0,
     "batt_life_model": 0.0,
     "batt_lifetime_matrix": [
         [
@@ -18720,6 +18724,7 @@
     "batt_volume": 2.3950984937655859,
     "battery_energy": 1200.5431199999999,
     "battery_energy_kwh": 1200.5431199999999,
+    "battery_itc_cost": 433737.0205660799,
     "battery_losses_shown": 0.0,
     "battery_per_kW": 667.0,
     "battery_per_kWh": 184.0,
@@ -27712,11 +27717,40 @@
     "degradation": [
         0.0
     ],
+    "depr_alloc_custom_percent_calc": 0.0,
+    "depr_alloc_macrs_15_percent_calc": 0.0,
+    "depr_alloc_macrs_5_percent_calc": 100.0,
+    "depr_alloc_sl_15_percent_calc": 0.0,
+    "depr_alloc_sl_20_percent_calc": 0.0,
+    "depr_alloc_sl_39_percent_calc": 0.0,
+    "depr_alloc_sl_5_percent_calc": 0.0,
+    "depr_allocation_choice": 0.0,
+    "depr_basis_mat": [
+        [
+            1.0,
+            2911259.82056608,
+            100.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            2.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    ],
+    "depr_en_basis_mat": 1.0,
     "depr_fed_custom": [
         0.0
     ],
     "depr_fed_sl_years": 7.0,
     "depr_fed_type": 1.0,
+    "depr_itc_fed_capex": 0.0,
+    "depr_itc_sta_capex": 0.0,
     "depr_sta_custom": [
         0.0
     ],
@@ -29105,6 +29139,7 @@
         21.0
     ],
     "file_name": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
+    "fuel_cell_itc_cost": 2100000.0,
     "fuelcell_availability_schedule": [
         [
             0.0,
@@ -55611,6 +55646,13 @@
     "inverterarray_power_w": 186956.52173913044,
     "is_advanced": 0.0,
     "is_btm": 1.0,
+    "itc_basis_cost_capex_fed": 0.0,
+    "itc_basis_cost_capex_sta": 0.0,
+    "itc_basis_cost_percent_fed": 0.0,
+    "itc_basis_cost_percent_sta": 0.0,
+    "itc_basis_depreciation_allocation": 0.0,
+    "itc_basis_percent_depr": 0.0,
+    "itc_basis_percent_input": 0.0,
     "itc_fed_amount": [
         0.0
     ],
@@ -55624,6 +55666,7 @@
     "itc_fed_percent_maxvalue": [
         1e38
     ],
+    "itc_qualification_choice": 0.0,
     "itc_sta_amount": [
         0.0
     ],
@@ -73230,6 +73273,8 @@
         184.05
     ],
     "nominal_discount_rate": 9.060000000000003,
+    "non_itc_basis_depreciation_allocation": 0.0,
+    "non_itc_basis_percent_depr": 100.0,
     "normalize_to_thermal_bill": 0.0,
     "normalize_to_utility_bill": 0.0,
     "om_batt_capacity_cost": [
@@ -73368,6 +73413,7 @@
     "pv.storage.p6.dischargetogrid": 0.0,
     "pv.storage.p6.gridcharge": 0.0,
     "pv_capex_cost_choice": 0.0,
+    "pv_itc_cost": 377522.8000000003,
     "pv_land_area_is_shown": 0.0,
     "pvwatts.advanced.is_shown": 0.0,
     "rate_escalation": [
@@ -73410,6 +73456,8 @@
         ]
     ],
     "show_cash_incentives": 1.0,
+    "show_depr_alloc": 1.0,
+    "show_itc_qualification": 1.0,
     "show_tax_credits": 1.0,
     "soiling": [
         0.0,
@@ -73439,6 +73487,10 @@
     "step": 3600.0,
     "subtotal_direct": 2683982.8767296,
     "system_capacity": 215.0,
+    "system_itc_basis_cost": 2911259.82056608,
+    "system_itc_basis_cost_fed_include": 0.0,
+    "system_itc_basis_cost_sta_include": 0.0,
+    "system_itc_basis_percent": 100.0,
     "system_use_lifetime_output": 1.0,
     "thermal_1": 493720.8040000014,
     "thermal_10": 664864.1129999992,

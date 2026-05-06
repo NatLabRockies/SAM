@@ -9948,6 +9948,7 @@
     "batt_volume": 478.80359964089777,
     "battery_energy": 240000.30432,
     "battery_energy_kwh": 240000.30432,
+    "battery_itc_cost": 77595938.39152512,
     "battery_losses_shown": 0.0,
     "battery_per_kW": 233.0,
     "battery_per_kWh": 252.0,
@@ -21067,6 +21068,7 @@
     "file_name": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
     "flip_target_percent": 10.0,
     "flip_target_year": 10.0,
+    "fuel_cell_itc_cost": 2100000.0,
     "fuelcell_availability_schedule": [
         [
             0.0,
@@ -48434,6 +48436,7 @@
     "pv.storage.p6.dischargetogrid": 0.0,
     "pv.storage.p6.gridcharge": 0.0,
     "pv_capex_cost_choice": 0.0,
+    "pv_itc_cost": 111223076.92307693,
     "pv_land_area_is_shown": 0.0,
     "pvwatts.advanced.is_shown": 0.0,
     "rate_escalation": [
