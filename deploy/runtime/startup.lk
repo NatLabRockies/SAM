@@ -327,13 +327,13 @@ function setup_lifetime_page( degradation_mode )
 	{
 		addpage( [ [ 'Degradation DC Lifetime' ] ], { 'sidebar'='DC Degradation','help'='degradation/degradation_dc' } );
     }
-    // annual AC degradation over analysis period, 'generic_degradation' requires 'system_use_lifetime = 1'
+    // annual AC degradation over analysis period, 'ac_degradation' requires 'system_use_lifetime = 1'
     // Generic Battery
     elseif ( degradation_mode == DEGRADATION_AC_LIFETIME )
     {
     	addpage( [ [ 'Degradation AC Lifetime'] ], { 'sidebar'='AC Degradation','help'='degradation/degradation_ac' } );
     }
-	// annual AC degradation over analysis period, 'generic_degradation' requires 'system_use_lifetime = 1'
+	// annual AC degradation over analysis period, 'ac_degradation' requires 'system_use_lifetime = 1'
     // Generic Battery
     elseif ( degradation_mode == DEGRADATION_AC_LIFETIME_LINEAR )
     {
