@@ -280,6 +280,15 @@ function cf_revenue()
 		cfline('cf_pbi_total_oth',0);
 	}
 	cfline( 'cf_net_salvage_value', 0);
+	
+	if ( fin == 'Single Owner' && !is_iph_tech()) // As of May 2026, only single supports non-energy revenue
+	{
+		cfline('cf_sharable_energy_revenue',0);
+		cfline('');
+		cfline('cf_sharable_energy_revenue_retained',0);
+		cfline('cf_non_energy_revenue',0);
+	}
+	
 	cfline( 'cf_total_revenue', 0);
 	cfline( '' );
 }
@@ -368,7 +377,6 @@ function cf_om_expenses()
 		cfline( 'battery_cf_om_fixed,battery_cf_om_production,battery_cf_om_capacity,battery_cf_battery_replacement_cost_schedule',0);
 		cfline( 'Project Costs', -1, 0 );
 	}
-
 }
 
 function cf_operating_expenses()
@@ -390,6 +398,15 @@ function cf_operating_expenses()
 	}
 	if ( fin == "Residential" || fin == "Commercial" ) { cfline( 'cf_net_salvage_value', 0); }
 	if ( fin == 'Sale Leaseback' ) { cfline('cf_sponsor_margin', 0); }
+	
+	if ( fin == 'Single Owner' && !is_iph_tech()) // As of May 2026, only single supports non-energy revenue
+	{
+		cfline('cf_total_energy_expenses',0);
+		cfline('');
+		cfline('cf_energy_expenses_paid',0);
+		cfline('cf_non_energy_expenses',0);
+	}
+	
 	cfline( 'cf_operating_expenses', 0);
 	if ( fin == "Residential" || fin == "Commercial" )
 	{
