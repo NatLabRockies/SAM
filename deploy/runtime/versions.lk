@@ -57,6 +57,27 @@ function variable_name_change(new, old){
 
 version_upgrade{'2026.2.19'} = define() {
 	const cfg = config();
+	
+	is_itc_fin = ( cfg.fin == 'Single Owner' || cfg.fin == 'Leveraged Partnership Flip' || cfg.fin == 'All Equity Partnership Flip' || cfg.fin == 'Sale Leaseback' || cfg.fin == 'Merchant Plant' || cfg.fin == 'Community Solar' || cfg.fin == 'Host Developer');
+
+	if (is_itc_fin) {
+		value('itc_qualification_choice', 1, "ITC qualification and depreciation can now be calculated automatically as a percentage of installation cost. Previous manual depreciation allocations have been retained.");
+		macrs_5 = oldvalue('depr_alloc_macrs_5_percent');
+		macrs_15 = oldvalue('depr_alloc_macrs_15_percent');
+		sl_5 = oldvalue('depr_alloc_sl_5_percent');
+		sl_15 = oldvalue('depr_alloc_sl_15_percent');
+		sl_20 = oldvalue('depr_alloc_sl_20_percent');
+		sl_39 = oldvalue('depr_alloc_sl_39_percent');
+		custom = oldvalue('depr_alloc_custom_percent');
+		
+		value('ui_depr_alloc_macrs_5_percent', macrs_5, "Copying existing allocation to new UI variable.");
+		value('ui_depr_alloc_macrs_15_percent', macrs_15, "Copying existing allocation to new UI variable.");
+		value('ui_depr_alloc_sl_5_percent', sl_5, "Copying existing allocation to new UI variable.");
+		value('ui_depr_alloc_sl_15_percent', sl_15, "Copying existing allocation to new UI variable.");
+		value('ui_depr_alloc_sl_20_percent', sl_20, "Copying existing allocation to new UI variable.");
+		value('ui_depr_alloc_sl_39_percent', sl_39, "Copying existing allocation to new UI variable.");
+		value('ui_depr_alloc_custom_percent', custom, "Copying existing allocation to new UI variable.");
+	}
 
 	if (cfg.tech == 'Flat Plate PV' || cfg.tech == 'PV Battery' || cfg.tech == 'Photovoltaic Wind Battery Hybrid' ) {
 		message('The Detailed PV model input pages have been reorganized to make it easier to find related inputs with improved messages to help you find and fix problems with the system design.', 'error');
