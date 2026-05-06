@@ -72,6 +72,7 @@ version_upgrade{'2026.2.19'} = define() {
 		variable_name_change('project_contingency_budget_cost_rvalue', 'project_contingency_cost_rvalue');
 		variable_name_change('insurance_during_construction_method', 'insurance_during_construction_cost_method');
 		variable_name_change('insurance_during_construction_modeled', 'insurance_during_construction_cost_modeled');
+		variable_name_change("generic_degradation", "ac_degradation");
 	}
 
 	if(cfg.tech == 'PVWatts' || cfg.tech == 'PVWatts Battery') {
@@ -206,6 +207,13 @@ version_upgrade{'2026.2.19'} = define() {
 		value('ac_degradation', wind_degradation, 'Wind has been updated to run in lifetime mode, the name of the degradation input has changed to "ac_degrdation". For Wind Power, lifetime mode applies degradation linearly.');
 	}
 	
+	if (cfg.tech == 'Custom Generation Profile' ) {
+		ac_degradation = oldvalue('degradation');
+		value('ac_degradation', ac_degradation, 'Custom generation profile has been updated to run in lifetime mode, the name of the degradation input has changed to "ac_degrdation".');
+	
+	}
+	
+	
 	if (strpos(cfg.tech, "Hybrid") > -1) {
 		// Detailed PV already used lifetime, no changes there
 		if (cfg.tech != 'Photovoltaic Wind Battery Hybrid') {
@@ -222,16 +230,18 @@ version_upgrade{'2026.2.19'} = define() {
 		value('wind_ac_degradation', wind_degradation, 'Wind has been updated to run in lifetime mode, the name of the degradation input has changed to "ac_degrdation". For Wind Power, lifetime mode applies degradation linearly.');
 	}
 	
-	if (cfg.tech == 'Custom Generation Profile' || cfg.tech == 'CustomGeneration PVWatts Wind FuelCell Battery Hybrid') {
+	if (cfg.tech == 'CustomGeneration PVWatts Wind FuelCell Battery Hybrid') {
 		spec_mode = oldvalue('spec_mode');
 		if (spec_mode == 2) {
 			value('spec_mode', 3, "Additional options have been added to custom generation profile, combined cases is now spec_mode 3");
 		}
 		
-		generic_degradation = oldvalue('customgeneration_degradation');
-		value('customgeneration_ac_degradation', generic_degradation, 'Custom generation profile has been updated to run in lifetime mode, the name of the degradation input has changed to "ac_degrdation". For Wind Power, lifetime mode applies degradation linearly.');
+		ac_degradation = oldvalue('customgeneration_degradation');
+		value('customgeneration_ac_degradation', ac_degradation, 'Custom generation profile has been updated to run in lifetime mode, the name of the degradation input has changed to "ac_degrdation".');
 	
 	}
+	
+
 };
 
 version_upgrade{'2024.12.12'} = define() {
