@@ -36968,7 +36968,7 @@
     ],
     "first_year_output": 6727.679999999999,
     "first_year_output_peak": 3.84,
-    "generic_degradation": [
+    "ac_degradation": [
         0.0
     ],
     "grid_curtailment": [

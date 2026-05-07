@@ -20204,7 +20204,7 @@
     "fixed_plant_input": 0.0,
     "flip_target_percent": 11.0,
     "flip_target_year": 20.0,
-    "generic_degradation": [
+    "ac_degradation": [
         0.0
     ],
     "grid_curtailment": [

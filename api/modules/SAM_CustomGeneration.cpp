@@ -62,15 +62,15 @@ SAM_EXPORT void SAM_CustomGeneration_Plant_user_capacity_factor_nset(SAM_table p
 	});
 }
 
-SAM_EXPORT void SAM_CustomGeneration_Lifetime_analysis_period_nset(SAM_table ptr, double number, SAM_error *err){
+SAM_EXPORT void SAM_CustomGeneration_Lifetime_ac_degradation_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
 	translateExceptions(err, [&]{
-		ssc_data_set_number(ptr, "analysis_period", number);
+		ssc_data_set_array(ptr, "ac_degradation", arr, length);
 	});
 }
 
-SAM_EXPORT void SAM_CustomGeneration_Lifetime_generic_degradation_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
+SAM_EXPORT void SAM_CustomGeneration_Lifetime_analysis_period_nset(SAM_table ptr, double number, SAM_error *err){
 	translateExceptions(err, [&]{
-		ssc_data_set_array(ptr, "generic_degradation", arr, length);
+		ssc_data_set_number(ptr, "analysis_period", number);
 	});
 }
 
@@ -268,21 +268,21 @@ SAM_EXPORT double SAM_CustomGeneration_Plant_user_capacity_factor_nget(SAM_table
 	return result;
 }
 
+SAM_EXPORT double* SAM_CustomGeneration_Lifetime_ac_degradation_aget(SAM_table ptr, int* length, SAM_error *err){
+	double* result = nullptr;
+	translateExceptions(err, [&]{
+	result = ssc_data_get_array(ptr, "ac_degradation", length);
+	if (!result)
+		make_access_error("SAM_CustomGeneration", "ac_degradation");
+	});
+	return result;
+}
+
 SAM_EXPORT double SAM_CustomGeneration_Lifetime_analysis_period_nget(SAM_table ptr, SAM_error *err){
 	double result;
 	translateExceptions(err, [&]{
 	if (!ssc_data_get_number(ptr, "analysis_period", &result))
 		make_access_error("SAM_CustomGeneration", "analysis_period");
-	});
-	return result;
-}
-
-SAM_EXPORT double* SAM_CustomGeneration_Lifetime_generic_degradation_aget(SAM_table ptr, int* length, SAM_error *err){
-	double* result = nullptr;
-	translateExceptions(err, [&]{
-	result = ssc_data_get_array(ptr, "generic_degradation", length);
-	if (!result)
-		make_access_error("SAM_CustomGeneration", "generic_degradation");
 	});
 	return result;
 }

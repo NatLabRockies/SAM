@@ -1,7 +1,7 @@
 {
     "Name": "Custom Generation Plant",
-    "Width": 795.0,
-    "Height": 666.0,
+    "Width": 792.0,
+    "Height": 617.0,
     "FormObjects": {
         "GroupBox": {
             "Visible": 1.0,
@@ -24,7 +24,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 532.0
+                    "Integer": 478.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -53,7 +53,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 537.0
+                    "Integer": 486.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -123,11 +123,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 357.0
+                    "Integer": 33.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 561.0
+                    "Integer": 540.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -184,7 +184,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 252.0
+                    "Integer": 219.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -192,7 +192,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 143.0
+                    "Integer": 140.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -221,11 +221,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 429.0
+                    "Integer": 423.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 447.0
+                    "Integer": 387.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -304,11 +304,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 450.0
+                    "Integer": 444.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 510.0
+                    "Integer": 450.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -387,11 +387,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 450.0
+                    "Integer": 444.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 351.0
+                    "Integer": 291.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -470,11 +470,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 252.0
+                    "Integer": 219.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 126.0
+                    "Integer": 123.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -482,7 +482,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 24.0
+                    "Integer": 28.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -494,7 +494,7 @@
                 },
                 "Label": {
                     "Type": 5.0,
-                    "String": ""
+                    "String": "kW"
                 },
                 "Description": {
                     "Type": 5.0,
@@ -515,7 +515,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 252.0
+                    "Integer": 219.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -523,7 +523,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 143.0
+                    "Integer": 140.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -543,7 +543,7 @@
                 },
                 "ColumnLabel": {
                     "Type": 5.0,
-                    "String": ""
+                    "String": "kW"
                 },
                 "Description": {
                     "Type": 5.0,
@@ -580,11 +580,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 429.0
+                    "Integer": 423.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 393.0
+                    "Integer": 333.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -663,11 +663,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 429.0
+                    "Integer": 423.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 420.0
+                    "Integer": 360.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -746,11 +746,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 450.0
+                    "Integer": 444.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 483.0
+                    "Integer": 423.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -829,11 +829,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 21.0
+                    "Integer": 15.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 279.0
+                    "Integer": 216.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -891,15 +891,15 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 45.0
+                    "Integer": 15.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 465.0
+                    "Integer": 405.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 600.0
+                    "Integer": 750.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -941,15 +941,15 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 45.0
+                    "Integer": 15.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 372.0
+                    "Integer": 312.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 600.0
+                    "Integer": 750.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -991,15 +991,15 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 45.0
+                    "Integer": 15.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 333.0
+                    "Integer": 273.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 600.0
+                    "Integer": 750.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -1041,19 +1041,19 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 21.0
+                    "Integer": 15.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 561.0
+                    "Integer": 510.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 243.0
+                    "Integer": 768.0
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 84.0
+                    "Integer": 27.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -1103,7 +1103,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 48.0
+                    "Integer": 15.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1127,7 +1127,7 @@
                 },
                 "Items": {
                     "Type": 6.0,
-                    "StringList": "Constant generation profile from nameplate capacity and capacity factor|Import hourly or subhourly generation profile from file|Import lifetime hourly or subhourly generation profile from file|Calculate generation profiles and nameplate capacity from open cases"
+                    "StringList": "Constant generation profile from nameplate capacity and capacity factor|Import single-year hourly or subhourly generation profile from file|Import lifetime hourly or subhourly generation profile from file|Calculate generation profiles and nameplate capacity from open cases"
                 },
                 "ShowCaptions": {
                     "Type": 2.0,
@@ -1152,11 +1152,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 600.0
+                    "Integer": 597.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 117.0
+                    "Integer": 123.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1235,11 +1235,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 600.0
+                    "Integer": 597.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 165.0
+                    "Integer": 171.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1318,11 +1318,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 600.0
+                    "Integer": 597.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 141.0
+                    "Integer": 147.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1520,7 +1520,7 @@
         "energy_output_array": {
             "Version": 4.0,
             "Type": 2.0,
-            "Label": "Hourly or subhourly generation profile",
+            "Label": "Single-year generation profile",
             "Units": "kWac",
             "Group": "Custom Generation Profile",
             "IndexLabels": "",
@@ -1605,7 +1605,7 @@
             "Label": "Generic system plant output specification mode",
             "Units": " ",
             "Group": "Custom Generation Profile",
-            "IndexLabels": "Constant generation profile from nameplate capacity and capacity factor|Import hourly or subhourly generation profile from file|Import lifetime hourly or subhourly generation profile from file|Calculate generation profiles and nameplate capacity from open cases",
+            "IndexLabels": "Constant generation profile from nameplate capacity and capacity factor|Import single-year hourly or subhourly generation profile from file|Import lifetime hourly or subhourly generation profile from file|Calculate generation profiles and nameplate capacity from open cases",
             "Flags": 1.0,
             "DefaultValue": 0.0,
             "UIObject": "RadioChoice",

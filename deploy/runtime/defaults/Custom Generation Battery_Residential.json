@@ -37026,7 +37026,7 @@
     "first_year_output": 13455.36,
     "first_year_output_peak": 7.68,
     "fixed_plant_input": 0.0,
-    "generic_degradation": [
+    "ac_degradation": [
         0.0
     ],
     "grid_curtailment": [

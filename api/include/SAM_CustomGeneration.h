@@ -101,20 +101,20 @@ extern "C"
 	//
 
 	/**
+	 * Set ac_degradation: Annual AC degradation [%/year]
+	 * options: None
+	 * constraints: None
+	 * required if: system_use_lifetime_output=1
+	 */
+	SAM_EXPORT void SAM_CustomGeneration_Lifetime_ac_degradation_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
+
+	/**
 	 * Set analysis_period: Lifetime analysis period [years]
 	 * options: None
 	 * constraints: None
 	 * required if: system_use_lifetime_output=1
 	 */
 	SAM_EXPORT void SAM_CustomGeneration_Lifetime_analysis_period_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
-	 * Set generic_degradation: Annual AC degradation [%/year]
-	 * options: None
-	 * constraints: None
-	 * required if: system_use_lifetime_output=1
-	 */
-	SAM_EXPORT void SAM_CustomGeneration_Lifetime_generic_degradation_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
 
 	/**
 	 * Set system_use_lifetime_output: Custom generation profile lifetime simulation [0/1]
@@ -312,9 +312,9 @@ extern "C"
 	 * Lifetime Getters
 	 */
 
-	SAM_EXPORT double SAM_CustomGeneration_Lifetime_analysis_period_nget(SAM_table ptr, SAM_error *err);
+	SAM_EXPORT double* SAM_CustomGeneration_Lifetime_ac_degradation_aget(SAM_table ptr, int* length, SAM_error *err);
 
-	SAM_EXPORT double* SAM_CustomGeneration_Lifetime_generic_degradation_aget(SAM_table ptr, int* length, SAM_error *err);
+	SAM_EXPORT double SAM_CustomGeneration_Lifetime_analysis_period_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_CustomGeneration_Lifetime_system_use_lifetime_output_nget(SAM_table ptr, SAM_error *err);
 
