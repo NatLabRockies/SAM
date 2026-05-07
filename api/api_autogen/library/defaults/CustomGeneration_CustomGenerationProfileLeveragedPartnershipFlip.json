@@ -11,8 +11,8 @@
 			"user_capacity_factor": 100
 		},
 		"Lifetime": {
+			"ac_degradation": [0.000000],
 			"analysis_period": 25,
-			"generic_degradation": [0.000000],
 			"system_use_lifetime_output": 1
 		},
 		"AdjustmentFactors": {

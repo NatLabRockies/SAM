@@ -77,7 +77,7 @@ private:
 	Case* m_custom_generation_case;
 	wxString m_custom_generation_case_name;
 	CaseWindow* m_custom_generation_case_window;
-	std::vector<double> m_generic_degradation;
+	std::vector<double> m_ac_degradation;
     std::vector<CaseInfo> m_cases;
     wxCheckListBox* m_chlCases;
     wxCheckBox* m_chkOverwriteCapital;

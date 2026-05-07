@@ -63,14 +63,14 @@ CombineCasesDialog::CombineCasesDialog(wxWindow* parent, const wxString& title, 
 	m_custom_generation_case = SamApp::Window()->GetCurrentCase();
 	m_custom_generation_case_name = SamApp::Window()->Project().GetCaseName(m_custom_generation_case);
 	m_custom_generation_case_window = SamApp::Window()->GetCaseWindow(m_custom_generation_case);
-	if (m_custom_generation_case->Values(0).Get("generic_degradation")) {
-		m_generic_degradation = m_custom_generation_case->Values(0).Get("generic_degradation")->Array();	// name in generic-battery cases
+	if (m_custom_generation_case->Values(0).Get("ac_degradation")) {
+		m_ac_degradation = m_custom_generation_case->Values(0).Get("ac_degradation")->Array();	// name in generic-battery cases
 	}
 	else if (m_custom_generation_case->Values(0).Get("degradation")) {
-		m_generic_degradation = m_custom_generation_case->Values(0).Get("degradation")->Array();			// name in other cases, if defined
+		m_ac_degradation = m_custom_generation_case->Values(0).Get("degradation")->Array();			// name in other cases, if defined
 	}
 	else {
-		m_generic_degradation.push_back(0.);	// no value defined for LCOE and None financial models, set to zero
+		m_ac_degradation.push_back(0.);	// no value defined for LCOE and None financial models, set to zero
 	}
 
 	// Text at top of window
@@ -94,13 +94,13 @@ CombineCasesDialog::CombineCasesDialog(wxWindow* parent, const wxString& title, 
 	// Due to complexity of AC and DC degradation and lifetime and single year simulations, require user to provide an
 	// AC degradation rate for the combined project and ignore degradation rate inputs of individual system cases.
 	m_schnDegradation = new AFSchedNumeric(this, ID_spndDegradation, wxDefaultPosition, wxSize(64, 22));
-	if (m_generic_degradation.size() == 1) {
+	if (m_ac_degradation.size() == 1) {
 		m_schnDegradation->UseSchedule(false);
-		m_schnDegradation->SetValue(m_generic_degradation[0]);
+		m_schnDegradation->SetValue(m_ac_degradation[0]);
 	}
 	else {
 		m_schnDegradation->UseSchedule(true);
-		m_schnDegradation->SetSchedule(m_generic_degradation);
+		m_schnDegradation->SetSchedule(m_ac_degradation);
 	}
 	wxString degradation_label = "%/year  Annual AC degradation rate for all cases";
 	wxBoxSizer* szdegradation = new wxBoxSizer(wxHORIZONTAL);

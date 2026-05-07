@@ -73,7 +73,7 @@
     ],
     "first_year_output": 30274.56,
     "first_year_output_peak": 3.84,
-    "generic_degradation": [
+    "ac_degradation": [
         0.0
     ],
     "grid_curtailment": [
