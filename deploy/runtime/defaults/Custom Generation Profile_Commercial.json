@@ -115,6 +115,9 @@
     "energy_output_array": [
         0.0
     ],
+    "energy_output_array_lifetime": [
+        0.0
+    ],
     "escal_belpe": [
         0.0
     ],
@@ -130,6 +133,9 @@
     "first_year_output": 35591986.409472,
     "first_year_output_peak": 9318.8352,
     "fixed_plant_input": 0.0,
+    "ac_degradation": [
+        0.0
+    ],
     "grid_curtailment": [
         1e38,
         1e38,
@@ -26608,7 +26614,7 @@
     ],
     "system_capacity": 9707.12,
     "system_capacity_combined": 0.0,
-    "system_use_lifetime_output": 0.0,
+    "system_use_lifetime_output": 1.0,
     "total_direct_cost": 10192476.0,
     "total_indirect_cost": 1375984.26,
     "total_installed_cost": 11976159.3,

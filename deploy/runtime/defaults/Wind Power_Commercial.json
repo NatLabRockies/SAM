@@ -1,6 +1,9 @@
 {
     "a_error_test_number": 17.345,
     "a_error_test_string": "\"default err msg\"",
+    "ac_degradation": [
+        0.64
+    ],
     "adjust": 0.0,
     "adjust_constant": 0.0,
     "adjust_en_periods": 0.0,
@@ -32,7 +35,7 @@
     "avail_loss_total": 5.501168499999998,
     "avail_turb_loss": 3.58,
     "avail_turb_uncert": 2.3,
-    "avail_uncert_total": 2.502718521927706,
+    "avail_uncert_total": 2.5027185219277059,
     "batt_salvage_percentage": 0.0,
     "batt_salvage_value": 0.0,
     "bos_cost_fixed": 0.0,
@@ -1696,7 +1699,7 @@
     "desired_farm_size": 5.0,
     "elec_eff_loss": 1.91,
     "elec_eff_uncert": 1.0,
-    "elec_loss_total": 2.008089999999996,
+    "elec_loss_total": 2.0080899999999959,
     "elec_parasitic_loss": 0.1,
     "elec_parasitic_uncert": 0.05,
     "elec_uncert_total": 1.0012492197250394,
@@ -28123,7 +28126,7 @@
     "meas_data_uncert": 0.3,
     "meas_dir_uncert": 0.0,
     "meas_speed_uncert": 2.0,
-    "meas_uncert_total": 2.044504830026088,
+    "meas_uncert_total": 2.0445048300260875,
     "mpeak": [
         234.676,
         173.422,
@@ -28138,7 +28141,7 @@
         156.2,
         184.05
     ],
-    "nominal_discount_rate": 9.060000000000004,
+    "nominal_discount_rate": 9.060000000000003,
     "normalize_to_utility_bill": 0.0,
     "om_capacity": [
         39.0
@@ -28161,7 +28164,7 @@
     "ops_loss_total": 2.803467160000006,
     "ops_strategies_loss": 0.0,
     "ops_strategies_uncert": 0.0,
-    "ops_uncert_total": 2.503197954617254,
+    "ops_uncert_total": 2.5031979546172535,
     "pbi_fed_amount": [
         0.0
     ],
@@ -28253,7 +28256,7 @@
     ],
     "step": 0.0,
     "system_capacity": 100.0,
-    "system_use_lifetime_output": 0.0,
+    "system_use_lifetime_output": 1.0,
     "total_10yr_uncert": 12.0852,
     "total_20yr_uncert": 12.0852,
     "total_installed_cost": 605500.0,
@@ -28263,7 +28266,7 @@
     "turb_generic_uncert": 3.72,
     "turb_hysteresis_loss": 0.4,
     "turb_hysteresis_uncert": 1.0,
-    "turb_loss_total": 3.954496384119999,
+    "turb_loss_total": 3.9544963841199989,
     "turb_perf_loss": 1.1,
     "turb_specific_loss": 0.81,
     "turb_specific_uncert": 1.2,
