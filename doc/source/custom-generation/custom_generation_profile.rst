@@ -32,7 +32,7 @@ The custom generation profile model provides two overall options for describing 
 **Constant generation profile from nameplate capacity and capacity factor**
   Model a generation profile that remains constant throughout the day and year. For this option, you provide the nameplate capacity, capacity factor, and loss values as inputs, and SAM calculates a constant generation profile to match.
 
-**Import hourly or subhourly generation profile from file**
+**Import single-year hourly or subhourly generation profile from file**
   Import hourly or subhourly generation data over one year into SAM. SAM will use the same generation profile for each year in the analysis period.
 
 .. note:: The analysis period is specified on the Financial Parameters page.
@@ -45,7 +45,7 @@ The custom generation profile model provides two overall options for describing 
 
 .. note:: As of SAM 2023, hybrid system configurations are available that combine the output of PV, wind, custom generation profile and fuel cell models as an alternative to this Calculate Generation Profiles option.
 
-**Nameplate Capacity, kWe**
+**Nameplate capacity, kWac**
   The system's nameplate electrical capacity in electric kilowatts.
 
   If your analysis involves a financial model, SAM uses the nameplate capacity to calculate any capacity-based costs that you specify in $/W on the :doc:`Installation costs <../installation-costs/cc_custom_generation>`   and :doc:`Operating costs <../operating-costs/oc_operating>` pages and any capacity-based incentives on the :doc:`Incentives <../incentives-and-depreciation/incentives>`   page. 
@@ -54,7 +54,7 @@ The custom generation profile model provides two overall options for describing 
 
   This input is disabled for **Calculate generation profiles and nameplate capacity from open cases** because SAM automatically calculates the nameplate capacity from the values in the cases being combined.
 
-**Nominal capacity factor**
+**Nominal capacity factor, %**
   The nominal capacity factor is the plant capacity factor, not including plant losses or reduction in output due to system availability.
 
   The nominal capacity factor is only available with the **Constant generation profile from nameplate capacity and capacity factor** option. SAM uses the value to calculate the total annual generation value as described below.
@@ -63,16 +63,16 @@ The custom generation profile model provides two overall options for describing 
 
 .. note:: SAM reports a separate :doc:`capacity factor <../performance-metrics/mtp_capacity_factor>` in the results after you run a simulation that reflects plant losses and any reduction in output due to system availability.
 
-**Combined nameplate capacity, kWe**
+**Combined nameplate capacity, kWac**
   When you choose **Calculate generation profiles and nameplate capacity from open cases**, SAM automatically calculates the nameplate capacity as the sum of nameplate capacities of each case. You can edit this value if you want to use a different value than the calculated value.
 
 **To import generation profile data:**
 
-#. If you have generation data for a single year, choose **Import hourly or subhourly generation profile from file**. If you have generation data over the analysis period, choose **Import lifetime hourly or subhourly generation profile from file**.
+#. If you have generation data for a single year, choose **Import single-year hourly or subhourly generation profile from file**. If you have generation data over the analysis period, choose **Import lifetime hourly or subhourly generation profile from file**.
 
 #. Click **Edit data** or single-year data, or **Edit lifetime data** for lifetime data to open a window for importing data.
 
-#. If you are importing subhourly data for a single eyar, click **Change time step** and enter the time step in minutes. For hourly data, the time step should be 60 minutes. If you are importing lifetime data, choose the appropriate **Mode** (for the **Subhourly** mode,  choose **Time step in minutes**).
+#. If you are importing subhourly data for a single year, click **Change time step** and enter the time step in minutes. For hourly data, the time step should be 60 minutes. If you are importing lifetime data, choose the appropriate **Mode** (for the **Subhourly** mode,  choose **Time step in minutes**).
 
 #. Click **Import** to import the data from a text file. 
 
