@@ -350,7 +350,7 @@
         "\trefresh();",
         "}",
         "",
-        "on_load{'Degradation AC Lifetime'} = define()",
+        "on_load{'Degradation AC Lifetime Linear'} = define()",
         "{",
         "\tproperty('ac_degradation','FixedLength',value('analysis_period'));",
         "\tdisplay_warning();\r",
