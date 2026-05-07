@@ -30,7 +30,7 @@
             0.2
         ],
         "analysis_period": 25.0,
-        "annual_albedo": 0.1839506853933204,
+        "annual_albedo": 0.18395068539332039,
         "annual_beam": 7.335643835616439,
         "annual_diffuse": 1.3484328767123289,
         "annual_global": 5.794761643835617,
@@ -51,8 +51,11 @@
         "contingency_percent": 4.0,
         "country": "-",
         "dc_ac_ratio": 1.15,
-        "degradation": [
+        "dc_degradation": [
             0.5
+        ],
+        "degradation": [
+            0.0
         ],
         "elev": 358.0,
         "en_snowloss": 0.0,
@@ -198,7 +201,7 @@
         "step": 3600.0,
         "subtotal_direct": 680400.0,
         "system_capacity": 540.0,
-        "system_use_lifetime_output": 0.0,
+        "system_use_lifetime_output": 1.0,
         "tilt": 20.0,
         "total_direct_cost": 707616.0,
         "total_indirect_cost": 205200.0,
@@ -228,6 +231,9 @@
     "Wind": {
         "a_error_test_number": 17.345,
         "a_error_test_string": "\"default err msg\"",
+        "ac_degradation": [
+            0.64
+        ],
         "adjust": 0.0,
         "adjust_constant": 0.0,
         "adjust_en_periods": 0.0,
@@ -294,7 +300,7 @@
         "specify_label": 0.0,
         "step": 3600.0,
         "system_capacity": 100.0,
-        "system_use_lifetime_output": 0.0,
+        "system_use_lifetime_output": 1.0,
         "total_installed_cost": 605500.0,
         "total_installed_cost_per_kw": 6055.0,
         "turb_generic_loss": 1.7,
@@ -56504,11 +56510,11 @@
         "batt_itc_basis_cost_sta_include": 1.0,
         "batt_itc_basis_percent": 9.516366319480131,
         "batt_minimum_outage_SOC": 10.0,
-        "batt_power_discharge_max_kwac": 300.13578,
+        "batt_power_discharge_max_kwac": 300.13577999999998,
         "batt_replacement_option": 1.0,
         "batt_salvage_percentage": 0.0,
         "batt_salvage_value": 0.0,
-        "battery_system_capacity": 300.13578,
+        "battery_system_capacity": 300.13577999999998,
         "battery_total_installed_cost": 429431.7728924999,
         "cbi_fed_amount": 0.0,
         "cbi_fed_deprbas_fed": 0.0,
@@ -154696,7 +154702,7 @@
         "tod_library": "Uniform Dispatch",
         "total_installed_cost": 4512560.345785,
         "ui_annual_load": 0.0,
-        "ui_battery_capacity": 300.13578,
+        "ui_battery_capacity": 300.13577999999998,
         "ui_battery_cost": 429431.7728924999,
         "ui_customgeneration_capacity": 0.0,
         "ui_customgeneration_cost": 0.0,

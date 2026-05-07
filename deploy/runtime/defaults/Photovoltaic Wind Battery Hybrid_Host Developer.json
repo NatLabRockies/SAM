@@ -368,7 +368,7 @@
         ],
         "alpha_sc_calc": 0.039999999999999997,
         "analysis_period": 25.0,
-        "annual_albedo": 0.1839506853933204,
+        "annual_albedo": 0.18395068539332039,
         "annual_beam": 7.335643835616439,
         "annual_diffuse": 1.3484328767123289,
         "annual_global": 5.794761643835617,
@@ -3230,6 +3230,9 @@
     "Wind": {
         "a_error_test_number": 17.345,
         "a_error_test_string": "\"default err msg\"",
+        "ac_degradation": [
+            0.64
+        ],
         "adjust": 0.0,
         "adjust_constant": 0.0,
         "adjust_en_periods": 0.0,
@@ -3296,7 +3299,7 @@
         "specify_label": 0.0,
         "step": 3600.0,
         "system_capacity": 100.0,
-        "system_use_lifetime_output": 0.0,
+        "system_use_lifetime_output": 1.0,
         "total_installed_cost": 635775.0,
         "total_installed_cost_per_kw": 6357.75,
         "turb_generic_loss": 1.7,

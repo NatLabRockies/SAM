@@ -30,7 +30,7 @@
             0.2
         ],
         "analysis_period": 25.0,
-        "annual_albedo": 0.1839506853933204,
+        "annual_albedo": 0.18395068539332039,
         "annual_beam": 7.335643835616439,
         "annual_diffuse": 1.3484328767123289,
         "annual_global": 5.794761643835617,
@@ -51,8 +51,11 @@
         "contingency_percent": 3.0,
         "country": "-",
         "dc_ac_ratio": 1.4,
-        "degradation": [
+        "dc_degradation": [
             0.5
+        ],
+        "degradation": [
+            0.0
         ],
         "elev": 358.0,
         "en_snowloss": 0.0,
@@ -203,7 +206,7 @@
         "step": 3600.0,
         "subtotal_direct": 99000000.0,
         "system_capacity": 100000.0,
-        "system_use_lifetime_output": 0.0,
+        "system_use_lifetime_output": 1.0,
         "tilt": 0.0,
         "total_direct_cost": 101970000.0,
         "total_indirect_cost": 5000000.0,
@@ -239,6 +242,9 @@
     "Wind": {
         "a_error_test_number": 17.345,
         "a_error_test_string": "\"default err msg\"",
+        "ac_degradation": [
+            0.64
+        ],
         "adjust": 0.0,
         "adjust_constant": 0.0,
         "adjust_en_periods": 0.0,
@@ -305,7 +311,7 @@
         "specify_label": 1.0,
         "step": 3600.0,
         "system_capacity": 200000.0,
-        "system_use_lifetime_output": 0.0,
+        "system_use_lifetime_output": 1.0,
         "total_installed_cost": 317480000.0,
         "total_installed_cost_per_kw": 1587.4,
         "turb_generic_loss": 1.7,

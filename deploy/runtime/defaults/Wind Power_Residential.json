@@ -1,6 +1,9 @@
 {
     "a_error_test_number": 17.345,
     "a_error_test_string": "\"default err msg\"",
+    "ac_degradation": [
+        0.64
+    ],
     "adjust": 0.0,
     "adjust_constant": 0.0,
     "adjust_en_periods": 0.0,
@@ -28269,7 +28272,7 @@
     "system_itc_basis_cost_fed_include": 0.0,
     "system_itc_basis_cost_sta_include": 0.0,
     "system_itc_basis_percent": 100.0,
-    "system_use_lifetime_output": 0.0,
+    "system_use_lifetime_output": 1.0,
     "total_10yr_uncert": 12.0852,
     "total_20yr_uncert": 12.0852,
     "total_installed_cost": 161260.0,
