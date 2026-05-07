@@ -408,18 +408,16 @@ static void fcall_vuc_case_name( lk::invoke_t &cxt )
 static void fcall_vuc_config_update_with_old_values(lk::invoke_t& cxt)
 {
 	LK_DOC("config_update_with_old_values", "Update current case with old values", "(none):table");
-	if (VersionUpgrade* vuc = static_cast<VersionUpgrade*>(cxt.user_data()))
-	{
-		VarTable& vt_old = vuc->GetCase()->OldValues(0);
+	if (VersionUpgrade* vuc = static_cast<VersionUpgrade*>(cxt.user_data())) {
 		cxt.result().empty_hash();
-		for (VarTable::iterator it = vt_old.begin(); it != vt_old.end(); ++it)
-		{
-			if (VarValue* vv = vuc->GetCase()->Values(0).Get(it->first)) // needs updating for hybrids
-			{
-				if (vv->Type() == (it->second)->Type()) // only update if old variable is of same type
-				{
-					cxt.result().hash_item(it->first).assign(vv->AsString() + "=" + it->second->AsString() + "\n");
-					vv->Copy(*(it->second));
+		for (size_t ndxHybrid = 0; ndxHybrid < vuc->GetCase()->GetConfiguration()->Technology.size(); ndxHybrid++) {
+			VarTable& vt_old = vuc->GetCase()->OldValues(ndxHybrid);
+			for (VarTable::iterator it = vt_old.begin(); it != vt_old.end(); ++it) {
+				if (VarValue* vv = vuc->GetCase()->Values(ndxHybrid).Get(it->first)) {
+					if (vv->Type() == (it->second)->Type()) { // only update if old variable is of same type
+						cxt.result().hash_item(it->first).assign(vv->AsString() + "=" + it->second->AsString() + "\n");
+						vv->Copy(*(it->second));
+					}
 				}
 			}
 		}
@@ -462,20 +460,15 @@ static bool UpdateVarNameNdxHybrid(Case* c, const wxString& input_name, wxString
 	if (!c) return false;
 	*ndx_hybrid = c->GetConfiguration()->Technology.size() - 1; // size always >=1
 	*var_name = input_name;
-	// decode if necessary for hybrids varname for unsorted index
-//	if (c->GetConfiguration()->Technology.size() > 1) {
-		// split hybrid name and match with Technology name or use "Hybrid" for remainder
 	wxArrayString as = wxSplit(input_name, '_');
 	if (as.size() > 1) {
 		for (size_t j = 0; j < c->GetConfiguration()->Technology.size(); j++) {
 			if (c->GetConfiguration()->Technology[j].Lower() == as[0]) {
-				//			if (c->GetConfiguration()->Simulations[j].Lower() == as[0]) {
 				*ndx_hybrid = j;
 				*var_name = input_name.Right(input_name.length() - (as[0].length() + 1));
 			}
 		}
 	}
-	//	}
 	return true;
 }
 
@@ -485,8 +478,6 @@ static void fcall_vuc_value( lk::invoke_t &cxt )
 	LK_DOC("value", "Set or get a variable's value. New variables may be created.", "(string:name, [variant:value], [string:reason]):variant");
 	if ( VersionUpgrade *vuc = static_cast<VersionUpgrade*>(cxt.user_data()) )
 	{
-//		wxString name( cxt.arg(0).as_string() );
-//		VarTable &vt = vuc->GetCase()->Values(0); // update for hybrids
 		wxString name;
 		size_t ndx_hybrid = 0;
 		UpdateVarNameNdxHybrid(vuc->GetCase(), cxt.arg(0).as_string(), &name, &ndx_hybrid);
@@ -547,16 +538,12 @@ static void fcall_vuc_oldvalue( lk::invoke_t &cxt )
 	LK_DOC( "oldvalue", "Retrieve a variable value from the project file that is no longer valid in the current case configuration, either due to wrong type or name change.", "(string:name):variant" );
 	if ( VersionUpgrade *vuc = static_cast<VersionUpgrade*>(cxt.user_data()) )
 	{
-		// for hybrids, the old variable name may be encoded with the hybrid name as prefix (e.g. "wind_var1") - need to decode to find old value
 		wxString var_name;
 		size_t ndx_hybrid = 0;
 		UpdateVarNameNdxHybrid(vuc->GetCase(), cxt.arg(0).as_string(), &var_name, &ndx_hybrid);
 		VarTable& vt = vuc->GetCase()->OldValues(ndx_hybrid);
 		if (VarValue* vv = vt.Get(var_name))
 			vv->Write(cxt.result());
-//		VarTable &vt = vuc->GetCase()->OldValues(0); // update for hybrids
-//		if ( VarValue *vv = vt.Get( cxt.arg(0).as_string() ) )
-//			vv->Write( cxt.result() );
 	}
 }
 
