@@ -9635,6 +9635,9 @@
     "energy_output_array": [
         0.0
     ],
+    "energy_output_array_lifetime": [
+        0.0
+    ],
     "equip1_reserve_cost": 0.0,
     "equip1_reserve_freq": 0.0,
     "equip2_reserve_cost": 0.0,
@@ -9660,6 +9663,9 @@
     "fixed_plant_input": 0.0,
     "flip_target_percent": 10.0,
     "flip_target_year": 10.0,
+    "ac_degradation": [
+        0.0
+    ],
     "grid_curtailment": [
         1e38,
         1e38,
@@ -36814,7 +36820,7 @@
     "system_itc_basis_cost_fed_include": 0.0,
     "system_itc_basis_cost_sta_include": 0.0,
     "system_itc_basis_percent": 100.0,
-    "system_use_lifetime_output": 0.0,
+    "system_use_lifetime_output": 1.0,
     "term_int_rate": 7.0,
     "term_tenor": 0.0,
     "tod_library": "Uniform Dispatch",

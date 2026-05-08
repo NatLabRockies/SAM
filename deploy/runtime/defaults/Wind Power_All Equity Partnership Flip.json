@@ -1,6 +1,9 @@
 {
     "a_error_test_number": 17.345,
     "a_error_test_string": "\"default err msg\"",
+    "ac_degradation": [
+        0.64
+    ],
     "adjust": 0.0,
     "adjust_constant": 0.0,
     "adjust_en_periods": 0.0,
@@ -20865,7 +20868,7 @@
     "system_itc_basis_cost_fed_include": 0.0,
     "system_itc_basis_cost_sta_include": 0.0,
     "system_itc_basis_percent": 100.0,
-    "system_use_lifetime_output": 0.0,
+    "system_use_lifetime_output": 1.0,
     "tax_investor_equity_percent": 60.0,
     "tax_investor_postflip_cash_percent": 10.0,
     "tax_investor_postflip_tax_percent": 10.0,
