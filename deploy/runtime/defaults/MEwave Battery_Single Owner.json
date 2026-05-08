@@ -22733,7 +22733,7 @@
     "gearbox_cost_total_check": 0.0,
     "gears_cost": 0.0,
     "generation_planning_and_integration_cost": 0.0,
-    "generic_degradation": [
+    "ac_degradation": [
         0.0
     ],
     "geological_and_bathymetry_cost": 0.0,
