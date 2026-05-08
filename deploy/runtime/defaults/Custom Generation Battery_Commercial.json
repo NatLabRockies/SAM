@@ -37018,6 +37018,9 @@
     "energy_output_array": [
         0.0
     ],
+    "energy_output_array_lifetime": [
+        0.0
+    ],
     "escal_belpe": [
         0.0
     ],
@@ -37033,7 +37036,7 @@
     "first_year_output": 361612.8,
     "first_year_output_peak": 206.4,
     "fixed_plant_input": 0.0,
-    "generic_degradation": [
+    "ac_degradation": [
         0.0
     ],
     "grid_curtailment": [
