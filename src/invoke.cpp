@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -3009,7 +3009,7 @@ void fcall_wavetoolkit(lk::invoke_t& cxt)
             if (ok && (curls[i]->GetDataAsString().Length() < 1000))
                 ok = curls[i]->Get(urls[i]);
             if (!ok)
-                wxMessageBox("Download failed.\n\n" + urls[i] + "\n\nThere may be a problem with your internet connection,\nor the NREL Hindcast Wave Data web service may be down.", "NREL Hindcast Wave Data Download Message", wxOK);
+                wxMessageBox("Download failed.\n\n" + urls[i] + "\n\nThere may be a problem with your internet connection,\nor the NLR Hindcast Wave Data web service may be down.", "NLR Hindcast Wave Data Download Message", wxOK);
             else if (curls[i]->GetDataAsString().Length() < 1000) {
                 wxMessageBox("Weather file not available.\n\n" + urls[i] + "\n\n" + curls[i]->GetDataAsString(), "Wave Resource Download Message", wxOK);
                 cxt.result().empty_hash();
@@ -3023,7 +3023,7 @@ void fcall_wavetoolkit(lk::invoke_t& cxt)
                 file_list += filename_array[i] + "\n";
                 if (!curls[i]->WriteDataToFile(fn))
                 {
-                    wxMessageBox("Failed to write file.\n\n" + fn, "NREL Hindcast Wave Data Download Message", wxOK);
+                    wxMessageBox("Failed to write file.\n\n" + fn, "NLR Hindcast Wave Data Download Message", wxOK);
                     //break;
                 }
                 num_downloaded++;
@@ -3066,7 +3066,7 @@ void fcall_wavetoolkit(lk::invoke_t& cxt)
                     SamApp::Settings().Write("wave_data_paths", wxJoin(paths, ';'));
                 }
             }
-            if (file_list != "") wxMessageBox("Download complete.\n\nThe following files have been downloaded and added to your resource library:\n\n" + file_list, "NREL Hindcast Wave Data Download Message", wxOK);
+            if (file_list != "") wxMessageBox("Download complete.\n\nThe following files have been downloaded and added to your resource library:\n\n" + file_list, "NLR Hindcast Wave Data Download Message", wxOK);
             //EndModal(wxID_OK);
         }
 
@@ -3109,10 +3109,10 @@ void fcall_wavetoolkit(lk::invoke_t& cxt)
 
 void fcall_windtoolkit(lk::invoke_t &cxt)
 {
-	LK_DOC("windtoolkit", "Creates the NREL WIND Toolkit Download dialog box, downloads weather file from WIND Toolkit API for requested location and parameters, and returns weather file name", "(none) : string");
+	LK_DOC("windtoolkit", "Creates the NLR WIND Toolkit Download dialog box, downloads weather file from WIND Toolkit API for requested location and parameters, and returns weather file name", "(none) : string");
 
 	//Create the wind data object
-	WindToolkitDialog spd(SamApp::Window(), "NREL WIND Toolkit Download");
+	WindToolkitDialog spd(SamApp::Window(), "NLR WIND Toolkit Download");
 	spd.CenterOnParent();
 	int code = spd.ShowModal(); //shows the dialog and makes it so you can't interact with other parts until window is closed
 
@@ -3134,7 +3134,7 @@ void fcall_windtoolkit(lk::invoke_t &cxt)
 	{
 		wxBusyInfo bid("Converting address to lat/lon.");
 
-		// use GeoTools::GeocodeGoogle for non-NREL builds and set google_api_key in private.h
+		// use GeoTools::GeocodeGoogle for non-NLR builds and set google_api_key in private.h
         if (!GeoTools::GeocodeDeveloper(spd.GetAddress(), &lat, &lon, false))
 		{
 			wxMessageDialog* md = new wxMessageDialog(NULL, "Failed to convert address to lat/lon. This may be caused by a geocoding service outage or internet connection problem.", "WIND Toolkit Download Error", wxOK);
@@ -3830,7 +3830,7 @@ static bool copy_mat(lk::invoke_t &cxt, wxString sched_name, matrix_t<double> &m
 void fcall_geocode(lk::invoke_t& cxt)
 {
   	LK_DOC("geocode",
-		"Given a street address or location name, returns latitude, longitude. Returns optional time zone if get_tz is true. Not designed to take latitude and longitude as input. Uses the MapQuest Geocoding API via a private NREL wrapper. Returned table fields are 'lat', 'lon', 'tz', 'ok'.",
+		"Given a street address or location name, returns latitude, longitude. Returns optional time zone if get_tz is true. Not designed to take latitude and longitude as input. Uses the MapQuest Geocoding API via a private NLR wrapper. Returned table fields are 'lat', 'lon', 'tz', 'ok'.",
 		"(string:location, [boolean:get_tz]):table");
 
 	double lat, lon, tz;
@@ -3884,7 +3884,7 @@ void fcall_geocode(lk::invoke_t& cxt)
 		get_tz = cxt.arg(1).as_boolean();
 	}
 
-	// use GeoTools::GeocodeGoogle for non-NREL builds and set google_api_key in private.h
+	// use GeoTools::GeocodeGoogle for non-NLR builds and set google_api_key in private.h
 	if (is_address) {
 		ok = GeoTools::GeocodeDeveloper(cxt.arg(0).as_string(), &lat, &lon);
 		if (!ok) {

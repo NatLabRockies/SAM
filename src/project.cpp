@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -279,7 +279,7 @@ bool ProjectFile::Read( wxInputStream &input )
 	m_lastError.Clear();
 	Clear();
 
-	// suppress wxLogging and system errors from wxLogError in wxWidgets and handle project file reading issues here - see https://github.com/NREL/SAM/issues/393
+	// suppress wxLogging and system errors from wxLogError in wxWidgets and handle project file reading issues here - see https://github.com/NatLabRockies/SAM/issues/393
 	// regular logging restored when wxLogNull object goes out of scope.
 	wxLogNull logNo; 
 

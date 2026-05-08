@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -372,7 +372,7 @@ extern void RegisterReportObjectTypes();
 		return false;
 	}
 
-	g_config = new wxConfig("SystemAdvisorModel", "NREL");
+	g_config = new wxConfig("SystemAdvisorModel", "NLR");
 
 	wxInitAllImageHandlers();
 
@@ -422,7 +422,7 @@ extern void RegisterReportObjectTypes();
 		Settings().Write(fl_key, false);
 
 		// enable web update app
-		wxConfig cfg("SamUpdate3", "NREL");
+		wxConfig cfg("SamUpdate3", "NLR");
 		cfg.Write("allow_web_updates", true);
 
 		// after installing a new version, always show the reminders again until the user turns them off
@@ -484,7 +484,7 @@ wxString SamApp::AboutSAM()
 	return "<html><body>"
 		"<h1>System Advisor Model (SAM)</h1>"
 		"<h2>Open Source Build</h2>"
-		"<p>BSD 3-Clause License<br><br>Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE.</p>"
+		"<p>BSD 3-Clause License<br><br>Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE.</p>"
 		"<p>All rights reserved.</p>"
 		"<p>Redistribution and use in source and binary forms, with or without	modification, are permitted provided that the following conditions are met:</p>"
 		"<ol>"
