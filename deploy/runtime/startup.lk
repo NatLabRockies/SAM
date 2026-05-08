@@ -1165,10 +1165,12 @@ addpage( [[ 'Financial Analysis Parameters',
 addpage( [[ 'Financial Solution Mode Single Owner IPH',
 			{ 'name'='Financial TOD Factors', 'caption'='Time of Delivery', 'collapsible'=true, 'collapsible_var'='revenue_TOD_is_shown', 'collapsed_by_default'=true }]],
             { 'sidebar'='Revenue', 'help'='revenue/revenue_iph' } );
-addpage( [[ 'Financial Tax Credits IPH','Financial Cash Incentives IPH']],
-           { 'sidebar'='Incentives', 'help'='incentives-and-depreciation/incentives' } );
-addpage( [['Financial Depreciation Detailed' ]],
-           { 'sidebar'='Depreciation', 'help'='incentives-and-depreciation/depreciation' });
+addpage( [[ 'Financial Tax Credits IPH',
+		  { 'name'= 'Financial ITC Qualification', 'caption'='ITC Qualification', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
+		  { 'name'='Financial Cash Incentives IPH','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false },
+		  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
+		  'Financial Depreciation Detailed'  ]],
+          { 'sidebar'='Incentives and Depreciation', 'help'='incentives-and-depreciation/incentives' } );
 
 setconfig( 'Physical Trough IPH', 'Commercial' );
 setmodules( ['trough_physical_iph', 'utilityrate5', 'thermalrate_iph', 'cashloan_heat']);
@@ -1187,7 +1189,11 @@ addpage( [[ 'Financial Debt Min DSCR',
 		  'Financial Salvage Value',
 		  'Financial Depreciation Simple', ]],
 	   { 'sidebar'='Financial Parameters','help'='financial-parameters/fin_commercial'} );
-addpage( [[ 'Financial Tax Credits IPH','Financial Cash Incentives IPH']],
+addpage( [[ 'Financial Tax Credits IPH',
+				{ 'name'= 'Financial ITC Qualification', 'caption'='ITC Qualification', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
+				  { 'name'='Financial Cash Incentives IPH','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false },
+				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false }
+				]],
            { 'sidebar'='Incentives', 'help'='incentives-and-depreciation/incentives' } );
 addpage( [[ 'Utility Rate - Flat',
 			    { 'name'='Utility Rate - Description', 'caption'='Description and Applicability', 'collapsible'=true, 'collapsible_var'='ur_desc_is_shown', 'collapsed_by_default'=true },
@@ -2038,11 +2044,12 @@ addpage( [[ 'Financial Analysis Parameters',
 addpage( [[ 'Financial Solution Mode Single Owner IPH',
 			{ 'name'='Financial TOD Factors', 'caption'='Time of Delivery', 'collapsible'=true, 'collapsible_var'='revenue_TOD_is_shown', 'collapsed_by_default'=true }]],
             { 'sidebar'='Revenue', 'help'='revenue/revenue_iph' } );
-addpage( [[ 'Financial Tax Credits IPH','Financial Cash Incentives IPH']],
-           { 'sidebar'='Incentives', 'help'='incentives-and-depreciation/incentives' } );
-addpage( [['Financial Depreciation Detailed' ]],
-           { 'sidebar'='Depreciation', 'help'='incentives-and-depreciation/depreciation' });
-
+addpage( [[ 'Financial Tax Credits IPH',
+		  { 'name'= 'Financial ITC Qualification', 'caption'='ITC Qualification', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
+		  { 'name'='Financial Cash Incentives IPH','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false },
+		  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
+		  'Financial Depreciation Detailed'  ]],
+		  { 'sidebar'='Incentives and Depreciation', 'help'='incentives-and-depreciation/incentives' } );
 //-----------------------------------------------------
 setconfig( 'MSPT', 'Leveraged Partnership Flip' );
 setmodules( ['tcsmolten_salt', 'grid', 'utilityrate5', 'levpartflip']);
@@ -2134,10 +2141,13 @@ addpage( [[ 'Financial Analysis Parameters',
 addpage( [[ 'Financial Solution Mode Single Owner IPH',
 			{ 'name'='Financial TOD Factors', 'caption'='Time of Delivery', 'collapsible'=true, 'collapsible_var'='revenue_TOD_is_shown', 'collapsed_by_default'=true }]],
             { 'sidebar'='Revenue', 'help'='revenue/revenue_iph' } );
-addpage( [[ 'Financial Tax Credits IPH','Financial Cash Incentives IPH']],
-           { 'sidebar'='Incentives', 'help'='incentives-and-depreciation/incentives' } );
-addpage( [['Financial Depreciation Detailed' ]],
-           { 'sidebar'='Depreciation', 'help'='incentives-and-depreciation/depreciation' });
+addpage( [[ 'Financial Tax Credits IPH',
+		  { 'name'= 'Financial ITC Qualification', 'caption'='ITC Qualification', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
+		  { 'name'='Financial Cash Incentives IPH','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false },
+		  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
+		  'Financial Depreciation Detailed'  ]],
+		  { 'sidebar'='Incentives and Depreciation', 'help'='incentives-and-depreciation/incentives' } );
+
 
 
 // Direct Steam Linear Fresnel ////////////////////////////////////////////////////////////////////
@@ -2373,10 +2383,12 @@ addpage( [[ 'Financial Analysis Parameters',
 addpage( [[ 'Financial Solution Mode Single Owner IPH',
 			{ 'name'='Financial TOD Factors', 'caption'='Time of Delivery', 'collapsible'=true, 'collapsible_var'='revenue_TOD_is_shown', 'collapsed_by_default'=true }]],
             { 'sidebar'='Revenue', 'help'='revenue/revenue_iph' } );
-addpage( [[ 'Financial Tax Credits IPH','Financial Cash Incentives IPH']],
-           { 'sidebar'='Incentives', 'help'='incentives-and-depreciation/incentives' } );
-addpage( [['Financial Depreciation Detailed' ]],
-           { 'sidebar'='Depreciation', 'help'='incentives-and-depreciation/depreciation' });
+addpage( [[ 'Financial Tax Credits IPH',
+		  { 'name'= 'Financial ITC Qualification', 'caption'='ITC Qualification', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
+		  { 'name'='Financial Cash Incentives IPH','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false },
+		  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
+		  'Financial Depreciation Detailed'  ]],
+		  { 'sidebar'='Incentives and Depreciation', 'help'='incentives-and-depreciation/incentives' } );
 //setup_single_owner_dispatch_pages();
 
 //-------------------------------------------------------
@@ -2396,7 +2408,11 @@ addpage( [[ 'Financial Debt Min DSCR',
 		  'Financial Salvage Value',
 		  'Financial Depreciation Simple', ]],
 	   { 'sidebar'='Financial Parameters','help'='financial-parameters/fin_commercial'} );
-addpage( [[ 'Financial Tax Credits IPH','Financial Cash Incentives IPH']],
+addpage( [[ 'Financial Tax Credits IPH',
+				{ 'name'= 'Financial ITC Qualification', 'caption'='ITC Qualification', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
+				  { 'name'='Financial Cash Incentives IPH','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false },
+				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
+				]],
            { 'sidebar'='Incentives', 'help'='incentives-and-depreciation/incentives' } );
 addpage( [[ 'Utility Rate - Flat',
 			    { 'name'='Utility Rate - Description', 'caption'='Description and Applicability', 'collapsible'=true, 'collapsible_var'='ur_desc_is_shown', 'collapsed_by_default'=true },
