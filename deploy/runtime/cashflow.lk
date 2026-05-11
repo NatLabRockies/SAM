@@ -1583,7 +1583,12 @@ function set_om(xl)
 	{
 		if (value('system_use_recapitalization')==1) { xl_set_output( xl, 'cf_recapitalization' );  }
 	}
-
+	
+	if ( fin == 'Single Owner' && !is_iph_tech())
+	{
+		xl_set_output( xl, 'cf_energy_expenses_paid_percent' );
+		xl_set_output( xl, 'cf_non_energy_expenses' );
+	}
 }
 
 function set_land_lease(xl)
@@ -1809,6 +1814,8 @@ function set_annual_values( xl )
 		{
 			xl_set_output( xl, 'cf_capacity_payment'); // capacity payments
 			xl_set_output( xl, 'cf_curtailment_value'); // curtailment payments
+			xl_set_output( xl,'cf_energy_revenue_retained_percent');
+			xl_set_output( xl,'cf_non_energy_revenue');		
 		}
 	}
 	// tech-dependent
