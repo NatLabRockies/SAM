@@ -601,7 +601,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 171.0
+                    "Integer": 214.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -617,7 +617,7 @@
                 },
                 "Items": {
                     "Type": 6.0,
-                    "StringList": "Heat to cycle (original)|Net system electricity output"
+                    "StringList": "Heat to cycle|Net system electricity output (Beta)"
                 },
                 "ShowCaptions": {
                     "Type": 2.0,
@@ -2003,6 +2003,68 @@
                 "TabOrder": {
                     "Type": 3.0,
                     "Integer": 7.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "ui_net_power_control_msg"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 450.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 357.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 387.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 179.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 128.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
                 }
             }
         },
@@ -3888,10 +3950,20 @@
         "",
         "on_load{'MSPT System Design'} = define() ",
         "\t{ on_change{'Q_rec_des'}();\r",
-        "\t  on_change{'is_parallel_htr'}(); };",
+        "\t  on_change{'is_parallel_htr'}();\r",
+        "\t  on_change{'is_control_target_elec'}();\r",
+        "\t  };",
         "\r",
         "on_change{'Q_rec_des'} = define()\r",
         "\t{ compare_solarmult(); };\r",
+        "\r",
+        "on_change{'is_control_target_elec'} = define()\r",
+        "\t{msg = \"\";\r",
+        "\tif(${is_control_target_elec}){\r",
+        "\t\tmsg = \"The net power control model is currently in beta. To prevent unrealistic power spikes during short timesteps, heliostat and heater startup energy requirements are temporarily set to zero. While the control strategy has been tested and is being refined for future CSP hybrid models, some unexpected behavior may still occur. Users are encouraged to report bugs and provide feedback.\";\r",
+        "\t}\r",
+        "\tproperty('ui_net_power_control_msg','Caption', msg);\r",
+        "\t};\r",
         "\t\r",
         "on_change{'is_parallel_htr'} = define()\r",
         "\t{ is_htr = value('is_parallel_htr') == 1;\r",
