@@ -28,12 +28,11 @@
 		"LandLease": {
 		},
 		"Depreciation": {
-			"depr_fed_custom": [0.000000],
-			"depr_fed_sl_years": 7,
-			"depr_fed_type": 1,
-			"depr_sta_custom": [0.000000],
-			"depr_sta_sl_years": 7,
-			"depr_sta_type": 1
+			"depr_basis_mat": [
+				[1.000000, 605500.000000, 100.000000, 0.000000, 0.000000, 0.000000],
+				[2.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000]
+			],
+			"depr_en_basis_mat": 1
 		},
 		"TaxCreditIncentives": {
 			"itc_fed_amount": [0.000000],

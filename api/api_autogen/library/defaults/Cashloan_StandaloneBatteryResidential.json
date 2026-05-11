@@ -34,6 +34,10 @@
 		"LandLease": {
 		},
 		"Depreciation": {
+			"depr_basis_mat": [
+				[nan]
+			],
+			"depr_en_basis_mat": 0
 		},
 		"TaxCreditIncentives": {
 			"itc_fed_amount": [0.000000],

@@ -756,7 +756,7 @@ extern "C"
 	 * Set depr_alloc_macrs_15_percent: 15-yr MACRS depreciation federal and state allocation [%]
 	 * options: None
 	 * constraints: MIN=0,MAX=100
-	 * required if: ?=1.5
+	 * required if: ?=0
 	 */
 	SAM_EXPORT void SAM_Saleleaseback_Depreciation_depr_alloc_macrs_15_percent_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -764,7 +764,7 @@ extern "C"
 	 * Set depr_alloc_macrs_5_percent: 5-yr MACRS depreciation federal and state allocation [%]
 	 * options: None
 	 * constraints: MIN=0,MAX=100
-	 * required if: ?=89
+	 * required if: ?=0
 	 */
 	SAM_EXPORT void SAM_Saleleaseback_Depreciation_depr_alloc_macrs_5_percent_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -772,7 +772,7 @@ extern "C"
 	 * Set depr_alloc_sl_15_percent: 15-yr straight line depreciation federal and state allocation [%]
 	 * options: None
 	 * constraints: MIN=0,MAX=100
-	 * required if: ?=3
+	 * required if: ?=0
 	 */
 	SAM_EXPORT void SAM_Saleleaseback_Depreciation_depr_alloc_sl_15_percent_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -780,7 +780,7 @@ extern "C"
 	 * Set depr_alloc_sl_20_percent: 20-yr straight line depreciation federal and state allocation [%]
 	 * options: None
 	 * constraints: MIN=0,MAX=100
-	 * required if: ?=3
+	 * required if: ?=0
 	 */
 	SAM_EXPORT void SAM_Saleleaseback_Depreciation_depr_alloc_sl_20_percent_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -788,7 +788,7 @@ extern "C"
 	 * Set depr_alloc_sl_39_percent: 39-yr straight line depreciation federal and state allocation [%]
 	 * options: None
 	 * constraints: MIN=0,MAX=100
-	 * required if: ?=0.5
+	 * required if: ?=0
 	 */
 	SAM_EXPORT void SAM_Saleleaseback_Depreciation_depr_alloc_sl_39_percent_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -940,7 +940,7 @@ extern "C"
 	 * Set depr_custom_schedule: Custom depreciation schedule [%]
 	 * options: None
 	 * constraints: None
-	 * required if: *
+	 * required if: None
 	 */
 	SAM_EXPORT void SAM_Saleleaseback_Depreciation_depr_custom_schedule_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
 
