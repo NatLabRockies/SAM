@@ -18895,10 +18895,23 @@
     ],
     "depr_basis_mat": [
         [
-            NaN
+            1.0,
+            25304.4904155,
+            100.0,
+            0.0,
+            0.0,
+            7.0
+        ],
+        [
+            2.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            7.0
         ]
     ],
-    "depr_en_basis_mat": 0.0,
+    "depr_en_basis_mat": 1.0,
     "depr_itc_fed_capex": 0.0,
     "depr_itc_sta_capex": 0.0,
     "desired_dcac_ratio": 1.2,

@@ -6,6 +6,9 @@
     "LeadAcid_qn": 60.0,
     "LeadAcid_qn_computed": 6.75,
     "LeadAcid_tn": 1.0,
+    "ac_degradation": [
+        0.0
+    ],
     "adjust": 0.0,
     "adjust_constant": 0.0,
     "adjust_en_periods": 0.0,
@@ -36968,9 +36971,6 @@
     ],
     "first_year_output": 6727.679999999999,
     "first_year_output_peak": 3.84,
-    "ac_degradation": [
-        0.0
-    ],
     "grid_curtailment": [
         1e38,
         1e38,

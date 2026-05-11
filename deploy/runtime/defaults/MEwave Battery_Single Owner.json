@@ -6,6 +6,9 @@
     "LeadAcid_qn": 60.0,
     "LeadAcid_qn_computed": 23928.96,
     "LeadAcid_tn": 1.0,
+    "ac_degradation": [
+        0.0
+    ],
     "accumulators_cost": 0.0,
     "active_structure_cost": 0.0,
     "add_om_num_types": 1.0,
@@ -22753,9 +22756,6 @@
     "gearbox_cost_total_check": 0.0,
     "gears_cost": 0.0,
     "generation_planning_and_integration_cost": 0.0,
-    "ac_degradation": [
-        0.0
-    ],
     "geological_and_bathymetry_cost": 0.0,
     "grid_curtailment": [
         1e38,

@@ -36487,10 +36487,23 @@
     ],
     "depr_basis_mat": [
         [
-            NaN
+            1.0,
+            30556.0,
+            75.0793187683543,
+            0.0,
+            0.0,
+            7.0
+        ],
+        [
+            2.0,
+            10142.2914886,
+            24.9206812316457,
+            1.0,
+            1.0,
+            7.0
         ]
     ],
-    "depr_en_basis_mat": 0.0,
+    "depr_en_basis_mat": 1.0,
     "depr_itc_fed_capex": 0.0,
     "depr_itc_sta_capex": 0.0,
     "dispatch_manual_btm_discharge_to_grid": [

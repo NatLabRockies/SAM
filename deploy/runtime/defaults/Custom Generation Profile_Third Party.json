@@ -1,4 +1,7 @@
 {
+    "ac_degradation": [
+        0.0
+    ],
     "adjust": 0.0,
     "adjust_constant": 0.0,
     "adjust_en_periods": 0.0,
@@ -73,9 +76,6 @@
     ],
     "first_year_output": 30274.559999999998,
     "first_year_output_peak": 3.84,
-    "ac_degradation": [
-        0.0
-    ],
     "grid_curtailment": [
         1e38,
         1e38,

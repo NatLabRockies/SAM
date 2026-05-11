@@ -1,4 +1,7 @@
 {
+    "ac_degradation": [
+        0.0
+    ],
     "adjust": 0.0,
     "adjust_constant": 0.0,
     "adjust_en_periods": 0.0,
@@ -92,10 +95,23 @@
     ],
     "depr_basis_mat": [
         [
-            NaN
+            1.0,
+            8736.0,
+            100.0,
+            0.0,
+            0.0,
+            7.0
+        ],
+        [
+            2.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            7.0
         ]
     ],
-    "depr_en_basis_mat": 0.0,
+    "depr_en_basis_mat": 1.0,
     "depr_itc_fed_capex": 0.0,
     "depr_itc_sta_capex": 0.0,
     "derate": 4.0,
@@ -135,9 +151,6 @@
     "first_year_output": 60549.119999999995,
     "first_year_output_peak": 7.68,
     "fixed_plant_input": 0.0,
-    "ac_degradation": [
-        0.0
-    ],
     "grid_curtailment": [
         1e38,
         1e38,
