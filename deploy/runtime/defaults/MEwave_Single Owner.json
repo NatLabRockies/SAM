@@ -9117,6 +9117,9 @@
     "electrical_generator_cost_total_check": 0.0,
     "en_electricity_rates": 0.0,
     "enable_interconnection_limit": 0.0,
+    "energy_expenses_ret": [
+        100.0
+    ],
     "energy_period": [
         9.0149,
         9.2803,
@@ -12038,6 +12041,9 @@
         10.2698,
         10.5673,
         10.9004
+    ],
+    "energy_revenue_ret": [
+        100.0
     ],
     "eng_and_mgmt_cost": 4559949.2,
     "eng_and_mgmt_cost_input": 0.0,
@@ -22226,6 +22232,21 @@
     "navigation_lighting_cost": 0.0,
     "noise_mitigation_cost": 0.0,
     "nominal_discount_rate": 8.137499999999975,
+    "non_energy_expenses": [
+        0.0
+    ],
+    "non_energy_expenses_escal": 0.0,
+    "non_energy_expenses_ret": [
+        0.0
+    ],
+    "non_energy_revenue": [
+        0.0
+    ],
+    "non_energy_revenue_escal": 0.0,
+    "non_energy_revenue_is_shown": 0.0,
+    "non_energy_revenue_ret": [
+        0.0
+    ],
     "notes": "",
     "number_devices": 100.0,
     "number_hours": 0.0,

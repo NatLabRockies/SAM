@@ -9990,6 +9990,12 @@
     "dscr_reserve_months": 6.0,
     "e_startup": 2.7,
     "elev": 773.0,
+    "energy_expenses_ret": [
+        100.0
+    ],
+    "energy_revenue_ret": [
+        100.0
+    ],
     "equip1_reserve_cost": 0.0,
     "equip1_reserve_freq": 12.0,
     "equip2_reserve_cost": 0.0,
@@ -10749,6 +10755,21 @@
     "nLoops": 3.0,
     "nModBoil": 6.0,
     "nominal_discount_rate": 9.060000000000004,
+    "non_energy_expenses": [
+        0.0
+    ],
+    "non_energy_expenses_escal": 0.0,
+    "non_energy_expenses_ret": [
+        0.0
+    ],
+    "non_energy_revenue": [
+        0.0
+    ],
+    "non_energy_revenue_escal": 0.0,
+    "non_energy_revenue_is_shown": 0.0,
+    "non_energy_revenue_ret": [
+        0.0
+    ],
     "om_capacity_escal": 0.0,
     "om_capacity_heat": [
         33.0

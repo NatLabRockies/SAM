@@ -239,6 +239,9 @@ function cf_revenue()
 		{
 			cfline( 'cf_curtailment_value', 0);
 			cfline( 'cf_capacity_payment', 0);
+			cfline('cf_energy_revenue',0);
+			cfline('cf_energy_revenue_retained_percent',0);
+			cfline('cf_energy_revenue_retained',0);			
 		}
 	}
 	elseif ( fin == 'Community Solar')
@@ -281,9 +284,6 @@ function cf_revenue()
 	
 	if ( fin == 'Single Owner' && !is_iph_tech()) // As of May 2026, only single supports non-energy revenue
 	{
-		cfline('cf_sharable_energy_revenue',0);
-		cfline('');
-		cfline('cf_sharable_energy_revenue_retained',0);
 		cfline('cf_non_energy_revenue',0);
 	}
 	
@@ -400,7 +400,7 @@ function cf_operating_expenses()
 	if ( fin == 'Single Owner' && !is_iph_tech()) // As of May 2026, only single supports non-energy revenue
 	{
 		cfline('cf_total_energy_expenses',0);
-		cfline('');
+		cfline('cf_energy_expenses_paid_percent', 0);
 		cfline('cf_energy_expenses_paid',0);
 		cfline('cf_non_energy_expenses',0);
 	}

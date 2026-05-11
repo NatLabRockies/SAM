@@ -9082,6 +9082,12 @@
     "dscr_maximum_debt_fraction": 60.0,
     "dscr_reserve_months": 6.0,
     "elev": 561.0,
+    "energy_expenses_ret": [
+        100.0
+    ],
+    "energy_revenue_ret": [
+        100.0
+    ],
     "epc_total_cost_calc": 54672658.0101808,
     "epsilon": 0.88,
     "equip1_reserve_cost": 0.0,
@@ -47278,6 +47284,21 @@
     "n_zen": 8.0,
     "nameplate": 279.1260000000001,
     "nominal_discount_rate": 9.060000000000004,
+    "non_energy_expenses": [
+        0.0
+    ],
+    "non_energy_expenses_escal": 0.0,
+    "non_energy_expenses_ret": [
+        0.0
+    ],
+    "non_energy_revenue": [
+        0.0
+    ],
+    "non_energy_revenue_escal": 0.0,
+    "non_energy_revenue_is_shown": 0.0,
+    "non_energy_revenue_ret": [
+        0.0
+    ],
     "om_capacity_escal": 0.0,
     "om_capacity_heat": [
         33.0
