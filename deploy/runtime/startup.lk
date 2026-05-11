@@ -470,7 +470,8 @@ function setup_commercial_pages( mode ) // mode determines whether or not the bu
              { 'name'='Financial Tax Credits','caption'='Tax Credits','collapsible'=true,'collapsible_var'='show_tax_credits', 'collapsed_by_default'=false },
 			  { 'name'= 'Financial ITC Qualification', 'caption'='ITC Qualification', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
 			  { 'name'='Financial Cash Incentives','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false },
-			  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false }]],
+			  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
+			  'Financial Depreciation Detailed' ]],
 			   { 'sidebar'='Incentives and Depreciation', 'help'='incentives' } );
  setup_utility_rate();
   setup_elec_load_page( mode );
