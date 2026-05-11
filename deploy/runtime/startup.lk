@@ -707,7 +707,7 @@ function setup_csp_physical_trough_pages()
 	addpage( [[ 'Physical Trough System Design' ]], { 'sidebar'='System Design', 'help'='csp-physical-trough-model/troughphysical_system_design' } );
 	addpage( [[ 'Physical Trough Solar Field' ]], { 'sidebar'='Solar Field', 'help'='csp-physical-trough-model/troughphysical_solar_field' } );
 	addpage( [[ 'Physical Trough Collector Header',
-	 {'name'='Physical Trough Collector Type 1', 'caption'='Collector Type 1', 'collapsible'=false, 'collapsible_var'='sca_1_is_shown'},
+	 {'name'='Physical Trough Collector Type 1', 'caption'='Collector Type 1', 'collapsible'=true, 'collapsible_var'='sca_1_is_shown'},
 	 {'name'='Physical Trough Collector Type 2', 'caption'='Collector Type 2', 'collapsible'=true, 'collapsible_var'='sca_2_is_shown'},
 	 {'name'='Physical Trough Collector Type 3', 'caption'='Collector Type 3', 'collapsible'=true, 'collapsible_var'='sca_3_is_shown'},
 	 {'name'='Physical Trough Collector Type 4', 'caption'='Collector Type 4', 'collapsible'=true, 'collapsible_var'='sca_4_is_shown'} ]],
@@ -745,7 +745,7 @@ function setup_cst_physical_trough_pages()
 	addpage( [[ 'Physical Trough Solar Field' ]], { 'sidebar'='Solar Field', 'help'='iph-parabolic-trough/iph_trough_solar_field' } );
 
 	addpage( [[ 'Physical Trough Collector Header',
-	 {'name'='Physical Trough Collector Type 1', 'caption'='Collector Type 1', 'collapsible'=false, 'collapsible_var'='sca_1_is_shown'},
+	 {'name'='Physical Trough Collector Type 1', 'caption'='Collector Type 1', 'collapsible'=true, 'collapsible_var'='sca_1_is_shown'},
 	 {'name'='Physical Trough Collector Type 2', 'caption'='Collector Type 2', 'collapsible'=true, 'collapsible_var'='sca_2_is_shown'},
 	 {'name'='Physical Trough Collector Type 3', 'caption'='Collector Type 3', 'collapsible'=true, 'collapsible_var'='sca_3_is_shown'},
 	 {'name'='Physical Trough Collector Type 4', 'caption'='Collector Type 4', 'collapsible'=true, 'collapsible_var'='sca_4_is_shown'} ]],
