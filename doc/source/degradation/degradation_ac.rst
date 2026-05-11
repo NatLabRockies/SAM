@@ -24,6 +24,12 @@ For most situations where you want to model an annual reduction in the system's 
   
    An AC degradation rate of 1% for a system with a net annual AC output of 100,000 kWh in Year one results in annual output values of 100,000 kWh in year 1, 99,000 kWh in year 2, 98,010 kWh in year 3, 97,029.9 kWh in year 4, etc.
 
+This example uses "compounding" degradation, where 1% is applied to the previous year's output. Wind Power uses AC linear degradation, where the degradation is always applied to the year 1 nameplate value:
+
+.. topic:: Linear Value Mode Example
+  
+   An AC degradation rate of 1% for a system with a net annual AC output of 100,000 kWh in Year one results in annual output values of 100,000 kWh in year 1, 99,000 kWh in year 2, 98,000 kWh in year 3, 97,000 kWh in year 4, etc.
+
 In some situations, you may want to assign a different degradation rate to different years of the project cash flow. To do that, you use the "schedule mode" to specify a table of degradation rate values. In Schedule mode, SAM applies the degradation rate for a given year to the annual output in Year one to calculate the annual output for that year.
 
 .. topic:: Schedule Mode Example
