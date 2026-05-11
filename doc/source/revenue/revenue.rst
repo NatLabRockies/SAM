@@ -11,6 +11,8 @@ For the :doc:`PPA Single Owner <revenue_ppa>` financial model, potential sources
 
 * Curtailment payments (optional)
 
+* Non-energy revenue (optional)
+
 For the :doc:`Merchant Plant <revenue_merchant_plant>` model, revenue may include:
 
 * Revenue from electricity sales at market prices

@@ -28,3 +28,6 @@ Curtailment Payments
 ~~~~~~~~~~~~~~~~~~~~
 .. include:: ../includes/snip_revenue_curtailment.rst
 
+Non-energy Revenues
+~~~~~~~~~~~~~~~~~~~~
+.. include:: ../includes/snip_revenue_non_energy.rst
