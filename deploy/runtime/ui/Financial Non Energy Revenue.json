@@ -1,7 +1,7 @@
 {
     "Name": "Financial Non Energy Revenue",
-    "Width": 866.0,
-    "Height": 380.0,
+    "Width": 859.0,
+    "Height": 389.0,
     "FormObjects": {
         "SchedNumeric": {
             "Visible": 1.0,
@@ -16,7 +16,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 339.0
+                    "Integer": 354.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -69,7 +69,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 312.0
+                    "Integer": 327.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -122,7 +122,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 213.0
+                    "Integer": 222.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -175,7 +175,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 240.0
+                    "Integer": 249.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -258,7 +258,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 267.0
+                    "Integer": 276.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -487,6 +487,156 @@
                 }
             }
         },
+        "Divider": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 22"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 15.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 309.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 831.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 16.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Orientation": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Colour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 120.0,
+                        "Green": 120.0,
+                        "Blue": 120.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Energy Owner Portion of Energy Revenue and Expenses"
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Divider": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 221"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 15.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 204.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 831.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 16.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Orientation": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Colour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 120.0,
+                        "Green": 120.0,
+                        "Blue": 120.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Non-Energy Expenses"
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Divider": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 223"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 15.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 105.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 831.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 16.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Orientation": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Colour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 120.0,
+                        "Green": 120.0,
+                        "Blue": 120.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Non-Energy Revenue"
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
         "GroupBox": {
             "Visible": 1.0,
             "ObjectProperties": {
@@ -508,7 +658,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 366.0
+                    "Integer": 381.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -516,7 +666,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "Non-energy revenue"
+                    "String": "Non-Energy Revenue and Expenses"
                 },
                 "Bold": {
                     "Type": 2.0,
@@ -533,7 +683,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 15.0
+                    "Integer": 18.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -553,7 +703,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "Non-energy revenue and expenses are cash flow inputs not correlated with kWh of energy or kW of capacity. These variables affect EBITDA and are available for debt service. The retained and paid percenteges are intended to represent revenue and cost sharing agreements with other legal entities. In Value mode, SAM applies both inflation and escalation to the first year cost to calculate out-year costs. In Schedule mode, neither inflation nor escalation applies. See Help for details."
+                    "String": "Non-energy revenue and expenses are optional inputs for revenue and expenses that do not depend on kWh of energy or kW of capacity. Non-energy revenue and expenses affect EBITDA, and non-energy revenue is available for debt service. Energy revenue retained and energy expenses paid percentages represent revenue and cost sharing agreements between the owner of the energy system and other entities. In Value mode, SAM applies both inflation and escalation to the first year value to calculate out-year values. In Schedule mode, neither inflation nor escalation applies. See Help for details."
                 },
                 "TextColour": {
                     "Type": 4.0,
