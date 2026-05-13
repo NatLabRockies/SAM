@@ -1074,7 +1074,7 @@
         6.0,
         6.0
     ],
-    "W_dot_pump_SS": 0.07485621857036887,
+    "W_dot_pump_SS": 0.07485403286362845,
     "accept_init": 0.0,
     "accept_loc": 1.0,
     "accept_mode": 0.0,
@@ -1146,9 +1146,9 @@
     ],
     "analysis_period": 25.0,
     "analysis_period_warning": "",
-    "annual_albedo": 0.21716438274677486,
+    "annual_albedo": 0.21716438274677489,
     "annual_beam": 7.364082191780821,
-    "annual_diffuse": 1.3397808219178083,
+    "annual_diffuse": 1.3397808219178085,
     "annual_global": 5.838191780821918,
     "annual_snow": NaN,
     "annual_tdry": 18.126141552511418,
@@ -1685,7 +1685,7 @@
     "custom_sf_pipe_sizes": 0.0,
     "custom_tes_p_loss": 0.0,
     "custom_tes_pipe_sizes": 0.0,
-    "dP_sf_SS": 10.147474751286165,
+    "dP_sf_SS": 10.147350081133409,
     "d_tank_in": 0.0,
     "debt_message": "",
     "debt_option": 1.0,
@@ -10542,12 +10542,6 @@
     "dt_cold": 5.0,
     "dt_hot": 5.0,
     "elev": 773.0,
-    "energy_expenses_ret": [
-        100.0
-    ],
-    "energy_revenue_ret": [
-        100.0
-    ],
     "epsilon_3_11": [
         [
             100.0,
@@ -10889,7 +10883,7 @@
             941.0
         ]
     ],
-    "field_htf_cp_avg": 3.342903831348,
+    "field_htf_cp_avg": 2.4548932031999999,
     "field_htf_max_operating_temp": 400.0,
     "field_htf_min_operating_temp": 12.0,
     "field_thermal_output": 7.927156420127617,
@@ -11017,7 +11011,7 @@
             0.0
         ]
     ],
-    "lat": 32.130001068115237,
+    "lat": 32.13,
     "lib_A_aperture": 1320.0,
     "lib_AbsorberMaterial": 0.0,
     "lib_AnnulusGas_1": 2.0,
@@ -11761,7 +11755,7 @@
     "library_folder_list": "x",
     "library_paths": "\"\"",
     "loan_moratorium": 0.0,
-    "lon": -110.94000244140625,
+    "lon": -110.94,
     "loop_optical_efficiency": 0.7410044526207242,
     "m_dot_hs_ext_des_ui": NaN,
     "m_dot_htfmax": 12.0,
@@ -11769,7 +11763,7 @@
     "m_dot_htfmin": 1.0,
     "m_dot_htfmin_actual": 1.0,
     "max_collector_width": 6.0,
-    "max_field_flow_velocity": 6.613086278056593,
+    "max_field_flow_velocity": 3.744753926091646,
     "mc_bal_cold": 0.2,
     "mc_bal_hot": 0.2,
     "mc_bal_sca": 4.5,
@@ -11779,7 +11773,7 @@
     "mera_name1": "Replacement Reserve 1",
     "mera_name2": "Replacement Reserve 2",
     "mera_name3": "Replacement Reserve 3",
-    "min_field_flow_velocity": 0.4743214213819479,
+    "min_field_flow_velocity": 0.2685590647047778,
     "min_inner_diameter": 0.076,
     "months_receivables_reserve": 0.0,
     "months_working_reserve": 6.0,
@@ -11790,22 +11784,7 @@
     "nSCA": 4.0,
     "nameplate": 5.0,
     "nodes": 2000.0,
-    "nominal_discount_rate": 9.060000000000004,
-    "non_energy_expenses": [
-        0.0
-    ],
-    "non_energy_expenses_escal": 0.0,
-    "non_energy_expenses_ret": [
-        0.0
-    ],
-    "non_energy_revenue": [
-        0.0
-    ],
-    "non_energy_revenue_escal": 0.0,
-    "non_energy_revenue_is_shown": 0.0,
-    "non_energy_revenue_ret": [
-        0.0
-    ],
+    "nominal_discount_rate": 9.060000000000003,
     "non_solar_field_land_area_multiplier": 1.1,
     "northsouth_field_sep": 20.0,
     "object 11": 0.0,
