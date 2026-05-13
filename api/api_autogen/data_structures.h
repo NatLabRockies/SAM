@@ -208,7 +208,6 @@ static std::unordered_map<std::string, std::string> config_to_cmod_name = {
         {"PVBattery", "Pvsamv1"},
         {"PVWatts", "Pvwattsv8"},
         {"PVWattsBattery", "BattWatts"},
-        {"PVWattsCSPTowerMoltenSaltBatteryHybrid", "Pvwattsv8,TcsmoltenSalt,Battery"},
         {"PVWattsWindBatteryHybrid", "Pvwattsv8,Windpower,Battery"},
         {"PVWattsWindFuelCellBatteryHybrid", "Pvwattsv8,Windpower,Fuelcell,Battery"},
         {"PTES", "EtesPtes"},
