@@ -82,13 +82,11 @@ To see Help, open the `../doc/html/index.html` file.
 
 SAM uses Help Context IDs to open context-specific Help files from the SAM user interface.
 
-The Help context ID is a string "chapter-name/topic_name" that points to the folder and file name of the HTML for the Help topic.
+The Help context ID is a string "chapter-name/topic_name" that points to the folder and file name of the HTML for the Help topic. For example, the Help topic for the behind-the-meter Battery Dispatch input page is "battery-storage/battery_dispatch_btm".
+
+The Help context ID is the path to the HTML file without the `.html` extension. The extension is added by the `ShowHelp()` function in `SAM/main.cpp`.
 
 Help context IDs are defined in different places in the SAM code depending on the context.
-
-For example, the Help topic for the behind-the-meter Battery Dispatch input page is "battery-storage/battery_dispatch_btm".
-
-The Help ID is the path to the HTML file without the `.html` extension. The extension is added by the `ShowHelp()` function in `SAM/main.cpp`.
 
 ### SAM Input Pages
 
