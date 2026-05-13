@@ -3,7 +3,7 @@ Wind Farm
 
 The Wind Farm page allows you to specify the number of turbines in the project and includes a simple representation of the wind farm layout to estimate wake effect losses that result when upwind turbines interfere with wind flow to downwind turbines.
 
-For a technical description of the wind farm model, see Chapter 8 of Freeman, J.; Gilman, P.; Jorgenson, J.; Ferguson, T. (2014). "Reference Manual for the System Advisor Model's Wind Performance Model." National Renewable Energy Laboratory, NREL/TP-6A20-60570. (`PDF 738 KB <https://docs.nrel.gov/docs/fy14osti/60570.pdf>`__)
+For a technical description of the wind farm model, see Chapter 8 of Freeman, J.; Gilman, P.; Jorgenson, J.; Ferguson, T. (2014). "Reference Manual for the System Advisor Model's Wind Performance Model." National Renewable Energy Laboratory, NREL/TP-6A20-60570. (`PDF 738 KB <https://docs.nlr.gov/docs/fy14osti/60570.pdf>`__)
 
 System Sizing
 ~~~~~~~~~~~~~
@@ -51,7 +51,7 @@ The wake effects losses account for the reduction in output of turbines position
 .. note:: The wake effect model calculates internal wake losses. You can specify additional wake effects losses on the :doc:`Losses <wind_losses>` page.
 
 
-.. note:: If you are using SAM's wind power model in a coding project in Python or another language, you can access wake model inputs that are not available in SAM's user interface. If you are interested in working with these variables, please `contact us <mailto:sam.support@nrel.gov>`__ for more information.
+.. note:: If you are using SAM's wind power model in a coding project in Python or another language, you can access wake model inputs that are not available in SAM's user interface. If you are interested in working with these variables, please `contact us <mailto:sam.support@nlr.gov>`__ for more information.
 
 The following output variables report wake losses. You can find them after running a simulation on the Results page :doc:`Data Tables <../results/data>` tab.
 

@@ -1,9 +1,9 @@
 WIND Toolkit Download
 =====================
 
-The WIND Toolkit Download window allows you to download a weather file with wind resource data for locations covered by the NREL WIND Toolkit. See :ref:`Wind Resource <filedownload>` for a description of the toolkit.
+The WIND Toolkit Download window allows you to download a weather file with wind resource data for locations covered by the NLR WIND Toolkit. See :ref:`Wind Resource <filedownload>` for a description of the toolkit.
 
-To download a weather file from the NREL WIND Toolkit:
+To download a weather file from the NLR WIND Toolkit:
 
 #. Choose the **Street address or zip code** or **Location coordinates (deg)** option and type a latitude and longitude, street address, or zip code for the wind turbine or wind farm location.
 

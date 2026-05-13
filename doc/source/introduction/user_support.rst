@@ -1,9 +1,9 @@
 User Support
 ============
 
-For information about SAM in addition to this Help system, please use the following resources on the `SAM website <https://sam.nrel.gov>`__:
+For information about SAM in addition to this Help system, please use the following resources on the `SAM website <https://sam.nlr.gov>`__:
 
-* Support forum to search for answers and post questions about SAM. To participate in the forum, you must `register <https://sam.nrel.gov/register.html>`__ on the SAM website.
+* Support forum to search for answers and post questions about SAM. To participate in the forum, you must `register <https://sam.nlr.gov/register.html>`__ on the SAM website.
 
 * See the Events page for links to upcoming webinars, online round tables and other SAM-related events.
 
@@ -15,6 +15,6 @@ For information about SAM in addition to this Help system, please use the follow
 
 To contact SAM support:
 
-* Post a question or comment on the `Support forum <https://sam.nrel.gov/forum>`__.
+* Post a question or comment on the `Support forum <https://sam.nlr.gov/forum>`__.
 
-* Send an email to `sam.support@nrel.gov <mailto:sam.support@nrel.gov>`__.
+* Send an email to `sam.support@nlr.gov <mailto:sam.support@nlr.gov>`__.

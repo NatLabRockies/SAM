@@ -157,7 +157,7 @@ Time Series Beam Irradiance Shade Loss Table
 
 The time series option allows you define a beam shading loss for each simulation time step. The data's time convention should follow that of the weather file. For the standard TMY files, Hour 1 is the hour ending at 1 a.m. on Monday, January 1.
 
-For the Detailed Photovoltaic performance model, for subarrays with crystalline Silicon modules and up to eight strings of modules, SAM provides an option to model partial shading of the subarray. For more information about the partial shading model, see MacAlpine, S.; Deline, C. (2015) Simplified Method for Modeling the Impact of Arbitrary Partial Shading Conditions on PV Array Performance. National Renewable Energy Laboratory. 8 pp.; NREL/CP-5J00-64570. (`PDF 699 KB <https://docs.nrel.gov/docs/fy15osti/64570.pdf>`__)
+For the Detailed Photovoltaic performance model, for subarrays with crystalline Silicon modules and up to eight strings of modules, SAM provides an option to model partial shading of the subarray. For more information about the partial shading model, see MacAlpine, S.; Deline, C. (2015) Simplified Method for Modeling the Impact of Arbitrary Partial Shading Conditions on PV Array Performance. National Renewable Energy Laboratory. 8 pp.; NREL/CP-5J00-64570. (`PDF 699 KB <https://docs.nlr.gov/docs/fy15osti/64570.pdf>`__)
 
 You can use SAM's :doc:`3D shade calculator <../shade-calculator-reference/sc-overview>` to generate loss values for the time series beam irradiance shade loss table.
 

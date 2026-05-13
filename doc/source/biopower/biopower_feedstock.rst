@@ -3,7 +3,7 @@ Feedstock
 
 The Feedstock page inputs define the biomass resource of the location you specify on the :doc:`Ambient Conditions <biopower_location_ambient_conditions>` page, and the physical content of the resource. 
 
-For a technical description of the biopower model, see Jorgenson, J.; Gilman, P.; Dobos, A. (2011). Technical Manual for the SAM Biomass Power Generation Model. 40 pp.; NREL Report No. TP-6A20-52688. https://docs.nrel.gov/docs/fy11osti/52688.pdf
+For a technical description of the biopower model, see Jorgenson, J.; Gilman, P.; Dobos, A. (2011). Technical Manual for the SAM Biomass Power Generation Model. 40 pp.; NREL Report No. TP-6A20-52688. https://docs.nlr.gov/docs/fy11osti/52688.pdf
 
 You can use any combination of the following options to specify the feedstock:
 
@@ -29,7 +29,7 @@ Describes the amount of biomass available as an energy resource within a certain
 **Resource Obtainability**
   The obtainability percentages apply to the quantities under **Resource Available** to define the obtainable resource.
 
-.. note:: The available resource data from the NREL Biofuels Atlas assume that a certain amount of harvest residue remains on the field to prevent soil erosion and maintain nutrients. The resource obtainability percentages apply to the portion of the residue that does not remain on the field.
+.. note:: The available resource data from the NLR Biofuels Atlas assume that a certain amount of harvest residue remains on the field to prevent soil erosion and maintain nutrients. The resource obtainability percentages apply to the portion of the residue that does not remain on the field.
 
 **Moisture (wet %)**
   The average annual wet moisture content of the crop or wood residue as collected.

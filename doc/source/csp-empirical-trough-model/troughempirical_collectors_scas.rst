@@ -3,7 +3,7 @@ Collectors (SCAs)
 
 A solar collector assembly (SCA) is an individually tracking component of the solar field that includes mirrors, a supporting structure, and heat collection elements or receivers.
 
-For a more detailed description of the model, please download the CSP trough reference manual from the `SAM website <https://sam.nrel.gov/concentrating-solar-power/csp-publications>`__.
+For a more detailed description of the model, please download the CSP trough reference manual from the `SAM website <https://sam.nlr.gov/concentrating-solar-power/csp-publications>`__.
 
 Solar Collector Assembly (SCA)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

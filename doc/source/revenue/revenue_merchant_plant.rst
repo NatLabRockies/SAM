@@ -148,10 +148,10 @@ Capacity Payments
 
 .. include:: ../includes/snip_revenue_capacity_payments.rst
 
-NREL Cambium Hourly Price Data Download
+NLR Cambium Hourly Price Data Download
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you do not have time series price data for your analysis, you can download hourly marginal cost data for modeled futures of the U.S. electricity sector from the `NREL Scenario Viewer <https://scenarioviewer.nrel.gov/>`__.
+If you do not have time series price data for your analysis, you can download hourly marginal cost data for modeled futures of the U.S. electricity sector from the `NLR Scenario Viewer <https://scenarioviewer.nlr.gov/>`__.
 
 To download Cambium price data:
 
@@ -159,7 +159,7 @@ To download Cambium price data:
 
 #. Choose the option you want to use for price data: **Time series cleared capacity and price** or **Fixed cleared capacity and time series price**. (See below for descriptions.)
 
-#. Choose values for the Cambium API parameters as appropriate. Click the |SS_Button-Information| button to read a description of each parameter, or see the `Cambium documentation <https://www.nrel.gov/analysis/cambium.html>`__ for more details.
+#. Choose values for the Cambium API parameters as appropriate. Click the |SS_Button-Information| button to read a description of each parameter, or see the `Cambium documentation <https://www.nlr.gov/analysis/cambium.html>`__ for more details.
 
 #. If you choose the **Multiple years** option for the **Year** parameter, choose the start year.
 

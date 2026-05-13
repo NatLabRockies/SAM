@@ -1,7 +1,7 @@
 Welcome Page
 ============
 
-When you start SAM, it displays the Welcome page with options for starting your work session and messages about SAM from NREL's SAM development team.
+When you start SAM, it displays the Welcome page with options for starting your work session and messages about SAM from NLR's SAM development team.
 
 .. note:: To return to the Welcome page after creating a case, on the File menu, click **Close**, or press ctrl-W.
 
@@ -37,4 +37,4 @@ To display version information:
 
 * Click **About**.
 
-The About page displays the versions numbers for your copy of SAM along with the NREL legal disclaimer.
+The About page displays the versions numbers for your copy of SAM along with the NLR legal disclaimer.

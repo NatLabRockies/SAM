@@ -5,7 +5,7 @@ The **Cash flow** tab displays the project cash flow calculated by the financial
 
 To see details of the cash flow calculation in a Windows version of SAM, you can use Send-to-Excel with Equations to export inputs from your SAM file to an Excel workbook that replicates SAM's cash flow calculations as Excel formulas. This workbook approximates SAM's calculations and will give slightly different results than SAM, but is a useful way to explore how SAM's financial models work.
 
-.. note:: Send-to-Excel with Equations only works for the Windows version of SAM. If you are working with a Mac or Linux version of SAM, you can download the cash flow workbooks from the SAM website. See the page for the financial model you are using listed under "Financial Models" at https://sam.nrel.gov/financial-models.html.
+.. note:: Send-to-Excel with Equations only works for the Windows version of SAM. If you are working with a Mac or Linux version of SAM, you can download the cash flow workbooks from the SAM website. See the page for the financial model you are using listed under "Financial Models" at https://sam.nlr.gov/financial-models.html.
 
 See :doc:`Annual Electricity to/from Grid <../performance-metrics/mtp_annual_energy>` for a description of the electricity line items in the cash flow.
 

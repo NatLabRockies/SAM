@@ -8,7 +8,7 @@ Fuel Cell Type
 
 The fuel cell type determines the type of fuel cell. For more detailed descriptions of the fuel cell types, see Chapter 2 of Steward, D. ; Penev, M.; Saur G.; Becker W. (2013) Fuel Cell Power Model Version 2: Startup Guide, System Designs, and Case Studies.
 
- NREL/TP- 5600-57457 (`PDF 4.5 MB) <https://www.nrel.gov/docs/fy13osti/57457.pdf>`__.
+ NREL/TP- 5600-57457 (`PDF 4.5 MB) <https://www.nlr.gov/docs/fy13osti/57457.pdf>`__.
 
 **Molten Carbonate Fuel Cell (MCFC)**
   Operate at temperatures of 650°C and above and can convert fuels to hydrogen without an external reformer. The high operating temperatures and corrosive electrolyte in MCFC fuel cells causes them to be less durable than other types. They also have longer ramp rates to maintain even distribution of temperature in the cell.
@@ -167,7 +167,7 @@ Efficiency
 Default Parameter Values
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-The default parameters for the three fuel cell types are from the `Fuel Cell Power Model <https://research-hub.nrel.gov/en/publications/fuel-cell-power-model-version-2-startup-guide-system-designs-and-/>`__.
+The default parameters for the three fuel cell types are from the `Fuel Cell Power Model <https://research-hub.nlr.gov/en/publications/fuel-cell-power-model-version-2-startup-guide-system-designs-and-/>`__.
 
 Default Size and Dynamic Response Parameters
 ............................................

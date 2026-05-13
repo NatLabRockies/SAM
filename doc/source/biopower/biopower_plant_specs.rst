@@ -3,7 +3,7 @@ Plant Specs
 
 The Plant Specs page inputs define the major unit operations that make up a biomass power plant: biomass processing, combustion system and boiler, and steam turbine.
 
-For a technical description of the biopower model, see Jorgenson, J.; Gilman, P.; Dobos, A. (2011). Technical Manual for the SAM Biomass Power Generation Model. 40 pp.; NREL Report No. TP-6A20-52688. https://docs.nrel.gov/docs/fy11osti/52688.pdf
+For a technical description of the biopower model, see Jorgenson, J.; Gilman, P.; Dobos, A. (2011). Technical Manual for the SAM Biomass Power Generation Model. 40 pp.; NREL Report No. TP-6A20-52688. https://docs.nlr.gov/docs/fy11osti/52688.pdf
 
 Biomass Feedstock Handling
 ~~~~~~~~~~~~~~~~~~~~~~~~~~

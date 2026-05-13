@@ -19,7 +19,7 @@ The fixed charge rate is the revenue per amount of investment required to cover 
 
 To include the effect of incentives in this simple fixed charge rate method, reduce the TTC, FOC, or VOC as appropriate. For example, you could account for a 30% investment tax credit by reducing the TCC by 30%.
 
-This method is an alternative to the cash flow method used by SAM's other financial models. The fixed charge method is appropriate for very preliminary stages of project feasibility analysis before you have many details about the project's costs and financial structure. It also useful for large-scale studies of market trends, such as those used for the NREL `Annual Technology Baseline (ATB) <https://atb.nrel.gov/>`__ study.
+This method is an alternative to the cash flow method used by SAM's other financial models. The fixed charge method is appropriate for very preliminary stages of project feasibility analysis before you have many details about the project's costs and financial structure. It also useful for large-scale studies of market trends, such as those used for the NLR `Annual Technology Baseline (ATB) <https://atb.nlr.gov/>`__ study.
 
 Retail Electricity Rate
 ~~~~~~~~~~~~~~~~~~~~~~~

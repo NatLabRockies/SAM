@@ -117,7 +117,7 @@ The file contains the wave resource matrix, which is a table of joint probabilit
 Time Series Format for Wave Energy Resource Data
 ................................................
 
-The time series format for wave energy resource data is the CSV format returned by the `NREL Developer APIs for wave resource data <https://developer.nrel.gov/docs/wave/hindcast/>`__: 
+The time series format for wave energy resource data is the CSV format returned by the `NLR Developer APIs for wave resource data <https://developer.nlr.gov/docs/wave/hindcast/>`__: 
 
 .. image:: ../images/SS_WaveResource-time-series-file.png
    :align: center
@@ -127,7 +127,7 @@ The time series format for wave energy resource data is the CSV format returned 
   These header rows contain information about the location.
 
 **Rows 3 and higher**
-  Row 3 contains column headings for the time series wave data. NREL's Hindcast Wave Data provides time series data in three-hour time steps, but SAM will work with data in one-hour time steps. The columns can be in any order, but should use the names listed in the table below.
+  Row 3 contains column headings for the time series wave data. NLR's Hindcast Wave Data provides time series data in three-hour time steps, but SAM will work with data in one-hour time steps. The columns can be in any order, but should use the names listed in the table below.
 
   Rows 4 and higher contain the data itself.
 
