@@ -72,7 +72,7 @@ The Land-Based Balance of System cost model is an implementation of NLR's LandBO
 
 For information and references about the NLR LandBOSSE model in SAM, see the "Wind Cost Data" section of the `Wind page on the SAM website <https://sam.nlr.gov/wind.html>`__. Those materials include:
 
-* Eberle, A.; Roberts, O.; Key, A.; Bhaskar, P.; Dykes, K. (2019) NLR's Balance-of-System Cost Model for Land-Based Wind. National Renewable Energy Laboratory. 62 pp. NREL/TP-6A20-72201. (`PDF 3.0 MB <https://www.nlr.gov/docs/fy19osti/72201.pdf>`__)
+* Eberle, A.; Roberts, O.; Key, A.; Bhaskar, P.; Dykes, K. (2019) NLR's Balance-of-System Cost Model for Land-Based Wind. National Renewable Energy Laboratory. NREL/TP-6A20-72201. (`PDF 3.0 MB <https://www.nlr.gov/docs/fy19osti/72201.pdf>`__)
 
 * LandBOSSE in SAM (Tutorial/Documentation). Description of the LandBOSSE implementation in SAM. (`PDF 603 KB <https://sam.nlr.gov/images/web_page_files/sam-wind-landbosse-tutorial-nov-2020.pdf>`__)
 
@@ -83,7 +83,7 @@ For information and references about the NLR LandBOSSE model in SAM, see the "Wi
 Enable LandBOSSE Model
 ~~~~~~~~~~~~~~~~~~~~~~
 
-The first time you check Enable Land-Based Balance of System Cost Model, SAM installs the NREL LandBOSSE BOS cost model. Once the cost model is installed, when you check the box, SAM enables the BOS model inputs.
+The first time you check Enable Land-Based Balance of System Cost Model, SAM installs the NLR LandBOSSE BOS cost model. Once the cost model is installed, when you check the box, SAM enables the BOS model inputs.
 
 .. note:: It may take a few minutes to install the LandBOSSE model. After the model is installed, it takes a few moments to run, so be prepared to wait after clicking **Enable Land-Based Balance of System Cost Model**, **Calculate BOS**, or **Apply BOS Estimate**.
 

@@ -5,7 +5,7 @@ The Uncertainty simulation option is available for the Detailed PV and PVWatts p
 
 For descriptions of this implementation of uncertainty modeling, see:
 
-* Prilliman, M.; Hansen, C.; Keith, J.; Janzou, S.; Theristis, M.; Scheiner, A.; Ozakyol, E. (2023) Quantifying Uncertainty in PV Energy Estimates Final Report. National Renewable Energy Laboratory. 18 pp. NREL/TP-7A40-84993 (`PDF 541 KB <https://docs.nlr.gov/docs/fy23osti/84993.pdf>`__)
+* Prilliman, M.; Hansen, C.; Keith, J.; Janzou, S.; Theristis, M.; Scheiner, A.; Ozakyol, E. (2023) Quantifying Uncertainty in PV Energy Estimates Final Report. National Renewable Energy Laboratory. NREL/TP-7A40-84993 (`PDF 541 KB <https://docs.nlr.gov/docs/fy23osti/84993.pdf>`__)
 
 * C.; Moser, D.; Belluardo, G.; Ingenhoven, P. (2018) `Uncertainties in PV System Yield Predictions and Assessments <https://iea-pvps.org/wp-content/uploads/2020/01/Uncertainties_in_PV_System_Yield_Predictions_and_Assessments_by_Task_13.pdf>`__, PVPS Report IEA-PVPS T13-12:2018, International Energy Agency (IEA) Photovoltaic Power Systems Programme (PVPS).
 

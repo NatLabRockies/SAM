@@ -8,7 +8,7 @@ This topic lists all of SAM's performance models and describes the component-lev
 System Performance Models
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The system models represent a complete renewable energy system and were developed by NREL using algorithms from partners listed below.
+The system models represent a complete renewable energy system and were developed by NLR using algorithms from partners listed below.
 
 .. list-table::
    :width: 100%

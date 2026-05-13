@@ -131,7 +131,7 @@ When you add a weather file to the solar resource library, SAM reads weather dat
 
 About the NSRDB
 ~~~~~~~~~~~~~~~
-The `NREL National Solar Radiation Database (NSRDB) <https://nsrdb.nlr.gov/>`__ is an online database of weather files containing solar resource data in the :doc:`SAM CSV format <../weather-file-formats/weather_format_sam_csv_solar>`. Files are available both as :doc:`typical-year <../weather-data/weather_typical_single>` files and :doc:`single-year <../weather-data/weather_typical_single>` files. The database covers the parts of the world shown in the map below. The current data is called PSM (Physical Solar Model).
+The `NLR National Solar Radiation Database (NSRDB) <https://nsrdb.nlr.gov/>`__ is an online database of weather files containing solar resource data in the :doc:`SAM CSV format <../weather-file-formats/weather_format_sam_csv_solar>`. Files are available both as :doc:`typical-year <../weather-data/weather_typical_single>` files and :doc:`single-year <../weather-data/weather_typical_single>` files. The database covers the parts of the world shown in the map below. The current data is called PSM (Physical Solar Model).
 
 .. image:: /images/IMG_NSRDB-map.png
    :align: center
@@ -142,7 +142,7 @@ The `NREL National Solar Radiation Database (NSRDB) <https://nsrdb.nlr.gov/>`__ 
  
 
 
-.. note:: The NSRDB requires an email address to download weather file. When you download a weather file from SAM, SAM submits the email address that you used to :doc:`register SAM <../reference/registration>`. NREL uses your email address to determine how many people are using the NSRDB. It does not share email addresses.
+.. note:: The NSRDB requires an email address to download weather file. When you download a weather file from SAM, SAM submits the email address that you used to :doc:`register SAM <../reference/registration>`. NLR uses your email address to determine how many people are using the NSRDB. It does not share email addresses.
 
 
 .. note:: SAM uses the `Google Maps API Geocoding Service <https://developers.google.com/maps/documentation/geocoding/>`__ service to identify the geographic coordinates (latitude and longitude) of a location when you type a street address or city and state name to identify the location.
