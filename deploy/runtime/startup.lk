@@ -400,7 +400,7 @@ function setup_host_developer_pages(mode) // third party host-developer
   addpage( [[  { 'name'='Financial Tax Credits','caption'='Tax Credits','collapsible'=true,'collapsible_var'='show_tax_credits', 'collapsed_by_default'=false },
 				  { 'name'= 'Financial ITC Qualification', 'caption'='ITC Qualification', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
 				  { 'name'='Financial Cash Incentives','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false },
-				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
+				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Basis and Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
 				'Financial Depreciation Detailed'  ]],
 			   { 'sidebar'='Incentives and Depreciation', 'help'='incentives' } );
   setup_utility_rate();
@@ -424,7 +424,7 @@ function setup_host_developer_pages_hybrid(mode) // third party host-developer
   addpage( [[  { 'name'='Financial Tax Credits','caption'='Tax Credits','collapsible'=true,'collapsible_var'='show_tax_credits', 'collapsed_by_default'=false },
 				  { 'name'= 'Financial ITC Qualification Hybrid', 'caption'='ITC Qualification', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
 				  { 'name'='Financial Cash Incentives','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false },
-				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
+				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Basis and Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
 		       'Financial Depreciation Detailed'  ]],
 			   { 'sidebar'='Incentives and Depreciation', 'help'='incentives' } );
   setup_utility_rate();
@@ -470,7 +470,7 @@ function setup_commercial_pages( mode ) // mode determines whether or not the bu
              { 'name'='Financial Tax Credits','caption'='Tax Credits','collapsible'=true,'collapsible_var'='show_tax_credits', 'collapsed_by_default'=false },
 			  { 'name'= 'Financial ITC Qualification', 'caption'='ITC Qualification', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
 			  { 'name'='Financial Cash Incentives','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false },
-			  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
+			  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Basis and Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
 			  'Financial Depreciation Detailed' ]],
 			   { 'sidebar'='Incentives and Depreciation', 'help'='incentives' } );
  setup_utility_rate();
@@ -534,13 +534,12 @@ function setup_single_owner_pages()
 			    { 'name'='Financial Curtailment Price', 'caption'='Curtailment Payments', 'collapsible'=true, 'collapsible_var'='revenue_curtailment_is_shown', 'collapsed_by_default'=true },
 			    { 'name'='Financial Non Energy Revenue', 'caption'='Non-Energy Revenue and Expenses', 'collapsible'=true, 'collapsible_var'='non_energy_revenue_is_shown', 'collapsed_by_default'=true } ]],
             { 'sidebar'='Revenue', 'help'='revenue/revenue_ppa' } );
-  addpage( [[  { 'name'='Financial Tax Credits','caption'='Tax Credits','collapsible'=true,'collapsible_var'='show_tax_credits', 'collapsed_by_default'=false },
+  addpage( [[ 'Financial Cash Incentives', ]], { 'sidebar'='Cash Incentives', 'help'='incentives' } );           
+  addpage( [[  'Financial Tax Credits',
 				  { 'name'= 'Financial ITC Qualification', 'caption'='ITC Qualification', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
-				  { 'name'='Financial Cash Incentives','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false },
-				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
+				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Basis and Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
 				'Financial Depreciation Detailed'  ]],
-			   { 'sidebar'='Incentives and Depreciation', 'help'='incentives' } );
-
+			   { 'sidebar'='Tax Credits Depreciation', 'help'='incentives' } );
 }
 
 function setup_single_owner_pages_hybrid()
@@ -563,7 +562,7 @@ function setup_single_owner_pages_hybrid()
   addpage( [[  { 'name'='Financial Tax Credits','caption'='Tax Credits','collapsible'=true,'collapsible_var'='show_tax_credits', 'collapsed_by_default'=false },
 				  { 'name'= 'Financial ITC Qualification Hybrid', 'caption'='ITC Qualification', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
 				  { 'name'='Financial Cash Incentives','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false },
-				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
+				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Basis and Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
 		       'Financial Depreciation Detailed'  ]],
 			   { 'sidebar'='Incentives and Depreciation', 'help'='incentives' } );
 }
@@ -587,7 +586,7 @@ function setup_community_solar_pages()
   addpage( [[  { 'name'='Financial Tax Credits','caption'='Tax Credits','collapsible'=true,'collapsible_var'='show_tax_credits', 'collapsed_by_default'=false },
 				  { 'name'= 'Financial ITC Qualification', 'caption'='ITC Qualification', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
 				  { 'name'='Financial Cash Incentives','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false },
-				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
+				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Basis and Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
 				'Financial Depreciation Detailed'  ]],
 			   { 'sidebar'='Incentives and Depreciation', 'help'='incentives' } );
 }
@@ -617,7 +616,7 @@ function setup_single_owner_dispatch_pages()
   addpage( [[  { 'name'='Financial Tax Credits','caption'='Tax Credits','collapsible'=true,'collapsible_var'='show_tax_credits', 'collapsed_by_default'=false },
 				  { 'name'= 'Financial ITC Qualification', 'caption'='ITC Qualification', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
 				  { 'name'='Financial Cash Incentives','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false },
-				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
+				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Basis and Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
 				'Financial Depreciation Detailed'  ]],
 			   { 'sidebar'='Incentives and Depreciation', 'help'='incentives' } );
 }
@@ -646,7 +645,7 @@ function setup_merchant_plant_pages()
   addpage( [[  { 'name'='Financial Tax Credits','caption'='Tax Credits','collapsible'=true,'collapsible_var'='show_tax_credits', 'collapsed_by_default'=false },
 				  { 'name'= 'Financial ITC Qualification', 'caption'='ITC Qualification', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
 				  { 'name'='Financial Cash Incentives','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false },
-				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
+				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Basis and Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
 				'Financial Depreciation Detailed'  ]],
 			   { 'sidebar'='Incentives and Depreciation', 'help'='incentives' } );
 }
@@ -671,7 +670,7 @@ function setup_leveraged_partnership_flip_pages()
   addpage( [[  { 'name'='Financial Tax Credits','caption'='Tax Credits','collapsible'=true,'collapsible_var'='show_tax_credits', 'collapsed_by_default'=false },
 				  { 'name'= 'Financial ITC Qualification', 'caption'='ITC Qualification', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
 				  { 'name'='Financial Cash Incentives','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false },
-				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
+				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Basis and Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
 				'Financial Depreciation Detailed'  ]],
 			   { 'sidebar'='Incentives and Depreciation', 'help'='incentives' } );
 }
@@ -696,7 +695,7 @@ function setup_all_equity_partnership_flip_pages()
   addpage( [[  { 'name'='Financial Tax Credits','caption'='Tax Credits','collapsible'=true,'collapsible_var'='show_tax_credits', 'collapsed_by_default'=false },
 				  { 'name'= 'Financial ITC Qualification', 'caption'='ITC Qualification', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
 				  { 'name'='Financial Cash Incentives','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false },
-				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
+				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Basis and Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
 				'Financial Depreciation Detailed'  ]],
 			   { 'sidebar'='Incentives and Depreciation', 'help'='incentives' } );
 }
@@ -720,7 +719,7 @@ function setup_sale_leaseback_pages()
   addpage( [[  { 'name'='Financial Tax Credits','caption'='Tax Credits','collapsible'=true,'collapsible_var'='show_tax_credits', 'collapsed_by_default'=false },
 				  { 'name'= 'Financial ITC Qualification', 'caption'='ITC Qualification', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
 				  { 'name'='Financial Cash Incentives','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false },
-				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
+				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Basis and Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
 				'Financial Depreciation Detailed'  ]],
 			   { 'sidebar'='Incentives and Depreciation', 'help'='incentives' } );
 }
@@ -1172,7 +1171,7 @@ addpage( [[ 'Financial Solution Mode Single Owner IPH',
 addpage( [[ 'Financial Tax Credits IPH',
 		  { 'name'= 'Financial ITC Qualification', 'caption'='ITC Qualification', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
 		  { 'name'='Financial Cash Incentives IPH','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false },
-		  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
+		  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Basis and Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
 		  'Financial Depreciation Detailed'  ]],
           { 'sidebar'='Incentives and Depreciation', 'help'='incentives-and-depreciation/incentives' } );
 
@@ -1196,7 +1195,7 @@ addpage( [[ 'Financial Debt Min DSCR',
 addpage( [[ 'Financial Tax Credits IPH',
 				{ 'name'= 'Financial ITC Qualification', 'caption'='ITC Qualification', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
 				  { 'name'='Financial Cash Incentives IPH','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false },
-				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false }
+				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Basis and Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false }
 				]],
            { 'sidebar'='Incentives', 'help'='incentives-and-depreciation/incentives' } );
 addpage( [[ 'Utility Rate - Flat',
@@ -2051,7 +2050,7 @@ addpage( [[ 'Financial Solution Mode Single Owner IPH',
 addpage( [[ 'Financial Tax Credits IPH',
 		  { 'name'= 'Financial ITC Qualification', 'caption'='ITC Qualification', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
 		  { 'name'='Financial Cash Incentives IPH','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false },
-		  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
+		  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Basis and Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
 		  'Financial Depreciation Detailed'  ]],
 		  { 'sidebar'='Incentives and Depreciation', 'help'='incentives-and-depreciation/incentives' } );
 //-----------------------------------------------------
@@ -2148,7 +2147,7 @@ addpage( [[ 'Financial Solution Mode Single Owner IPH',
 addpage( [[ 'Financial Tax Credits IPH',
 		  { 'name'= 'Financial ITC Qualification', 'caption'='ITC Qualification', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
 		  { 'name'='Financial Cash Incentives IPH','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false },
-		  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
+		  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Basis and Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
 		  'Financial Depreciation Detailed'  ]],
 		  { 'sidebar'='Incentives and Depreciation', 'help'='incentives-and-depreciation/incentives' } );
 
@@ -2390,7 +2389,7 @@ addpage( [[ 'Financial Solution Mode Single Owner IPH',
 addpage( [[ 'Financial Tax Credits IPH',
 		  { 'name'= 'Financial ITC Qualification', 'caption'='ITC Qualification', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
 		  { 'name'='Financial Cash Incentives IPH','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false },
-		  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
+		  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Basis and Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
 		  'Financial Depreciation Detailed'  ]],
 		  { 'sidebar'='Incentives and Depreciation', 'help'='incentives-and-depreciation/incentives' } );
 //setup_single_owner_dispatch_pages();
@@ -2415,7 +2414,7 @@ addpage( [[ 'Financial Debt Min DSCR',
 addpage( [[ 'Financial Tax Credits IPH',
 				{ 'name'= 'Financial ITC Qualification', 'caption'='ITC Qualification', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
 				  { 'name'='Financial Cash Incentives IPH','caption'='Direct Cash Incentives','collapsible'=true,'collapsible_var'='show_cash_incentives', 'collapsed_by_default'=false },
-				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
+				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Basis and Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
 				]],
            { 'sidebar'='Incentives', 'help'='incentives-and-depreciation/incentives' } );
 addpage( [[ 'Utility Rate - Flat',

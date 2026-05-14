@@ -1,651 +1,8 @@
 {
     "Name": "Financial ITC Depreciation Allocation",
-    "Width": 867.0,
-    "Height": 291.0,
+    "Width": 860.0,
+    "Height": 196.0,
     "FormObjects": {
-        "Label": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "Label12112131"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 744.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 48.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 83.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Caption": {
-                    "Type": 5.0,
-                    "String": "Allocations"
-                },
-                "TextColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "Bold": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "FontSize": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "WordWrap": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "AlignRight": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "AlignTop": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "depr_alloc_custom_percent"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 762.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 237.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 65.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": " %"
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": 7.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "depr_alloc_macrs_15_percent"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 762.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 99.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 65.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": " %"
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": 2.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "depr_alloc_macrs_5_percent"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 762.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 72.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 65.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": " %"
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "depr_alloc_sl_15_percent"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 762.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 153.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 65.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": " %"
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": 4.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "depr_alloc_sl_20_percent_calc"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 762.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 180.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 65.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": " %"
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": 5.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "depr_alloc_sl_39_percent"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 762.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 207.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 65.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": " %"
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": 6.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "depr_alloc_sl_5_percent"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 762.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 126.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 65.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": " %"
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                }
-            }
-        },
         "RadioChoice": {
             "Visible": 1.0,
             "ObjectProperties": {
@@ -659,7 +16,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 30.0
+                    "Integer": 81.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -667,7 +24,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 90.0
+                    "Integer": 48.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -679,7 +36,7 @@
                 },
                 "Items": {
                     "Type": 6.0,
-                    "StringList": "Calculated (federal)|Calculated (state)"
+                    "StringList": "Use federal ITC qualifying cost as depreciation basis|Use state ITC qualifying cost as depreciation basis"
                 },
                 "ShowCaptions": {
                     "Type": 2.0,
@@ -704,11 +61,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 312.0
+                    "Integer": 267.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 123.0
+                    "Integer": 132.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -745,11 +102,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 576.0
+                    "Integer": 531.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 123.0
+                    "Integer": 132.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -828,11 +185,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 312.0
+                    "Integer": 267.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 165.0
+                    "Integer": 159.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -869,11 +226,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 576.0
+                    "Integer": 531.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 165.0
+                    "Integer": 159.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -964,7 +321,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 279.0
+                    "Integer": 186.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -972,9 +329,71 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "Depreciation - ITC allocations"
+                    "String": "Depreciation Basis for ITC Qualifying Cost from System Components"
                 },
                 "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 7"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 15.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 825.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 54.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "These inputs are available for the \"Determine ITC basis from system components\" option above. This option allows for only two depreciation classes: One for ITC qualifying costs and another for costs that do not qualify for the ITC. Choose whether the depreciation basis is the federal ITC qualifying cost or the state ITC qualifying cost, and then choose the depreciation classes that apply to those costs."
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
                     "Type": 2.0,
                     "Boolean": 1.0
                 }
@@ -982,118 +401,27 @@
         }
     },
     "VarDatabase": {
-        "depr_alloc_custom_percent_calc": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "",
-            "Units": "",
-            "Group": "",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "depr_alloc_macrs_15_percent_calc": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "",
-            "Units": "",
-            "Group": "",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "depr_alloc_macrs_5_percent_calc": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "",
-            "Units": "",
-            "Group": "",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "depr_alloc_sl_15_percent_calc": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "",
-            "Units": "",
-            "Group": "",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "depr_alloc_sl_20_percent_calc": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "",
-            "Units": "",
-            "Group": "",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "depr_alloc_sl_39_percent_calc": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "",
-            "Units": "",
-            "Group": "",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "depr_alloc_sl_5_percent_calc": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "",
-            "Units": "",
-            "Group": "",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
         "depr_allocation_choice": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "Depreciation basis choice",
             "Units": "",
             "Group": "",
-            "IndexLabels": "",
-            "Flags": 0.0,
+            "IndexLabels": "Use federal ITC qualifying cost as depreciation basis|Use state ITC qualifying cost as depreciation basis",
+            "Flags": 3.0,
             "DefaultValue": 0.0,
-            "UIObject": "Default",
+            "UIObject": "RadioChoice",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
         "itc_basis_depreciation_allocation": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "Use ITC basis for depreciation allocation?",
+            "Label": "Depreciation class for ITC qualifying cost",
             "Units": "",
             "Group": "",
-            "IndexLabels": "",
-            "Flags": 0.0,
+            "IndexLabels": "5-yr MACRS|15-yr MACRS|5-yr Straight Line|15-yr Straight Line|20-yr Straight Line|39-yr Straight Line|Custom|Non-depreciable",
+            "Flags": 2.0,
             "DefaultValue": 0.0,
             "UIObject": "Choice",
             "sscVariableName": "",
@@ -1108,18 +436,18 @@
             "IndexLabels": "",
             "Flags": 8.0,
             "DefaultValue": 0.0,
-            "UIObject": "Default",
+            "UIObject": "Numeric",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
         "non_itc_basis_depreciation_allocation": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "Depreciation allocation for non-ITC basis",
+            "Label": "Depreciation class for non-ITC qualifying cost",
             "Units": "",
             "Group": "",
             "IndexLabels": "",
-            "Flags": 0.0,
+            "Flags": 2.0,
             "DefaultValue": 0.0,
             "UIObject": "Choice",
             "sscVariableName": "",
@@ -1134,7 +462,7 @@
             "IndexLabels": "",
             "Flags": 8.0,
             "DefaultValue": 0.0,
-            "UIObject": "Default",
+            "UIObject": "Numeric",
             "sscVariableName": "",
             "sscVariableValue": ""
         }
@@ -1152,8 +480,9 @@
         "};\r",
         "\r",
         "equations{'$MIMO depreciation_percent'} = define() {\r",
+        "\t\treturn;\r",
         "\t//choice = ${depr_allocation_choice};\r",
-        "\tchoice = ${itc_qualification_choice};\r",
+        "/*\tchoice = ${itc_qualification_choice};\r",
         "\tpercent = 0;\r",
         "\tif (choice == 0) {\r",
         "\t\tdepr_choice = ${depr_allocation_choice};\r",
@@ -1167,7 +496,8 @@
         "\telse {\r",
         "\t\tpercent = -1;\r",
         "\t}\r",
-        "\t\t\r",
+        "*/\r",
+        "/*\t\t\r",
         "\tallocs = [];\r",
         "\tdepr_index = ${itc_basis_depreciation_allocation};\r",
         "\tnon_depr_index = ${non_itc_basis_depreciation_allocation};\r",
@@ -1211,7 +541,7 @@
         "\t${depr_alloc_sl_15_percent_calc} = allocs[3];\r",
         "\t${depr_alloc_sl_20_percent_calc} = allocs[4];\r",
         "\t${depr_alloc_sl_39_percent_calc} = allocs[5];\r",
-        "\t${depr_alloc_custom_percent_calc} = allocs[6];\r",
+        "\t${depr_alloc_custom_percent_calc} = allocs[6];*/\r",
         "};"
     ],
     "Callbacks": [
@@ -1227,7 +557,6 @@
         "on_change{'non_itc_basis_depreciation_allocation'} = define() {\r",
         "\titc_basis_depreciation_choice();\r",
         "};\r",
-        "\t\r",
         "\r",
         "\r",
         ""
