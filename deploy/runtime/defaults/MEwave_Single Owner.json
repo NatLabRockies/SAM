@@ -12075,10 +12075,10 @@
         10.5673,
         10.9004
     ],
-    "eng_and_mgmt_cost": 6862455.656910121,
     "energy_revenue_ret": [
         100.0
     ],
+    "eng_and_mgmt_cost": 6862455.656910121,
     "eng_and_mgmt_cost_input": 0.0,
     "eng_and_mgmt_cost_method": 2.0,
     "eng_and_mgmt_cost_modeled": 6862455.656910121,
@@ -22273,8 +22273,6 @@
     "navigation_lighting_cost": 0.0,
     "noise_mitigation_cost": 0.0,
     "nominal_discount_rate": 8.137499999999975,
-    "non_itc_basis_depreciation_allocation": 0.0,
-    "non_itc_basis_percent_depr": 100.0,
     "non_energy_expenses": [
         0.0
     ],
@@ -22290,6 +22288,8 @@
     "non_energy_revenue_ret": [
         0.0
     ],
+    "non_itc_basis_depreciation_allocation": 0.0,
+    "non_itc_basis_percent_depr": 100.0,
     "notes": "",
     "number_devices": 100.0,
     "number_hours": 0.0,

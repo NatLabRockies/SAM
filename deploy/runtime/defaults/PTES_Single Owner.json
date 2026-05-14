@@ -10453,8 +10453,6 @@
     "months_working_reserve": 6.0,
     "nameplate": 97.15893356941311,
     "nominal_discount_rate": 9.060000000000003,
-    "non_itc_basis_depreciation_allocation": 0.0,
-    "non_itc_basis_percent_depr": 100.0,
     "non_energy_expenses": [
         0.0
     ],
@@ -10470,6 +10468,8 @@
     "non_energy_revenue_ret": [
         0.0
     ],
+    "non_itc_basis_depreciation_allocation": 0.0,
+    "non_itc_basis_percent_depr": 100.0,
     "om_capacity": [
         66.0
     ],

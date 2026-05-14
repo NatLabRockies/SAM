@@ -10468,9 +10468,7 @@
     "n_m_dot_pars_sysdes": -1.0,
     "n_pl_inc": 8.0,
     "nameplate": 110.66571762935786,
-    "non_itc_basis_depreciation_allocation": 0.0,
-    "non_itc_basis_percent_depr": 100.0,
-    "nominal_discount_rate": 9.060000000000004,
+    "nominal_discount_rate": 9.060000000000003,
     "non_energy_expenses": [
         0.0
     ],
@@ -10486,6 +10484,8 @@
     "non_energy_revenue_ret": [
         0.0
     ],
+    "non_itc_basis_depreciation_allocation": 0.0,
+    "non_itc_basis_percent_depr": 100.0,
     "om_capacity": [
         66.0
     ],

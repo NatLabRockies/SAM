@@ -376,8 +376,7 @@
 			"cp_capacity_credit_percent": [0.000000],
 			"cp_capacity_payment_amount": [0.000000],
 			"cp_capacity_payment_esc": 0,
-			"cp_capacity_payment_type": 0,
-			"cp_system_nameplate": 276.923
+			"cp_capacity_payment_type": 0
 		},
 		"GridLimits": {
 			"grid_curtailment_price": [0.000000],
@@ -393,6 +392,14 @@
 		"Monthly": {
 		},
 		"NonEnergyRevenue": {
+			"energy_expenses_ret": [100.000000],
+			"energy_revenue_ret": [100.000000],
+			"non_energy_expenses": [0.000000],
+			"non_energy_expenses_escal": 0,
+			"non_energy_expenses_ret": [0.000000],
+			"non_energy_revenue": [0.000000],
+			"non_energy_revenue_escal": 0,
+			"non_energy_revenue_ret": [0.000000]
 		},
 		"HybridCosts": {
 			"total_installed_cost": 5.04009e+08

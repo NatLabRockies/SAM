@@ -19510,8 +19510,7 @@
     "mera_name3": "Replacement Reserve 3",
     "months_receivables_reserve": 0.0,
     "months_working_reserve": 6.0,
-    "non_itc_basis_depreciation_allocation": 0.0,
-    "non_itc_basis_percent_depr": 100.0,
+    "nominal_discount_rate": 9.060000000000003,
     "non_energy_expenses": [
         0.0
     ],
@@ -19527,6 +19526,8 @@
     "non_energy_revenue_ret": [
         0.0
     ],
+    "non_itc_basis_depreciation_allocation": 0.0,
+    "non_itc_basis_percent_depr": 100.0,
     "om_capacity": [
         110.0
     ],

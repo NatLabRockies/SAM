@@ -1671,6 +1671,14 @@ extern "C"
 	 */
 	SAM_EXPORT void SAM_CashloanHeat_ChargesByMonth_utility_bill_w_sys_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
 
+	/**
+	 * Set utility_bill_wo_sys: Electricity bill without system [$]
+	 * options: None
+	 * constraints: None
+	 * required if: *
+	 */
+	SAM_EXPORT void SAM_CashloanHeat_ChargesByMonth_utility_bill_wo_sys_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
+
 
 	//
 	// Battery parameters
@@ -2385,6 +2393,8 @@ extern "C"
 	SAM_EXPORT double* SAM_CashloanHeat_ChargesByMonth_true_up_credits_ym_mget(SAM_table ptr, int* nrows, int* ncols, SAM_error *err);
 
 	SAM_EXPORT double* SAM_CashloanHeat_ChargesByMonth_utility_bill_w_sys_aget(SAM_table ptr, int* length, SAM_error *err);
+
+	SAM_EXPORT double* SAM_CashloanHeat_ChargesByMonth_utility_bill_wo_sys_aget(SAM_table ptr, int* length, SAM_error *err);
 
 
 	/**

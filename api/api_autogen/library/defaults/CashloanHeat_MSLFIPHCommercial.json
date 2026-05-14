@@ -164,7 +164,8 @@
 [0]			],
 			"nm_dollars_applied_ym": [
 [0]			],
-			"utility_bill_w_sys": [0]
+			"utility_bill_w_sys": [0],
+			"utility_bill_wo_sys": [0]
 		},
 		"Battery": {
 		},
