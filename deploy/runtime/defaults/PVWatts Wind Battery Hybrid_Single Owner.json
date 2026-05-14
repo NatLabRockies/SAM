@@ -230,7 +230,7 @@
         "ui_step_minutes": 60.0,
         "ui_total_land_area_ha": 175.43871222814654,
         "ui_total_module_area": 526315.7894736842,
-        "ui_total_module_area_acres": 130.05534895540843,
+        "ui_total_module_area_acres": 130.05534895540846,
         "ui_total_module_area_ha": 52.63157894736842,
         "ui_use_acre_per_mw": 0.0,
         "use_specific_weather_file": 0.0,
@@ -274,7 +274,7 @@
         ],
         "desired_farm_size": 10.0,
         "elec_eff_loss": 1.91,
-        "elec_loss_total": 2.0080899999999959,
+        "elec_loss_total": 2.008089999999996,
         "elec_parasitic_loss": 0.1,
         "env_degrad_loss": 1.8,
         "env_env_loss": 0.4,
@@ -316,7 +316,7 @@
         "total_installed_cost_per_kw": 1587.4,
         "turb_generic_loss": 1.7,
         "turb_hysteresis_loss": 0.4,
-        "turb_loss_total": 3.9544963841199989,
+        "turb_loss_total": 3.954496384119999,
         "turb_perf_loss": 1.1,
         "turb_specific_loss": 0.81,
         "turbine_cost_fixed": 0.0,
@@ -1245,7 +1245,7 @@
         "batt_Qexp": 0.04000005,
         "batt_Qexp_percent": 1.77778,
         "batt_Qfull": 2.25,
-        "batt_Qfull_flow": 478583.99999999997,
+        "batt_Qfull_flow": 478584.0,
         "batt_Qnom": 2.0000002500000004,
         "batt_Qnom_percent": 88.8889,
         "batt_Vcut": 2.706,
@@ -12643,7 +12643,6 @@
         ],
         "cp_capacity_payment_esc": 0.0,
         "cp_capacity_payment_type": 0.0,
-        "cp_system_nameplate": 276.92307692307699,
         "custom_generation_basis_cost": 0.0,
         "customgeneration_itc_basis_cost_fed_include": 0.0,
         "customgeneration_itc_basis_cost_sta_include": 0.0,
@@ -21534,6 +21533,12 @@
         "dscr_reserve_months": 6.0,
         "en_electricity_rates": 1.0,
         "enable_interconnection_limit": 0.0,
+        "energy_expenses_ret": [
+            100.0
+        ],
+        "energy_revenue_ret": [
+            100.0
+        ],
         "equip1_reserve_cost": 0.1,
         "equip1_reserve_freq": 15.0,
         "equip2_reserve_cost": 0.0,
@@ -31054,6 +31059,21 @@
         "nominal_discount_rate": 9.060000000000003,
         "non_itc_basis_depreciation_allocation": 0.0,
         "non_itc_basis_percent_depr": 85.22642366809954,
+        "non_energy_expenses": [
+            0.0
+        ],
+        "non_energy_expenses_escal": 0.0,
+        "non_energy_expenses_ret": [
+            0.0
+        ],
+        "non_energy_revenue": [
+            0.0
+        ],
+        "non_energy_revenue_escal": 0.0,
+        "non_energy_revenue_is_shown": 0.0,
+        "non_energy_revenue_ret": [
+            0.0
+        ],
         "om_capacity": 0.0,
         "om_fixed": 0.0,
         "om_production": 0.0,
