@@ -63,7 +63,7 @@
 		"Uncertainty": {
 		},
 		"HybridCosts": {
-			"degradation": [0.640000],
+			"degradation": [0.000000],
 			"om_capacity": [39.000000],
 			"om_capacity_escal": 0,
 			"om_fixed": [0.000000],

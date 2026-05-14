@@ -33,7 +33,7 @@
     "avail_loss_total": 5.501168499999998,
     "avail_turb_loss": 3.58,
     "avail_turb_uncert": 2.3,
-    "avail_uncert_total": 2.5027185219277059,
+    "avail_uncert_total": 2.502718521927706,
     "batt_salvage_percentage": 0.0,
     "batt_salvage_value": 0.0,
     "bos_cost_fixed": 0.0,
@@ -11182,13 +11182,19 @@
     "dscr_reserve_months": 6.0,
     "elec_eff_loss": 1.91,
     "elec_eff_uncert": 1.0,
-    "elec_loss_total": 2.0080899999999959,
+    "elec_loss_total": 2.008089999999996,
     "elec_parasitic_loss": 0.1,
     "elec_parasitic_uncert": 0.05,
     "elec_uncert_total": 1.0012492197250394,
     "en_electricity_rates": 0.0,
     "en_wind_uncertainty": 0.0,
     "enable_interconnection_limit": 0.0,
+    "energy_expenses_ret": [
+        100.0
+    ],
+    "energy_revenue_ret": [
+        100.0
+    ],
     "env_degrad_loss": 1.8,
     "env_degrad_uncert": 2.2,
     "env_env_loss": 0.4,
@@ -20710,7 +20716,7 @@
     "meas_data_uncert": 0.3,
     "meas_dir_uncert": 0.0,
     "meas_speed_uncert": 2.0,
-    "meas_uncert_total": 2.0445048300260875,
+    "meas_uncert_total": 2.044504830026088,
     "mera_cost1": 0.0,
     "mera_cost2": 0.0,
     "mera_cost3": 0.0,
@@ -20719,7 +20725,22 @@
     "mera_name3": "Replacement Reserve 3",
     "months_receivables_reserve": 0.0,
     "months_working_reserve": 6.0,
-    "nominal_discount_rate": 9.060000000000003,
+    "nominal_discount_rate": 9.060000000000004,
+    "non_energy_expenses": [
+        0.0
+    ],
+    "non_energy_expenses_escal": 0.0,
+    "non_energy_expenses_ret": [
+        0.0
+    ],
+    "non_energy_revenue": [
+        0.0
+    ],
+    "non_energy_revenue_escal": 0.0,
+    "non_energy_revenue_is_shown": 0.0,
+    "non_energy_revenue_ret": [
+        0.0
+    ],
     "om_capacity": [
         40.0
     ],
@@ -20741,7 +20762,7 @@
     "ops_loss_total": 2.803467160000006,
     "ops_strategies_loss": 0.0,
     "ops_strategies_uncert": 0.0,
-    "ops_uncert_total": 2.5031979546172535,
+    "ops_uncert_total": 2.503197954617254,
     "payment_option": 0.0,
     "pbi_fed_amount": [
         0.0
@@ -20847,7 +20868,7 @@
     "turb_generic_uncert": 3.72,
     "turb_hysteresis_loss": 0.4,
     "turb_hysteresis_uncert": 1.0,
-    "turb_loss_total": 3.9544963841199989,
+    "turb_loss_total": 3.954496384119999,
     "turb_perf_loss": 1.1,
     "turb_specific_loss": 0.81,
     "turb_specific_uncert": 1.2,

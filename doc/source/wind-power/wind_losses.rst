@@ -5,11 +5,7 @@ The Losses page allows you to account for system performance losses that are not
 
 The losses inputs are designed to work with the inputs on the :doc:`Uncertainties <wind_uncertainties>` page when you enable the uncertainty model.
 
- 
-
-
 .. note:: The losses you specify on the Losses page apply in addition to any losses you specify on the :doc:`Wind Farm <wind_farm>` and :doc:`Grid <../grid/grid_limits>` pages.
-
 
 You can use the Losses inputs in conjunction with the inputs on the :doc:`Uncertainties <wind_uncertainties>` page to include losses in your uncertainty analysis.
 
@@ -47,4 +43,4 @@ Environmental losses account for performance degradation and shut downs caused b
 Curtailment / Operational Strategies Losses
 ...........................................
 
-These losses apply in addition to the curtailment losses from the :doc:`Grid <../grid/grid_limits>` page. If your project earns :doc:`revenue <../revenue/revenue>` for curtailment payments, SAM calculates that revenue from the grid limits curtailment rather than from the curtailment losses defined here. Grid curtailment may be required by the PPA or off-taker, or by physical limitations of the grid. Load curtailment are to mitigate loads. Environmental and permit curtailment may be required for birds, bats, marine mammals, flicker, and noise. Operational strategies accounts for periodic up-rating, down-rating, optimization, or shut-down not captured in the power curve or availability carve outs.
+These losses apply in addition to the curtailment losses from the :doc:`Grid <../grid/grid_limits>` page. If your project earns revenue for curtailment payments, SAM calculates that revenue from the grid limits curtailment rather than from the curtailment losses defined here. Grid curtailment may be required by the PPA or off-taker, or by physical limitations of the grid. Load curtailment are to mitigate loads. Environmental and permit curtailment may be required for birds, bats, marine mammals, flicker, and noise. Operational strategies accounts for periodic up-rating, down-rating, optimization, or shut-down not captured in the power curve or availability carve outs.

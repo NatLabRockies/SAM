@@ -20281,6 +20281,12 @@
     "en_user_spec_losses": 0.0,
     "en_wave_batt": 0.0,
     "enable_interconnection_limit": 0.0,
+    "energy_expenses_ret": [
+        100.0
+    ],
+    "energy_revenue_ret": [
+        100.0
+    ],
     "engr_fixed": 0.0,
     "engr_per_watt": 0.02,
     "engr_percent": 0.0,
@@ -29852,6 +29858,21 @@
     "months_receivables_reserve": 0.0,
     "months_working_reserve": 6.0,
     "nominal_discount_rate": 9.060000000000004,
+    "non_energy_expenses": [
+        0.0
+    ],
+    "non_energy_expenses_escal": 0.0,
+    "non_energy_expenses_ret": [
+        0.0
+    ],
+    "non_energy_revenue": [
+        0.0
+    ],
+    "non_energy_revenue_escal": 0.0,
+    "non_energy_revenue_is_shown": 0.0,
+    "non_energy_revenue_ret": [
+        0.0
+    ],
     "om_batt_capacity_cost": [
         7.25
     ],

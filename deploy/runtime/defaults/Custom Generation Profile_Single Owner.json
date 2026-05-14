@@ -1,4 +1,7 @@
 {
+    "ac_degradation": [
+        0.0
+    ],
     "adjust": 0.0,
     "adjust_constant": 0.0,
     "adjust_en_periods": 0.0,
@@ -9584,11 +9587,17 @@
     "en_electricity_rates": 0.0,
     "en_wave_batt": 0.0,
     "enable_interconnection_limit": 0.0,
+    "energy_expenses_ret": [
+        100.0
+    ],
     "energy_output_array": [
         0.0
     ],
     "energy_output_array_lifetime": [
         0.0
+    ],
+    "energy_revenue_ret": [
+        100.0
     ],
     "equip1_reserve_cost": 0.0,
     "equip1_reserve_freq": 12.0,
@@ -9606,9 +9615,6 @@
     "fixed_plant_input": 0.0,
     "flip_target_percent": 11.0,
     "flip_target_year": 20.0,
-    "ac_degradation": [
-        0.0
-    ],
     "grid_curtailment": [
         1e38,
         1e38,
@@ -19099,6 +19105,21 @@
     "months_working_reserve": 6.0,
     "nameplate_capacity": 100000.0,
     "nominal_discount_rate": 9.060000000000004,
+    "non_energy_expenses": [
+        0.0
+    ],
+    "non_energy_expenses_escal": 0.0,
+    "non_energy_expenses_ret": [
+        0.0
+    ],
+    "non_energy_revenue": [
+        0.0
+    ],
+    "non_energy_revenue_escal": 0.0,
+    "non_energy_revenue_is_shown": 0.0,
+    "non_energy_revenue_ret": [
+        0.0
+    ],
     "om_capacity": [
         25.0
     ],

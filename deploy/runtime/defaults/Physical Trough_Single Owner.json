@@ -12372,6 +12372,12 @@
     "elev": 773.0,
     "en_electricity_rates": 0.0,
     "enable_interconnection_limit": 0.0,
+    "energy_expenses_ret": [
+        100.0
+    ],
+    "energy_revenue_ret": [
+        100.0
+    ],
     "epsilon_3_11": [
         [
             100.0,
@@ -22302,7 +22308,22 @@
     "n_rad_tubes": 100.0,
     "nameplate": 99.9,
     "nodes": 2000.0,
-    "nominal_discount_rate": 9.060000000000003,
+    "nominal_discount_rate": 9.060000000000004,
+    "non_energy_expenses": [
+        0.0
+    ],
+    "non_energy_expenses_escal": 0.0,
+    "non_energy_expenses_ret": [
+        0.0
+    ],
+    "non_energy_revenue": [
+        0.0
+    ],
+    "non_energy_revenue_escal": 0.0,
+    "non_energy_revenue_is_shown": 0.0,
+    "non_energy_revenue_ret": [
+        0.0
+    ],
     "non_solar_field_land_area_multiplier": 1.4,
     "northsouth_field_sep": 20.0,
     "object 11": 0.0,
