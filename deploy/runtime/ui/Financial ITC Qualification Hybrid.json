@@ -1,7 +1,7 @@
 {
     "Name": "Financial ITC Qualification Hybrid",
-    "Width": 864.0,
-    "Height": 459.0,
+    "Width": 861.0,
+    "Height": 403.0,
     "FormObjects": {
         "Label": {
             "Visible": 1.0,
@@ -12,11 +12,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 624.0
+                    "Integer": 633.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 159.0
+                    "Integer": 150.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -74,11 +74,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 549.0
+                    "Integer": 534.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 159.0
+                    "Integer": 150.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -136,11 +136,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 522.0
+                    "Integer": 528.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 138.0
+                    "Integer": 126.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -156,7 +156,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "ITC Qualification"
+                    "String": "Qualifies for ITC"
                 },
                 "TextColour": {
                     "Type": 4.0,
@@ -202,7 +202,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 213.0
+                    "Integer": 198.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -285,7 +285,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 216.0
+                    "Integer": 201.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -322,11 +322,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 645.0
+                    "Integer": 663.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 216.0
+                    "Integer": 201.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -367,7 +367,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 213.0
+                    "Integer": 198.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -450,11 +450,11 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 213.0
+                    "Integer": 198.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 90.0
+                    "Integer": 21.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -512,7 +512,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 297.0
+                    "Integer": 279.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -591,11 +591,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 645.0
+                    "Integer": 663.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 300.0
+                    "Integer": 279.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -636,7 +636,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 300.0
+                    "Integer": 279.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -677,7 +677,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 297.0
+                    "Integer": 279.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -760,11 +760,11 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 297.0
+                    "Integer": 279.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 90.0
+                    "Integer": 21.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -822,7 +822,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 267.0
+                    "Integer": 252.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -905,7 +905,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 270.0
+                    "Integer": 255.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -942,11 +942,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 645.0
+                    "Integer": 663.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 270.0
+                    "Integer": 255.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -987,7 +987,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 267.0
+                    "Integer": 252.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1070,11 +1070,11 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 267.0
+                    "Integer": 252.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 90.0
+                    "Integer": 21.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -1132,7 +1132,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 327.0
+                    "Integer": 306.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1215,7 +1215,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 330.0
+                    "Integer": 306.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1248,56 +1248,15 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "hybrid_itc_basis_cost_fed_include11"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 564.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 243.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Caption": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "State": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": 27.0
-                }
-            }
-        },
-        "CheckBox": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
                     "String": "hybrid_itc_basis_cost_sta_include"
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 645.0
+                    "Integer": 663.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 330.0
+                    "Integer": 306.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1325,47 +1284,6 @@
                 }
             }
         },
-        "CheckBox": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "hybrid_itc_basis_cost_sta_include25"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 645.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 243.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 21.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Caption": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "State": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": 28.0
-                }
-            }
-        },
         "Numeric": {
             "Visible": 1.0,
             "ObjectProperties": {
@@ -1379,7 +1297,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 327.0
+                    "Integer": 306.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1462,11 +1380,11 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 327.0
+                    "Integer": 306.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 90.0
+                    "Integer": 21.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -1520,11 +1438,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 528.0
+                    "Integer": 495.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 378.0
+                    "Integer": 336.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1603,11 +1521,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 630.0
+                    "Integer": 594.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 378.0
+                    "Integer": 336.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1686,11 +1604,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 528.0
+                    "Integer": 495.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 414.0
+                    "Integer": 363.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1769,11 +1687,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 633.0
+                    "Integer": 594.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 414.0
+                    "Integer": 363.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1852,19 +1770,19 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 609.0
+                    "Integer": 453.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 33.0
+                    "Integer": 78.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 237.0
+                    "Integer": 360.0
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 96.0
+                    "Integer": 24.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -1872,12 +1790,12 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "When Depreciation Driven is selected, controls for setting the ITC basis are set on the Depreciation page"
+                    "String": "See depreciation class allocations below."
                 },
                 "TextColour": {
                     "Type": 4.0,
                     "Color": {
-                        "Red": 255.0,
+                        "Red": 0.0,
                         "Green": 0.0,
                         "Blue": 0.0,
                         "Alpha": 255.0
@@ -1914,19 +1832,19 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 42.0
+                    "Integer": 27.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 72.0
+                    "Integer": 78.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 297.0
+                    "Integer": 423.0
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 90.0
+                    "Integer": 51.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -1938,7 +1856,7 @@
                 },
                 "Items": {
                     "Type": 6.0,
-                    "StringList": "Selected from system components|Selected from depreciation schedules"
+                    "StringList": "Determine ITC qualification from system components|Determine ITC qualification frrom depreciation class allocations"
                 },
                 "ShowCaptions": {
                     "Type": 2.0,
@@ -1975,7 +1893,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 448.0
+                    "Integer": 391.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -2000,15 +1918,15 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 312.0
+                    "Integer": 105.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 414.0
+                    "Integer": 363.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 213.0
+                    "Integer": 387.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -2020,7 +1938,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "Percent of total installed cost: "
+                    "String": "ITC qualifying cost percent of total installed cost"
                 },
                 "TextColour": {
                     "Type": 4.0,
@@ -2062,7 +1980,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 18.0
+                    "Integer": 15.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -2070,11 +1988,11 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 348.0
+                    "Integer": 825.0
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 42.0
+                    "Integer": 48.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -2082,7 +2000,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "The ITC basis is determined by a calculation that is:"
+                    "String": "Choose whether to determine ITC qualifying costs from system components or from depreciation class allocations. Determining from system components is designed for systems with battery storage when only that equipment qualifies for the ITC. See Help for details."
                 },
                 "TextColour": {
                     "Type": 4.0,
@@ -2120,23 +2038,23 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "object 723"
+                    "String": "object 732"
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 366.0
+                    "Integer": 105.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 27.0
+                    "Integer": 336.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 237.0
+                    "Integer": 387.0
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 105.0
+                    "Integer": 24.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -2144,7 +2062,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "System subcomponents may not be represented on this page depending on technology. The percentage of overall costs attributed to each system subcomponent can be determine on the Installation Costs page"
+                    "String": "ITC qualifying cost amount"
                 },
                 "TextColour": {
                     "Type": 4.0,
@@ -2165,15 +2083,15 @@
                 },
                 "WordWrap": {
                     "Type": 2.0,
-                    "Boolean": 1.0
+                    "Boolean": 0.0
                 },
                 "AlignRight": {
                     "Type": 2.0,
-                    "Boolean": 0.0
+                    "Boolean": 1.0
                 },
                 "AlignTop": {
                     "Type": 2.0,
-                    "Boolean": 1.0
+                    "Boolean": 0.0
                 }
             }
         },
@@ -2190,7 +2108,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 183.0
+                    "Integer": 171.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2273,7 +2191,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 186.0
+                    "Integer": 174.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2310,11 +2228,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 645.0
+                    "Integer": 663.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 186.0
+                    "Integer": 174.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2355,7 +2273,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 183.0
+                    "Integer": 171.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2438,11 +2356,11 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 183.0
+                    "Integer": 171.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 90.0
+                    "Integer": 21.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -2500,7 +2418,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 240.0
+                    "Integer": 225.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2583,7 +2501,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 243.0
+                    "Integer": 228.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2620,11 +2538,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 645.0
+                    "Integer": 663.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 243.0
+                    "Integer": 228.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2665,7 +2583,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 240.0
+                    "Integer": 225.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2748,11 +2666,11 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 240.0
+                    "Integer": 225.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 90.0
+                    "Integer": 21.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -2802,24 +2720,24 @@
         "batt_basis_cost": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "Battery installed cost",
+            "Label": "Battery storage installed cost",
             "Units": "$",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
             "Flags": 8.0,
             "DefaultValue": 0.0,
-            "UIObject": "Default",
+            "UIObject": "Numeric",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
         "batt_itc_basis_cost_fed_include": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "Battery storage cost qualifies for federal ITC",
             "Units": "",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
-            "Flags": 0.0,
+            "Flags": 3.0,
             "DefaultValue": 0.0,
             "UIObject": "CheckBox",
             "sscVariableName": "",
@@ -2830,7 +2748,7 @@
             "Type": 1.0,
             "Label": "",
             "Units": "",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
             "Flags": 0.0,
             "DefaultValue": 0.0,
@@ -2841,11 +2759,11 @@
         "batt_itc_basis_cost_sta_include": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "Battery storage cost qualifies for state ITC",
             "Units": "",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
-            "Flags": 0.0,
+            "Flags": 3.0,
             "DefaultValue": 0.0,
             "UIObject": "CheckBox",
             "sscVariableName": "",
@@ -2854,11 +2772,11 @@
         "batt_itc_basis_percent": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "Battery storage installed cost per cent",
             "Units": "",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
-            "Flags": 8.0,
+            "Flags": 9.0,
             "DefaultValue": 0.0,
             "UIObject": "Numeric",
             "sscVariableName": "",
@@ -2869,22 +2787,22 @@
             "Type": 1.0,
             "Label": "Custom generation installed cost",
             "Units": "$",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
             "Flags": 8.0,
             "DefaultValue": 0.0,
-            "UIObject": "Default",
+            "UIObject": "Numeric",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
         "customgeneration_itc_basis_cost_fed_include": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "Custom generation cost qualifies for federal ITC",
             "Units": "",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
-            "Flags": 0.0,
+            "Flags": 3.0,
             "DefaultValue": 0.0,
             "UIObject": "CheckBox",
             "sscVariableName": "",
@@ -2893,11 +2811,11 @@
         "customgeneration_itc_basis_cost_sta_include": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "Custom generation cost qualifies for state ITC",
             "Units": "",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
-            "Flags": 0.0,
+            "Flags": 3.0,
             "DefaultValue": 0.0,
             "UIObject": "CheckBox",
             "sscVariableName": "",
@@ -2906,13 +2824,13 @@
         "customgeneration_itc_basis_percent": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "Custom generation installed cost percent",
             "Units": "",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
-            "Flags": 8.0,
+            "Flags": 9.0,
             "DefaultValue": 0.0,
-            "UIObject": "Default",
+            "UIObject": "Numeric",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
@@ -2921,7 +2839,7 @@
             "Type": 3.0,
             "Label": "",
             "Units": "",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
             "Flags": 8.0,
             "DefaultValue": [
@@ -2938,7 +2856,7 @@
             "Type": 1.0,
             "Label": "",
             "Units": "",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
             "Flags": 8.0,
             "DefaultValue": 0.0,
@@ -2951,7 +2869,7 @@
             "Type": 1.0,
             "Label": "",
             "Units": "",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
             "Flags": 0.0,
             "DefaultValue": 0.0,
@@ -2964,7 +2882,7 @@
             "Type": 1.0,
             "Label": "",
             "Units": "",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
             "Flags": 0.0,
             "DefaultValue": 0.0,
@@ -2977,22 +2895,22 @@
             "Type": 1.0,
             "Label": "Fuel cell installed cost",
             "Units": "$",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
             "Flags": 8.0,
             "DefaultValue": 0.0,
-            "UIObject": "Default",
+            "UIObject": "Numeric",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
         "fuel_cell_itc_basis_cost_fed_include": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "Fuel cell cost qualifies for federal ITC",
             "Units": "",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
-            "Flags": 0.0,
+            "Flags": 3.0,
             "DefaultValue": 0.0,
             "UIObject": "CheckBox",
             "sscVariableName": "",
@@ -3001,11 +2919,11 @@
         "fuel_cell_itc_basis_cost_sta_include": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "Fuel cell cost qualifies for state ITC",
             "Units": "",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
-            "Flags": 0.0,
+            "Flags": 3.0,
             "DefaultValue": 0.0,
             "UIObject": "CheckBox",
             "sscVariableName": "",
@@ -3014,13 +2932,13 @@
         "fuel_cell_itc_basis_percent": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "Fuel cell installed cost percent",
             "Units": "",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
-            "Flags": 8.0,
+            "Flags": 9.0,
             "DefaultValue": 0.0,
-            "UIObject": "Default",
+            "UIObject": "Numeric",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
@@ -3029,7 +2947,7 @@
             "Type": 1.0,
             "Label": "Hybrid installed cost",
             "Units": "$",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
             "Flags": 8.0,
             "DefaultValue": 0.0,
@@ -3040,11 +2958,11 @@
         "hybrid_itc_basis_cost_fed_include": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "Hybrid installed cost qualifies for federal ITC",
             "Units": "",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
-            "Flags": 0.0,
+            "Flags": 3.0,
             "DefaultValue": 0.0,
             "UIObject": "CheckBox",
             "sscVariableName": "",
@@ -3053,11 +2971,11 @@
         "hybrid_itc_basis_cost_sta_include": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "Hybrid installed cost qualifies for state ITC",
             "Units": "",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
-            "Flags": 0.0,
+            "Flags": 3.0,
             "DefaultValue": 0.0,
             "UIObject": "CheckBox",
             "sscVariableName": "",
@@ -3066,13 +2984,13 @@
         "hybrid_itc_basis_percent": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "Hybrid installed cost percent",
             "Units": "",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
-            "Flags": 8.0,
+            "Flags": 9.0,
             "DefaultValue": 0.0,
-            "UIObject": "Default",
+            "UIObject": "Numeric",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
@@ -3081,7 +2999,7 @@
             "Type": 1.0,
             "Label": "ITC basis cost",
             "Units": "$",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
             "Flags": 8.0,
             "DefaultValue": 0.0,
@@ -3092,52 +3010,52 @@
         "itc_basis_cost_capex_fed": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "Total ITC Qualified Installed Cost",
+            "Label": "Federal ITC qualifying cost amount",
             "Units": "$",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
-            "Flags": 8.0,
+            "Flags": 9.0,
             "DefaultValue": 0.0,
-            "UIObject": "Default",
+            "UIObject": "Numeric",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
         "itc_basis_cost_capex_sta": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "State ITC qualifying cost amount",
             "Units": "$",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
-            "Flags": 8.0,
+            "Flags": 9.0,
             "DefaultValue": 0.0,
-            "UIObject": "Default",
+            "UIObject": "Numeric",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
         "itc_basis_cost_percent_fed": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "Federal ITC qualifying costs percent of total installed cost",
             "Units": "%",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
-            "Flags": 8.0,
+            "Flags": 9.0,
             "DefaultValue": 0.0,
-            "UIObject": "Default",
+            "UIObject": "Numeric",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
         "itc_basis_cost_percent_sta": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "State ITC qualifying costs percent of total installed cost",
             "Units": "%",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
-            "Flags": 8.0,
+            "Flags": 9.0,
             "DefaultValue": 0.0,
-            "UIObject": "Default",
+            "UIObject": "Numeric",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
@@ -3146,7 +3064,7 @@
             "Type": 1.0,
             "Label": "",
             "Units": "",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
             "Flags": 0.0,
             "DefaultValue": 0.0,
@@ -3159,8 +3077,8 @@
             "Type": 1.0,
             "Label": "",
             "Units": "",
-            "Group": "",
-            "IndexLabels": "",
+            "Group": "ITC Qualifying Costs",
+            "IndexLabels": "Determine ITC qualification from system components|Determine ITC qualification frrom depreciation class allocations",
             "Flags": 0.0,
             "DefaultValue": 0.0,
             "UIObject": "RadioChoice",
@@ -3172,20 +3090,20 @@
             "Type": 1.0,
             "Label": "PV installed cost",
             "Units": "$",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
             "Flags": 8.0,
             "DefaultValue": 0.0,
-            "UIObject": "Default",
+            "UIObject": "Numeric",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
         "pv_itc_basis_cost": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "PV cost",
+            "Label": "PV installed cost",
             "Units": "",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
             "Flags": 8.0,
             "DefaultValue": 0.0,
@@ -3196,11 +3114,11 @@
         "pv_itc_basis_cost_fed_include": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "PV cost qualifies for federal ITC",
             "Units": "",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
-            "Flags": 0.0,
+            "Flags": 3.0,
             "DefaultValue": 0.0,
             "UIObject": "CheckBox",
             "sscVariableName": "",
@@ -3209,11 +3127,11 @@
         "pv_itc_basis_cost_sta_include": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "PV cost qualifies for state ITC",
             "Units": "",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
-            "Flags": 0.0,
+            "Flags": 3.0,
             "DefaultValue": 0.0,
             "UIObject": "CheckBox",
             "sscVariableName": "",
@@ -3224,20 +3142,20 @@
             "Type": 1.0,
             "Label": "PV ITC basis percent",
             "Units": "%",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
             "Flags": 9.0,
             "DefaultValue": 0.0,
-            "UIObject": "Default",
+            "UIObject": "Numeric",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
         "system_itc_basis_cost_include": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "System cost qualifies for ITC",
             "Units": "",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
             "Flags": 0.0,
             "DefaultValue": 0.0,
@@ -3250,22 +3168,22 @@
             "Type": 1.0,
             "Label": "Wind installed cost",
             "Units": "$",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
             "Flags": 8.0,
             "DefaultValue": 0.0,
-            "UIObject": "Default",
+            "UIObject": "Numeric",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
         "wind_itc_basis_cost_fed_include": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "Wind cost qualifies for federal ITC",
             "Units": "",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
-            "Flags": 0.0,
+            "Flags": 3.0,
             "DefaultValue": 0.0,
             "UIObject": "CheckBox",
             "sscVariableName": "",
@@ -3274,11 +3192,11 @@
         "wind_itc_basis_cost_sta_include": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "Wind cost qualifies for state ITC",
             "Units": "",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
-            "Flags": 0.0,
+            "Flags": 3.0,
             "DefaultValue": 0.0,
             "UIObject": "CheckBox",
             "sscVariableName": "",
@@ -3287,13 +3205,13 @@
         "wind_itc_basis_percent": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "Wind installed cost percent",
             "Units": "",
-            "Group": "",
+            "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
-            "Flags": 8.0,
+            "Flags": 9.0,
             "DefaultValue": 0.0,
-            "UIObject": "Default",
+            "UIObject": "Numeric",
             "sscVariableName": "",
             "sscVariableValue": ""
         }
@@ -3507,22 +3425,23 @@
         "\tshow('fuel_cell_itc_basis_cost_fed_include', is_fuel_cell_tech);\r",
         "\tshow('fuel_cell_itc_basis_cost_sta_include', is_fuel_cell_tech);\r",
         "\tshow('hybrid_basis_cost', is_hybrid);\r",
-        "\t//value('total_installed_cost', value('total_installed_cost'));\r",
-        "\t//refresh('total_installed_cost');\r",
         "\trefresh();\r",
         "}\r",
         "\r",
         "\r",
         "function set_itc_basis_choice() {\r",
         "\tchoice = value('itc_qualification_choice');\r",
+        "\r",
+        "\t// ui text on depreciation form\r",
+        "\tmsg = '';\r",
+        "\tif (value('itc_qualification_choice') == 0) {\r",
+        "\t\tmsg = 'Allocations are based on system components.';\r",
+        "\t}\r",
+        "\tproperty('lbl_alloc_inputs','Caption',msg);\r",
         "\t\r",
         "\t//Installed Costs Driven Controls\r",
         "\tenable('depr_itc_fed_capex', !choice);\r",
         "\tenable('depr_itc_sta_capex', !choice);\r",
-        "\t//enable('itc_basis_depreciation_allocation', !choice);\r",
-        "\t//enable('non_itc_basis_depreciation_allocation', !choice);\r",
-        "\t//enable('itc_basis_depreciation_set', !choice);\r",
-        "\t//enable('itc_basis_percent_input', !choice);\r",
         "\tenable('pv_itc_basis_cost_fed_include', !choice);\r",
         "\tenable('pv_itc_basis_cost_sta_include', !choice);\r",
         "\tenable('wind_itc_basis_cost_fed_include', !choice);\r",
@@ -3551,22 +3470,14 @@
         "\tenable('depr_itc_sta_sl_39', choice);\r",
         "\tenable('depr_itc_fed_custom', choice);\r",
         "\tenable('depr_itc_sta_custom', choice);\r",
+        "\tenable('depr_custom_schedule',choice);\r",
         "\tshow('itc_qual_warning', choice);\r",
         "\t\r",
         "\trefresh();\r",
-        "\t\r",
-        "\t\r",
-        "\t\r",
         "}\r",
         "\r",
         "function itc_basis_depreciation_choice() {\r",
         "\t\r",
-        "\t                        \r",
-        "\t//calculate inputs\r",
-        "\t/*\r",
-        "\tcelltype= ?${6par_celltech}[\r",
-        "\t\t'monoSi', 'multiSi/polySi', 'cdte', 'cis', 'cigs', 'amorphous'];\r",
-        "\t*/\r",
         "\tfin = financing();\r",
         "\tif (fin == \"Residential\" || fin == \"Commercial\") {\r",
         "\t\tchoice = 1;\r",
@@ -3591,22 +3502,6 @@
         "\t\t\t'depr_alloc_custom_percent', 'none'];\r",
         "\t\t\r",
         "\t\tif (choice == 0) {\r",
-        "\t\t\t/*\r",
-        "\t\t\tfor (i = 0; i < #depr_list; i++) {\r",
-        "\t\t\t\tvalue(depr_list[i], 0.0); //Set to 0 to avoid non-depreciable equation warning\r",
-        "\t\t\t}\r",
-        "\t\t\tif (itc_depr_choice == non_itc_depr_choice && itc_depr_choice != 'none') {\r",
-        "\t\t\t\tvalue(itc_depr_choice, 100);\r",
-        "\t\t\t}\r",
-        "\t\t\telse {\r",
-        "\t\t\t\tif (itc_depr_choice != 'none') {\r",
-        "\t\t\t\t\tvalue(itc_depr_choice, percent);\r",
-        "\t\t\t\t}\r",
-        "\t\t\t\tif (non_itc_depr_choice != 'none') {\r",
-        "\t\t\t\t\tvalue(non_itc_depr_choice, 100 - percent);\r",
-        "\t\t\t\t}\r",
-        "\t\t\t}\r",
-        "\t\t\t*/\r",
         "\t\t\tenable('itc_basis_depreciation_allocation', true);\r",
         "\t\t\tenable('non_itc_basis_depreciation_allocation', true);\r",
         "\t\t\tfor (i=0; i < #depr_list; i++) {\r",
@@ -3621,7 +3516,6 @@
         "\t\t\t}\r",
         "\t\t}\r",
         "\t}\r",
-        "\t\r",
         "}\r",
         ""
     ]

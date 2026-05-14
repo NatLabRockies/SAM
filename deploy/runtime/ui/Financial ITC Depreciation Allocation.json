@@ -61,7 +61,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 267.0
+                    "Integer": 318.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -102,7 +102,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 531.0
+                    "Integer": 582.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -185,7 +185,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 267.0
+                    "Integer": 318.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -226,7 +226,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 531.0
+                    "Integer": 582.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -417,7 +417,7 @@
         "itc_basis_depreciation_allocation": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "Depreciation class for ITC qualifying cost",
+            "Label": "Depreciation class for ITC qualifying costs",
             "Units": "",
             "Group": "",
             "IndexLabels": "5-yr MACRS|15-yr MACRS|5-yr Straight Line|15-yr Straight Line|20-yr Straight Line|39-yr Straight Line|Custom|Non-depreciable",
@@ -443,7 +443,7 @@
         "non_itc_basis_depreciation_allocation": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "Depreciation class for non-ITC qualifying cost",
+            "Label": "Depreciation class for non-ITC qualifying costs",
             "Units": "",
             "Group": "",
             "IndexLabels": "",
