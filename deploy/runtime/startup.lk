@@ -1178,8 +1178,8 @@ addpage( [[ 'Financial Analysis Parameters',
 addpage( [[ 'Financial Solution Mode Single Owner IPH',
 			{ 'name'='Financial TOD Factors', 'caption'='Time of Delivery', 'collapsible'=true, 'collapsible_var'='revenue_TOD_is_shown', 'collapsed_by_default'=true }]],
             { 'sidebar'='Revenue', 'help'='revenue/revenue_iph' } );
-addpage( [[ 'Financial Cash Incentives' ]], { 'sidebar'='Cash Incentives', 'help'='incentives-and-depreciation/cash_incentives' } );           
-addpage( [[ 'Financial Tax Credits',
+addpage( [[ 'Financial Cash Incentives IPH' ]], { 'sidebar'='Cash Incentives', 'help'='incentives-and-depreciation/cash_incentives' } );           
+addpage( [[ 'Financial Tax Credits IPH',
 			{'name'= 'Financial ITC Qualification', 'caption'='ITC Qualification Options', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
 			{'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Basis and Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
 			'Financial Depreciation Detailed'  ]],
@@ -1202,8 +1202,8 @@ addpage( [[ 'Financial Debt Min DSCR',
 		  'Financial Salvage Value',
 		  'Financial Depreciation Simple', ]],
 	   { 'sidebar'='Financial Parameters','help'='financial-parameters/fin_commercial'} );
-addpage( [[ 'Financial Cash Incentives' ]], { 'sidebar'='Cash Incentives', 'help'='incentives-and-depreciation/cash_incentives' } );           
-addpage( [[ 'Financial Tax Credits',
+addpage( [[ 'Financial Cash Incentives IPH' ]], { 'sidebar'='Cash Incentives', 'help'='incentives-and-depreciation/cash_incentives' } );           
+addpage( [[ 'Financial Tax Credits IPH',
 			{'name'= 'Financial ITC Qualification', 'caption'='ITC Qualification Options', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
 			{'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Basis and Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
 			'Financial Depreciation Detailed'  ]],
@@ -2057,8 +2057,8 @@ addpage( [[ 'Financial Analysis Parameters',
 addpage( [[ 'Financial Solution Mode Single Owner IPH',
 			{ 'name'='Financial TOD Factors', 'caption'='Time of Delivery', 'collapsible'=true, 'collapsible_var'='revenue_TOD_is_shown', 'collapsed_by_default'=true }]],
             { 'sidebar'='Revenue', 'help'='revenue/revenue_iph' } );
-addpage( [[ 'Financial Cash Incentives' ]], { 'sidebar'='Cash Incentives', 'help'='incentives-and-depreciation/cash_incentives' } );           
-addpage( [[ 'Financial Tax Credits',
+addpage( [[ 'Financial Cash Incentives IPH' ]], { 'sidebar'='Cash Incentives', 'help'='incentives-and-depreciation/cash_incentives' } );           
+addpage( [[ 'Financial Tax Credits IPH',
 			{'name'= 'Financial ITC Qualification', 'caption'='ITC Qualification Options', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
 			{'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Basis and Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
 			'Financial Depreciation Detailed'  ]],
