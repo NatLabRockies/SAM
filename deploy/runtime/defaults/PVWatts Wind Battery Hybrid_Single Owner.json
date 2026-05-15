@@ -12653,7 +12653,6 @@
         "debt_percent": 60.0,
         "depr_alloc_custom_percent": 0.0,
         "depr_alloc_macrs_15_percent": 0.0,
-        "depr_alloc_macrs_15_percent_calc": 0.0,
         "depr_alloc_macrs_5_percent": 100.0,
         "depr_alloc_none": 0.0,
         "depr_alloc_sl_15_percent": 0.0,
