@@ -68535,7 +68535,6 @@
         "show_CapitalCostSO": 1.0,
         "show_DebtConstDSCR": 1.0,
         "show_ReserveAccounts": 1.0,
-        "show_cash_incentives": 1.0,
         "show_construction_period": 1.0,
         "show_depr_alloc": 1.0,
         "show_itc_qualification": 1.0,
