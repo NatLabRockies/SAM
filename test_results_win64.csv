@@ -66,7 +66,7 @@ Standalone Battery,Leveraged Partnership Flip,-6.8282e+06,74.8038,72.8932,; Warn
 Standalone Battery,All Equity Partnership Flip,-6.8282e+06,79.0515,72.8932,; Warning: IRR at end of analysis period is not a number (NaN). This can indicate that revenues are too low to cover costs, or that they are excessively high compared to costs. Warning: IRR in target year is not a number (NaN). This can indicate that revenues are too low to cover costs, or that they are excessively high compared to costs. Warning: NPV is $-3.35545e+07. A negative NPV indicates project costs are higher than revenues.
 Standalone Battery,Sale Leaseback,-6.8282e+06,75.2289,72.8932,; Warning: IRR at end of analysis period is not a number (NaN). This can indicate that revenues are too low to cover costs, or that they are excessively high compared to costs. Warning: NPV is $-1.44754e+07. A negative NPV indicates project costs are higher than revenues. Warning: NPV is $-8.19532e+07. A negative NPV indicates project costs are higher than revenues.
 ETES,Single Owner,-466573504,17.289,7.40746,; 
-PTES,Single Owner,-197610592,21.5736,10.3678,; 
+PTES,Single Owner,-197596064,21.5721,10.3676,; 
 Physical Trough,Single Owner,377411840,17.569,14.5131,; 
 Physical Trough,Merchant Plant,377411840,16.1815,NA,; 
 Physical Trough,Leveraged Partnership Flip,377411840,17.9204,14.5131,; 
@@ -127,7 +127,7 @@ MSLF IPH,Commercial,16540981,4.64862,NA,; Notice: Piping geometry file\ \ Maximu
 MEwave,Single Owner,65589748,78.5247,59.0541,; Warning: NPV is $-1.24112e+08. A negative NPV indicates project costs are higher than revenues.
 MEwave,LCOE Calculator,59434320,NA,NA,; 
 MEwave,None,594343,NA,NA,; 
-MEwave Battery,Single Owner,fail,fail,fail
+MEwave Battery,Single Owner,65027312,80.334,59.0537,; Warning: NPV is $-1.34488e+08. A negative NPV indicates project costs are higher than revenues.
 MEtidal,LCOE Calculator,2.16152e+06,NA,NA,; 
 MEtidal,None,2.16152e+06,NA,NA,; 
 Wind Power,Residential,48358.4,30.0676,NA,; 
