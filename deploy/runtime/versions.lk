@@ -78,6 +78,69 @@ version_upgrade{'2026.2.19'} = define() {
 		value('ui_depr_alloc_sl_39_percent', sl_39, "Copying existing allocation to new UI variable.");
 		value('ui_depr_alloc_custom_percent', custom, "Copying existing allocation to new UI variable.");
 	}
+	
+	if (cfg.fin == 'Commercial') {
+		value('itc_qualification_choice', 1, "ITC qualification and depreciation can now be calculated automatically as a percentage of installation cost. Previous manual depreciation allocations have been retained.");
+		has_itc_fed = oldvalue('itc_fed_amount') > 0 || oldvalue('itc_fed_percent') > 0;
+		has_itc_sta = oldvalue('itc_sta_amount') > 0 || oldvalue('itc_sta_percent') > 0;
+		depr_fed_type = oldvalue('depr_fed_type');
+		// Nothing to do on 0, defaults are 0
+		if (depr_fed_type == 1) {
+			value('ui_depr_alloc_macrs_5_percent', 100.0, "Copying existing allocation to new UI variable.");
+			value('depr_itc_fed_macrs_5', has_itc_fed, "Update to detailed ITC basis qualification variable.");
+			value('depr_itc_sta_macrs_5', has_itc_sta, "Update to detailed ITC basis qualification variable.");
+		}
+		else if (depr_fed_type == 2) {
+			sl_depr_yrs = oldvalue('depr_fed_sl_years');
+			if (sl_depr_yrs == 5) {
+				value('ui_depr_alloc_sl_5_percent', 100.0, "Copying existing allocation to new UI variable.");
+				value('depr_itc_fed_sl_5', has_itc_fed, "Update to detailed ITC basis qualification variable.");
+				value('depr_itc_sta_sl_5', has_itc_sta, "Update to detailed ITC basis qualification variable.");
+			}
+			else if (sl_depr_yrs == 15) {
+				value('ui_depr_alloc_sl_15_percent', 100.0, "Copying existing allocation to new UI variable.");
+				value('depr_itc_fed_sl_15', has_itc_fed, "Update to detailed ITC basis qualification variable.");
+				value('depr_itc_sta_sl_15', has_itc_sta, "Update to detailed ITC basis qualification variable.");
+			}
+			else if (sl_depr_yrs == 20) {
+				value('ui_depr_alloc_sl_20_percent', 100.0, "Copying existing allocation to new UI variable.");
+				value('depr_itc_fed__sl_20', has_itc_fed, "Update to detailed ITC basis qualification variable.");
+				value('depr_itc_sta__sl_20', has_itc_sta, "Update to detailed ITC basis qualification variable.");
+			}
+			else if (sl_depr_yrs == 39) {
+				value('ui_depr_alloc_sl_39_percent', 100.0, "Copying existing allocation to new UI variable.");
+				value('depr_itc_fed_sl_39', has_itc_fed, "Update to detailed ITC basis qualification variable.");
+				value('depr_itc_sta_sl_39', has_itc_sta, "Update to detailed ITC basis qualification variable.");
+			}
+			else {
+				value('ui_depr_alloc_custom_percent', 100.0, "Copying existing allocation to new UI variable.");
+				value('depr_itc_fed_custom', has_itc_fed, "Update to detailed ITC basis qualification variable.");
+				value('depr_itc_fed_custom', has_itc_sta, "Update to detailed ITC basis qualification variable.");
+				sl_depr = 1.0 / sl_depr_yrs;
+				sl_custom_arr = [];
+				for (i = 0; i < sl_depr_yrs; i++) {
+					sl_custom_arr[i] = sl_depr;
+				}
+				value('depr_custom_schedule', sl_custom_arr, "Use custom depreciation for non-standard straight line length");
+			}
+		}
+		else if (depr_fed_type == 3) {
+			value('ui_depr_alloc_custom_percent', 100.0, "Copying existing allocation to new UI variable.");
+			value('depr_itc_fed_custom', has_itc_fed, "Update to detailed ITC basis qualification variable.");
+			value('depr_itc_fed_custom', has_itc_sta, "Update to detailed ITC basis qualification variable.");
+			custom_depr = oldvalue('depr_fed_custom');
+			value('depr_custom_schedule', custom_depr, "Update to new custom depreciation variable.");
+		}
+	}
+	
+	if (cfg.fin == 'Residential') {		
+		has_itc_fed = oldvalue('itc_fed_amount') > 0 || oldvalue('itc_fed_percent') > 0;
+		has_itc_sta = oldvalue('itc_sta_amount') > 0 || oldvalue('itc_sta_percent') > 0;
+		value('system_itc_basis_cost_fed_include', has_itc_fed, "Update to component-based ITC basis qualification variable.");
+		value('system_itc_basis_cost_sta_include', has_itc_sta, "Update to component-based ITC basis qualification variable.");
+		value('batt_itc_basis_cost_fed_include', has_itc_fed, "Update to component-based ITC basis qualification variable.");
+		value('batt_itc_basis_cost_sta_include', has_itc_sta, "Update to component-based ITC basis qualification variable.");
+	}
 
 	if (cfg.tech == 'Flat Plate PV' || cfg.tech == 'PV Battery' || cfg.tech == 'Photovoltaic Wind Battery Hybrid' ) {
 		message('The Detailed PV model input pages have been reorganized to make it easier to find related inputs with improved messages to help you find and fix problems with the system design.', 'error');
