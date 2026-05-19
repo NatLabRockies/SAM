@@ -284,7 +284,7 @@ function cf_revenue()
 	
 	if ( fin == 'Single Owner' && !is_iph_tech()) // As of May 2026, only single supports non-energy revenue
 	{
-		cfline('cf_non_energy_revenue',0);
+		if (value('non_energy_revenue_ds')==1) cfline('cf_non_energy_revenue',0);
 	}
 	
 	cfline( 'cf_total_revenue', 0);
@@ -402,7 +402,7 @@ function cf_operating_expenses()
 		cfline('cf_total_energy_expenses',0);
 		cfline('cf_energy_expenses_paid_percent', 0);
 		cfline('cf_energy_expenses_paid',0);
-		cfline('cf_non_energy_expenses',0);
+		if(value('non_energy_expenses_ds')==1) cfline('cf_non_energy_expenses',0);
 	}
 	
 	cfline( 'cf_operating_expenses', 0);
@@ -559,6 +559,11 @@ function cf_operating_activities() // all PPA models except Sale Leaseback
 			if ( value('pbi_oth_for_ds')==0 ) { cfline('cf_pbi_total_oth',0); }
 		}
 		cfline('cf_debt_payment_interest', 0,-1);
+	}
+	if ( fin == 'Single Owner' && !is_iph_tech()) // As of May 2026, only single supports non-energy revenue
+	{
+		if(value('non_energy_revenue_ds')==0) cfline('cf_non_energy_revenue',0);
+		if(value('non_energy_expenses_ds')==0) cfline('cf_non_energy_expenses',0, -1);
 	}
 	cfline('cf_project_operating_activities', 0);
 	cfline('');
@@ -1588,6 +1593,7 @@ function set_om(xl)
 	{
 		xl_set_output( xl, 'cf_energy_expenses_paid_percent' );
 		xl_set_output( xl, 'cf_non_energy_expenses' );
+		xl_set_value_yesno( xl, 'non_energy_expenses_ds');
 	}
 }
 
@@ -1815,7 +1821,8 @@ function set_annual_values( xl )
 			xl_set_output( xl, 'cf_capacity_payment'); // capacity payments
 			xl_set_output( xl, 'cf_curtailment_value'); // curtailment payments
 			xl_set_output( xl,'cf_energy_revenue_retained_percent');
-			xl_set_output( xl,'cf_non_energy_revenue');		
+			xl_set_output( xl,'cf_non_energy_revenue');	
+			xl_set_value_yesno( xl, 'non_energy_revenue_ds');	
 		}
 	}
 	// tech-dependent

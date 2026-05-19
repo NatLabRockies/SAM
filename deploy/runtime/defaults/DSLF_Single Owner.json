@@ -20597,6 +20597,7 @@
     "non_energy_expenses": [
         0.0
     ],
+    "non_energy_expenses_ds": 1.0,
     "non_energy_expenses_escal": 0.0,
     "non_energy_expenses_ret": [
         0.0
@@ -20604,6 +20605,7 @@
     "non_energy_revenue": [
         0.0
     ],
+    "non_energy_revenue_ds": 1.0,
     "non_energy_revenue_escal": 0.0,
     "non_energy_revenue_is_shown": 0.0,
     "non_energy_revenue_ret": [
