@@ -467,8 +467,7 @@ function setup_commercial_pages( mode ) // mode determines whether or not the bu
   addpage( [[ 'Financial Debt Min DSCR',
               'Financial Analysis Parameters',
 		      'Financial Tax and Insurance Rates',
-		      'Financial Salvage Value',
-		      'Financial Depreciation Simple']],
+		      'Financial Salvage Value']],
            { 'sidebar'='Financial Parameters','help'='financial-parameters/fin_commercial'} );
   addpage( [[ 'Financial Cash Incentives' ]], { 'sidebar'='Cash Incentives', 'help'='incentives-and-depreciation/cash_incentives' } );           
   /*addpage( [[ 'Financial DSIRE Download',
@@ -1199,8 +1198,7 @@ setting( { 'analysis_period_var'='cf_length' } );
 addpage( [[ 'Financial Debt Min DSCR',
 		  'Financial Analysis Parameters',
 		  'Financial Tax and Insurance Rates',
-		  'Financial Salvage Value',
-		  'Financial Depreciation Simple', ]],
+		  'Financial Salvage Value' ]],
 	   { 'sidebar'='Financial Parameters','help'='financial-parameters/fin_commercial'} );
 addpage( [[ 'Financial Cash Incentives IPH' ]], { 'sidebar'='Cash Incentives', 'help'='incentives-and-depreciation/cash_incentives' } );           
 addpage( [[ 'Financial Tax Credits IPH',
@@ -2418,8 +2416,7 @@ setting( { 'analysis_period_var'='cf_length' } );
 addpage( [[ 'Financial Debt Min DSCR',
 		  'Financial Analysis Parameters',
 		  'Financial Tax and Insurance Rates',
-		  'Financial Salvage Value',
-		  'Financial Depreciation Simple', ]],
+		  'Financial Salvage Value' ]],
 	   { 'sidebar'='Financial Parameters','help'='financial-parameters/fin_commercial'} );
 addpage( [[ 'Financial Cash Incentives IPH' ]], { 'sidebar'='Cash Incentives', 'help'='incentives-and-depreciation/cash_incentives' } );           
 addpage( [[ 'Financial Tax Credits IPH',
