@@ -78,7 +78,8 @@
 			"fuelcell_startup_time": 24,
 			"fuelcell_type": 2,
 			"fuelcell_unit_max_power": 200,
-			"fuelcell_unit_min_power": 60
+			"fuelcell_unit_min_power": 60,
+			"start_day_of_year": 0
 		}
 	}
 }

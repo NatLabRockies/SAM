@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -496,6 +496,46 @@ bool CaseWindow::RunSSCBaseCase(wxString& fn, bool silent, wxString* messages)
 }
 
 
+bool CaseWindow::ExportCashflowExcel()
+{
+	if (m_case != NULL) {
+
+		// if no outputs run a simulation. this approach could result in exported cash flow not matching current inputs if user modifies inputs without running a simulation before exporting
+		if (m_case->BaseCase().Outputs().size() == 0) {
+			RunBaseCase();
+		}
+
+		// all cash flow models have cf_om_fixed_expense output except standalone battery
+		bool is_cf_model;
+		if (auto* vv = m_case->BaseCase().GetOutput("cf_om_fixed_expense"))
+			is_cf_model = true;
+		else if (auto* vv1 = m_case->BaseCase().GetOutput("cf_om_fixed1_expense")) // standalone battery
+			is_cf_model = true;
+		else
+			is_cf_model = false;
+
+		if ( is_cf_model ) {
+#ifdef __WXMSW__
+				//	UpdateResults();
+				m_baseCaseResults->Export(EXP_CASHFLOW, EXP_SEND_EXCEL);
+				return true;
+#else
+				wxMessageBox("Excel export is only supported on Windows systems.");
+				return false;
+#endif
+		}
+		else {
+			wxMessageBox("No cash flow to export. Export cash flow requires a cash flow-based financial model.");
+			return false;
+		}
+	}
+	else {
+		wxMessageBox("No active case selected.");
+		return false;
+	}
+}
+
+
 void CaseWindow::UpdateResults()
 {
 	m_baseCaseResults->Setup( &m_case->BaseCase() );
@@ -569,7 +609,7 @@ bool CaseWindow::GenerateReport( wxString pdffile, wxString templfile, VarValue 
 		
 		if (validfiles.Count() == 0)
 		{
-			wxMessageBox( "SAM could not find any templates valid for the current technology and financing combination.\n\nPlease contact SAM user support at sam.support@nrel.gov for more information." );
+			wxMessageBox( "SAM could not find any templates valid for the current technology and financing combination.\n\nPlease contact SAM user support at sam.support@nlr.gov for more information." );
 			return false;
 		}
 
@@ -1063,13 +1103,29 @@ wxArrayString CaseWindow::GetInputPages()
 bool CaseWindow::SwitchToNavigationMenu(const wxString& name)
 {
 	// iterate over menu tree items and match "name" or select first item (SAM issue 1618)
-	wxDataViewItem dvi;// = m_navigationMenu->GetNthChild(wxDataViewItem(0), 0);
+	wxDataViewItem dvi, dvi_child;// = m_navigationMenu->GetNthChild(wxDataViewItem(0), 0);
 	bool found = false;
+
 	int count = m_navigationMenu->GetChildCount(wxDataViewItem(0));
 	for (int i = 0; i < count && !found; i++) {
 		dvi = m_navigationMenu->GetNthChild(wxDataViewItem(0), i);
-		if (dvi.IsOk() && m_navigationMenu->GetItemText(dvi) == name)
-			found = true;
+		// should be a lambda function but not more than one deep...
+		if (m_navigationMenu->IsContainer(dvi)) {
+			int count_child = m_navigationMenu->GetChildCount(dvi);
+			for (int j = 0; j < count_child && !found; j++) {
+				dvi_child = m_navigationMenu->GetNthChild(dvi, j);
+				wxString stmp = m_navigationMenu->GetItemText(dvi_child); // for debugging
+				if (dvi_child.IsOk() && stmp == name) {
+					found = true;
+					dvi = dvi_child;
+				}
+			}
+		}
+		else {
+			wxString stmp = m_navigationMenu->GetItemText(dvi);
+			if (dvi.IsOk() && m_navigationMenu->GetItemText(dvi) == name)
+				found = true;
+		}
 	}
 	// first item if not found
 	if (!found)
@@ -1081,9 +1137,10 @@ bool CaseWindow::SwitchToNavigationMenu(const wxString& name)
 	if (dvi.IsOk()) {
 		m_navigationMenu->SetCurrentItem(dvi);
 		m_currentSelection = (dvi);
-		SwitchToInputPage(m_navigationMenu->GetItemText(dvi));
+		m_left_panel->SetFocus();
+		SwitchToPage(m_navigationMenu->GetItemText(dvi));
+		m_left_panel->Layout();
 	}
-
 
 	return true;
 }
@@ -1119,6 +1176,7 @@ bool CaseWindow::SwitchToInputPage( const wxString &name )
 	int p = m_inputPageList->Find(name);
 	m_inputPageList->Select( p );
 	m_inputPageList->Refresh();
+	m_navigationMenu->Layout();
 	m_left_panel->Layout();// try to force onPaint call for the input page list
 
 	return true;
@@ -1157,7 +1215,9 @@ bool CaseWindow::SwitchToPage( const wxString &name )
 	else
 	{
 		m_pageFlipper->SetSelection( PG_INPUTS );
-		return SwitchToInputPage( name );
+//		return SwitchToInputPage(name);
+		SwitchToInputPage(name);
+		m_left_panel->Layout();
 	}
 
 	return true;
@@ -2260,7 +2320,7 @@ void NumericRangeDialog::OnCommand(wxCommandEvent &evt)
 	switch(evt.GetId())
 	{
 	case wxID_HELP:
-		SamApp::ShowHelp("edit_parametric_variables");
+		SamApp::ShowHelp("window-reference/win_edit_parametric_variables");
 		break;
 
 	case ID_values:

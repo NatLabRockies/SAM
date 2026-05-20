@@ -1,7 +1,7 @@
 {
     "Name": "Marine Wave Resource Time Series",
-    "Width": 1018.0,
-    "Height": 728.0,
+    "Width": 1097.0,
+    "Height": 731.0,
     "FormObjects": {
         "Hyperlink": {
             "Visible": 1.0,
@@ -12,7 +12,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 33.0
+                    "Integer": 42.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -53,7 +53,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 636.0
+                    "Integer": 657.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -90,7 +90,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 636.0
+                    "Integer": 657.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -127,7 +127,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 888.0
+                    "Integer": 924.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -164,7 +164,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 33.0
+                    "Integer": 42.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -201,7 +201,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 18.0
+                    "Integer": 42.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -263,7 +263,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 24.0
+                    "Integer": 42.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -271,7 +271,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 972.0
+                    "Integer": 1002.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -283,7 +283,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "The High Resolution Ocean Surface Wave Hindcast database contains 30 years of 3-hour wave data for the coastal United States that you can download and add to your wave resource library. Download the a time-series file based for a year or range of years. If your request fails or results in an error message, please try again until it succeeds."
+                    "String": "The High Resolution Ocean Surface Wave Hindcast database contains 30 years of 3-hour wave data for the coastal United States that you can download and add to your wave resource library. Download the a time-series file based for a year or range of years. If your request fails or results in an error message, please try again until it succeeds. SAM calculates energy production based on one year of time-series data. Multiple years of data can be used to generated a joint probability distribution for the Frequency of Occurence resource option."
                 },
                 "TextColour": {
                     "Type": 4.0,
@@ -333,7 +333,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 1000.0
+                    "Integer": 1075.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -362,7 +362,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 33.0
+                    "Integer": 45.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -370,7 +370,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 972.0
+                    "Integer": 1008.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -382,7 +382,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "To convert time series data files to a JPD file, create a folder that contains a set of time series data files for a given location. Then click the Create JPD button below and follow the prompts to choose the folder and create a file name for the converted JPD data. SAM automatically adds the JPD file to the wave energy resource library for the Frequency of Occurrence option. See Help for details."
+                    "String": "To convert one or multiple time series data files to a JPD file, create a folder that contains a set of time series data files for a given location. Then click the Create JPD button below and follow the prompts to choose the folder and create a file name for the converted JPD data. SAM automatically adds the JPD file to the wave energy resource library for the Frequency of Occurrence option. See Help for details."
                 },
                 "TextColour": {
                     "Type": 4.0,
@@ -424,7 +424,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 33.0
+                    "Integer": 42.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -461,7 +461,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 18.0
+                    "Integer": 42.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -523,7 +523,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 33.0
+                    "Integer": 54.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -582,7 +582,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 21.0
+                    "Integer": 42.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -627,7 +627,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 1000.0
+                    "Integer": 1075.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -664,7 +664,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 1000.0
+                    "Integer": 1075.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -693,7 +693,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 198.0
+                    "Integer": 234.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -973,7 +973,7 @@
         "wave_resource_filename_ts": {
             "Version": 4.0,
             "Type": 4.0,
-            "Label": "Wave resource file from library",
+            "Label": "Wave resource time series file",
             "Units": " ",
             "Group": "ME Wave Resource ",
             "IndexLabels": "",
@@ -1004,44 +1004,13 @@
         "\tarray = ${energy_period};",
         "\tlen_array = #array;",
         "\treturn 60 / (len_array/8760);",
-        "};",
+        "};\r",
+        "\r",
+        "",
         "",
         ""
     ],
     "Callbacks": [
-        "/*",
-        "function enable_disable_library() {",
-        "\t",
-        "\tenable('wave_resource_matrix',false);",
-        "\tproperty('wave_resource_matrix','ColorMap',enable_library);",
-        "\tenable('location_ts',enable_library);",
-        "\tenable('btnScanLibrary_ts',enable_library);",
-        "\tenable('average_power_flux_ts',enable_library);",
-        "\tenable('bathymetry_ts',enable_library);",
-        "\tenable('city_ts',enable_library);",
-        "\tenable('country_ts',enable_library);",
-        "\tenable('data_source_ts',enable_library);",
-        "\tenable('wave_resource_filename_ts',enable_library);",
-        "\tenable('frequency_sum',enable_library);",
-        "\tenable('lat_ts',enable_library);",
-        "\tenable('location_ts',enable_library);",
-        "\tenable('lon_ts',enable_library);",
-        "\t//enable('max_frequency',enable_library);",
-        "\t//enable('max_frequency_Hs',enable_library);",
-        "\t//enable('max_frequency_Te',enable_library);",
-        "\tenable('name_ts',enable_library);",
-        "\tenable('nearby_buoy_number_ts',enable_library);",
-        "\tenable('notes_ts',enable_library);",
-        "\tenable('sea_bed_ts',enable_library);",
-        "\tenable('state_ts',enable_library);",
-        "\tenable('tz_ts',enable_library);",
-        "\t//enable('in_time_frame',enable_library);",
-        "\t//enable('in_location',enable_library);",
-        "\t//enable('wave_download',enable_library);",
-        "\trefresh();",
-        "\t",
-        "}*/",
-        "",
         "on_change{'btn_view_wave_data'} = define() {",
         "\tif ( dview_wave(value('wave_resource_filename_ts')) )",
         "\t{\tmsgbox('Failed to read file!\\nThe data viewer was not able to open the weather file:\\n' + value('wave_resource_filename_ts') ); }",
@@ -1055,7 +1024,7 @@
         "\tfolder = choose_dir('', 'Choose folder containing single-year wave resource files');",
         "\t//file = choose_file();",
         "\tif (folder != '') {",
-        "\t\tfile = choose_file( '', 'Save time-series data used to generated jpd as:', ",
+        "\t\tfile = choose_file( '', 'Save time-series data used to generate jpd as:', ",
         "\t\t\t'JPD file (*.csv)|*.csv', true);",
         "\t\tif (file != '') {",
         "\t\t\terr = make_jpd_multiyear(folder, slash_back_to_forward(file));",
@@ -1070,8 +1039,8 @@
         "\t\t\trescanlibrary('wave');",
         "\t\t\tvalue('wave_resource_filename', file);\r",
         "\t\t\tf_name = value( 'wave_resource_filename' );\r",
-        "\t\t\tf_name = slash_back_to_forward( f_name );\r",
-        "\t\t\tupdate_library_folders( path_only( f_name ) );\r",
+        "\t\t\t//f_name = slash_back_to_forward( f_name );\r",
+        "\t\t\t//update_library_folders( path_only( f_name ) );\r",
         "\t\t\t//value( 'location', file_to_key( f_name ) );",
         "\t\t\t//value('name', name);\r",
         "\t\t\t//value('name', value('location'));",
@@ -1260,6 +1229,7 @@
         "\t\tkey = file_only( file );",
         "\t\tkey = replace( key, '.' + ext_only( file ), '');",
         "\t\treturn key;",
-        "}"
+        "}\r",
+        ""
     ]
 }

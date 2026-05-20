@@ -44,6 +44,9 @@ file(GLOB SAM_API_MODULES ${PROJECT_SOURCE_DIR}/modules/*.cpp ${PROJECT_SOURCE_D
 #
 #####################################################################################################################
 
+set(CMAKE_CXX_STANDARD 20)
+
+
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
 if(MSVC)
@@ -54,7 +57,7 @@ if(MSVC)
         set(${flag_var} "${${flag_var}} /D_DEBUG" CACHE STRING "compile flags" FORCE)
     endforeach()
 else()
-    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wno-attributes" )
+    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-attributes" )
     if(CMAKE_BUILD_TYPE STREQUAL "Debug")
         add_compile_definitions(_DEBUG)
     else()

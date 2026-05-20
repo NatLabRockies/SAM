@@ -43,8 +43,8 @@
 			"year": [2010.000000]
 		},
 		"Lifetime": {
-			"analysis_period": 30,
-			"generic_degradation": [0.000000],
+			"ac_degradation": [0.000000],
+			"analysis_period": 20,
 			"system_use_lifetime_output": 1
 		},
 		"AdjustmentFactors": {

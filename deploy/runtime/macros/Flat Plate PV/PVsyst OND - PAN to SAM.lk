@@ -1,24 +1,40 @@
 /*@ 
 
-<p>This macro reads data from an OND or PAN file and populates inputs on SAM's
- Module or Inverter input page.</p>
+<p>This macro reads data from a PVsyst OND or PAN file and populates inputs on SAM's
+ Module or Inverter input page. For modules, it sets the model option at the top
+ of the Module page to "CEC Performance Model with User Entered Sepcifications".
+ For inveters, it sets the option at the top of the Inverter page to "Inverter
+ Datasheet".</p>
 
 <p>The macro was tested with OND and PAN text files from PVsyst Version 6.6 and
-later with SAM 2021.12.02. It will not convert binary OND or PAN files from older versions
+later with SAM 2025.4.16. It will not convert binary OND or PAN files from older versions
 of PVsyst.</p>
 
-<p><strong>Notes:</strong></p> 
+<p>After running the macro, check the data on the Module or Inverter page to verify  the data.</p>
+
+<p><strong>Notes</strong></p> 
 <ul>
-<li>For inverters, the script reads the number of MPPT inputs from the OND file
+<li>For inverters:
+<ul>
+<li>The macro reads the number of MPPT inputs from the OND file
 and sets the value in SAM accordingly. For inverters with more than one MPPT input,
 you may need to assign a subarray to each MPPT input on the System Design page.</li>
-<li>For bifacial modules, the script does not read the bifaciality factor from 
-the PAN file. You will need to set the bifacial inputs by hand on SAM's Module
-input page.</li>
+<li>The macro does not set parameters for the inverter temperature derate curves
+ on the Inverter page.</li>
+</ul></li>
+<li>For modules:
+<ul>
+<li>For bifacial modules, the macro does not read the bifaciality factor from 
+the PAN file. You will need to set the bifacial parameters yourself on the Module
+page.</li>
 <li>Some module types defined in PVsyst are not defined in SAM and are set to
 monoSi. This only affects the initial guess for the solver's iterative
 algorithm so will not affect simulation results. For example, the macro sets
 the PVsyst technol parameter "mtGaInP2GaAsGe" to monoSi in SAM.</li>
+<li>The macro does not set parameters for SAM's cell temperature model, so you 
+should set NOCT, mounting configuration, and transient thermal model correction
+parameters yourself on the Module page as appropriate.</li>
+</ul></li>
 </ul>
 @*/
 
@@ -31,6 +47,11 @@ function read_pvsyst_file ( file , T )
 	n = 0;
 	T{'error'} = '';
 	fin = open( file, 'r' );
+	if (fin == 0)
+	{
+		T{'error'} = 'Failed to open file\n\n' + file + '.' + '\n\nFile path must not contain parentheses.';
+		return T;
+	}
 	read_line( fin, first_line );
 	if ( strpos( lower(first_line), 'pvobject_' ) < 0 )
 	{
@@ -68,7 +89,7 @@ function read_pvsyst_file ( file , T )
 	}
 	close( fin );
 	T{'skippeddata'} = skipped_data;
-	return( T );
+	return T ;
 }
 
 // opens a pan file and returns a table of pan variables and their values
@@ -93,7 +114,7 @@ function read_pan_file ( f )
 	Tvars{'vmp'} = '';
 	Tvars{'voc'} = '';
 
-	return( read_pvsyst_file( f, Tvars ) );
+	return read_pvsyst_file( f, Tvars );
 
 }
 
@@ -114,7 +135,7 @@ function read_ond_file ( f )
 	Tvars{'nbmppt'} = '';
 	Tvars{'night_loss'} = '';
 
-	return( read_pvsyst_file( f, Tvars ) );
+	return read_pvsyst_file( f, Tvars );
 
 }
 
@@ -132,9 +153,6 @@ function pan_to_sam_vars( T )
 	bvocunits = 0; // V/degC in SAM
 	area = to_real(T.width) * to_real(T.height);
 	modulename = T.manufacturer + ' ' + T.model;
-	mounting = 0;
-	standoff = 6;
-	tnoct = 46;
 	
 	// lookup table of module types (only affects initial guess for iterative solution)
 	// module types as provided by pvsyst team April 2022
@@ -159,6 +177,7 @@ function pan_to_sam_vars( T )
 	cell_types = ['monoSi','multiSi','CdTe','CIS','CIGS','Amorphous'];
 
 	// assign SAM variable values
+	// do not set bifacial, NOCT, standoff height, approximate installation height or transient thermal model parameters
 	sam_var{'6par_aisc_display'} = aisc; // muisc /1000 // muisc is mA/degC
 	sam_var{'6par_aisc_units'} = aiscunits; // not in pvsys, set to 0 for A/degC
 	sam_var{'6par_area'} = area; // width * height, pvsyst cell area is not used
@@ -170,10 +189,7 @@ function pan_to_sam_vars( T )
 	sam_var{'6par_imp'} = to_real(T.imp); // A
 	sam_var{'6par_isc'} = to_real(T.isc); // A
 	sam_var{'6par_module_name'} = modulename; // manufacturer + model (strings)
-	sam_var{'6par_mounting'} = mounting; // use default, see field thermal loss factor inputs in pvsyst
 	sam_var{'6par_nser'} = to_real(T.ncels);
-	sam_var{'6par_standoff'} = standoff; // use default, see field thermal loss factor inputs in pvsyst 
-	sam_var{'6par_tnoct'} = tnoct; // not used in pvsyst, set to 46 ??
 	sam_var{'6par_vmp'} = to_real(T.vmp); //
 	sam_var{'6par_voc'} = to_real(T.voc); // V
 
@@ -219,7 +235,7 @@ function set_sam_inputs( var , model )
 // Main
 ////////////////////////////////////////////////////////////////////////////////
 
-fname = choose_file( homedir(), 'Choose PAN or OND file', 'PVsyst files (*.ond;*.pan)|*.ond;*.pan' );
+fname = choose_file( '', 'Choose PAN or OND file', 'PVsyst files (*.ond;*.pan)|*.ond;*.pan' );
 outln( 'Converting ' + fname + '...' );
 if ( strpos( lower(fname), 'pan' ) > -1 )
 {
@@ -248,9 +264,12 @@ elseif	( strpos( lower(fname), 'ond' ) > -1 )
 	}
 	else 
 	{
-		msgbox( 'Failed to convert OND file!\n' + pan_vars{'error'} + '\n\nThis macro cannot convert binary files from PVsyst versions earlier than Version 6.6.'); 
+		msgbox( 'Failed to convert OND file!\n' + ond_vars{'error'} + '\n\nThis macro cannot convert binary files from PVsyst versions earlier than Version 6.6.'); 
 	}
 }
 else
+{
 	outln( 'File must have extension pan or ond.' );
+}
+	
 outln('Done.');

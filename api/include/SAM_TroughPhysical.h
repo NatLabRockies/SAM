@@ -554,6 +554,38 @@ extern "C"
 	SAM_EXPORT void SAM_TroughPhysical_SolarField_N_max_hdr_diams_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
+	 * Set OpticalTable_1: Values of the optical efficiency table for collector type 1
+	 * options: None
+	 * constraints: None
+	 * required if: None
+	 */
+	SAM_EXPORT void SAM_TroughPhysical_SolarField_OpticalTable_1_mset(SAM_table ptr, double* mat, int nrows, int ncols, SAM_error *err);
+
+	/**
+	 * Set OpticalTable_2: Values of the optical efficiency table for collector type 2
+	 * options: None
+	 * constraints: None
+	 * required if: None
+	 */
+	SAM_EXPORT void SAM_TroughPhysical_SolarField_OpticalTable_2_mset(SAM_table ptr, double* mat, int nrows, int ncols, SAM_error *err);
+
+	/**
+	 * Set OpticalTable_3: Values of the optical efficiency table for collector type 3
+	 * options: None
+	 * constraints: None
+	 * required if: None
+	 */
+	SAM_EXPORT void SAM_TroughPhysical_SolarField_OpticalTable_3_mset(SAM_table ptr, double* mat, int nrows, int ncols, SAM_error *err);
+
+	/**
+	 * Set OpticalTable_4: Values of the optical efficiency table for collector type 4
+	 * options: None
+	 * constraints: None
+	 * required if: None
+	 */
+	SAM_EXPORT void SAM_TroughPhysical_SolarField_OpticalTable_4_mset(SAM_table ptr, double* mat, int nrows, int ncols, SAM_error *err);
+
+	/**
 	 * Set P_a: Annulus gas pressure [torr]
 	 * options: None
 	 * constraints: None
@@ -637,7 +669,7 @@ extern "C"
 	 * Set T_shutdown: Temperature when solar field begins recirculating [C]
 	 * options: None
 	 * constraints: None
-	 * required if: ?
+	 * required if: None
 	 */
 	SAM_EXPORT void SAM_TroughPhysical_SolarField_T_shutdown_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -645,7 +677,7 @@ extern "C"
 	 * Set T_startup: Required temperature of the system before the power block can be switched on [C]
 	 * options: None
 	 * constraints: None
-	 * required if: ?
+	 * required if: None
 	 */
 	SAM_EXPORT void SAM_TroughPhysical_SolarField_T_startup_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -1016,6 +1048,14 @@ extern "C"
 	 * required if: *
 	 */
 	SAM_EXPORT void SAM_TroughPhysical_SolarField_offset_xpan_hdr_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
+	 * Set opt_model: Optical model (1=Solar position ; 2=Collector incidence table ; 3=IAM matrix)
+	 * options: None
+	 * constraints: None
+	 * required if: ?=[3,3,3,3]
+	 */
+	SAM_EXPORT void SAM_TroughPhysical_SolarField_opt_model_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
 
 	/**
 	 * Set p_start: Collector startup energy, per SCA [kWhe]
@@ -2041,6 +2081,14 @@ extern "C"
 	 */
 	SAM_EXPORT void SAM_TroughPhysical_TimeOfDeliveryFactors_dispatch_tod_factors_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
 
+	/**
+	 * Set start_day_of_year: Start day of year for TOD periods [0..6]
+	 * options: 0=Monday, 6=Sunday
+	 * constraints: None
+	 * required if: ?=0
+	 */
+	SAM_EXPORT void SAM_TroughPhysical_TimeOfDeliveryFactors_start_day_of_year_nset(SAM_table ptr, double number, SAM_error *err);
+
 
 	//
 	// Revenue parameters
@@ -2630,6 +2678,14 @@ extern "C"
 
 	SAM_EXPORT double SAM_TroughPhysical_SolarField_N_max_hdr_diams_nget(SAM_table ptr, SAM_error *err);
 
+	SAM_EXPORT double* SAM_TroughPhysical_SolarField_OpticalTable_1_mget(SAM_table ptr, int* nrows, int* ncols, SAM_error *err);
+
+	SAM_EXPORT double* SAM_TroughPhysical_SolarField_OpticalTable_2_mget(SAM_table ptr, int* nrows, int* ncols, SAM_error *err);
+
+	SAM_EXPORT double* SAM_TroughPhysical_SolarField_OpticalTable_3_mget(SAM_table ptr, int* nrows, int* ncols, SAM_error *err);
+
+	SAM_EXPORT double* SAM_TroughPhysical_SolarField_OpticalTable_4_mget(SAM_table ptr, int* nrows, int* ncols, SAM_error *err);
+
 	SAM_EXPORT double* SAM_TroughPhysical_SolarField_P_a_mget(SAM_table ptr, int* nrows, int* ncols, SAM_error *err);
 
 	SAM_EXPORT double SAM_TroughPhysical_SolarField_Pipe_hl_coef_nget(SAM_table ptr, SAM_error *err);
@@ -2745,6 +2801,8 @@ extern "C"
 	SAM_EXPORT double SAM_TroughPhysical_SolarField_northsouth_field_sep_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_TroughPhysical_SolarField_offset_xpan_hdr_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double* SAM_TroughPhysical_SolarField_opt_model_aget(SAM_table ptr, int* length, SAM_error *err);
 
 	SAM_EXPORT double SAM_TroughPhysical_SolarField_p_start_nget(SAM_table ptr, SAM_error *err);
 
@@ -3032,6 +3090,8 @@ extern "C"
 
 	SAM_EXPORT double* SAM_TroughPhysical_TimeOfDeliveryFactors_dispatch_tod_factors_aget(SAM_table ptr, int* length, SAM_error *err);
 
+	SAM_EXPORT double SAM_TroughPhysical_TimeOfDeliveryFactors_start_day_of_year_nget(SAM_table ptr, SAM_error *err);
+
 
 	/**
 	 * Revenue Getters
@@ -3178,8 +3238,6 @@ extern "C"
 	SAM_EXPORT double* SAM_TroughPhysical_Outputs_EndLoss_ave_aget(SAM_table ptr, int* length, SAM_error *err);
 
 	SAM_EXPORT double* SAM_TroughPhysical_Outputs_EqOpteff_aget(SAM_table ptr, int* length, SAM_error *err);
-
-	SAM_EXPORT double* SAM_TroughPhysical_Outputs_IAM_ave_aget(SAM_table ptr, int* length, SAM_error *err);
 
 	SAM_EXPORT double* SAM_TroughPhysical_Outputs_K_cpnt_mget(SAM_table ptr, int* nrows, int* ncols, SAM_error *err);
 
@@ -3540,6 +3598,8 @@ extern "C"
 	SAM_EXPORT double* SAM_TroughPhysical_Outputs_operating_modes_b_aget(SAM_table ptr, int* length, SAM_error *err);
 
 	SAM_EXPORT double* SAM_TroughPhysical_Outputs_operating_modes_c_aget(SAM_table ptr, int* length, SAM_error *err);
+
+	SAM_EXPORT double* SAM_TroughPhysical_Outputs_opt_derate_ave_aget(SAM_table ptr, int* length, SAM_error *err);
 
 	SAM_EXPORT double* SAM_TroughPhysical_Outputs_pc_op_mode_final_aget(SAM_table ptr, int* length, SAM_error *err);
 

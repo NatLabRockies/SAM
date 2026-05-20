@@ -9602,6 +9602,9 @@
     "energy_output_array": [
         0.0
     ],
+    "energy_output_array_lifetime": [
+        0.0
+    ],
     "equip1_reserve_cost": 0.0,
     "equip1_reserve_freq": 0.0,
     "equip2_reserve_cost": 0.0,
@@ -9627,6 +9630,9 @@
     "fixed_plant_input": 0.0,
     "flip_target_percent": 10.0,
     "flip_target_year": 10.0,
+    "ac_degradation": [
+        0.0
+    ],
     "grid_curtailment": [
         1e38,
         1e38,
@@ -36657,7 +36663,7 @@
         184.05
     ],
     "nameplate_capacity": 9707.12,
-    "nominal_discount_rate": 9.060000000000003,
+    "nominal_discount_rate": 9.060000000000004,
     "normalize_to_utility_bill": 0.0,
     "om_capacity": [
         25.0
@@ -36755,12 +36761,15 @@
     "show_construction_period": 1.0,
     "solution_mode_message": "",
     "spec_mode": 0.0,
+    "start_day_of_year": 3.335046e-317,
+    "start_day_of_year_load_ui": 3.335046e-317,
+    "start_day_of_year_tod_ui": 3.335046e-317,
     "state_tax_rate": [
         7.0
     ],
     "system_capacity": 9707.12,
     "system_capacity_combined": 0.0,
-    "system_use_lifetime_output": 0.0,
+    "system_use_lifetime_output": 1.0,
     "term_int_rate": 7.0,
     "term_tenor": 0.0,
     "tod_library": "Uniform Dispatch",

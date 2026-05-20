@@ -2423,7 +2423,8 @@
         "{",
         "\tenable_disable();",
         "\tcfin_is_zero_check();\r",
-        "\tset_groupbox_label();",
+        "\tset_groupbox_label();\r",
+        "\tchange_schedule_length();",
         "};",
         "",
         "",
@@ -2448,6 +2449,13 @@
         "\t\t}\r",
         "\tproperty('lcoe_groupbox','Caption',groupbox_label);\r",
         "\t\r",
+        "}\r",
+        "\r",
+        "function change_schedule_length() \r",
+        "{\r",
+        "\tyears = value('c_lifetime');\r",
+        "\tproperty('c_depreciation_schedule', 'FixedLength', years);\r",
+        "\tproperty('c_construction_cost', 'FixedLength', years);\r",
         "}",
         ""
     ]

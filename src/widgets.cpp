@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -464,7 +464,7 @@ public:
 	void OnCommand(wxCommandEvent& evt)
 	{
 		if (evt.GetId() == wxID_HELP)
-			SamApp::ShowHelp("edit_data_table_row");
+			SamApp::ShowHelp("window-reference/win_edit_data_table_row");
 	}
 
 	DECLARE_EVENT_TABLE();
@@ -681,7 +681,7 @@ public:
 	{
 		if (evt.GetId() == wxID_HELP)
 		{
-			SamApp::ShowHelp("edit_monthly_values");
+			SamApp::ShowHelp("window-reference/win_edit_monthly_values");
 		}
 	}
 
@@ -981,7 +981,7 @@ public:
 
 	virtual wxString GetColLabelValue( int  )
 	{
-		return label.IsEmpty()?"Value":label;
+		return label.IsEmpty()?wxString("Value"):label;
 	}
 
 	virtual wxString GetTypeName( int , int  )
@@ -1129,7 +1129,7 @@ public:
 
 	virtual wxString GetColLabelValue(int)
 	{
-		return label.IsEmpty() ? "Value" : label;
+		return label.IsEmpty() ? wxString("Value") : label;
 	}
 
 	virtual wxString GetTypeName(int, int)
@@ -1944,7 +1944,7 @@ public:
 		}
 		else if (evt.GetId() == wxID_HELP)
 		{
-			SamApp::ShowHelp("edit_array");
+			SamApp::ShowHelp("window-reference/win_edit_array");
 		}
 
 	}
@@ -2108,7 +2108,7 @@ public:
 
 	virtual wxString GetColLabelValue(int)
 	{
-		return label.IsEmpty() ? "Value" : label;
+		return label.IsEmpty() ? wxString("Value") : label;
 	}
 
 	virtual wxString GetTypeName(int, int)
@@ -2576,7 +2576,7 @@ public:
 		}
 		else if (evt.GetId() == wxID_HELP)
 		{
-			SamApp::ShowHelp("edit_data_lifetime");
+			SamApp::ShowHelp("window-reference/win_edit_data_lifetime");
 		}
 
 	}
@@ -3527,7 +3527,7 @@ public:
 		}
 		else if (evt.GetId() == wxID_HELP)
 		{
-			SamApp::ShowHelp("edit_array");
+			SamApp::ShowHelp("window-reference/win_edit_array");
 		}
 	}
 

@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -185,7 +185,7 @@ void NSRDBDialog::OnEvt( wxCommandEvent &e )
 	switch( e.GetId() )
 	{
 		case wxID_HELP:
-			SamApp::ShowHelp("nsrdb_advanced_download");
+			SamApp::ShowHelp("window-reference/win_nsrdb_advanced_download");
 			break;
 		case ID_btnResources:
 			{
@@ -547,17 +547,26 @@ void NSRDBDialog::GetResources()
 
 	wxString locname = "";
 
+	// determine whether address is lat/lon pair
 	bool is_addr = false;
-	const wxChar* locChars = location.c_str();
-	for (int i = 0; i < (int)location.Len(); i++) 
-	{
-		if (isalpha(locChars[i]))
-			is_addr = true;
+	wxUniChar c;
+	bool d, a;
+	for (wxString::const_iterator it = location.begin(); it != location.end(); ++it) {
+		c = *it;
+		d = wxIsdigit(c);
+		a = wxIsalpha(c);
+		if (!d && a) {
+			if (c != 'n' && c != 's' && c != 'e' && c != 'w') {
+				is_addr = true;
+			}
+		}
+
 	}
+
 	double lat, lon;
 	if (is_addr)	//entered an address instead of a lat/long
 	{
-		// use GeoTools::GeocodeGoogle for non-NREL builds and set google_api_key in private.h
+		// use GeoTools::GeocodeGoogle for non-NLR builds and set google_api_key in private.h
 		if (!GeoTools::GeocodeDeveloper(location, &lat, &lon))
 		{
 			wxMessageBox("Failed to geocode address.\n\n" + location, "NSRDB Download Message", wxOK, this);
@@ -583,7 +592,7 @@ void NSRDBDialog::GetResources()
 	}
 
 	// NSRDB Data Query returns a list of links to all available files for a location
-	// https://developer.nrel.gov/docs/solar/nsrdb/nsrdb_data_query/
+	// https://developer.nlr.gov/docs/solar/nsrdb/nsrdb_data_query/
 	wxString url;
 	url = SamApp::WebApi("nsrdb_query");
 	url.Replace("<LAT>", wxString::Format("%lg", lat), 1);
@@ -648,7 +657,6 @@ void NSRDBDialog::GetResources()
 
 	m_txtLatLon->SetValue(wxString::Format("%f,%f", lat, lon));
 
-
 	if (!reader.HasMember("outputs")) return; // error message?
 	if (!reader["outputs"].IsArray()) return; // error message?
 
@@ -684,15 +692,15 @@ void NSRDBDialog::GetResources()
 
 			/*
 			datasets have different available intervals in addition to 60 (all datasets have 60 minute data):
-			psm3 https://developer.nrel.gov/docs/solar/nsrdb/psm3-download/ 30
-			psm3-2-2 https://developer.nrel.gov/docs/solar/nsrdb/psm3-2-2-download/ 30
-			nsrdb-GOES-aggregated-v4-0-0 https://developer.nrel.gov/api/nsrdb/v2/solar/nsrdb-GOES-aggregated-v4-0-0-download 30
-			psm3-5min https://developer.nrel.gov/docs/solar/nsrdb/psm3-5min-download/ 5,15,30
-			suny-india https://developer.nrel.gov/docs/solar/nsrdb/suny-india-data-download/ 15,30
-			msg-iodc https://developer.nrel.gov/docs/solar/nsrdb/meteosat-download/ 15,30
-			msg-v1-0-0 https://developer.nrel.gov/docs/solar/nsrdb/nsrdb-msg-v1-0-0-download/ 15,30
-			himawari https://developer.nrel.gov/docs/solar/nsrdb/himawari-download/ 10,30
-			himawari7 https://developer.nrel.gov/docs/solar/nsrdb/himawari7-download/ 30
+			psm3 https://developer.nlr.gov/docs/solar/nsrdb/psm3-download/ 30
+			psm3-2-2 https://developer.nlr.gov/docs/solar/nsrdb/psm3-2-2-download/ 30
+			nsrdb-GOES-aggregated-v4-0-0 https://developer.nlr.gov/api/nsrdb/v2/solar/nsrdb-GOES-aggregated-v4-0-0-download 30
+			psm3-5min https://developer.nlr.gov/docs/solar/nsrdb/psm3-5min-download/ 5,15,30
+			suny-india https://developer.nlr.gov/docs/solar/nsrdb/suny-india-data-download/ 15,30
+			msg-iodc https://developer.nlr.gov/docs/solar/nsrdb/meteosat-download/ 15,30
+			msg-v1-0-0 https://developer.nlr.gov/docs/solar/nsrdb/nsrdb-msg-v1-0-0-download/ 15,30
+			himawari https://developer.nlr.gov/docs/solar/nsrdb/himawari-download/ 10,30
+			himawari7 https://developer.nlr.gov/docs/solar/nsrdb/himawari7-download/ 30
 			*/
 
 #ifdef __DEBUG__
@@ -705,7 +713,8 @@ void NSRDBDialog::GetResources()
 				&& (name.Lower() != "philippines") // basic solar resource data only tamb, dhi, dni, ghi, wind (not enough data for CSP or PV thermal models)
 				&& (name.Lower() != "vietnam")) // // basic solar resource data only tamb, dhi, dni, ghi, wind  (not enough data for CSP or PV thermal models)
 			{
-				m_links.push_back(LinkInfo(name, displayName, year, URL, interval, location));
+				//m_links.push_back(LinkInfo(name, displayName, year, URL, interval, location));
+				m_links.push_back(LinkInfo(name, displayName, year, URL, interval, locname));
 
 				// enable list, search, and buttons
 				m_chlResources->Enable();

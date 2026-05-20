@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -175,27 +175,39 @@ CodeGen_Base::~CodeGen_Base()
 bool CodeGen_Base::PlatformFiles()
 {
 	// copy appropriate dll
+	// updated for ortools Windows - minimum set of ortools dlls to run SSC modules that use ortools optimization:
+	// abseil_dll.dll, bz2.dll, highs.dll, libprotobuf.dll, libscip.dll, libutf8_validity.dll, ortools.dll, re2.dll, ssc.dll, zlib1.dll
+	wxArrayString as = { "abseil_dll", "bz2", "highs", "libprotobuf", "libscip", "libutf8_validity", "ortools", "re2", "ssc", "zlib1"};
 #if defined(__WXMSW__) && defined (__64BIT__)
-	wxString f1 = SamApp::GetAppPath() + "/ssc.dll";
-	wxString f2 = m_folder + "/ssc.dll";
-#elif defined(__WXMSW__) && defined(__32BIT__)
-	wxString f1 = SamApp::GetAppPath() + "/sscx32.dll";
-	wxString f2 = m_folder + "/ssc.dll";
+	wxString ext = ".dll";
+	wxString source_folder = SamApp::GetAppPath();
+//	wxString f1 = SamApp::GetAppPath() + "/ssc.dll";
+//	wxString f2 = m_folder + "/ssc.dll";
 #elif defined(__WXOSX__)
-	wxString f1 = SamApp::GetAppPath() + "/../Frameworks/ssc.dylib";
-	wxString f2 = m_folder + "/ssc.dylib";
+	wxString ext = ".dylib";
+	wxString source_folder = SamApp::GetAppPath() + "/../Frameworks";
+//	wxString f1 = SamApp::GetAppPath() + "/../Frameworks/ssc.dylib";
+//	wxString f2 = m_folder + "/ssc.dylib";
 #elif defined(__WXGTK__)
-	wxString f1 = SamApp::GetAppPath() + "/ssc.so";
-	wxString f2 = m_folder + "/ssc.so";
+	wxString ext = ".so";
+	wxString source_folder = SamApp::GetAppPath();
+//	wxString f1 = SamApp::GetAppPath() + "/ssc.so";
+//	wxString f2 = m_folder + "/ssc.so";
 #else
 	return false;
 #endif
-	wxCopyFile(f1, f2);
+	for (size_t i = 0; i < as.size(); i++) {
+		wxString f1 = source_folder + "/" + as[i] + ext;
+		wxString f2 = m_folder + "/" + as[i] + ext;
+		if (wxFileExists(f1))
+			wxCopyFile(f1, f2);
+	}
+
 	// sscapi.h - switch to copy version for syching issues 5/30/17
 	// assumes in runtime folder for all builds. See SAM issue 1918
-	f1 = SamApp::GetRuntimePath() + "/sscapi.h";
+	wxString f1 = SamApp::GetRuntimePath() + "/sscapi.h";
 	if (wxFileExists(f1)) {
-		f2 = m_folder + "/sscapi.h";
+		wxString f2 = m_folder + "/sscapi.h";
 		wxCopyFile(f1,f2);
 	}
 	return true;
@@ -1397,7 +1409,7 @@ bool CodeGen_c::SupportingFiles()
 	fprintf(f, "clean :\n");
 	fprintf(f, "	$(RM) $(PROJ_NAME)$(EXT)\n");
 	fprintf(f, "help:\n");
-	fprintf(f, "	@echo \"Please check the settings for your system.Your system may not be supported.Please contact sam.support@nrel.gov\"\n");
+	fprintf(f, "	@echo \"Please check the settings for your system.Your system may not be supported.Please contact sam.support@nlr.gov\"\n");
 	fclose(f);
 
 	return true;
@@ -4732,7 +4744,7 @@ bool CodeGen_java::SupportingFiles()
 	fprintf(f, "clean :\n");
 	fprintf(f, "	$(RM) $(RM_ALL) $(RM_JAVA)\n");
 	fprintf(f, "help:\n");
-	fprintf(f, "	@echo \"Please check the settings for your system.Your system may not be supported.Please contact sam.support@nrel.gov.System: $(PF) $(VERS)\"\n");
+	fprintf(f, "	@echo \"Please check the settings for your system.Your system may not be supported.Please contact sam.support@nlr.gov.System: $(PF) $(VERS)\"\n");
 	fclose(f);
 	// Manifest file to define main class
 	fn = m_folder + "/" + m_name + ".Manifest.txt";
@@ -5128,7 +5140,7 @@ bool CodeGen_php5::SupportingFiles()
 	fprintf(f, "	char buf[16];\n");
 	fprintf(f, "	sprintf(buf, \"%%d\", ssc_version());\n");
 	fprintf(f, "	php_info_print_table_start();\n");
-	fprintf(f, "	php_info_print_table_header(2, \"NREL SAM Simulation Core(SSC) support\", \"enabled\");\n");
+	fprintf(f, "	php_info_print_table_header(2, \"NLR SAM Simulation Core(SSC) support\", \"enabled\");\n");
 	fprintf(f, "	php_info_print_table_row(2, \"Version\", buf );\n");
 	fprintf(f, "	php_info_print_table_row(2, \"Build\", ssc_build_info() );\n");
 	fprintf(f, "	php_info_print_table_end();\n");
@@ -5649,7 +5661,7 @@ bool CodeGen_php5::SupportingFiles()
     fprintf(f, "	rm sscphp.dylib\n");
     fprintf(f, "\n");
     fprintf(f, "help:\n");
-    fprintf(f, "	@echo \"Please check the settings for your system.Your system may not be supported.Please contact sam.support@nrel.gov.System: $(PF) $(VERS)\"\n");
+    fprintf(f, "	@echo \"Please check the settings for your system.Your system may not be supported.Please contact sam.support@nlr.gov.System: $(PF) $(VERS)\"\n");
     fclose(f);
     return true;
 #elif defined(__WXGTK__)
@@ -5681,7 +5693,7 @@ bool CodeGen_php5::SupportingFiles()
     fprintf(f, "	rm sscphp.so\n");
     fprintf(f, "\n");
     fprintf(f, "help:\n");
-    fprintf(f, "	@echo \"Please check the settings for your system.Your system may not be supported.Please contact sam.support@nrel.gov.System: $(PF) $(VERS)\"\n");
+    fprintf(f, "	@echo \"Please check the settings for your system.Your system may not be supported.Please contact sam.support@nlr.gov.System: $(PF) $(VERS)\"\n");
     fclose(f);
     return true;
 #else
@@ -5739,7 +5751,7 @@ bool CodeGen_php7::SupportingFiles()
 	fprintf(f, "	char buf[16];\n");
 	fprintf(f, "	sprintf(buf, \"188713200\", ssc_version());\n");
 	fprintf(f, "	php_info_print_table_start();\n");
-	fprintf(f, "	php_info_print_table_header(2, \"NREL SAM Simulation Core(SSC) support\", \"enabled\");\n");
+	fprintf(f, "	php_info_print_table_header(2, \"NLR SAM Simulation Core(SSC) support\", \"enabled\");\n");
 	fprintf(f, "	php_info_print_table_row(2, \"Version\", buf );\n");
 	fprintf(f, "	php_info_print_table_row(2, \"Build\", ssc_build_info() );\n");
 	fprintf(f, "	php_info_print_table_end();\n");
@@ -6313,7 +6325,7 @@ bool CodeGen_php7::SupportingFiles()
 	fprintf(f, "	rm sscphp.so\n");
 	fprintf(f, "\n");
 	fprintf(f, "help:\n");
-	fprintf(f, "	@echo \"Please check the settings for your system.Your system may not be supported.Please contact sam.support@nrel.gov.System: $(PF) $(VERS)\"\n");
+	fprintf(f, "	@echo \"Please check the settings for your system.Your system may not be supported.Please contact sam.support@nlr.gov.System: $(PF) $(VERS)\"\n");
 	fclose(f);
 	return true;
 #else
@@ -6372,7 +6384,7 @@ bool CodeGen_php8::SupportingFiles()
 	fprintf(f, "	char buf[16];\n");
 	fprintf(f, "	sprintf(buf, \"188713200\", ssc_version());\n");
 	fprintf(f, "	php_info_print_table_start();\n");
-	fprintf(f, "	php_info_print_table_header(2, \"NREL SAM Simulation Core(SSC) support\", \"enabled\");\n");
+	fprintf(f, "	php_info_print_table_header(2, \"NLR SAM Simulation Core(SSC) support\", \"enabled\");\n");
 	fprintf(f, "	php_info_print_table_row(2, \"Version\", buf );\n");
 	fprintf(f, "	php_info_print_table_row(2, \"Build\", ssc_build_info() );\n");
 	fprintf(f, "	php_info_print_table_end();\n");
@@ -6946,7 +6958,7 @@ bool CodeGen_php8::SupportingFiles()
 	fprintf(f, "	rm sscphp.so\n");
 	fprintf(f, "\n");
 	fprintf(f, "help:\n");
-	fprintf(f, "	@echo \"Please check the settings for your system.Your system may not be supported.Please contact sam.support@nrel.gov.System: $(PF) $(VERS)\"\n");
+	fprintf(f, "	@echo \"Please check the settings for your system.Your system may not be supported.Please contact sam.support@nlr.gov.System: $(PF) $(VERS)\"\n");
 	fclose(f);
 	return true;
 #else
@@ -7822,7 +7834,7 @@ bool CodeGen_ios::SupportingFiles()
 {
 	// for iOS
 	wxString url = SamApp::WebApi("ios_build");
-	if (url.IsEmpty()) url = "https://sam.nrel.gov";
+	if (url.IsEmpty()) url = "https://sam.nlr.gov";
 		wxLaunchDefaultBrowser( url );
 
 #if defined(__WXMSW__)
@@ -8290,7 +8302,7 @@ bool CodeGen_android::SupportingFiles()
 	fclose(f);
 	// library files - in readme
 	wxString url = SamApp::WebApi("android_build");
-	if (url.IsEmpty()) url = "https://sam.nrel.gov/";
+	if (url.IsEmpty()) url = "https://sam.nlr.gov/";
 	wxLaunchDefaultBrowser( url );
 
 #if defined(__WXMSW__)

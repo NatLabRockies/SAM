@@ -14,7 +14,7 @@ SAM_EXPORT int SAM_Hcpv_execute(SAM_table data, int verbosity, SAM_error* err){
 	return SAM_module_exec("hcpv", data, verbosity, err);
 }
 
-SAM_EXPORT void SAM_Hcpv_SolarResourceData_file_name_sset(SAM_table ptr, const char* str, SAM_error *err){
+SAM_EXPORT void SAM_Hcpv_SolarResourceInformation_file_name_sset(SAM_table ptr, const char* str, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_string(ptr, "file_name", str);
 	});
@@ -326,7 +326,7 @@ SAM_EXPORT void SAM_Hcpv_AdjustmentFactors_adjust_timeindex_aset(SAM_table ptr, 
 	});
 }
 
-SAM_EXPORT const char* SAM_Hcpv_SolarResourceData_file_name_sget(SAM_table ptr, SAM_error *err){
+SAM_EXPORT const char* SAM_Hcpv_SolarResourceInformation_file_name_sget(SAM_table ptr, SAM_error *err){
 	const char* result = nullptr;
 	translateExceptions(err, [&]{
 	result = ssc_data_get_string(ptr, "file_name");

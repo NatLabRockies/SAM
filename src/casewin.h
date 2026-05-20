@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -99,6 +99,8 @@ public:
 
 	bool RunBaseCase( bool silent = false, wxString *messages = 0 );
 	void UpdateResults();
+
+	bool ExportCashflowExcel();
 
 	bool RunSSCBaseCase(wxString& fn, bool silent = false, wxString* messages = 0);
 

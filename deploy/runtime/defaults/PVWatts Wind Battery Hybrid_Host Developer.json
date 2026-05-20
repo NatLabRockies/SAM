@@ -51,8 +51,11 @@
         "contingency_percent": 4.0,
         "country": "-",
         "dc_ac_ratio": 1.15,
-        "degradation": [
+        "dc_degradation": [
             0.5
+        ],
+        "degradation": [
+            0.0
         ],
         "elev": 358.0,
         "en_snowloss": 0.0,
@@ -67,7 +70,7 @@
         "grid_per_watt": 0.05,
         "grid_percent": 0.0,
         "grid_total": 27000.0,
-        "in_location": "Type a location name, street address, or lat,lon in decimal degrees",
+        "in_location": "",
         "in_location_list": "15458 Denver W Pkwy, Golden CO 804041|phoenix,az|45.5,-120.9|Manaus,Brazil",
         "in_location_options": 0.0,
         "in_nsrdb_options": 0.0,
@@ -190,7 +193,6 @@
             0.0
         ],
         "solar_data_file_name": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
-        "solar_data_file_name_load": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
         "solar_data_source": "NSRDB",
         "solar_resource": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy",
         "solar_resource_file": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
@@ -199,7 +201,7 @@
         "step": 3600.0,
         "subtotal_direct": 680400.0,
         "system_capacity": 540.0,
-        "system_use_lifetime_output": 0.0,
+        "system_use_lifetime_output": 1.0,
         "tilt": 20.0,
         "total_direct_cost": 707616.0,
         "total_indirect_cost": 205200.0,
@@ -229,6 +231,9 @@
     "Wind": {
         "a_error_test_number": 17.345,
         "a_error_test_string": "\"default err msg\"",
+        "ac_degradation": [
+            0.64
+        ],
         "adjust": 0.0,
         "adjust_constant": 0.0,
         "adjust_en_periods": 0.0,
@@ -265,10 +270,7 @@
         "env_exposure_loss": 0.0,
         "env_icing_loss": 0.21,
         "env_loss_total": 2.398195120000002,
-        "est_bos_cost": 0.0,
-        "est_turbine_cost": 0.0,
         "inflation_rate": 2.5,
-        "install_type": 0.0,
         "om_capacity": [
             39.0
         ],
@@ -288,7 +290,6 @@
         "ops_strategies_loss": 0.0,
         "reference_capacity": 100.0,
         "reference_number_turbines": 1.0,
-        "reference_resource_file": "AZ Eastern-Rolling Hills.srw",
         "reference_sales_tax_percent": 5.0,
         "resource_definition_type": 0.0,
         "rows": 1.0,
@@ -299,7 +300,7 @@
         "specify_label": 0.0,
         "step": 3600.0,
         "system_capacity": 100.0,
-        "system_use_lifetime_output": 0.0,
+        "system_use_lifetime_output": 1.0,
         "total_installed_cost": 605500.0,
         "total_installed_cost_per_kw": 6055.0,
         "turb_generic_loss": 1.7,
@@ -11762,6 +11763,7 @@
         "en_wave_batt": 0.0,
         "grid_interconnection_limit_kwac": 20000.0,
         "inflation_rate": 2.5,
+        "lbl_btm_dispatch_message": "",
         "load": [
             65.6374,
             62.5244,
@@ -20611,7 +20613,7 @@
         "ui_step_minutes": 60.0
     },
     "Hybrid": {
-        "ac_nameplate": 469.565,
+        "ac_nameplate": 469.5652173913044,
         "analysis_period": 25.0,
         "analysis_period_warning": "",
         "annual_crit": 0.0,
@@ -65360,7 +65362,7 @@
             33.5754
         ],
         "loan_moratorium": 0.0,
-        "mera_cost1": 56956.50000000001,
+        "mera_cost1": 56956.52173913044,
         "mera_cost2": 0.0,
         "mera_cost3": 0.0,
         "mera_name1": "Replacement Reserve 1",
@@ -65468,10 +65470,13 @@
         "show_ReserveAccounts": 1.0,
         "show_construction_period": 1.0,
         "solution_mode_message": "",
+        "start_day_of_year": 3.335046e-317,
+        "start_day_of_year_load_ui": 3.335046e-317,
+        "start_day_of_year_tod_ui": 3.335046e-317,
         "state_tax_rate": [
             7.0
         ],
-        "system_capacity": 569.565,
+        "system_capacity": 569.5652173913044,
         "term_int_rate": 7.0,
         "term_tenor": 18.0,
         "tod_library": "Uniform Dispatch",
@@ -65483,7 +65488,7 @@
         "ui_customgeneration_cost": 0.0,
         "ui_fuel_cell_capacity": 0.0,
         "ui_fuel_cell_cost": 0.0,
-        "ui_hyb_pv_capacity": 469.565,
+        "ui_hyb_pv_capacity": 469.5652173913044,
         "ui_pv_cost": 948196.8,
         "ui_wacc": 6.709740000000002,
         "ui_wind_cost": 605500.0,

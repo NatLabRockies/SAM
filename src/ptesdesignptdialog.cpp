@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -892,7 +892,7 @@ void PTESDesignPtDialog::OnEvt(wxCommandEvent& e)
         }
         case wxID_HELP:
         {
-            SamApp::ShowHelp("ptes_design_pt");
+            SamApp::ShowHelp("window-reference/win_ptes_design_pt");
             break;
         }
     }

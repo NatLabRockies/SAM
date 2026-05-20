@@ -74,6 +74,10 @@
         8.0
     ],
     "DISCARD_UNUSED_latitude": 0.0,
+    "DISP_opt_model_1": 2.0,
+    "DISP_opt_model_2": 2.0,
+    "DISP_opt_model_3": 2.0,
+    "DISP_opt_model_4": 2.0,
     "D_2": [
         [
             0.076,
@@ -775,6 +779,38 @@
     "Min_rnr_xpans": 1.0,
     "N_hdr_per_xpan": 2.0,
     "N_max_hdr_diams": 10.0,
+    "OpticalTable_1": [
+        [
+            2.0,
+            1.0,
+            2.0,
+            1.0
+        ]
+    ],
+    "OpticalTable_2": [
+        [
+            2.0,
+            1.0,
+            2.0,
+            1.0
+        ]
+    ],
+    "OpticalTable_3": [
+        [
+            2.0,
+            1.0,
+            2.0,
+            1.0
+        ]
+    ],
+    "OpticalTable_4": [
+        [
+            2.0,
+            1.0,
+            2.0,
+            1.0
+        ]
+    ],
     "P_a": [
         [
             0.0001,
@@ -1038,7 +1074,7 @@
         6.0,
         6.0
     ],
-    "W_dot_pump_SS": 0.07485621857036887,
+    "W_dot_pump_SS": 0.07485403286362845,
     "accept_init": 0.0,
     "accept_loc": 1.0,
     "accept_mode": 0.0,
@@ -1110,9 +1146,9 @@
     ],
     "analysis_period": 25.0,
     "analysis_period_warning": "",
-    "annual_albedo": 0.21716438274677486,
+    "annual_albedo": 0.21716438274677489,
     "annual_beam": 7.364082191780821,
-    "annual_diffuse": 1.3397808219178083,
+    "annual_diffuse": 1.3397808219178085,
     "annual_global": 5.838191780821918,
     "annual_snow": NaN,
     "annual_tdry": 18.126141552511418,
@@ -1649,7 +1685,7 @@
     "custom_sf_pipe_sizes": 0.0,
     "custom_tes_p_loss": 0.0,
     "custom_tes_pipe_sizes": 0.0,
-    "dP_sf_SS": 10.147474751286165,
+    "dP_sf_SS": 10.147350081133409,
     "d_tank_in": 0.0,
     "debt_message": "",
     "debt_option": 1.0,
@@ -10847,7 +10883,7 @@
             941.0
         ]
     ],
-    "field_htf_cp_avg": 3.342903831348,
+    "field_htf_cp_avg": 2.4548932031999999,
     "field_htf_max_operating_temp": 400.0,
     "field_htf_min_operating_temp": 12.0,
     "field_thermal_output": 7.927156420127617,
@@ -10919,7 +10955,7 @@
     "ibi_uti_percent_maxvalue": 1e38,
     "ibi_uti_percent_tax_fed": 1.0,
     "ibi_uti_percent_tax_sta": 1.0,
-    "in_location": "Type a location name, street address, or lat,lon in decimal degrees",
+    "in_location": "",
     "in_location_list": "|||",
     "in_location_options": 0.0,
     "in_nsrdb_options": 0.0,
@@ -11727,7 +11763,7 @@
     "m_dot_htfmin": 1.0,
     "m_dot_htfmin_actual": 1.0,
     "max_collector_width": 6.0,
-    "max_field_flow_velocity": 6.613086278056593,
+    "max_field_flow_velocity": 3.744753926091646,
     "mc_bal_cold": 0.2,
     "mc_bal_hot": 0.2,
     "mc_bal_sca": 4.5,
@@ -11737,7 +11773,7 @@
     "mera_name1": "Replacement Reserve 1",
     "mera_name2": "Replacement Reserve 2",
     "mera_name3": "Replacement Reserve 3",
-    "min_field_flow_velocity": 0.4743214213819479,
+    "min_field_flow_velocity": 0.2685590647047778,
     "min_inner_diameter": 0.076,
     "months_receivables_reserve": 0.0,
     "months_working_reserve": 6.0,
@@ -11764,6 +11800,12 @@
     "om_production_escal": 0.0,
     "om_production_heat": [
         2.0
+    ],
+    "opt_model": [
+        3.0,
+        3.0,
+        3.0,
+        3.0
     ],
     "p_start": 0.021,
     "payment_option": 0.0,
@@ -11837,6 +11879,7 @@
     "sales_tax_rate": 5.0,
     "salvage_percentage": 0.0,
     "salvage_value": 0.0,
+    "sca_1_is_shown": 1.0,
     "sca_2_is_shown": 1.0,
     "sca_3_is_shown": 1.0,
     "sca_4_is_shown": 1.0,
@@ -11877,13 +11920,14 @@
     "show_construction_period": 1.0,
     "single_loop_aperture": 5280.0,
     "solar_data_file_name": "tucson_az_32.116521_-110.933042_psmv3_60_tmy.csv",
-    "solar_data_file_name_load": "tucson_az_32.116521_-110.933042_psmv3_60_tmy.csv",
     "solar_data_source": "NSRDB",
     "solar_mult": 2.9035826674764424,
     "solar_resource": "tucson_az_32.116521_-110.933042_psmv3_60_tmy",
     "solar_resource_file": "tucson_az_32.116521_-110.933042_psmv3_60_tmy.csv",
     "specified_solar_multiple": 2.3,
     "specified_total_aperture": 20000.0,
+    "start_day_of_year": 3.335046e-317,
+    "start_day_of_year_tod_ui": 3.335046e-317,
     "state": "-",
     "state_tax_rate": [
         7.0
