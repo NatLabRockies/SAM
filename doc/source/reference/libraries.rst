@@ -5,7 +5,7 @@ A library is a text file of comma-separated values (CSV) that stores sets of dat
 
 .. note:: In addition to the parameter libraries shown in the table below, SAM also creates libraries as temporary files on your computer to store information about your wind and solar resource data files. For more about weather file libraries, see :doc:`Weather Files and Libraries <../weather-data/weather_manage_folders>`.
 
-   You can find copies of the SAM library CSV files at https://github.com/NREL/SAM/tree/develop/deploy/libraries.
+   You can find copies of the SAM library CSV files at https://github.com/NatLabRockies/SAM/tree/develop/deploy/libraries.
 
 .. list-table::
    :width: 100%
@@ -27,31 +27,31 @@ A library is a text file of comma-separated values (CSV) that stores sets of dat
    * - Empirical Trough HCEs
      - Parabolic trough receivers
      - Empirical trough
-     - NREL
+     - NLR
    * - Empirical Trough Power Cycles
      - Power block parameters for parabolic trough
      - Empirical trough
-     - NREL
+     - NLR
    * - Empirical Trough SCAs
      - Parabolic trough collectors
      - Empirical trough
-     - NREL
+     - NLR
    * - Marine Energy Tidal Conerter
      - Tidal energy converters
      - Marine energy - tidal
-     - NREL
+     - NLR
    * - Marine Energy Wave Converter
      - Wave energy converters
      - Marine energy - wave
-     - NREL
+     - NLR
    * - Physical Trough Collectors
      - Parabolic trough collectors
      - Physical trough
-     - NREL
+     - NLR
    * - Physical Trough Receivers
      - Parabolic trough receivers
      - Physical trough
-     - NREL
+     - NLR
    * - Sandia Modules
      - Photovoltaic modules
      - Detailed photovoltaic
@@ -63,15 +63,15 @@ A library is a text file of comma-separated values (CSV) that stores sets of dat
    * - TOD Schedules and Factors
      - PPA price multipliers
      - All PPA financial models
-     - NREL
+     - NLR
    * - Trough Parasitics
      - Parabolic trough parasitic loads
      - Empirical trough
-     - NREL
+     - NLR
    * - Wind Turbines
      - Wind turbine power curves
      - Empirical trough
-     - NREL
+     - NLR
 
 .. _librarybrowser:
 

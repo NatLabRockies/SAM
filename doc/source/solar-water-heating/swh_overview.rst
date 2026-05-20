@@ -3,14 +3,14 @@ Solar Water Heating
 
 The solar water heating (SWH) model represents flat-plate solar collectors with a one tank water or glycol storage system and a auxiliary electric heater. The solar water heating performance model works with either the residential or commercial :doc:`financial model <../introduction/fin_overview>`, and  assumes that the solar water heating system displaces purchases of electricity for an electric water heater. Installation and operating costs, financial assumptions, and retail electricity prices determine the value of the energy delivered by the solar water heating system.
 
-The SWH model allows you to vary the location, hot water load profiles, mains and set temperature profiles, and characteristics of the collector, heat exchanger, and solar tanks. The model was developed at the National Renewable Energy Laboratory for SAM.
+The SWH model allows you to vary the location, hot water load profiles, mains and set temperature profiles, and characteristics of the collector, heat exchanger, and solar tanks. The model was developed at the National Laboratory of the Rockies for SAM.
 
-See the `SAM website <https://sam.nrel.gov/solar-water-heating>`__ for additional documentation.
+See the `SAM website <https://sam.nlr.gov/solar-water-heating>`__ for additional documentation.
 
 Solar Water Heating Model Notes
 ...............................
 
-* SAM calculates the water mains inlet temperature based on the correlation to local air temperature used in the Building America Benchmark. The algorithm is described in Burch and Christensen (2007) `Towards Development of an Algorithm for Mains Water Temperature <https://research-hub.nrel.gov/en/publications/towards-development-of-an-algorithm-for-mains-water-temperature/>`__. SAM reports the hourly water mains temperatures on :doc:`Tables <../results/data>` on the :doc:`Results <../results/results>` page as **T mains (C)**. If you have your own mains temperature data, you can override the mains inlet temperature calculation import an 8,760 hourly mains profile on the :doc:`SWH System <swh_system>` page.
+* SAM calculates the water mains inlet temperature based on the correlation to local air temperature used in the Building America Benchmark. The algorithm is described in Burch and Christensen (2007) `Towards Development of an Algorithm for Mains Water Temperature <https://research-hub.nlr.gov/en/publications/towards-development-of-an-algorithm-for-mains-water-temperature/>`__. SAM reports the hourly water mains temperatures on :doc:`Tables <../results/data>` on the :doc:`Results <../results/results>` page as **T mains (C)**. If you have your own mains temperature data, you can override the mains inlet temperature calculation import an 8,760 hourly mains profile on the :doc:`SWH System <swh_system>` page.
 
 * SAM assumes that the flow rate is constant over each hour, using values from the hourly hot water draw profile that you specify. SAM calculates the flow rate in kg/hr as the draw volume converted to kg for a given hour divided by one hour.
 

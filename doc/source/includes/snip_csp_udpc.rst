@@ -1,9 +1,9 @@
 
 The user-defined power cycle model requires that you provide data from your own power cycle model that describes the cycle's performance for a range of operating conditions. If you do not have such data, you should use the Rankine cycle model.
 
-For a description of the input data requirements, see Neises, T.; Boyd, M. (DRAFT 2021). Description of SAM's CSP User-defined Power Cycle Model (`PDF 235 KB <https://sam.nrel.gov/images/web_page_files/Neises-DRAFT-user-defined-power-cycle-v4-2021.pdf>`__). It is available with other documentation of SAM's CSP models on the SAM website at https://sam.nrel.gov/concentrating-solar-power/csp-publications.html.
+For a description of the input data requirements, see Neises, T.; Boyd, M. (DRAFT 2021). Description of SAM's CSP User-defined Power Cycle Model (`PDF 235 KB <https://sam.nlr.gov/images/web_page_files/Neises-DRAFT-user-defined-power-cycle-v4-2021.pdf>`__). It is available with other documentation of SAM's CSP models on the SAM website at https://sam.nlr.gov/concentrating-solar-power/csp-publications.html.
 
-If you are modeling a supercritical Carbon dioxide (sCO2) cycle, you can use the sCO2 Cycle Integration :doc:`macro <../reference/macros>` with the` NREL Supercritical Carbon Dioxide (sCO2) Python model <https://github.com/NREL/SAM/tree/develop/samples/CSP/sco2_analysis_python_V2>`__ to generate input data for the User Defined Power Cycle model.
+If you are modeling a supercritical Carbon dioxide (sCO2) cycle, you can use the sCO2 Cycle Integration :doc:`macro <../reference/macros>` with the` NLR Supercritical Carbon Dioxide (sCO2) Python model <https://github.com/NatLabRockies/SAM/tree/develop/samples/CSP/sco2_analysis_python_V2>`__ to generate input data for the User Defined Power Cycle model.
 
 
 User-defined Power Cycle Design Parameters

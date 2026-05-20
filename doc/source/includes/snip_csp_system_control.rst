@@ -1,7 +1,7 @@
 
 The System Control inputs determine the operating parameters of the system.
 
-.. note:: The physical trough and molten salt power tower models in SAM use a new power cycle and system dispatch model that does not support thermocline storage or fossil backup because they were not incorporated into the new dispatch controller logic. If you want to use those features, you can use the legacy version SAM 2015.6.30 for power towers or SAM 2018.11.11 for the Physical Trough model, available on the SAM website `Download page <https://sam.nrel.gov/download>`__.
+.. note:: The physical trough and molten salt power tower models in SAM use a new power cycle and system dispatch model that does not support thermocline storage or fossil backup because they were not incorporated into the new dispatch controller logic. If you want to use those features, you can use the legacy version SAM 2015.6.30 for power towers or SAM 2018.11.11 for the Physical Trough model, available on the SAM website `Download page <https://sam.nlr.gov/download>`__.
 
 Plant Energy Consumption
 ~~~~~~~~~~~~~~~~~~~~~~~~

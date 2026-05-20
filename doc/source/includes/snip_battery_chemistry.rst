@@ -1,5 +1,5 @@
 
-The battery type defines the battery chemistry for (lithium ion, lead acid, or flow battery), and the type of battery for each chemistry. When you choose a battery type, SAM automatically changes the battery property input variables to default values for that type. These default values were drawn from DiOrio (2015) "Technoeconomic Modeling of Battery Energy Storage in SAM" available `here <https://sam.nrel.gov/battery-storage/battery-publications.html>`__, which also includes more details on how SAM calculates battery capacity.
+The battery type defines the battery chemistry for (lithium ion, lead acid, or flow battery), and the type of battery for each chemistry. When you choose a battery type, SAM automatically changes the battery property input variables to default values for that type. These default values were drawn from DiOrio (2015) "Technoeconomic Modeling of Battery Energy Storage in SAM" available `here <https://sam.nlr.gov/battery-storage/battery-publications.html>`__, which also includes more details on how SAM calculates battery capacity.
 
 **Battery type**
 Choose the battery chemistry and battery type for the batteries in your system.
@@ -64,7 +64,7 @@ The six lithium ion battery types use of the lithium-ion battery capacity model 
 
 * NCA: Nickel Cobalt Aluminum (|EQ_BATT_nca| – Similar in respects to NMC as a cathode material with high specific energy
 
-When you choose a lithium ion battery, SAM assigns values to voltage, lifetime, and thermal properties as appropriate from Reddy (2011), available `here <https://sam.nrel.gov/battery-storage/battery-publications.html>`__, and from manufacturer data sheets. SAM does not change any internal variables or calculations.
+When you choose a lithium ion battery, SAM assigns values to voltage, lifetime, and thermal properties as appropriate from Reddy (2011), available `here <https://sam.nlr.gov/battery-storage/battery-publications.html>`__, and from manufacturer data sheets. SAM does not change any internal variables or calculations.
 
 Flow Batteries
 ..............

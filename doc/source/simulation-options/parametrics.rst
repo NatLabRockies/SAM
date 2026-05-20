@@ -3,7 +3,7 @@ Parametric Simulations
 
 A parametric simulation involves assigning more than one value to one or more input variables to explore the dependence of a result on the inputs. Parametric simulations are useful for creating graphs that show relationships between a results metric and inputs, for example to show the show the :ref:`relationship <relationship>` between internal rate of return and power purchase agreement price for the single owner financial model. Parametric simulations are also useful for optimizing the value of input variables, for example, for photovoltaic systems, create a graph of annual electricity to grid (or levelized cost of energy) versus array tilt and azimuth to optimize the array orientation.
 
-For a video demonstrating parametric simulations, see `Parametric and Statistical Analysis in SAM <https://sam.nrel.gov/simulation-options.html>`__.
+For a video demonstrating parametric simulations, see `Parametric and Statistical Analysis in SAM <https://sam.nlr.gov/simulation-options.html>`__.
 
  Click **Parametrics** in the lower left corner of the main window to display the Parametric Simulations page:
 
@@ -57,7 +57,7 @@ To use Quick Setup:
 
 **Linked**: When variables have the same number of values, run only a single simulation for each set of values. For example, an analysis on two variables, location with three values and subarray tilt angle with three values would result in three simulations.
 
-.. note:: For an annotated example of each Quick Setup option, see the parametric-quick-setup-example.sam file in the `SAM sample file collection <https://github.com/NREL/SAM/tree/develop/samples/SAM%20Sample%20Files>`__.
+.. note:: For an annotated example of each Quick Setup option, see the parametric-quick-setup-example.sam file in the `SAM sample file collection <https://github.com/NatLabRockies/SAM/tree/develop/samples/SAM%20Sample%20Files>`__.
 
 #. In the Quick Setup window, click **Add**, and check one or more parametric input variables. Type a few letters of the variable name in the **Search** box to filter the list.
 

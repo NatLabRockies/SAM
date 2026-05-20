@@ -39,7 +39,7 @@ Import WEC Power Matrix Data
 
 To model a WEC not found in the library, you can import its power matrix data from a file.
 
-See the `SAM website <https://sam.nrel.gov>`__ for a sample WEC data file.
+See the `SAM website <https://sam.nlr.gov>`__ for a sample WEC data file.
 
 The WEC power matrix is a table of electrical power in kW for a range of significant wave heights in meters and wave energy periods in seconds with bins that match the wave energy resource scatter diagram on the :doc:`Wave Resource <me_wave_resource>` page. You can either type values into the table by hand, import data from a comma-separated (CSV) text file, or paste data from your computer's clipboard.
 

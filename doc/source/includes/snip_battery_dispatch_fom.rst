@@ -49,7 +49,7 @@ Automated battery dispatch responds to power prices that vary over time, which c
 
 The automated dispatch options determine the time horizon over which the algorithm maximizes revenue
 
-The automated dispatch algorithms are described in DiOrio, N.; Denholm, P.; Hobbs, W. (2020). `A Model for Evaluating the Configuration and Dispatch of PV Plus Battery Power Plants <https://doi.org/10.1016/j.apenergy.2019.114465>`__. Applied Energy Vol 262 March 2020, also listed on the SAM website at https://sam.nrel.gov/battery-storage/battery-publications.html.
+The automated dispatch algorithms are described in DiOrio, N.; Denholm, P.; Hobbs, W. (2020). `A Model for Evaluating the Configuration and Dispatch of PV Plus Battery Power Plants <https://doi.org/10.1016/j.apenergy.2019.114465>`__. Applied Energy Vol 262 March 2020, also listed on the SAM website at https://sam.nlr.gov/battery-storage/battery-publications.html.
 
 
  
@@ -115,7 +115,7 @@ The PV smoothing algorithm dispatches the battery to reduce rapid fluctuations i
  
 
 
-.. note:: The PV smoothing algorithms requires a simulation time step of 15 minutes or smaller. For SAM's photovoltaic models, the simulation time step is determined by the temporal resolution of the weather file. You can download 15-minute and 5-minute weather data from the NREL National Solar Radiation Database by choosing the **Advanced download** option on the Location and Resource page, or you can convert data from an hourly weather file to subhourly time steps using the "Solar Resource Interpolation" :doc:`macro <../reference/macros>`.
+.. note:: The PV smoothing algorithms requires a simulation time step of 15 minutes or smaller. For SAM's photovoltaic models, the simulation time step is determined by the temporal resolution of the weather file. You can download 15-minute and 5-minute weather data from the NLR National Solar Radiation Database by choosing the **Advanced download** option on the Location and Resource page, or you can convert data from an hourly weather file to subhourly time steps using the "Solar Resource Interpolation" :doc:`macro <../reference/macros>`.
 
 
 .. note:: When you choose the PV smoothing dispatch option, be sure to check the charge options to allow the battery to charge from the system, grid or both.
@@ -127,11 +127,11 @@ After running a simulation, you can find results of the PV smoothing algorithm o
 
 For more information about the algorithm, see:
 
-* For an introduction to the PV Smoothing algorithm, see the "Battery Updates for Fall 2021" webinar recording available on the SAM website at https://sam.nrel.gov/battery-storage/battery-videos.html. 
+* For an introduction to the PV Smoothing algorithm, see the "Battery Updates for Fall 2021" webinar recording available on the SAM website at https://sam.nlr.gov/battery-storage/battery-videos.html. 
 
 * The model is based on the EPRI open source project PV Ramp Rate Smoothing available on GitHub.com at https://github.com/epri-dev/PV-Ramp-Rate-Smoothing.
 
-* For a description of the model, see Fregosi, D.; Bolen, M.; Hobbs, W. (2023) "An analysis of storage requirements and benefits of short-term forecasting for PV ramp rate mitigation" available from https://sam.nrel.gov/battery-storage/battery-publications.html.
+* For a description of the model, see Fregosi, D.; Bolen, M.; Hobbs, W. (2023) "An analysis of storage requirements and benefits of short-term forecasting for PV ramp rate mitigation" available from https://sam.nlr.gov/battery-storage/battery-publications.html.
 
 **Weather file time stamp, minutes**
   The temporal resolution of the currently selected weather file on the Location and Resource page. The PV smoothing algorithm requires a weather file with a time step of 15 minutes or smaller.

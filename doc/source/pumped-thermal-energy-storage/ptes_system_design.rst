@@ -9,7 +9,7 @@ There are two options for automatically populating the design point inputs with 
 
 * Click **Design Point** to open the :doc:`Pumped Thermal Energy Storage <../window-reference/win_ptes_design_pt>` window.
 
-* Run the PTES Import Design :doc:`macro <../reference/macros>` to generate inputs in NREL's detailed design-point PTES model in MATLAB and import them to SAM. To use the Macro, click **Macros** under the Simulate button and choose the macro from the list.
+* Run the PTES Import Design :doc:`macro <../reference/macros>` to generate inputs in NLR's detailed design-point PTES model in MATLAB and import them to SAM. To use the Macro, click **Macros** under the Simulate button and choose the macro from the list.
 
 .. note:: All of the system design inputs are nominal values, or values at the system's design point. SAM calculates actual values during simulation and reports them in the :doc:`results <../getting-started/results_page>`.
 
