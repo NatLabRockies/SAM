@@ -1560,7 +1560,21 @@ addpage( [[ 'Fuel Cell Costs' ],
 		 { 'sidebar'='Installation Costs', 'exclusive_var' = 'pv_capex_cost_choice','help'='installation-costs/cc_fuel_cell' } );
 addpage( [[ 'Operating Costs Fuel Cell' ]], 
          {'sidebar' = 'Operating Costs', 'help'='operating-costs/oc_fuel_cell'} );
-setup_commercial_pages(LOAD_SIMPLE); //belpe not valid for commercial
+  setting( { 'analysis_period_var'='cf_length' } );
+// Unique financial pages due to ITC
+  addpage( [[ 'Financial Debt Min DSCR',
+              'Financial Analysis Parameters',
+		      'Financial Tax and Insurance Rates',
+		      'Financial Salvage Value']],
+           { 'sidebar'='Financial Parameters','help'='financial-parameters/fin_commercial'} );
+  addpage( [[ 'Financial Cash Incentives' ]], { 'sidebar'='Cash Incentives', 'help'='incentives-and-depreciation/cash_incentives' } );           
+  addpage( [[ 'Financial Tax Credits',
+				  {'name'= 'Financial ITC Qualification Fuel Cell', 'caption'='ITC Qualification Options', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
+				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Basis and Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
+				'Financial Depreciation Detailed'  ]],
+			   { 'sidebar'='Tax Credits Depreciation', 'help'='incentives-and-depreciation/tax-credits-depreciation' } );
+  setup_utility_rate();
+  setup_elec_load_page(LOAD_SIMPLE );
 addpage( [[ 'Thermal Rate' ]], 
          {'sidebar' = 'Thermal Rates','help'='thermal-rates-and-load/thermal_rates'});
 addpage( [[ 'Thermal Load' ]], 
@@ -1602,7 +1616,28 @@ addpage( [[ 'Fuel Cell Costs' ], [ 'PVWatts Battery FuelCell Capital Cost Curve'
          { 'sidebar'='Installation Costs', 'exclusive_var' = 'pv_capex_cost_choice','help'='installation-costs/cc_fuel_cell' } );
 addpage( [[ 'Operating Costs Fuel Cell', 'Operating Costs Land Lease' ]],
          {'sidebar' = 'Operating Costs', 'help'='operating-costs/oc_fuel_cell'} );
-setup_single_owner_pages();
+  setting( { 'analysis_period_var'='cf_length' } );
+// Unique financial pages due to ITC
+  addpage( [[ 'Financial Analysis Parameters',
+		      'Financial Tax and Insurance Rates',
+		      'Financial Salvage Value',
+		      {'name'='Financial Debt DSCR or Debt Fraction','caption'='Project Term Debt','collapsible'=true,'collapsible_var'='show_DebtConstDSCR'},
+              {'name'='Financial Cost of Financing Single Owner', 'caption'='Cost of Acquiring Financing','collapsible'=true,'collapsible_var'='show_CapitalCostSO'},
+              {'name'='Financial Construction Financing','caption'='Construction Financing','collapsible'=true,'collapsible_var'='show_construction_period', 'collapsed_by_default'=false},
+              {'name'='Financial Reserve Accounts', 'caption'='Reserve Accounts','collapsible'=true,'collapsible_var'='show_ReserveAccounts'}]],
+           { 'sidebar'='Financial Parameters', 'help'='financial-parameters/fin_single_owner' }  );
+  addpage( [[ 'Financial Solution Mode Single Owner',
+  			    { 'name'='Financial TOD Factors', 'caption'='Time of Delivery', 'collapsible'=true, 'collapsible_var'='revenue_TOD_is_shown', 'collapsed_by_default'=true },
+			    { 'name'='Financial Capacity Payments', 'caption'='Capacity Payments', 'collapsible'=true, 'collapsible_var'='revenue_capacity_payments_is_shown', 'collapsed_by_default'=true },
+			    { 'name'='Financial Curtailment Price', 'caption'='Curtailment Payments', 'collapsible'=true, 'collapsible_var'='revenue_curtailment_is_shown', 'collapsed_by_default'=true },
+			    { 'name'='Financial Non Energy Revenue', 'caption'='Non-Energy Revenue and Expenses', 'collapsible'=true, 'collapsible_var'='non_energy_revenue_is_shown', 'collapsed_by_default'=true } ]],
+            { 'sidebar'='Revenue', 'help'='revenue/revenue_ppa' } );
+  addpage( [[ 'Financial Cash Incentives' ]], { 'sidebar'='Cash Incentives', 'help'='incentives-and-depreciation/cash_incentives' } );           
+  addpage( [[ 'Financial Tax Credits',
+				  {'name'= 'Financial ITC Qualification Fuel Cell', 'caption'='ITC Qualification Options', 'collapsible'=true, 'collapsible_var'='show_itc_qualification', 'collapsed_by_default'=false },
+				  {'name'='Financial ITC Depreciation Allocation', 'caption'='Depreciation Basis and Allocation', 'collapsible'=true, 'collapsible_var'='show_depr_alloc', 'collapsed_by_default'=false },
+				'Financial Depreciation Detailed'  ]],
+			   { 'sidebar'='Tax Credits Depreciation', 'help'='incentives-and-depreciation/tax-credits-depreciation' } );
 setup_electricity_purchases();
 addpage( [[ 'Thermal Rate' ]],
          {'sidebar' = 'Thermal Rates','help'='thermal-rates-and-load/thermal_rates'} );
