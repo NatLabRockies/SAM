@@ -18918,6 +18918,12 @@
     "elev": 773.0,
     "en_electricity_rates": 0.0,
     "enable_interconnection_limit": 0.0,
+    "energy_expenses_ret": [
+        100.0
+    ],
+    "energy_revenue_ret": [
+        100.0
+    ],
     "epc_cost_fixed": 0.0,
     "epc_cost_per_acre": 0.0,
     "epc_cost_per_watt": 0.0,
@@ -28562,6 +28568,21 @@
     "n_rad_tubes": 100.0,
     "nameplate": 99.9999,
     "nominal_discount_rate": 9.060000000000004,
+    "non_energy_expenses": [
+        0.0
+    ],
+    "non_energy_expenses_escal": 0.0,
+    "non_energy_expenses_ret": [
+        0.0
+    ],
+    "non_energy_revenue": [
+        0.0
+    ],
+    "non_energy_revenue_escal": 0.0,
+    "non_energy_revenue_is_shown": 0.0,
+    "non_energy_revenue_ret": [
+        0.0
+    ],
     "om_capacity": [
         66.0
     ],

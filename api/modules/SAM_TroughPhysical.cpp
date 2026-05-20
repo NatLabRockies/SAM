@@ -398,6 +398,30 @@ SAM_EXPORT void SAM_TroughPhysical_SolarField_N_max_hdr_diams_nset(SAM_table ptr
 	});
 }
 
+SAM_EXPORT void SAM_TroughPhysical_SolarField_OpticalTable_1_mset(SAM_table ptr, double* mat, int nrows, int ncols, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_matrix(ptr, "OpticalTable_1", mat, nrows, ncols);
+	});
+}
+
+SAM_EXPORT void SAM_TroughPhysical_SolarField_OpticalTable_2_mset(SAM_table ptr, double* mat, int nrows, int ncols, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_matrix(ptr, "OpticalTable_2", mat, nrows, ncols);
+	});
+}
+
+SAM_EXPORT void SAM_TroughPhysical_SolarField_OpticalTable_3_mset(SAM_table ptr, double* mat, int nrows, int ncols, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_matrix(ptr, "OpticalTable_3", mat, nrows, ncols);
+	});
+}
+
+SAM_EXPORT void SAM_TroughPhysical_SolarField_OpticalTable_4_mset(SAM_table ptr, double* mat, int nrows, int ncols, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_matrix(ptr, "OpticalTable_4", mat, nrows, ncols);
+	});
+}
+
 SAM_EXPORT void SAM_TroughPhysical_SolarField_P_a_mset(SAM_table ptr, double* mat, int nrows, int ncols, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_matrix(ptr, "P_a", mat, nrows, ncols);
@@ -743,6 +767,12 @@ SAM_EXPORT void SAM_TroughPhysical_SolarField_northsouth_field_sep_nset(SAM_tabl
 SAM_EXPORT void SAM_TroughPhysical_SolarField_offset_xpan_hdr_nset(SAM_table ptr, double number, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_number(ptr, "offset_xpan_hdr", number);
+	});
+}
+
+SAM_EXPORT void SAM_TroughPhysical_SolarField_opt_model_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_array(ptr, "opt_model", arr, length);
 	});
 }
 
@@ -2411,6 +2441,46 @@ SAM_EXPORT double SAM_TroughPhysical_SolarField_N_max_hdr_diams_nget(SAM_table p
 	return result;
 }
 
+SAM_EXPORT double* SAM_TroughPhysical_SolarField_OpticalTable_1_mget(SAM_table ptr, int* nrows, int* ncols, SAM_error *err){
+	double* result = nullptr;
+	translateExceptions(err, [&]{
+	result = ssc_data_get_matrix(ptr, "OpticalTable_1", nrows, ncols);
+	if (!result)
+		make_access_error("SAM_TroughPhysical", "OpticalTable_1");
+	});
+	return result;
+}
+
+SAM_EXPORT double* SAM_TroughPhysical_SolarField_OpticalTable_2_mget(SAM_table ptr, int* nrows, int* ncols, SAM_error *err){
+	double* result = nullptr;
+	translateExceptions(err, [&]{
+	result = ssc_data_get_matrix(ptr, "OpticalTable_2", nrows, ncols);
+	if (!result)
+		make_access_error("SAM_TroughPhysical", "OpticalTable_2");
+	});
+	return result;
+}
+
+SAM_EXPORT double* SAM_TroughPhysical_SolarField_OpticalTable_3_mget(SAM_table ptr, int* nrows, int* ncols, SAM_error *err){
+	double* result = nullptr;
+	translateExceptions(err, [&]{
+	result = ssc_data_get_matrix(ptr, "OpticalTable_3", nrows, ncols);
+	if (!result)
+		make_access_error("SAM_TroughPhysical", "OpticalTable_3");
+	});
+	return result;
+}
+
+SAM_EXPORT double* SAM_TroughPhysical_SolarField_OpticalTable_4_mget(SAM_table ptr, int* nrows, int* ncols, SAM_error *err){
+	double* result = nullptr;
+	translateExceptions(err, [&]{
+	result = ssc_data_get_matrix(ptr, "OpticalTable_4", nrows, ncols);
+	if (!result)
+		make_access_error("SAM_TroughPhysical", "OpticalTable_4");
+	});
+	return result;
+}
+
 SAM_EXPORT double* SAM_TroughPhysical_SolarField_P_a_mget(SAM_table ptr, int* nrows, int* ncols, SAM_error *err){
 	double* result = nullptr;
 	translateExceptions(err, [&]{
@@ -2955,6 +3025,16 @@ SAM_EXPORT double SAM_TroughPhysical_SolarField_offset_xpan_hdr_nget(SAM_table p
 	translateExceptions(err, [&]{
 	if (!ssc_data_get_number(ptr, "offset_xpan_hdr", &result))
 		make_access_error("SAM_TroughPhysical", "offset_xpan_hdr");
+	});
+	return result;
+}
+
+SAM_EXPORT double* SAM_TroughPhysical_SolarField_opt_model_aget(SAM_table ptr, int* length, SAM_error *err){
+	double* result = nullptr;
+	translateExceptions(err, [&]{
+	result = ssc_data_get_array(ptr, "opt_model", length);
+	if (!result)
+		make_access_error("SAM_TroughPhysical", "opt_model");
 	});
 	return result;
 }
@@ -4610,16 +4690,6 @@ SAM_EXPORT double* SAM_TroughPhysical_Outputs_EqOpteff_aget(SAM_table ptr, int* 
 	result = ssc_data_get_array(ptr, "EqOpteff", length);
 	if (!result)
 		make_access_error("SAM_TroughPhysical", "EqOpteff");
-	});
-	return result;
-}
-
-SAM_EXPORT double* SAM_TroughPhysical_Outputs_IAM_ave_aget(SAM_table ptr, int* length, SAM_error *err){
-	double* result = nullptr;
-	translateExceptions(err, [&]{
-	result = ssc_data_get_array(ptr, "IAM_ave", length);
-	if (!result)
-		make_access_error("SAM_TroughPhysical", "IAM_ave");
 	});
 	return result;
 }
@@ -6342,6 +6412,16 @@ SAM_EXPORT double* SAM_TroughPhysical_Outputs_operating_modes_c_aget(SAM_table p
 	result = ssc_data_get_array(ptr, "operating_modes_c", length);
 	if (!result)
 		make_access_error("SAM_TroughPhysical", "operating_modes_c");
+	});
+	return result;
+}
+
+SAM_EXPORT double* SAM_TroughPhysical_Outputs_opt_derate_ave_aget(SAM_table ptr, int* length, SAM_error *err){
+	double* result = nullptr;
+	translateExceptions(err, [&]{
+	result = ssc_data_get_array(ptr, "opt_derate_ave", length);
+	if (!result)
+		make_access_error("SAM_TroughPhysical", "opt_derate_ave");
 	});
 	return result;
 }

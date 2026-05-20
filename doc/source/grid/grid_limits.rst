@@ -5,12 +5,9 @@ The Grid page provides inputs for setting a grid power export limit, and for cur
 
 SAM uses the interconnection limit and curtailment inputs to adjust the value calculated for the system AC power output in each hourly our subhourly time step by applying an adjustment factor to the AC power output value.
 
- 
-
-
 The grid interconnection limit and curtailment do not limit electricity imports from the grid.
  
-SAM assumes that the  system has a mechanism for adjusting the power output to meet these grid limits. For example a photovoltaic system might adjust its power output using power electronics to adjust DC operating voltages, or a wind system might feather the turbine blades. You should be sure to account for any costs associated with these control systems on the Installation costs page and/or Operating costs page.
+SAM assumes that the system has a mechanism for adjusting the power output to meet these grid limits. For example a photovoltaic system might adjust its power output using power electronics to adjust DC operating voltages, or a wind system might feather the turbine blades. You should be sure to account for any costs associated with these control systems on the Installation costs page and/or Operating costs page.
  
 .. note:: For systems with battery storage, you can choose whether to consider the grid interconnection limit and curtailment for some dispatch options.
 
@@ -32,7 +29,7 @@ Grid Curtailment
 
 Grid curtailment is a reduction in the amount of power the system is allowed to deliver to the grid. SAM models curtailment as a maximum system AC power output in each time step.
 
-For the Single Owner and Merchant Plant financial models, curtailed power is compensated at the curtailment compensation rate on the :doc:`Revenue <../revenue/revenue>` page.
+For the Single Owner and Merchant Plant financial models, curtailed power is compensated at the curtailment compensation rate on the Revenue page.
 
 **Curtailment**
   A table of system AC power output values values for each simulation time step over one year.

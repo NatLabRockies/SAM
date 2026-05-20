@@ -6,6 +6,9 @@
     "LeadAcid_qn": 60.0,
     "LeadAcid_qn_computed": 287150.4,
     "LeadAcid_tn": 1.0,
+    "ac_degradation": [
+        0.0
+    ],
     "add_om_num_types": 1.0,
     "adjust": 0.0,
     "adjust_constant": 0.0,
@@ -20182,11 +20185,17 @@
     "en_standalone_batt": 0.0,
     "en_wave_batt": 0.0,
     "enable_interconnection_limit": 0.0,
+    "energy_expenses_ret": [
+        100.0
+    ],
     "energy_output_array": [
         0.0
     ],
     "energy_output_array_lifetime": [
         0.0
+    ],
+    "energy_revenue_ret": [
+        100.0
     ],
     "equip1_reserve_cost": 0.0,
     "equip1_reserve_freq": 15.0,
@@ -20204,9 +20213,6 @@
     "fixed_plant_input": 0.0,
     "flip_target_percent": 11.0,
     "flip_target_year": 20.0,
-    "ac_degradation": [
-        0.0
-    ],
     "grid_curtailment": [
         1e38,
         1e38,
@@ -29698,6 +29704,21 @@
     "months_working_reserve": 6.0,
     "nameplate_capacity": 20000.0,
     "nominal_discount_rate": 9.060000000000004,
+    "non_energy_expenses": [
+        0.0
+    ],
+    "non_energy_expenses_escal": 0.0,
+    "non_energy_expenses_ret": [
+        0.0
+    ],
+    "non_energy_revenue": [
+        0.0
+    ],
+    "non_energy_revenue_escal": 0.0,
+    "non_energy_revenue_is_shown": 0.0,
+    "non_energy_revenue_ret": [
+        0.0
+    ],
     "om_batt_capacity_cost": [
         7.25
     ],

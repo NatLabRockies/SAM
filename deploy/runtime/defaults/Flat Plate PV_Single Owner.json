@@ -28339,6 +28339,12 @@
     "enable_subhourly_clipping": 0.0,
     "enable_subhourly_clipping_ui": 0.0,
     "enable_subinterval_distribution": 0.0,
+    "energy_expenses_ret": [
+        100.0
+    ],
+    "energy_revenue_ret": [
+        100.0
+    ],
     "engr_fixed": 0.0,
     "engr_per_watt": 0.02,
     "engr_percent": 0.0,
@@ -40059,6 +40065,21 @@
     "nohrsc_station_id": "",
     "nohrsc_year": "",
     "nominal_discount_rate": 9.060000000000004,
+    "non_energy_expenses": [
+        0.0
+    ],
+    "non_energy_expenses_escal": 0.0,
+    "non_energy_expenses_ret": [
+        0.0
+    ],
+    "non_energy_revenue": [
+        0.0
+    ],
+    "non_energy_revenue_escal": 0.0,
+    "non_energy_revenue_is_shown": 0.0,
+    "non_energy_revenue_ret": [
+        0.0
+    ],
     "om_capacity": [
         15.0
     ],
