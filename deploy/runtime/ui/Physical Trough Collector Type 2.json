@@ -1,7 +1,7 @@
 {
     "Name": "Physical Trough Collector Type 2",
-    "Width": 805.0,
-    "Height": 723.0,
+    "Width": 809.0,
+    "Height": 727.0,
     "FormObjects": {
         "RadioChoice": {
             "Visible": 1.0,
@@ -163,7 +163,7 @@
                 }
             }
         },
-        "DataArray": {
+        "DataArrayTable": {
             "Visible": 1.0,
             "ObjectProperties": {
                 "Name": {
@@ -172,37 +172,97 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 603.0
+                    "Integer": 57.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 363.0
+                    "Integer": 432.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 90.0
+                    "Integer": 187.0
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 28.0
+                    "Integer": 279.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
                     "String": ""
                 },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 2.0
+                "PasteAppendRows": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
                 },
-                "Label": {
-                    "Type": 5.0,
-                    "String": "IAM Coefficients"
+                "PasteAppendCols": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
                 },
-                "Description": {
+                "ShowButtons": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ShowRows": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ShowRowLabels": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "RowLabels": {
                     "Type": 5.0,
                     "String": ""
                 },
-                "TabOrder": {
+                "ShadeR0C0": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "VerticalLabel": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "HorizontalLabel": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ShadeC0": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "ShowCols": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "ShowColLabels": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ColLabels": {
+                    "Type": 5.0,
+                    "String": "IAM Coefficients"
+                },
+                "NumRowsLabel": {
+                    "Type": 5.0,
+                    "String": "Rows:"
+                },
+                "NumColsLabel": {
+                    "Type": 5.0,
+                    "String": "Cols:"
+                },
+                "Layout": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Choices": {
+                    "Type": 5.0,
+                    "String": "Choice1,Choice2"
+                },
+                "HideColumn": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                },
+                "ShowColumn": {
                     "Type": 3.0,
                     "Integer": -1.0
                 }
@@ -1683,7 +1743,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 372.0
+                    "Integer": 375.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -1721,7 +1781,7 @@
             "Units": " ",
             "Group": "Physical Trough Collector Type 2",
             "IndexLabels": "",
-            "Flags": 2.0,
+            "Flags": 3.0,
             "DefaultValue": [
                 1.0,
                 0.0506,
@@ -2085,8 +2145,8 @@
         "};",
         "\r",
         "on_change{\"DISP_opt_model_2\"}=define(){\r",
-        "\tenable(\"OpticalTable_2\", ${DISP_opt_model_2} != 2);\r",
-        "\tenable(\"IAMs_2\", ${DISP_opt_model_2} == 2);\r",
+        "\tshow(\"OpticalTable_2\", ${DISP_opt_model_2} != 2);\r",
+        "\tshow(\"IAMs_2\", ${DISP_opt_model_2} == 2);\r",
         "};\r",
         ""
     ]
