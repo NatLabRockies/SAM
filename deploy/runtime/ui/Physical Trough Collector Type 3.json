@@ -1787,7 +1787,7 @@
                 0.0506,
                 -0.1763
             ],
-            "UIObject": "DataArray",
+            "UIObject": "DataArrayTable",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
