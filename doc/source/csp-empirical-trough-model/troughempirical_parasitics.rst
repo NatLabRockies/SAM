@@ -7,7 +7,7 @@ The Parasitics page displays parameters describing losses due to parasitic elect
 
 The design point parasitic values are the maximum possible values for each parasitic loss category. SAM calculates the hourly parasitic loss value for each category during simulation based on the design point, the PF and F0-F2 coefficients, and the solar field thermal output and power block load in each hour, and reports them in the :doc:`time series <../results/timeseries>` simulation results. The calculated parasitic loss values are never as high as the total design point parasitic losses.
 
-For a more detailed description of the model, please download the CSP trough reference manual from the `SAM website <https://sam.nrel.gov/concentrating-solar-power/csp-publications>`__.
+For a more detailed description of the model, please download the CSP trough reference manual from the `SAM website <https://sam.nlr.gov/concentrating-solar-power/csp-publications>`__.
 
 The values of input variables on the Parasitics page are stored in a library of reference solar fields. You can change the parameter values without changing the values stored in the library. For information about libraries, See :doc:`Working with Libraries <../reference/libraries>`.
 

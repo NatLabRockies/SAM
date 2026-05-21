@@ -16,7 +16,7 @@ SAM makes performance predictions and cost of energy estimates for grid-connecte
 
 Projects can be either behind the meter (on the customer side of the utility meter), buying and selling electricity at retail rates, or front of meter (on the utility side of the meter), selling electricity at a price negotiated through a power purchase agreement (PPA) or at market prices.
 
-For videos demonstrating how to use SAM for different kinds of projects, see Video pages on the `SAM website <https://sam.nrel.gov>`__.
+For videos demonstrating how to use SAM for different kinds of projects, see Video pages on the `SAM website <https://sam.nlr.gov>`__.
 
 The following image shows SAM's main window showing monthly electricity generation and the annual cash flow for a photovoltaic system.
 
@@ -31,7 +31,7 @@ Next, you provide information about a project's location, the type of equipment 
 SAM Models and Databases
 ........................
 
-SAM represents the cost and performance of renewable energy projects using computer models developed at NREL, Sandia National Laboratories, the University of Wisconsin, and other organizations. Each performance model represents a part of the system, and each financial model represents a project's financial structure. The models require input data to describe the performance characteristics of physical equipment in the system and project costs. SAM's user interface makes it possible for people with no experience developing computer models to build a model of a renewable energy project, and to make cost and performance projections based on model results.
+SAM represents the cost and performance of renewable energy projects using computer models developed at NLR, Sandia National Laboratories, the University of Wisconsin, and other organizations. Each performance model represents a part of the system, and each financial model represents a project's financial structure. The models require input data to describe the performance characteristics of physical equipment in the system and project costs. SAM's user interface makes it possible for people with no experience developing computer models to build a model of a renewable energy project, and to make cost and performance projections based on model results.
 
 SAM requires a weather file describing the renewable energy resource and weather conditions a the project location. Depending on the kind of system you are modeling, you either choose a resource data file from a list, download one from the internet, or create the file using your own data.
 
@@ -39,11 +39,11 @@ SAM can automatically download data from the following online databases:
 
 * `OpenEI U.S. Utility Rate Database <http://en.openei.org/wiki/Utility_Rate_Database>`__  for retail electricity rate structures for U.S. utilities
 
-* `NREL National Solar Radiation Database <https://nsrdb.nrel.gov/>`__  for solar resource data and ambient weather conditions.
+* `NLR National Solar Radiation Database <https://nsrdb.nlr.gov/>`__  for solar resource data and ambient weather conditions.
 
-* `NREL WIND Toolkit <https://www.nrel.gov/grid/wind-toolkit.html>`__  for wind resource data.
+* `NLR WIND Toolkit <https://www.nlr.gov/grid/wind-toolkit.html>`__  for wind resource data.
 
-* `Hindcast Wave Data <https://developer.nrel.gov/docs/wave/hindcast/>`__  for marine energy wave resource data.
+* `Hindcast Wave Data <https://developer.nlr.gov/docs/wave/hindcast/>`__  for marine energy wave resource data.
 
 SAM includes several databases of performance data and coefficients for system components such as photovoltaic modules and inverters, batteries, parabolic trough receivers and collectors, wind turbines, or biopower combustion systems. For those components, you simply choose an option from a list.
 
@@ -247,16 +247,16 @@ SAM also makes it possible to work with external models developed in Excel with 
 Software Development History and Users
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-SAM, originally called the "Solar Advisor Model" was developed by the National Renewable Energy Laboratory in collaboration with Sandia National Laboratories in 2005, and at first used internally by the U.S. Department of Energy's Solar Energy Technologies Program for systems-based analysis of solar technology improvement opportunities within the program. The first public version was released in August 2007 as Version 1, making it possible for solar energy professionals to analyze photovoltaic systems and concentrating solar power parabolic trough systems in the same modeling platform using consistent financial assumptions. Since 2007, two new versions have been released each year, adding new technologies and financial models. In 2010, the name changed to "System Advisor Model" to reflect the addition of non-solar technologies.
+SAM, originally called the "Solar Advisor Model" was developed by the National Laboratory of the Rockies in collaboration with Sandia National Laboratories in 2005, and at first used internally by the U.S. Department of Energy's Solar Energy Technologies Program for systems-based analysis of solar technology improvement opportunities within the program. The first public version was released in August 2007 as Version 1, making it possible for solar energy professionals to analyze photovoltaic systems and concentrating solar power parabolic trough systems in the same modeling platform using consistent financial assumptions. Since 2007, two new versions have been released each year, adding new technologies and financial models. In 2010, the name changed to "System Advisor Model" to reflect the addition of non-solar technologies.
 
-The DOE, NREL, and Sandia continue to use the model for program planning and grant programs. Since the first public release, over 35,000 people representing manufacturers, project developers, academic researchers, and policy makers have downloaded the software. Manufacturers are using the model to evaluate the impact of efficiency improvements or cost reductions in their products on the cost of energy from installed systems. Project developers use SAM to evaluate different system configurations to maximize earnings from electricity sales. Policy makers and designers use the model to experiment with different incentive structures.
+The DOE, NLR, and Sandia continue to use the model for program planning and grant programs. Since the first public release, over 35,000 people representing manufacturers, project developers, academic researchers, and policy makers have downloaded the software. Manufacturers are using the model to evaluate the impact of efficiency improvements or cost reductions in their products on the cost of energy from installed systems. Project developers use SAM to evaluate different system configurations to maximize earnings from electricity sales. Policy makers and designers use the model to experiment with different incentive structures.
 
 Downloading SAM and User Support
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 SAM is free software and runs on Windows, MacOS, and Linux. It requires about 500 MB of storage space on your computer. See :doc:`Software Installation <../reference/installation>` for details.
 
-To run SAM, you must register your copy of SAM by providing NREL with a valid email address.
+To run SAM, you must register your copy of SAM by providing NLR with a valid email address.
 
 SAM's website includes software descriptions, links to publications about SAM and other resources:
 
@@ -264,11 +264,11 @@ The following resources are available for learning to use SAM and for getting he
 
 * The built-in Help system (also available on the website as a PDF from the Download page)
 
-* User support forum: https://sam.nrel.gov/forum
+* User support forum: https://sam.nlr.gov/forum
 
-* Webinars and demonstration videos: https://sam.nrel.gov
+* Webinars and demonstration videos: https://sam.nlr.gov
 
-You can contact the SAM support team by emailing `sam.support@nrel.gov <mailto:sam.support@nrel.gov?subject=Query%20from%20SAM%20Help>`__.
+You can contact the SAM support team by emailing `sam.support@nlr.gov <mailto:sam.support@nlr.gov?subject=Query%20from%20SAM%20Help>`__.
 
 SAM's help system includes detailed descriptions of the user interface, modeling options, and results:
 
@@ -279,7 +279,7 @@ SAM's help system includes detailed descriptions of the user interface, modeling
 Model Structure
 ~~~~~~~~~~~~~~~
 
-SAM consists of a graphical user interface, SAM Simulation Core (SSC), and an application programming interface (API). The graphical user interface is the part of SAM that you see, and provides access to input variables and simulation controls, and displays tables and graphs of results. SSC performs a time-step-by-time-step simulation of a power system's performance, and financial calculations to generate a project cash flow and financial metrics. The API allows programs to interact with SSC. You can write software to interact with the API using the :doc:`software development kit (SDK) <../reference/sdk>`, which includes a Python package called `PySAM <https://nrel-pysam.readthedocs.io/en/main/>`__.
+SAM consists of a graphical user interface, SAM Simulation Core (SSC), and an application programming interface (API). The graphical user interface is the part of SAM that you see, and provides access to input variables and simulation controls, and displays tables and graphs of results. SSC performs a time-step-by-time-step simulation of a power system's performance, and financial calculations to generate a project cash flow and financial metrics. The API allows programs to interact with SSC. You can write software to interact with the API using the :doc:`software development kit (SDK) <../reference/sdk>`, which includes a Python package called `PySAM <https://NLR-pysam.readthedocs.io/en/main/>`__.
 
 SAM's :doc:`scripting language <../reference/macros>`, called LK, allows you to automate certain tasks from inside the graphical user interface. If you have some experience writing computer programs, you can easily learn to write LK scripts to set the values of input variables by reading them from a text file or based on calculations in the script, run simulations, and write values of results to a text file. You can also use LK to automatically run a series of simulations using different weather files.
 

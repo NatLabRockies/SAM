@@ -15,7 +15,7 @@ The Location and Resource page provides access to the solar resource library, wh
 
 There are two ways to add files to your solar resource library:
 
-1. Download files from the NREL National Solar Radiation Database (NSRDB)
+1. Download files from the NLR National Solar Radiation Database (NSRDB)
 
 Use the download weather file options and click **Download and add to library** to get the most up-to-date data from the NSRDB for long-term cash flow analysis, single-year analysis, and P50/P90 analysis.
 
@@ -25,7 +25,7 @@ If you have weather files from a source other than the NSRDB or that you've down
 
 When you install SAM, it creates the default download folder <user>/SAM Downloaded Weather Files folder where weather files you download from the NSRDB are stored. You can change that folder by clicking **Add/remove weather file folders** and changing the **Folder for Downloaded Solar Data Files**.
 
-For a list of sources of data other than the NSRDB, see the `Weather Data page on the SAM website <https://sam.nrel.gov/weather-data.html>`__.
+For a list of sources of data other than the NSRDB, see the `Weather Data page on the SAM website <https://sam.nlr.gov/weather-data.html>`__.
 
 See also
 ........
@@ -51,10 +51,10 @@ See also
 .. note:: You can compare results for a system using more than one weather file in a single case by using SAM's :doc:`parametric simulation <../simulation-options/parametrics>` option.
 
 
-.. note:: For more information about weather data, including where to find data for locations outside of the United States, see `Weather Data <https://sam.nrel.gov/weather>`__ on the SAM website.
+.. note:: For more information about weather data, including where to find data for locations outside of the United States, see `Weather Data <https://sam.nlr.gov/weather>`__ on the SAM website.
 
 
-.. note:: For a helpful discussion of weather data and power system simulation, see Sengupta, M.; Habte, A.; Gueymard, C.; Wilbert, S.; Renne, D.; Stoffel, T. (2017). "Best Practices Handbook for the Collection and Use of Solar Resource Data for Solar Energy Applications: Second Edition." NREL Report No. TP-5D00-68886. (`PDF 8.1 MB <https://www.nrel.gov/docs/fy18osti/68886.pdf>`__)
+.. note:: For a helpful discussion of weather data and power system simulation, see Sengupta, M.; Habte, A.; Gueymard, C.; Wilbert, S.; Renne, D.; Stoffel, T. (2017). "Best Practices Handbook for the Collection and Use of Solar Resource Data for Solar Energy Applications: Second Edition." NREL Report No. TP-5D00-68886. (`PDF 8.1 MB <https://www.nlr.gov/docs/fy18osti/68886.pdf>`__)
 
 
 Solar Resource Library
@@ -124,14 +124,14 @@ When you add a weather file to the solar resource library, SAM reads weather dat
 **Maximum snow depth**
   If the weather file contains snow depth data, the maximum value of snow depth data (cm) in the weather file. NaN indicates the file does not contain snow depth data. Snow depth data is required for to model snow losses for the Detailed Photovoltaic and PVWatts models.
 
-.. note:: For information about where to find weather files with snow depth data, see the note on the `Weather Data <https://sam.nrel.gov/weather-data.html>`__ page of the SAM website.
+.. note:: For information about where to find weather files with snow depth data, see the note on the `Weather Data <https://sam.nlr.gov/weather-data.html>`__ page of the SAM website.
 
 **Annual albedo**
   If the weather file contains albedo (ground reflectance) data, the average value of albedo values in the weather file. NaN indicates the file does not contain albedo data.
 
 About the NSRDB
 ~~~~~~~~~~~~~~~
-The `NREL National Solar Radiation Database (NSRDB) <https://nsrdb.nrel.gov/>`__ is an online database of weather files containing solar resource data in the :doc:`SAM CSV format <../weather-file-formats/weather_format_sam_csv_solar>`. Files are available both as :doc:`typical-year <../weather-data/weather_typical_single>` files and :doc:`single-year <../weather-data/weather_typical_single>` files. The database covers the parts of the world shown in the map below. The current data is called PSM (Physical Solar Model).
+The `NLR National Solar Radiation Database (NSRDB) <https://nsrdb.nlr.gov/>`__ is an online database of weather files containing solar resource data in the :doc:`SAM CSV format <../weather-file-formats/weather_format_sam_csv_solar>`. Files are available both as :doc:`typical-year <../weather-data/weather_typical_single>` files and :doc:`single-year <../weather-data/weather_typical_single>` files. The database covers the parts of the world shown in the map below. The current data is called PSM (Physical Solar Model).
 
 .. image:: /images/IMG_NSRDB-map.png
    :align: center
@@ -142,13 +142,13 @@ The `NREL National Solar Radiation Database (NSRDB) <https://nsrdb.nrel.gov/>`__
  
 
 
-.. note:: The NSRDB requires an email address to download weather file. When you download a weather file from SAM, SAM submits the email address that you used to :doc:`register SAM <../reference/registration>`. NREL uses your email address to determine how many people are using the NSRDB. It does not share email addresses.
+.. note:: The NSRDB requires an email address to download weather file. When you download a weather file from SAM, SAM submits the email address that you used to :doc:`register SAM <../reference/registration>`. NLR uses your email address to determine how many people are using the NSRDB. It does not share email addresses.
 
 
 .. note:: SAM uses the `Google Maps API Geocoding Service <https://developers.google.com/maps/documentation/geocoding/>`__ service to identify the geographic coordinates (latitude and longitude) of a location when you type a street address or city and state name to identify the location.
 
 
-.. note:: For information about downloading weather files and data from other sources, see the `Weather Data <https://sam.nrel.gov/weather-data>`__ page on the SAM website.
+.. note:: For information about downloading weather files and data from other sources, see the `Weather Data <https://sam.nlr.gov/weather-data>`__ page on the SAM website.
 
 SAM downloads weather files with the following hourly data from the NSRDB:
 

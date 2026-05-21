@@ -93,6 +93,14 @@ extern "C"
 	SAM_EXPORT void SAM_TcsmoltenSalt_SystemControl_ampl_exec_call_sset(SAM_table ptr, const char* str, SAM_error *err);
 
 	/**
+	 * Set anc_elec_output: Ancillary electrical generation (PV) [kWe]
+	 * options: None
+	 * constraints: None
+	 * required if: ?
+	 */
+	SAM_EXPORT void SAM_TcsmoltenSalt_SystemControl_anc_elec_output_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
+
+	/**
 	 * Set aux_par: Aux heater, boiler parasitic [MWe/MWcap]
 	 * options: None
 	 * constraints: None
@@ -333,6 +341,14 @@ extern "C"
 	SAM_EXPORT void SAM_TcsmoltenSalt_SystemControl_is_ampl_engine_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
+	 * Set is_control_target_elec: 0 (default): control targets heat into cycle
+	 * options: None
+	 * constraints: None
+	 * required if: ?=0
+	 */
+	SAM_EXPORT void SAM_TcsmoltenSalt_SystemControl_is_control_target_elec_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
 	 * Set is_dispatch: Allow dispatch optimization?
 	 * options: None
 	 * constraints: None
@@ -355,6 +371,14 @@ extern "C"
 	 * required if: None
 	 */
 	SAM_EXPORT void SAM_TcsmoltenSalt_SystemControl_is_field_tracking_init_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
+	 * Set is_hybrid: Is the system hybrid [0-1]
+	 * options: None
+	 * constraints: None
+	 * required if: ?=0
+	 */
+	SAM_EXPORT void SAM_TcsmoltenSalt_SystemControl_is_hybrid_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
 	 * Set is_parallel_htr: Does plant include a HTF heater parallel to solar field?
@@ -2352,7 +2376,7 @@ extern "C"
 	 * Set const_per_interest_rate1: Interest rate, loan 1 [%]
 	 * options: None
 	 * constraints: None
-	 * required if: *
+	 * required if: is_hybrid=0
 	 */
 	SAM_EXPORT void SAM_TcsmoltenSalt_FinancialParameters_const_per_interest_rate1_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -2360,7 +2384,7 @@ extern "C"
 	 * Set const_per_interest_rate2: Interest rate, loan 2 [%]
 	 * options: None
 	 * constraints: None
-	 * required if: *
+	 * required if: is_hybrid=0
 	 */
 	SAM_EXPORT void SAM_TcsmoltenSalt_FinancialParameters_const_per_interest_rate2_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -2368,7 +2392,7 @@ extern "C"
 	 * Set const_per_interest_rate3: Interest rate, loan 3 [%]
 	 * options: None
 	 * constraints: None
-	 * required if: *
+	 * required if: is_hybrid=0
 	 */
 	SAM_EXPORT void SAM_TcsmoltenSalt_FinancialParameters_const_per_interest_rate3_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -2376,7 +2400,7 @@ extern "C"
 	 * Set const_per_interest_rate4: Interest rate, loan 4 [%]
 	 * options: None
 	 * constraints: None
-	 * required if: *
+	 * required if: is_hybrid=0
 	 */
 	SAM_EXPORT void SAM_TcsmoltenSalt_FinancialParameters_const_per_interest_rate4_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -2384,7 +2408,7 @@ extern "C"
 	 * Set const_per_interest_rate5: Interest rate, loan 5 [%]
 	 * options: None
 	 * constraints: None
-	 * required if: *
+	 * required if: is_hybrid=0
 	 */
 	SAM_EXPORT void SAM_TcsmoltenSalt_FinancialParameters_const_per_interest_rate5_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -2392,7 +2416,7 @@ extern "C"
 	 * Set const_per_months1: Months prior to operation, loan 1
 	 * options: None
 	 * constraints: None
-	 * required if: *
+	 * required if: is_hybrid=0
 	 */
 	SAM_EXPORT void SAM_TcsmoltenSalt_FinancialParameters_const_per_months1_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -2400,7 +2424,7 @@ extern "C"
 	 * Set const_per_months2: Months prior to operation, loan 2
 	 * options: None
 	 * constraints: None
-	 * required if: *
+	 * required if: is_hybrid=0
 	 */
 	SAM_EXPORT void SAM_TcsmoltenSalt_FinancialParameters_const_per_months2_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -2408,7 +2432,7 @@ extern "C"
 	 * Set const_per_months3: Months prior to operation, loan 3
 	 * options: None
 	 * constraints: None
-	 * required if: *
+	 * required if: is_hybrid=0
 	 */
 	SAM_EXPORT void SAM_TcsmoltenSalt_FinancialParameters_const_per_months3_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -2416,7 +2440,7 @@ extern "C"
 	 * Set const_per_months4: Months prior to operation, loan 4
 	 * options: None
 	 * constraints: None
-	 * required if: *
+	 * required if: is_hybrid=0
 	 */
 	SAM_EXPORT void SAM_TcsmoltenSalt_FinancialParameters_const_per_months4_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -2424,7 +2448,7 @@ extern "C"
 	 * Set const_per_months5: Months prior to operation, loan 5
 	 * options: None
 	 * constraints: None
-	 * required if: *
+	 * required if: is_hybrid=0
 	 */
 	SAM_EXPORT void SAM_TcsmoltenSalt_FinancialParameters_const_per_months5_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -2432,7 +2456,7 @@ extern "C"
 	 * Set const_per_percent1: Percent of total installed cost, loan 1 [%]
 	 * options: None
 	 * constraints: None
-	 * required if: *
+	 * required if: is_hybrid=0
 	 */
 	SAM_EXPORT void SAM_TcsmoltenSalt_FinancialParameters_const_per_percent1_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -2440,7 +2464,7 @@ extern "C"
 	 * Set const_per_percent2: Percent of total installed cost, loan 2 [%]
 	 * options: None
 	 * constraints: None
-	 * required if: *
+	 * required if: is_hybrid=0
 	 */
 	SAM_EXPORT void SAM_TcsmoltenSalt_FinancialParameters_const_per_percent2_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -2448,7 +2472,7 @@ extern "C"
 	 * Set const_per_percent3: Percent of total installed cost, loan 3 [%]
 	 * options: None
 	 * constraints: None
-	 * required if: *
+	 * required if: is_hybrid=0
 	 */
 	SAM_EXPORT void SAM_TcsmoltenSalt_FinancialParameters_const_per_percent3_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -2456,7 +2480,7 @@ extern "C"
 	 * Set const_per_percent4: Percent of total installed cost, loan 4 [%]
 	 * options: None
 	 * constraints: None
-	 * required if: *
+	 * required if: is_hybrid=0
 	 */
 	SAM_EXPORT void SAM_TcsmoltenSalt_FinancialParameters_const_per_percent4_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -2464,7 +2488,7 @@ extern "C"
 	 * Set const_per_percent5: Percent of total installed cost, loan 5 [%]
 	 * options: None
 	 * constraints: None
-	 * required if: *
+	 * required if: is_hybrid=0
 	 */
 	SAM_EXPORT void SAM_TcsmoltenSalt_FinancialParameters_const_per_percent5_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -2472,7 +2496,7 @@ extern "C"
 	 * Set const_per_upfront_rate1: Upfront fee on principal, loan 1 [%]
 	 * options: None
 	 * constraints: None
-	 * required if: *
+	 * required if: is_hybrid=0
 	 */
 	SAM_EXPORT void SAM_TcsmoltenSalt_FinancialParameters_const_per_upfront_rate1_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -2480,7 +2504,7 @@ extern "C"
 	 * Set const_per_upfront_rate2: Upfront fee on principal, loan 2 [%]
 	 * options: None
 	 * constraints: None
-	 * required if: *
+	 * required if: is_hybrid=0
 	 */
 	SAM_EXPORT void SAM_TcsmoltenSalt_FinancialParameters_const_per_upfront_rate2_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -2488,7 +2512,7 @@ extern "C"
 	 * Set const_per_upfront_rate3: Upfront fee on principal, loan 3 [%]
 	 * options: None
 	 * constraints: None
-	 * required if: *
+	 * required if: is_hybrid=0
 	 */
 	SAM_EXPORT void SAM_TcsmoltenSalt_FinancialParameters_const_per_upfront_rate3_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -2496,7 +2520,7 @@ extern "C"
 	 * Set const_per_upfront_rate4: Upfront fee on principal, loan 4 [%]
 	 * options: None
 	 * constraints: None
-	 * required if: *
+	 * required if: is_hybrid=0
 	 */
 	SAM_EXPORT void SAM_TcsmoltenSalt_FinancialParameters_const_per_upfront_rate4_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -2504,7 +2528,7 @@ extern "C"
 	 * Set const_per_upfront_rate5: Upfront fee on principal, loan 5 [%]
 	 * options: None
 	 * constraints: None
-	 * required if: *
+	 * required if: is_hybrid=0
 	 */
 	SAM_EXPORT void SAM_TcsmoltenSalt_FinancialParameters_const_per_upfront_rate5_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -2655,6 +2679,99 @@ extern "C"
 	SAM_EXPORT void SAM_TcsmoltenSalt_AdjustmentFactors_sf_adjust_timeindex_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
 
 
+	//
+	// HybridCosts parameters
+	//
+
+	/**
+	 * Set degradation: Annual AC degradation [%]
+	 * options: None
+	 * constraints: None
+	 * required if: ?=0.0
+	 */
+	SAM_EXPORT void SAM_TcsmoltenSalt_HybridCosts_degradation_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
+
+	/**
+	 * Set land_area: Total land area [acres]
+	 * options: None
+	 * constraints: None
+	 * required if: ?=0
+	 */
+	SAM_EXPORT void SAM_TcsmoltenSalt_HybridCosts_land_area_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
+	 * Set om_capacity: Capacity-based O&M amount [$/kWcap]
+	 * options: !battery,!fuelcell
+	 * constraints: None
+	 * required if: ?=0.0
+	 */
+	SAM_EXPORT void SAM_TcsmoltenSalt_HybridCosts_om_capacity_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
+
+	/**
+	 * Set om_capacity_escal: Capacity-based O&M escalation [%/year]
+	 * options: None
+	 * constraints: None
+	 * required if: ?=0.0
+	 */
+	SAM_EXPORT void SAM_TcsmoltenSalt_HybridCosts_om_capacity_escal_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
+	 * Set om_fixed: Fixed O&M annual amount [$/year]
+	 * options: !battery,!fuelcell
+	 * constraints: None
+	 * required if: ?=0.0
+	 */
+	SAM_EXPORT void SAM_TcsmoltenSalt_HybridCosts_om_fixed_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
+
+	/**
+	 * Set om_fixed_escal: Fixed O&M escalation [%/year]
+	 * options: None
+	 * constraints: None
+	 * required if: ?=0.0
+	 */
+	SAM_EXPORT void SAM_TcsmoltenSalt_HybridCosts_om_fixed_escal_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
+	 * Set om_land_lease: Land lease cost [$/acre]
+	 * options: None
+	 * constraints: None
+	 * required if: ?=0
+	 */
+	SAM_EXPORT void SAM_TcsmoltenSalt_HybridCosts_om_land_lease_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
+
+	/**
+	 * Set om_land_lease_escal: Land lease cost escalation [%/yr]
+	 * options: None
+	 * constraints: None
+	 * required if: ?=0
+	 */
+	SAM_EXPORT void SAM_TcsmoltenSalt_HybridCosts_om_land_lease_escal_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
+	 * Set om_production: Production-based O&M amount [$/MWh]
+	 * options: !battery,!fuelcell
+	 * constraints: None
+	 * required if: ?=0.0
+	 */
+	SAM_EXPORT void SAM_TcsmoltenSalt_HybridCosts_om_production_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
+
+	/**
+	 * Set om_production_escal: Production-based O&M escalation [%/year]
+	 * options: None
+	 * constraints: None
+	 * required if: ?=0.0
+	 */
+	SAM_EXPORT void SAM_TcsmoltenSalt_HybridCosts_om_production_escal_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
+	 * Set total_installed_cost: Total installed cost [$]
+	 * options: None
+	 * constraints: None
+	 * required if: *
+	 */
+	SAM_EXPORT void SAM_TcsmoltenSalt_HybridCosts_total_installed_cost_nset(SAM_table ptr, double number, SAM_error *err);
+
+
 	/**
 	 * SolarResource Getters
 	 */
@@ -2677,6 +2794,8 @@ extern "C"
 	SAM_EXPORT const char* SAM_TcsmoltenSalt_SystemControl_ampl_data_dir_sget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT const char* SAM_TcsmoltenSalt_SystemControl_ampl_exec_call_sget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double* SAM_TcsmoltenSalt_SystemControl_anc_elec_output_aget(SAM_table ptr, int* length, SAM_error *err);
 
 	SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_aux_par_nget(SAM_table ptr, SAM_error *err);
 
@@ -2738,11 +2857,15 @@ extern "C"
 
 	SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_is_ampl_engine_nget(SAM_table ptr, SAM_error *err);
 
+	SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_is_control_target_elec_nget(SAM_table ptr, SAM_error *err);
+
 	SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_is_dispatch_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_is_dispatch_targets_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_is_field_tracking_init_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_is_hybrid_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_is_parallel_htr_nget(SAM_table ptr, SAM_error *err);
 
@@ -3388,6 +3511,33 @@ extern "C"
 
 
 	/**
+	 * HybridCosts Getters
+	 */
+
+	SAM_EXPORT double* SAM_TcsmoltenSalt_HybridCosts_degradation_aget(SAM_table ptr, int* length, SAM_error *err);
+
+	SAM_EXPORT double SAM_TcsmoltenSalt_HybridCosts_land_area_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double* SAM_TcsmoltenSalt_HybridCosts_om_capacity_aget(SAM_table ptr, int* length, SAM_error *err);
+
+	SAM_EXPORT double SAM_TcsmoltenSalt_HybridCosts_om_capacity_escal_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double* SAM_TcsmoltenSalt_HybridCosts_om_fixed_aget(SAM_table ptr, int* length, SAM_error *err);
+
+	SAM_EXPORT double SAM_TcsmoltenSalt_HybridCosts_om_fixed_escal_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double* SAM_TcsmoltenSalt_HybridCosts_om_land_lease_aget(SAM_table ptr, int* length, SAM_error *err);
+
+	SAM_EXPORT double SAM_TcsmoltenSalt_HybridCosts_om_land_lease_escal_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double* SAM_TcsmoltenSalt_HybridCosts_om_production_aget(SAM_table ptr, int* length, SAM_error *err);
+
+	SAM_EXPORT double SAM_TcsmoltenSalt_HybridCosts_om_production_escal_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_TcsmoltenSalt_HybridCosts_total_installed_cost_nget(SAM_table ptr, SAM_error *err);
+
+
+	/**
 	 * Outputs Getters
 	 */
 
@@ -3566,6 +3716,8 @@ extern "C"
 	SAM_EXPORT double SAM_TcsmoltenSalt_Outputs_cav_rec_height_calc_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_TcsmoltenSalt_Outputs_cav_rec_width_calc_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double* SAM_TcsmoltenSalt_Outputs_cf_land_lease_expense_aget(SAM_table ptr, int* length, SAM_error *err);
 
 	SAM_EXPORT double* SAM_TcsmoltenSalt_Outputs_clearsky_aget(SAM_table ptr, int* length, SAM_error *err);
 
@@ -3877,6 +4029,8 @@ extern "C"
 
 	SAM_EXPORT double SAM_TcsmoltenSalt_Outputs_q_dot_piping_loss_des_nget(SAM_table ptr, SAM_error *err);
 
+	SAM_EXPORT double SAM_TcsmoltenSalt_Outputs_q_dot_rec_abs_from_sf_est_des_nget(SAM_table ptr, SAM_error *err);
+
 	SAM_EXPORT double SAM_TcsmoltenSalt_Outputs_q_dot_rec_des_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double* SAM_TcsmoltenSalt_Outputs_q_dot_rec_inc_aget(SAM_table ptr, int* length, SAM_error *err);
@@ -3904,6 +4058,8 @@ extern "C"
 	SAM_EXPORT double SAM_TcsmoltenSalt_Outputs_rec_height_calc_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double* SAM_TcsmoltenSalt_Outputs_rec_op_mode_final_aget(SAM_table ptr, int* length, SAM_error *err);
+
+	SAM_EXPORT double SAM_TcsmoltenSalt_Outputs_rec_sm_from_sf_est_des_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double* SAM_TcsmoltenSalt_Outputs_rec_startup_energy_remain_final_aget(SAM_table ptr, int* length, SAM_error *err);
 

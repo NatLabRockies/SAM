@@ -142,6 +142,18 @@ For the "Edit Losses" window (`SAM/lossadj.cpp`):
 
 To find all SAM window Help IDs, search the SAM project for "wxID_HELP", or more specifically "case wxID_HELP" and "if (evt.GetId() == wxID_HELP)".
 
+## Checking for Broken Links
+
+Use the [linkcheck builder](https://www.sphinx-doc.org/en/master/usage/builders/index.html#sphinx.builders.linkcheck.CheckExternalLinksBuilder) to check for broken external links. (Errors in the build process described above should find broken internal links.):
+
+From `/SAM/doc/source`, run
+
+```
+sphinx-build -b linkcheck . _build/linkcheck
+```
+
+This will generate a report of broken links in `/SAM/doc/source/_build/linkcheck/output.txt`.
+
 ## File Structure
 
 SAM's Help system is organized into chapters like "Introduction", "Getting Started", etc. Each model has its own chapter like "Detailed Photovoltaic Model".

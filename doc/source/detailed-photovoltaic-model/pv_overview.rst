@@ -5,7 +5,7 @@ The following overview is to help you get started modeling a photovoltaic system
 
 .. note:: If you only have basic information about the photovoltaic system's design like the system size and orientation, you can use the :doc:`../pvwatts/pvwatts` model instead of the Detailed Photovoltaic model. PVWatts does not require detailed information about the module, inverter, and array layout.
 
-For a complete technical description of SAM's photovoltaic model, see Gilman, P. (2015). SAM Photovoltaic Model Technical Reference. National Renewable Energy Laboratory. 59 pp.; NREL/TP-6A20-64102. (`PDF 840 KB <https://docs.nrel.gov/docs/fy15osti/64102.pdf>`__)
+For a complete technical description of SAM's photovoltaic model, see Gilman, P. (2015). SAM Photovoltaic Model Technical Reference. National Renewable Energy Laboratory. 59 pp.; NREL/TP-6A20-64102. (`PDF 840 KB <https://docs.nlr.gov/docs/fy15osti/64102.pdf>`__)
 
 Follow the steps below to get started using the detailed photovoltaic model. If you are unsure of an input, use its default value. After running simulations, exploring results, and collecting more information about your project, you can refine the inputs.
 

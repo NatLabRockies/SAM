@@ -56059,7 +56059,9 @@
     "insurance_rate": 0.5,
     "is_advanced": 0.0,
     "is_btm": 0.0,
+    "is_control_target_elec": 0.0,
     "is_dispatch": 0.0,
+    "is_hybrid": 0.0,
     "is_iscc": 0.0,
     "is_parallel_htr": 0.0,
     "is_rec_enforce_min_startup": 0.0,
@@ -56896,6 +56898,7 @@
     "q_dot_heater_des_calc": 0.0,
     "q_dot_heater_des_calc_COST": 0.0,
     "q_dot_piping_loss_des_calc": 0.792399151165536,
+    "q_dot_rec_abs_from_sf_est_des_calc": -999.0,
     "q_dot_tes_est": 0.8814426938789968,
     "q_pb_design": 279.126213592233,
     "q_sby_frac": 0.2,
@@ -56919,6 +56922,7 @@
     "rec_qf_delay": 0.25,
     "rec_ref_area": 1571.0,
     "rec_ref_cost": 103000000.0,
+    "rec_sm_from_sf_est_des_calc": -999.0,
     "rec_su_delay": 0.5,
     "rec_tm_mult": 1.0,
     "receiver_cost_calc": 79628026.66564948,
@@ -58692,7 +58696,6 @@
     "ui_land_lease": [
         0.0
     ],
-    "ui_msg": "",
     "ui_receiver_height": 20.4598,
     "ui_step_minutes": 60.0,
     "ui_system_nameplate_standalone": 0.0,

@@ -5,13 +5,13 @@ The power cycle converts thermal energy to electric energy. There are two option
 
 * The **user-defined power cycle** model allows you to use data from your own power cycle model in SAM, and can be used to model Rankine or other types of power cycles. It requires that you provide values for general power cycle parameters along with a tables of data showing the electrical power generated over a range of HTF mass flow rates, ambient temperatures, and ambient temperatures. SAM uses this data to build a power cycle regression model that considers single variable effects and two variable interactions.
 
-.. note:: If you are modeling a supercritical Carbon dioxide (sCO2) cycle, you can use the **sCO2 Cycle Integration** :doc:`macro <../reference/macros>` with the` NREL Supercritical Carbon Dioxide (sCO2) Python model <https://github.com/NREL/SAM/tree/develop/samples/CSP/sco2_analysis_python_V2>`__. SAM 2020.2.29 is the most recent version to include an sCO2 option on the Power Cycle page.
+.. note:: If you are modeling a supercritical Carbon dioxide (sCO2) cycle, you can use the **sCO2 Cycle Integration** :doc:`macro <../reference/macros>` with the` NLR Supercritical Carbon Dioxide (sCO2) Python model <https://github.com/NatLabRockies/SAM/tree/develop/samples/CSP/sco2_analysis_python_V2>`__. SAM 2020.2.29 is the most recent version to include an sCO2 option on the Power Cycle page.
 
 .. image:: /images/SS_MSPT_power-cycle-options.png
    :align: center
    :alt: SS_MSPT_power-cycle-options.png
 
-The power cycle model is described in the following publications listed on the SAM website at https://sam.nrel.gov/concentrating-solar-power/csp-publications.html:
+The power cycle model is described in the following publications listed on the SAM website at https://sam.nlr.gov/concentrating-solar-power/csp-publications.html:
 
 * Chapter 4 of Wagner M, 2008. Simulation and Predictive Performance Modeling of Utility-Scale Central Receiver System Power Plants. Master of Science Thesis. University of Wisconsin-Madison
 

@@ -403,6 +403,7 @@
 		"ChargesByMonth": {
 		},
 		"HybridFin": {
+			"is_hybrid": 0
 		},
 		"Monthly": {
 		},

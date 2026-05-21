@@ -28,4 +28,4 @@ Marine Energy References
 
 For information about sources of wave energy resource data, see the following websites:
 
-* `Water Power Technologies Office Wave Hindcast Dataset <https://www.nrel.gov/water/wave-hindcast-dataset>`__
+* `Water Power Technologies Office Wave Hindcast Dataset <https://www.nlr.gov/water/wave-hindcast-dataset>`__

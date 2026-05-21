@@ -3,7 +3,7 @@ SRW Format for Wind
 
 The SRW format is a comma-delimited text format with the extension .srw for the wind power performance model. 
 
-**Note.** As of SAM 2022.11.21 r1, SAM works with the new :doc:`SAM CSV Format for Wind <weather_format_srw_wind>`, which is compatible with wind resource data from the `NREL WIND Toolkit API <https://developer.nrel.gov/docs/wind/wind-toolkit/wtk-download/>`__ and `NREL RE Explorer <https://www.re-explorer.org/>`__. If you are creating wind resource files to use with SAM, we recommend you use this new format instead of the SRW format.
+**Note.** As of SAM 2022.11.21 r1, SAM works with the new :doc:`SAM CSV Format for Wind <weather_format_srw_wind>`, which is compatible with wind resource data from the `NLR WIND Toolkit API <https://developer.nlr.gov/docs/wind/wind-toolkit/wtk-download/>`__ and `NLR RE Explorer <https://www.re-explorer.org/>`__. If you are creating wind resource files to use with SAM, we recommend you use this new format instead of the SRW format.
 
 .. image:: ../images/SS_WindResource-csvfile.png
    :align: center
@@ -25,7 +25,7 @@ The format allows you to use wind resource data at one or more heights above the
 
 * For the file to work with a SAM Wind Power model simulation, the file must contain a wind speed measurement height within 35 meters of the turbine hub height.
 
-* The file does not contain time zone information. The NREL WIND Toolkit data assumes data time steps are in UTC, where Row 1 is the hour ending at 1 a.m.
+* The file does not contain time zone information. The NLR WIND Toolkit data assumes data time steps are in UTC, where Row 1 is the hour ending at 1 a.m.
 
 Header Rows 1 and 2
 ...................

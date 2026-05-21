@@ -3,7 +3,7 @@ Registration
 
 When you start SAM for the first time, you must provide an email address to receive a registration key and activate your copy of SAM. Your registration key is associated with the email address you provide when you register your copy of SAM. The email address must be valid and for an account that you can access to ensure you receive the registration key.
 
-* NREL provides SAM registration keys for free.
+* NLR provides SAM registration keys for free.
 
 * You receive your registration key by email. Be sure to keep the email or a copy of the key so you can register new versions, or in case you need to re-register SAM.
 
@@ -21,7 +21,7 @@ SAM displays the registration window. If it does not, you can display it by clic
 
 #. In the registration window, type your email address and click **Register**.
 
-Within a few minutes, you should receive a registration key by email from `sam.support@nrel.gov <mailto:sam.support@nrel.gov>`__.
+Within a few minutes, you should receive a registration key by email from `sam.support@nlr.gov <mailto:sam.support@nlr.gov>`__.
 
 #. Cut and paste the key from the email into the Registration window.
 
@@ -34,9 +34,9 @@ SAM displays a message about registration.
 Your personal data and SAM
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When you register SAM, you provide NREL with your email address, which SAM sends via secure connection (HTTPS), and which NREL stores in a secure database on NREL servers.
+When you register SAM, you provide NLR with your email address, which SAM sends via secure connection (HTTPS), and which NLR stores in a secure database on NLR servers.
 
-After registering SAM, each time you start SAM, it verifies your registration key, and sends the following data to the registration database, where it is stored permanently, and can be accessed by NREL staff:
+After registering SAM, each time you start SAM, it verifies your registration key, and sends the following data to the registration database, where it is stored permanently, and can be accessed by NLR staff:
 
 * Your computer's IP address, which provides approximate location information about your computer
 
@@ -48,7 +48,7 @@ After registering SAM, each time you start SAM, it verifies your registration ke
 
 * The number of times you started each version SAM.
 
-NREL uses this data to determine how many people are using different versions of SAM, and approximately where people are using the software. This information helps the laboratory demonstrate SAM's value to the U.S. Department of Energy and other sponsors who fund its development,and makes it possible for you to use it for free.
+NLR uses this data to determine how many people are using different versions of SAM, and approximately where people are using the software. This information helps the laboratory demonstrate SAM's value to the U.S. Department of Energy and other sponsors who fund its development,and makes it possible for you to use it for free.
 
 Using SAM while off line
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -84,11 +84,11 @@ To request a registration key:
 
 #. Click **Resend key**.
 
-Within a few minutes, you should receive a registration key by email from `sam.support@nrel.gov <mailto:sam.support@nrel.gov>`__. 
+Within a few minutes, you should receive a registration key by email from `sam.support@nlr.gov <mailto:sam.support@nlr.gov>`__. 
 
 SAM registration and the SAM Website
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The SAM registration system is separate from the `SAM website <https://sam.nrel.gov>`__ registration system. You do not need to register on the SAM website to download the current versions of SAM.
+The SAM registration system is separate from the `SAM website <https://sam.nlr.gov>`__ registration system. You do not need to register on the SAM website to download the current versions of SAM.
 
 You do need to register on the SAM website to post questions and comments on the SAM support forum, or to download older versions of the software.
