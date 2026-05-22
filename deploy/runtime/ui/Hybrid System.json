@@ -1,7 +1,7 @@
 {
     "Name": "Hybrid System",
-    "Width": 860.0,
-    "Height": 275.0,
+    "Width": 864.0,
+    "Height": 307.0,
     "FormObjects": {
         "Label": {
             "Visible": 1.0,
@@ -78,7 +78,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 210.0
+                    "Integer": 237.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -236,7 +236,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 264.0
+                    "Integer": 297.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -265,7 +265,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 234.0
+                    "Integer": 261.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -672,6 +672,89 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
+                    "String": "ui_mspt_capacity"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 261.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 204.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
                     "String": "wind_system_capacity"
                 },
                 "X": {
@@ -817,6 +900,19 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
+        "ui_mspt_capacity": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Molten salt power tower capacity",
+            "Units": "kWac",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "wind_system_capacity": {
             "Version": 4.0,
             "Type": 1.0,
@@ -833,6 +929,7 @@
     },
     "Equations": [
         "// ui_pv_capacity is used on operating costs form, so use ui_hyb_pv_capacity here\t\t\r",
+        "\r",
         "equations{ 'ui_hyb_pv_capacity' } = define() {\r",
         "\tif ( technology() == 'Photovoltaic Wind Battery Hybrid' ) {\r",
         "\t\treturn ${total_inverter_capacity};\r",
@@ -864,6 +961,17 @@
         "\t}\r",
         "};\r",
         "\r",
+        "equations{ 'ui_mspt_capacity' } = define() {\r",
+        "\ttech = technology();\r",
+        "\tis_mspt = strpos(tech, \"Molten\") != -1;\r",
+        "\tif (is_mspt) {\r",
+        "\t\treturn ${csptowermoltensalt_system_capacity};\r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\treturn 0;\r",
+        "\t}\r",
+        "};\r",
+        "\r",
         "equations{ 'system_capacity' } = define() {\r",
         "\tif ( technology() == 'PVWatts Wind Battery Hybrid') {\r",
         "\t\treturn ${ac_nameplate} \r",
@@ -884,15 +992,91 @@
         "\t\t+ ${wind_system_capacity}\r",
         "\t\t+ ${fuelcell_system_capacity}; \r",
         "\t}\r",
+        "\telseif (technology() == 'PVWatts CSPTowerMoltenSalt Battery Hybrid') {\r",
+        "\t\treturn ${ac_nameplate}\r",
+        "\t\t+ ${csptowermoltensalt_system_capacity};\r",
+        "\t}\r",
         "\telse {\r",
         "\t\treturn null;\r",
         "\t}\r",
         "};\r",
+        "/*\r",
+        "equations{'$MIMO hybrid capacity'} = define() {\r",
+        "\ttech = technology();\r",
+        "\tis_wind = strpos(tech, \"Wind\") != -1;\r",
+        "\tis_batt = strpos(tech, \"Battery\") != -1;\r",
+        "\tis_fc = strpos(tech, \"FC\") != -1;\r",
+        "\tis_mspt = strpos(tech, \"Molten\") != -1;\r",
+        "\tis_custom = strpos(tech, \"Custom\") != -1;\r",
+        "\tis_pv = strpos(tech, \"Photovoltaic\") != -1;\r",
+        "\tis_pvwatts = strpos(tech, \"PVWatts\") != -1;\r",
+        "\ttotal_capacity = 0;\r",
+        "\tif ( is_pv ) {\r",
+        "\t\t${ui_hyb_pv_capacity} = ${total_inverter_capacity};\r",
+        "\t\t\r",
+        "\t}\r",
+        "\telse if (is_pvwatts) {\r",
+        "\t\t${ui_hyb_pv_capacity} = ${ac_nameplate};\r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\t${ui_hyb_pv_capacity} = 0;\r",
+        "\t}\t\r",
+        "\ttotal_capacity += ${ui_hyb_pv_capacity};\r",
+        "\t//Wind\r",
+        "\tif (is_wind) {\r",
+        "\t\ttotal_capacity += ${wind_system_capacity};\r",
+        "\t}\r",
+        "\t//Battery\r",
+        "\tif (is_batt) {\r",
+        "\t\t${ui_battery_capacity} = ${batt_power_discharge_max_kwac};\r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\t${ui_battery_capacity} = 0;\r",
+        "\t}\r",
+        "\t//Fuel cell\r",
+        "\tif (is_fc) {\r",
+        "\t\t${ui_fuel_cell_capacity} = ${fuelcell_system_capacity};\r",
+        "\t\ttotal_capacity += ${ui_fuel_cell_capacity};\r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\t${ui_fuel_cell_capacity} = 0;\r",
+        "\t}\r",
+        "\t//Custom\r",
+        "\tif (is_custom) {\r",
+        "\t\t${ui_customgeneration_capacity} = ${customgeneration_system_capacity};\r",
+        "\t\ttotal_capacity += ${ui_customgeneration_capacity};\r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\t${ui_customgeneration_capacity} = 0;\r",
+        "\t}\r",
+        "\t//MSPT\r",
+        "\tif (is_mspt) {\r",
+        "\t\t${ui_mspt_capacity} = ${csptowermoltensalt_system_capacity};\r",
+        "\t\ttotal_capacity += ${ui_mspt_capacity};\r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\t${ui_mspt_capacity} = 0;\r",
+        "\t}\r",
+        "\t//Total\r",
+        "\t${system_capacity} = total_capacity;\r",
+        "\t\r",
+        "};\r",
+        "*/\t\r",
         ""
     ],
     "Callbacks": [
         "on_load{'Hybrid System'} = define() {\r",
         "\tmsg = '';\r",
+        "\ttech = technology();\r",
+        "\tarray = [];\r",
+        "\tis_wind = strpos(tech, \"Wind\") != -1;\r",
+        "\tis_batt = strpos(tech, \"Wind\") != -1;\r",
+        "\tis_fc = strpos(tech, \"FC\") != -1;\r",
+        "\tis_mspt = strpos(tech, \"Molten\") != -1;\r",
+        "\tis_custom = strpos(tech, \"Custom\") != -1;\r",
+        "\tis_pv = strpos(tech, \"Photovoltaic\") != -1;\r",
+        "\tis_pvwatts = strpos(tech, \"PVWatts\") != -1;\r",
+        "\t\r",
         "\tif ( technology() == 'PVWatts Wind Battery Hybrid' )\r",
         "\t{\r",
         "\t\tmsg = 'The hybrid system combines generation profiles from the PVWatts and Wind models. This electricity is available to charge the battery, meet the electric load, or be delivered to the grid, depending on your application.';\r",
@@ -909,6 +1093,9 @@
         "\t{\r",
         "\t\tmsg = 'The hybrid system combines generation profiles from the Custom Generation Profile, PVWatts, Wind, and Fuel Cell models. This electricity is available to charge the battery, meet the electric load, or be delivered to the grid, depending on your application.';\r",
         "\t}\r",
+        "\telse if (technology() == 'PVWatts CSPTowerMoltenSalt Battery Hybrid') {\r",
+        "\t\tmsg = 'The hybrid system combines generation profiles from the Detailed PV, Molten Salt Power Tower, and Wind models. This electricity is available to charge the battery, meet the electric load, or be delivered to the grid, depending on your application. The battery dispatch is handled by the CSP system power controller.';\r",
+        "\t}\r",
         "\telse\r",
         "\t{\r",
         "\t\tmsg = 'Unrecognized hybrid system configuration: ' + technology();\r",
@@ -916,6 +1103,8 @@
         "\tmsg = msg + ' The capacity of each subsystem is defined on its system design page.';\r",
         "\tproperty('lbl_hybrid_description','Caption',msg);\r",
         "\tshow( 'ui_customgeneration_capacity', technology() == 'CustomGeneration PVWatts Wind FuelCell Battery Hybrid' );\r",
+        "\tshow('ui_mspt_capacity', is_mspt);\r",
+        "\tshow('wind_system_capacity', is_wind);\r",
         "\tshow( 'ui_fuel_cell_capacity', ( technology() == 'PVWatts Wind FuelCell Battery Hybrid' || technology() == 'CustomGeneration PVWatts Wind FuelCell Battery Hybrid' ) );\r",
         "};\r",
         ""
