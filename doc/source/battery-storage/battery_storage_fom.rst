@@ -27,7 +27,7 @@ The Battery Cell and System page displays inputs describing the battery's perfor
 * :ref:`Battery Thermal <fom-thermal>`
 
 
-For a list of publications about SAM's battery model, see https://sam.nrel.gov/battery-storage/battery-publications.html.
+For a list of publications about SAM's battery model, see https://sam.nlr.gov/battery-storage/battery-publications.html.
 
 .. _fom:
 

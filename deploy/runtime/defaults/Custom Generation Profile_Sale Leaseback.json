@@ -9573,6 +9573,9 @@
     "energy_output_array": [
         0.0
     ],
+    "energy_output_array_lifetime": [
+        0.0
+    ],
     "equip1_reserve_cost": 0.0,
     "equip1_reserve_freq": 12.0,
     "equip2_reserve_cost": 0.0,
@@ -9589,6 +9592,9 @@
     "fixed_plant_input": 0.0,
     "flip_target_percent": 11.0,
     "flip_target_year": 20.0,
+    "ac_degradation": [
+        0.0
+    ],
     "grid_curtailment": [
         1e38,
         1e38,
@@ -19166,7 +19172,7 @@
     ],
     "system_capacity": 100000.0,
     "system_capacity_combined": 0.0,
-    "system_use_lifetime_output": 0.0,
+    "system_use_lifetime_output": 1.0,
     "tax_investor_required_lease_reserve": 6.0,
     "tod_library": "Uniform Dispatch",
     "total_direct_cost": 105000000.0,

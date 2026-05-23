@@ -20,7 +20,7 @@ Typical Year Data
 
 A typical year file uses a single year of hourly data to represent the renewable resource and weather conditions over a multi-year period. The typical year methodology involves analyzing a multi-year data set and choosing a set of 12 months from the multi-year period that best represent typical conditions over the long term period. For example, a typical year file developed from a set of data for the years 1998-2005, might use data from 2000 for January, 2003 for February, 1999 for March, etc. Annual simulation results from typical year weather data are suitable for long-term economic analysis.
 
-In the `NREL National Solar Radiation Database (NSRDB) <https://nsrdb.nrel.gov>`__, TMY is `typical meteorological year data <https://nsrdb.nrel.gov/about/tmy.html>`__ developed using NREL's TMY weighting methodology described in the PSM documentation, available on the NSRDB website. The typical months in these files are based on both the global horizontal and direct radiation in the long term data, and to a lesser degree on the temperature and wind speed data. These files may be most suitable for modeling solar power systems and for modeling non-solar technologies that use the weather data in the file (biopower, geothermal) to estimate thermal losses from the steam power cycle. They are not ideally suited for modeling winnsrd power systems.
+In the `NREL National Solar Radiation Database (NSRDB) <https://nsrdb.nlr.gov>`__, TMY is `typical meteorological year data <https://nsrdb.nlr.gov/about/tmy.html>`__ developed using NLR's TMY weighting methodology described in the PSM documentation, available on the NSRDB website. The typical months in these files are based on both the global horizontal and direct radiation in the long term data, and to a lesser degree on the temperature and wind speed data. These files may be most suitable for modeling solar power systems and for modeling non-solar technologies that use the weather data in the file (biopower, geothermal) to estimate thermal losses from the steam power cycle. They are not ideally suited for modeling winnsrd power systems.
 
 The following are examples of weather data files that contain typical year data:
 
@@ -28,11 +28,11 @@ The following are examples of weather data files that contain typical year data:
 
 * The representative wind data files (SRW) included in SAM's default wind resource library.
 
-* TMY files from the `European Commission PVGIS website <https://sam.nrel.gov/weather-data>`__.
+* TMY files from the `European Commission PVGIS website <https://sam.nlr.gov/weather-data>`__.
 
-* EPW files from the `EnergyPlus website <https://sam.nrel.gov/weather-data>`__.
+* EPW files from the `EnergyPlus website <https://sam.nlr.gov/weather-data>`__.
 
-The NSRDB PSM dataset also includes typical global horizontal irradiance (TGY) and typical direct normal irradiance (TDY) files for 2016 up to the current year. To learn more about these typical year file types, see Habte, A.; Lopez, A.; Sengupta, M.; Wilcox, S. (2014). Temporal and Spatial Comparison of Gridded TMY, TDY, and TGY Data Sets. 30 pp. NREL/TP-5D00-60886. (`PDF 17 MB <https://www.nrel.gov/docs/fy14osti/60886.pdf>`__).
+The NSRDB PSM dataset also includes typical global horizontal irradiance (TGY) and typical direct normal irradiance (TDY) files for 2016 up to the current year. To learn more about these typical year file types, see Habte, A.; Lopez, A.; Sengupta, M.; Wilcox, S. (2014). Temporal and Spatial Comparison of Gridded TMY, TDY, and TGY Data Sets. 30 pp. NREL/TP-5D00-60886. (`PDF 17 MB <https://www.nlr.gov/docs/fy14osti/60886.pdf>`__).
 
 .. _singleyear:
 
@@ -45,4 +45,4 @@ The following are examples of weather files that contain single-year data:
 
 * Single-year files from the NSRDB's PSM data.
 
-* Wind data files (SRW) from the NREL Wind Integration Dataset.
+* Wind data files (SRW) from the NLR Wind Integration Dataset.

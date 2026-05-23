@@ -138,7 +138,7 @@ Subhourly clipping loss correction is only available for hourly simulations. The
 **Distribution of PV output method**
   The distribution of PV Output method uses a distribution function of power output to estimate the power limiting loss.
 
-* Walker, A.; Desai, J.; McDonald, B. (2020) Solar Photovoltaic Systems Time-Series Simulation: Subinterval Distribution vs. Steady-State Assumption. ASME 14th International Conference on Energy Sustainability. (`PDF 1.8 MB <https://www.nrel.gov/docs/fy20osti/76859.pdf>`__  )
+* Walker, A.; Desai, J.; McDonald, B. (2020) Solar Photovoltaic Systems Time-Series Simulation: Subinterval Distribution vs. Steady-State Assumption. ASME 14th International Conference on Energy Sustainability. (`PDF 1.8 MB <https://www.nlr.gov/docs/fy20osti/76859.pdf>`__  )
 
 Transformer Losses
 ------------------

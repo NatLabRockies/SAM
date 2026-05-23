@@ -5,7 +5,7 @@ A collector (SCA, solar collector assembly) is an individually tracking componen
 
 On the Collectors page, you can define the characteristics of up to four collector types. On the Solar Field page :ref:`single loop configuration <physical_sfloopconfiguration>`, you specify how the different collector types are distributed in each loop of the field, assuming that the field consists of identical loops. SAM only uses data for collector types that you have included in the single loop configuration on the Solar Field page
 
-.. note:: For a detailed explanation of the physical trough model, see Wagner, M. J.; Gilman, P. (2011). *Technical Manual for the SAM Physical Trough Model*. 124 pp.; NREL Report No. TP-5500-51825. https://docs.nrel.gov/docs/fy11osti/51825.pdf (3.7 MB)
+.. note:: For a detailed explanation of the physical trough model, see Wagner, M. J.; Gilman, P. (2011). *Technical Manual for the SAM Physical Trough Model*. 124 pp.; NREL Report No. TP-5500-51825. https://docs.nlr.gov/docs/fy11osti/51825.pdf (3.7 MB)
 
 Collector Library
 ~~~~~~~~~~~~~~~~~
@@ -62,15 +62,6 @@ Collector Geometry
 Optical Parameters
 ~~~~~~~~~~~~~~~~~~
 
-**Incidence angle modifier coefficients**
-  Coefficients for a polynomial equation defining the incidence angle modifier equation. 
-
-  Click **Edit data** and to specify coefficients for the equation. The default coefficients are for an equation with three terms, but you can use the table to specify more coefficients.
-
-  The equation captures the degradation of collector performance as the incidence angle (theta) of the solar radiation increases.
-
-  During simulations, SAM limits the value of the incidence angle modifier that it calculates to values between 0 and 1, inclusive.
-
 **Tracking error**
   Accounts for reduction in absorbed radiation error in collectors tracking caused by poor alignment of sun sensor, tracking algorithm error, errors caused by the tracker drive update rate, and twisting of the collector end at the sun sensor mounting location relative to the tracking unit end.
 
@@ -120,3 +111,70 @@ The optical calculations are values that SAM calculates using the equations desc
   = Tracking Error × Geometry Effects × Mirror Reflectance × Dirt on Mirror × General Optical Error
 
 .. |EQ_TRP_Lcol| image:: ../images/EQ_TRP_Lcol.png
+
+Solar Position/Collector Incidence Angles
+.........................................
+
+You can select one of three options for characterizing the optical performance of the solar field. The three methods determine how the optical efficiency varies with sun position.
+
+The optical efficiency is defined as follows:
+
+*Optical Efficiency = Total Thermal Energy Absorbed by Receiver ÷ ( Direct Normal Irradiance × Actual Aperture Area )*
+
+**Solar position table**
+  The solar position table option allows you to specify optical efficiency of the solar field as a function of solar azimuth and zenith angles. SAM uses a solar azimuth angle convention where true North is equal to -180/+180° and South equals 0°. The solar zenith angle is zero when the sun is directly overhead and 90° when the sun is at the horizon.
+
+  The solar position may contain any number of rows and columns, but should contain enough information to fully define the performance of the solar field at all sun positions for which the field will operate. The table must contain more than one row and column.
+
+**Field incidence angle table**
+  The field incidence angle table option allows you to specify solar field optical efficiency as a function of the longitudinal and transversal solar incidence angles. 
+
+**Incidence Angle Modifier Coefficients**
+  Coefficients for a polynomial equation defining the incidence angle modifier equation. 
+
+  Click **Edit data** and to specify coefficients for the equation. The default coefficients are for an equation with three terms, but you can use the table to specify more coefficients.
+
+  The equation captures the degradation of collector performance as the incidence angle (theta) of the solar radiation increases.
+
+  During simulations, SAM limits the value of the incidence angle modifier that it calculates to values between 0 and 1, inclusive.
+
+Solar Position/Collector Incidence Angle Table
+..............................................
+
+**Import**
+  Import a table from a text or data file. The file can contain values separated by comma, space, or tab characters, but must be formatted according to the following rules:
+
+*   The first row in the file specifies the angles for the solar azimuth (for the Solar position table) or collector transversal incidence (for the Collector incidence angle table). The first entry of this row should be blank.
+
+*   Each additional row specifies optical efficiency for a specific zenith angle (for the Solar position table) or longitudinal incidence angle (for the Collector incidence angle table). The first entry of the row must be the zenith or longitudinal incidence angle corresponding to the optical efficiency entries in that row. 
+
+*   The rows of the table should be sorted according to zenith/longitudinal incidence angle from lowest to highest.
+
+  An example tab-delimited table is as follows, where numbers in bold correspond to the solar zenith (row headers) and azimuth (column headers) angles:
+
+  **-180**  **90**  **0**  **90**  **180**
+
+  **0**  1.0  1.0  1.0  1.0  1.0
+
+  **30**  0.95  0.98  0.99  0.98  0.95
+
+  **60**  0.60  0.70  0.75  0.70  0.60
+
+  **90**  0.0  0.0  0.0  0.0  0.0
+
+  Note that SAM automatically sizes the table on the Collector and Receiver page to match the size of the array that is being imported.
+
+**Export**
+  Export the optical efficiency table on the Collector and Receiver page to a text file.
+
+**Copy**
+  Copy the optical efficiency table on the Collector and Receiver page to the clipboard for transfer to an optical efficiency table in another case or to other text applications.
+
+**Paste**
+  Paste an optical efficiency table from another SAM case or from a text file into the active case.
+
+**Rows**
+  Specify the number of desired rows in the table.
+
+**Cols**
+  Specify the number of desired columns in the table.

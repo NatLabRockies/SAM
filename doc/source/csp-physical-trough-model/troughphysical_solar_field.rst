@@ -3,7 +3,7 @@ Solar Field
 
 The Solar Field page displays variables and options that describe the size and properties of the solar field, and properties of the heat transfer fluid. It also displays reference design specifications of the solar field.
 
-.. note:: For a detailed explanation of the physical trough model, see Wagner, M. J.; Gilman, P. (2011). *Technical Manual for the SAM Physical Trough Model*. 124 pp.; NREL Report No. TP-5500-51825. https://docs.nrel.gov/docs/fy11osti/51825.pdf (3.7 MB)
+.. note:: For a detailed explanation of the physical trough model, see Wagner, M. J.; Gilman, P. (2011). *Technical Manual for the SAM Physical Trough Model*. 124 pp.; NREL Report No. TP-5500-51825. https://docs.nlr.gov/docs/fy11osti/51825.pdf (3.7 MB)
 
 Solar Field Design Point
 ~~~~~~~~~~~~~~~~~~~~~~~~

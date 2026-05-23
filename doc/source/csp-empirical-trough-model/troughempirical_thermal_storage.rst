@@ -9,7 +9,7 @@ In direct systems, the heat transfer fluid itself serves as the storage medium. 
 
 The user inputs on the Thermal Storage page are divided into two groups. The thermal energy storage (TES) group defines the thermal energy storage capacity and type along with some efficiency parameters. The thermal storage dispatch controls group variables determine the operation of the storage and fossil back up systems.
 
-For a more detailed description of the model, please download the CSP trough reference manual from the `SAM website <https://sam.nrel.gov/concentrating-solar-power/csp-publications>`__.
+For a more detailed description of the model, please download the CSP trough reference manual from the `SAM website <https://sam.nlr.gov/concentrating-solar-power/csp-publications>`__.
 
 .. _troughtes_inputvariablereference:
 

@@ -12,7 +12,7 @@ SAM provides the categories under **Direct Capital Costs** and **Indirect Capita
  
 
 
-.. note:: The default cost values that appear when you create a file or case are intended to illustrate SAM's use. The cost data are meant to be realistic, but not to represent actual costs for a specific project. For more information and a list of online resources for cost data, see the `SAM website <https://sam.nrel.gov/concentrating-solar-power/csp-cost-data>`__.
+.. note:: The default cost values that appear when you create a file or case are intended to illustrate SAM's use. The cost data are meant to be realistic, but not to represent actual costs for a specific project. For more information and a list of online resources for cost data, see the `SAM website <https://sam.nlr.gov/concentrating-solar-power/csp-cost-data>`__.
 
 
 .. note:: The direct capital costs in $/kWe are in kilowatts of gross power block capacity rather than nameplate capacity because the size and cost of the power block is determined by the gross capacity, not the net capacity. The total installed cost in $/kWe (actually overnight installed cost because it does not include financing during construction costs, which are accounted for on the :doc:`Financial Parameters <../financial-parameters/fin_overview>` page) is in kilowatts of nameplate capacity, because that is what is delivered to the grid and is consistent with how costs are reported for utility generation technologies. The indirect costs in $/Wac are in Watts of nameplate power block capacity because those costs that use the entire plant as the basis, not just the power block.

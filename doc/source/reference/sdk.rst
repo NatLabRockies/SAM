@@ -17,7 +17,7 @@ The SAM software development kit (SDK) is a collection of developer tools for cr
 
 To get started with the SDK:
 
-#. Download the SSC Guide from the `SDK page <https://sam.nrel.gov/software-development-kit-sdk>`__ on the SAM website.
+#. Download the SSC Guide from the `SDK page <https://sam.nlr.gov/software-development-kit-sdk>`__ on the SAM website.
 
 #. In your SAM installation folder, find the SDKtool application. It should be in the same folder as the SAM application (for example, in Windows, c:/SAM/.
 

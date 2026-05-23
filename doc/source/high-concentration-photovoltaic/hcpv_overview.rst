@@ -11,11 +11,11 @@ Basic Steps
 
   SAM offers three weather data options. You can:
 
-* Choose a location from the list at or near your project site. SAM will simulate the system using a file from SAM's solar resource library, which includes data from the National Solar Radiation DatabaseNREL's TMY2 database.
+* Choose a location from the list at or near your project site. SAM will simulate the system using a file from SAM's solar resource library, which includes data from the National Solar Radiation DatabaseNLR's TMY2 database.
 
-* Download a weather file for your site from an online database. SAM will simulate the system using a file from NREL's database of satellite-derived solar resource data.
+* Download a weather file for your site from an online database. SAM will simulate the system using a file from NLR's database of satellite-derived solar resource data.
 
-* Download a file from NREL's TMY3 database.
+* Download a file from NLR's TMY3 database.
 
 * Create a weather file in TMY3 format with your own data
 

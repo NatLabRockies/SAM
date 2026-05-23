@@ -7,7 +7,7 @@ The Power Block parameters describe the equipment in the system that converts th
 
 The input variables on the Power Block page are divided into two groups. The turbine ratings group determines the capacity of the power block, and the power cycle group defines the performance parameters of the reference turbine.
 
-For a more detailed description of the model, please download the CSP trough reference manual from the `SAM website <https://sam.nrel.gov/concentrating-solar-power/csp-publications>`__.
+For a more detailed description of the model, please download the CSP trough reference manual from the `SAM website <https://sam.nlr.gov/concentrating-solar-power/csp-publications>`__.
 
 .. _powerblock_inputvariablereference:
 

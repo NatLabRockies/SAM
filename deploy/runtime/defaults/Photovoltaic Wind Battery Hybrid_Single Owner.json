@@ -3578,7 +3578,7 @@
         "subarray1_tilt_eq_lat": 0.0,
         "subarray1_track_mode": 1.0,
         "subarray1_tracking_loss": 0.0,
-        "subarray1_ui_length_side": 4.554470331443603,
+        "subarray1_ui_length_side": 2.277235165721802,
         "subarray1_ui_nmodules": 188412.0,
         "subarray1_ui_nrows": 6729.0,
         "subarray1_ui_row_spacing": 15.181567771478676,
@@ -3885,6 +3885,9 @@
     "Wind": {
         "a_error_test_number": 17.345,
         "a_error_test_string": "\"default err msg\"",
+        "ac_degradation": [
+            0.64
+        ],
         "adjust": 0.0,
         "adjust_constant": 0.0,
         "adjust_en_periods": 0.0,
@@ -3951,7 +3954,7 @@
         "specify_label": 1.0,
         "step": 3600.0,
         "system_capacity": 200000.0,
-        "system_use_lifetime_output": 0.0,
+        "system_use_lifetime_output": 1.0,
         "total_installed_cost": 317480000.0,
         "total_installed_cost_per_kw": 1587.4,
         "turb_generic_loss": 1.7,
@@ -25119,6 +25122,12 @@
         "dscr_reserve_months": 6.0,
         "en_electricity_rates": 0.0,
         "enable_interconnection_limit": 0.0,
+        "energy_expenses_ret": [
+            100.0
+        ],
+        "energy_revenue_ret": [
+            100.0
+        ],
         "equip1_reserve_cost": 0.1,
         "equip1_reserve_freq": 15.0,
         "equip2_reserve_cost": 0.0,
@@ -34620,6 +34629,21 @@
         "months_receivables_reserve": 0.0,
         "months_working_reserve": 6.0,
         "nominal_discount_rate": 9.060000000000004,
+        "non_energy_expenses": [
+            0.0
+        ],
+        "non_energy_expenses_escal": 0.0,
+        "non_energy_expenses_ret": [
+            0.0
+        ],
+        "non_energy_revenue": [
+            0.0
+        ],
+        "non_energy_revenue_escal": 0.0,
+        "non_energy_revenue_is_shown": 0.0,
+        "non_energy_revenue_ret": [
+            0.0
+        ],
         "om_capacity": 0.0,
         "om_fixed": 0.0,
         "om_production": 0.0,

@@ -373,7 +373,7 @@
 		},
 		"Lifetime": {
 			"inflation_rate": 2.5,
-			"system_use_lifetime_output": 0
+			"system_use_lifetime_output": 1
 		},
 		"FuelCell": {
 		},
@@ -397,6 +397,16 @@
 		"HybridFin": {
 		},
 		"Monthly": {
+		},
+		"NonEnergyRevenue": {
+			"energy_expenses_ret": [100.000000],
+			"energy_revenue_ret": [100.000000],
+			"non_energy_expenses": [0.000000],
+			"non_energy_expenses_escal": 0,
+			"non_energy_expenses_ret": [0.000000],
+			"non_energy_revenue": [0.000000],
+			"non_energy_revenue_escal": 0,
+			"non_energy_revenue_ret": [0.000000]
 		}
 	}
 }
