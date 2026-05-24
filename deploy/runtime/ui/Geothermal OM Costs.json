@@ -218,7 +218,7 @@
         "\t}\r",
         "\tif (result == 0) \r",
         "\t{\r",
-        "\t\tdata.gross_output = ${gross_output};\r",
+        "\t\tdata.gross_output = ${gross_output_calc};\r",
         "\t\tdata.conversion_type = ${conversion_type};\r",
         "\t\tif (${geotherm.cost.plant_auto_estimate} == 1) {\r",
         "\t\t\tdata.baseline_cost = ${geotherm.cost.plant_per_kW};\r",

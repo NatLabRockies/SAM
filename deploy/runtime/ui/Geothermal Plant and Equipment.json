@@ -1943,7 +1943,7 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "gross_output"
+                    "String": "gross_output_ui"
                 },
                 "X": {
                     "Type": 3.0,
@@ -3773,11 +3773,11 @@
             "sscVariableName": " ",
             "sscVariableValue": ""
         },
-        "gross_output": {
+        "gross_output_ui": {
             "Version": 4.0,
             "Type": 1.0,
             "Label": "Gross Plant Output",
-            "Units": "MW",
+            "Units": "MWe",
             "Group": "Geothermal Plant and Equipment",
             "IndexLabels": "",
             "Flags": 8.0,
@@ -4126,6 +4126,10 @@
         }
     },
     "Equations": [
+        "// -- Set display values from outputs of ssc auto exec\r",
+        "equations{ 'gross_output_ui' } = define() {\r",
+        "\treturn ${gross_output_calc};\r",
+        "};\r",
         "",
         "equations{ 'geotherm.total_flow_kg_per_s' } = define() {",
         "\treturn ${well_flow_rate} * ${num_wells_getem};",
@@ -4136,7 +4140,7 @@
         "};",
         "",
         "equations{ 'geotherm.net_output' } = define() {",
-        "\treturn ${gross_output} - ${pump_work};",
+        "\treturn ${gross_output_calc} - ${pump_work};",
         "};",
         "",
         "equations{ 'design_temp' } = define() {",
@@ -4249,7 +4253,7 @@
         "\t\t${pump_work_watthr_lb} = err;\r",
         "\t\t${pumpwork_prod} = err;\r",
         "\t\t${pumpwork_inj} = err;\r",
-        "\t\t${gross_output} = err;\r",
+        "\t\t//{gross_output_calc} = err;\r",
         "\t\t${pump_depth} = err;\r",
         "\t\t${inj_pump_hp} = err;\r",
         "\t\tif (${specify_pump_work} == 0)\r",
@@ -4273,7 +4277,7 @@
         "    ${pump_work_watthr_lb} = ssc_var( obj, 'pump_watthr_per_lb');",
         "    ${pumpwork_prod} = ssc_var( obj, 'pumpwork_prod');",
         "    ${pumpwork_inj} = ssc_var( obj, 'pumpwork_inj');",
-        "    ${gross_output} = ssc_var(obj, 'gross_output');",
+        "    //${gross_output} = ssc_var(obj, 'gross_output');",
         "    ${pump_depth} = ssc_var(obj, 'pump_depth_ft');",
         "    ${inj_pump_hp} = ssc_var(obj, 'inj_pump_hp');",
         "    if (${specify_pump_work} == 0)",
@@ -4334,7 +4338,7 @@
         "};",
         "",
         "equations{ 'system_capacity' } = define() {",
-        "\treturn ${gross_output}*1000;}; // MW to kW",
+        "\treturn ${gross_output_calc}*1000;}; // MW to kW",
         "//\treturn ${geotherm.net_output}*1000;}; // MW to kW > 100% with net output",
         "",
         "equations{ 'pump_size_hp' } = define() {",

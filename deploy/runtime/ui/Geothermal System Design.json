@@ -88,6 +88,19 @@
         }
     },
     "VarDatabase": {
+        "gross_output_calc": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": -999.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "is_success_auto_exec": {
             "Version": 4.0,
             "Type": 1.0,
@@ -115,12 +128,16 @@
         "\tif(ret == 0)\r",
         "\t{\r",
         "\t\t${is_success_auto_exec} = 1;\r",
+        "\t\t\r",
+        "\t\t${gross_output_calc} = ssc_var(obj, \"gross_output\");\r",
         "\t\t// System Design\r",
         "\t\t//${csp.dtr.pwrb.nameplate} = ssc_var(obj, \"nameplate\");\r",
         "\t\t//${q_pb_design} = ssc_var(obj, \"q_dot_cycle_des\");\r",
         "\t}\r",
         "\telse{\r",
         "\t\t${is_success_auto_exec} = -1;\r",
+        "\t\t\r",
+        "\t\t${gross_output_calc} = -6789;\r",
         "\t}\r",
         "\t\r",
         "};"

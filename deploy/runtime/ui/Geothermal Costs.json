@@ -12550,7 +12550,7 @@
         "\treturn ${geotherm.cost.epc.fixed}+${geotherm.cost.epc.nonfixed}; };",
         "",
         "equations{ 'geotherm.cost.plant_size' } = define() {",
-        "\treturn  ${gross_output} * 1000; };",
+        "\treturn  ${gross_output_calc} * 1000; };",
         "",
         "equations{ 'geotherm.cost.inj_num_wells' } = define() {",
         "\treturn  ${geotherm.cost.inj_wells_drilled}; \r",
