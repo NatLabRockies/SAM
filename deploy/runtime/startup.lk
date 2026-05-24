@@ -788,7 +788,7 @@ function setup_geothermal_power_pages()
 	addpage( [[ 'Geothermal Resource',
 	{'name'='Geothermal Reservoir Input', 'caption'='Geothermal Reservoir Model Input Table', 'collapsible'=true, 'collapsible_var'='reservoir_model_inputs_shown'} ]], 
 	{ 'sidebar'='Geothermal Resource', 'help'='geothermal/geo_geothermal_resource' } );
-	addpage( [[ 'Geothermal Plant and Equipment' ]], { 'sidebar'='Plant and Equipment', 'help'='geothermal/geo_plant_equipment' } );
+	addpage( [[ 'Geothermal System Design', 'Geothermal Plant and Equipment' ]], { 'sidebar'='Plant and Equipment', 'help'='geothermal/geo_plant_equipment' } );
 	addpage( [[ 'Geothermal Power Block' ]], { 'sidebar'='Power Block', 'help'='geothermal/geo_power_block' } );
     setup_grid_limits_page();
 }
