@@ -350,6 +350,19 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
+        "design_temp_calc": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": -999.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "gross_output_calc": {
             "Version": 4.0,
             "Type": 1.0,
@@ -612,6 +625,8 @@
         "\t{\r",
         "\t\t${is_success_auto_exec} = 1;\r",
         "\t\t\r",
+        "\t\t${design_temp_calc} = ssc_var(obj, \"design_temp\");\r",
+        "\t\t\r",
         "\t\t${plant_brine_eff_calc} = ssc_var( obj, 'plant_brine_eff');\r",
         "\t\t${gross_output_calc} = ssc_var(obj, \"gross_output\");\r",
         "\t\t\r",
@@ -645,6 +660,8 @@
         "\t\t${is_success_auto_exec} = -1;\r",
         "\t\t\r",
         "\t\tfail = -6789;\r",
+        "\t\t\r",
+        "\t\t${design_temp_calc} = fail;\r",
         "\t\t\r",
         "\t\t${plant_brine_eff_calc} = fail;\r",
         "\t\t${gross_output_calc} = fail;\r",

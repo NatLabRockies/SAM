@@ -3139,7 +3139,7 @@
     },
     "Equations": [
         "equations{ 'T_htf_hot_ref' } = define() {",
-        "\treturn ${design_temp};",
+        "\treturn ${design_temp_calc};",
         "};",
         "",
         "equations{ 'CT' } = define() {",
@@ -3164,14 +3164,7 @@
         "",
         "equations{ 'degradation' } = define() {",
         "\treturn 0; };",
-        "/*",
-        "equations{ 'system_use_lifetime_output' } = define() {",
-        "\t// if system_use_lifetime_output = 1, grid compute module expects analysis_period input, which is not available without a financial model",
-        "\tif ( financing() == 'None' || financing() == 'LCOE Calculator' )",
-        "\t{ return 0; } ",
-        "\telse",
-        "\t{ return 1; }",
-        "};*/\t"
+        "\t"
     ],
     "Callbacks": [
         "function update_hybrid_dispatch_inputs() {",
