@@ -337,6 +337,19 @@
         }
     },
     "VarDatabase": {
+        "bottom_hole_pressure_calc": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": -999.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "gross_output_calc": {
             "Version": 4.0,
             "Type": 1.0,
@@ -545,6 +558,19 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
+        "reservoir_avg_temp_calc": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": -999.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "reservoir_pressure_calc": {
             "Version": 4.0,
             "Type": 1.0,
@@ -590,6 +616,8 @@
         "\t\t${pump_work_calc} = ssc_var(obj, \"pump_work\");\r",
         "\t\t\r",
         "\t\t${reservoir_pressure_calc} = ssc_var(obj, \"reservoir_pressure\");\r",
+        "\t\t${reservoir_avg_temp_calc} = ssc_var(obj, \"reservoir_avg_temp\");\r",
+        "\t\t${bottom_hole_pressure_calc} = ssc_var(obj, \"bottom_hole_pressure\");\r",
         "\t\t\r",
         "\t\t${pump_only_cost_calc} = ssc_var(obj, \"pump_only_cost\");\r",
         "\t\t${pump_cost_install_calc} = ssc_var(obj, \"pump_cost_install\");\r",
@@ -620,6 +648,8 @@
         "\t\t${pump_work_calc} = fail;\r",
         "\t\t\r",
         "\t\t${reservoir_pressure_calc} = fail;\r",
+        "\t\t${reservoir_avg_temp_calc} = fail;\r",
+        "\t\t${bottom_hole_pressure_calc} = fail;\r",
         "\t\t\r",
         "\t\t${pump_only_cost_calc} = fail;\r",
         "\t\t${pump_cost_install_calc} = fail;\r",
