@@ -2718,19 +2718,6 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
-        "HTF": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "HTF",
-            "Units": " ",
-            "Group": "Geothermal Power Block",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": 3.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
         "P_boil": {
             "Version": 4.0,
             "Type": 1.0,
@@ -3156,10 +3143,6 @@
         "\t\treturn ${analysis_period};",
         "\t}",
         "\t",
-        "};",
-        "",
-        "equations{ 'HTF' } = define() {",
-        "\treturn 3;",
         "};",
         "",
         "equations{ 'degradation' } = define() {",

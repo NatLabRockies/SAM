@@ -12707,7 +12707,6 @@
         "\t\t//power block parameters needed but not on power block SAM input page",
         "\t\tssc_var( geothermal, 'T_htf_cold_ref', ${T_htf_cold_ref});",
         "\t\tssc_var( geothermal, 'T_htf_hot_ref', ${T_htf_hot_ref});",
-        "\t\tssc_var( geothermal, 'HTF', ${HTF});",
         "\t\t",
         "\t\t//power block input parameters",
         "\t\tssc_var( geothermal, 'P_boil', ${P_boil});",
