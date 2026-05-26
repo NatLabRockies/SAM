@@ -1,7 +1,7 @@
 {
     "Name": "PV Spectral Correction",
-    "Width": 874.0,
-    "Height": 289.0,
+    "Width": 863.0,
+    "Height": 231.0,
     "FormObjects": {
         "GroupBox": {
             "Visible": 1.0,
@@ -24,7 +24,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 255.0
+                    "Integer": 215.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -325,6 +325,19 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
+        "spectral_correction_celltech": {
+            "Version": 4.0,
+            "Type": 4.0,
+            "Label": "",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": "",
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "spectral_correction_model_choice": {
             "Version": 4.0,
             "Type": 1.0,
@@ -334,6 +347,19 @@
             "IndexLabels": "",
             "Flags": 2.0,
             "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "spectral_correction_msg": {
+            "Version": 4.0,
+            "Type": 4.0,
+            "Label": "",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": "No messages.",
             "UIObject": "Default",
             "sscVariableName": "",
             "sscVariableValue": ""
@@ -442,7 +468,8 @@
         "\t\telse {\r",
         "\t\t\tvalue('spectral_correction_model_choice', 1);\r",
         "\t\t}\r",
-        "\t\tvalue('spectral_correction_celltech', msg);\r",
+        "\t\tif (msg == '') { mesg = 'No spectral correction messages.'; }\r",
+        "\t\tvalue('spectral_correction_msg', msg);\r",
         "\t\ttech = value('celltech');\r",
         "\t\ttech_string = ?tech ['Crystalline Silicon', 'Multi-crystalline Silicon',\r",
         "\t\t\t'Cadmium Telluride', 'CIS', 'CIGS', 'Amorphous Silicon', 'Unknown'];\r",
