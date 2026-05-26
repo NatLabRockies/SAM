@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -39,7 +39,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "uiobjects.h"
 #include <wx/dynlib.h>
 #include <wx/display.h>
-#include <wx/webview.h>
 #include <wex/metro.h>
 #include <wex/easycurl.h>
 
@@ -67,15 +66,17 @@ void ShowIDEWindow()
 
 
 
-enum { ID_BACK = wxID_HIGHEST + 439, ID_BROWSER, ID_HOME, ID_EMAIL_SUPPORT, ID_WEBSITE, ID_FORUM, ID_RELEASE_NOTES, ID_SCRIPT_REFERENCE };
+//enum { ID_BACK = wxID_HIGHEST + 439, ID_BROWSER, ID_HOME, ID_EMAIL_SUPPORT, ID_WEBSITE, ID_FORUM, ID_RELEASE_NOTES, ID_SCRIPT_REFERENCE };
 
 
 static SamApp::ver releases[] = {
 	//intermediate version numbers are required in this list in order for the version upgrade script (versions.lk) to work correctly
 	//please clarify the reason for the new version in a comment. Examples: public release, variable changes, internal release, public beta release, etc.
 	//the top version should always be the current working version
+			{ 2026, 2, 19 }, // Placeholder for OR Tools version upgrade testing (replace with release version number)
             { 2025, 10, 27},   //2025.10.27 ssc 303 public beta
 			{ 2025, 9, 19 }, // Placeholder for PVWatts-Battery upgrade testing (replace with release version number)
+			{ 2025, 4, 29 }, // 2025.4.29 ssc 303 ortools windows beta
 			{ 2025, 4, 16 }, // 2025.4.16 ssc 302 public release
 			{ 2025, 4, 7},	// 2025.4.7 ssc 301 release candidate
 			{ 2024, 12, 12},	// 2024.12.12 ssc 298 public release
@@ -310,7 +311,7 @@ bool SamApp::OnInit()
 	/*wxMSWSetupExceptionHandler(
 		wxString("SAM"),
 		SamApp::VersionStr(),
-		wxString("sam.support@nrel.gov") );
+		wxString("sam.support@nlr.gov") );
 		*/
 #endif
 
@@ -371,7 +372,7 @@ extern void RegisterReportObjectTypes();
 		return false;
 	}
 
-	g_config = new wxConfig("SystemAdvisorModel", "NREL");
+	g_config = new wxConfig("SystemAdvisorModel", "NLR");
 
 	wxInitAllImageHandlers();
 
@@ -421,7 +422,7 @@ extern void RegisterReportObjectTypes();
 		Settings().Write(fl_key, false);
 
 		// enable web update app
-		wxConfig cfg("SamUpdate3", "NREL");
+		wxConfig cfg("SamUpdate3", "NLR");
 		cfg.Write("allow_web_updates", true);
 
 		// after installing a new version, always show the reminders again until the user turns them off
@@ -464,207 +465,33 @@ extern void RegisterReportObjectTypes();
 		}
 	}
 
-	LoadPythonConfig();
-
 	return true;
 }
 
-
-
-class HelpWin : public wxFrame
+wxString SamApp::AboutSAM()
 {
-#if defined(__WXMSW__)||defined(__WXOSX__)
-	wxWebView *m_webView;
-#else
-	wxHtmlWindow *m_htmlView;
-#endif
 
-	wxString m_aboutHtml;
-public:
-	HelpWin( wxWindow *parent )
-		: wxFrame(parent, wxID_ANY, "System Advisor Model (Open Source) Help", wxDefaultPosition, wxScaleSize(1000, 600))
-	{
-		CreateAboutHtml();
+	wxString proxy(wxEasyCurl::GetProxyForURL(SamApp::WebApi("website")));
+	if (proxy.IsEmpty()) proxy = "default";
+	else proxy = "proxy: " + proxy;
 
-#ifdef __WXMSW__
-		SetIcon( wxICON( appicon ) );
-#endif
-		SetBackgroundColour( wxMetroTheme::Colour( wxMT_FOREGROUND ) );
+	int patch = SamApp::RevisionNumber();
+	wxString patchStr;
+	if (patch > 0)
+		patchStr.Printf(", updated to revision %d", patch);
 
-#if defined(__WXMSW__)||defined(__WXOSX__)
-		m_webView = wxWebView::New( this, ID_BROWSER, ::wxWebViewDefaultURLStr, wxDefaultPosition, wxDefaultSize,
-			::wxWebViewBackendDefault, wxBORDER_NONE );
-		m_webView->SetPage( m_aboutHtml, "About SAM" );
-#else
-		m_htmlView = new wxHtmlWindow( this, ID_BROWSER );
-		m_htmlView->SetPage( m_aboutHtml );
-#endif
-
-		wxBoxSizer *tools = new wxBoxSizer( wxHORIZONTAL );
-//#if defined(__WXMSW__)||defined(__WXOSX__)
-//		tools->Add( new wxMetroButton( this, ID_BACK, "Back" ), 0, wxALL|wxEXPAND, 0 );
-//#endif
-		tools->Add( new wxMetroButton( this, ID_HOME, "Home" ), 0, wxALL|wxEXPAND, 0 );
-//		tools->Add( new wxMetroButton( this, ID_WEBSITE, "Web site" ), 0, wxALL|wxEXPAND, 0 );
-//		tools->Add( new wxMetroButton( this, ID_FORUM, "Forum" ), 0, wxALL|wxEXPAND, 0 );
-//		tools->Add( new wxMetroButton( this, ID_EMAIL_SUPPORT, "Email support" ), 0, wxALL|wxEXPAND, 0 );
-//		tools->Add( new wxMetroButton( this, ID_RELEASE_NOTES, "Release notes" ), 0, wxALL|wxEXPAND, 0 );
-//		tools->Add( new wxMetroButton( this, ID_SCRIPT_REFERENCE, "Scripting reference" ), 0, wxALL|wxEXPAND, 0 );
-		tools->AddStretchSpacer();
-		tools->Add( new wxMetroButton( this, wxID_ABOUT, "About" ), 0, wxALL|wxEXPAND, 0 );
-		tools->Add( new wxMetroButton( this, wxID_CLOSE, "Close" ), 0, wxALL|wxEXPAND, 0 );
-
-		wxBoxSizer *sizer = new wxBoxSizer( wxVERTICAL );
-		sizer->Add( tools, 0, wxALL|wxEXPAND, 0 );
-#if defined(__WXMSW__)||defined(__WXOSX__)
-		sizer->Add( m_webView, 1, wxALL|wxEXPAND, 0 );
-#else
-		sizer->Add( m_htmlView, 1, wxALL|wxEXPAND, 0 );
-#endif
-		SetSizer( sizer );
-	}
-
-	void CreateAboutHtml()
-	{
-
-		wxString proxy( wxEasyCurl::GetProxyForURL( SamApp::WebApi("website") ));
-		if ( proxy.IsEmpty() ) proxy = "default";
-		else proxy = "proxy: " + proxy;
-
-		int patch = SamApp::RevisionNumber();
-		wxString patchStr;
-		if ( patch > 0 )
-			patchStr.Printf( ", updated to revision %d", patch );
-
-		// int nbit = (sizeof(void*) == 8) ? 64 : 32;
-		m_aboutHtml = "<html><body bgcolor=#ffffff>"
-			"<font color=#a9a9a9 face=\"Segoe UI Light\" size=10>System Advisor Model (Open Source)</font><br><p>"
-			"BSD 3-Clause License<br><br>Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE <br>	All rights reserved. <br>"
-
-			"Redistribution and use in source and binary forms, with or without	modification, are permitted provided that the following conditions are met :<br><br>"
-
-			"1. Redistributions of source code must retain the above copyright notice, this	list of conditions and the following disclaimer.<br><br>"
-
-			"2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation	and /or other materials provided with the distribution.<br><br>"
-
-			"3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.<br><br>"
-
-			"THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,	OR TORT(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
-			"</p></font></body></html>";
-	}
-	void LoadPage( wxString url )
-	{
-		if ( url == ":about" )
-		{
-#if defined(__WXMSW__)||defined(__WXOSX__)
-			m_webView->SetPage( m_aboutHtml, "About SAM" );
-#else
-			m_htmlView->SetPage( m_aboutHtml );
-#endif
-
-			return;
-		}
-		else if ( url == ":release_notes" )
-		{
-			url = SamApp::WebApi("release_notes");
-		}
-		else if ( url == ":email_support" )
-		{
-			wxLaunchDefaultBrowser( SamApp::WebApi("support_email") );
-			return;
-		}
-		else if ( url == ":script_ref" )
-		{
-			wxFileName file( SamApp::GetRuntimePath() + "/help/lk_guide.pdf" );
-			file.Normalize();
-			wxLaunchDefaultBrowser( file.GetFullPath() );
-			return;
-		}
-		else if ( url == ":forum" )
-			url = SamApp::WebApi( "website" ) + "/forum.html";
-		else if ( url == ":website" )
-			url = SamApp::WebApi( "website" );
-
-#if defined(__WXMSW__)||defined(__WXOSX__)
-		m_webView->LoadURL( url );
-#else
-		wxLaunchDefaultBrowser( url );
-#endif
-	}
-
-
-	void OnClose( wxCloseEvent &evt )
-	{
-		Hide();
-		evt.Veto();
-	}
-
-	void OnCommand( wxCommandEvent &evt )
-	{
-		switch( evt.GetId() )
-		{
-		case ID_BACK:
-#if defined(__WXMSW__)||defined(__WXOSX__)
-			if ( m_webView->CanGoBack() ) m_webView->GoBack();
-#endif
-			break;
-		case ID_WEBSITE:
-			LoadPage( ":website" );
-			break;
-		case ID_FORUM:
-			LoadPage( ":forum" );
-			break;
-		case ID_EMAIL_SUPPORT:
-			LoadPage( ":email_support" );
-			break;
-		case ID_RELEASE_NOTES:
-			LoadPage( ":release_notes" );
-			break;
-		case ID_SCRIPT_REFERENCE:
-			LoadPage( ":script_ref" );
-			break;
-		case ID_HOME:
-		{
-			wxFileName fn( SamApp::GetRuntimePath() + "/help/html/index.html" );
-			fn.MakeAbsolute();
-			LoadPage( "file:///" + fn.GetFullPath() );
-		}
-			break;
-		case wxID_ABOUT:
-			LoadPage( ":about" );
-			break;
-		case wxID_CLOSE:
-			Close();
-			break;
-		}
-	}
-
-#if defined(__WXMSW__)||defined(__WXOSX__)
-	void OnNewWindow( wxWebViewEvent &evt )
-	{
-		wxLaunchDefaultBrowser( evt.GetURL() );
-	}
-#endif
-
-	DECLARE_EVENT_TABLE();
-};
-
-BEGIN_EVENT_TABLE( HelpWin, wxFrame )
-	EVT_BUTTON( ID_BACK, HelpWin::OnCommand )
-	EVT_BUTTON( ID_HOME, HelpWin::OnCommand )
-	EVT_BUTTON( ID_WEBSITE, HelpWin::OnCommand )
-	EVT_BUTTON( ID_FORUM, HelpWin::OnCommand )
-	EVT_BUTTON( ID_RELEASE_NOTES, HelpWin::OnCommand )
-	EVT_BUTTON( ID_SCRIPT_REFERENCE, HelpWin::OnCommand )
-	EVT_BUTTON( ID_EMAIL_SUPPORT, HelpWin::OnCommand )
-	EVT_BUTTON( wxID_CLOSE, HelpWin::OnCommand )
-	EVT_BUTTON( wxID_ABOUT, HelpWin::OnCommand )
-#if defined(__WXMSW__)||defined(__WXOSX__)
-	EVT_WEBVIEW_NEWWINDOW( ID_BROWSER, HelpWin::OnNewWindow )
-#endif
-	EVT_CLOSE( HelpWin::OnClose )
-END_EVENT_TABLE()
-
-
-class HelpWin;
-static HelpWin* gs_helpWin = 0;
+	// int nbit = (sizeof(void*) == 8) ? 64 : 32;
+	return "<html><body>"
+		"<h1>System Advisor Model (SAM)</h1>"
+		"<h2>Open Source Build</h2>"
+		"<p>BSD 3-Clause License<br><br>Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE.</p>"
+		"<p>All rights reserved.</p>"
+		"<p>Redistribution and use in source and binary forms, with or without	modification, are permitted provided that the following conditions are met:</p>"
+		"<ol>"
+		"<li>Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.</li>"
+		"<li>Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.</li>"
+		"<li>Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.</li>"
+		"</ol>"
+		"<p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,	OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>"
+		"</body></html>";
+}

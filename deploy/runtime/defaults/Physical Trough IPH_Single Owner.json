@@ -74,6 +74,10 @@
         8.0
     ],
     "DISCARD_UNUSED_latitude": 0.0,
+    "DISP_opt_model_1": 2.0,
+    "DISP_opt_model_2": 2.0,
+    "DISP_opt_model_3": 2.0,
+    "DISP_opt_model_4": 2.0,
     "D_2": [
         [
             0.076,
@@ -775,6 +779,38 @@
     "Min_rnr_xpans": 1.0,
     "N_hdr_per_xpan": 2.0,
     "N_max_hdr_diams": 10.0,
+    "OpticalTable_1": [
+        [
+            2.0,
+            1.0,
+            2.0,
+            1.0
+        ]
+    ],
+    "OpticalTable_2": [
+        [
+            2.0,
+            1.0,
+            2.0,
+            1.0
+        ]
+    ],
+    "OpticalTable_3": [
+        [
+            2.0,
+            1.0,
+            2.0,
+            1.0
+        ]
+    ],
+    "OpticalTable_4": [
+        [
+            2.0,
+            1.0,
+            2.0,
+            1.0
+        ]
+    ],
     "P_a": [
         [
             0.0001,
@@ -1038,7 +1074,7 @@
         6.0,
         6.0
     ],
-    "W_dot_pump_SS": 0.07485621857036887,
+    "W_dot_pump_SS": 0.07485403286362845,
     "accept_init": 0.0,
     "accept_loc": 1.0,
     "accept_mode": 0.0,
@@ -1281,7 +1317,7 @@
     "csp.dtr.tes.htf_min_opt_temp": 238.0,
     "csp.dtr.tes.min_fluid_volume": 39.67439516694667,
     "csp.dtr.tes.thermal_capacity": 30.0,
-    "csp.pt.par.calc.aux": 0.12121,
+    "csp.pt.par.calc.aux": 0.12120999999999999,
     "csp.pt.par.calc.bop": 0.0,
     "csp.pt.tes.htf_density": 1872.488,
     "csp.pt.tes.tank_diameter": 7.107391202241459,
@@ -1518,7 +1554,7 @@
     "csp_dtr_hce_var4_rated_heat_loss_2": 0.0,
     "csp_dtr_hce_var4_rated_heat_loss_3": 0.0,
     "csp_dtr_hce_var4_rated_heat_loss_4": 0.0,
-    "csp_dtr_loop_hce_heat_loss": 0.9745454545454548,
+    "csp_dtr_loop_hce_heat_loss": 0.9745454545454547,
     "csp_dtr_sca_ap_length_1": 21.0,
     "csp_dtr_sca_ap_length_2": 14.375,
     "csp_dtr_sca_ap_length_3": 14.375,
@@ -1556,25 +1592,25 @@
             0.0
         ]
     ],
-    "csp_dtr_sca_calc_end_loss_1": 0.9996718942883744,
-    "csp_dtr_sca_calc_end_loss_2": 0.9996434127184016,
-    "csp_dtr_sca_calc_end_loss_3": 0.9996434127184016,
-    "csp_dtr_sca_calc_end_loss_4": 0.9996434127184016,
+    "csp_dtr_sca_calc_end_loss_1": 0.9996718942883743,
+    "csp_dtr_sca_calc_end_loss_2": 0.9996434127184017,
+    "csp_dtr_sca_calc_end_loss_3": 0.9996434127184017,
+    "csp_dtr_sca_calc_end_loss_4": 0.9996434127184017,
     "csp_dtr_sca_calc_end_losses": [
         [
-            0.9996718942883744,
-            0.9996434127184016,
-            0.9996434127184016,
-            0.9996434127184016
+            0.9996718942883743,
+            0.9996434127184017,
+            0.9996434127184017,
+            0.9996434127184017
         ]
     ],
-    "csp_dtr_sca_calc_iam_1": 0.9960610689663656,
+    "csp_dtr_sca_calc_iam_1": 0.9960610689663657,
     "csp_dtr_sca_calc_iam_2": 1.0018753305435045,
     "csp_dtr_sca_calc_iam_3": 1.0018753305435045,
     "csp_dtr_sca_calc_iam_4": 1.0018753305435045,
     "csp_dtr_sca_calc_iams": [
         [
-            0.9960610689663656,
+            0.9960610689663657,
             1.0018753305435045,
             1.0018753305435045,
             1.0018753305435045
@@ -1595,11 +1631,11 @@
         0.8484936096,
         0.8484936096
     ],
-    "csp_dtr_sca_calc_theta": 0.1514182598841343,
-    "csp_dtr_sca_calc_theta_1": 0.1514182598841343,
-    "csp_dtr_sca_calc_theta_2": 0.1514182598841343,
-    "csp_dtr_sca_calc_theta_3": 0.1514182598841343,
-    "csp_dtr_sca_calc_theta_4": 0.1514182598841343,
+    "csp_dtr_sca_calc_theta": 0.15141825988413427,
+    "csp_dtr_sca_calc_theta_1": 0.15141825988413427,
+    "csp_dtr_sca_calc_theta_2": 0.15141825988413427,
+    "csp_dtr_sca_calc_theta_3": 0.15141825988413427,
+    "csp_dtr_sca_calc_theta_4": 0.15141825988413427,
     "csp_dtr_sca_calc_zenith": 0.15062193308923828,
     "csp_dtr_sca_calc_zenith_1": 0.15062193308923828,
     "csp_dtr_sca_calc_zenith_2": 0.15062193308923828,
@@ -1649,7 +1685,7 @@
     "custom_sf_pipe_sizes": 0.0,
     "custom_tes_p_loss": 0.0,
     "custom_tes_pipe_sizes": 0.0,
-    "dP_sf_SS": 10.147474751286165,
+    "dP_sf_SS": 10.147350081133409,
     "d_tank_in": 0.0,
     "debt_message": "",
     "debt_option": 1.0,
@@ -10730,7 +10766,7 @@
     "f_htfmax": 1.2,
     "f_htfmax_actual": 0.5460258809863511,
     "f_htfmin": 0.25,
-    "f_htfmin_actual": 0.04550215674886259,
+    "f_htfmin_actual": 0.045502156748862588,
     "f_tc_cold": 2.0,
     "f_turb_tou_periods": [
         1.0,
@@ -10847,7 +10883,7 @@
             941.0
         ]
     ],
-    "field_htf_cp_avg": 3.342903831348,
+    "field_htf_cp_avg": 2.4548932031999999,
     "field_htf_max_operating_temp": 400.0,
     "field_htf_min_operating_temp": 12.0,
     "field_thermal_output": 7.927156420127617,
@@ -11727,7 +11763,7 @@
     "m_dot_htfmin": 1.0,
     "m_dot_htfmin_actual": 1.0,
     "max_collector_width": 6.0,
-    "max_field_flow_velocity": 6.613086278056593,
+    "max_field_flow_velocity": 3.744753926091646,
     "mc_bal_cold": 0.2,
     "mc_bal_hot": 0.2,
     "mc_bal_sca": 4.5,
@@ -11737,7 +11773,7 @@
     "mera_name1": "Replacement Reserve 1",
     "mera_name2": "Replacement Reserve 2",
     "mera_name3": "Replacement Reserve 3",
-    "min_field_flow_velocity": 0.4743214213819479,
+    "min_field_flow_velocity": 0.2685590647047778,
     "min_inner_diameter": 0.076,
     "months_receivables_reserve": 0.0,
     "months_working_reserve": 6.0,
@@ -11748,7 +11784,7 @@
     "nSCA": 4.0,
     "nameplate": 5.0,
     "nodes": 2000.0,
-    "nominal_discount_rate": 9.060000000000004,
+    "nominal_discount_rate": 9.060000000000003,
     "non_solar_field_land_area_multiplier": 1.1,
     "northsouth_field_sep": 20.0,
     "object 11": 0.0,
@@ -11764,6 +11800,12 @@
     "om_production_escal": 0.0,
     "om_production_heat": [
         2.0
+    ],
+    "opt_model": [
+        3.0,
+        3.0,
+        3.0,
+        3.0
     ],
     "p_start": 0.021,
     "payment_option": 0.0,
@@ -11837,6 +11879,7 @@
     "sales_tax_rate": 5.0,
     "salvage_percentage": 0.0,
     "salvage_value": 0.0,
+    "sca_1_is_shown": 1.0,
     "sca_2_is_shown": 1.0,
     "sca_3_is_shown": 1.0,
     "sca_4_is_shown": 1.0,

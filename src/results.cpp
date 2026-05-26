@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -2101,7 +2101,7 @@ void MetricsTable::OnContextMenu(wxCommandEvent& evt)
     wxString tdat;
     for (int r = 0; r < (int)m_table.nrows(); r++)
         for (int c = 0; c < (int)m_table.ncols(); c++)
-            tdat += m_table.at(r, c) + (c == (int)m_table.ncols() - 1 ? "\n" : sep);
+            tdat += m_table.at(r, c) + (c == (int)m_table.ncols() - 1 ? wxString("\n") : sep);
 
     if (wxTheClipboard->Open())
     {

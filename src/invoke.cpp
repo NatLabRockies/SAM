@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -3009,7 +3009,7 @@ void fcall_wavetoolkit(lk::invoke_t& cxt)
             if (ok && (curls[i]->GetDataAsString().Length() < 1000))
                 ok = curls[i]->Get(urls[i]);
             if (!ok)
-                wxMessageBox("Download failed.\n\n" + urls[i] + "\n\nThere may be a problem with your internet connection,\nor the NREL Hindcast Wave Data web service may be down.", "NREL Hindcast Wave Data Download Message", wxOK);
+                wxMessageBox("Download failed.\n\n" + urls[i] + "\n\nThere may be a problem with your internet connection,\nor the NLR Hindcast Wave Data web service may be down.", "NLR Hindcast Wave Data Download Message", wxOK);
             else if (curls[i]->GetDataAsString().Length() < 1000) {
                 wxMessageBox("Weather file not available.\n\n" + urls[i] + "\n\n" + curls[i]->GetDataAsString(), "Wave Resource Download Message", wxOK);
                 cxt.result().empty_hash();
@@ -3023,7 +3023,7 @@ void fcall_wavetoolkit(lk::invoke_t& cxt)
                 file_list += filename_array[i] + "\n";
                 if (!curls[i]->WriteDataToFile(fn))
                 {
-                    wxMessageBox("Failed to write file.\n\n" + fn, "NREL Hindcast Wave Data Download Message", wxOK);
+                    wxMessageBox("Failed to write file.\n\n" + fn, "NLR Hindcast Wave Data Download Message", wxOK);
                     //break;
                 }
                 num_downloaded++;
@@ -3066,7 +3066,7 @@ void fcall_wavetoolkit(lk::invoke_t& cxt)
                     SamApp::Settings().Write("wave_data_paths", wxJoin(paths, ';'));
                 }
             }
-            if (file_list != "") wxMessageBox("Download complete.\n\nThe following files have been downloaded and added to your resource library:\n\n" + file_list, "NREL Hindcast Wave Data Download Message", wxOK);
+            if (file_list != "") wxMessageBox("Download complete.\n\nThe following files have been downloaded and added to your resource library:\n\n" + file_list, "NLR Hindcast Wave Data Download Message", wxOK);
             //EndModal(wxID_OK);
         }
 
@@ -3109,10 +3109,10 @@ void fcall_wavetoolkit(lk::invoke_t& cxt)
 
 void fcall_windtoolkit(lk::invoke_t &cxt)
 {
-	LK_DOC("windtoolkit", "Creates the NREL WIND Toolkit Download dialog box, downloads weather file from WIND Toolkit API for requested location and parameters, and returns weather file name", "(none) : string");
+	LK_DOC("windtoolkit", "Creates the NLR WIND Toolkit Download dialog box, downloads weather file from WIND Toolkit API for requested location and parameters, and returns weather file name", "(none) : string");
 
 	//Create the wind data object
-	WindToolkitDialog spd(SamApp::Window(), "NREL WIND Toolkit Download");
+	WindToolkitDialog spd(SamApp::Window(), "NLR WIND Toolkit Download");
 	spd.CenterOnParent();
 	int code = spd.ShowModal(); //shows the dialog and makes it so you can't interact with other parts until window is closed
 
@@ -3134,7 +3134,7 @@ void fcall_windtoolkit(lk::invoke_t &cxt)
 	{
 		wxBusyInfo bid("Converting address to lat/lon.");
 
-		// use GeoTools::GeocodeGoogle for non-NREL builds and set google_api_key in private.h
+		// use GeoTools::GeocodeGoogle for non-NLR builds and set google_api_key in private.h
         if (!GeoTools::GeocodeDeveloper(spd.GetAddress(), &lat, &lon, false))
 		{
 			wxMessageDialog* md = new wxMessageDialog(NULL, "Failed to convert address to lat/lon. This may be caused by a geocoding service outage or internet connection problem.", "WIND Toolkit Download Error", wxOK);
@@ -3830,7 +3830,7 @@ static bool copy_mat(lk::invoke_t &cxt, wxString sched_name, matrix_t<double> &m
 void fcall_geocode(lk::invoke_t& cxt)
 {
   	LK_DOC("geocode",
-		"Given a street address or location name, returns latitude, longitude. Returns optional time zone if get_tz is true. Not designed to take latitude and longitude as input. Uses the MapQuest Geocoding API via a private NREL wrapper. Returned table fields are 'lat', 'lon', 'tz', 'ok'.",
+		"Given a street address or location name, returns latitude, longitude. Returns optional time zone if get_tz is true. Not designed to take latitude and longitude as input. Uses the MapQuest Geocoding API via a private NLR wrapper. Returned table fields are 'lat', 'lon', 'tz', 'ok'.",
 		"(string:location, [boolean:get_tz]):table");
 
 	double lat, lon, tz;
@@ -3884,7 +3884,7 @@ void fcall_geocode(lk::invoke_t& cxt)
 		get_tz = cxt.arg(1).as_boolean();
 	}
 
-	// use GeoTools::GeocodeGoogle for non-NREL builds and set google_api_key in private.h
+	// use GeoTools::GeocodeGoogle for non-NLR builds and set google_api_key in private.h
 	if (is_address) {
 		ok = GeoTools::GeocodeDeveloper(cxt.arg(0).as_string(), &lat, &lon);
 		if (!ok) {
@@ -4129,7 +4129,7 @@ void fcall_editscene3d(lk::invoke_t &cxt)
 	if (!vv)
 	{
 		cxt.result().hash_item("ierr").assign(1.0);
-		cxt.result().hash_item("message").assign(wxString("no variable with that name"));
+		cxt.result().hash_item("message").assign(wxString::Format("no variable with that name: %s", name));
 		return;
 	}
 
@@ -4152,10 +4152,10 @@ void fcall_editscene3d(lk::invoke_t &cxt)
 		wxString addr = cxt.arg(4).as_string();
 		st->GetLocationSetup()->SetLocation(addr, lat, lon, tz);
 
-		wxMessageBox("The 3D scene requires detailed information about your location to calculate shading losses.\n\n"
-			"By default, information about the location you selected in the weather file has been transferred.\n\n"
-			"If you update your weather file in the future, please manually ensure that the address, "
-			"latitude, longitude, and time zone in the 3D scene editor (Location tab) are updated as necessary.", "Notice",
+		wxMessageBox("3D Shade Calculator\n\nThe 3D shade calculator uses the latitude, longitude, and time zone\n"
+			"data from the weather file on the Location and Resource page. If you change\n"
+			"the weather file after generating shading data, be sure to update the\n" 
+			"information on the 3D shade calculator Location tab as needed.", "Notice",
 			wxICON_INFORMATION | wxOK, SamApp::Window());
 	}
 
@@ -4175,7 +4175,7 @@ void fcall_editscene3d(lk::invoke_t &cxt)
 		|| lon != cxt.arg(2).as_number()
 		|| tz != cxt.arg(3).as_number())
 	{
-		if (wxYES == wxMessageBox("The location information in the shading tool does not match the currently selected weather file.\n\nDo you want to update your location settings in the shading tool to match?", "Query", wxYES_NO))
+		if (wxYES == wxMessageBox("The location information in the 3D shade calculator does not match the currently selected weather file.\n\nDo you want to update the location information in the 3D shade calculator to match the weather file?", "Query", wxYES_NO))
 		{
 			lat = cxt.arg(1).as_number();
 			lon = cxt.arg(2).as_number();
@@ -6476,114 +6476,6 @@ static void fcall_reopt_size_battery(lk::invoke_t& cxt)
 	pdlg.Close();
 }
 
-static void fcall_setup_landbosse(lk::invoke_t &cxt)
-{
-    LK_DOC("setup_landbosse", "Checks if LandBOSSE model is setup and if not, installs the package.", "( none ): bool");
-
-    if (SamApp::CheckPythonPackage("landbosse"))
-        return;
-
-    MyMessageDialog dlg(GetCurrentTopLevelWindow(), "Installing the balance-of-system (BOS) cost model. Please note that it may take a few minutes to complete the initial installation. Once installed, you will be able to quickly estimate BOS costs using NREL's Land-based Balance-of-System Systems Engineering (LandBOSSE).\n"
-                                                    "\n"
-                                                    "While you wait, please refer to Eberle et al. 2019 for more information about the methods that were used to develop LandBOSSE. It is important to note that the SAM user interface only includes a limited set of LandBOSSE inputs. If you would like to access more detailed inputs, please use the LandBOSSE model directly",
-                        "Land-Based Balance of System Cost Model",
-                        wxCENTER, wxDefaultPosition, wxDefaultSize);
-    dlg.Show();
-    wxGetApp().Yield( true );
-
-    SamApp::InstallPython();
-
-    SamApp::InstallPythonPackage("landbosse");
-    dlg.Close();
-}
-
-static void fcall_run_landbosse(lk::invoke_t & cxt)
-{
-    LK_DOC("run_landbosse", "Runs the LandBOSSE model on the current case.", "( none ): none");
-
-    Case *sam_case = SamApp::Window()->GetCurrentCaseWindow()->GetCase();
-
-    VarTable* vartable = &sam_case->Values(0);  //TODO: hybrid update for Wind
-
-    ssc_data_t landbosse_data = ssc_data_create();
-
-    auto varValue = vartable->Get("en_landbosse");
-    if (!varValue || !varValue->Boolean()){
-        MyMessageDialog dlg(GetCurrentTopLevelWindow(), "LandBOSSE not enabled. Change `en_landbosse` to 1.", "Windpower error",
-                            wxCENTER, wxDefaultPosition, wxDefaultSize, true);
-        dlg.ShowModal();
-        return;
-    }
-    ssc_data_set_number(landbosse_data, "en_landbosse", 1);
-
-    varValue = vartable->Get("wind_resource_filename");
-    if (!varValue){
-        MyMessageDialog dlg(GetCurrentTopLevelWindow(), "Run LandBOSSE error: wind_resource_filename was not assigned.", "Windpower error",
-                            wxCENTER, wxDefaultPosition, wxDefaultSize, true);
-        dlg.ShowModal();
-        return;
-    }
-    ssc_data_set_string(landbosse_data, "wind_resource_filename", varValue->String().c_str());
-
-    std::vector<std::string> input_names = {"distance_to_interconnect_mi",
-                                            "interconnect_voltage_kV", "depth", "rated_thrust_N",
-                                            "labor_cost_multiplier", "gust_velocity_m_per_s", "wind_resource_shear",
-                                            "num_turbines", "turbine_spacing_rotor_diameters",
-                                            "row_spacing_rotor_diameters", "turbine_rating_MW", "wind_turbine_hub_ht",
-                                            "wind_turbine_rotor_diameter"};
-
-    for (auto & i : input_names){
-        varValue = vartable->Get(i);
-        if (!varValue){
-            ssc_data_free(landbosse_data);
-            MyMessageDialog dlg(GetCurrentTopLevelWindow(), "Run LandBOSSE error: " + i + " was not assigned.", "Windpower error",
-                                wxCENTER, wxDefaultPosition, wxDefaultSize, true);
-            dlg.ShowModal();
-            return;
-        }
-        ssc_data_set_number(landbosse_data, i.c_str(), varValue->Value());
-    }
-
-
-    auto module = ssc_module_create("wind_landbosse");
-    bool success = ssc_module_exec(module, landbosse_data);
-
-    if (!success){
-		auto x = ssc_data_get_string(landbosse_data, "errors");
-		std::string error;
-		if (x != NULL) 
-			error = x;
-        if (error.empty())
-            error = std::string(ssc_module_log(module, 0, nullptr, nullptr));
-        ssc_data_free(landbosse_data);
-        ssc_module_free(module);
-        MyMessageDialog dlg(GetCurrentTopLevelWindow(), "Run LandBOSSE error: " + error, "Windpower error",
-                            wxCENTER, wxDefaultPosition, wxDefaultSize, true);
-        dlg.ShowModal();
-        return;
-    }
-
-    auto outputs = VarTable(landbosse_data);
-    vartable->Merge(outputs, true);
-
-    ssc_data_free(landbosse_data);
-    ssc_module_free(module);
-
-    std::vector<std::string> total_costs = {"total_development_cost", "total_erection_cost",
-            "total_foundation_cost", "total_gridconnection_cost", "total_management_cost",
-            "total_sitepreparation_cost", "total_substation_cost", "total_collection_cost"};
-
-    double capacity = vartable->Get("system_capacity")->Value();
-    double turbine = vartable->Get("num_turbines")->Value();
-    double value = vartable->Get("total_bos_cost")->Value() / capacity;
-    vartable->Set("total_bos_cost_per_capacity", VarValue(value));
-    for (auto &name : total_costs){
-        value = vartable->Get(name)->Value();
-        vartable->Set(name + "_per_capacity", VarValue(value / capacity));
-        vartable->Set(name + "_per_turbine", VarValue(value / turbine));
-    }
-}
-
 lk::fcall_t* invoke_general_funcs()
 {
     static const lk::fcall_t vec[] = {
@@ -6650,8 +6542,6 @@ lk::fcall_t* invoke_general_funcs()
             fcall_librarygetnumbermatches,
             fcall_librarynotifytext,
             fcall_reopt_size_battery,
-            fcall_setup_landbosse,
-            fcall_run_landbosse,
             0 };
 	return (lk::fcall_t*)vec;
 }
@@ -6698,8 +6588,6 @@ lk::fcall_t* invoke_equation_funcs()
 		fcall_current_at_voltage_cec,
 		fcall_current_at_voltage_sandia,
 		fcall_property,
-		fcall_setup_landbosse,
-        fcall_run_landbosse,
 		// fcall_logmsg,
 		0 };
 	return (lk::fcall_t*)vec;

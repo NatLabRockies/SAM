@@ -1,11 +1,11 @@
 /*
 
 This script downloads hourly marginal cost data for modeled futures of the U.S.
-electricity sector from the NREL Cambium API. This data may be suitable as
+electricity sector from the NLR Cambium API. This data may be suitable as
 approximations of market power prices for the energy market or ancillary services
 markets when other data is not available.
 
-https://scenarioviewer.nrel.gov/
+https://scenarioviewer.nlr.gov/
 
 The script makes an intial query to the Cambium API to get a list of available
 data, prompts you to choose from that list the data you want to download, and
@@ -35,8 +35,8 @@ Written in SAM 2020.11.29. Last tested in SAM 2024.12.12.
 
 // Functions ///////////////////////////////////////////////////////////////////
 
-global url_cambium_meta='https://scenarioviewer.nrel.gov/api/project/detail/?uuid=82460f06-548c-4954-b2d9-b84ba92d63e2';
-global url_cambium_query='https://scenarioviewer.nrel.gov/api/load_data/';
+global url_cambium_meta='https://scenarioviewer.nlr.gov/api/project/detail/?uuid=82460f06-548c-4954-b2d9-b84ba92d63e2';
+global url_cambium_query='https://scenarioviewer.nlr.gov/api/load_data/';
 global cambium_project_uuid = '82460f06-548c-4954-b2d9-b84ba92d63e2';
 
 cambium_api_call = define( T ) {

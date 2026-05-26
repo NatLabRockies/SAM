@@ -9634,6 +9634,12 @@
     "dscr_maximum_debt_fraction": 60.0,
     "dscr_reserve_months": 6.0,
     "elev": 561.0,
+    "energy_expenses_ret": [
+        100.0
+    ],
+    "energy_revenue_ret": [
+        100.0
+    ],
     "epc_cost_fixed": 0.0,
     "epc_cost_per_watt": 0.0,
     "epc_cost_perc_of_direct": 13.0,
@@ -10406,6 +10412,21 @@
     "months_working_reserve": 6.0,
     "nameplate": 97.15893356941312,
     "nominal_discount_rate": 9.060000000000004,
+    "non_energy_expenses": [
+        0.0
+    ],
+    "non_energy_expenses_escal": 0.0,
+    "non_energy_expenses_ret": [
+        0.0
+    ],
+    "non_energy_revenue": [
+        0.0
+    ],
+    "non_energy_revenue_escal": 0.0,
+    "non_energy_revenue_is_shown": 0.0,
+    "non_energy_revenue_ret": [
+        0.0
+    ],
     "om_capacity": [
         66.0
     ],

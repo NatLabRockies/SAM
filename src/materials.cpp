@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -205,7 +205,7 @@ void MatPropDialog::OnCommand(wxCommandEvent &evt)
 	{
 	case ID_IMPORT: Import(); break;
 	case ID_EXPORT: Export(); break;
-	case wxID_HELP: SamApp::ShowHelp("edit_material_properties"); break;
+	case wxID_HELP: SamApp::ShowHelp("window-reference/win_edit_material_properties"); break;
 	}
 }
 

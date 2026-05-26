@@ -385,6 +385,8 @@
 		},
 		"Monthly": {
 		},
+		"NonEnergyRevenue": {
+		},
 		"HybridCosts": {
 			"total_installed_cost": 5.80569e+08
 		}

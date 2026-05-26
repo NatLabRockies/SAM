@@ -51,8 +51,11 @@
         "contingency_percent": 3.0,
         "country": "-",
         "dc_ac_ratio": 1.4,
-        "degradation": [
+        "dc_degradation": [
             0.5
+        ],
+        "degradation": [
+            0.0
         ],
         "elev": 358.0,
         "en_snowloss": 0.0,
@@ -203,7 +206,7 @@
         "step": 3600.0,
         "subtotal_direct": 99000000.0,
         "system_capacity": 100000.0,
-        "system_use_lifetime_output": 0.0,
+        "system_use_lifetime_output": 1.0,
         "tilt": 0.0,
         "total_direct_cost": 101970000.0,
         "total_indirect_cost": 5000000.0,
@@ -239,6 +242,9 @@
     "Wind": {
         "a_error_test_number": 17.345,
         "a_error_test_string": "\"default err msg\"",
+        "ac_degradation": [
+            0.64
+        ],
         "adjust": 0.0,
         "adjust_constant": 0.0,
         "adjust_en_periods": 0.0,
@@ -275,10 +281,7 @@
         "env_exposure_loss": 0.0,
         "env_icing_loss": 0.21,
         "env_loss_total": 2.398195120000002,
-        "est_bos_cost": 0.0,
-        "est_turbine_cost": 0.0,
         "inflation_rate": 2.5,
-        "install_type": 0.0,
         "om_capacity": [
             40.0
         ],
@@ -298,7 +301,6 @@
         "ops_strategies_loss": 0.0,
         "reference_capacity": 200000.0,
         "reference_number_turbines": 80.0,
-        "reference_resource_file": "AZ Eastern-Rolling Hills.srw",
         "reference_sales_tax_percent": 5.0,
         "resource_definition_type": 0.0,
         "rows": 1.0,
@@ -309,7 +311,7 @@
         "specify_label": 1.0,
         "step": 3600.0,
         "system_capacity": 200000.0,
-        "system_use_lifetime_output": 0.0,
+        "system_use_lifetime_output": 1.0,
         "total_installed_cost": 317480000.0,
         "total_installed_cost_per_kw": 1587.4,
         "turb_generic_loss": 1.7,
@@ -28480,7 +28482,7 @@
         "batt_dispatch_pvs_ki": 1.8,
         "batt_dispatch_pvs_kp": 1.2,
         "batt_dispatch_pvs_max_ramp": 10.0,
-        "batt_dispatch_pvs_nameplate": 271628.6,
+        "batt_dispatch_pvs_nameplate": 271628.5714285714,
         "batt_dispatch_pvs_nameplate_ac": 20000.0,
         "batt_dispatch_pvs_ramp_interval": 180.0,
         "batt_dispatch_pvs_short_forecast_enable": 0.0,
@@ -30839,7 +30841,7 @@
         ],
         "en_standalone_batt": 0.0,
         "grid_interconnection_limit_kwac": 20000.0,
-        "hybrid_system_capacity": 271628.6,
+        "hybrid_system_capacity": 271628.5714285714,
         "inflation_rate": 2.5,
         "lbl_fom_dispatch_message": "",
         "om_batt_capacity_cost": [
@@ -30919,7 +30921,7 @@
         "wind_ui_step_minutes": 60.0
     },
     "Hybrid": {
-        "ac_nameplate": 71428.6,
+        "ac_nameplate": 71428.57142857144,
         "analysis_period": 25.0,
         "analysis_period_warning": "",
         "batt_power_discharge_max_kwac": 57600.0730368,
@@ -31009,7 +31011,7 @@
         ],
         "cp_capacity_payment_esc": 0.0,
         "cp_capacity_payment_type": 0.0,
-        "cp_system_nameplate": 271.62859999999997,
+        "cp_system_nameplate": 271.62857142857146,
         "debt_message": "",
         "debt_option": 1.0,
         "debt_percent": 60.0,
@@ -39851,6 +39853,12 @@
         "dscr_reserve_months": 6.0,
         "en_electricity_rates": 0.0,
         "enable_interconnection_limit": 0.0,
+        "energy_expenses_ret": [
+            100.0
+        ],
+        "energy_revenue_ret": [
+            100.0
+        ],
         "equip1_reserve_cost": 0.1,
         "equip1_reserve_freq": 15.0,
         "equip2_reserve_cost": 0.0,
@@ -49346,7 +49354,7 @@
             ]
         ],
         "loan_moratorium": 0.0,
-        "mera_cost1": 27162860.0,
+        "mera_cost1": 27162857.14285715,
         "mera_cost2": 0.0,
         "mera_cost3": 0.0,
         "mera_name1": "Replacement Reserve 1",
@@ -49355,6 +49363,21 @@
         "months_receivables_reserve": 0.0,
         "months_working_reserve": 6.0,
         "nominal_discount_rate": 9.060000000000004,
+        "non_energy_expenses": [
+            0.0
+        ],
+        "non_energy_expenses_escal": 0.0,
+        "non_energy_expenses_ret": [
+            0.0
+        ],
+        "non_energy_revenue": [
+            0.0
+        ],
+        "non_energy_revenue_escal": 0.0,
+        "non_energy_revenue_is_shown": 0.0,
+        "non_energy_revenue_ret": [
+            0.0
+        ],
         "om_capacity": 0.0,
         "om_fixed": 0.0,
         "om_production": 0.0,
@@ -49433,7 +49456,7 @@
         "state_tax_rate": [
             7.0
         ],
-        "system_capacity": 271628.6,
+        "system_capacity": 271628.5714285714,
         "term_int_rate": 7.0,
         "term_tenor": 18.0,
         "tod_library": "Uniform Dispatch",
@@ -49445,7 +49468,7 @@
         "ui_electricity_rate_option": 0.0,
         "ui_fuel_cell_capacity": 200.0,
         "ui_fuel_cell_cost": 2100000.0,
-        "ui_hyb_pv_capacity": 71428.6,
+        "ui_hyb_pv_capacity": 71428.57142857144,
         "ui_pv_cost": 112068500.0,
         "ui_system_nameplate_standalone": 0.0,
         "ui_wacc": 6.709740000000002,
