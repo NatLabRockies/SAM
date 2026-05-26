@@ -194,7 +194,7 @@
                 },
                 "Items": {
                     "Type": 6.0,
-                    "StringList": "Airmass only|Air mass and precipitable water (recommended for thin-film)|Airmass and clearsky index (recommended for thin-film)"
+                    "StringList": "Air mass only|Air mass and precipitable water|Air mass and clearsky index"
                 },
                 "ShowCaptions": {
                     "Type": 2.0,
@@ -347,7 +347,7 @@
             "IndexLabels": "",
             "Flags": 2.0,
             "DefaultValue": 0.0,
-            "UIObject": "Default",
+            "UIObject": "RadioChoice",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
