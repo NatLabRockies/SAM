@@ -6,21 +6,21 @@
 SAM Help
 ========
 
-This is the user documentation for the System Advisor Model™ (SAM™), developed by the National Renewable Energy Laboratory (NREL).
+This is the user documentation for the System Advisor Model™ (SAM™), developed by the National Laboratory of the Rockies (NLR).
 
- .. important:: To display SAM Help correctly in the Safari web browser on a Mac, go to Settings, Advanced Settings, and enable **Show features for web developers**. Developer mode is required in Safari to load CSS and Javascript from local files.
+.. important:: To display SAM Help correctly in the Safari web browser on a Mac, go to Settings, Advanced Settings, and enable **Show features for web developers**. Developer mode is required in Safari to load CSS and Javascript from local files.
 
-See https://sam.nrel.gov for general information about SAM and links to technical references for SAM's performance and financial models
+See https://sam.nlr.gov for general information about SAM and links to technical references for SAM's performance and financial models
 
-Go to https://sam.nrel.gov/forum to ask questions and get help from the SAM user community and SAM developers.
+Go to https://sam.nlr.gov/forum to ask questions and get help from the SAM user community and SAM developers.
 
-See https://sam.nrel.gov/releasenotes for version information.
+See https://sam.nlr.gov/releasenotes for version information.
 
-Download SAM for Windows, Mac, and Linux at https://sam.nrel.gov/download. You can also find links to legacy versions of SAM there.
+Download SAM for Windows, Mac, and Linux at https://sam.nlr.gov/download. You can also find links to legacy versions of SAM there.
 
-SAM's source code is available at https://github.com/NREL/SAM.
+SAM's source code is available at https://github.com/NatLabRockies/SAM.
 
-Software developer tools are available at https://sam.nrel.gov/sdk, and the PySAM Python package is available at https://pysam.readthedocs.io.
+Software developer tools are available at https://sam.nlr.gov/sdk, and the PySAM Python package is available at https://pysam.readthedocs.io.
 
 Getting Started and Reference
 -----------------------------

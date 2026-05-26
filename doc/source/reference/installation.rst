@@ -1,12 +1,12 @@
 Software Installation
 =====================
 
-To install SAM, download the package for your computer's operating system from the `SAM website's Download page <https://sam.nrel.gov/download>`__, and follow the installation instructions.
+To install SAM, download the package for your computer's operating system from the `SAM website's Download page <https://sam.nlr.gov/download>`__, and follow the installation instructions.
 
 System Requirements
 ~~~~~~~~~~~~~~~~~~~
 
-SAM runs on most recent versions of Windows, Mac, and Linux operating systems. For information about requirements for different versions of SAM, see `SAM website Download page <https://sam.nrel.gov/download>`__. SAM requires an internet connection for :doc:`registration <registration>` and :doc:`access to online databases <configure_proxy_server>`.
+SAM runs on most recent versions of Windows, Mac, and Linux operating systems. For information about requirements for different versions of SAM, see `SAM website Download page <https://sam.nlr.gov/download>`__. SAM requires an internet connection for :doc:`registration <registration>` and :doc:`access to online databases <configure_proxy_server>`.
 
 .. _installationfolder:
 
@@ -58,4 +58,4 @@ You can keep different versions of SAM installed on your computer and run them s
 Installing SAM in a laboratory environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you are installing SAM on more than one computer in a teaching laboratory or other setting, please `email us <mailto:sam.support@nrel.gov?subject=SAM%20HELP:%20Registration%20in%20laboratory%20environment>`__ for instructions to register the entire laboratory with a single key.
+If you are installing SAM on more than one computer in a teaching laboratory or other setting, please `email us <mailto:sam.support@nlr.gov?subject=SAM%20HELP:%20Registration%20in%20laboratory%20environment>`__ for instructions to register the entire laboratory with a single key.

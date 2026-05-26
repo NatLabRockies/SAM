@@ -40,7 +40,7 @@ For instructions to download or use your own weather files see:
  
 
 
-.. note:: For more information about using weather data in SAM including links to online data sources and documents, see the `Weather Data <https://sam.nrel.gov/weather>`__ page on the SAM website.
+.. note:: For more information about using weather data in SAM including links to online data sources and documents, see the `Weather Data <https://sam.nlr.gov/weather>`__ page on the SAM website.
 
 
-.. note:: For a good discussion of weather data for solar energy modeling, see Sengupta et al., (2017) "Best Practices Handbook for the Collection and Use of Solar Resource Data for Solar Energy Applications: Second Edition" available to download from the `Weather Data Publications <https://sam.nrel.gov/weather-data/weather-data-publications.html>`__ page on the SAM website.
+.. note:: For a good discussion of weather data for solar energy modeling, see Sengupta et al., (2017) "Best Practices Handbook for the Collection and Use of Solar Resource Data for Solar Energy Applications: Second Edition" available to download from the `Weather Data Publications <https://sam.nlr.gov/weather-data/weather-data-publications.html>`__ page on the SAM website.

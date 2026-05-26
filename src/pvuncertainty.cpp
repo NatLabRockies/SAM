@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -150,7 +150,12 @@ PVUncertaintyForm::PVUncertaintyForm( wxWindow *parent, Case *cc )
 
     wxStaticBoxSizer *sizer_changePvalue = new wxStaticBoxSizer( wxHORIZONTAL, this, "Update P value" );
     label = new wxStaticText( this, wxID_ANY, "Custom Px:" );
-    m_puser = new wxNumericCtrl( this, wxID_ANY, 90, wxNUMERIC_REAL );
+    int pValue = static_cast<int>(m_data.pValue);
+    if (pValue < 1) pValue = 1;
+    else if (pValue > 99) pValue = 99;
+    m_data.pValue = pValue;
+    m_puser = new wxNumericCtrl( this, wxID_ANY, 90, wxNUMERIC_UNSIGNED );
+    m_puser->SetRange(1, 99);
     sizer_changePvalue->AddSpacer( 20 );
     sizer_changePvalue->Add( label , 0, wxLEFT|wxRIGHT|wxALIGN_CENTER_VERTICAL, 0 );
     sizer_changePvalue->Add( m_puser, 0, wxALL|wxALIGN_CENTER_VERTICAL, 3 );

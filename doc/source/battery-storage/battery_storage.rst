@@ -35,4 +35,4 @@ The battery storage model allows you to analyze the performance of the following
 
 SAM has automatic dispatch controller options for peak shaving applications or applications that respond to time-varying power prices. It also has "manual" dispatch options where you provide a schedule or time-series instructions for when to charge and discharge the battery. SAM's detailed voltage, temperature, and degradation models account for how operating conditions affect battery degradation over time to determine when battery replacements are required.
 
-For more about the SAM's battery model, see the `Battery Publications <https://sam.nrel.gov/battery-storage/battery-publications.html>`__ page on the SAM website. 
+For more about the SAM's battery model, see the `Battery Publications <https://sam.nlr.gov/battery-storage/battery-publications.html>`__ page on the SAM website. 

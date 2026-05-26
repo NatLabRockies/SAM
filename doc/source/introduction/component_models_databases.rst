@@ -8,7 +8,7 @@ This topic lists all of SAM's performance models and describes the component-lev
 System Performance Models
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The system models represent a complete renewable energy system and were developed by NREL using algorithms from partners listed below.
+The system models represent a complete renewable energy system and were developed by NLR using algorithms from partners listed below.
 
 .. list-table::
    :width: 100%
@@ -18,45 +18,45 @@ The system models represent a complete renewable energy system and were develope
    * - Model Name
      - Model Developer
    * - Biomass Combustion
-     - NREL
+     - NLR
    * - CSP Generic Model
-     - NREL
+     - NLR
    * - CSP Integrated Solar Combined Cycle
-     - NREL
+     - NLR
    * - CSP Linear Fresnel Direct Steam
-     - NREL
+     - NLR
    * - CSP Linear Fresnel Molten Salt
-     - NREL
+     - NLR
    * - CSP Parabolic Trough (Empirical)
-     - NREL
+     - NLR
    * - CSP Parabolic Trough (Physical)
-     - NREL, University of Wisconsin
+     - NLR, University of Wisconsin
    * - CSP Power Tower Molten Salt
-     - NREL, University of Wisconsin
+     - NLR, University of Wisconsin
    * - Energy Storage
-     - NREL
+     - NLR
    * - Fuel Cell
-     - NREL
+     - NLR
    * - Custom Generation Profile
-     - NREL
+     - NLR
    * - Geothermal
-     - NREL, Princeton Energy Resources International
+     - NLR, Princeton Energy Resources International
    * - High Concentration PV
-     - NREL
+     - NLR
    * - Marine Energy
-     - NREL
+     - NLR
    * - Photovoltaic (detailed)
-     - NREL with component models from Sandia National Laboratories and the University of Wisconsin
+     - NLR with component models from Sandia National Laboratories and the University of Wisconsin
    * - Photovoltaic (PVWatts)
-     - NREL
+     - NLR
    * - Process Heat Linear Fresnel Direct Steam
-     - NREL
+     - NLR
    * - Process Heat Parabolic Trough
-     - NREL
+     - NLR
    * - Solar Water Heating
-     - NREL
+     - NLR
    * - Wind
-     - NREL
+     - NLR
 
 .. _componentperformance:
 
@@ -75,35 +75,35 @@ The detailed photovoltaic and wind power models include options for choosing a c
      - Developer
    * - Simple Efficiency Module Model
      - Photovoltaic module
-     - NREL
+     - NLR
    * - CEC Performance Model with Module Data base
      - Photovoltaic module
      - University of Wisconsin 
    * - CEC Performance Model with User Entered Specifications
      - Photovoltaic module
-     - Adapted by NREL
+     - Adapted by NLR
    * - Sandia PV Array Performance Model with Module Database
      - Photovoltaic module
      - Sandia National Laboratories
    * - Single Point Efficiency Inverter
      - Inverter
-     - NREL
+     - NLR
    * - Sandia Performance Model for Grid Connected PV Inverters
      - Inverter
      - Sandia National Laboratories
    * - Wind Turbine Design Model
      - Wind Turbine
-     - NREL
+     - NLR
    * - Wind Power Curve Model
      - Wind Turbine
-     - NREL
+     - NLR
 
 .. _componentdatabases:
 
 Component Parameter Databases
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Some of the component models use a library of input parameters to represent the performance characteristics of the component. The libraries listed below are owned by organizations other than NREL.
+Some of the component models use a library of input parameters to represent the performance characteristics of the component. The libraries listed below are owned by organizations other than NLR.
 
 .. list-table::
    :width: 100%
@@ -140,7 +140,7 @@ SAM can automatically download data from the following online databases to popul
      - Database Manager
    * - `OpenEI U.S. Utility Rate Database <http://en.openei.org/wiki/Utility_Rate_Database>`__
      - Retail electricity prices and rate structures
-     - NREL and Illinois State University
+     - NLR and Illinois State University
 
 .. _weatherdata:
 
@@ -157,12 +157,12 @@ SAM can automatically download renewable energy resource and weather data from t
    * - Database Name
      - Type of Resource Data
      - Database Manager
-   * - `National Solar Radiation Database <https://nsrdb.nrel.gov/>`__
+   * - `National Solar Radiation Database <https://nsrdb.nlr.gov/>`__
      - Solar and Meteorological
-     - NREL 
-   * - `Wind Integration Datasets <https://www.nrel.gov/grid/wind-toolkit.html>`__
+     - NLR 
+   * - `Wind Integration Datasets <https://www.nlr.gov/grid/wind-toolkit.html>`__
      - Wind and Meteorological
-     - NREL with 3Tier and AWS Truepower
+     - NLR with 3Tier and AWS Truepower
 
 Solar and Wind Resource Files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

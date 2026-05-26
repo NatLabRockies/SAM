@@ -18,13 +18,13 @@ SAM provides three options for modeling battery life:
 
 SAM's Li-ion battery life models are adapted from the work presented in the following papers:
 
-* Smith, K.; Saxon, A.; Keyser, M.; Lundstrom, B.; Cao, Z.; Roc, A. (2017). Life Prediction Model for Grid-connected Li-ion Battery Energy Storage System. Presented at 2017 American Control Conference. (`PDF 1.4 KB <https://www.nrel.gov/docs/fy17osti/67102.pdf>`__)
+* Smith, K.; Saxon, A.; Keyser, M.; Lundstrom, B.; Cao, Z.; Roc, A. (2017). Life Prediction Model for Grid-connected Li-ion Battery Energy Storage System. Presented at 2017 American Control Conference. (`PDF 1.4 KB <https://www.nlr.gov/docs/fy17osti/67102.pdf>`__)
 
 * Spotnitz, R. (2002). `Simulation of Capacity Fade in Lithium-ion Batteries <https://linkinghub.elsevier.com/retrieve/pii/S0378775302004901>`__. Journal of Power Sources. Vol 113 pp 72-80 2003.
 
 The Cycle and Calendar Degradation model is described in Section 2.3 of:
 
-* DiOrio, N.; Dobos, A.; Janzou, S.; Nelson, A.; Lunstrom, B. (2015). Technoeconomic Modeling of Battery Energy Storage in SAM. 32 pp. NREL/TP-6A20-64641 (`PDF 2.6 MB <https://docs.nrel.gov/docs/fy15osti/64641.pdf>`__)
+* DiOrio, N.; Dobos, A.; Janzou, S.; Nelson, A.; Lunstrom, B. (2015). Technoeconomic Modeling of Battery Energy Storage in SAM. 32 pp. NREL/TP-6A20-64641 (`PDF 2.6 MB <https://docs.nlr.gov/docs/fy15osti/64641.pdf>`__)
 
 Cycle and Calendar Degradation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

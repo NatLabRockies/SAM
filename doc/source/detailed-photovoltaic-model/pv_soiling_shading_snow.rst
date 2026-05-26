@@ -28,7 +28,7 @@ Rear-side Shading and Soiling for Bifacial Modules
 
 When you enable the bifacial model on the :doc:`Module <pv_module>` page, SAM enables two additional irradiance losses to account for soiling on the rear side of the array that differ from front-side soiling. SAM reduces the irradiance incident on the rear-side of the array by the bifacial rear soiling and bifacial rack shading percentage. The bifacial soiling losses are constant and do not change from month to month.
 
-Peláez, S.; Deline, C.; Stein, Joshua.; Marion, B.; Anderson, K; Muller, M. (2019) Effect of torque-tube parameters on rear-irradiance and rear-shading loss for bifacial PV performance on single-axis tracking systems. IEEE 46th Photovoltaic Specialists Conference (PVSC), vol. 2, pp. 1-6. IEEE. (`PDF 835 KB <https://www.nrel.gov/docs/fy20osti/73203.pdf>`__  )
+Peláez, S.; Deline, C.; Stein, Joshua.; Marion, B.; Anderson, K; Muller, M. (2019) Effect of torque-tube parameters on rear-irradiance and rear-shading loss for bifacial PV performance on single-axis tracking systems. IEEE 46th Photovoltaic Specialists Conference (PVSC), vol. 2, pp. 1-6. IEEE. (`PDF 835 KB <https://www.nlr.gov/docs/fy20osti/73203.pdf>`__  )
 
 **Bifacial rear soiling (%)**
   A percentage of the irradiance incident on the rear-side of the bifacial array to account for soiling on the rear side of the array.
@@ -53,7 +53,7 @@ External Shading
 
 External shading is shading of the photovoltaic subarray by trees, buildings, roof protrusions and other nearby objects. SAM represents a shadow on the subarray in a given time step by a single **beam irradiance shading loss** for that time step, which it determines from data you provide in the beam shade loss tables in the :doc:`Edit Shading Data window <../window-reference/win_edit_shading_data>`. SAM reduces the plane-of-array beam irradiance by the shading loss percentage. For example, if a shadow occupies 25% of the subarray's surface area at 11 am, the beam shading loss for 11 am would be 25%. A shading loss of 0 means there is no shade on the subarray, and a loss of 100% means that no beam irradiance reaches the subarray.
 
-When you specify beam irradiance shading losses by time step, you can use SAM's partial shading model to estimate the impact of partial shading on the array's electrical output. The partial shading model does not work with the month-by-hour or solar azimuth-by-altitude beam shade loss tables. For more information about the partial shading model, see MacAlpine, S.; Deline, C. (2015) Simplified Method for Modeling the Impact of Arbitrary Partial Shading Conditions on PV Array Performance. National Renewable Energy Laboratory. 8 pp.; NREL/CP-5J00-64570. (`PDF 699 KB <https://docs.nrel.gov/docs/fy15osti/64570.pdf>`__)
+When you specify beam irradiance shading losses by time step, you can use SAM's partial shading model to estimate the impact of partial shading on the array's electrical output. The partial shading model does not work with the month-by-hour or solar azimuth-by-altitude beam shade loss tables. For more information about the partial shading model, see MacAlpine, S.; Deline, C. (2015) Simplified Method for Modeling the Impact of Arbitrary Partial Shading Conditions on PV Array Performance. National Renewable Energy Laboratory. 8 pp.; NREL/CP-5J00-64570. (`PDF 699 KB <https://docs.nlr.gov/docs/fy15osti/64570.pdf>`__)
 
 SAM accounts for the effect of external shading on the plane-of-array diffuse irradiance using a single **sky diffuse shading loss** for the entire year.
 
@@ -92,7 +92,7 @@ Self Shading for Fixed Subarrays and One-axis Trackers
 
 Self shading is caused by row-to-row shading of modules within a subarray, where shadows from modules in neighboring rows of the array block sunlight from parts of other modules in the array during certain times of day. SAM can estimate self shading for fixed subarrays and subarrays with one-axis tracking, assuming that each subarray consists of modules in parallel rows with the same number of modules per row.
 
-For a description of the self-shading model implemented in SAM, see Gilman, P.; Dobos, A.; DiOrio, N.; Freeman, J.; Janzou, S.; Ryberg, D. (2018) SAM Photovoltaic Model Technical Reference Update. 93 pp.; NREL/TP-6A20-67399 available along with other technical documentation from the `SAM website <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__.
+For a description of the self-shading model implemented in SAM, see Gilman, P.; Dobos, A.; DiOrio, N.; Freeman, J.; Janzou, S.; Ryberg, D. (2018) SAM Photovoltaic Model Technical Reference Update. 93 pp.; NREL/TP-6A20-67399 available along with other technical documentation from the `SAM website <https://sam.nlr.gov/photovoltaic/pv-publications.html>`__.
 
 Use the following output variables to explore the effect of self shading (see :doc:`Results <pv_results>` for descriptions of the variables):
 
@@ -141,11 +141,11 @@ Snow Losses
 
 SAM can estimate snow losses in the array's output caused by snow covering the modules in the subarray when snow depth data is available. You can use snow depth data from the weather file on the Location and Resource page, download snow depth data for U.S. locations, or provide your own snow depth data.
 
-SAM's snow model estimates the loss in system output during time steps when the array is covered in snow using snow depth data, the subarray's tilt angle, plane-of-array irradiance, and ambient temperature. The model assumes that the subarray is completely covered with snow when the snow depth data indicates a snowfall, and that snow slides off the array as the ambient temperature increases. For a detailed description of the snow model, see the following publications available from the from the SAM website's `PV Publications page <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__.:
+SAM's snow model estimates the loss in system output during time steps when the array is covered in snow using snow depth data, the subarray's tilt angle, plane-of-array irradiance, and ambient temperature. The model assumes that the subarray is completely covered with snow when the snow depth data indicates a snowfall, and that snow slides off the array as the ambient temperature increases. For a detailed description of the snow model, see the following publications available from the from the SAM website's `PV Publications page <https://sam.nlr.gov/photovoltaic/pv-publications.html>`__.:
 
 * Gilman, P.; Dobos, A.; DiOrio, N.; Freeman, J.; Janzou, S.; Ryberg, D. (2018) SAM Photovoltaic Model Technical Reference Update. 93 pp.; NREL/TP-6A20-67399
 
-* Ryberg, D.; Freeman, J. (2017).  Integration, Validation and Application of a PV Snow Coverage Model in SAM. National Renewable Energy Laboratory. 33 pp. TP-6A20-68705 available along with other technical documentation from the `SAM website <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__.
+* Ryberg, D.; Freeman, J. (2017).  Integration, Validation and Application of a PV Snow Coverage Model in SAM. National Renewable Energy Laboratory. 33 pp. TP-6A20-68705 available along with other technical documentation from the `SAM website <https://sam.nlr.gov/photovoltaic/pv-publications.html>`__.
 
 .. note:: The Ryberg (2017) paper includes a United States map of annual average snow loss values that could be used to estimate snow loss using inputs on the Losses page instead of the snow model when snow depth data is not available.
 

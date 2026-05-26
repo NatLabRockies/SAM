@@ -66,7 +66,7 @@ System
 
   The rated system size  equation is derived from Equation 2.1.4 of the draft technical manual and assumes an irradiance of 1000 W/m² and temperature difference of 30°C.
 
-  DiOrio, N.; Christensen, C.; Burch, J.; Dobos, A. (DRAFT 2014). Technical Manual for the SAM Solar Water Heating Model. (`PDF 150 KB) <https://sam.nrel.gov/images/web_page_files/diorio-2014-draft-swh-sam-technical-manual.pdf>`__
+  DiOrio, N.; Christensen, C.; Burch, J.; Dobos, A. (DRAFT 2014). Technical Manual for the SAM Solar Water Heating Model. (`PDF 150 KB) <https://sam.nlr.gov/images/web_page_files/diorio-2014-draft-swh-sam-technical-manual.pdf>`__
 
 Shading
 .......

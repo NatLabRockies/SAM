@@ -5,7 +5,7 @@ The Uncertainty simulation option is available for the Detailed PV and PVWatts p
 
 For descriptions of this implementation of uncertainty modeling, see:
 
-* Prilliman, M.; Hansen, C.; Keith, J.; Janzou, S.; Theristis, M.; Scheiner, A.; Ozakyol, E. (2023) Quantifying Uncertainty in PV Energy Estimates Final Report. National Renewable Energy Laboratory. 18 pp. NREL/TP-7A40-84993 (`PDF 541 KB <https://docs.nrel.gov/docs/fy23osti/84993.pdf>`__)
+* Prilliman, M.; Hansen, C.; Keith, J.; Janzou, S.; Theristis, M.; Scheiner, A.; Ozakyol, E. (2023) Quantifying Uncertainty in PV Energy Estimates Final Report. National Renewable Energy Laboratory. NREL/TP-7A40-84993 (`PDF 541 KB <https://docs.nlr.gov/docs/fy23osti/84993.pdf>`__)
 
 * C.; Moser, D.; Belluardo, G.; Ingenhoven, P. (2018) `Uncertainties in PV System Yield Predictions and Assessments <https://iea-pvps.org/wp-content/uploads/2020/01/Uncertainties_in_PV_System_Yield_Predictions_and_Assessments_by_Task_13.pdf>`__, PVPS Report IEA-PVPS T13-12:2018, International Energy Agency (IEA) Photovoltaic Power Systems Programme (PVPS).
 
@@ -14,7 +14,7 @@ The uncertainty simulation model helps you understand the uncertainty in SAM's Y
  
 
 
-.. note:: Uncertainty simulations require a folder with at least ten valid weather files that each contain data for one year. For example, the folder might contain 23 weather files downloaded from the NREL National Solar Radiation Database (NSRDB) for 1998 through 2020.
+.. note:: Uncertainty simulations require a folder with at least ten valid weather files that each contain data for one year. For example, the folder might contain 23 weather files downloaded from the NLR National Solar Radiation Database (NSRDB) for 1998 through 2020.
 
 
 .. note:: In this description, "annual energy" means the total electrical output of the system in Year 1.

@@ -11,7 +11,7 @@ SAM provides the categories under **Direct Capital Costs** and **Indirect Capita
 
 
  
-.. note:: The default cost values that appear when you create a file or case are intended to illustrate SAM's use. The cost data are meant to be realistic, but not to represent actual costs for a specific project. For more information and a list of online resources for cost data, see the technology pages on the `SAM website <https://sam.nrel.gov>`__.
+.. note:: The default cost values that appear when you create a file or case are intended to illustrate SAM's use. The cost data are meant to be realistic, but not to represent actual costs for a specific project. For more information and a list of online resources for cost data, see the technology pages on the `SAM website <https://sam.nlr.gov>`__.
 
 
 .. note:: The Installation Costs page only available for cases with a cash-flow-based financial model. It is not available with the No Financial Model option or the LCOE Calculator financial model.

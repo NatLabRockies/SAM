@@ -1,6 +1,9 @@
 {
     "a_error_test_number": 17.345,
     "a_error_test_string": "\"default err msg\"",
+    "ac_degradation": [
+        0.64
+    ],
     "adjust": 0.0,
     "adjust_constant": 0.0,
     "adjust_en_periods": 0.0,
@@ -11186,6 +11189,12 @@
     "en_electricity_rates": 0.0,
     "en_wind_uncertainty": 0.0,
     "enable_interconnection_limit": 0.0,
+    "energy_expenses_ret": [
+        100.0
+    ],
+    "energy_revenue_ret": [
+        100.0
+    ],
     "env_degrad_loss": 1.8,
     "env_degrad_uncert": 2.2,
     "env_env_loss": 0.4,
@@ -20717,6 +20726,21 @@
     "months_receivables_reserve": 0.0,
     "months_working_reserve": 6.0,
     "nominal_discount_rate": 9.060000000000004,
+    "non_energy_expenses": [
+        0.0
+    ],
+    "non_energy_expenses_escal": 0.0,
+    "non_energy_expenses_ret": [
+        0.0
+    ],
+    "non_energy_revenue": [
+        0.0
+    ],
+    "non_energy_revenue_escal": 0.0,
+    "non_energy_revenue_is_shown": 0.0,
+    "non_energy_revenue_ret": [
+        0.0
+    ],
     "om_capacity": [
         40.0
     ],
@@ -20831,7 +20855,7 @@
     ],
     "step": 0.0,
     "system_capacity": 200000.0,
-    "system_use_lifetime_output": 0.0,
+    "system_use_lifetime_output": 1.0,
     "term_int_rate": 7.0,
     "term_tenor": 18.0,
     "tod_library": "Uniform Dispatch",

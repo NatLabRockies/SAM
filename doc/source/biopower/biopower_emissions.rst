@@ -3,7 +3,7 @@ Emissions
 
 The Life-Cycle Impacts page allows you to specify inputs for a set of life-cycle greenhouse gas emissions calculations for the biomass supply chain. You can use these inputs to estimate the independent contributions of biomass collection, transport, pre-processing, combustion, and CO2 re-uptake on the life-cycle carbon dioxide emissions of the project.
 
-For a technical description of the biopower model, see Jorgenson, J.; Gilman, P.; Dobos, A. (2011). Technical Manual for the SAM Biomass Power Generation Model. 40 pp.; NREL Report No. TP-6A20-52688. https://docs.nrel.gov/docs/fy11osti/52688.pdf
+For a technical description of the biopower model, see Jorgenson, J.; Gilman, P.; Dobos, A. (2011). Technical Manual for the SAM Biomass Power Generation Model. 40 pp.; NREL Report No. TP-6A20-52688. https://docs.nlr.gov/docs/fy11osti/52688.pdf
 
 .. note:: The life-cycle impacts calculations are independent of the power plant energy modeling calculations. The inputs on the life-cycle impacts page are for a separate set of calculations than the inputs on the :doc:`Feedstock <biopower_feedstock>` and :doc:`Plant Specs <biopower_plant_specs>` pages.
 
