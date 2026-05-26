@@ -1,4 +1,7 @@
 {
+    "ac_degradation": [
+        0.0
+    ],
     "adjust": 0.0,
     "adjust_constant": 0.0,
     "adjust_en_periods": 0.0,
@@ -9592,9 +9595,6 @@
     "fixed_plant_input": 0.0,
     "flip_target_percent": 11.0,
     "flip_target_year": 20.0,
-    "ac_degradation": [
-        0.0
-    ],
     "grid_curtailment": [
         1e38,
         1e38,
@@ -19079,7 +19079,7 @@
     "months_receivables_reserve": 0.0,
     "months_working_reserve": 6.0,
     "nameplate_capacity": 100000.0,
-    "nominal_discount_rate": 9.060000000000004,
+    "nominal_discount_rate": 9.060000000000003,
     "om_capacity": [
         25.0
     ],

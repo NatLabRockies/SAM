@@ -1,4 +1,7 @@
 {
+    "ac_degradation": [
+        0.0
+    ],
     "adjust": 0.0,
     "adjust_constant": 0.0,
     "adjust_en_periods": 0.0,
@@ -9630,9 +9633,6 @@
     "fixed_plant_input": 0.0,
     "flip_target_percent": 10.0,
     "flip_target_year": 10.0,
-    "ac_degradation": [
-        0.0
-    ],
     "grid_curtailment": [
         1e38,
         1e38,
@@ -36663,7 +36663,7 @@
         184.05
     ],
     "nameplate_capacity": 9707.12,
-    "nominal_discount_rate": 9.060000000000004,
+    "nominal_discount_rate": 9.060000000000003,
     "normalize_to_utility_bill": 0.0,
     "om_capacity": [
         25.0

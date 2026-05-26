@@ -32,8 +32,12 @@
     "analysis_period_warning": "No messages.",
     "annual_albedo": 0.183951,
     "annual_beam": 7.33564,
+    "annual_csky_beam": 0.0,
+    "annual_csky_diffuse": 0.0,
+    "annual_csky_global": 0.0,
     "annual_diffuse": 1.34843,
     "annual_global": 5.79476,
+    "annual_precipitation": 0.0,
     "annual_snow": NaN,
     "annual_tdry": 21.9385,
     "annual_twet": NaN,
@@ -200,7 +204,7 @@
     "debt_option": 1.0,
     "debt_percent": 60.0,
     "degradation": [
-        0.5
+        0.0
     ],
     "depr_alloc_custom_percent": 0.0,
     "depr_alloc_macrs_15_percent": 1.5,
@@ -19225,7 +19229,7 @@
     "modulearray_power_w": 100000000.0,
     "months_receivables_reserve": 0.0,
     "months_working_reserve": 6.0,
-    "nominal_discount_rate": 9.060000000000004,
+    "nominal_discount_rate": 9.060000000000003,
     "om_capacity": [
         19.0
     ],
@@ -19408,7 +19412,7 @@
     "ui_step_minutes": 60.0,
     "ui_total_land_area_ha": 175.43871222814654,
     "ui_total_module_area": 526315.7894736842,
-    "ui_total_module_area_acres": 130.05534895540846,
+    "ui_total_module_area_acres": 130.05534895540843,
     "ui_total_module_area_ha": 52.63157894736842,
     "ui_use_acre_per_mw": 0.0,
     "ui_wacc": 6.709740000000002,
