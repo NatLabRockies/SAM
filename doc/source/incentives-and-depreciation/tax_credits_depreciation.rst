@@ -113,10 +113,14 @@ SAM provides two options for determining the portion of project costs that quali
 
   For **Qualifies for ITC**, check the box for each cost (non-storage or battery storage) that qualifies for the ITC for both federal and state tax purposes.
 
+.. note:: For residential projects, use the **Qualifies for ITC** check boxes to determine the costs that qualify for the ITC. Accelerated depreciation does not apply to residential projects, so those inputs are not available for the Residential financial model.
+
 **Determine ITC qualification from depreciation class allocations**
   Use this option to determine ITC qualifying costs from depreciation class allocations.
 
   For this option, use the inputs under "Depreciation Basis and Allocation" to determine ITC qualifying costs. **Non-storage installed cost**, **Battery storage installed cost**, and **Qualifies for ITC** check boxes are disabled.
+
+
 
 
 Depreciation Basis and Allocation
