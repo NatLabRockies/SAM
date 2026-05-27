@@ -25,7 +25,7 @@ A direct capital cost represents an expense for a specific piece of equipment or
 **Fossil Backup, $/kWe**
   For CSP Systems only. Cost per electric megawatt of power block gross capacity to account for the installation of a fossil backup system, including equipment and labor.
 
- .. note:: In versions of SAM released after February 2020, fossil backup is not available for the Physical Trough model because it was not incorporated into the new dispatch controller logic at the time of the software release, so the Fossil Backup cost should be zero. If you want to use fossil backup, use version SAM 2018.11.11, available on the SAM website `Download page <https://sam.nrel.gov/download>`__.
+ .. note:: In versions of SAM released after February 2020, fossil backup is not available for the Physical Trough model because it was not incorporated into the new dispatch controller logic at the time of the software release, so the Fossil Backup cost should be zero. If you want to use fossil backup, use version SAM 2018.11.11, available on the SAM website `Download page <https://sam.nlr.gov/download>`__.
 
 **Power Plant, $/kWe**
   For CSP Systems only. Cost per electric megawatt of power block gross capacity to account for the installation of the power block, including equipment and labor.

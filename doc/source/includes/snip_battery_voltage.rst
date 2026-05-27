@@ -17,7 +17,7 @@ Battery voltage varies with state of charge as the internal open circuit potenti
 Electrochemical Model
 .....................
 
-The electrochemical voltage model can be used for Lithium-ion and lead acid batteries and provides a way to characterize the battery's voltage curve using data provided on some battery manufacturer data sheets. It is disabled for flow batteries. The model is described in Section 2.1 of `DiOrio (2015) Technoeconomic Modeling of Battery Energy Storage in SAM <https://sam.nrel.gov/battery-storage/battery-publications.html>`__.
+The electrochemical voltage model can be used for Lithium-ion and lead acid batteries and provides a way to characterize the battery's voltage curve using data provided on some battery manufacturer data sheets. It is disabled for flow batteries. The model is described in Section 2.1 of `DiOrio (2015) Technoeconomic Modeling of Battery Energy Storage in SAM <https://sam.nlr.gov/battery-storage/battery-publications.html>`__.
 
 **C-rate of discharge curve**
   Battery manufacturer data sheets typically include a set of curves like the one below that show cell voltage as a function of charge removed for different discharge rates. The "C-rate" is the current used to discharge the battery. It is defined as the current divided by the rated capacity.

@@ -1,7 +1,7 @@
 Wave Resource Data Download
 ===========================
 
-The Wave Resource Data Download accesses the `NREL Hindcast Wave Energy Downoad web API <https://developer.nrel.gov/docs/wave/hindcast/>`__ that contains coastal wave data for the U.S. West Coast, U.S. East Coast, Hawaii, and Alaska. This three-hour time series data is available for multiple years.
+The Wave Resource Data Download accesses the `NLR Hindcast Wave Energy Downoad web API <https://developer.nlr.gov/docs/wave/hindcast/>`__ that contains coastal wave data for the U.S. West Coast, U.S. East Coast, Hawaii, and Alaska. This three-hour time series data is available for multiple years.
 
 .. note:: The web API may not always respond, so it may take several tries to successfully download a wave energy data file.
 
@@ -9,7 +9,7 @@ The Wave Resource Data Download accesses the `NREL Hindcast Wave Energy Downoad 
   Choose a dataset as appropriate for your location. Data is only available for locations along the U.S. East and West coasts and Hawaii.
 
 **Latitude and Longitude**
-  The latitude and longitude in decimal degrees of the location. You can use the `NREL Marine Energy Atlas <https://maps.nrel.gov/marine-energy-atlas>`__   to help identify locations covered by the database.
+  The latitude and longitude in decimal degrees of the location. You can use the `NLR Marine Energy Atlas <https://maps.nlr.gov/marine-energy-atlas>`__   to help identify locations covered by the database.
 
 **Choose a single year**
   Use this option to download a weather file with one year's worth of data.

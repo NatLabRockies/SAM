@@ -24,7 +24,7 @@ A payback period of "NaN" (Not a Number) indicates that the payback period is gr
 
 SAM's payback calculation is based on the descriptions of simple payback and discounted payback in Short W et al, 1995. *Manual for the Economic Evaluation of Energy Efficiency and Renewable Energy Technologies. National Renewable Energy Laboratory*. NREL/TP-462-5173. (`PDF 6.6 MB) <https://www.osti.gov/biblio/35391>`__
 
-You can download workbooks that replicate SAM's payback period calculation from the `Financial Models <https://sam.nrel.gov/financial>`__ page on the SAM website. For Windows versions of SAM, click **Send to Excel with Equations** from the :doc:`Cash Flow <../results/cashflow>` tab of the Results page to generate an Excel workbook that replicates SAM's payback period calculation.
+You can download workbooks that replicate SAM's payback period calculation from the `Financial Models <https://sam.nlr.gov/financial>`__ page on the SAM website. For Windows versions of SAM, click **Send to Excel with Equations** from the :doc:`Cash Flow <../results/cashflow>` tab of the Results page to generate an Excel workbook that replicates SAM's payback period calculation.
 
 
  

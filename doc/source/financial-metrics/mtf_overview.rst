@@ -18,8 +18,8 @@ For tips on interpreting financial metrics, see :ref:`Interpreting the NPV <inte
 Additional Resources
 ....................
 
-You can explore the methodology for some of SAM's financial models by downloading the spreadsheets from the `SAM website <https://sam.nrel.gov/financial-models>`__. Each of the spreadsheets duplicates SAM's cash flow equations using Excel formulas. 
+You can explore the methodology for some of SAM's financial models by downloading the spreadsheets from the `SAM website <https://sam.nlr.gov/financial-models>`__. Each of the spreadsheets duplicates SAM's cash flow equations using Excel formulas. 
 
 For the residential, commercial, and single owner financial models, you can also use the **Send to Excel** button from the :doc:`Cash Flow <../results/cashflow>` on the Results page to export your project's financial inputs to an Excel workbook with the SAM financial model implemented using Excel formulas. 
 
-For more information about the levelized cost of energy (LCOE) and other economic metrics for renewable energy projects, see *Manual for the Economic Evaluation of Energy Efficiency and Renewable Energy Technologies*. (Short 1995) https://docs.nrel.gov/docs/legosti/old/5173.pdf.
+For more information about the levelized cost of energy (LCOE) and other economic metrics for renewable energy projects, see *Manual for the Economic Evaluation of Energy Efficiency and Renewable Energy Technologies*. (Short 1995) https://docs.nlr.gov/docs/legosti/old/5173.pdf.

@@ -20,7 +20,7 @@ SAM calculates the PPA price for each hour by multiplying the Year 1 :doc:`PPA p
 .. note:: When you click **Apply values from library**, SAM replaces the TOD data with data from the library. If you are using your own TOD data, you can use the **Save data to file** button at the bottom of the Time of Delivery Factors page to save your data.
 
 **Download forecast price data from Cambium**
-  If you do not have time series price data for your analysis, you can download hourly marginal cost data for modeled futures of the U.S. electricity sector from the `NREL Scenario Viewer <https://scenarioviewer.nrel.gov/>`__  . SAM runs the Cambium Time Series Prices :doc:`macro <../reference/macros>`, which prompts you to choose from the available price data, and then automatically sets the following inputs:
+  If you do not have time series price data for your analysis, you can download hourly marginal cost data for modeled futures of the U.S. electricity sector from the `NLR Scenario Viewer <https://scenarioviewer.nlr.gov/>`__  . SAM runs the Cambium Time Series Prices :doc:`macro <../reference/macros>`, which prompts you to choose from the available price data, and then automatically sets the following inputs:
 
 * Chooses the **Specify PPA price** option.
 
@@ -84,7 +84,7 @@ The library is stored as a CSV file in the libraries folder of your SAM installa
   This is a fictitious schedule representing a basic "duck curve" shape with three TOD periods for a baseline night-time prices, peak evening prices, and low daytime prices.
 
 **Generic Low Carbon Duck Curve**
-  This schedule is based on data from an NREL California low carbon grid study for 2030 assuming 50% of the state's electricity generation is from renewable energy sources. See Brinkman, G.; Jorgenson, J. (2016) Low carbon grid study: Analysis of a 50% emission reduction in California. National Renewable Energy Laboratory. NREL/TP-6A20-64884. (`PDF 2.2 MB <https://www.nrel.gov/docs/fy16osti/64884.pdf>`__  )
+  This schedule is based on data from an NLR California low carbon grid study for 2030 assuming 50% of the state's electricity generation is from renewable energy sources. See Brinkman, G.; Jorgenson, J. (2016) Low carbon grid study: Analysis of a 50% emission reduction in California. National Renewable Energy Laboratory. NREL/TP-6A20-64884. (`PDF 2.2 MB <https://www.nlr.gov/docs/fy16osti/64884.pdf>`__  )
 
 **California PUC Advice Letter Data**
   For the 2015 and 2016 data in the library, the factors are from the following California Public Utilities Commission `Renewable Auction Mechanism Program <https://www.cpuc.ca.gov/industries-and-topics/electrical-energy/electric-power-procurement/rps/rps-procurement-programs/rps-renewable-auction-mechanism>`__ advice letters:

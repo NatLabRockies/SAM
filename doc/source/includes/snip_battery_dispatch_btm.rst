@@ -67,7 +67,7 @@ The peak shaving dispatch options attempt to discharge the battery during times 
 
 Peak shaving discharges the battery each day to reduce that day's peak load. This results in more battery cycling than would result from a dispatch strategy that discharges the battery once a month to reduce the peak load.
 
-For a detailed description of the behind-the-meter peak shaving dispatch algorithm, see DiOrio, N. (2017). An Overview of the Automated Dispatch Controller Algorithms in SAM. NREL/TP-6A20-68614. (`PDF 770 KB <https://www.nrel.gov/docs/fy18osti/68614.pdf>`__)
+For a detailed description of the behind-the-meter peak shaving dispatch algorithm, see DiOrio, N. (2017). An Overview of the Automated Dispatch Controller Algorithms in SAM. NREL/TP-6A20-68614. (`PDF 770 KB <https://www.nlr.gov/docs/fy18osti/68614.pdf>`__)
 
 Peak Shaving Option
 ...................
@@ -205,7 +205,7 @@ The retail rate dispatch option operates the battery to minimize the electricity
 
 * Cost of future battery replacements
 
-The original implementation of the retail rate dispatch option is described (as "price signal forecast") in Mirletz, B.; Guittet, D. (2021). Heuristic Dispatch Based on Price Signals for Behind-the-Meter PV-Battery Systems in the System Advisor Model. NREL/CP-7A40-79575. (`PDF 2.2 MB <https://www.nrel.gov/docs/fy21osti/79575.pdf>`__)
+The original implementation of the retail rate dispatch option is described (as "price signal forecast") in Mirletz, B.; Guittet, D. (2021). Heuristic Dispatch Based on Price Signals for Behind-the-Meter PV-Battery Systems in the System Advisor Model. NREL/CP-7A40-79575. (`PDF 2.2 MB <https://www.nlr.gov/docs/fy21osti/79575.pdf>`__)
 
 Generation Forecast Horizon
 ...........................

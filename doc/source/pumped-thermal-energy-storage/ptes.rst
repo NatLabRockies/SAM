@@ -7,5 +7,5 @@ The dispatch model uses a mixed-integer linear program to optimize plant operati
 
 For a detailed description of the PTES model see:
 
-* Neises, T.; Hamilton, B.; Martinek, J.; McTigue, J. (2022) Stand-alone and Hybrid Electric Thermal Energy Storage in the System Advisor Model. 51 pp. NREL/TP-5700-82989. (`PDF 2.3 MB <https://www.nrel.gov/docs/fy22osti/82989.pdf>`__)
+* Neises, T.; Hamilton, B.; Martinek, J.; McTigue, J. (2022) Stand-alone and Hybrid Electric Thermal Energy Storage in the System Advisor Model. 51 pp. NREL/TP-5700-82989. (`PDF 2.3 MB <https://www.nlr.gov/docs/fy22osti/82989.pdf>`__)
 

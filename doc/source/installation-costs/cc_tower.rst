@@ -63,7 +63,7 @@ Power Cycle (CSP Only)
 **Fossil backup cost, $/kWe**
   Cost per electric kilowatt of power block gross capacity to account for the installation of a fossil backup system, including equipment and labor.
 
-.. note:: In versions of SAM released after June 2015, thermocline storage, and fossil backup are not available because they were not incorporated into the new dispatch controller logic at the time of the software release. If you want to use those features, you can use the legacy version SAM 2015.6.30, available on the SAM website `Download page <https://sam.nrel.gov/download>`__.
+.. note:: In versions of SAM released after June 2015, thermocline storage, and fossil backup are not available because they were not incorporated into the new dispatch controller logic at the time of the software release. If you want to use those features, you can use the legacy version SAM 2015.6.30, available on the SAM website `Download page <https://sam.nlr.gov/download>`__.
 
 **Balance of plant cost, $/kWe**
   A cost per electric kilowatt of power cycle gross capacity from the Power Cycle page for expenses related to installation of the balance-of-plant components and controls, and construction of buildings, including labor and equipment.

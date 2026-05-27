@@ -13,6 +13,6 @@ The linear Fresnel model can also be used for compact linear Fresnel reflector (
 
 The direct steam linear Fresnel model is described in the following publications:
 
-* Wagner, M.; Zhu, G. (2012). A Direct-steam Linear Fresnel Performance Model for NREL's System Advisor Model. NREL Conference Paper CP-5500-55044. (`PDF 647 KB <https://docs.nrel.gov/docs/fy12osti/55044.pdf>`__)
+* Wagner, M.; Zhu, G. (2012). A Direct-steam Linear Fresnel Performance Model for NREL's System Advisor Model. NREL Conference Paper CP-5500-55044. (`PDF 647 KB <https://docs.nlr.gov/docs/fy12osti/55044.pdf>`__)
 
-* Wagner, M. (2012). Results and Comparison from the SAM Linear Fresnel Technology Performance Model: Preprint. NREL Conference Paper CP-5500-54758. (`PDF 726 KB <https://docs.nrel.gov/docs/fy12osti/54758.pdf>`__)
+* Wagner, M. (2012). Results and Comparison from the SAM Linear Fresnel Technology Performance Model: Preprint. NREL Conference Paper CP-5500-54758. (`PDF 726 KB <https://docs.nlr.gov/docs/fy12osti/54758.pdf>`__)
