@@ -649,6 +649,19 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
+        "prod_inj_total_cost_calc": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": -999.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "prod_pump_cost_calc": {
             "Version": 4.0,
             "Type": 1.0,
@@ -991,6 +1004,7 @@
         "\t\t${total_surface_equipment_cost_calc} = ssc_var(obj, 'total_surface_equipment_cost');\r",
         "\r",
         "\t\t${sum_prod_inj_total_cost_calc} = ssc_var(obj, 'sum_prod_inj_total_cost');\r",
+        "\t\t${prod_inj_total_cost_calc} = ssc_var(obj, 'prod_inj_total_cost');\r",
         "\r",
         "\t\t${piping_cost_per_well_calc} = ssc_var(obj, 'piping_cost_per_well');\r",
         "\t\t${field_gathering_num_wells_calc} = ssc_var(obj, 'field_gathering_num_wells');\r",
@@ -1056,6 +1070,7 @@
         "\t\t${total_surface_equipment_cost_calc} = fail; \r",
         "\t\t\r",
         "\t\t${sum_prod_inj_total_cost_calc} = fail;\r",
+        "\t\t${prod_inj_total_cost_calc} = fail;\r",
         "\t\t\r",
         "\t\t${piping_cost_per_well_calc} = fail;\r",
         "\t\t${field_gathering_num_wells_calc} = fail;\r",
