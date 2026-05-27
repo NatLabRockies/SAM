@@ -519,6 +519,32 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
+        "inj_total_cost_calc": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": -999.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "inj_well_cost_calc": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": -999.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "is_success_auto_exec": {
             "Version": 4.0,
             "Type": 1.0,
@@ -637,6 +663,32 @@
             "sscVariableValue": ""
         },
         "prod_pump_cost_per_well_calc": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": -999.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "prod_total_cost_calc": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": -999.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "prod_well_cost_calc": {
             "Version": 4.0,
             "Type": 1.0,
             "Label": "",
@@ -818,6 +870,19 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
+        "total_drilling_cost_calc": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": -999.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "total_gathering_cost_calc": {
             "Version": 4.0,
             "Type": 1.0,
@@ -922,6 +987,12 @@
         "\t\t${conf_total_cost_calc} = ssc_var(obj, 'conf_total_cost');\r",
         "\t\t${conf_drilling_cost_calc} = ssc_var(obj, 'conf_drilling_cost');\r",
         "\r",
+        "\t\t${prod_well_cost_calc} = ssc_var(obj, 'prod_well_cost');\r",
+        "\t\t${prod_total_cost_calc} = ssc_var(obj, 'prod_total_cost');\r",
+        "\t\t${inj_well_cost_calc} = ssc_var(obj, 'inj_well_cost');\r",
+        "\t\t${inj_total_cost_calc} = ssc_var(obj, 'inj_total_cost');\r",
+        "\t\t${total_drilling_cost_calc} = ssc_var(obj, 'total_drilling_cost');\r",
+        "\r",
         "\r",
         "\t}\r",
         "\telse{\r",
@@ -978,6 +1049,12 @@
         "\t\t${expl_drilling_cost_calc} = fail;\r",
         "\t\t${conf_total_cost_calc} = fail;\r",
         "\t\t${conf_drilling_cost_calc} = fail;\r",
+        "\t\t\r",
+        "\t\t${prod_well_cost_calc} = fail;\r",
+        "\t\t${prod_total_cost_calc} = fail;\r",
+        "\t\t${inj_well_cost_calc} = fail;\r",
+        "\t\t${inj_total_cost_calc} = fail;\r",
+        "\t\t${total_drilling_cost_calc} = fail;\r",
         "\t}\r",
         "\t\r",
         "};"
