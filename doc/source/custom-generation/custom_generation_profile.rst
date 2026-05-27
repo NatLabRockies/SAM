@@ -48,7 +48,7 @@ The custom generation profile model provides two overall options for describing 
 **Nameplate capacity, kWac**
   The system's nameplate electrical capacity in electric kilowatts.
 
-  If your analysis involves a financial model, SAM uses the nameplate capacity to calculate any capacity-based costs that you specify in $/W on the :doc:`Installation costs <../installation-costs/cc_custom_generation>`   and :doc:`Operating costs <../operating-costs/oc_operating>` pages and any capacity-based incentives on the :doc:`Incentives <../incentives-and-depreciation/incentives>`   page. 
+  If your analysis involves a financial model, SAM uses the nameplate capacity to calculate any capacity-based costs that you specify in $/W on the :doc:`Installation costs <../installation-costs/cc_custom_generation>`   and :doc:`Operating costs <../operating-costs/oc_operating>` pages and any capacity-based incentives on the :doc:`Incentives <../incentives-and-depreciation/cash_incentives>`   page. 
 
   It also uses the nameplate capacity to calculate the capacity factor when you import power generation data as input.
 

@@ -1,9 +1,7 @@
 Cash Incentives
 ===============
 
-The Incentives page allows you to define the parameters for the following types of tax credits and cash incentives.
-
-
+The Cash Incentives page allows you to define the parameters for the incentives that are treated as a cash payment to the project. Examples of tax incentives are state and local grants and renewable energy certificates (RECs). A cash incentive may be a one time payment or a recurring annual payment.
 
 A cash incentive is an amount paid to the project that contributes to the project's annual cash flow:
 
@@ -15,7 +13,7 @@ A cash incentive is an amount paid to the project that contributes to the projec
 
 After running a simulation, you can display incentive amounts in the project :doc:`cash flow <../results/cashflow>` and in results :doc:`graphs <../results/graphs>` and :doc:`tables <../results/data>`.
 
-.. note:: You can also model projects that qualify for an accelerated depreciation tax benefit using options on the :doc:`Depreciation <depreciation>` page.
+.. note:: See :doc:`depreciation` for information about investment tax credits, production tax credits, and depreciation.
 
 Investment Based Incentive (IBI)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -28,7 +26,7 @@ Note that if you specify two incentives from the same source (federal, state, ut
 
 For the Residential and Commercial financial models, you can see the effect of the IBI in the after-tax :doc:`cash flow <../results/cashflow>` for Year 0. Note that if the project is financed with 100% debt, the IBI reduces the size of debt, but is not visible because the Year 0 cash flow is zero.
 
-For the Single Owner and other front-of-meter financial models the effect of the IBI is shown in the Investing Activities section of the :doc:`cash flow <../results/cashflow>`.
+For the Single Owner and other front-of-meter financial models, the effect of the IBI is shown in the Investing Activities section of the :doc:`cash flow <../results/cashflow>`.
 
 **Amount, $**
   The fixed dollar amount of the incentive. A zero indicates no incentive.
@@ -54,7 +52,7 @@ The check boxes in the Taxable Incentive and Reduces Depreciation and ITC Bases 
 **Reduces Depreciation and ITC Basis**
   Determines whether the incentive reduces the basis used to calculate depreciation for commercial and PPA projects, and whether it reduces the basis used to calculate the ITC amount for projects with an investment tax credit.
 
-  The options only apply to projects with one or more ITCs specified on the :doc:`Tax Incentives <depreciation>`   page. 
+  The options only apply to projects with one or more ITCs specified on the :doc:`tax_credits_depreciation` page. 
 
   When you check **Reduces Depreciation and ITC Basis** for an incentive, SAM subtracts the amount of the IBI from the depreciation and ITC bases.
 
@@ -81,7 +79,7 @@ A capacity-based incentive (CBI) is a payment to the project in Year One of the 
 
 For the Residential and Commercial financial models, you can see the effect of the CBI in the after-tax :doc:`cash flow <../results/cashflow>` for Year 0. Note that if the project is financed with 100% debt, the CBI reduces the size of debt, but is not visible because the Year 0 cash flow is zero.
 
-For the Single Owner and other front-of-meter financial models the effect of the CBi is shown in the Investing Activities section of the :doc:`cash flow <../results/cashflow>`.
+For the Single Owner and other front-of-meter financial models the effect of the CBI is shown in the Investing Activities section of the :doc:`cash flow <../results/cashflow>`.
 
 Check an option for each capacity based incentive that applies to the project, and enter values to specify the credit amount, percentage, term, and annual escalation rate as applicable.
 
@@ -101,12 +99,12 @@ The check boxes in the Taxable Incentive and Reduces Depreciation and ITC Bases 
 
   When you check a Taxable Incentives check box for an incentive, SAM multiplies the applicable federal and state tax rate by the incentive amount and adds it to the income tax amount in the appropriate years of the project :doc:`cash flow <../results/cashflow>`  .
 
-  The state and federal tax rates are inputs on the :doc:`Financial Parameters <../financial-parameters/fin_overview>`   page.
+  The state and federal tax rates are inputs on the :doc:`Financial Parameters <../financial-parameters/fin_overview>` page.
 
 **Reduces Depreciation and ITC Basis**
   Determines whether the incentive reduces the basis used to calculate depreciation for commercial and PPA projects, and whether it reduces the basis used to calculate the ITC amount for projects with an investment tax credit.
 
-  The options only apply to projects with one or more ITCs specified on the :doc:`Tax Incentives <depreciation>`   page. 
+  The options only apply to projects with one or more ITCs specified on the :doc:`tax_credits_depreciation` page. 
 
   When you check **Reduces Depreciation and ITC Basis** for an incentive, SAM subtracts the amount of the CBI from the ITC and depreciation bases.
 
@@ -119,7 +117,7 @@ Production Based Incentive (PBI)
 
 A production-based incentive (PBI) is a cash payment to the project specified as a dollar amount per kilowatt-hour of annual electric output.
 
-.. note:: For the :ref:`Single Owner <so-debtservice>` and :ref:`Leveraged Partnership Flip <lpf-projecttermdebt>` financial models, you can specify whether the PBI payments are available for debt service.
+.. note:: For the :ref:`Single Owner <so-debtservice>` and :ref:`Leveraged Partnership Flip <lpf-projecttermdebt>` and other financial model with debt, you can specify whether the PBI payments are available for debt service.
 
 For the Residential and Commercial financial models the PBI increases the project's after-tax cash flow.
 
@@ -150,8 +148,8 @@ The check boxes in the Taxable Incentive column determine whether each PBI quali
 
   The state and federal tax rates are inputs on the :doc:`Financial Parameters <../financial-parameters/fin_overview>`   page.
 
-PBI and  Debt Service
-.....................
+PBI and Debt Service
+....................
 
 For financial models with debt, you can specify whether the PBI is available for debt service. If the PBI is available for debt service, SAM includes it in the total revenue as taxable income, otherwise it is included in the total pre-tax cash flow as part of the cash flow from from operating activities.
 
@@ -174,4 +172,3 @@ By default, you enter the PBI as a single value. The blue "Value" label on the b
 To specify a PBI using an annual schedule:
 
 .. include:: ../includes/snip_annual_values.rst
-

@@ -34,7 +34,7 @@ Total Generation Capacity
 The total nameplate capacity of the hybrid system, calculated as the sum of nameplate capacities of subsystems included in the hybrid system.
 
 **Hybrid system capacity, kWac**
-  The nameplate capacity of the hybrid system. Used for operation and maintenance costs specified in $/kW-year on the :doc:`Hybrid System costs <hybrid_system_costs>`   page, and to calculate capacity-based incentives on the :doc:`Incentives <../incentives-and-depreciation/incentives>`   page.
+  The nameplate capacity of the hybrid system. Used for operation and maintenance costs specified in $/kW-year on the :doc:`Hybrid System costs <hybrid_system_costs>`   page, and to calculate capacity-based incentives on the :doc:`Incentives <../incentives-and-depreciation/cash_incentives>`   page.
 
 Storage Capacity
 ................

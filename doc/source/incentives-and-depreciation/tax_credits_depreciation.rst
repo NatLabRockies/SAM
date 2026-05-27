@@ -1,7 +1,7 @@
 Tax Credits and Depreciation
 ============================
 
-A tax credit is an amount that is deducted from the project's income tax:
+A tax credit is an amount that is deducted from the project's income tax. An investment tax credit (ITC) reduces the project's tax liability in Year One of the cash flow. A production tax credit (PTC) reduces tax liability in years that the project generates power:
 
 * :ref:`Investment tax credits <itc>` (ITC)
 
@@ -12,7 +12,7 @@ Production Tax Credit (PTC)
 
 .. _ptc:
 
-A production tax credit (PTC) reduces the project's annual tax liability in Year One of the cash flow and subsequent years up to and including the year specified in the term variable. The PTC is a dollar amount per unit of annual electric (or thermal) output. If you specify an escalation rate, SAM increases the annual tax credit amount in years 2 and later in the cash flow by a percentage of the previous year's credit amount.
+A production tax credit (PTC) reduces the project's annual tax liability starting in Year One of the cash flow and each subsequent year up to and including the year specified in the term variable. The PTC is a dollar amount per unit of annual electric (or thermal) output. If you specify an escalation rate, SAM increases the annual tax credit amount in years 2 and later in the cash flow by a percentage of the previous year's credit amount.
 
 To see the effect of the PTC on the :doc:`cash flow <../results/cashflow>`, for the Residential and Commercial financial models, see the federal and state income sections of the cash flow. For the Single Owner and other front-of-meter financial models, see the After-tax Returns section of the cash flow. For the calculated PTC amounts, see the Tax Credits section of the project cash flow.
 
@@ -49,7 +49,11 @@ Investment Tax Credit (ITC)
 
 .. _itc:
 
-An investment tax credit (ITC) reduces the project's annual tax liability, and is calculated based on the project's initial investment cost. SAM allows the ITC to be expressed either as a fixed amount or as a percentage of the project investment cost with a maximum limit.
+An investment tax credit (ITC) reduces the project's tax liability in Year One of the project cash flow. It is calculated based on the portion of the project's initial investment cost that qualifies for the ITC.
+
+You can specify the ITC as a fixed amount, or as a percentage of the ITC qualifying cost.
+
+In the United States, for projects that qualify for accelerated depreciation, the ITC amount typically reduces the basis used to calculate depreciation for federal tax purposes and for most states.
 
 To see the effect of the ITC on the :doc:`cash flow <../results/cashflow>`, for the Residential and Commercial financial models, see the federal and state income sections of the cash flow. For the Single Owner and other front-of-meter financial models, see the After-tax Returns section of the cash flow. For the calculated ITC amounts, see the Tax Credits section of the project cash flow.
 
@@ -57,19 +61,18 @@ To see the effect of the ITC on the :doc:`cash flow <../results/cashflow>`, for 
   The fixed dollar amount of the tax credit. A value of zero indicates no tax credit.
 
 **Percentage, %**
-  The amount of the tax credit expressed as a percentage. A value of zero indicates no tax credit.
+  The amount of the tax credit expressed as a percentage of the ITC qualifying cost. A value of zero indicates no tax credit.
 
-  For the residential and commercial models, SAM applies the ITC percentage to the total installed cost.
+..
+  .. note:: If you want to model a situation where the percentage applies to a different value, you can either modify the ITC percentage accordingly, or calculate the ITC amount outside of SAM and enter it as a fixed amount. For example, for a project with a $10,000 cost where 95% of this cost is eligible for a 30% ITC, you could either enter an ITC percentage of 95% × 35% = 28.5%, or an ITC amount of 30% × 95% × $10,000 = $2,850.
 
-.. note:: If you want to model a situation where the percentage applies to a different value, you can either modify the ITC percentage accordingly, or calculate the ITC amount outside of SAM and enter it as a fixed amount. For example, for a project with a $10,000 cost where 95% of this cost is eligible for a 30% ITC, you could either enter an ITC percentage of 95% × 35% = 28.5%, or an ITC amount of 30% × 95% × $10,000 = $2,850.
-
-For the PPA, Community Solar, Merchant Plant, and Third Party Ownership Host / Developer models, the ITC percentage applies to the portion of each depreciation class that you specify as qualifying for the ITC on the :doc:`Depreciation <depreciation>` page. See the ITC Qualifying costs column in the Depreciation and ITC table table in the project :doc:`cash flow <../results/cashflow>`. By default, the ITC percentage applies only to the basis for the portion of project costs that qualifies for 5-yr MACRS depreciation. For example, for a project with qualifying costs of $1,000,000, ITC percentage of 30%, and 90% of the depreciation basis qualifies for the ITC, the ITC amount would be $1,000,000 × 30% × 90% = $270,000.
+.. For all financial models except Residential, the ITC percentage applies to the the portion of each depreciation class that you specify as qualifying for the ITC on the :doc:`Depreciation <depreciation>` page. See the ITC Qualifying costs column in the Depreciation and ITC table table in the project :doc:`cash flow <../results/cashflow>`. By default, the ITC percentage applies only to the basis for the portion of project costs that qualifies for 5-yr MACRS depreciation. For example, for a project with qualifying costs of $1,000,000, ITC percentage of 30%, and 90% of the depreciation basis qualifies for the ITC, the ITC amount would be $1,000,000 × 30% × 90% = $270,000.
 
 **Maximum, $**
   The upper limit of the tax credit in dollars. For tax credits with no limits, type the value 1e+038.
 
 **Reduces Depreciation Basis**
-  Available for non-residential projects when one of the depreciation options is active on the :doc:`Depreciation <../financial-parameters/fin_residential>`   page. 
+  Available for non-residential projects.
 
   The check boxes determine whether the basis used to calculate federal depreciation, state depreciation, or both should be reduced by the tax credit amount. When you check the box for an ITC, SAM reduces the depreciable basis by 50% of the ITC amount as specified by U.S. Internal Revenue Service rules.
 
@@ -90,11 +93,116 @@ To specify a ITC using an annual schedule:
 
 .. include:: ../includes/snip_annual_values.rst
 
-Depreciation for the Commercial Model
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. include:: ../includes/snip_financing_depreciation_basic.rst
+ITC Qualification Options
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Depreciation for PPA Financial Models
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. include:: ../includes/snip_financing_depreciation_adv.rst
+SAM provides two options for determining the portion of project costs that qualify for the ITC. The **Determine ITC qualification from system components** option makes it possible to include only electric battery storage equipment installation costs in the ITC qualifying cost. The **Determine ITC qualification from depreciation class allocations** determines the ITC qualifying cost from depreciation class allocations and was the only available option for SAM 2025.4.16 and earlier versions.
+
+.. notes:: 
+    
+   The current implementation of the ITC qualification from system components option only works for systems with electric battery storage equipment. If you choose this option for a system without electric battery storage, the ITC qualifying cost is based on the total installed cost.
+
+   The ITC qualification options determine what portion of the total installed cost on the Installation Costs page qualifies for state and federal ITC. The federal and state ITC amounts in the project cash flow include other project costs from the Financial Parameters page, including debt-related costs, construction financing cost, and the cost of funding reserves.
+
+**Determine ITC qualification from system components**
+  Use this option when only electric battery storage equipment costs qualify for the ITC for standalone battery storage, PV-Battery, or hybrid systems with battery storage.
+
+  The **Non-storage installed cost** is the sum of all costs on the Installation Costs page except battery-related costs. The percentage is of the total installed cost on the Installation Costs page. For systems with no battery storage, non-storage installed cost is the same as total installed cost.
+
+  The **Battery storage installed cost** is the sum of battery related costs on the Installation Costs page: Battery direct cost specified in $/kWh and $/kW of battery DC capacity, battery indirect cost specified as a percent of indirect costs, and portion of sales tax that applies to battery costs. The percentage is of the total installed cost on the Installation Costs page.
+
+  For **Qualifies for ITC**, check the box for each cost (non-storage or battery storage) that qualifies for the ITC for both federal and state tax purposes.
+
+**Determine ITC qualification from depreciation class allocations**
+  Use this option to determine ITC qualifying costs from depreciation class allocations.
+
+  For this option, use the inputs under "Depreciation Basis and Allocation" to determine ITC qualifying costs. **Non-storage installed cost**, **Battery storage installed cost**, and **Qualifies for ITC** check boxes are disabled.
+
+
+Depreciation Basis and Allocation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The depreciation basis and allocations options allow you to specify how SAM calculates depreciation amounts, and to specify an optional bonus depreciation.
+
+The depreciation basis is the **Total depreciation basis prior to allocation** output variable. It is the sum of the total installed cost and any financing costs that apply to the project, including debt-related costs, construction financing cost, and the cost of funding reserves.
+
+The depreciation amount for each class is the product of the total depreciation basis prior to allocation and the allocation percentage for that class.
+
+The sum of allocation percentages may be less than 100% to account for situations where the total depreciation basis prior to allocation includes non-depreciable assets or costs. In this case, the total amount allocated for depreciation is less than the total depreciation basis prior to allocation. See the **Gross Amount Allocated** column in the Depreciation and ITC table in the project :doc:`cash flow <../results/cashflow>`.
+
+For projects with the Investment Tax Credit (ITC), when you check the **Reduces Depreciation Basis** check box for the ITC the :doc:`Incentives <../incentives-and-depreciation/cash_incentives>` page, SAM reduces the depreciation basis by 50% of the ITC amount as required by U.S. Internal Revenue Service rules.
+
+SAM makes the following simplifying assumptions:
+
+* To represent depreciation of assets with different classes or service lives, you can specify an allocation percentage for up to six different depreciation methods.
+
+* State and federal depreciation bases are the same, except for bonus depreciation.
+
+* Investment-based incentives and capacity-based incentives reduce the depreciation basis proportionally.
+
+Depreciation Basis for ITC Qualifying Cost from System Components
+.................................................................
+
+These options are available for the **Determine ITC qualification from system components** option under "ITC Qualification Options."" They are disabled for the **Determine ITC qualification from depreciation class allocations**.
+
+**Use federal ITC qualifying cost as depreciation basis**
+  The depreciation basis is the same as the federal ITC qualfying cost shown under **Qualifies for ITC** under "ITC Qualifying Options."
+
+**Use state ITC qualifying cost as depreciation basis**
+  The depreciation basis is the same as the state ITC qualfying cost shown under **Qualifies for ITC** under "ITC Qualifying Options."
+
+**Depreciation class for ITC qualifying costs**
+  Choose the depreciation class that applies to the ITC qualifying costs shown under "ITC Qualification Options." If ITC qualifying costs are not allocated to a depreciation class, choose **Non-depreciable** from the list.
+  
+  If you chose to use federal ITC qualifying costs as the depreciation basis, at least one of the **Federal** check boxes must be checked for **Qualifies for ITC** under "ITC Qualification Options". Similarly, if you chose to use state ITC qualifying costs as the depreciation basis, check the appropriate **State** check boxes.
+
+**Depreciation class for non-ITC qualifying costs**
+  Choose the depreciation class that applies to costs that do not qualify to the ITC. If non-ITC qualifying costs are not allocated to a depreciation class, choose **Non-depreciable** from the list.
+
+.. note:: If your project qualifies for bonus depreciation, check the appropriate boxes for **Qualifies for Bonus Depreciation** under "Depreciation Class Allocations and Bonus Depreciation." See below for details.
+
+Depreciation Class Allocations and Bonus Depreciation
+.....................................................
+
+These options are available for the **Determine ITC qualification from depreciation class allocations** option under "ITC Qualification Options."" They are disabled for the **Determine ITC qualification from system components**.
+
+**Depreciation Classes**
+  Each row in the Depreciation Classes box represents a recovery period (5, 15, 20, or 39 years) and depreciation method (MACRS or Straight Line) based on the guidelines in the United States tax code. See U.S. Internal Revenue Service Publication 946 (https://www.irs.gov/pub/irs-pdf/p946.pdf) for details. 
+
+  The following table shows the depreciation percentage by year for each depreciation class:
+
+  .. image:: /images/TBL_DepreciationClasses.png
+     :align: center
+     :alt: TBL_DepreciationClasses.png
+
+  Each depreciation class has an associated value or set of check boxes listed under Federal and State Allocations, Bonus Depreciation, and ITC Qualification.
+
+  **Custom Depreciation Schedules**
+
+  For projects outside of the U.S., or for analyses involving depreciation methods other than IRS methods, you can specify a custom depreciation schedule. To specify a custom depreciation schedule, click **Edit**, and enter a percentage for each year in the depreciation schedule table. (Enter values in the table as percentages, not decimals: For example type '25' for 25%.)
+
+**Allocation Inputs**
+  For each depreciation class, specify an allocation. SAM assumes that the same depreciation method and allocations apply to both federal and state taxes.
+
+  SAM assumes the half-year convention for all depreciation methods.
+
+  To model a project with no depreciation, enter zero for all depreciation methods.
+
+**Qualifies for ITC**
+  Check the box for each depreciation allocation that qualifies for investment tax credits (ITC). For example, if you check the box for 5-yr MACRS, and the 5-yr MACRS allocation is 90%, then the ITC basis would be 90% of the total depreciation basis prior to allocation.
+
+**Allocations**
+  These are the depreciation class allocations that SAM uses for cash flow calculations.
+
+  If you chose **Determine ITC qualification from system components** under "ITC Qualifying Options," these percentages are determined from the **Depreciation Basis for ITC Qualifying Cost from System Components** options.
+
+  If you chose **Determine ITC qualification from depreciation class allocations** under "ITC Qualifying Options," these percentages are the values you entered under **Allocation Inputs**.
+
+**Qualifies for Bonus Depreciation**
+  The bonus depreciation applies in Year One as a percentage of the allocation for each depreciaion class that qualifies.
+
+  Specify a percentage and check the box for each depreciation allocation that qualifies for the bonus depreciation.
+
+  For example, for a federal bonus depreciation that is 100% of the 5-yr MACRS depreciation class, if you specified the following depreciation allocations: 80% 5-yr MACRS, 1.5% 15-yr MACRS, and 3% 15-yr Straight Line, you would enter 100% for **Federal**, check the **5-yr MACRS** box, and clear the remaining boxes.
+
 
