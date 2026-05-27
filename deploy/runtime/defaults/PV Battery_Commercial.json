@@ -18401,7 +18401,7 @@
     "batt_initial_SOC": 50.0,
     "batt_inverter_efficiency_cutoff": 90.0,
     "batt_itc_basis_cost": 484498.714707,
-    "batt_itc_basis_cost_fed_include": 0.0,
+    "batt_itc_basis_cost_fed_include": 1.0,
     "batt_itc_basis_cost_sta_include": 0.0,
     "batt_itc_basis_percent": 33.68365210696558,
     "batt_life_excl": 0.0,
@@ -55137,27 +55137,27 @@
             2.0,
             484498.714707,
             33.68365210696558,
-            0.0,
+            1.0,
             0.0,
             0.0
         ]
     ],
-    "depr_bonus_fed": 0.0,
+    "depr_bonus_fed": 100.0,
     "depr_bonus_fed_custom": 0.0,
-    "depr_bonus_fed_macrs_15": 0.0,
+    "depr_bonus_fed_macrs_15": 1.0,
     "depr_bonus_fed_macrs_5": 1.0,
-    "depr_bonus_fed_sl_15": 0.0,
-    "depr_bonus_fed_sl_20": 0.0,
+    "depr_bonus_fed_sl_15": 1.0,
+    "depr_bonus_fed_sl_20": 1.0,
     "depr_bonus_fed_sl_39": 0.0,
-    "depr_bonus_fed_sl_5": 0.0,
-    "depr_bonus_sta": 0.0,
+    "depr_bonus_fed_sl_5": 1.0,
+    "depr_bonus_sta": 100.0,
     "depr_bonus_sta_custom": 0.0,
-    "depr_bonus_sta_macrs_15": 0.0,
-    "depr_bonus_sta_macrs_5": 0.0,
-    "depr_bonus_sta_sl_15": 0.0,
-    "depr_bonus_sta_sl_20": 0.0,
+    "depr_bonus_sta_macrs_15": 1.0,
+    "depr_bonus_sta_macrs_5": 1.0,
+    "depr_bonus_sta_sl_15": 1.0,
+    "depr_bonus_sta_sl_20": 1.0,
     "depr_bonus_sta_sl_39": 0.0,
-    "depr_bonus_sta_sl_5": 0.0,
+    "depr_bonus_sta_sl_5": 1.0,
     "depr_custom_schedule": [
         0.0
     ],
@@ -66881,12 +66881,12 @@
     "irrad_mode": 0.0,
     "is_advanced": 0.0,
     "is_btm": 1.0,
-    "itc_basis_cost_capex_fed": 0.0,
+    "itc_basis_cost_capex_fed": 484498.714707,
     "itc_basis_cost_capex_sta": 0.0,
-    "itc_basis_cost_percent_fed": 0.0,
+    "itc_basis_cost_percent_fed": 33.68365210696558,
     "itc_basis_cost_percent_sta": 0.0,
     "itc_basis_depreciation_allocation": 0.0,
-    "itc_basis_percent_depr": 0.0,
+    "itc_basis_percent_depr": 33.68365210696558,
     "itc_basis_percent_input": 0.0,
     "itc_fed_amount": [
         0.0
@@ -84509,7 +84509,7 @@
     "nohrsc_year": "",
     "nominal_discount_rate": 9.060000000000003,
     "non_itc_basis_depreciation_allocation": 0.0,
-    "non_itc_basis_percent_depr": 100.0,
+    "non_itc_basis_percent_depr": 66.31634789303442,
     "normalize_to_utility_bill": 0.0,
     "om_batt_capacity_cost": [
         5.25
@@ -84596,7 +84596,7 @@
         0.0
     ],
     "ptc_fed_escal": 0.0,
-    "ptc_fed_term": 10.0,
+    "ptc_fed_term": 0.0,
     "ptc_sta_amount": [
         0.0
     ],

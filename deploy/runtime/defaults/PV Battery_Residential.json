@@ -18475,7 +18475,7 @@
     "batt_initial_SOC": 50.0,
     "batt_inverter_efficiency_cutoff": 90.0,
     "batt_itc_basis_cost": 10144.4167686,
-    "batt_itc_basis_cost_fed_include": 0.0,
+    "batt_itc_basis_cost_fed_include": 1.0,
     "batt_itc_basis_cost_sta_include": 0.0,
     "batt_itc_basis_percent": 24.907818766395967,
     "batt_life_excl": 0.0,
@@ -55166,7 +55166,7 @@
             2.0,
             10144.4167686,
             24.907818766395967,
-            0.0,
+            1.0,
             0.0,
             7.0
         ]
@@ -66888,9 +66888,9 @@
     "irrad_mode": 0.0,
     "is_advanced": 0.0,
     "is_btm": 1.0,
-    "itc_basis_cost_capex_fed": 0.0,
+    "itc_basis_cost_capex_fed": 10144.4167686,
     "itc_basis_cost_capex_sta": 0.0,
-    "itc_basis_cost_percent_fed": 0.0,
+    "itc_basis_cost_percent_fed": 24.907818766395967,
     "itc_basis_cost_percent_sta": 0.0,
     "itc_basis_percent_input": 0.0,
     "itc_fed_amount": [
@@ -84614,7 +84614,7 @@
         0.0
     ],
     "ptc_fed_escal": 0.0,
-    "ptc_fed_term": 10.0,
+    "ptc_fed_term": 0.0,
     "ptc_sta_amount": [
         0.0
     ],
