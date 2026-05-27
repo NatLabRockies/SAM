@@ -61,6 +61,7 @@ version_upgrade{'2026.2.19'} = define() {
 	is_itc_fin = ( cfg.fin == 'Single Owner' || cfg.fin == 'Leveraged Partnership Flip' || cfg.fin == 'All Equity Partnership Flip' || cfg.fin == 'Sale Leaseback' || cfg.fin == 'Merchant Plant' || cfg.fin == 'Community Solar' || cfg.fin == 'Host Developer');
 
 	if (is_itc_fin) {
+		message("Front-of-meter financial models have new options to determine depreciation allocations and ITC qualifying costs.", "error");
 		value('itc_qualification_choice', 1, "ITC qualification and depreciation can now be calculated automatically as a percentage of installation cost. Previous manual depreciation allocations have been retained.");
 		macrs_5 = oldvalue('depr_alloc_macrs_5_percent');
 		macrs_15 = oldvalue('depr_alloc_macrs_15_percent');
@@ -80,6 +81,7 @@ version_upgrade{'2026.2.19'} = define() {
 	}
 	
 	if (cfg.fin == 'Commercial') {
+		message("The Commercial financial model now uses depreciation allocation and ITC qualification inputs to more accurately represent depreciation and tax credit benefits.", "error");
 		value('itc_qualification_choice', 1, "ITC qualification and depreciation can now be calculated automatically as a percentage of installation cost. Previous manual depreciation allocations have been retained.");
 		has_itc_fed = oldvalue('itc_fed_amount') > 0 || oldvalue('itc_fed_percent') > 0;
 		has_itc_sta = oldvalue('itc_sta_amount') > 0 || oldvalue('itc_sta_percent') > 0;
