@@ -132,7 +132,7 @@ The optical efficiency is defined as follows:
 **Incidence Angle Modifier Coefficients**
   Coefficients for a polynomial equation defining the incidence angle modifier equation. 
 
-  Click **Edit data** and to specify coefficients for the equation. The default coefficients are for an equation with three terms, but you can use the table to specify more coefficients.
+  Use the incidence angle modifier coefficients table to specify coefficients for the equation. The default coefficients are for an equation with three terms, but you can use the table to specify more coefficients.
 
   The equation captures the degradation of collector performance as the incidence angle (theta) of the solar radiation increases.
 
