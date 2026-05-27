@@ -48,7 +48,7 @@
                 },
                 "TabOrder": {
                     "Type": 3.0,
-                    "Integer": -1.0
+                    "Integer": 1.0
                 }
             }
         },
@@ -89,7 +89,7 @@
                 },
                 "TabOrder": {
                     "Type": 3.0,
-                    "Integer": -1.0
+                    "Integer": 2.0
                 }
             }
         },
@@ -213,7 +213,7 @@
                 },
                 "TabOrder": {
                     "Type": 3.0,
-                    "Integer": -1.0
+                    "Integer": 3.0
                 }
             }
         },
@@ -346,6 +346,68 @@
                 },
                 "X": {
                     "Type": 3.0,
+                    "Integer": 582.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 105.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 93.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Allocation"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 77"
+                },
+                "X": {
+                    "Type": 3.0,
                     "Integer": 15.0
                 },
                 "Y": {
@@ -406,7 +468,7 @@
             "Type": 1.0,
             "Label": "Depreciation basis choice",
             "Units": "",
-            "Group": "",
+            "Group": "Depreciation Basis for ITC Qualification",
             "IndexLabels": "Use federal ITC qualifying cost as depreciation basis|Use state ITC qualifying cost as depreciation basis",
             "Flags": 3.0,
             "DefaultValue": 0.0,
@@ -417,9 +479,9 @@
         "itc_basis_depreciation_allocation": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "Depreciation class for ITC qualifying costs",
+            "Label": "Depreciation class for ITC qualifying cost",
             "Units": "",
-            "Group": "",
+            "Group": "Depreciation Basis for ITC Qualification",
             "IndexLabels": "5-yr MACRS|15-yr MACRS|5-yr Straight Line|15-yr Straight Line|20-yr Straight Line|39-yr Straight Line|Custom|Non-depreciable",
             "Flags": 2.0,
             "DefaultValue": 0.0,
@@ -430,11 +492,11 @@
         "itc_basis_percent_depr": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "Allocation for depreciation class used for ITC qualifying cost",
             "Units": "%",
-            "Group": "",
+            "Group": "Depreciation Basis for ITC Qualification",
             "IndexLabels": "",
-            "Flags": 8.0,
+            "Flags": 9.0,
             "DefaultValue": 0.0,
             "UIObject": "Numeric",
             "sscVariableName": "",
@@ -443,9 +505,9 @@
         "non_itc_basis_depreciation_allocation": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "Depreciation class for non-ITC qualifying costs",
+            "Label": "Depreciation class for non-ITC qualifying cost",
             "Units": "",
-            "Group": "",
+            "Group": "Depreciation Basis for ITC Qualification",
             "IndexLabels": "",
             "Flags": 2.0,
             "DefaultValue": 0.0,
@@ -456,11 +518,11 @@
         "non_itc_basis_percent_depr": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "Allocation for depreciation class used for non-ITC qualifying cost",
             "Units": "%",
-            "Group": "",
+            "Group": "Depreciation Basis for ITC Qualification",
             "IndexLabels": "",
-            "Flags": 8.0,
+            "Flags": 9.0,
             "DefaultValue": 0.0,
             "UIObject": "Numeric",
             "sscVariableName": "",
