@@ -402,6 +402,19 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
+        "expl_cost_per_well_calc": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": -999.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "expl_drilling_cost_calc": {
             "Version": 4.0,
             "Type": 1.0,
@@ -1030,6 +1043,7 @@
         "\t\t${expl_drilling_cost_calc} = ssc_var(obj, 'expl_drilling_cost');\r",
         "\t\t${conf_total_cost_calc} = ssc_var(obj, 'conf_total_cost');\r",
         "\t\t${conf_drilling_cost_calc} = ssc_var(obj, 'conf_drilling_cost');\r",
+        "\t\t${expl_cost_per_well_calc} = ssc_var(obj, 'expl_cost_per_well');\r",
         "\r",
         "\t\t${prod_well_cost_calc} = ssc_var(obj, 'prod_well_cost');\r",
         "\t\t${prod_total_cost_calc} = ssc_var(obj, 'prod_total_cost');\r",
@@ -1098,6 +1112,7 @@
         "\t\t${expl_drilling_cost_calc} = fail;\r",
         "\t\t${conf_total_cost_calc} = fail;\r",
         "\t\t${conf_drilling_cost_calc} = fail;\r",
+        "\t\t${expl_cost_per_well_calc} = fail;\r",
         "\t\t\r",
         "\t\t${prod_well_cost_calc} = fail;\r",
         "\t\t${prod_total_cost_calc} = fail;\r",
