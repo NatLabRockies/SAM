@@ -10816,19 +10816,6 @@
         }
     },
     "VarDatabase": {
-        "baseline_cost": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Baseline cost",
-            "Units": "$/kW",
-            "Group": "Geothermal Capital Costs",
-            "IndexLabels": "",
-            "Flags": 10.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
         "construction_ppi": {
             "Version": 4.0,
             "Type": 1.0,
@@ -12640,12 +12627,6 @@
         "\treturn ${geotherm.cost.recap}; \r",
         "};\r",
         "\t",
-        "",
-        "",
-        "equations{'baseline_cost'} = define() {",
-        "\treturn ${geotherm.cost.plant_per_kW};",
-        "};",
-        "",
         "equations{ 'system_use_recapitalization' } = define() {",
         "\treturn 1; };",
         "\t",
