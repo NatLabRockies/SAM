@@ -91,6 +91,89 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
+                    "String": "num_confirm_wells_to_production_calc"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 111.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 57.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 90.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
                     "String": "pump_cost_install_calc"
                 },
                 "X": {
@@ -597,6 +680,19 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
+        "num_confirm_wells_to_production_calc": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "adfaf",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": -999.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "num_wells_calc": {
             "Version": 4.0,
             "Type": 1.0,
@@ -652,7 +748,7 @@
         "num_wells_getem_prod_inj_sum_calc": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "nu",
             "Units": "",
             "Group": "",
             "IndexLabels": "",
@@ -1071,6 +1167,7 @@
         "\t\t${conf_total_cost_calc} = ssc_var(obj, 'conf_total_cost');\r",
         "\t\t${conf_drilling_cost_calc} = ssc_var(obj, 'conf_drilling_cost');\r",
         "\t\t${expl_cost_per_well_calc} = ssc_var(obj, 'expl_cost_per_well');\r",
+        "\t\t${num_confirm_wells_to_production_calc} = ssc_var(obj, 'num_confirm_wells_to_production');\r",
         "\r",
         "\t\t${prod_well_cost_calc} = ssc_var(obj, 'prod_well_cost');\r",
         "\t\t${prod_total_cost_calc} = ssc_var(obj, 'prod_total_cost');\r",
@@ -1142,6 +1239,7 @@
         "\t\t${conf_total_cost_calc} = fail;\r",
         "\t\t${conf_drilling_cost_calc} = fail;\r",
         "\t\t${expl_cost_per_well_calc} = fail;\r",
+        "\t\t${num_confirm_wells_to_production_calc} = fail;\r",
         "\t\t\r",
         "\t\t${prod_well_cost_calc} = fail;\r",
         "\t\t${prod_total_cost_calc} = fail;\r",
