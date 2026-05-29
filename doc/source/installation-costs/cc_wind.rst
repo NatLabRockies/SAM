@@ -1,23 +1,23 @@
 Wind Installation costs
 =======================
 
-The Wind Installation costs page allows you to specify the costs of a wind power project. For information about sources of wind cost data, see https://sam.nrel.gov/wind.html.
+The Wind Installation costs page allows you to specify the costs of a wind power project. For information about sources of wind cost data, see https://sam.nlr.gov/wind.html.
 
 .. include:: ../includes/snip_installation_costs.rst
 
 Capital Cost Models
 ~~~~~~~~~~~~~~~~~~~
 
-The capital cost models are implementations of NREL cost models that you can use to estimate turbine and balance-of-system (BOS) costs.
+The capital cost models are implementations of NLR cost models that you can use to estimate turbine and balance-of-system (BOS) costs.
 
 **Land-based installation**
-  Choose this option to apply capital costs from NREL cost models for land-based wind farms.
+  Choose this option to apply capital costs from NLR cost models for land-based wind farms.
 
 **Offshore installation**
   Choose this option to use default values for offshore wind farms.
 
 **Estimate turbine costs now**
-  Replace the **Turbine cost** "cost per kW" value with a value from the NREL cost models, and set the "cost per turbine" and "fixed cost" values to zero. The cost estimates include sales tax, so this also sets the sales tax basis to zero.
+  Replace the **Turbine cost** "cost per kW" value with a value from the NLR cost models, and set the "cost per turbine" and "fixed cost" values to zero. The cost estimates include sales tax, so this also sets the sales tax basis to zero.
 
 **Go to balance-of-system (BOS) cost model inputs**
   Click this button to show the inputs for either the land-based or offshore BOS cost models. To apply a BOS cost from one of the BOS, first populate the inputs for either the land-based or offshore BOS model, and then click **Apply BOS Estimate** to apply the value. 
@@ -68,13 +68,13 @@ For each direct cost category, you can specify the cost in $/kW of wind farm cap
 
 Land-Based Balance of System Cost LandBOSSE Model
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The Land-Based Balance of System cost model is an implementation of NREL's LandBOSSE model costs inputs apply only when you choose the **Land-based installation** option under **Capital Cost Models**. SAM applies the results of the BOS cost model to the **Balance of System Cost** input when you click **Apply BOS Estimate**.
+The Land-Based Balance of System cost model is an implementation of NLR's LandBOSSE model costs inputs apply only when you choose the **Land-based installation** option under **Capital Cost Models**. SAM applies the results of the BOS cost model to the **Balance of System Cost** input when you click **Apply BOS Estimate**.
 
-For information and references about the NREL LandBOSSE model in SAM, see the "Wind Cost Data" section of the `Wind page on the SAM website <https://sam.nrel.gov/wind.html>`__. Those materials include:
+For information and references about the NLR LandBOSSE model in SAM, see the "Wind Cost Data" section of the `Wind page on the SAM website <https://sam.nlr.gov/wind.html>`__. Those materials include:
 
-* Eberle, A.; Roberts, O.; Key, A.; Bhaskar, P.; Dykes, K. (2019) NREL's Balance-of-System Cost Model for Land-Based Wind. National Renewable Energy Laboratory. 62 pp. NREL/TP-6A20-72201. (`PDF 3.0 MB <https://www.nrel.gov/docs/fy19osti/72201.pdf>`__)
+* Eberle, A.; Roberts, O.; Key, A.; Bhaskar, P.; Dykes, K. (2019) NLR's Balance-of-System Cost Model for Land-Based Wind. National Renewable Energy Laboratory. NREL/TP-6A20-72201. (`PDF 3.0 MB <https://www.nlr.gov/docs/fy19osti/72201.pdf>`__)
 
-* LandBOSSE in SAM (Tutorial/Documentation). Description of the LandBOSSE implementation in SAM. (`PDF 603 KB <https://sam.nrel.gov/images/web_page_files/sam-wind-landbosse-tutorial-nov-2020.pdf>`__)
+* LandBOSSE in SAM (Tutorial/Documentation). Description of the LandBOSSE implementation in SAM. (`PDF 603 KB <https://sam.nlr.gov/images/web_page_files/sam-wind-landbosse-tutorial-nov-2020.pdf>`__)
 
 * `LandBOSSE source code on GitHub <https://github.com/wisdem/landbosse>`__.
 
@@ -83,7 +83,7 @@ For information and references about the NREL LandBOSSE model in SAM, see the "W
 Enable LandBOSSE Model
 ~~~~~~~~~~~~~~~~~~~~~~
 
-The first time you check Enable Land-Based Balance of System Cost Model, SAM installs the NREL LandBOSSE BOS cost model. Once the cost model is installed, when you check the box, SAM enables the BOS model inputs.
+The first time you check Enable Land-Based Balance of System Cost Model, SAM installs the NLR LandBOSSE BOS cost model. Once the cost model is installed, when you check the box, SAM enables the BOS model inputs.
 
 .. note:: It may take a few minutes to install the LandBOSSE model. After the model is installed, it takes a few moments to run, so be prepared to wait after clicking **Enable Land-Based Balance of System Cost Model**, **Calculate BOS**, or **Apply BOS Estimate**.
 
@@ -92,7 +92,7 @@ Balance of System Model Inputs
 
 To enable these inputs, click **Enable Land-Based Balance of System Cost Model**.
 
-* For a detailed description of these inputs and instructions for using the LandBOSSE model, see "LandBOSSE in SAM (Tutorial/Documentation)", a description of the LandBOSSE model implementation in SAM. (`PDF 603 KB <https://sam.nrel.gov/images/web_page_files/sam-wind-landbosse-tutorial-nov-2020.pdf>`__)
+* For a detailed description of these inputs and instructions for using the LandBOSSE model, see "LandBOSSE in SAM (Tutorial/Documentation)", a description of the LandBOSSE model implementation in SAM. (`PDF 603 KB <https://sam.nlr.gov/images/web_page_files/sam-wind-landbosse-tutorial-nov-2020.pdf>`__)
 
 **Interconnect voltage, kV**
   The voltage at the interconnection point between the project substation and the interconnecting utility substation.
@@ -155,7 +155,7 @@ After you click **Calculate BOS**, when the LandBOSSE model finishes running, it
 Balance of System Detailed Results
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The detailed results shows the cost breakdown of results from the LandBOSSE model. For details, see "LandBOSSE in SAM (Tutorial/Documentation)", a description of the LandBOSSE model implementation in SAM. (`PDF 603 KB <https://sam.nrel.gov/images/web_page_files/sam-wind-landbosse-tutorial-nov-2020.pdf>`__).
+The detailed results shows the cost breakdown of results from the LandBOSSE model. For details, see "LandBOSSE in SAM (Tutorial/Documentation)", a description of the LandBOSSE model implementation in SAM. (`PDF 603 KB <https://sam.nlr.gov/images/web_page_files/sam-wind-landbosse-tutorial-nov-2020.pdf>`__).
 
 .. _offshorebos:
 
@@ -163,6 +163,6 @@ Offshore Balance of System Cost Model
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The offshore balance-of-system cost model is for a wind farm installed offshore, in a body of water such as coastal ocean waters or lake. The model calculates a value for the **Balance of System** cost input in $/kW based on the data you provide for the detailed costs.
 
-For a description of the model and its inputs, see Maness, M.; Maples, B.; Smith, A.; NREL Offshore Balance-of-System Model. National Renewable Energy Laboratory, NREL/TP-6A20-66874. (`PDF 4.7 MB <https://docs.nrel.gov/docs/fy17osti/66874.pdf>`__).
+For a description of the model and its inputs, see Maness, M.; Maples, B.; Smith, A.; NREL Offshore Balance-of-System Model. National Renewable Energy Laboratory, NREL/TP-6A20-66874. (`PDF 4.7 MB <https://docs.nlr.gov/docs/fy17osti/66874.pdf>`__).
 
 After you specify values for the detailed inputs, click **Apply BOS Estimate** to calculate the BOS cost and automatically apply it to the **Balance of System Cost**.

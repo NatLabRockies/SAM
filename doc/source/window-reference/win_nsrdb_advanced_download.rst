@@ -1,7 +1,7 @@
 NSRDB Advanced Download
 =======================
 
-The NSRDB Download window provides access to the `NREL National Solar Radiation Database (NSRDB) <https://developer.nrel.gov/docs/solar/nsrdb/>`__ for SAM's solar power models. When you submit a query, it lists all NSRDB weather files available for the different NSRDB datasets for the given location.
+The NSRDB Download window provides access to the `NLR National Solar Radiation Database (NSRDB) <https://developer.nlr.gov/docs/solar/nsrdb/>`__ for SAM's solar power models. When you submit a query, it lists all NSRDB weather files available for the different NSRDB datasets for the given location.
 
 To open the Advanced NSRDB Download window:
 
@@ -23,11 +23,11 @@ The advanced download window provides access to the following NSRDB datasets:
 
 * Single-year files with 60-minute data for 2000 - 2014 from the SUNY International Dataset.
 
-Since NREL began producing the PSM data in 2016, it updates the PSM files every year to add data from previous years, so the date range and available TMY and TGY files changes over time. For example, as of late 2020, PSM data was available for 1998 through 2019, and included TMY-2017 and TGY-2017 files processed from the 1998 - 2017 data, and TMY-2018 and TGY-2018 files processed from the 1998 - 2018 data, etc., up to 2019.
+Since NLR began producing the PSM data in 2016, it updates the PSM files every year to add data from previous years, so the date range and available TMY and TGY files changes over time. For example, as of late 2020, PSM data was available for 1998 through 2019, and included TMY-2017 and TGY-2017 files processed from the 1998 - 2017 data, and TMY-2018 and TGY-2018 files processed from the 1998 - 2018 data, etc., up to 2019.
 
-Typical year data is available as typical meteorological year (TMY), typical global horizontal irradiance year (TGY), and typical direct normal irradiance year (TDY). For a discussion of the difference between these files, see Habte (2014) "Temporal and Spatial Comparison of Gridded TMY, TDY, and TGY Data Sets" available from the `SAM website Weather Data Publications page <https://sam.nrel.gov/weather-data/weather-data-publications.html>`__.
+Typical year data is available as typical meteorological year (TMY), typical global horizontal irradiance year (TGY), and typical direct normal irradiance year (TDY). For a discussion of the difference between these files, see Habte (2014) "Temporal and Spatial Comparison of Gridded TMY, TDY, and TGY Data Sets" available from the `SAM website Weather Data Publications page <https://sam.nlr.gov/weather-data/weather-data-publications.html>`__.
 
-.. note:: Legacy NSRDB datasets are not available from the NSRDB web service. You can find links to archived data on the `SAM website Weather Data page <https://sam.nrel.gov/weather-data.html>`__.
+.. note:: Legacy NSRDB datasets are not available from the NSRDB web service. You can find links to archived data on the `SAM website Weather Data page <https://sam.nlr.gov/weather-data.html>`__.
 
 Downloading Data
 ~~~~~~~~~~~~~~~~

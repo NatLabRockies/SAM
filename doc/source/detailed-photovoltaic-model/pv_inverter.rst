@@ -19,7 +19,7 @@ You can choose from four different inverter model options. SAM displays the name
 
 * :ref:`Inverter CEC Coefficient Generator <coefficientgenerator>` generates coefficients for the Sandia inverter model when you have inverter test data.
 
-For a technical description of the inverter model options, see Gilman, P.; Dobos, A.; DiOrio, N.; Freeman, J.; Janzou, S.; Ryberg, D. (2018) SAM Photovoltaic Model Technical Reference Update. 93 pp.; NREL/TP-6A20-67399 available along with other technical documentation from the `SAM website <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__.
+For a technical description of the inverter model options, see Gilman, P.; Dobos, A.; DiOrio, N.; Freeman, J.; Janzou, S.; Ryberg, D. (2018) SAM Photovoltaic Model Technical Reference Update. 93 pp.; NREL/TP-6A20-67399 available along with other technical documentation from the `SAM website <https://sam.nlr.gov/photovoltaic/pv-publications.html>`__.
 
 .. _pv-inverter-sandia:
 
@@ -34,7 +34,7 @@ The Sandia inverter model is described in the following documents:
 
 * On the `PV Performance Modeling Collaborative website <http://pvpmc.org/modeling-steps/dc-to-ac-conversion-2/inverter-efficiency/sandia-inverter-model/>`__
 
-* Gilman, P. et al (2018). SAM Photovoltaic Model Technical Reference. National Renewable Energy Laboratory Update. 59 pp.; NREL/TP-6A20-67399. (Available on the `SAM website <https://sam.nrel.gov/photovoltaic/pv-publications.html>`__.)
+* Gilman, P. et al (2018). SAM Photovoltaic Model Technical Reference. National Renewable Energy Laboratory Update. 59 pp.; NREL/TP-6A20-67399. (Available on the `SAM website <https://sam.nlr.gov/photovoltaic/pv-publications.html>`__.)
 
 The CEC inverter test protocol is described in:
 
@@ -44,7 +44,7 @@ The CEC inverter test protocol is described in:
 
 .. note:: The inverter library stores data from the `California Energy Commission Solar Equipment List Program <https://www.energy.ca.gov/programs-and-topics/topics/renewable-energy/solar-equipment-lists>`__ as of the date of the SAM software release.
 
-   For scripts and data NLR uses to generate the inverter library, see https://github.com/NREL/SAM/tree/develop/samples/CEC%20Module%20and%20Inverter%20Libraries/CEC%20Inverters.
+   For scripts and data NLR uses to generate the inverter library, see https://github.com/NatLabRockies/SAM/tree/develop/samples/CEC%20Module%20and%20Inverter%20Libraries/CEC%20Inverters.
 
    If you represent an inverter manufacturer and would like to add equipment to the list, you should contact the California Energy Commission (CEC).
 

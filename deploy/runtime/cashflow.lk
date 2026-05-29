@@ -499,7 +499,7 @@ function cf_income_tax_savings() // residential, commmercial only
 	cfline( 'STATE INCOME TAX', -1 );
 	cfline( 'cf_sta_taxable_incentive_income',0);
 	cfline( 'cf_deductible_expenses', 0);
-	if ( fin == 'Commercial' ) { cfline( 'cf_sta_depr_sched',3); cfline( 'cf_sta_depreciation', 0,-1); }
+	if ( fin == 'Commercial' ) { cfline( 'cf_stadepr_total', 0,-1); }
 	if ( fin == 'Commercial' || res_loan_type == 1 ) { cfline('cf_debt_payment_interest',0,-1); }
 	cfline( 'cf_sta_taxable_income_less_deductions', 0);
 	cfline( 'state tax credits:',-1,0);
@@ -513,14 +513,9 @@ function cf_income_tax_savings() // residential, commmercial only
 	cfline( '' );
 	cfline( 'FEDERAL INCOME TAX', -1 );
 	cfline( 'cf_fed_taxable_incentive_income',0);
-	if ( fin == 'Commercial' )
-	{
-		cfline( 'cf_fed_depr_sched');
-		cfline( 'cf_fed_depreciation', 0);
-	}
 	cfline( 'cf_deductible_expenses', 0);
 	cfline( 'cf_sta_tax_savings',0);
-	if ( fin == 'Commercial' ) { cfline( 'cf_fed_depr_sched'); cfline( 'cf_fed_depreciation', 0,-1); }
+	if ( fin == 'Commercial' ) { cfline( 'cf_feddepr_total', 0,-1); }
 	if ( fin == 'Commercial' || res_loan_type == 1 ) { cfline('cf_debt_payment_interest',0,-1); }
 	cfline( 'cf_fed_taxable_income_less_deductions', 0);
 	cfline( 'federal tax credits:',-1,0);
@@ -1624,7 +1619,7 @@ function set_land_lease(xl)
 
 function set_rescom(xl)
 {
-
+	fin = financing();
 	N = value('analysis_period');
 	if ( N>100 ) msgbox('The Excel workbook only shows cash flow values for a 100-year analysis period or less. Your analysis is for ' + N + ' years.');
 
@@ -1641,6 +1636,9 @@ function set_rescom(xl)
 	set_om(xl);
 
 	set_incentives(xl);
+	if (fin == 'Commercial' ) {
+		set_depreciation_detailed ( xl );
+	}
 }
 
 function set_taxes_insurance(xl)
@@ -2045,6 +2043,7 @@ cashflow{ 'Commercial' } = define()
 	cf_income_tax_savings();
 	cf_after_tax_cash_flow();
 	cf_incentives();
+	depreciation_tables();
 };
 
 cashflow{ 'Single Owner' } = define()
@@ -2189,8 +2188,7 @@ cashflow_to_excel{ 'Residential' } = define()
 
 	//Variables specific to residential model
 	xl_set( xl, (${mortgage}?'Yes':'No'), 'UseTaxDeductibleInterest');
-	xl_set( xl, 'N/A', 'StateDepreciation');
-	xl_set( xl, 'N/A', 'FederalDepreciation');
+	xl_set( xl, 'No', 'UseTaxDeductableOpEx');
 };
 
 cashflow_to_excel{ 'Commercial' } = define()
@@ -2203,21 +2201,7 @@ cashflow_to_excel{ 'Commercial' } = define()
 
 	//Variables specific to commercial model
 	xl_set( xl, 'Yes', 'UseTaxDeductibleInterest');
-	s = value('depr_sta_type');
-	if (s == 0) state = 'No Depreciation';
-	if (s == 1) state = '5-yr MACRS';
-	if (s == 2) state = 'Straight Line' + value('depr_sta_sl_years') + ' Years';
-	if (s == 3) state = 'Custom (see cash flow)';
-	xl_set( xl, state, 'StateDepreciation'); //show depreciation type in inputs table for reference only
-	f = value('depr_fed_type'); //show depreciation percentages in cash flow for calculations
-	if (f == 0) fed = 'No Depreciation';
-	if (f == 1) fed = '5-yr MACRS';
-	if (f == 2) fed = 'Straight Line' + value('depr_sta_sl_years') + ' Years';
-	if (f == 3) fed = 'Custom (see cash flow)';
-	xl_set( xl, fed, 'FederalDepreciation');
-	xl_set ( xl, output('cf_sta_depr_sched'), 'StateDepreciationSchedule');
-	xl_set ( xl, output('cf_fed_depr_sched'), 'FederalDepreciationSchedule');
-
+	xl_set( xl, 'Yes', 'UseTaxDeductableOpEx');
 };
 
 cashflow_to_excel{ 'Merchant Plant'} = define()

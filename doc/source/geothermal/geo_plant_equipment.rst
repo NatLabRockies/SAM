@@ -4,7 +4,7 @@ Plant and Equipment
 .. note:: This topic is still under development. 
 
 
-.. note:: If you have questions about SAM's geothermal model, please contact `sam.support@nrel.gov <mailto:sam.support@nrel.gov>`__.
+.. note:: If you have questions about SAM's geothermal model, please contact `sam.support@nlr.gov <mailto:sam.support@nlr.gov>`__.
 
 Plant Configuration
 ~~~~~~~~~~~~~~~~~~~

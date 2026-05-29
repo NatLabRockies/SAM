@@ -55,7 +55,7 @@ LK Script notes:
 
 * The LK scripting language is also part of the :doc:`SAM software development kit (SDK) <sdk>`.
 
-* For examples of LK scripts, see `LK Scripts for SAM <https://github.com/NREL/SAM/tree/develop/samples/LK%20Scripts%20for%20SAM>`__ on the SAM GitHub repository.
+* For examples of LK scripts, see `LK Scripts for SAM <https://github.com/NatLabRockies/SAM/tree/develop/samples/LK%20Scripts%20for%20SAM>`__ on the SAM GitHub repository.
 
 To create or open an LK script:
 

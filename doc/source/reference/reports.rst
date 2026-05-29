@@ -21,7 +21,7 @@ The report generator is not available for all configurations. When you try to ge
 
 The report generator uses a report template to generate a report using data from the case that you specify. SAM comes with a set of report templates for some combinations of performance and financial models.
 
-.. note:: The report template editor is not supported in the current version of SAM. If you have requests for items that you would like to appear in reports, please post your request on the SAM Support forum at https://sam.nrel.gov/forum.
+.. note:: The report template editor is not supported in the current version of SAM. If you have requests for items that you would like to appear in reports, please post your request on the SAM Support forum at https://sam.nlr.gov/forum.
 
 To generate a report:
 

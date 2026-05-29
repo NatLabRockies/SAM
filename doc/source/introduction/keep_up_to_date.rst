@@ -1,7 +1,7 @@
 SAM Versions
 ============
 
-NREL releases new SAM versions and updates periodically. You can download the latest version from the SAM website at  https://sam.nrel.gov/download.
+NLR releases new SAM versions and updates periodically. You can download the latest version from the SAM website at  https://sam.nlr.gov/download.
 
 SAM's :doc:`Welcome page <../getting-started/welcome_page>` also displays news from the SAM team, including announcements of new versions.
 
@@ -38,4 +38,4 @@ If a newer version of SAM is available on the SAM website than the version insta
 Legacy Versions
 ~~~~~~~~~~~~~~~
 
-In some cases you may want to use a legacy version of SAM instead of the current version, for example to compare results from older versions, or to use a feature that has been discontinued in the current version. You can download legacy versions from the SAM website at https://sam.nrel.gov/download. See :doc:`Software Installation <../reference/installation>` for more information.
+In some cases you may want to use a legacy version of SAM instead of the current version, for example to compare results from older versions, or to use a feature that has been discontinued in the current version. You can download legacy versions from the SAM website at https://sam.nlr.gov/download. See :doc:`Software Installation <../reference/installation>` for more information.

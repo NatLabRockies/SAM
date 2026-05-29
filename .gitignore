@@ -24,6 +24,8 @@ bld/
 [Oo]bj/
 [Ll]og/
 build/
+doc/build
+doc/source/_build
 cmake-build-export/
 cmake-build-debug/
 cmake-build-release/

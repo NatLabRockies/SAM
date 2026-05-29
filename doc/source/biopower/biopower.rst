@@ -9,4 +9,4 @@ SAM generates performance :doc:`metrics <../results/summary>` such as heat rate,
 
 Dedicated biomass power facilities are generally on the order of 1 – 60 MW, but SAM can evaluate plants of any size.
 
-For a technical description of the biopower model, see Jorgenson, J.; Gilman, P.; Dobos, A. (2011). Technical Manual for the SAM Biomass Power Generation Model. 40 pp.; NREL Report No. TP-6A20-52688. https://docs.nrel.gov/docs/fy11osti/52688.pdf
+For a technical description of the biopower model, see Jorgenson, J.; Gilman, P.; Dobos, A. (2011). Technical Manual for the SAM Biomass Power Generation Model. 40 pp.; NREL Report No. TP-6A20-52688. https://docs.nlr.gov/docs/fy11osti/52688.pdf

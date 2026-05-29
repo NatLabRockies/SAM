@@ -123,7 +123,7 @@ Tax Effect on Equity -- State
 
 The tax effect on equity cash flows are the tax calculations for state income taxes. SAM makes the following state income tax assumptions:
 
-* For the Residential and Commercial financial models, state taxable income is the sum of all incentive payments in a given year that you specify as State taxable on the :doc:`Incentives <../incentives-and-depreciation/incentives>` page.
+* For the Residential and Commercial financial models, state taxable income is the sum of all incentive payments in a given year that you specify as State taxable on the :doc:`Incentives <../incentives-and-depreciation/cash_incentives>` page.
 
 * For the Commercial financial model, income tax paid on the value of energy is accounted for in the after-tax cash flow described below. For the Residential option, income tax is not paid on the value of energy.
 
@@ -138,10 +138,10 @@ The tax effect on equity cash flows are the tax calculations for state income ta
 Depreciation (Commercial Only)
 ..............................
 
-Depreciation applies only to the Commercial financial model, and depends on the depreciation schedule from the :doc:`Depreciation <../incentives-and-depreciation/depreciation>` page.
+Depreciation applies only to the Commercial financial model, and depends on the depreciation schedule from the :doc:`Depreciation <../incentives-and-depreciation/tax_credits_depreciation>` page.
 
 **State Depreciation Schedule**
-  For the Commercial financial model with a depreciation option defined on the :doc:`Depreciation <../incentives-and-depreciation/depreciation>`   page, SAM displays the state depreciation percentage in the State Depreciation Schedule row of the cash flow table. SAM determines the depreciation schedule (percentage and applicable years) based on the options you specify for state depreciation on the Depreciation page.
+  For the Commercial financial model with a depreciation option defined on the :doc:`Depreciation <../incentives-and-depreciation/tax_credits_depreciation>`   page, SAM displays the state depreciation percentage in the State Depreciation Schedule row of the cash flow table. SAM determines the depreciation schedule (percentage and applicable years) based on the options you specify for state depreciation on the Depreciation page.
 
   For the Residential financial model, depreciation does not apply, and SAM displays zeros in the cash flow.
 
@@ -152,11 +152,11 @@ Depreciation applies only to the Commercial financial model, and depends on the 
 
   Where *Depreciation Schedule*   is described above, and the *Net Capital Cost*   is the total installed cost from the :doc:`Installation costs <../installation-costs/installation_costs>`   page less any incentives from the Incentives page that reduce the depreciation basis.
 
-*Basis Reduction*   depends on whether the project includes any investment-based incentives (IBI) or capacity-based incentives (CBI) specified on the :doc:`Incentives <../incentives-and-depreciation/incentives>`   page with checked **State** boxes in the **Reduces Depreciation and ITC Bases** column, or an investment tax credit (ITC) with checked **State** boxes in the **Reduces Depreciation Basis** column. For each IBI, CBI, or ITC with a check mark, SAM subtracts the total incentive amount and fifty percent of the tax credit amount from the total installed cost to calculate the depreciable base:
+*Basis Reduction*   depends on whether the project includes any investment-based incentives (IBI) or capacity-based incentives (CBI) specified on the :doc:`Incentives <../incentives-and-depreciation/cash_incentives>`   page with checked **State** boxes in the **Reduces Depreciation and ITC Bases** column, or an investment tax credit (ITC) with checked **State** boxes in the **Reduces Depreciation Basis** column. For each IBI, CBI, or ITC with a check mark, SAM subtracts the total incentive amount and fifty percent of the tax credit amount from the total installed cost to calculate the depreciable base:
 
 *Depreciation Basis Reduction Year n = ITC × 0.5 + IBI + CBI + PBI*
 
-  Where *ITC*   includes all tax credits that you specified on the :doc:`Incentives <../incentives-and-depreciation/incentives>`   page to reduce the depreciation basis, and *IBI*, *CBI*, and *PBI*   include all incentives you specified to reduce the depreciation basis.
+  Where *ITC*   includes all tax credits that you specified on the :doc:`Incentives <../incentives-and-depreciation/cash_incentives>`   page to reduce the depreciation basis, and *IBI*, *CBI*, and *PBI*   include all incentives you specified to reduce the depreciation basis.
 
   For the Residential financial model, depreciation does not apply, and SAM displays zeros in the cash flow.
 
@@ -237,7 +237,7 @@ Tax Effect on Equity -- Federal
 
 The tax effect on equity cash flows are the tax calculations for federal income taxes. SAM makes the following federal income tax assumptions:
 
-* For the Residential and Commercial financial models, federal taxable income includes any incentive payments that you specify as Federally taxable on the :doc:`Incentives <../incentives-and-depreciation/incentives>` page, and the value of State Tax Savings.
+* For the Residential and Commercial financial models, federal taxable income includes any incentive payments that you specify as Federally taxable on the :doc:`Incentives <../incentives-and-depreciation/cash_incentives>` page, and the value of State Tax Savings.
 
 * For the Commercial financial model, income tax paid on the value of energy is accounted for in the after-tax cash flow described below. For the Residential option, income tax is not paid on the value of energy.
 
@@ -252,10 +252,10 @@ The tax effect on equity cash flows are the tax calculations for federal income 
 Depreciation (Commercial Only)
 ..............................
 
-Depreciation applies only to the Commercial financial model, and depends on the depreciation schedule from the :doc:`Depreciation <../incentives-and-depreciation/depreciation>` page.
+Depreciation applies only to the Commercial financial model, and depends on the depreciation schedule from the :doc:`Depreciation <../incentives-and-depreciation/tax_credits_depreciation>` page.
 
 **Federal Depreciation Schedule**
-  For the Commercial financial model with a depreciation option defined on the :doc:`Depreciation <../incentives-and-depreciation/depreciation>`   page, SAM displays the federal depreciation percentage in the Federal Depreciation Schedule row of the cash flow table. SAM determines the depreciation schedule (percentage and applicable years) based on the options you specify for state depreciation on the Depreciation page.
+  For the Commercial financial model with a depreciation option defined on the :doc:`Depreciation <../incentives-and-depreciation/tax_credits_depreciation>`   page, SAM displays the federal depreciation percentage in the Federal Depreciation Schedule row of the cash flow table. SAM determines the depreciation schedule (percentage and applicable years) based on the options you specify for state depreciation on the Depreciation page.
 
   For the Residential financial model, depreciation does not apply, and SAM displays zeros in the cash flow.
 
@@ -266,11 +266,11 @@ Depreciation applies only to the Commercial financial model, and depends on the 
 
   Where *Depreciation Schedule*   is described above, and the *Total Installed costs*   is from the :doc:`Installation costs <../installation-costs/installation_costs>`   page.
 
-*Basis Reduction*   depends on whether the project includes any investment-based incentives (IBI) or capacity-based incentives (CBI) specified on the :doc:`Incentives <../incentives-and-depreciation/incentives>`   page with checked **Federal** boxes in the **Reduces Depreciation and ITC Bases** column, or an investment tax credit (ITC) on the :doc:`Incentives <../incentives-and-depreciation/incentives>`   page with checked **Federal** boxes in the **Reduces Depreciation Basis** column. For each IBI, CBI, or ITC with a check mark, SAM subtracts the total incentive amount and fifty percent of the tax credit amount from the total installed cost to calculate the depreciable base:
+*Basis Reduction*   depends on whether the project includes any investment-based incentives (IBI) or capacity-based incentives (CBI) specified on the :doc:`Incentives <../incentives-and-depreciation/cash_incentives>`   page with checked **Federal** boxes in the **Reduces Depreciation and ITC Bases** column, or an investment tax credit (ITC) on the :doc:`Incentives <../incentives-and-depreciation/cash_incentives>`   page with checked **Federal** boxes in the **Reduces Depreciation Basis** column. For each IBI, CBI, or ITC with a check mark, SAM subtracts the total incentive amount and fifty percent of the tax credit amount from the total installed cost to calculate the depreciable base:
 
 *Depreciation Basis Reduction Year n = Total ITC × 0.5 + Total IBI + Total CBI + Total PBI*
 
-  Where *ITC*   includes all tax credits that you specified on the :doc:`Incentives <../incentives-and-depreciation/incentives>`   page to reduce the depreciation basis, and *IBI*, *CBI*, and *PBI*   include all incentives you specified to reduce the depreciation basis.
+  Where *ITC*   includes all tax credits that you specified on the :doc:`Incentives <../incentives-and-depreciation/cash_incentives>`   page to reduce the depreciation basis, and *IBI*, *CBI*, and *PBI*   include all incentives you specified to reduce the depreciation basis.
 
   For the Residential financial model, depreciation does not apply, and SAM displays zeros in the cash flow.
 
