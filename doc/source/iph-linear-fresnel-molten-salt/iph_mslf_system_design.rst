@@ -52,7 +52,7 @@ The heat sink parameters describe the process heat application's thermal load.
   Thermal input to the heat sink at design. Together with the target solar multiple, this value determines the receiver design conditions.
 
 **Heat sink thermal power, MMBtu/hr**
-  The heat sink thermal power expressed in MMBtu/hr. This is the value used to calculate the capacity based incentive if one is specified on the :doc:`Incentives <../incentives-and-depreciation/incentives>`   page.
+  The heat sink thermal power expressed in MMBtu/hr. This is the value used to calculate the capacity based incentive if one is specified on the :doc:`Incentives <../incentives-and-depreciation/cash_incentives>`   page.
 
 **Pumping power for HTF through power block, kW/kg/s**
   Electrical power required to circulate the heat transfer fluid.

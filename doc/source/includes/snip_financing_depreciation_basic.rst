@@ -1,7 +1,7 @@
 
 The depreciation inputs represent the decrease in value of project assets over the analysis period. Depreciation reduces federal and state taxable income, shown under *Tax Effect on Equity* in the project :doc:`cash flow <../results/cashflow>`.
 
-For the Commercial financial model, SAM assumes that the depreciation method you choose applies to the entire depreciable basis. For these projects, the depreciable basis in each year of the project cash flow is the total installed cost less any incentives you specify as reducing the depreciation basis on the :doc:`Incentives <../incentives-and-depreciation/incentives>` page:
+For the Commercial financial model, SAM assumes that the depreciation method you choose applies to the entire depreciable basis. For these projects, the depreciable basis in each year of the project cash flow is the total installed cost less any incentives you specify as reducing the depreciation basis on the :doc:`Incentives <../incentives-and-depreciation/cash_incentives>` page:
 
 *Depreciable Basis = Total Installed Cost + Total Construction Financing Cost - ( Total ITC × 0.5 + Total IBI + Total CBI + Total PBI )*
 

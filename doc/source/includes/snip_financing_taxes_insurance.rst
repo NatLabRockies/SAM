@@ -4,7 +4,7 @@
 
   You can specify either a single annual tax rate, or use the :doc:`Edit Schedule <../window-reference/win_edit_data_table_column>`   window to specify a tax rate for each year. The latter option is useful for modeling a tax holiday where the tax rate for the first few years is zero.
 
-  For all projects, taxable income includes income from any incentives marked on the :doc:`Incentives <../incentives-and-depreciation/incentives>`   page as taxable.
+  For all projects, taxable income includes income from any incentives marked on the :doc:`Incentives <../incentives-and-depreciation/cash_incentives>`   page as taxable.
 
   For residential and commercial projects, SAM does not consider the value of electricity saved by the system to be taxable income. For commercial projects, because those savings represent the value of electricity purchases that would have been a tax-deductible operating expense to the commercial entity, SAM does reduce the project cash flow by the amount of federal and state income tax on the value of the electricity. In other words, with the renewable energy system in place, the commercial entity must pay tax on that portion of its income that it would have deducted as an operating expense.
 
