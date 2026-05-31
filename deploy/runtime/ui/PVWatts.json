@@ -256,7 +256,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 471.0
+                    "Integer": 558.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1636,6 +1636,47 @@
                 }
             }
         },
+        "CheckBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "module_is_bifacial"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 354.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 60.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 123.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Module is bifacial"
+                },
+                "State": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                }
+            }
+        },
         "Choice": {
             "Visible": 1.0,
             "ObjectProperties": {
@@ -2458,6 +2499,19 @@
             "Flags": 2.0,
             "DefaultValue": 14.0,
             "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "module_is_bifacial": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Module is bifacial",
+            "Units": " ",
+            "Group": "PVWatts",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 1.0,
+            "UIObject": "CheckBox",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
