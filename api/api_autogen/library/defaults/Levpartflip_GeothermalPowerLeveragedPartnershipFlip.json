@@ -256,8 +256,6 @@
 			"system_capacity": 32813.6
 		},
 		"ElectricityRates": {
-			"en_electricity_rates": 0,
-			"rate_escalation": [0.000000]
 		},
 		"Moratorium": {
 			"loan_moratorium": 0
