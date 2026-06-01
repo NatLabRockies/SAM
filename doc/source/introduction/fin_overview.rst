@@ -20,7 +20,7 @@ In SAM, :doc:`residential <../financial-parameters/fin_residential>` and :doc:`c
 
 For residential and commercial projects, SAM calculates the project's :doc:`levelized cost of energy (LCOE) <../financial-metrics/mtf_lcoe>`, which represents the cost of installing and operating the system, including debt and tax costs, and accounting for incentives. The model also calculates the :doc:`net present value (NPV) <../financial-metrics/mtf_npv>` of the after tax cash flow, and a :doc:`payback period <../financial-metrics/mtf_payback>` representing the number of years required for the cumulative after tax cash flow to cover the initial equity investment in the project.
 
-Commercial projects may qualify for tax deductions under the Modified Accelerated Depreciation Schedule (MACRS) described in the United States tax code. SAM provides options for specifying custom depreciation schedules in addition to the MACRS mid-quarter and half-year schedules on the :doc:`Depreciation <../incentives-and-depreciation/depreciation>` page.
+Commercial projects may qualify for tax deductions under the Modified Accelerated Depreciation Schedule (MACRS) described in the United States tax code. SAM provides options for specifying custom depreciation schedules in addition to the MACRS mid-quarter and half-year schedules on the :doc:`Depreciation <../incentives-and-depreciation/tax_credits_depreciation>` page.
 
 Residential and commercial projects are typically smaller than 500 kW, although SAM does not restrict system sizes, so it is possible to model any size system using either the residential or commercial financial model.
 

@@ -52,7 +52,7 @@ The power cycle design parameters determine the capacity of the power cycle, and
   The power cycle's design output, not accounting for parasitic losses. SAM uses this value to size system components, such as the solar field area when you use the solar multiple to specify the solar field size. 
 
 **Estimated gross to net conversion factor**
-  An estimate of the ratio of the electric energy delivered to the grid to the power cycle's gross output. SAM uses the factor to calculate the power cycle's nameplate capacity for capacity-related calculations, including the estimated total cost per net capacity value on the :doc:`Installation costs <../installation-costs/cc_linear_fresnel>`   and :doc:`Operating costs <../operating-costs/oc_operating>`   pages capacity-based incentives on the :doc:`Incentives <../incentives-and-depreciation/incentives>`   page, and the capacity factor reported in the :doc:`results <../getting-started/results_page>`  .
+  An estimate of the ratio of the electric energy delivered to the grid to the power cycle's gross output. SAM uses the factor to calculate the power cycle's nameplate capacity for capacity-related calculations, including the estimated total cost per net capacity value on the :doc:`Installation costs <../installation-costs/cc_linear_fresnel>`   and :doc:`Operating costs <../operating-costs/oc_operating>`   pages capacity-based incentives on the :doc:`Incentives <../incentives-and-depreciation/cash_incentives>`   page, and the capacity factor reported in the :doc:`results <../getting-started/results_page>`  .
 
 **Estimated net output at design (nameplate) (MWe)**
   The power cycle's nameplate capacity, calculated as the product of the design gross output and estimated gross to net conversion factor.

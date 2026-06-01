@@ -56,7 +56,7 @@ For commercial projects:
 
 *Value of Electricity Savings in Year n>0 × ( 1 - Effective Tax Rate )*
 
-For the purposes of calculating the payback period, the cash flow (CF) in Year zero is the net capital cost, equal to the total installed cost less any investment-based incentive (IBI) and capacity-based incentive (CBI) amounts specified on the :doc:`Incentives <../incentives-and-depreciation/incentives>` page. The installed cost is shown here as a positive number here for clarity, but in the cash flow the signs are reversed so that a negative number for the cash flow in Year 0 indicates a net outflow of cash:
+For the purposes of calculating the payback period, the cash flow (CF) in Year zero is the net capital cost, equal to the total installed cost less any investment-based incentive (IBI) and capacity-based incentive (CBI) amounts specified on the :doc:`Incentives <../incentives-and-depreciation/cash_incentives>` page. The installed cost is shown here as a positive number here for clarity, but in the cash flow the signs are reversed so that a negative number for the cash flow in Year 0 indicates a net outflow of cash:
 
 *CF for payback in Year 0 =*
  *Total Installed Cost*

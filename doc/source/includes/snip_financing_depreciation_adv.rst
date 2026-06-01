@@ -7,7 +7,7 @@ The depreciation amount for each class is the product of the total depreciation 
 
 The sum of allocation percentages may be less than 100% to account for situations where the total depreciation basis prior to allocation includes non-depreciable assets or costs. In this case, the total amount allocated for depreciation is less than the total depreciation basis prior to allocation. See the **Gross Amount Allocated** column in the Depreciation and ITC table in the project :doc:`cash flow <../results/cashflow>`.
 
-For projects with the Investment Tax Credit (ITC), when you check the **Reduces Depreciation Basis** check box for the ITC the :doc:`Incentives <../incentives-and-depreciation/incentives>` page, SAM reduces the depreciation basis by 50% of the ITC amount as required by U.S. Internal Revenue Service rules.
+For projects with the Investment Tax Credit (ITC), when you check the **Reduces Depreciation Basis** check box for the ITC the :doc:`Incentives <../incentives-and-depreciation/cash_incentives>` page, SAM reduces the depreciation basis by 50% of the ITC amount as required by U.S. Internal Revenue Service rules.
 
 SAM makes the following simplifying assumptions:
 
