@@ -1109,6 +1109,19 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
+        "total_pump_gathering_cost_used_calc": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": -999.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "total_surface_equipment_cost_calc": {
             "Version": 4.0,
             "Type": 1.0,
@@ -1176,6 +1189,8 @@
         "\t\t${prod_pump_cost_calc} = ssc_var(obj, 'prod_pump_cost');\r",
         "\t\t${inj_pump_cost_calc} = ssc_var(obj, 'inj_pump_cost');\r",
         "\t\t${indirect_pump_cost_calc} = ssc_var(obj, 'indirect_pump_gathering_cost');\r",
+        "\t\t${total_pump_gathering_cost_used_calc} = ssc_var(obj, 'total_pump_gathering_cost_used');\r",
+        "\t\t\r",
         "\t\t${total_surface_equipment_cost_calc} = ssc_var(obj, 'total_surface_equipment_cost');\r",
         "\r",
         "\t\t${sum_prod_inj_total_cost_calc} = ssc_var(obj, 'sum_prod_inj_total_cost');\r",
@@ -1250,6 +1265,8 @@
         "\t\t${prod_pump_cost_calc} = fail;\r",
         "\t\t${inj_pump_cost_calc} = fail;\r",
         "\t\t${indirect_pump_cost_calc} = fail;\r",
+        "\t\t${total_pump_gathering_cost_used_calc} = fail;\r",
+        "\t\t\r",
         "\t\t${total_surface_equipment_cost_calc} = fail; \r",
         "\t\t\r",
         "\t\t${sum_prod_inj_total_cost_calc} = fail;\r",
