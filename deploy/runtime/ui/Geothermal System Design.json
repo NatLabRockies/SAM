@@ -1044,6 +1044,19 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
+        "total_capital_cost_calc": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": -999.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "total_drilling_cost_calc": {
             "Version": 4.0,
             "Type": 1.0,
@@ -1234,6 +1247,7 @@
         "\t\t${total_plant_cost_used_calc} = ssc_var(obj, 'total_plant_cost_used');\r",
         "\r",
         "\t\t${recap_cost_used_calc} = ssc_var(obj, 'recap_cost_used');\r",
+        "\t\t${total_capital_cost_calc} = ssc_var(obj, 'total_capital_cost');\r",
         "\t}\r",
         "\telse{\r",
         "\t\t${is_success_auto_exec} = -1;\r",
@@ -1311,6 +1325,7 @@
         "\t\t${total_plant_cost_used_calc} = fail;\r",
         "\t\t\r",
         "\t\t${recap_cost_used_calc} = fail;\r",
+        "\t\t${total_capital_cost_calc} = fail;\r",
         "\t}\r",
         "\t\r",
         "};"
