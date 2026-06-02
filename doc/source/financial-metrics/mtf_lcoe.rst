@@ -37,9 +37,9 @@ The levelized cost in SAM depends on the following assumptions:
 
 * Financial assumptions on the :doc:`Financial Parameters <../financial-parameters/fin_overview>` page
 
-* Incentives on the :doc:`Incentives <../incentives-and-depreciation/incentives>` page
+* Incentives on the :doc:`Incentives <../incentives-and-depreciation/cash_incentives>` page
 
-* Depreciation assumptions on the :doc:`Depreciation <../incentives-and-depreciation/depreciation>` page
+* Depreciation assumptions on the :doc:`Depreciation <../incentives-and-depreciation/tax_credits_depreciation>` page
 
 .. note:: For distributed behind-the-meter projects *without storage*, the retail electricity prices from the :doc:`Electricity Rates <../electricity-rates-and-load/electricity_rates>` page do not affect the LCOE. The LCOE is a measure of the cost of installing and operating the system, not of the value of electricity purchases avoided by the system. The project :doc:`NPV <mtf_npv>` is a measure of both the project costs and energy value.
 
