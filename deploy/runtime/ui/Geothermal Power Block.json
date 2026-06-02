@@ -2835,21 +2835,6 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
-        "degradation": {
-            "Version": 4.0,
-            "Type": 2.0,
-            "Label": " ",
-            "Units": " ",
-            "Group": "Geothermal Power Block",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": [
-                0.0
-            ],
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
         "eta_ref": {
             "Version": 4.0,
             "Type": 1.0,
@@ -3117,26 +3102,8 @@
         "};",
         "",
         "equations{ 'CT' } = define() {",
-        "\treturn ${geopowerblock.pwrb.condenser_type}+1; };",
-        "\r",
-        "/*",
-        "equations{ 'geothermal_analysis_period' } = define() {",
-        "\t",
-        "\tif ((financing() == \"None\") || (financing() == \"LCOE Calculator\"))",
-        "\t{",
-        "\t\treturn 30;",
-        "\t}",
-        "\telse",
-        "\t{",
-        "\t\treturn ${analysis_period};",
-        "\t}",
-        "\t",
-        "};\r",
-        "*/",
-        "",
-        "equations{ 'degradation' } = define() {",
-        "\treturn 0; };",
-        "\t"
+        "\treturn ${geopowerblock.pwrb.condenser_type}+1;\r",
+        "};"
     ],
     "Callbacks": [
         "function update_hybrid_dispatch_inputs() {",
