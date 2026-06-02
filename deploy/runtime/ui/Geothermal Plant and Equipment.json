@@ -4007,19 +4007,6 @@
             "sscVariableName": " ",
             "sscVariableValue": ""
         },
-        "ui_calculations_only": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Use UI calculations only",
-            "Units": "0/1",
-            "Group": "Geothermal Plant and Equipment",
-            "IndexLabels": "0",
-            "Flags": 8.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Default",
-            "sscVariableName": " ",
-            "sscVariableValue": ""
-        },
         "use_weather_file_conditions": {
             "Version": 4.0,
             "Type": 1.0,
@@ -4176,12 +4163,6 @@
         "};\r",
         "\r",
         "// ----------------------------------------\r",
-        "",
-        "equations{ 'ui_calculations_only' } = define() {",
-        "\treturn 0; // for a normal model run, this should be zero",
-        "};\r",
-        "\r",
-        "\r",
         "",
         "equations{ 'wet_bulb_temp_wf'} = define() {\r",
         "\tann_twet = nan();\r",
