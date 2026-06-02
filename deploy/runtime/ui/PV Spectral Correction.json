@@ -49,11 +49,73 @@
                 },
                 "X": {
                     "Type": 3.0,
+                    "Integer": 489.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 99.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 63.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Cell type:"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 75"
+                },
+                "X": {
+                    "Type": 3.0,
                     "Integer": 48.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 60.0
+                    "Integer": 33.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -111,7 +173,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 498.0
+                    "Integer": 561.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -119,7 +181,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 292.0
+                    "Integer": 184.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -135,7 +197,7 @@
                 },
                 "Editable": {
                     "Type": 2.0,
-                    "Boolean": 0.0
+                    "Boolean": 1.0
                 },
                 "ForeColour": {
                     "Type": 4.0,
@@ -174,7 +236,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 123.0
+                    "Integer": 105.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -223,7 +285,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 135.0
+                    "Integer": 138.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -231,7 +293,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 75.0
+                    "Integer": 45.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -239,7 +301,7 @@
                 },
                 "Text": {
                     "Type": 5.0,
-                    "String": ""
+                    "String": "No messages."
                 },
                 "Editable": {
                     "Type": 2.0,
@@ -278,7 +340,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 498.0
+                    "Integer": 495.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -334,7 +396,7 @@
             "IndexLabels": "",
             "Flags": 8.0,
             "DefaultValue": "",
-            "UIObject": "Default",
+            "UIObject": "MultilineText",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
@@ -360,7 +422,7 @@
             "IndexLabels": "",
             "Flags": 8.0,
             "DefaultValue": "No messages.",
-            "UIObject": "Default",
+            "UIObject": "MultilineText",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
@@ -436,47 +498,69 @@
     "Callbacks": [
         "on_load{'PV Spectral Correction'} = define() \r",
         "{\r",
+        "\tcheck_cec();\r",
+        "\trecommend_model();\r",
+        "};\r",
+        "\r",
+        "on_change{'spectral_recommend_choice'} = define() {\r",
+        "\tcheck_cec();\r",
         "\trecommend_model();\r",
         "};\r",
         "\r",
         "function recommend_model() {\r",
         "\tchoice = value('spectral_recommend_choice');\r",
+        "\tmodel = value('module_model');\r",
+        "\tis_cec = model == 1 || model == 2;\r",
         "\tmsg = '';\r",
-        "\tif (choice == 0) { //Not checked\r",
-        "\t\tenable('spectral_correction_model_choice', true); //keep it enabled\r",
-        "\t\t\r",
-        "\t}\r",
-        "\telse {\r",
-        "\t\tenable('spectral_correction_model_choice', false);\r",
-        "\t\tif (value('celltech') < 2) {\r",
-        "\t\t\tmsg += 'Any model will work for monocrystalline or multicrystalline Silicon cell types.\\n';\r",
+        "\tif (is_cec) {\r",
+        "\t\tif (choice == 0) { //Not checked\r",
+        "\t\t\tenable('spectral_correction_model_choice', true); //keep it enabled\r",
+        "\t\t\t\r",
         "\t\t}\r",
         "\t\telse {\r",
-        "\t\t\tmsg += 'Precipitable water or clearsky index is needed to more accurately calculate spectral correction factors for this cell type. Precipitable water must be available in the weather file for the simulation to complete.\\n';\r",
-        "\t\t}\r",
-        "\t\tif (isnan(value('annual_precipitation'))) {\r",
-        "\t\t\tmsg += 'Annual precipitable water was not calculated from the weather file. Ensure that precipitable water is included in the weather before using the Airmass and precipitable water option.\\n';\r",
-        "\t\t\tif(isnan(value('annual_clearsky_ghi'))) {\r",
-        "\t\t\t\tmsg += 'Could not find clearsky ghi from weather data.\\n';\r",
-        "\t\t\t\tvalue('spectral_correction_model_choice', 0);\r",
+        "\t\t\tenable('spectral_correction_model_choice', false);\r",
+        "\t\t\tif (value('celltech') < 2) {\r",
+        "\t\t\t\tmsg += 'Any model will work for monocrystalline or multicrystalline Silicon cell types.\\n';\r",
         "\t\t\t}\r",
         "\t\t\telse {\r",
-        "\t\t\t\tvalue('spectral_correction_model_choice', 2);\r",
+        "\t\t\t\tmsg += 'Precipitable water or clearsky index is needed to more accurately calculate spectral correction factors for this cell type. Precipitable water must be available in the weather file for the simulation to complete.\\n';\r",
         "\t\t\t}\r",
-        "\t\t\t\t\r",
+        "\t\t\tif (isnan(value('annual_precipitation'))) {\r",
+        "\t\t\t\tmsg += 'Annual precipitable water was not calculated from the weather file. Ensure that precipitable water is included in the weather before using the Airmass and precipitable water option.\\n';\r",
+        "\t\t\t\tif(isnan(value('annual_clearsky_ghi'))) {\r",
+        "\t\t\t\t\tmsg += 'Could not find clearsky ghi from weather data.\\n';\r",
+        "\t\t\t\t\tvalue('spectral_correction_model_choice', 0);\r",
+        "\t\t\t\t}\r",
+        "\t\t\t\telse {\r",
+        "\t\t\t\t\tvalue('spectral_correction_model_choice', 2);\r",
+        "\t\t\t\t}\r",
+        "\t\t\t\t\t\r",
+        "\t\t\t}\r",
+        "\t\t\telse {\r",
+        "\t\t\t\tvalue('spectral_correction_model_choice', 1);\r",
+        "\t\t\t}\r",
+        "\t\t\tif (msg == '') { msg = 'No spectral correction messages.'; }\r",
+        "\t\t\tvalue('spectral_correction_msg', msg);\r",
+        "\t\t\tproperty('spectral_correction_msg', 'Text', msg);\r",
+        "\t\t\t\r",
+        "\t\t\t\r",
         "\t\t}\r",
-        "\t\telse {\r",
-        "\t\t\tvalue('spectral_correction_model_choice', 1);\r",
-        "\t\t}\r",
-        "\t\tif (msg == '') { mesg = 'No spectral correction messages.'; }\r",
-        "\t\tvalue('spectral_correction_msg', msg);\r",
-        "\t\ttech = value('celltech');\r",
-        "\t\ttech_string = ?tech ['Crystalline Silicon', 'Multi-crystalline Silicon',\r",
-        "\t\t\t'Cadmium Telluride', 'CIS', 'CIGS', 'Amorphous Silicon', 'Unknown'];\r",
-        "\t\t\r",
-        "\t\t\r",
         "\t}\r",
         "\trefresh();\r",
+        "}\r",
+        "\r",
+        "function check_cec() {\r",
+        "\tmodel = value('module_model');\r",
+        "\tis_cec = model == 1 || model == 2;\r",
+        "\tif (is_cec) {\r",
+        "\t\tenable('spectral_correction_model_choice', false);\r",
+        "\t\tenable('spectral_correction_choice', false);\r",
+        "\t\tproperty('spectral_correction_msg', 'Text', 'These model options are currently only implemented for the CEC database and CEC user-entered specifications module models.');\r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\tenable('spectral_correction_model_choice', true);\r",
+        "\t\tenable('spectral_correction_choice', true);\r",
+        "\t}\r",
         "}"
     ]
 }
