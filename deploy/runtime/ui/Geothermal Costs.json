@@ -12298,19 +12298,6 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
-        "system_use_recapitalization": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": " ",
-            "Units": " ",
-            "Group": "Geothermal Capital Costs",
-            "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": 1.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
         "total_direct_cost": {
             "Version": 4.0,
             "Type": 1.0,
@@ -12518,10 +12505,6 @@
         "};\r",
         "\r",
         "// -----------------------------------------------\r",
-        "",
-        "equations{ 'system_use_recapitalization' } = define() {",
-        "\treturn 1; };",
-        "\t",
         "",
         "equations{ '$MIMO$ ppi' } = define() {",
         "\tppis = [[0.890669720,0.919862622,0.938752147,0.957069262,0.963938180,0.972524327,0.983400114,1.000000000,0.998855180,1.066399542,1.226674299,1.333142530,1.377790498,1.438465942,1.414997138,1.423583286,1.464224385,1.513451631,1.535203205,1.555237550,1.604464797,1.643961076,1.657698912, 1.743,1.797,1.832,1.998,2.273],",
