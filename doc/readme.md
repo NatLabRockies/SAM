@@ -82,13 +82,11 @@ To see Help, open the `../doc/html/index.html` file.
 
 SAM uses Help Context IDs to open context-specific Help files from the SAM user interface.
 
-The Help context ID is a string "chapter-name/topic_name" that points to the folder and file name of the HTML for the Help topic.
+The Help context ID is a string "chapter-name/topic_name" that points to the folder and file name of the HTML for the Help topic. For example, the Help topic for the behind-the-meter Battery Dispatch input page is "battery-storage/battery_dispatch_btm".
+
+The Help context ID is the path to the HTML file without the `.html` extension. The extension is added by the `ShowHelp()` function in `SAM/main.cpp`.
 
 Help context IDs are defined in different places in the SAM code depending on the context.
-
-For example, the Help topic for the behind-the-meter Battery Dispatch input page is "battery-storage/battery_dispatch_btm".
-
-The Help ID is the path to the HTML file without the `.html` extension. The extension is added by the `ShowHelp()` function in `SAM/main.cpp`.
 
 ### SAM Input Pages
 
@@ -143,6 +141,18 @@ For the "Edit Losses" window (`SAM/lossadj.cpp`):
 ```
 
 To find all SAM window Help IDs, search the SAM project for "wxID_HELP", or more specifically "case wxID_HELP" and "if (evt.GetId() == wxID_HELP)".
+
+## Checking for Broken Links
+
+Use the [linkcheck builder](https://www.sphinx-doc.org/en/master/usage/builders/index.html#sphinx.builders.linkcheck.CheckExternalLinksBuilder) to check for broken external links. (Errors in the build process described above should find broken internal links.):
+
+From `/SAM/doc/source`, run
+
+```
+sphinx-build -b linkcheck . _build/linkcheck
+```
+
+This will generate a report of broken links in `/SAM/doc/source/_build/linkcheck/output.txt`.
 
 ## File Structure
 

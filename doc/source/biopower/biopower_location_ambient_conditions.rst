@@ -19,10 +19,10 @@ Ambient conditions also affect biomass composition, but on a monthly rather than
 .. note:: The legacy NSRDB MTS1 (NSRDB 1961 - 1990 TMY2) weather files have both GHI and relative humidity data, but the MTS1 data is out of date and only has files for a few hundred weather stations in the United States.
 
 
-.. note:: You can access these legacy files from the `NSRDB archives <https://nsrdb.nrel.gov/data-sets/archives.html>`__.
+.. note:: You can access these legacy files from the `NSRDB archives <https://nsrdb.nlr.gov/data-sets/archives.html>`__.
 
 
-.. note:: Please contact SAM Support at `sam.support@nrel.gov <mailto:sam.support@nrel.gov>`__ if you need help finding weather data to use for your project.
+.. note:: Please contact SAM Support at `sam.support@nlr.gov <mailto:sam.support@nlr.gov>`__ if you need help finding weather data to use for your project.
 
 The Location and Resource page provides access to the solar resource library, which is a collection of weather files stored on your computer. When you first install SAM, it comes with a few default weather files in the library. As you use SAM for your own projects, you should add files to build your own library. Once files are in your library, you can use them for different projects and with different versions of SAM.
 
@@ -36,7 +36,7 @@ The Location and Resource page provides access to the solar resource library, wh
 
 There are two ways to add files to your solar resource library:
 
-1. Download a weather file or files from the NREL National Solar Radiation Database (NSRDB)
+1. Download a weather file or files from the NLR National Solar Radiation Database (NSRDB)
 
 Use the download weather file options and click **Download and add to library** to get the most up-to-date data for long-term cash flow analysis, single-year analysis, and P50/P90 analysis, or to download legacy data from the NSRDB.
 
@@ -63,9 +63,9 @@ See also
 
 .. note:: You can compare results for a system using more than one weather file in a single case by using SAM's :doc:`parametric simulation <../simulation-options/parametrics>` option.
 
-.. note:: For more information about weather data, including where to find data for locations outside of the United States, see the `SAM website <https://sam.nrel.gov/weather>`__.
+.. note:: For more information about weather data, including where to find data for locations outside of the United States, see the `SAM website <https://sam.nlr.gov/weather>`__.
 
-.. note:: For a helpful discussion of weather data and power system simulation, see Sengupta et al., (2015) "Best Practices Handbook for the Collection and Use of Solar Resource Data for Solar Energy Applications," NREL Report No. TP-5D00-63112 (`PDF 8.9 MB <https://docs.nrel.gov/docs/fy15osti/63112.pdf>`__).
+.. note:: For a helpful discussion of weather data and power system simulation, see Sengupta et al., (2015) "Best Practices Handbook for the Collection and Use of Solar Resource Data for Solar Energy Applications," NREL Report No. TP-5D00-63112 (`PDF 8.9 MB <https://docs.nlr.gov/docs/fy15osti/63112.pdf>`__).
 
 .. _bio-ambient-library:
 

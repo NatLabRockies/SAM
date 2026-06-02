@@ -95,7 +95,7 @@ SAM can model five different methods for compensating the system owner for exces
 
 To see how the metering and billing options affect the monthly bill calculation, use the :doc:`Data Tables <../results/data>` tab on the Results page to display the monthly output variables **shown in bold** in the descriptions below.
 
-The terms used in the descriptions below are defined in the :ref:`Electricity Rates Glossary <electricity-rates-glossary>` above. The metering and billing category names are from Zinamen, O. et al. (2017) Grid-Connected Distributed Generation: Compensation Mechanism Basics. NREL/BR-6A20-68469. (`PDF 861 KB <https://www.nrel.gov/docs/fy18osti/68469.pdf>`__)
+The terms used in the descriptions below are defined in the :ref:`Electricity Rates Glossary <electricity-rates-glossary>` above. The metering and billing category names are from Zinamen, O. et al. (2017) Grid-Connected Distributed Generation: Compensation Mechanism Basics. NREL/BR-6A20-68469. (`PDF 861 KB <https://www.nlr.gov/docs/fy18osti/68469.pdf>`__)
 
 **Net energy metering**
 
@@ -164,7 +164,7 @@ The terms used in the descriptions below are defined in the :ref:`Electricity Ra
 OpenEI Utility Rate Database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-NREL's Open Energy Information (OpenEI) `Utility Rate Database (URDB) <https://openei.org/wiki/Utility_Rate_Database>`__ hosts a database of retail electricity rate structures for electric service providers in the United States and some other countries. SAM allows you to search the database and import rate structure data from the database to the input variables on the Electricity Rates page. SAM accesses `Version 8 of the URDB API <https://openei.org/services/doc/rest/util_rates/?version=8>`__.
+NLR's Open Energy Information (OpenEI) `Utility Rate Database (URDB) <https://openei.org/wiki/Utility_Rate_Database>`__ hosts a database of retail electricity rate structures for electric service providers in the United States and some other countries. SAM allows you to search the database and import rate structure data from the database to the input variables on the Electricity Rates page. SAM accesses `Version 8 of the URDB API <https://openei.org/services/doc/rest/util_rates/?version=8>`__.
 
 **Search for Rates**
 

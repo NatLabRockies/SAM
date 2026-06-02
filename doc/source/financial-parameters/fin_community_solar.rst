@@ -9,9 +9,9 @@ The Community Solar financial model is for a project that earns revenue from pay
 
 * Financial assumptions including analysis period, inflation and discount rates, state and federal income tax rates, project term debt, construction financing interest, and reserve account funding on the :doc:`Financial Parameters <fin_single_owner>` page.
 
-* Tax credits and tax incentives on the :doc:`Incentives <../incentives-and-depreciation/incentives>` page.
+* Tax credits and tax incentives on the :doc:`Incentives <../incentives-and-depreciation/cash_incentives>` page.
 
-* Depreciation on the :doc:`Depreciation <../incentives-and-depreciation/depreciation>` page.
+* Depreciation on the :doc:`Depreciation <../incentives-and-depreciation/tax_credits_depreciation>` page.
 
 * costs associated with managing the community solar project itself are on the Community Solar page.
 

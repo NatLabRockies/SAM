@@ -3,7 +3,7 @@ Wind
 
 The Wind Power model is for projects involving one or more large or small turbines with any of the financial models for residential, commercial, or utility-scale PPA projects.
 
-For a technical description of the wind power model, see Freeman, J.; Gilman, P.; Jorgenson, J.; Ferguson, T. (2014). "Reference Manual for the System Advisor Model's Wind Performance Model." National Renewable Energy Laboratory, NREL/TP-6A20-60570. (`PDF 738 KB <https://docs.nrel.gov/docs/fy14osti/60570.pdf>`__)
+For a technical description of the wind power model, see Freeman, J.; Gilman, P.; Jorgenson, J.; Ferguson, T. (2014). "Reference Manual for the System Advisor Model's Wind Performance Model." National Renewable Energy Laboratory, NREL/TP-6A20-60570. (`PDF 738 KB <https://docs.nlr.gov/docs/fy14osti/60570.pdf>`__)
 
 .. note:: If you are new to SAM, you can use the Wind Wizard to create a wind case. The Wizard steps you through the inputs you need to create a basic case. To run the Wind Wizard, either start SAM and click **Quick start for new users** at the bottom left corner of the Welcome page, and then click **Wind Wizard**. If SAM is running, on the File menu, click **Close** to return to the Welcome page.
 

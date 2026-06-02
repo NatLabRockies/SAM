@@ -20,7 +20,7 @@ Use the detailed photovoltaic model when you have information about the equipmen
 PVWatts Model
 .............
 
-The :doc:`PVWatts model <../pvwatts/pvwatts>` is an implementation of NREL's popular `online photovoltaic calculator <https://pvwatts.nrel.gov/>`__. It models a grid-connected photovoltaic system using a few basic inputs to describe the system's nameplate capacity, array orientation and mounting type, and system losses. PVWatts makes internal assumptions about module and inverter characteristics for three types of modules. SAM's implementation of PVWatts includes options for modeling shading that are not available with the online version.
+The :doc:`PVWatts model <../pvwatts/pvwatts>` is an implementation of NLR's popular `online photovoltaic calculator <https://pvwatts.nlr.gov/>`__. It models a grid-connected photovoltaic system using a few basic inputs to describe the system's nameplate capacity, array orientation and mounting type, and system losses. PVWatts makes internal assumptions about module and inverter characteristics for three types of modules. SAM's implementation of PVWatts includes options for modeling shading that are not available with the online version.
 
 Use the PVWatts model for preliminary project analysis before you have information about the type of equipment you plan to use in the system, or for other analyses that require a reasonable estimate of a photovoltaic system's electrical output.
 
@@ -147,12 +147,12 @@ SAM's electric battery storage model is available with the Detailed Photovoltaic
 Detailed PV-Battery
 ...................
 
-The detailed PV-Battery model couples a grid-connected photovoltaic system to a battery bank, which can be connected to either the DC side of the photovoltaic inverter, or the AC side of the system. The model must be used with a financial model, and is modeled as a behind-the-meter application for the Residential, Commercial, and Third Party Ownership financial models, and a front-of-the-meter application for any of the Power Purchase Agreement (PPA) or Merchant Plant financial models. For behind-the-meter applications, there is an automatic sizing and dispatch option that uses NREL's REopt API.
+The detailed PV-Battery model couples a grid-connected photovoltaic system to a battery bank, which can be connected to either the DC side of the photovoltaic inverter, or the AC side of the system. The model must be used with a financial model, and is modeled as a behind-the-meter application for the Residential, Commercial, and Third Party Ownership financial models, and a front-of-the-meter application for any of the Power Purchase Agreement (PPA) or Merchant Plant financial models. For behind-the-meter applications, there is an automatic sizing and dispatch option that uses NLR's REopt API.
 
 PVWatts-Battery
 ...............
 
-The PVWatts-Battery model is a simplified implementation of the PV-Battery model for behind-the-meter applications that is available with the Residential, Commercial, or Third Party Ownership financial models and includes the automatic sizing and dispatch option that uses NREL's REopt API.
+The PVWatts-Battery model is a simplified implementation of the PV-Battery model for behind-the-meter applications that is available with the Residential, Commercial, or Third Party Ownership financial models and includes the automatic sizing and dispatch option that uses NLR's REopt API.
 
 Custom Generation Profile-Battery
 .................................
@@ -217,7 +217,7 @@ The :doc:`physical trough model <../csp-physical-trough-model/troughphysical_ove
 Parabolic Trough (Empirical Model)
 ..................................
 
-The :doc:`empirical trough model <../csp-empirical-trough-model/troughempirical_overview>` models the same type of parabolic trough system as the physical trough model, but uses a set of curve-fit equations derived from regression analysis of data measured from the SEGS projects in the southwestern United States, so you are limited to modeling systems composed of components for which there is measured data. The model is based on Excelergy, originally developed for internal use at at the National Renewable Energy Laboratory.
+The :doc:`empirical trough model <../csp-empirical-trough-model/troughempirical_overview>` models the same type of parabolic trough system as the physical trough model, but uses a set of curve-fit equations derived from regression analysis of data measured from the SEGS projects in the southwestern United States, so you are limited to modeling systems composed of components for which there is measured data. The model is based on Excelergy, originally developed for internal use at at the National Laboratory of the Rockies.
 
 Molten Salt Power Tower
 .......................
@@ -227,7 +227,7 @@ A :doc:`molten salt power tower <../csp-power-tower-molten-salt/mspt_overview>` 
 Direct Steam Power Tower
 ........................
 
-The Direct Steam Power Tower model is not included in versions released after November 2020. The model is available in the legacy SAM 2020.2.29 version, which you can download from the SAM `website download page <https://sam.nrel.gov/download>`__.
+The Direct Steam Power Tower model is not included in versions released after November 2020. The model is available in the legacy SAM 2020.2.29 version, which you can download from the SAM `website download page <https://sam.nlr.gov/download>`__.
 
 Linear Fresnel Molten Salt
 ..........................

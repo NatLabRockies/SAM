@@ -73,7 +73,7 @@ Soiling and derates
 
 The soiling and derate factors account for losses in the system that the module and inverter models do not calculate, such as electrical losses in the DC wiring that connects modules in the array.
 
-.. note:: For a discussion of derate factors in the context of the NREL PVWatts model that includes suggested values, see the Help system for the `online PVWatts Calculator <https://pvwatts.nrel.gov/>`__. Note that SAM only includes derate factors for losses that the module, inverter, and shading models do not calculate.
+.. note:: For a discussion of derate factors in the context of the NLR PVWatts model that includes suggested values, see the Help system for the `online PVWatts Calculator <https://pvwatts.nlr.gov/>`__. Note that SAM only includes derate factors for losses that the module, inverter, and shading models do not calculate.
 
 **Monthly soiling factors**
   Click **Edit Values** to specify the soiling derate factor that applies for each month of the year. A derate factor of 100 represents an array with no soiling, a value of 0 would be for an array that receives no sunlight. SAM assumes that Hour 1 of the 8,760 hours in a year is the hour ending at 1 am on Monday, January 1.

@@ -1,11 +1,11 @@
 SAM CSV Format for Wind
 =======================
 
-The SAM CSV Format for Wind is a comma-delimited text format for SAM's wind power performance model. This is the format for files from the `NREL WIND Toolkit API <https://developer.nrel.gov/docs/wind/wind-toolkit/wtk-download/>`__ and `NREL RE Explorer <https://www.re-explorer.org/>`__.
+The SAM CSV Format for Wind is a comma-delimited text format for SAM's wind power performance model. This is the format for files from the `NLR WIND Toolkit API <https://developer.nlr.gov/docs/wind/wind-toolkit/wtk-download/>`__ and `NLR RE Explorer <https://www.re-explorer.org/>`__.
 
 
  
-.. note:: SAM 2022.11.21 r1 is the first version of SAM to support this new format. We are transitioning away from the :doc:`SRW format <weather_format_srw_wind>` to this format to make SAM more compatible with the WIND Toolkit API and NREL RE Explorer.
+.. note:: SAM 2022.11.21 r1 is the first version of SAM to support this new format. We are transitioning away from the :doc:`SRW format <weather_format_srw_wind>` to this format to make SAM more compatible with the WIND Toolkit API and NLR RE Explorer.
 
 
 .. note:: Some WIND Toolkit endpoints return files in a slightly different format. For example, offshore-hawaii-download and offshore-mid-atlantic-download are in a different format than the one described here.

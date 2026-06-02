@@ -8843,9 +8843,9 @@
     "batt_computed_stacks_series": 1.0,
     "batt_computed_strings": 107.0,
     "batt_computed_voltage": 51.74,
-    "batt_current_charge_max": 96.3,
+    "batt_current_charge_max": 96.30000000000001,
     "batt_current_choice": 0.0,
-    "batt_current_discharge_max": 96.3,
+    "batt_current_discharge_max": 96.30000000000001,
     "batt_custom_dispatch": [
         0.0
     ],
@@ -8889,6 +8889,10 @@
     "batt_h_to_ambient": 7.5,
     "batt_initial_SOC": 50.0,
     "batt_inverter_efficiency_cutoff": 90.0,
+    "batt_itc_basis_cost": 13030.2914886,
+    "batt_itc_basis_cost_fed_include": 1.0,
+    "batt_itc_basis_cost_sta_include": 1.0,
+    "batt_itc_basis_percent": 100.0,
     "batt_life_excl": 0.0,
     "batt_life_model": 0.0,
     "batt_lifetime_matrix": [
@@ -9805,7 +9809,7 @@
         0.0,
         0.0
     ],
-    "batt_mass": 177.9486428571429,
+    "batt_mass": 177.94864285714287,
     "batt_maximum_SOC": 95.0,
     "batt_meter_position": 0.0,
     "batt_minimum_SOC": 15.0,
@@ -9870,7 +9874,7 @@
     "batt_size_choice": 0.0,
     "batt_specific_energy_per_mass": 70.0,
     "batt_specific_energy_per_volume": 82.0,
-    "batt_surface_area": 1.7081938826471877,
+    "batt_surface_area": 1.7081938826471875,
     "batt_target_choice": 0.0,
     "batt_target_power": [
         0.0
@@ -18761,6 +18765,27 @@
     "degradation": [
         0.0
     ],
+    "depr_basis_mat": [
+        [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            7.0
+        ],
+        [
+            2.0,
+            13030.2914886,
+            100.0,
+            1.0,
+            1.0,
+            7.0
+        ]
+    ],
+    "depr_en_basis_mat": 1.0,
+    "depr_itc_fed_capex": 0.0,
+    "depr_itc_sta_capex": 0.0,
     "dispatch_manual_btm_discharge_to_grid": [
         0.0,
         0.0,
@@ -28273,6 +28298,11 @@
     "inflation_rate": 2.5,
     "insurance_rate": 0.0,
     "is_btm": 0.0,
+    "itc_basis_cost_capex_fed": 13030.2914886,
+    "itc_basis_cost_capex_sta": 13030.2914886,
+    "itc_basis_cost_percent_fed": 100.0,
+    "itc_basis_cost_percent_sta": 100.0,
+    "itc_basis_percent_input": 0.0,
     "itc_fed_amount": [
         0.0
     ],
@@ -28286,6 +28316,7 @@
     "itc_fed_percent_maxvalue": [
         1e38
     ],
+    "itc_qualification_choice": 0.0,
     "itc_sta_amount": [
         0.0
     ],
@@ -45853,7 +45884,7 @@
         1.71415,
         1.87435
     ],
-    "nominal_discount_rate": 9.060000000000004,
+    "nominal_discount_rate": 9.060000000000003,
     "normalize_to_utility_bill": 0.0,
     "om_batt_capacity_cost": [
         15.0
@@ -45925,7 +45956,7 @@
         0.0
     ],
     "ptc_fed_escal": 0.0,
-    "ptc_fed_term": 10.0,
+    "ptc_fed_term": 0.0,
     "ptc_sta_amount": [
         0.0
     ],
@@ -45964,8 +45995,7 @@
     "salvage_percentage": 0.0,
     "salvage_value": 0.0,
     "scale_factor": 1.0,
-    "show_cash_incentives": 1.0,
-    "show_tax_credits": 1.0,
+    "show_itc_qualification": 1.0,
     "standalonebatt.cost.contingency": 0.0,
     "standalonebatt.cost.contingency_percent": 0.0,
     "standalonebatt.cost.epc.fixed": 5256.0,
@@ -45978,7 +46008,7 @@
     "standalonebatt.cost.plm.percent": 0.0,
     "standalonebatt.cost.plm.total": 0.0,
     "standalonebatt.cost.sales_tax.percent": 100.0,
-    "standalonebatt.cost.sales_tax.total": 370.2043566000001,
+    "standalonebatt.cost.sales_tax.total": 370.20435660000006,
     "standalonebatt.cost.sales_tax.value": 5.0,
     "start_day_of_year": 3.335046e-317,
     "start_day_of_year_load_ui": 3.335046e-317,
@@ -45986,6 +46016,10 @@
         7.0
     ],
     "system_capacity": 4.7832595200000009,
+    "system_itc_basis_cost": 0.0,
+    "system_itc_basis_cost_fed_include": 0.0,
+    "system_itc_basis_cost_sta_include": 0.0,
+    "system_itc_basis_percent": 0.0,
     "system_use_lifetime_output": 1.0,
     "timestep_minutes": 60.0,
     "timestep_minutes_ui": 0.0,

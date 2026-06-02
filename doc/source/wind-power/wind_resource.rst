@@ -12,7 +12,7 @@ Use the Wind Resource page to define the wind resource at the project site for a
 
   * :ref:`Choose a representative wind resource <filerepresentative>` file to use a file in SAM's wind resource library.
 
-  * :ref:`Download a wind resource file <filedownload>` from the NREL WIND Toolkit.
+  * :ref:`Download a wind resource file <filedownload>` from the NLR WIND Toolkit.
 
   * :ref:`Use a wind resource file stored on your computer <fileoncomputer>`.
 
@@ -29,7 +29,7 @@ Choose a representative typical wind resource file
 
 .. _filerepresentative:
 
-SAM comes with a set of representative typical wind resource files that are appropriate for very preliminary studies to explore the feasibility of potential projects, or for policy studies. The files were developed in 2012 for NREL by AWS Truepower, which is now part of `UL Solutions <https://www.ul.com/industries/energy-and-utilities/renewables>`__. Each file contains simulated hourly resource data and includes wind speed, wind direction, ambient temperature, and atmospheric pressure data at 50, 80, and 110 meters above the ground.
+SAM comes with a set of representative typical wind resource files that are appropriate for very preliminary studies to explore the feasibility of potential projects, or for policy studies. The files were developed in 2012 for NLR by AWS Truepower, which is now part of `UL Solutions <https://www.ul.com/industries/energy-and-utilities/renewables>`__. Each file contains simulated hourly resource data and includes wind speed, wind direction, ambient temperature, and atmospheric pressure data at 50, 80, and 110 meters above the ground.
 
 Choose a representative typical wind resource file:
 
@@ -88,25 +88,25 @@ You can use the images below to help choose a typical file with terrain characte
    :align: center
    :alt: IMG_WindResource-terrain.png
 
-Download a file from the online NREL WIND Toolkit
+Download a file from the online NLR WIND Toolkit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. _filedownload:
 
-NREL's Wind Integration National Dataset (WIND) Toolkit provides wind speed and direction, ambient temperature, and atmospheric pressure at 100 m above the ground data for 126,692 sites in the continental United States and parts of Central America and the Caribbean. Of those sites, 112,471 are on land, and 14,221 are offshore in coastal areas. The WIND Toolkit provides historical :ref:`single-year <singleyear>` data for the time period between 2007 and 2014 for measurement heights between 10 and 200 meters above the ground.
+NLR's Wind Integration National Dataset (WIND) Toolkit provides wind speed and direction, ambient temperature, and atmospheric pressure at 100 m above the ground data for 126,692 sites in the continental United States and parts of Central America and the Caribbean. Of those sites, 112,471 are on land, and 14,221 are offshore in coastal areas. The WIND Toolkit provides historical :ref:`single-year <singleyear>` data for the time period between 2007 and 2014 for measurement heights between 10 and 200 meters above the ground.
 
-.. note:: Wind resource data for locations outside of the U.S. are available from `RE Data Explorer <https://www.re-explorer.org/>`__ and from the `WIND Toolkit API <https://developer.nrel.gov/docs/wind/wind-toolkit/>`__. Files from these resources are in a file format that is compatible with SAM, except for some WIND Toolkit API endpoints that use a different format. Please `let us know <mailto:sam.support@nrel.gov>`__ if you need help using files from one of these resources.
+.. note:: Wind resource data for locations outside of the U.S. are available from `RE Data Explorer <https://www.re-explorer.org/>`__ and from the `WIND Toolkit API <https://developer.nlr.gov/docs/wind/wind-toolkit/>`__. Files from these resources are in a file format that is compatible with SAM, except for some WIND Toolkit API endpoints that use a different format. Please `let us know <mailto:sam.support@nlr.gov>`__ if you need help using files from one of these resources.
 
 For a description of the WIND Toolkit and links to publications:
 
-* `Wind Integration National Dataset Toolkit website <https://www.nrel.gov/grid/wind-toolkit.html>`__
+* `Wind Integration National Dataset Toolkit website <https://www.nlr.gov/grid/wind-toolkit.html>`__
 
-The WIND Toolkit data downloads on the NREL Developer Network:
+The WIND Toolkit data downloads on the NLR Developer Network:
 
-* `WIND Toolkit API <https://developer.nrel.gov/docs/wind/wind-toolkit/>`__
+* `WIND Toolkit API <https://developer.nlr.gov/docs/wind/wind-toolkit/>`__
 
-Each wind data site is represented in the WIND Toolkit as a 2 km by 2 km grid cell. When you use SAM to request wind data for a project location, SAM sends the location's latitude and longitude to the `WIND Toolkit Data API <https://developer.nrel.gov/docs/wind/wind-toolkit/wtk-download/>`__. The toolkit finds the wind data grid cell nearest the project location and returns a weather file that SAM stores on your computer. SAM names the file using the latitude and longitude of the project location you provided. You can find the latitude and longitude of the wind data grid cell in the header of the weather file. When you use a street address in SAM to describe the project location, SAM translates the street address to a latitude and longitude using the Google Maps Geolocation API.
+Each wind data site is represented in the WIND Toolkit as a 2 km by 2 km grid cell. When you use SAM to request wind data for a project location, SAM sends the location's latitude and longitude to the `WIND Toolkit Data API <https://developer.nlr.gov/docs/wind/wind-toolkit/wtk-download/>`__. The toolkit finds the wind data grid cell nearest the project location and returns a weather file that SAM stores on your computer. SAM names the file using the latitude and longitude of the project location you provided. You can find the latitude and longitude of the wind data grid cell in the header of the weather file. When you use a street address in SAM to describe the project location, SAM translates the street address to a latitude and longitude using the Google Maps Geolocation API.
 
-To download a weather file from the NREL WIND Toolkit:
+To download a weather file from the NLR WIND Toolkit:
 
 #. Click **Download**.
 

@@ -20,7 +20,7 @@ For more about wave energy resource data and its application for wave energy con
 For information about sources of wave energy resource data, see the following websites:
 
 * `Marine Energy Data Repository <https://mhkdr.openei.org/>`__
-* `Water Power Technologies Office Wave Hindcast Dataset <https://www.nrel.gov/water/wave-hindcast-dataset>`__
+* `Water Power Technologies Office Wave Hindcast Dataset <https://www.nlr.gov/water/wave-hindcast-dataset>`__
 
 .. _wavelibrary:
 
@@ -58,7 +58,7 @@ For the Frequency of Occurrence option, SAM shows dominant wave parameters calcu
 Download Marine Energy Resource Files
 .....................................
 
-For the Time Series option, SAM can download three-hour marine energy resource data from the `Hindcast Data Downloads web API <https://developer.nrel.gov/docs/wave/hindcast/>`__ for the U.S. West Coast, East Coast, Hawaii, and Alaska.
+For the Time Series option, SAM can download three-hour marine energy resource data from the `Hindcast Data Downloads web API <https://developer.nlr.gov/docs/wave/hindcast/>`__ for the U.S. West Coast, East Coast, Hawaii, and Alaska.
 
 .. note:: The marine energy resource data download web service can be slow to respond to data requests. If you get a message about the the web service being down, try again to see if the service responds after a few tries.
 

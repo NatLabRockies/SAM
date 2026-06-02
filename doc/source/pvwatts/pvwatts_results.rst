@@ -1,7 +1,7 @@
 PVWatts Results
 ===============
 
-The PVWatts performance model displays the following results in :doc:`Tables <../results/data>` and :doc:`Time Series <../results/timeseries>` graphs. For details about how the model calculates these results, see Dobos, A. (2014). PVWatts Version 5 Manual (`PDF 714 KB <https://docs.nrel.gov/docs/fy14osti/62641.pdf>`__).
+The PVWatts performance model displays the following results in :doc:`Tables <../results/data>` and :doc:`Time Series <../results/timeseries>` graphs. For details about how the model calculates these results, see Dobos, A. (2014). PVWatts Version 5 Manual (`PDF 714 KB <https://docs.nlr.gov/docs/fy14osti/62641.pdf>`__).
 
 Hourly Data
 ~~~~~~~~~~~

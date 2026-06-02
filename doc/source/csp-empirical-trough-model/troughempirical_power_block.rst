@@ -7,7 +7,7 @@ The Power Block parameters describe the equipment in the system that converts th
 
 The input variables on the Power Block page are divided into two groups. The turbine ratings group determines the capacity of the power block, and the power cycle group defines the performance parameters of the reference turbine.
 
-For a more detailed description of the model, please download the CSP trough reference manual from the `SAM website <https://sam.nrel.gov/concentrating-solar-power/csp-publications>`__.
+For a more detailed description of the model, please download the CSP trough reference manual from the `SAM website <https://sam.nlr.gov/concentrating-solar-power/csp-publications>`__.
 
 .. _powerblock_inputvariablereference:
 
@@ -20,10 +20,10 @@ Plant Characteristics
   The power cycle's design output, not accounting for parasitic losses. SAM uses this value to size system components, such as the solar field area when you use the solar multiple to specify the solar field size.
 
 **Estimated Gross to Net Conversion Factor**
-  An estimate of the ratio of the electric energy delivered to the grid to the power cycle's gross output. SAM uses the factor to calculate the system's nameplate capacity for capacity-related calculations, including the estimated total cost per net capacity value on the :doc:`Installation costs <../installation-costs/cc_trough>`   page, capacity-based incentives on the :doc:`Incentives <../incentives-and-depreciation/incentives>`   page, and the capacity factor reported in the :doc:`results <../getting-started/results_page>`  .
+  An estimate of the ratio of the electric energy delivered to the grid to the power cycle's gross output. SAM uses the factor to calculate the system's nameplate capacity for capacity-related calculations, including the estimated total cost per net capacity value on the :doc:`Installation costs <../installation-costs/cc_trough>`   page, capacity-based incentives on the :doc:`Incentives <../incentives-and-depreciation/cash_incentives>`   page, and the capacity factor reported in the :doc:`results <../getting-started/results_page>`  .
 
 **Estimated Net Output at Design (MWe)**
-  The power cycle's nominal capacity, calculated as the product of the design gross output and estimated gross to net conversion factor. SAM uses this value to calculate the system's rated capacity for capacity-related calculations, including the estimated total cost per net capacity value on the :doc:`Installation costs <../installation-costs/cc_trough>`   page, capacity-based incentives on the :doc:`Incentives <../incentives-and-depreciation/incentives>`   page, and the capacity factor reported in the :doc:`results <../getting-started/results_page>`  .
+  The power cycle's nominal capacity, calculated as the product of the design gross output and estimated gross to net conversion factor. SAM uses this value to calculate the system's rated capacity for capacity-related calculations, including the estimated total cost per net capacity value on the :doc:`Installation costs <../installation-costs/cc_trough>`   page, capacity-based incentives on the :doc:`Incentives <../incentives-and-depreciation/cash_incentives>`   page, and the capacity factor reported in the :doc:`results <../getting-started/results_page>`  .
 
 System Availability
 ...................
