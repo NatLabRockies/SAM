@@ -92,27 +92,16 @@ Download a file from the online NLR WIND Toolkit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. _filedownload:
 
-NLR's Wind Integration National Dataset (WIND) Toolkit provides wind speed and direction, ambient temperature, and atmospheric pressure at 100 m above the ground data for 126,692 sites in the continental United States and parts of Central America and the Caribbean. Of those sites, 112,471 are on land, and 14,221 are offshore in coastal areas. The WIND Toolkit provides historical :ref:`single-year <singleyear>` data for the time period between 2007 and 2014 for measurement heights between 10 and 200 meters above the ground.
-
-.. note:: Wind resource data for locations outside of the U.S. are available from `RE Data Explorer <https://www.re-explorer.org/>`__ and from the `WIND Toolkit API <https://developer.nlr.gov/docs/wind/wind-toolkit/>`__. Files from these resources are in a file format that is compatible with SAM, except for some WIND Toolkit API endpoints that use a different format. Please `let us know <mailto:sam.support@nlr.gov>`__ if you need help using files from one of these resources.
-
-For a description of the WIND Toolkit and links to publications:
-
-* `Wind Integration National Dataset Toolkit website <https://www.nlr.gov/grid/wind-toolkit.html>`__
-
-The WIND Toolkit data downloads on the NLR Developer Network:
-
-* `WIND Toolkit API <https://developer.nlr.gov/docs/wind/wind-toolkit/>`__
-
-Each wind data site is represented in the WIND Toolkit as a 2 km by 2 km grid cell. When you use SAM to request wind data for a project location, SAM sends the location's latitude and longitude to the `WIND Toolkit Data API <https://developer.nlr.gov/docs/wind/wind-toolkit/wtk-download/>`__. The toolkit finds the wind data grid cell nearest the project location and returns a weather file that SAM stores on your computer. SAM names the file using the latitude and longitude of the project location you provided. You can find the latitude and longitude of the wind data grid cell in the header of the weather file. When you use a street address in SAM to describe the project location, SAM translates the street address to a latitude and longitude using the Google Maps Geolocation API.
+NLR's Wind Integration National Dataset (WIND) Toolkit provides wind resource data for the continental United States and other parts of the world. You can download files for the continental United States from SAM's Wind Resource page. Wind resource data for locations outside of the U.S. are available from `Wind Resource Database (WRDB) <https://wrdb.nlr.gov/>`__ and from the `WIND Toolkit API <https://developer.nlr.gov/docs/wind/wind-toolkit/>`__. Files from these resources are in a file format that is compatible with SAM, except for some WIND Toolkit API endpoints that use a different format. Please `let us know <mailto:sam.support@nlr.gov>`__ if you need help using files from one of these resources.
 
 To download a weather file from the NLR WIND Toolkit:
+.....................................................
 
 #. Click **Download**.
 
 #. Choose the **Street address or zip code** or **Location coordinates (deg)** option and type a latitude and longitude, street address, or zip code for the wind turbine or wind farm location.
 
-#. Choose a time step in minutes. Available time steps are 5,  15, 30, and 60 minutes. Files with a smaller time steps will be larger.
+#. Choose a time step in minutes. The only available time step is 60 minutes.
 
 #. Choose a year.
 
@@ -122,7 +111,7 @@ To download a weather file from the NLR WIND Toolkit:
 
 SAM displays a message when the download is complete, and checks the box under **Use a wind resource file stored on your computer** and shows the path of the downloaded file.
 
-SAM downloads a file in the :doc:`SAM CSV format for wind data <../weather-file-formats/weather_format_srw_wind>` from the WIND Toolkit for the site nearest the location you request, and stores in the folder indicated on the Wind Resource page under **Use a wind resource file stored on your computer**.
+SAM downloads a file in the :doc:`SAM CSV format for wind data <../weather-file-formats/weather_format_csv_wind>` from the WIND Toolkit for the site nearest the location you request, and stores in the folder indicated on the Wind Resource page under **Use a wind resource file stored on your computer**.
 
 The latitude and longitude in the file name was translated from the street address above using the Google Maps Geolocation API. SAM includes the coordinates for the location you requested in the file name:
 

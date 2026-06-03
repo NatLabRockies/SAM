@@ -4586,6 +4586,7 @@ void fcall_make_jpd_multiyear(lk::invoke_t& cxt)
             wxLogStatus("error scanning '" + wf + "'");
             //cxt.error(err);
             cxt.result().assign(err);
+            has_more = dir.GetNext(&file);
             continue;
         }
         else
@@ -4594,9 +4595,9 @@ void fcall_make_jpd_multiyear(lk::invoke_t& cxt)
                 if (ssc_data_get_number(pdata, "location_id", &val))
                     csv(1, 0) = wxString::Format("%g", val);
 
-                
 
-                
+
+
 
                 if (ssc_data_get_number(pdata, "lat", &val)) {
                     csv(1, 4) = wxString::Format("%g", val);
@@ -4614,7 +4615,7 @@ void fcall_make_jpd_multiyear(lk::invoke_t& cxt)
                     year_max = year_arr[0];
                 }
 
-                
+
                 /*
                 if ((year_arr = ssc_data_get_array(pdata, "year", &nrows)) != 0)
                 {
@@ -4633,13 +4634,13 @@ void fcall_make_jpd_multiyear(lk::invoke_t& cxt)
 
                 if (ssc_data_get_number(pdata, "tz", &val))
                     csv(1, 10) = wxString::Format("%g", val);
-                
+
                 if ((str = ssc_data_get_string(pdata, "data_source")) != 0)
                     csv(1, 11) = wxString(str);
-                
-                
+
+
             }
-            
+
             if ((year_arr = ssc_data_get_array(pdata, "year", &nrows)) != 0)
             {
                 for (int i = 0; i < nrows; i++) {
@@ -4651,7 +4652,7 @@ void fcall_make_jpd_multiyear(lk::invoke_t& cxt)
             {
                 for (int i = 0; i < nrows; i++) {
                     csv(nrows * file_count + i + 3, 1) = wxString::Format("%g", month_arr[i]);
-                    
+
                 }
             }
             if ((day_arr = ssc_data_get_array(pdata, "day", &nrows)) != 0)
@@ -4672,17 +4673,17 @@ void fcall_make_jpd_multiyear(lk::invoke_t& cxt)
                     csv(nrows * file_count + i + 3, 4) = wxString::Format("%g", min_arr[i]);
                 }
             }
-            
+
             if ((height_arr = ssc_data_get_array(pdata, "significant_wave_height", &nrows)) != 0)
             {
-               
+
                 for (int i = 0; i < nrows; i++) {
                     csv(nrows * file_count + i + 3, 5) = wxString::Format("%g", height_arr[i]);
                 }
             }
             if ((period_arr = ssc_data_get_array(pdata, "energy_period", &nrows)) != 0)
             {
-                
+
                 for (int i = 0; i < nrows; i++) {
                     csv(nrows * file_count + i + 3, 6) = wxString::Format("%g", period_arr[i]);
                 }
@@ -4697,10 +4698,10 @@ void fcall_make_jpd_multiyear(lk::invoke_t& cxt)
                             resource_matrix_jpd.at(r, c) = resource_matrix[r * matrix_cols + c];
                         }
                     }
-                    
+
                 }
                 else {
-                    for (int r = 0; r < matrix_rows ; r++) {
+                    for (int r = 0; r < matrix_rows; r++) {
                         for (int c = 0; c < matrix_cols; c++) {
                             if (c != 0 && r != 0) { //Do not sum headers
                                 //num = resource_matrix[i];
@@ -4733,7 +4734,7 @@ void fcall_make_jpd_multiyear(lk::invoke_t& cxt)
                     if (r == 0 && c == 0) csv(2 + r, c) = "Hs/Te";
                 }
 
-                
+
             }
             csv(1, 12) = wxString::Format("%g", year_min);
             csv(1, 12) += "-" + wxString::Format("%g", year_max);
@@ -4749,7 +4750,7 @@ void fcall_make_jpd_multiyear(lk::invoke_t& cxt)
             ssc_data_free(pdata);
 
         }
-        
+
     }
 
     //csv(1, 0) += "_" + wxString::Format("%g", year_min);
@@ -4796,7 +4797,14 @@ void fcall_make_jpd_multiyear(lk::invoke_t& cxt)
     //                lc->ReloadLibrary();
     //    }
     //}
-    cxt.result().assign("");
+    if (file_count == 0) {
+        wxLogStatus("No valid files in folder");
+        //cxt.error(err);
+        cxt.result().assign("No valid files in folder");
+    }
+    else {
+        cxt.result().assign("");
+    }
     return;
 }
 

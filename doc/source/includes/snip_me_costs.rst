@@ -44,13 +44,13 @@ Type a cost per unit of rated capacity. The rated capacity is from the Array pag
      :alt: ss-me-cost-fixed.png
 
 **Use Modeled Value ($)**
-  Choose this option for SAM to automatically calculate the cost. The category cost is equal to the modeled value, and SAM ignores the "user input" value.
+  Choose this option for SAM to automatically calculate the cost. The category cost is equal to the modeled value, and SAM ignores the "user input" value. All modeled values are based on an assumed currency year of 2024.
 
   .. image:: /images/ss-me-cost-modeled.png
      :align: center
      :alt: ss-me-cost-modeled.png
 
-.. note:: For the wave energy model, if you choose a WEC from the library on the Wave Energy Converter page, the default device costs are based on the associated costs for each design based on reference model projects. Balance-of-system costs and financial costs are based on costs curves developed from existing reference model data, a database with wave and tidal cost data from DOE-funded projects, and a literature review of wave, tidal, and offshore wind energy costs. 
+.. note:: For the wave energy model, if you choose a WEC from the library on the Wave Energy Converter page, the default device costs are based on the associated costs for each design based on reference model projects. Balance-of-system costs and financial costs are based on costs curves developed from existing reference model data, a database with wave and tidal cost data from DOE-funded projects, and a literature review of wave, tidal, and offshore wind energy costs. The cost curves are based on an assumed currency year of 2024.
 
 
 .. note:: If you use your own WEC parameters instead of choosing a WEC from the library, device costs are from cost curves based on array rated power or percentage of costs. These costs curves were developed from existing reference model data, a database with wave and tidal cost data from DOE-funded projects, and a literature review of wave, tidal, and offshore wind energy costs. 
