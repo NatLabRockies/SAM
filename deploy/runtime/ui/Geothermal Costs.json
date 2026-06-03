@@ -12480,7 +12480,7 @@
         "\treturn ${sales_tax_cost_calc};\r",
         "};\r",
         "\r",
-        "// sales tax value is ony a UI indicator\r",
+        "// sales tax value is only a UI indicator\r",
         "// the sales tax rate is calculated in the geo cost cmod\r",
         "// using geo_financial_model\r",
         "equations{ 'geotherm.cost.sales_tax.value' } = define() {\r",
