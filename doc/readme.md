@@ -237,7 +237,7 @@ If possible, avoid using headings in snippet files to avoid inconsistencies betw
 
 ## Headings
 
-Limit section headings to three levels, plus Level 4 for procedure titles.
+Limit section headings to three levels.
 
 In reStructuredText, headings are identified by underline characters (https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#sections). The character used to underline the text determines the heading level based on the "succession of headings" in each file. This means that each file can use different characters to represent heading levels.
 
@@ -269,9 +269,10 @@ The "~" character now represents Heading 2 because of the order above.
 
 Use `#` to automatically number lists. Use `*` for bulleted lists. Lines in a list can be separated by a blank line or not.
 
+For the title of step-by-step instructions, use **bold** text (`**bold**`) instead of a heading so that the format is consistent across all documents.
+
 ```
-Heading 4: Step-by-step instructions:
-.....................................
+**Step-by-step instructions:**
 
 #. This is Step 1 with automatically numbered lines.
 
@@ -305,13 +306,13 @@ When creating and editing cross references, you may need to clean and rebuild th
 
 Use `:doc:` for a cross reference to a topic file to create a hyperlink that points to the beginning of the file.
 
-Use the file's title as the hyperlink text:
+To use the file's title as the hyperlink text:
 
 ```
 This is a reference to :doc:`path/to/filename`
 ```
 
-Use custom hyperlink text:
+To use custom hyperlink text:
 
 ```
 This is a reference to :doc:`hyperlink text <path/to/filename>`
