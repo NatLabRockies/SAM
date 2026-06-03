@@ -1,5 +1,5 @@
 Inverter 
-=========
+========
 
 The Inverter page allows you to choose a model to represent the inverter's performance. The inverter converts DC electricity from the photovoltaic array into AC electricity. The inverter model calculates the DC to AC conversion efficiency in each simulation time step.
 

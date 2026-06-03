@@ -98,7 +98,7 @@ ITC Qualification Options
 
 SAM provides two options for determining the portion of project costs that qualify for the ITC. The **Determine ITC qualification from system components** option makes it possible to include only electric battery storage equipment installation costs in the ITC qualifying cost. The **Determine ITC qualification from depreciation class allocations** determines the ITC qualifying cost from depreciation class allocations and was the only available option for SAM 2025.4.16 and earlier versions.
 
-.. notes:: 
+.. note:: 
     
    The current implementation of the ITC qualification from system components option only works for systems with electric battery storage equipment. If you choose this option for a system without electric battery storage, the ITC qualifying cost is based on the total installed cost.
 
