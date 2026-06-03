@@ -17,11 +17,9 @@ There are three options for specifying the building or facility's electric load:
 
 .. note:: You can use the Download Electric Load :doc:`macro <../reference/macros>` to automatically import reference residential and commercial building load data from the `Commercial and Residential Hourly Load Profiles for all TMY3 Locations in the United States <https://data.openei.org/submissions/153>`__ to SAM.
 
+   For estimates of roof area available for different commercial building types, see the table at https://www.energy.gov/eere/buildings/commercial-reference-buildings and divide the total building area by the number of floors.
 
-.. note:: For estimates of roof area available for different commercial building types, see the table at https://www.energy.gov/eere/buildings/commercial-reference-buildings and divide the total building area by the number of floors.
-
-
-.. note:: If you are modeling a project with critical loads, specify the critical load on the :doc:`Grid Outage <../grid/grid_outage>` page.
+   If you are modeling a project with critical loads, specify the critical load on the :doc:`Grid Outage <../grid/grid_outage>` page.
 
 .. _inputs:
 
@@ -30,7 +28,7 @@ Input Time Series Load Data
 The Input Time Series Load Data option allows you to import hourly or subhourly load data from a text file, or copy and paste it from a spreadsheet or other program. It also provides an option for scaling the load data to better match the building's load or values from an electricity bill.
 
 Hourly or Subhourly Load Profile
-................................
+--------------------------------
 
 **Electric load power, kW**
   Click **Edit array** to either cut and paste load data from another program or import data from a properly formatted text file. See :ref:`Working with Time Series Load Data <electric-load-timeseries>`   for instructions.
@@ -42,10 +40,20 @@ Hourly or Subhourly Load Profile
 
   To calculate the scaled load data, SAM multiplies the hourly or subhourly load data you by the scaling factor that you specify. For example, if you specify a scaling factor of 1.5, and the load at 2 p.m. on March 18th is 1.2 kW, SAM would use a load value of 1.5 × 1.2 = 1.8 kW for that hour.
 
-.. include:: ../includes/snip_load_annual_adjustment.rst
+**Electric load annual growth rate, %/yr**
+  The load growth rate scales the load in years two and later by the percentage you specify. For example, if you specify a load growth rate of 0.5% per year, for each year in the analysis period specified on the :doc:`Financial Parameters <../financial-parameters/fin_overview>`   page, SAM would increase the load value in each time step by 0.5% of the previous year's load value for the same time step.
+
+  You can also assign load growth rates to specific years using the annual schedule:
+
+.. include:: /includes/snip_annual_values.rst
+
+**January 1 day of week**
+  By default, SAM assumes that January 1 is a Monday. 
+  
+  If the energy or demand rates on the :doc:`electricit_rates` page involve different weekday and weekend rates, and if you are using a weather file for a specific year, you can change the January 1 day of week to the appropriate day for that year to ensure that the weekday and weekend rates are applied on the correct days.
 
 Adjust Load Profile to Monthly Usage
-....................................
+------------------------------------
 
 Sometimes the only information you have about a building or facility's electric usage is total monthly usage in kWh and perhaps peak usage in kW from a monthly electricity bill. In this case, you can use time series load data from a model or other source of data to approximate the daily load shape, and scale this data so that the monthly totals of your data match the usage data from the electricity bill.
 
@@ -63,7 +71,7 @@ Sometimes the only information you have about a building or facility's electric 
   Opens the :doc:`time series data viewer <../reference/time_series_viewer>`   to display graphs of the load data. If you chose one of the options to scale load data, the graphs show both the original data and the scaled data so you can verify that the scaled data is suitable for your analysis.
 
 Download
-........
+--------
 
 Click **Download Electric Load Data** to download hourly load data for a selection residential or commercial building types. Clicking the button is the same as running the "Download Electric Load" macro from the Macros page, which you can access by clicking **Macros** under the simulate button.
 
@@ -72,7 +80,7 @@ The macro downloads an hourly load file from the `Commercial and Residential Hou
 .. note:: The `End-Use Load Profiles for the U.S. Building Stock <https://data.openei.org/submissions/4520>`__ provides access to thousands of 15-minute load profiles for many residential and commercial building types modeled using single-year NSRDB weather files for more recent years than the TMY3 data. You can use the `End Use Load Profiles Python package <https://github.com/NatLabRockies/SAM/tree/patch/samples/Python%20Scripts/End%20Use%20Load%20Profiles>`__ to access the data to use with SAM. Because of the much larger number of load profiles and building types represented in the data, it is not possible to create a short list of building types to choose from in the same way as the macro does for the older dataset. An API for the newer dataset may be available in the future that will make this possible.
 
 Monthly Load Summary
-....................
+--------------------
 
 SAM displays the table of monthly and annual totals to help you verify that the load data is correct. SAM calculates these values from the time series load data. To change the monthly values, you have to either change the time series data, or change scaling factors.
 
@@ -104,7 +112,7 @@ Calculate Load Data
 The calculate load data option for residential buildings allows you to use monthly electric bill data and basic building energy parameters to calculate an hourly load profile. You can use this option to estimate load data when you do not have access to more accurate data.
 
 Building Energy Load Profile Estimator
-......................................
+--------------------------------------
 
 The Building Energy Load Profile Estimator is a basic residential building model that calculates hourly electric load data given some simple building energy parameters, monthly electricity usage in kWh, and solar resource data from a weather file.
 
@@ -118,9 +126,23 @@ To use the estimator
 
 * Under **Monthly Load Data**, type monthly total electricity consumption values for one year's worth of electricity bills.
 
-* Click **View load data** to open the :doc:`time series data viewer <../reference/time_series_viewer>` with the 8,760 hourly load profile generated by the estimator.
+**January 1 day of week**
+  By default, SAM assumes that January 1 is a Monday. 
+  
+  If the energy or demand rates on the :doc:`electricit_rates` page involve different weekday and weekend rates, and if you are using a weather file for a specific year, you can change the January 1 day of week to the appropriate day for that year to ensure that the weekday and weekend rates are applied on the correct days.
 
-.. include:: ../includes/snip_load_annual_adjustment.rst
+**View load data**
+  Click **View load data** to open the :doc:`time series data viewer <../reference/time_series_viewer>` with the 8,760 hourly load profile generated by the estimator.
+
+Annual Adjustment
+-----------------
+
+**Load growth rate, %/yr**
+  The load growth rate scales the load in years two and later by the percentage you specify. For example, if you specify a load growth rate of 0.5% per year, for each year in the analysis period specified on the :doc:`Financial Parameters <../financial-parameters/fin_overview>`   page, SAM would increase the load value in each time step by 0.5% of the previous year's load value for the same time step.
+
+  You can also assign load growth rates to specific years using the annual schedule:
+
+.. include:: /includes/snip_annual_values.rst 
 
 .. _electric-load-timeseries:
 
