@@ -1,7 +1,7 @@
 PVWatts
 =======
 
-SAM's PVWatts model uses the same underlying code as NLR's online `PVWatts® Calculator <https://pvwatts.nlr.gov>`__. SAM has the following features that are not available in the online calculator:
+SAM's PVWatts model uses the same underlying code as NLR's online PVWatts® Calculator (https://pvwatts.nlr.gov). SAM has the following features that are not available in the online calculator:
 
 * You can choose a weather file on the :doc:`Location and Resource <pvwatts_location_and_resource>` page. The online calculator requires you to use weather data from an internal database.
 
@@ -36,7 +36,7 @@ Basic steps to run PVWatts:
 About PVWatts Versions
 ~~~~~~~~~~~~~~~~~~~~~~
 
-The current version of PVWatts is Version 8 for SAM, the online `PVWatts Calculator <https://pvwatts.nlr.gov>`__`® <https://pvwatts.nlr.gov>`__ , and the `PVWatts Web API <https://developer.nlr.gov/docs/solar/pvwatts/>`__ available from the NLR Developer Network. Differences in results between SAM's implementation of PVWatts and the online calculator and API may be caused by different weather data or by the differences between these versions.
+The current version of PVWatts is Version 8 for SAM, the online PVWatts® Calculator (https://pvwatts.nlr.gov), and the PVWatts Web API (https://developer.nlr.gov/docs/solar/pvwatts/) available from the NLR Developer Network. Differences in results between SAM's implementation of PVWatts and the online calculator and API may be caused by different weather data or by the differences between these versions.
 
 The following lists PVWatts versions in different versions of SAM. All versions of PVWatts are available in the `SAM Software Development Kit (SDK) <https://sam.nlr.gov/software-development-kit-sdk>`__ and `PySAM <https://NLR-pysam.readthedocs.io/en/master/>`__.
 
