@@ -1,7 +1,7 @@
 {
     "Name": "PV Spectral Correction",
-    "Width": 865.0,
-    "Height": 322.0,
+    "Width": 886.0,
+    "Height": 318.0,
     "FormObjects": {
         "GroupBox": {
             "Visible": 1.0,
@@ -12,7 +12,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 12.0
+                    "Integer": 9.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -20,7 +20,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 846.0
+                    "Integer": 870.0
                 },
                 "Height": {
                     "Type": 3.0,
