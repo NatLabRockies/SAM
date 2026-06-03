@@ -3103,6 +3103,12 @@
         "",
         "equations{ 'CT' } = define() {",
         "\treturn ${geopowerblock.pwrb.condenser_type}+1;\r",
+        "};\r",
+        "\r",
+        "// This value should always be = 1 for SAM geothermal simulations\r",
+        "// However, want to keep option in the cmod\r",
+        "equations{ 'system_use_lifetime_output' } = define() {\r",
+        "\treturn 1;\r",
         "};"
     ],
     "Callbacks": [
