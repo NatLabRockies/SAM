@@ -1,7 +1,7 @@
 Battery Dispatch FOM
 ====================
 
-The Battery Dispatch page displays inputs for controlling the battery dispatch, or timing of battery charging and discharging. For inputs that describe the battery's performance characteristics, see the :doc:`Battery Cell and System <battery_storage_fom>` page.
+The Battery Dispatch page displays inputs for controlling the battery dispatch, or timing of battery charging and discharging. For inputs that describe the battery's performance characteristics, see the :doc:`battery_cell_and_system` page.
 
 Charge Limits and Priority
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -128,7 +128,7 @@ The PV smoothing algorithm dispatches the battery to reduce rapid fluctuations i
 
    Simulations with PV smoothing can take several minutes to run, depending on your computer and the weather file time step.
 
-After running a simulation, you can find results of the PV smoothing algorithm on the Results page Data Tables, Time Series, and other tabs by searching for "pv smoothing." The relevant results all start with **PV smoothing...**. **PV smoothing outpower** is the battery target power for PV smoothing algorithm: It attempts to dispatch the battery to meet the target, but constraints such as battery state of charge may prevent the target from being met in some time steps. **Electricity to grid** is power delivered by the PV system and/or battery to the grid, which may be subject to grid constraints or AC losses specified on the :doc:`Battery Cell and System <../battery-storage/battery_storage_fom>`, :doc:`Grid <../grid/grid_limits>` and :doc:`Losses <../detailed-photovoltaic-model/pv_electrical_losses>` pages.
+After running a simulation, you can find results of the PV smoothing algorithm on the Results page Data Tables, Time Series, and other tabs by searching for "pv smoothing." The relevant results all start with **PV smoothing...**. **PV smoothing outpower** is the battery target power for PV smoothing algorithm: It attempts to dispatch the battery to meet the target, but constraints such as battery state of charge may prevent the target from being met in some time steps. **Electricity to grid** is power delivered by the PV system and/or battery to the grid, which may be subject to grid constraints or AC losses specified on the :doc:`battery_cell_and_system`, :doc:`Grid <../grid/grid_limits>` and :doc:`Losses <../detailed-photovoltaic-model/pv_electrical_losses>` pages.
 
 For more information about the algorithm, see:
 
@@ -158,13 +158,13 @@ For more information about the algorithm, see:
   The battery resting state of charge as a percent of its nameplate capacity.
 
 **Battery energy, kWhac**
-  The battery's nominal capacity expressed in AC kilowatt-hours, from the :doc:`Battery Cell and System <../battery-storage/battery_storage_fom>`   page.
+  The battery's nominal capacity expressed in AC kilowatt-hours, from the :doc:`battery_cell_and_system` page.
 
 **Battery power, kWac**
-  The battery's nominal maximum discharge rate expressed in AC kilowatt-hours, from the :doc:`Battery Cell and System <../battery-storage/battery_storage_fom>`   page.
+  The battery's nominal maximum discharge rate expressed in AC kilowatt-hours, from the :doc:`battery_cell_and_system` page.
 
 **Battery round trip efficiency, %**
-  An estimate of the battery's nominal round-trip efficiency, calculated from Power Converters parameters on the :doc:`Battery Cell and System <../battery-storage/battery_storage_fom>`   page. Note that SAM calculates the battery's actual round-trip efficiency during simulations and reports it in the :doc:`Summary tab <../results/summary>`   of the Results page.
+  An estimate of the battery's nominal round-trip efficiency, calculated from Power Converters parameters on the :doc:`battery_cell_and_system` page. Note that SAM calculates the battery's actual round-trip efficiency during simulations and reports it in the :doc:`Summary tab <../results/summary>`   of the Results page.
 
   For a DC-connected battery:
 

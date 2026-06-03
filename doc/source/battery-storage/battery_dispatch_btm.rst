@@ -1,7 +1,7 @@
 Battery Dispatch BTM
 ====================
 
-The Battery Dispatch page for behind-the-meter (BTM) batteries displays inputs for controlling the timing of battery charging and discharging. For inputs that describe the battery's performance characteristics, see the :doc:`Battery Cell and System <battery_storage_btm>` page.
+The Battery Dispatch page for behind-the-meter (BTM) batteries displays inputs for controlling the timing of battery charging and discharging. For inputs that describe the battery's performance characteristics, see the :doc:`battery_cell_and_system` page.
 
 Charge Limits and Priority
 ~~~~~~~~~~~~~~~~~~~~~~~~~~

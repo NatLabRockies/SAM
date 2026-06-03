@@ -1,7 +1,7 @@
-Battery Storage
-===============
+Battery Overview
+================
 
-SAM's battery storage models are for an electric battery of electrochemical cells that stores electricity from the grid and/or an on-sit power power generation system.
+SAM's battery storage models are for an electric battery of electrochemical cells that stores electricity from the grid and/or an on-site power power generation system.
 
 The following configurations combine battery storage with a power generation system:
 
