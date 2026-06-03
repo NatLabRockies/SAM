@@ -40,11 +40,16 @@ The system inputs define the size of the system, losses, and the array orientati
 
 .. note:: The premium module type has a higher efficiency at Standard Operating Conditions (STC) than the standard and thin film module types. However, under different irradiance and weather conditions, the premium module type may operate at a lower efficiency than the standard or thin film type. For this reason, if you compare two systems that are identical except for the module type, you may find that the total annual or monthly output is slightly higher for the standard module type than the premium or thin film type.
 
+   Note that a system with a given nameplate capacity in kW and premium modules requires less area than a system with the same capacity and standard or thin film modules. If space for the array is limited, you may be able to design a higher capacity system using premium modules. 
+      
+   STC is defined as 1000 W/m² solar irradiance, 25°C cell temperature, and air mass of 1.5. For time steps with solar irradiance ranges of about 400 to 600 W/m², the  premium module's efficiency may be less than the standard module.
 
-.. note:: Note that a system with a given nameplate capacity in kW and premium modules requires less area than a system with the same capacity and standard or thin film modules. If space for the array is limited, you may be able to design a higher capacity system using premium modules. 
+**Module is bifacial**
+  Check this box for an array with bifacial modules that converts sunlight from both the front and back of the module to electricity.
 
+  For an array with bifacial modules, SAM calculates the plane-of-array irradiance on the rear side of the array in each time step based on the available solar resource, position of the sun, and array orientation and considering ground reflectance (albedo) and spacing between rows of modules. It then multiplies the rear-side irradiance by a module bifaciality factor of 0.65 to calculate the total irradiance available to the array.
 
-.. note:: STC is defined as 1000 W/m² solar irradiance, 25°C cell temperature, and air mass of 1.5. For time steps with solar irradiance ranges of about 400 to 600 W/m², the  premium module's efficiency may be less than the standard module.
+.. note:: For PVWatts, SAM assumes a bifaciality factor of 0.7, transmission factor of 0.013, and ground clearance height of 1 meter. You can adjust these parameters for the Detailed PV model, but not for PVWatts.
 
 **DC to AC ratio**
   The DC to AC size ratio is the ratio of the inverter's AC rated size to the array's DC rated size. Increasing the ratio increases the system's output over the year, but also increases the array's cost. The default value is 1.10, which means that a 4 kW system size would be for an array with a 4 DC kW nameplate size at standard test conditions (STC) and an inverter with a 3.63 AC kW nameplate size.
@@ -208,16 +213,6 @@ Land Area
 Advanced Inputs
 ~~~~~~~~~~~~~~~
 The advanced inputs provide access to inputs for optional features of PVWatts.
-
-Bifaciality
-...........
-
-For an array with bifacial modules, SAM calculates the plane-of-array irradiance on the rear side of the array in each time step based on the available solar resource, position of the sun, and array orientation and considering ground reflectance (albedo) and spacing between rows of modules. It then multiplies the rear-side irradiance by a module bifaciality factor of 0.65 to calculate the total irradiance available to the array.
-
-.. note:: For PVWatts, SAM assumes a bifaciality factor of 0.7, transmission factor of 0.013, and ground clearance height of 1 meter. You can adjust these parameters for the Detailed PV model, but not for PVWatts.
-
-**Module is bifacial**
-  Check this box to enable the bifacial model and its inputs.
 
 Albedo
 ......

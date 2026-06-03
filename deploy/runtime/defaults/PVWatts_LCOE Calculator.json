@@ -8859,7 +8859,7 @@
     "loss_wiring": 2.0,
     "losses": 14.075660688264469,
     "losses_user": 14.0,
-    "module_is_bifacial": 0.0,
+    "module_is_bifacial": 1.0,
     "module_type": 0.0,
     "pv_land_area_is_shown": 0.0,
     "pvwatts.advanced.is_shown": 0.0,

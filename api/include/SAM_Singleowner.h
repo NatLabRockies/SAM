@@ -2799,6 +2799,14 @@ extern "C"
 	SAM_EXPORT void SAM_Singleowner_NonEnergyRevenue_non_energy_expenses_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
 
 	/**
+	 * Set non_energy_expenses_ds: Non-energy expenses impact debt service [%]
+	 * options: None
+	 * constraints: None
+	 * required if: ?=1
+	 */
+	SAM_EXPORT void SAM_Singleowner_NonEnergyRevenue_non_energy_expenses_ds_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
 	 * Set non_energy_expenses_escal: Non-energy expenses escalation [%]
 	 * options: None
 	 * constraints: None
@@ -2821,6 +2829,14 @@ extern "C"
 	 * required if: None
 	 */
 	SAM_EXPORT void SAM_Singleowner_NonEnergyRevenue_non_energy_revenue_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
+
+	/**
+	 * Set non_energy_revenue_ds: Non-energy revenue available for debt service [%]
+	 * options: None
+	 * constraints: None
+	 * required if: ?=1
+	 */
+	SAM_EXPORT void SAM_Singleowner_NonEnergyRevenue_non_energy_revenue_ds_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
 	 * Set non_energy_revenue_escal: Non-energy revenue escalation [%]
@@ -3627,11 +3643,15 @@ extern "C"
 
 	SAM_EXPORT double* SAM_Singleowner_NonEnergyRevenue_non_energy_expenses_aget(SAM_table ptr, int* length, SAM_error *err);
 
+	SAM_EXPORT double SAM_Singleowner_NonEnergyRevenue_non_energy_expenses_ds_nget(SAM_table ptr, SAM_error *err);
+
 	SAM_EXPORT double SAM_Singleowner_NonEnergyRevenue_non_energy_expenses_escal_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double* SAM_Singleowner_NonEnergyRevenue_non_energy_expenses_ret_aget(SAM_table ptr, int* length, SAM_error *err);
 
 	SAM_EXPORT double* SAM_Singleowner_NonEnergyRevenue_non_energy_revenue_aget(SAM_table ptr, int* length, SAM_error *err);
+
+	SAM_EXPORT double SAM_Singleowner_NonEnergyRevenue_non_energy_revenue_ds_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Singleowner_NonEnergyRevenue_non_energy_revenue_escal_nget(SAM_table ptr, SAM_error *err);
 
