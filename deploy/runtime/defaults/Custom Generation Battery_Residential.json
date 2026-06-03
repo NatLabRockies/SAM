@@ -8912,6 +8912,10 @@
     "batt_h_to_ambient": 7.5,
     "batt_initial_SOC": 50.0,
     "batt_inverter_efficiency_cutoff": 90.0,
+    "batt_itc_basis_cost": 9231.464459635201,
+    "batt_itc_basis_cost_fed_include": 1.0,
+    "batt_itc_basis_cost_sta_include": 1.0,
+    "batt_itc_basis_percent": 35.34265842986778,
     "batt_life_excl": 0.0,
     "batt_life_model": 0.0,
     "batt_lifetime_matrix": [
@@ -36321,6 +36325,27 @@
     "degradation": [
         0.0
     ],
+    "depr_basis_mat": [
+        [
+            1.0,
+            16888.4282415708,
+            64.65734157013222,
+            0.0,
+            0.0,
+            7.0
+        ],
+        [
+            2.0,
+            9231.464459635201,
+            35.34265842986778,
+            1.0,
+            1.0,
+            7.0
+        ]
+    ],
+    "depr_en_basis_mat": 1.0,
+    "depr_itc_fed_capex": 0.0,
+    "depr_itc_sta_capex": 0.0,
     "derate": 4.0,
     "dispatch_manual_btm_discharge_to_grid": [
         0.0,
@@ -45844,6 +45869,11 @@
     "inflation_rate": 2.5,
     "insurance_rate": 0.0,
     "is_btm": 1.0,
+    "itc_basis_cost_capex_fed": 9231.464459635201,
+    "itc_basis_cost_capex_sta": 9231.464459635201,
+    "itc_basis_cost_percent_fed": 35.34265842986778,
+    "itc_basis_cost_percent_sta": 35.34265842986778,
+    "itc_basis_percent_input": 0.0,
     "itc_fed_amount": [
         0.0
     ],
@@ -45857,6 +45887,7 @@
     "itc_fed_percent_maxvalue": [
         1e38
     ],
+    "itc_qualification_choice": 0.0,
     "itc_sta_amount": [
         0.0
     ],
@@ -63511,7 +63542,7 @@
         0.0
     ],
     "ptc_fed_escal": 0.0,
-    "ptc_fed_term": 10.0,
+    "ptc_fed_term": 0.0,
     "ptc_sta_amount": [
         0.0
     ],
@@ -63550,8 +63581,7 @@
     "salvage_percentage": 0.0,
     "salvage_value": 0.0,
     "scale_factor": 1.0,
-    "show_cash_incentives": 1.0,
-    "show_tax_credits": 1.0,
+    "show_itc_qualification": 1.0,
     "spec_mode": 0.0,
     "start_day_of_year": 3.335046e-317,
     "start_day_of_year_load_ui": 3.335046e-317,
@@ -63560,12 +63590,17 @@
     ],
     "system_capacity": 8.0,
     "system_capacity_combined": 0.0,
+    "system_itc_basis_cost": 16888.4282415708,
+    "system_itc_basis_cost_fed_include": 0.0,
+    "system_itc_basis_cost_sta_include": 0.0,
+    "system_itc_basis_percent": 64.65734157013222,
     "system_use_lifetime_output": 1.0,
     "total_battery_indirect_cost": 1827.3773276352002,
     "total_direct_cost": 16174.2914886,
     "total_indirect_cost": 9136.886638176,
     "total_installed_cost": 26119.892701206,
     "total_system_indirect_cost": 7309.5093105408,
+    "total_system_installed_cost": 16888.4282415708,
     "ui_annual_load": 0.0,
     "ui_batt_life_model": 0.0,
     "ui_copy_batt_discharge_percent_1": 25.0,

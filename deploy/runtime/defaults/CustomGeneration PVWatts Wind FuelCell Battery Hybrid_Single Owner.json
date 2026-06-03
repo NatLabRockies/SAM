@@ -31010,6 +31010,11 @@
         "ac_nameplate": 76923.07692307692,
         "analysis_period": 25.0,
         "analysis_period_warning": "",
+        "batt_basis_cost": 74460094.41528,
+        "batt_itc_basis_cost_fed_include": 1.0,
+        "batt_itc_basis_cost_include": 0.0,
+        "batt_itc_basis_cost_sta_include": 1.0,
+        "batt_itc_basis_percent": 12.029411289358498,
         "batt_power_discharge_max_kwac": 57600.0730368,
         "batt_salvage_percentage": 0.0,
         "batt_salvage_value": 0.0,
@@ -31097,6 +31102,10 @@
         "cp_capacity_payment_esc": 0.0,
         "cp_capacity_payment_type": 0.0,
         "cp_system_nameplate": 377.12307692307697,
+        "custom_generation_basis_cost": 112875000.0,
+        "customgeneration_itc_basis_cost_fed_include": 0.0,
+        "customgeneration_itc_basis_cost_sta_include": 0.0,
+        "customgeneration_itc_basis_percent": 18.235536899986817,
         "customgeneration_system_capacity": 100000.0,
         "customgeneration_total_installed_cost": 112875000.0,
         "debt_message": "",
@@ -31110,26 +31119,79 @@
         "depr_alloc_sl_20_percent": 0.0,
         "depr_alloc_sl_39_percent": 0.0,
         "depr_alloc_sl_5_percent": 0.0,
-        "depr_bonus_fed": 0.0,
+        "depr_allocation_choice": 0.0,
+        "depr_basis_mat": [
+            [
+                1.0,
+                112068500.0,
+                18.10524267620086,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                2.0,
+                317480100.0,
+                51.29054333166337,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                3.0,
+                74460094.41528,
+                12.029411289358498,
+                1.0,
+                1.0,
+                0.0
+            ],
+            [
+                4.0,
+                2100000.0,
+                0.3392658027904524,
+                1.0,
+                0.0,
+                0.0
+            ],
+            [
+                5.0,
+                112875000.0,
+                18.235536899986817,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                6.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        ],
+        "depr_bonus_fed": 100.0,
         "depr_bonus_fed_custom": 0.0,
         "depr_bonus_fed_macrs_15": 0.0,
         "depr_bonus_fed_macrs_5": 1.0,
-        "depr_bonus_fed_sl_15": 0.0,
-        "depr_bonus_fed_sl_20": 0.0,
+        "depr_bonus_fed_sl_15": 1.0,
+        "depr_bonus_fed_sl_20": 1.0,
         "depr_bonus_fed_sl_39": 0.0,
-        "depr_bonus_fed_sl_5": 0.0,
-        "depr_bonus_sta": 0.0,
+        "depr_bonus_fed_sl_5": 1.0,
+        "depr_bonus_sta": 100.0,
         "depr_bonus_sta_custom": 0.0,
         "depr_bonus_sta_macrs_15": 0.0,
         "depr_bonus_sta_macrs_5": 1.0,
-        "depr_bonus_sta_sl_15": 0.0,
-        "depr_bonus_sta_sl_20": 0.0,
+        "depr_bonus_sta_sl_15": 1.0,
+        "depr_bonus_sta_sl_20": 1.0,
         "depr_bonus_sta_sl_39": 0.0,
-        "depr_bonus_sta_sl_5": 0.0,
+        "depr_bonus_sta_sl_5": 1.0,
         "depr_custom_schedule": [
             0.0
         ],
+        "depr_en_basis_mat": 1.0,
         "depr_fedbas_method": 1.0,
+        "depr_itc_fed_capex": 0.0,
         "depr_itc_fed_custom": 0.0,
         "depr_itc_fed_macrs_15": 0.0,
         "depr_itc_fed_macrs_5": 1.0,
@@ -31137,6 +31199,7 @@
         "depr_itc_fed_sl_20": 0.0,
         "depr_itc_fed_sl_39": 0.0,
         "depr_itc_fed_sl_5": 0.0,
+        "depr_itc_sta_capex": 2.5,
         "depr_itc_sta_custom": 0.0,
         "depr_itc_sta_macrs_15": 0.0,
         "depr_itc_sta_macrs_5": 1.0,
@@ -39959,6 +40022,10 @@
         ],
         "flip_target_percent": 11.0,
         "flip_target_year": 10.0,
+        "fuel_cell_basis_cost": 2100000.0,
+        "fuel_cell_itc_basis_cost_fed_include": 1.0,
+        "fuel_cell_itc_basis_cost_sta_include": 0.0,
+        "fuel_cell_itc_basis_percent": 0.3392658027904524,
         "fuelcell_system_capacity": 200.0,
         "fuelcell_total_installed_cost": 2100000.0,
         "grid_curtailment": [
@@ -48728,7 +48795,11 @@
         ],
         "grid_curtailment_price_esc": 0.0,
         "grid_interconnection_limit_kwac": 20000.0,
+        "hybrid_basis_cost": 0.0,
         "hybrid_capital_cost": 0.0,
+        "hybrid_itc_basis_cost_fed_include": 0.0,
+        "hybrid_itc_basis_cost_sta_include": 0.0,
+        "hybrid_itc_basis_percent": 0.0,
         "ibi_fed_amount": 0.0,
         "ibi_fed_amount_deprbas_fed": 0.0,
         "ibi_fed_amount_deprbas_sta": 0.0,
@@ -48776,6 +48847,14 @@
         "inflation_rate": 2.5,
         "insurance_rate": 0.0,
         "is_btm": 0.0,
+        "itc_basis_cost": 0.0,
+        "itc_basis_cost_capex_fed": 76560094.41528,
+        "itc_basis_cost_capex_sta": 74460094.41528,
+        "itc_basis_cost_percent_fed": 12.368677092148952,
+        "itc_basis_cost_percent_sta": 12.029411289358498,
+        "itc_basis_depreciation_allocation": 0.0,
+        "itc_basis_percent_depr": 12.368677092148952,
+        "itc_basis_percent_input": 0.0,
         "itc_fed_amount": [
             0.0
         ],
@@ -48789,6 +48868,7 @@
         "itc_fed_percent_maxvalue": [
             1e38
         ],
+        "itc_qualification_choice": 0.0,
         "itc_sta_amount": [
             0.0
         ],
@@ -49452,6 +49532,7 @@
         "non_energy_expenses": [
             0.0
         ],
+        "non_energy_expenses_ds": 1.0,
         "non_energy_expenses_escal": 0.0,
         "non_energy_expenses_ret": [
             0.0
@@ -49459,11 +49540,14 @@
         "non_energy_revenue": [
             0.0
         ],
+        "non_energy_revenue_ds": 1.0,
         "non_energy_revenue_escal": 0.0,
         "non_energy_revenue_is_shown": 0.0,
         "non_energy_revenue_ret": [
             0.0
         ],
+        "non_itc_basis_depreciation_allocation": 0.0,
+        "non_itc_basis_percent_depr": 87.63132290785105,
         "om_capacity": 0.0,
         "om_fixed": 0.0,
         "om_production": 0.0,
@@ -49514,12 +49598,17 @@
             0.0
         ],
         "ptc_fed_escal": 0.0,
-        "ptc_fed_term": 10.0,
+        "ptc_fed_term": 0.0,
         "ptc_sta_amount": [
             0.0
         ],
         "ptc_sta_escal": 0.0,
         "ptc_sta_term": 10.0,
+        "pv_basis_cost": 112068500.0,
+        "pv_itc_basis_cost": 0.0,
+        "pv_itc_basis_cost_fed_include": 0.0,
+        "pv_itc_basis_cost_sta_include": 0.0,
+        "pv_itc_basis_percent": 18.10524267620086,
         "pv_total_installed_cost": 112068500.0,
         "rate_escalation": [
             0.0
@@ -49536,6 +49625,8 @@
         "show_DebtConstDSCR": 1.0,
         "show_ReserveAccounts": 1.0,
         "show_construction_period": 1.0,
+        "show_depr_alloc": 1.0,
+        "show_itc_qualification": 1.0,
         "solution_mode_message": "",
         "start_day_of_year": 3.335046e-317,
         "start_day_of_year_tod_ui": 3.335046e-317,
@@ -49543,6 +49634,7 @@
             7.0
         ],
         "system_capacity": 377123.07692307696,
+        "system_itc_basis_cost_include": 0.0,
         "term_int_rate": 7.0,
         "term_tenor": 18.0,
         "tod_library": "Uniform Dispatch",
@@ -49551,6 +49643,13 @@
         "ui_battery_cost": 74460094.41528,
         "ui_customgeneration_capacity": 100000.0,
         "ui_customgeneration_cost": 112875000.0,
+        "ui_depr_alloc_custom_percent": 0.0,
+        "ui_depr_alloc_macrs_15_percent": 0.0,
+        "ui_depr_alloc_macrs_5_percent": 0.0,
+        "ui_depr_alloc_sl_15_percent": 0.0,
+        "ui_depr_alloc_sl_20_percent": 0.0,
+        "ui_depr_alloc_sl_39_percent": 0.0,
+        "ui_depr_alloc_sl_5_percent": 0.0,
         "ui_electricity_rate_option": 0.0,
         "ui_fuel_cell_capacity": 200.0,
         "ui_fuel_cell_cost": 2100000.0,
@@ -50993,6 +51092,10 @@
         "ur_yearzero_usage_peaks": [
             0.0
         ],
+        "wind_basis_cost": 317480100.0,
+        "wind_itc_basis_cost_fed_include": 0.0,
+        "wind_itc_basis_cost_sta_include": 0.0,
+        "wind_itc_basis_percent": 51.29054333166337,
         "wind_system_capacity": 200000.0,
         "wind_total_installed_cost": 317480100.0
     }

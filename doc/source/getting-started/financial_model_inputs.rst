@@ -53,9 +53,9 @@ Financial Parameters: Financial structure, debt parameters, tax and insurance ra
 
 Incentives:
 
-* :doc:`Incentives <../incentives-and-depreciation/incentives>` (all models): Tax credits and cash incentives.
+* :doc:`Incentives <../incentives-and-depreciation/cash_incentives>` (all models): Tax credits and cash incentives.
 
-* :doc:`Depreciation <../incentives-and-depreciation/depreciation>` (commercial and PPA models): Accelerated depreciation tax benefit.
+* :doc:`Depreciation <../incentives-and-depreciation/tax_credits_depreciation>` (commercial and PPA models): Accelerated depreciation tax benefit.
 
 Electricity Rates and Load:
 

@@ -9011,6 +9011,10 @@
     "batt_h_to_ambient": 7.5,
     "batt_initial_SOC": 50.0,
     "batt_inverter_efficiency_cutoff": 90.0,
+    "batt_itc_basis_cost": 10142.2914886,
+    "batt_itc_basis_cost_fed_include": 1.0,
+    "batt_itc_basis_cost_sta_include": 1.0,
+    "batt_itc_basis_percent": 24.9206812316457,
     "batt_life_excl": 0.0,
     "batt_life_model": 0.0,
     "batt_lifetime_matrix": [
@@ -36485,6 +36489,27 @@
     "degradation": [
         0.0
     ],
+    "depr_basis_mat": [
+        [
+            1.0,
+            30556.0,
+            75.0793187683543,
+            0.0,
+            0.0,
+            7.0
+        ],
+        [
+            2.0,
+            10142.2914886,
+            24.9206812316457,
+            1.0,
+            1.0,
+            7.0
+        ]
+    ],
+    "depr_en_basis_mat": 1.0,
+    "depr_itc_fed_capex": 0.0,
+    "depr_itc_sta_capex": 0.0,
     "dispatch_manual_btm_discharge_to_grid": [
         0.0,
         0.0,
@@ -46044,6 +46069,11 @@
     "inverterarray_power_w": 6956.521739130436,
     "is_advanced": 0.0,
     "is_btm": 1.0,
+    "itc_basis_cost_capex_fed": 10142.2914886,
+    "itc_basis_cost_capex_sta": 10142.2914886,
+    "itc_basis_cost_percent_fed": 24.9206812316457,
+    "itc_basis_cost_percent_sta": 24.9206812316457,
+    "itc_basis_percent_input": 0.0,
     "itc_fed_amount": [
         0.0
     ],
@@ -46057,6 +46087,7 @@
     "itc_fed_percent_maxvalue": [
         1e38
     ],
+    "itc_qualification_choice": 0.0,
     "itc_sta_amount": [
         0.0
     ],
@@ -63746,7 +63777,7 @@
         0.0
     ],
     "ptc_fed_escal": 0.0,
-    "ptc_fed_term": 10.0,
+    "ptc_fed_term": 0.0,
     "ptc_sta_amount": [
         0.0
     ],
@@ -63819,8 +63850,7 @@
             0.0
         ]
     ],
-    "show_cash_incentives": 1.0,
-    "show_tax_credits": 1.0,
+    "show_itc_qualification": 1.0,
     "soiling": [
         0.0,
         0.0,
@@ -63850,6 +63880,10 @@
     "step": 3600.0,
     "subtotal_direct": 27484.087132,
     "system_capacity": 8.0,
+    "system_itc_basis_cost": 30556.0,
+    "system_itc_basis_cost_fed_include": 0.0,
+    "system_itc_basis_cost_sta_include": 0.0,
+    "system_itc_basis_percent": 75.0793187683543,
     "system_use_lifetime_output": 1.0,
     "tilt": 20.0,
     "total_battery_indirect_cost": 2368.0,
