@@ -460,3 +460,26 @@ You can also use `topic` to create a text box with a custom title. This can be u
   
    An AC degradation rate of 1% for a system with a net annual AC output of 100,000 kWh in Year one results in annual output values of 100,000 kWh in year 1, 99,000 kWh in year 2, 98,010 kWh in year 3, 97,029.9 kWh in year 4, etc.
 ```
+
+## Literal Blocks
+
+A literal or code block is indented and preceded by `::`.
+
+This results in "This is some code:" (colon is appended to end of line):
+
+```
+This is some code::
+
+	One line of code.
+	Another line of code.
+	And so on.
+```
+
+This is just a literal block:
+
+```
+::
+	First line.
+	Second line.
+	Third line.
+```
