@@ -1650,44 +1650,44 @@ addpage( [[ 'Thermal Rate' ]],
 // Geothermal Power ////////////////////////////////////////////////////////////
 
 setconfig( 'Geothermal Power', 'Leveraged Partnership Flip' );
-setmodules( ['geothermal', 'grid', 'utilityrate5', 'levpartflip']);
+setmodules( ['geothermal', 'grid', 'levpartflip']);
 setup_geothermal_power_pages();
 addpage( [[ 'Geothermal Costs' ]], { 'sidebar'='Installation Costs', 'help'='installation-costs/cc_geothermal' } );
 addpage( [[ 'Operating Costs', 'Geothermal OM Costs' ]], {'sidebar' = 'Operating Costs', 'help'='operating-costs/oc_operating'} );
 setup_leveraged_partnership_flip_pages();
-setup_electricity_purchases();
+
 
 setconfig( 'Geothermal Power', 'All Equity Partnership Flip' );
-setmodules( ['geothermal', 'grid', 'utilityrate5', 'equpartflip']);
+setmodules( ['geothermal', 'grid', 'equpartflip']);
 setup_geothermal_power_pages();
 addpage( [[ 'Geothermal Costs' ]], { 'sidebar'='Installation Costs', 'help'='installation-costs/cc_geothermal' } );
 addpage( [[ 'Operating Costs', 'Geothermal OM Costs' ]], {'sidebar' = 'Operating Costs', 'help'='operating-costs/oc_operating'} );
 setup_all_equity_partnership_flip_pages();
-setup_electricity_purchases();
+
 
 setconfig( 'Geothermal Power', 'Sale Leaseback' );
-setmodules( ['geothermal', 'grid', 'utilityrate5', 'saleleaseback']);
+setmodules( ['geothermal', 'grid', 'saleleaseback']);
 setup_geothermal_power_pages();
 addpage( [[ 'Geothermal Costs' ]], { 'sidebar'='Installation Costs', 'help'='installation-costs/cc_geothermal' } );
 addpage( [[ 'Operating Costs', 'Geothermal OM Costs' ]], {'sidebar' = 'Operating Costs', 'help'='operating-costs/oc_operating'} );
 setup_sale_leaseback_pages();
-setup_electricity_purchases();
+
 
 setconfig( 'Geothermal Power', 'Single Owner' );
-setmodules( ['geothermal', 'grid', 'utilityrate5', 'singleowner']);
+setmodules( ['geothermal', 'grid', 'singleowner']);
 setup_geothermal_power_pages();
 addpage( [[ 'Geothermal Costs' ]], { 'sidebar'='Installation Costs', 'help'='installation-costs/cc_geothermal' } );
 addpage( [[ 'Operating Costs', 'Geothermal OM Costs' ]], {'sidebar' = 'Operating Costs', 'help'='operating-costs/oc_operating'} );
 setup_single_owner_pages();
-setup_electricity_purchases();
+
 
 setconfig( 'Geothermal Power', 'Merchant Plant' );
-setmodules( ['geothermal', 'grid', 'utilityrate5', 'merchantplant']);
+setmodules( ['geothermal', 'grid', 'merchantplant']);
 setup_geothermal_power_pages();
 addpage( [[ 'Geothermal Costs' ]], { 'sidebar'='Installation Costs', 'help'='installation-costs/cc_geothermal' } );
 addpage( [[ 'Operating Costs', 'Geothermal OM Costs' ]], {'sidebar' = 'Operating Costs', 'help'='operating-costs/oc_operating'} );
 setup_merchant_plant_pages();
-setup_electricity_purchases();
+
 
 setconfig( 'Geothermal Power', 'LCOE Calculator' );
 setmodules( ['geothermal',  'grid', 'lcoefcr']);
