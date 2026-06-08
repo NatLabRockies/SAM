@@ -1,9 +1,9 @@
 
 #. Click the grey and blue Value/Sched button so **Sched** is highlighted in blue. SAM replaces the variable's value with an Edit button.
 
-.. image:: /images/SS_AnnSched-SchedEdit.png
-   :align: center
-   :alt: SS_AnnSched-SchedEdit.png
+   .. image:: /images/SS_AnnSched-SchedEdit.png
+      :align: center
+      :alt: SS_AnnSched-SchedEdit.png
 
 #. Click **Edit**.
 

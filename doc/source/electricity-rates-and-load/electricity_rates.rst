@@ -11,10 +11,7 @@ In order to calculate the electricity bill savings, SAM calculates the both the 
 
 .. note:: If you are modeling a rate switching scenario, where the electricity rate structure for the electricity bill without the system is different from the rate structure for the bill with the system, you can use the **Value of RE** :doc:`macro <../reference/macros>` to specify two different electricity rates and calculate key metrics based on the results of two separate simulations.
 
-Electricity Rates and Self Consumption
-......................................
-
-For photovoltaic systems with inverters that consume power at night or concentrating power systems (CSP) with night-time parasitic loads, the system may generate net negative power at night or during other times that the system is not generating power. For behind-the-meter projects, the cost of this power is included in the energy charge portion of the monthly electricity bill. For front-of-meter projects with or without batteries, the cost of this power is treated as a tax-deductible operating expense at prices determined by inputs on the :doc:`Electricity Purchases <electricity_purchases>` page.
+   For photovoltaic systems with inverters that consume power at night or concentrating power systems (CSP) with night-time parasitic loads, the system may generate net negative power at night or during other times that the system is not generating power. For behind-the-meter projects, the cost of this power is included in the energy charge portion of the monthly electricity bill. For front-of-meter projects with or without batteries, the cost of this power is treated as a tax-deductible operating expense at prices determined by inputs on the :doc:`Electricity Purchases <electricity_purchases>` page.
 
 .. _electricity-rates-overview:
 
@@ -25,13 +22,13 @@ SAM's rate structure model is designed to have enough detail to model most featu
  
 .. note:: SAM can import retail electricity rate data from the online `OpenEI Utility Rate Database <https://en.openei.org/wiki/Utility_Rate_Database>`__ database.
 
-.. note:: All rates and charges on the Electricity Rates page are in Year 1 dollars. SAM applies both the inflation rate from the :doc:`Financial Parameters <../financial-parameters/fin_overview>` page and the optional electricity bill escalation rate to calculate the electricity bill in Years 2 and later.
+   All rates and charges on the Electricity Rates page are in Year 1 dollars. SAM applies both the inflation rate from the :doc:`Financial Parameters <../financial-parameters/fin_overview>` page and the optional electricity bill escalation rate to calculate the electricity bill in Years 2 and later.
 
-.. note:: The electricity rate calculations work with the data from the :doc:`Electric Load <electricity_load>` page. Be sure to specify a load that is appropriate for your project. Choose the No Load option on the Electric Load page only if your project sells all of the power it generates at the sell rates specified on the Electricity Rates page. The No Load option in combination with net metering results in a project that sells no power because the sell rate is set to zero for net metering.
+   The electricity rate calculations work with the data from the :doc:`Electric Load <electricity_load>` page. Be sure to specify a load that is appropriate for your project. Choose the No Load option on the Electric Load page only if your project sells all of the power it generates at the sell rates specified on the Electricity Rates page. The No Load option in combination with net metering results in a project that sells no power because the sell rate is set to zero for net metering.
 
-.. note:: The electricity bill does not affect the project's :doc:`levelized cost of energy (LCOE) <../financial-metrics/mtf_lcoe>`, because the LCOE accounts for the cost of installing and operating the renewable energy system, but not the cost supplying electricity to the building or facility. The electricity bill does affect the project :doc:`net present value (NPV) <../financial-metrics/mtf_npv>`, :doc:`payback period <../financial-metrics/mtf_payback>`, and :doc:`net savings <../financial-metrics/mtf_revenues>`.
+   The electricity bill does not affect the project's :doc:`levelized cost of energy (LCOE) <../financial-metrics/mtf_lcoe>`, because the LCOE accounts for the cost of installing and operating the renewable energy system, but not the cost supplying electricity to the building or facility. The electricity bill does affect the project :doc:`net present value (NPV) <../financial-metrics/mtf_npv>`, :doc:`payback period <../financial-metrics/mtf_payback>`, and :doc:`net savings <../financial-metrics/mtf_revenues>`.
 
-.. note:: SAM assumes that the first day of the year is Monday, January 1 and does not account for leap years or for daylight savings time. (The last day is Monday, December 31).
+   SAM assumes that the first day of the year is Monday, January 1 and does not account for leap years or for daylight savings time. (The last day is Monday, December 31).
 
 .. _electricity-rates-glossary:
 
@@ -51,7 +48,7 @@ The language used to describe electricity rate structures and compensation for e
 
   SAM reports excess generation for the net energy metering option as **Excess generation** in kilowatt-hours per month. For the net billing options that calculate excess generation on a time step basis, SAM reports excess generation as **Electricity to grid from system** in kilowatts for each time step.
 
-.. note:: SAM reports both **Excess generation** and **Electricity to grid from system** regardless of the billing option. Keep in mind that **Excess generation** is only used in the bill calculation for the net energy metering option and **Electricity to grid from system** is only used for the net billing options.
+  .. note:: SAM reports both **Excess generation** and **Electricity to grid from system** regardless of the billing option. Keep in mind that **Excess generation** is only used in the bill calculation for the net energy metering option and **Electricity to grid from system** is only used for the net billing options.
 
 **Flat rate**
   A constant rate that does not change with hour of day or month of year.
@@ -167,8 +164,7 @@ OpenEI Utility Rate Database
 NLR's Open Energy Information (OpenEI) `Utility Rate Database (URDB) <https://openei.org/wiki/Utility_Rate_Database>`__ hosts a database of retail electricity rate structures for electric service providers in the United States and some other countries. SAM allows you to search the database and import rate structure data from the database to the input variables on the Electricity Rates page. SAM accesses `Version 8 of the URDB API <https://openei.org/services/doc/rest/util_rates/?version=8>`__.
 
 **Search for Rates**
-
-  Click to search the OpenEI database for a rate structure and import the structure into SAM. This feature requires a :doc:`web connection <../reference/configure_proxy_server>`  :
+  Click to search the OpenEI database for a rate structure and import the structure into SAM. This feature requires a :doc:`web connection <../reference/configure_proxy_server>`:
 
   #. In the OpenEI Utility Rate Database window, once the list of electric service providers appears, type either a zip code in **Zip code** or a few letters of the service provider's name in **Filter** to show providers who meet the criteria you typed.
 
@@ -184,9 +180,9 @@ NLR's Open Energy Information (OpenEI) `Utility Rate Database (URDB) <https://op
 
 .. note:: SAM does not use location information from the weather file to determine the utility service provider for your analysis. You can type a zip code in the OpenEI Utility Rate Database window to list service providers for a particular address.
 
-.. note:: In some cases, the data in the OpenEI database may be incorrect. This is especially true for rates structures with **ratcheting demand rates**. Be sure to compare the data you import to the information on the utility service provider's rate sheet. For information about contacting the database team, see https://openei.org/wiki/OpenEI:About.
+   In some cases, the data in the OpenEI database may be incorrect. This is especially true for rates structures with **ratcheting demand rates**. Be sure to compare the data you import to the information on the utility service provider's rate sheet. For information about contacting the database team, see https://openei.org/wiki/OpenEI:About.
 
-.. note:: Some rate structures have elements or use units that SAM cannot model, such as a fixed charge in $/day units. In this case, SAM displays a red message "This rate from the URDB contains items that SAM's electricity bill calculator does not consider. See Unused Items below. If you see that message, expand the Unused Items panel at the bottom of the page to see the unused information, and if necessary, modify the rate inputs to approximate the item. For example, you could multiply the $/day fixed charge by 365 days/yr ÷ 12 months/yr to estimate a value to add to SAM's fixed monthly charge input.
+   Some rate structures have elements or use units that SAM cannot model, such as a fixed charge in $/day units. In this case, SAM displays a red message "This rate from the URDB contains items that SAM's electricity bill calculator does not consider. See Unused Items below. If you see that message, expand the Unused Items panel at the bottom of the page to see the unused information, and if necessary, modify the rate inputs to approximate the item. For example, you could multiply the $/day fixed charge by 365 days/yr ÷ 12 months/yr to estimate a value to add to SAM's fixed monthly charge input.
 
 Save / Load Rate Data
 ~~~~~~~~~~~~~~~~~~~~~
@@ -195,7 +191,7 @@ You can save and load utility rate structure data from SAM to a text file of com
 
 .. note:: To see what the file format looks like, save the current rate to a file and open it with a spreadsheet program or text editor.
 
-.. note:: You can import and export each individual time-of-use rate table separately using the **Import** and **Export** buttons next to each table.
+   You can import and export each individual time-of-use rate table separately using the **Import** and **Export** buttons next to each table.
 
 **Save rate to file**
   Save the values of all input variables on the Electricity Rates to a text file. Use the .csv   file extension when you save the file.
@@ -239,7 +235,7 @@ The metering and billing options determine how SAM calculates the monthly electr
 **Buy all /sell all**
   For the buy all / sell all option, specify the buy rate(s) and sell rate(s) in the Energy Charges table and use the weekday/weekend schedules to define any time-of-use periods as described below.
 
-.. note:: For front-of-meter system electricity purchases, the sell rate is disabled because all electricity sales are at the power price on the Revenue or Financial Parameters page.
+  .. note:: For front-of-meter system electricity purchases, the sell rate is disabled because all electricity sales are at the power price on the Revenue or Financial Parameters page.
 
   Alternatively, you can provide time series buy and sell rates to use instead of the rates in the Energy Charges table. Note that you can combine time series buy rates with TOU sell rates and vice versa: 
 
@@ -263,14 +259,14 @@ Minimum charges apply when either the monthly or annual electricity bill falls b
 **Monthly minimum charge, $**
   If the monthly electricity bill with system for a given month is less than the monthly minimum, the bill for that month is the monthly minimum charge.
 
-.. note:: If the monthly bill is negative due to the value of excess generation, the monthly minimum charge decreases the value of excess generation. SAM does not force the negative bill amount to the minimum charge.
+  .. note:: If the monthly bill is negative due to the value of excess generation, the monthly minimum charge decreases the value of excess generation. SAM does not force the negative bill amount to the minimum charge.
 
 **Annual minimum charge, $**
   The minimum annual charge for Year 1. If the annual electricity bill with system for Year 1 is less than the minimum value, SAM sets the Year 1 annual bill to the minimum value. For the purposes of the annual minimum charge, the year starts January 1 and ends December 31. The annual minimum charge does not affect the monthly electricity bill.
 
-.. note:: If the annual bill is negative due to the value of excess generation, the annual minimum charge decreases the value of excess generation. SAM does not force the negative bill amount to the minimum charge.
+  .. note:: If the annual bill is negative due to the value of excess generation, the annual minimum charge decreases the value of excess generation. SAM does not force the negative bill amount to the minimum charge.
 
-.. note:: Like all of the dollar values on the Electricity Rates page, the minimum charge amounts are Year 1 values. If you apply an annual minimum charge, the monthly electricity bill with system data shown in the :doc:`Results <electricity_bill_results>` does not reflect the annual minimum charge.
+     Like all of the dollar values on the Electricity Rates page, the minimum charge amounts are Year 1 values. If you apply an annual minimum charge, the monthly electricity bill with system data shown in the :doc:`Results <electricity_bill_results>` does not reflect the annual minimum charge.
 
 Annual Escalation
 ~~~~~~~~~~~~~~~~~
@@ -284,7 +280,7 @@ The escalation rate is an annual percentage increase that applies to the monthly
 
   In some cases, it may be appropriate to use an annual schedule to define a different escalation rate for each year. When you specify the escalation rate using an annual schedule, SAM applies only the escalation rate and excludes inflation from the calculation of out-year values.
 
-To specify annual escalation rates (optional):
+**To specify annual escalation rates (optional):**
 
 .. include:: ../includes/snip_annual_values.rst
 
@@ -331,7 +327,7 @@ Each row in the table defines the rates and tier limit for one period and tier. 
 **Number of entries**
   The total number of energy rates in the structure, equal to the product of the number of time-of-use periods and tiers. The number of rows in the table is equal to the number of entries. When you change the number of entries, SAM changes the number of rows in the table.
 
-.. note:: If you change the number of entries to a smaller number, you will lose data in the rows when SAM resizes the table.
+  .. note:: If you change the number of entries to a smaller number, you will lose data in the rows when SAM resizes the table.
 
 **Period (1-36)**
   Each period number represents a time-of-use period for energy charges. For example, for a simple rate structure with one summer period and one period, you could assign Period 1 to the summer months and Period 2 to the winter months. The time-of-use period must be a number between 1 and 36 and each period must be associated with a time defined by the :doc:`weekday and weekend schedules <../reference/weekday_schedule>`  .
@@ -355,7 +351,7 @@ Each row in the table defines the rates and tier limit for one period and tier. 
 
   For maximum usage units of kWh/kW or kWh/kW daily, SAM calculates the energy charge for a given month from both the total consumption in kWh and billing demand in kW for each time-of-use period and tier in that month. See :ref:`Billing Demand <electricity-rates-billing-demand>` for details.
 
-.. note:: For rate structures that include tiers with kWh/kW or kWh/kW daily maximum usage units, the maximum usage units for Tier 1 must be kWh/kW.
+  .. note:: For rate structures that include tiers with kWh/kW or kWh/kW daily maximum usage units, the maximum usage units for Tier 1 must be kWh/kW.
 
 **Buy ($/kWh)**
   The price paid by the project in dollars per kilowatt-hour for electricity delivered by the grid for each period and tier.
@@ -391,7 +387,7 @@ For a **simple rate structure with no time-of-use periods or tiers**:
 
 * Use Period 1 Tier 1 to define the buy and sell rates. 
 
-For the single meter with rollover metering options (net metering), SAM ignores the sell rate, but you should set it to zero to avoid confusion.
+  For the single meter with rollover metering options (net metering), SAM ignores the sell rate, but you should set it to zero to avoid confusion.
 
 * Set the time-of-use periods for all months and hours in the Weekday and Weekend schedules to 1.
 
@@ -399,7 +395,7 @@ For the single meter with rollover metering options (net metering), SAM ignores 
    :align: center
    :alt: SS_UtilityRate-simple-flat-rate.png
 
-For a rate structure with** time-of-use rates but no tiered rates**, set the number of entries to the number of time-of-use periods, and assign buy and sell rates *only to Tier 1* of each of up to twelve time-of-use periods in the schedule, and set the maximum usage value to a very large number (1e+038 is the largest number SAM will accept). Then, use the Weekday and Weekend schedules to define the time of day and year that each time-of-use period applies. This example has three time-of-use periods:
+For a rate structure with **time-of-use rates but no tiered rates**, set the number of entries to the number of time-of-use periods, and assign buy and sell rates *only to Tier 1* of each of up to twelve time-of-use periods in the schedule, and set the maximum usage value to a very large number (1e+038 is the largest number SAM will accept). Then, use the Weekday and Weekend schedules to define the time of day and year that each time-of-use period applies. This example has three time-of-use periods:
 
 .. image:: ../images/SS_UtilityRate-simple-tou-rate.png
    :align: center
@@ -451,9 +447,9 @@ For rate structures that calculate billing demand based on consumption in previo
 **Edit values**
   to enter the peak load in kW for each month in Year 0.
        
-.. note:: If you clear the Use Monthly Peaks from Year 1 option and change the load on the Electric Load page, be sure to also change the Year 0 values as appropriate.
+  .. note:: If you clear the Use Monthly Peaks from Year 1 option and change the load on the Electric Load page, be sure to also change the Year 0 values as appropriate.
 
-This option is only available for behind-the-meter projects with the Input Time Series Load Data option enabled on the Electric Load page.
+  This option is only available for behind-the-meter projects with the Input Time Series Load Data option enabled on the Electric Load page.
 
 **Monthly peak demand in Year 0, kW**
   The monthly peak demand for the year before the renewable energy system is installed. SAM starts the cash flow calculation on January 1 of Year 1, which is the first year that the system generates power, so it does not have information about the load in the previous year.
@@ -486,7 +482,7 @@ The Billing Demand by Time-of-use Period table applies when the rate structure i
 **Included in Billing Demand (0/1)**
   For each time-of-use period, assign a 1 to include consumption in that period in the billing demand calculation. Assign a zero to exclude consumption in that period from the billing demand calculation.
 
-.. note:: You must assign a 1 to at least one time-of-use period for the demand charge calculations to work correctly, even if the **Charge ($/kW)** column in the   Demand Rates by Time-of-use Period and/or Tiers table is set to zero.. note:: for all periods.
+.. note:: You must assign a 1 to at least one time-of-use period for the demand charge calculations to work correctly, even if the **Charge ($/kW)** column in the   Demand Rates by Time-of-use Period and/or Tiers table is set to zero for all periods.
 
 .. _electricity-rates-demand:
 
@@ -516,7 +512,7 @@ For a basic demand rate with no tiers, set the number of entries to 12 (one for 
 
   For a demand rate structure with tiers, the number of entries should be the total number of tiers. The number of rows in the table is equal to the number of entries. When you change the number of entries, SAM changes the number of rows in the table.
 
-.. note:: If you change the number of entries to a smaller number, you will lose data in the rows when SAM resizes the table.
+  .. note:: If you change the number of entries to a smaller number, you will lose data in the rows when SAM resizes the table.
 
 **Month**
   The month for the demand rate. For a flat demand rate structure with no tiers, the table should have one row for each month of the year.
@@ -558,7 +554,7 @@ For a demand rate structure that varies with time of day and year with tiers, sp
 **Number of entries**
   The total number of time-of-use periods and tiers the demand rate structure. SAM sizes the table based on the number of entries.  The number of rows in the table is equal to the number of entries. When you change the number of entries, SAM changes the number of rows in the table.
 
-.. note:: If you change the number of entries to a smaller number, you will lose data in the rows when SAM resizes the table.
+  .. note:: If you change the number of entries to a smaller number, you will lose data in the rows when SAM resizes the table.
 
 **Period (1-12)**
   The time-of-use period must be a number between 1 and 12, and must also be defined in the either the :doc:`weekday or weekend schedule <../reference/weekday_schedule>`  . If tiers apply to a time-of-use period, assign the same period number to each tier in the period.

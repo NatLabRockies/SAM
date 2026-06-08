@@ -118,7 +118,7 @@ The Building Energy Load Profile Estimator is a basic residential building model
 
 .. note:: The Building Energy Load Profile Estimator generates a rough estimate of a residential building's electric load. Click **View load data** to see the data it generates and verify that it is suitable for your analysis before you run a simulation. In some cases, it may generate extreme peak values for some hours that you can either ignore or edit. 
 
-To use the estimator
+**To use the estimator:**
 
 * Enter values and choose options to describe the residential building's basic energy performance.
 
@@ -179,7 +179,7 @@ Importing Data from a File
 
 SAM can import data from a text file that contains a single column of values representing the load in a single year. SAM ignores the first row, so you can use that row to store text describing the data. The number of rows depends on the number of time steps. For hourly data, the file should contain a total of 8,761 rows: The first row for header information, and the remaining rows for the load data. For 15-minute data, the file should contain 1 + 8760 x 4 = 35,041 rows.
 
-To import load data from a properly formatted text file:
+**To import load data from a properly formatted text file:**
 
 #. On the Electric Load page, choose the **Input Time Series Load Data** option.
 
@@ -189,7 +189,7 @@ To import load data from a properly formatted text file:
 
 #. Navigate to the folder containing the load data file and open the file.
 
-SAM displays the data in the data table. Use the scroll bar to see all of the data.
+   SAM displays the data in the data table. Use the scroll bar to see all of the data.
 
 #. Click **OK** to return to the Electric Load page.
 
@@ -202,7 +202,7 @@ Pasting Load Data from your Computer's Clipboard
 
 If you have load data in a spreadsheet or other program that allows you to copy columns of data to your computer's clipboard, you can paste the data into SAM. The data should be a single column of values in kilowatt-hours representing the load in a single year. The number of rows depends on the number of time steps. For hourly data, the column should contain 8,760 rows of load data.
 
-To paste load data from your computer's clipboard:
+**To paste load data from your computer's clipboard:**
 
 #. On the Electric Load page, choose the **Input Time Series Load Data** option.
 
@@ -212,6 +212,6 @@ To paste load data from your computer's clipboard:
 
 #. In SAM's Edit Data window, click **Paste**.
 
-SAM displays the data in the data table. Use the scroll bar to see all of the data.
+   SAM displays the data in the data table. Use the scroll bar to see all of the data.
 
 #. Click **OK** to return to the Electric Load page.
