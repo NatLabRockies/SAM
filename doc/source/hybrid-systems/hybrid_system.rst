@@ -6,7 +6,7 @@ The Hybrid System page shows values AC capacity values from other input pages to
 To change any of the capacity values shown on the Hybrid System page, go to the subsystem page shown in the descriptions below.
 
 Generation Capacity
-...................
+~~~~~~~~~~~~~~~~~~~
 
 The AC generation capacity of each subsystem in the hybrid system.
 
@@ -29,7 +29,7 @@ The AC generation capacity of each subsystem in the hybrid system.
   Custom generation profile system nameplate capacity, **Nameplate Capacity** from the :doc:`Generation Profile <../custom-generation/custom_generation_profile>`   page.
 
 Total Generation Capacity
-.........................
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The total nameplate capacity of the hybrid system, calculated as the sum of nameplate capacities of subsystems included in the hybrid system.
 
@@ -37,9 +37,9 @@ The total nameplate capacity of the hybrid system, calculated as the sum of name
   The nameplate capacity of the hybrid system. Used for operation and maintenance costs specified in $/kW-year on the :doc:`Hybrid System costs <hybrid_system_costs>`   page, and to calculate capacity-based incentives on the :doc:`Incentives <../incentives-and-depreciation/cash_incentives>`   page.
 
 Storage Capacity
-................
+~~~~~~~~~~~~~~~~
 
 The AC power capacity of the battery storage system.
 
 **Battery maximum discharge rate, kWac**
-  The battery's maximum AC discharge rate, Maximum discharge power (AC) from the :doc:`Battery Cell and System <../battery-storage/battery_storage_btm>`   page.
+  The battery's maximum AC discharge rate, Maximum discharge power (AC) from the :doc:`Battery Cell and System <../battery-storage/battery_storage>`   page.

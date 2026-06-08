@@ -13,7 +13,7 @@ The fuel cell performance model uses the following input pages to describe the c
 
 * :doc:`Fuel cell <fuelcell_fuel_cell>` model that converts a fuel into electricity, heat, and hydrogen.
 
-* :doc:`PVWatts <fuelcell_pv_system>` for a photovoltaic (PV) system.
+* :doc:`PVWatts <../pvwatts/pvwatts>` for a photovoltaic (PV) system.
 
 * Optional :doc:`battery storage <../battery-storage/battery_storage>` model for an electric storage system.
 

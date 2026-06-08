@@ -9,7 +9,7 @@ When you start SAM, it displays the Welcome page with options for starting your 
    :align: center
    :alt: SS_Welcome_Window.png
 
-To start a new project:
+**To start a new project:**
 
 #. Click **Start a new project**.
 
