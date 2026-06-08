@@ -483,3 +483,8 @@ This is just a literal block:
 	Second line.
 	Third line.
 ```
+
+## File Names and Paths
+
+Use backticks (\`) to enclose file names or paths like `C:\SAM\2025.4.16`.
+
