@@ -9,15 +9,15 @@ The resource libraries are lists of weather files on your computer. As you work 
 
 The list of weather file folders lists folders on your computer that contain weather files that SAM scans to create the library.
 
-The Folder for Downloaded Files is a folder that you designate for SAM to store weather files it downloads. SAM also scans this folder and adds any weather files it finds to the library. By default, the folder is <user>/SAM Downloaded Weather Files, where <user> is your computer's user folder.
+**Folder for Downloaded Files** is a folder that you designate for SAM to store weather files it downloads. SAM scans this folder in addition to the ones you add for valid weawther files. By default, the folder is `<user>/SAM Downloaded Weather Files`, where `<user>` is your computer's user folder.
 
 .. image:: ../images/SS_FolderSettings-window.png
    :align: center
    :alt: SS_FolderSettings-window.png
 
-SAM comes with a default weather file folder in the SAM installation folder that stores a few weather files for the default configurations that SAM uses when you create a new project or case. You should avoid storing your own weather files in the default folder because you may lose them when you remove SAM or update to a new version of the software
+SAM comes with a special weather file folder in the SAM installation folder that stores a few weather files for the default configurations that SAM uses when you create a new project or case. You should avoid storing your own weather files in this special folder because you may lose them when you remove SAM or update to a new version of the software
 
-SAM stores list of weather files shown in the libraries in special CSV files named SolarResourceData.csv, WindResourceData.csv, etc. that SAM creates when you first install it and updates as you add and remove files from the folders. These special files are stored in your operating system's application data folder, which is a hidden folder used by the programs on your computer. The library files contain a list of the weather files in your weather file folders with summary information from each file that SAM displays on the Location and Resource or Wind Resource input pages. You should not modify these files. If you delete them, SAM automatically regenerates them the next time you start the software.
+SAM stores list of weather files shown in the libraries in CSV files named SolarResourceData.csv, WindResourceData.csv, etc. that SAM creates when you first install it and updates as you add and remove files from the folders. These files are stored in your operating system's application data folder, which is a hidden folder used by the programs on your computer. The library files contain a list of the weather files in your weather file folders with summary information from each file that SAM displays on the Location and Resource or Wind Resource input pages. You should not modify these files. If you delete them, SAM automatically regenerates them the next time you start the software.
 
 .. _foldersettings:
 
@@ -67,4 +67,3 @@ To specify the folder for weather files you download with the Download Weather D
 .. image:: ../images/SS_WeatherFileFolderDownload.png
    :align: center
    :alt: SS_WeatherFileFolderDownload.png
-
