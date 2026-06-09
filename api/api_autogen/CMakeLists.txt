@@ -234,6 +234,12 @@ if (MSVC)
     )
     endforeach( file_i )
 
+    add_custom_command(
+        TARGET export_config
+        PRE_BUILD
+        COMMAND ${CMAKE_COMMAND}
+        ARGS -E rm -rf ${CMAKE_CURRENT_SOURCE_DIR}/library/defaults
+    )
 
 	add_custom_command(
 		TARGET export_config
