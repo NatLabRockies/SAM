@@ -13,18 +13,18 @@ SAM provides two options for defining the retail rate structure for electricity 
 **Use PPA or market prices**
   The **Use PPA Price** option is for projects that purchase power at the same rate as the PPA price, adjusted as appropriate by time-of-delivery (TOD) multipliers and power price escalation rates.
 
-.. note:: The Use PPA Price or Market Prices option is not available with **Specify IRR target** on the Revenue page (Financial Parameters page for Partnership Flip and Sale Leaseback financial models) because SAM needs to know the PPA price at the start of the simulation to calculate the cost of electricity purchases.
+  .. note:: The Use PPA Price or Market Prices option is not available with **Specify IRR target** on the Revenue page (Financial Parameters page for Partnership Flip and Sale Leaseback financial models) because SAM needs to know the PPA price at the start of the simulation to calculate the cost of electricity purchases.
 
-.. note:: If you want to use the Specify IRR Target option with the PPA price as the price for electricity purchases, choose **Use retail electricity rate(s)**, define an energy rate table with one row, and set the buy rate to the PPA price. You may need to start with an initial guess for the PPA price and run iterative simulations to determine the PPA price. To use time series price data, check **Use hourly (subhourly) buy rates instead of TOU rates** and import the price data.
+   If you want to use the Specify IRR Target option with the PPA price as the price for electricity purchases, choose **Use retail electricity rate(s)**, define an energy rate table with one row, and set the buy rate to the PPA price. You may need to start with an initial guess for the PPA price and run iterative simulations to determine the PPA price. To use time series price data, check **Use hourly (subhourly) buy rates instead of TOU rates** and import the price data.
 
 **Use retail electricity rate(s)**
   The Use Retail Electricity Rate(s) option is for projects that purchase power at retail rates. You can define the retail buy rate as a fixed rate, a set of time-of-use rates with optional tiers, or a table of hourly or subhourly time-series buy rates. The retail rate structure may also include fixed and minimum charges and demand charges.
 
   You can specify the rate structure by hand or download rate data from the OpenEI Utility Rate Database.
  
-.. note:: Only the **Buy all / sell all** metering option with no sell rate is available for electricity purchases.
+  .. note:: Only the **Buy all / sell all** metering option with no sell rate is available for electricity purchases.
 
-.. note:: SAM uses the same inputs to define retail rates for electricity purchases as it does for behind-the-meter projects that may involve net metering and/or sell rates that are described in the retail rates documentation below. For the front-of-meter system, these inputs are disabled, so you can ignore the descriptions.
+   SAM uses the same inputs to define retail rates for electricity purchases as it does for behind-the-meter projects that may involve net metering and/or sell rates that are described in the retail rates documentation below. For the front-of-meter system, these inputs are disabled, so you can ignore the descriptions.
 
 Rate Structure Definitions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -43,6 +43,7 @@ SAM's monthly electricity bill calculator includes the features listed below. Th
 
 OpenEI Utility Rate Database
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 NREL's Open Energy Information (OpenEI) `Utility Rate Database (URDB) <https://openei.org/wiki/Utility_Rate_Database>`__ hosts a database of retail electricity rate structures for electric service providers in the United States and some other countries. SAM allows you to search the database and import rate structure data from the database to the input variables on the Electricity Rates page. SAM accesses `Version 8 of the URDB API <https://openei.org/services/doc/rest/util_rates/?version=8>`__.
 
 **Search for Rates**
@@ -62,9 +63,9 @@ NREL's Open Energy Information (OpenEI) `Utility Rate Database (URDB) <https://o
 
 .. note:: SAM does not use location information from the weather file to determine the utility service provider for your analysis. You can type a zip code in the OpenEI Utility Rate Database window to list service providers for a particular address.
 
-.. note:: In some cases, the data in the OpenEI database may be incorrect. This is especially true for rates structures with **ratcheting demand rates**. Be sure to compare the data you import to the information on the utility service provider's rate sheet.
+   In some cases, the data in the OpenEI database may be incorrect. This is especially true for rates structures with **ratcheting demand rates**. Be sure to compare the data you import to the information on the utility service provider's rate sheet.
 
-.. note:: Some rate structures have elements or use units that SAM cannot model, such as a fixed charge in $/day units. In this case, SAM displays a red message "This rate from the URDB contains items that SAM's electricity bill calculator does not consider. See Unused Items below. If you see that message, expand the Unused Items panel at the bottom of the page to see the unused information, and if necessary, modify the rate inputs to approximate the item. For example, you could multiply the $/day fixed charge by 365 days/yr ÷ 12 months/yr to estimate a value to add to SAM's fixed monthly charge input.
+   Some rate structures have elements or use units that SAM cannot model, such as a fixed charge in $/day units. In this case, SAM displays a red message "This rate from the URDB contains items that SAM's electricity bill calculator does not consider. See Unused Items below. If you see that message, expand the Unused Items panel at the bottom of the page to see the unused information, and if necessary, modify the rate inputs to approximate the item. For example, you could multiply the $/day fixed charge by 365 days/yr ÷ 12 months/yr to estimate a value to add to SAM's fixed monthly charge input.
 
 Save / Load Rate Data
 ~~~~~~~~~~~~~~~~~~~~~
@@ -72,7 +73,7 @@ You can save and load utility rate structure data from SAM to a text file of com
 
 .. note:: To see what the file format looks like, save the current rate to a file and open it with a spreadsheet program or text editor.
 
-.. note:: You can import and export each individual time-of-use rate table separately using the **Import** and **Export** buttons next to each table.
+   You can import and export each individual time-of-use rate table separately using the **Import** and **Export** buttons next to each table.
 
 **Save rate to file**
   Save the values of all input variables on the Electricity Rates to a text file. Use the .csv   file extension when you save the file.
@@ -82,6 +83,7 @@ You can save and load utility rate structure data from SAM to a text file of com
 
 Metering and Billing
 ~~~~~~~~~~~~~~~~~~~~
+
 For front-of-meter projects, SAM uses the buy all / sell all option and disables the other options.
 
 **Buy all /sell all**
@@ -89,10 +91,11 @@ For front-of-meter projects, SAM uses the buy all / sell all option and disables
 
   Alternatively, you can provide time series buy and sell rates to use instead of the rates in the Energy Charges table. Note that you can combine time series buy rates with TOU sell rates and vice versa:
 
-*   Check **Use hourly (subhourly) buy rates instead of TOU** rates and click **Edit array** to enter or import time series buy rates $/kWh. This disables the buy rate column in the Energy Charges table.
+  Check **Use hourly (subhourly) buy rates instead of TOU** rates and click **Edit array** to enter or import time series buy rates $/kWh. This disables the buy rate column in the Energy Charges table.
 
 Fixed Charge
 ~~~~~~~~~~~~
+
 A fixed monthly charge is a fee that the project pays to the electric service provider and does not depend on the quantity of electricity consumed or generated by the project.
 
 **Fixed monthly charge, $**
@@ -100,6 +103,7 @@ A fixed monthly charge is a fee that the project pays to the electric service pr
 
 Minimum Charges
 ~~~~~~~~~~~~~~~
+
 Minimum charges apply when either the monthly or annual electricity bill falls below a minimum value.
 
 **Monthly minimum charge, $**
@@ -112,6 +116,7 @@ Minimum charges apply when either the monthly or annual electricity bill falls b
 
 Annual Escalation
 ~~~~~~~~~~~~~~~~~
+
 The escalation rate is an annual percentage increase that applies to the monthly electricity bill in Years 2 and later. Escalation is in addition to the inflation rate.
 
 .. note:: Three factors affect the annual electricity bill value from year to year: The electricity bill escalation rate, inflation rate from the :doc:`Financial Parameters <../financial-parameters/fin_overview>` page, and degradation rate from the :doc:`Degradation <../degradation/degradation>` page.
@@ -121,7 +126,7 @@ The escalation rate is an annual percentage increase that applies to the monthly
 
   In some cases, it may be appropriate to use an annual schedule to define a different escalation rate for each year. When you specify the escalation rate using an annual schedule, SAM applies only the escalation rate and excludes inflation from the calculation of out-year values.
 
-To specify annual escalation rates (optional):
+**To specify annual escalation rates (optional):**
 
 .. include:: ../includes/snip_annual_values.rst
 
@@ -129,6 +134,7 @@ To specify annual escalation rates (optional):
 
 Description and Applicability
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 These variables help you identify the rate structure but do not affect simulation results. If you download rate structure data from the Utility Rate Database, SAM populates the variables automatically.
 
 **Name**
@@ -152,6 +158,7 @@ These variables help you identify the rate structure but do not affect simulatio
 
 Energy Charges
 ~~~~~~~~~~~~~~
+
 SAM uses the information in the energy rate table and weekday and weekend schedules to calculate the energy charge portion of each month's electricity bill based on the quantity of electricity delivered to the battery from the grid over the month.
 
 Energy Rate Table
@@ -164,7 +171,7 @@ Each row in the table defines the rates and tier limit for one period and tier. 
 **Number of entries**
   The total number of energy rates in the structure, equal to the product of the number of time-of-use periods and tiers. The number of rows in the table is equal to the number of entries. When you change the number of entries, SAM changes the number of rows in the table.
 
-.. note:: If you change the number of entries to a smaller number, you will lose data in the rows when SAM resizes the table.
+  .. note:: If you change the number of entries to a smaller number, you will lose data in the rows when SAM resizes the table.
 
 **Period (1-12)**
   Each period number represents a time-of-use period for energy charges. For example, for a simple rate structure with one summer period and one period, you could assign Period 1 to the summer months and Period 2 to the winter months. The time-of-use period must be a number between 1 and 12 and each period must be associated with a time defined by the :doc:`weekday and weekend schedules <../reference/weekday_schedule>`  .
@@ -188,7 +195,7 @@ Each row in the table defines the rates and tier limit for one period and tier. 
 
   For maximum usage units of kWh/kW or kWh/kW daily, SAM calculates the energy charge for a given month from both the total consumption in kWh and billing demand in kW for each time-of-use period and tier in that month. See :ref:`Billing Demand <electricity-purchases-billing-demand>`   for details.
 
-.. note:: For rate structures that include tiers with kWh/kW or kWh/kW daily maximum usage units, the maximum usage units for Tier 1 must be kWh/kW.
+  .. note:: For rate structures that include tiers with kWh/kW or kWh/kW daily maximum usage units, the maximum usage units for Tier 1 must be kWh/kW.
 
 **Buy ($/kWh)**
   The price paid by the project in dollars per kilowatt-hour for electricity delivered by the grid for each period and tier.
@@ -289,7 +296,7 @@ For a basic demand rate with no tiers, set the number of entries to 12 (one for 
 
   For a demand rate structure with tiers, the number of entries should be the total number of tiers. The number of rows in the table is equal to the number of entries. When you change the number of entries, SAM changes the number of rows in the table.
 
-.. note:: If you change the number of entries to a smaller number, you will lose data in the rows when SAM resizes the table.
+  .. note:: If you change the number of entries to a smaller number, you will lose data in the rows when SAM resizes the table.
 
 **Month**
   The month for the demand rate. For a flat demand rate structure with no tiers, the table should have one row for each month of the year.
@@ -331,7 +338,7 @@ For a demand rate structure that varies with time of day and year with tiers, sp
 **Number of entries**
   The total number of time-of-use periods and tiers the demand rate structure. SAM sizes the table based on the number of entries.  The number of rows in the table is equal to the number of entries. When you change the number of entries, SAM changes the number of rows in the table.
 
-.. note:: If you change the number of entries to a smaller number, you will lose data in the rows when SAM resizes the table.
+  .. note:: If you change the number of entries to a smaller number, you will lose data in the rows when SAM resizes the table.
 
 **Period (1-12)**
   The time-of-use period must be a number between 1 and 12, and must also be defined in the either the :doc:`weekday or weekend schedule <../reference/weekday_schedule>`  . If tiers apply to a time-of-use period, assign the same period number to each tier in the period.

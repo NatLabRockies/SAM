@@ -25,7 +25,7 @@ Use the Wind Resource page to define the wind resource at the project site for a
 For a description of how SAM determines wind speed at hub height, see :ref:`Hub Height and Wind Shear <shear>`. For a description of how SAM uses temperature and pressure data from the weather file, see :ref:`Elevation above Sea Level <elevation>`.
 
 Choose a representative typical wind resource file
---------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. _filerepresentative:
 
@@ -60,7 +60,7 @@ SAM displays information that describes the location represented by the data fro
 **Refresh Library**
   Refreshes the list of files in the location list. SAM automatically refreshes the list each time you visit the Wind Resource page. If you add a file to one of the folders in the search list, you may need to refresh the list for the file to be visible in the location list.
 
-The files are for 39 representative locations, and use the following naming convention: *[State] [Region]-[Terrain Description].srw* to help you choose an appropriate file. For example, the file *AZ Eastern-Rolling Hills.srw* contains data appropriate for a location in eastern Arizona with rolling hills.
+The files are for 39 representative locations, and use the following naming convention: *[State] [Region]-[Terrain Description].srw* to help you choose an appropriate file. For example, the file *AZ Eastern-Rolling Hills.srw* contains data appropriate for a location in eastern Arizona with rolling hills. Note that these files are in the obsolete SRW format, which has been replaced by the SAM CSV format for wind.
 
 * *State* indicates where the data in the file was measured.
 
@@ -88,14 +88,15 @@ You can use the images below to help choose a typical file with terrain characte
    :align: center
    :alt: IMG_WindResource-terrain.png
 
+
+.. _filedownload:
+
 Download a file from the online NLR WIND Toolkit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _filedownload:
 
 NLR's Wind Integration National Dataset (WIND) Toolkit provides wind resource data for the continental United States and other parts of the world. You can download files for the continental United States from SAM's Wind Resource page. Wind resource data for locations outside of the U.S. are available from `Wind Resource Database (WRDB) <https://wrdb.nlr.gov/>`__ and from the `WIND Toolkit API <https://developer.nlr.gov/docs/wind/wind-toolkit/>`__. Files from these resources are in a file format that is compatible with SAM, except for some WIND Toolkit API endpoints that use a different format. Please `let us know <mailto:sam.support@nlr.gov>`__ if you need help using files from one of these resources.
 
-To download a weather file from the NLR WIND Toolkit:
-.....................................................
+**To download a weather file from the NLR WIND Toolkit:**
 
 #. Click **Download**.
 
@@ -186,13 +187,13 @@ The table must meet the following requirements:
 
 * Sum of probabilities must be 1.
 
-To specify the wind resource using the Wind Resource Probability table by hand:
+**To specify the wind resource using the Wind Resource Probability table by hand:**
 
 #. For **Rows**, type the number of rows in the table.
 
 #. For each row, type a wind speed in m/s and a wind direction in degrees.
 
-To paste table data:
+**To paste table data:**
 
 #. Create a table of tab-delimited wind speed and direction data in a text file or spreadsheet program.
 

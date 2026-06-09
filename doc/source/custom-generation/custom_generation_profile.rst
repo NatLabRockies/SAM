@@ -35,7 +35,7 @@ The custom generation profile model provides two overall options for describing 
 **Import single-year hourly or subhourly generation profile from file**
   Import hourly or subhourly generation data over one year into SAM. SAM will use the same generation profile for each year in the analysis period.
 
-.. note:: The analysis period is specified on the Financial Parameters page.
+  .. note:: The analysis period is specified on the Financial Parameters page.
 
 **Import lifetime hourly or subhourly generation profile from file**
   Import hourly or subhourly generation data over the analysis period. 
@@ -43,7 +43,7 @@ The custom generation profile model provides two overall options for describing 
 **Calculate generation profiles and nameplate capacity from open cases**
   Combine the generation profiles from other cases in the file to use as input for this case. This option only works for cases that run hourly simulations. For cases that run a simulation over the analysis period (lifetime simulation), SAM only uses the Year 1 data to generate the combined generation profile.
 
-.. note:: As of SAM 2023, hybrid system configurations are available that combine the output of PV, wind, custom generation profile and fuel cell models as an alternative to this Calculate Generation Profiles option.
+  .. note:: As of SAM 2023, hybrid system configurations are available that combine the output of PV, wind, custom generation profile and fuel cell models as an alternative to this Calculate Generation Profiles option.
 
 **Nameplate capacity, kWac**
   The system's nameplate electrical capacity in electric kilowatts.
@@ -61,7 +61,7 @@ The custom generation profile model provides two overall options for describing 
 
   When you import or generate power generation data, this input is disabled because for these options, SAM does not use the capacity factor to calculate the generation profile.
 
-.. note:: SAM reports a separate :doc:`capacity factor <../performance-metrics/mtp_capacity_factor>` in the results after you run a simulation that reflects plant losses and any reduction in output due to system availability.
+  .. note:: SAM reports a separate :doc:`capacity factor <../performance-metrics/mtp_capacity_factor>` in the results after you run a simulation that reflects plant losses and any reduction in output due to system availability.
 
 **Combined nameplate capacity, kWac**
   When you choose **Calculate generation profiles and nameplate capacity from open cases**, SAM automatically calculates the nameplate capacity as the sum of nameplate capacities of each case. You can edit this value if you want to use a different value than the calculated value.
@@ -76,11 +76,11 @@ The custom generation profile model provides two overall options for describing 
 
 #. Click **Import** to import the data from a text file. 
 
-The data must be in a single column with one row for each time step. Each row should contain a value in kW of electricity generated per time step. For example, an hourly data set for a single year should contain 8,760 rows of kW values. A 15-minute data set for one year would contain 35,040 rows of kW values. Lifetime data sets should contain data over the same number of years as the analysis period on the Financial Parameters page.
+   The data must be in a single column with one row for each time step. Each row should contain a value in kW of electricity generated per time step. For example, an hourly data set for a single year should contain 8,760 rows of kW values. A 15-minute data set for one year would contain 35,040 rows of kW values. Lifetime data sets should contain data over the same number of years as the analysis period on the Financial Parameters page.
 
-The first row is reserved for a header, so do not include any electricity generation data in the first row. SAM checks the number of data rows in the file to ensure it is consistent with the time step you specify. For example, for a 60-minute time step over a single year, the text file should contain 8761 rows: One row at the top of the file for the header followed by 8760 data rows. A 15-minute data set would contain a total of 35,041 rows.
+   The first row is reserved for a header, so do not include any electricity generation data in the first row. SAM checks the number of data rows in the file to ensure it is consistent with the time step you specify. For example, for a 60-minute time step over a single year, the text file should contain 8761 rows: One row at the top of the file for the header followed by 8760 data rows. A 15-minute data set would contain a total of 35,041 rows.
 
-To paste the data from a text editor, spreadsheet, or other software, copy the data to your clipboard, and then click **Paste**.
+   To paste the data from a text editor, spreadsheet, or other software, copy the data to your clipboard, and then click **Paste**.
 
 #. Click **OK** to return to the Power Plant page.
 
@@ -128,7 +128,7 @@ The calculated values are equivalent to the metrics shown on the Results page af
 **Capacity factor after plant loss**
   The capacity factor, accounting for the reduction in output when you specify a non-zero plant loss percentage. Use this capacity value value when you import generation data to verify that the nameplate capacity you enter is reasonable. For example, you might expect a capacity factor greater than 90% for a thermal power plant, about 20% for a photovoltaic system, 40% for a concentrating solar power system, or about 60% for a wind system.
 
-.. note:: The capacity factor after plant loss shown on the Power Plant page accounts for the plant loss, but not for :ref:`system availability <availcurtail>`. If you include system availability losses in your analysis, the :doc:`capacity factor <../performance-metrics/mtp_capacity_factor>` SAM reports in the results after you run a simulation reflects those losses.
+  .. note:: The capacity factor after plant loss shown on the Power Plant page accounts for the plant loss, but not for :ref:`system availability <availcurtail>`. If you include system availability losses in your analysis, the :doc:`capacity factor <../performance-metrics/mtp_capacity_factor>` SAM reports in the results after you run a simulation reflects those losses.
 
   For the constant generation option, the calculated capacity factor depends on the value that you entered for **Capacity Factor**: *Capacity Factor After Plant Loss (%) = Capacity Factor (%) × ( 1 - Loss (%) ÷ 100% )*
 

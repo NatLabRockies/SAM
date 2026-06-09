@@ -2,13 +2,10 @@ SAM CSV Format for Wind
 =======================
 
 The SAM CSV Format for Wind is a comma-delimited text format for SAM's wind power performance model. This is the format for files from the `NLR WIND Toolkit API <https://developer.nlr.gov/docs/wind/wind-toolkit/wtk-download/>`__ and `NLR RE Explorer <https://www.re-explorer.org/>`__.
-
-
  
-.. note:: SAM 2022.11.21 r1 is the first version of SAM to support this new format. We are transitioning away from the :doc:`SRW format <weather_format_srw_wind>` to this format to make SAM more compatible with the WIND Toolkit API and NLR RE Explorer.
+.. note:: SAM 2022.11.21 r1 is the first version of SAM to support this new format. Please use this SAM CSV format for wind instead of the older :doc:`SRW format <weather_format_srw_wind>`.
 
-
-.. note:: Some WIND Toolkit endpoints return files in a slightly different format. For example, offshore-hawaii-download and offshore-mid-atlantic-download are in a different format than the one described here.
+   Some WIND Toolkit endpoints return files in a slightly different format. For example, offshore-hawaii-download and offshore-mid-atlantic-download are in a different format than the one described here.
 
 .. image:: ../images/SS_WindResource-samcsv.png
    :align: center
@@ -24,7 +21,6 @@ The format allows you to use wind resource data at one or more heights above the
 
 * The measurement heights can be different for the different types of data.
 
-
   * Air temperature, atmospheric pressure, and wind direction data can be at one height with wind speed data at multiple heights.
 
   * The direction measurement height must be within 10 meters of the nearest wind speed measurement height.
@@ -35,7 +31,6 @@ The format allows you to use wind resource data at one or more heights above the
 
 * The Wind Power model determines the simulation time step from the number of resource data rows in the weather file, so time stamps are not required.
 
-
   * The first row of data is in the hour ending at 1 a.m on January 1 local time.
 
   * The number of data rows must be an integer multiple of 8760 hours/year.
@@ -45,7 +40,7 @@ The format allows you to use wind resource data at one or more heights above the
 * SAM requires a valid value for all time steps for each data element. It does not fill data gaps. It does perform some checks on the weather data before running a simulation, and displays messages about problems with the data in the simulation notices.
 
 Header Row 1
-............
+~~~~~~~~~~~~
 
 The first row of the file stores information about the location as a label/value pair, separated by commas: Each label is followed by its value. The label/value pairs can be in any order. 
 
@@ -65,16 +60,11 @@ Optional items are:
 
 * SiteID
 
- 
-
-
 .. note:: If elevation data is not provided in the weather file, SAM's Wind Power model sets it to zero. If your weather file does not include elevation data, you can add it by editing the file and adding it to Row 1. The elevation data is used when you choose the **Define turbine design characteristics** option on the :doc:`Wind Turbine <../wind-power/wind_turbine>` page to calculate the turbine power curve from design parameters. SAM uses the air temperature and atmospheric pressure data for each time step to adjust the turbine power curve. It does not use the elevation above sea level for this purpose. If you are using the **Select a turbine from the library** option, SAM does not use the elevation value from the weather file.
 
+   The site time zone and data time zone values must be the same. SAM assumes that the time stamps in the resource data rows are in local time.
 
-.. note:: The site time zone and data time zone values must be the same. SAM assumes that the time stamps in the resource data rows are in local time.
-
-
-.. note:: Row 1 items can be in any order, but the each item's value must immediately follow its label.
+   Row 1 items can be in any order, but the each item's value must immediately follow its label.
 
 Here is an example of a valid Row 1:
 
@@ -119,7 +109,7 @@ Example of a valid Row 1 with only required data:
      - *siteid, id, location, location id, station, station id, wban, wban#*
 
 Header Row 2
-............
+~~~~~~~~~~~~
 
 SAM determines the type of data for each column based on the labels in Row 2. Row 2 must have the same number of columns as the resource data rows.
 
@@ -134,16 +124,12 @@ Required columns are:
 * temperature for at least one height above the ground
 
 * atmospheric pressure for at least one height above the ground
-
-
  
 .. note:: Columns do not have to be in any particular order, and can be in a different order for each hub height.
 
+   Columns can be for data that SAM does not use. SAM ignores any column labels it does not recognize.
 
-.. note:: Columns can be for data that SAM does not use. SAM ignores any column labels it does not recognize.
-
-
-.. note:: SAM's wind power model does not require year, month, day, or minute time stamps. It ignores any time stamp data in the file.
+   SAM's wind power model does not require year, month, day, or minute time stamps. It ignores any time stamp data in the file.
 
 Example of a valid Row 2 for a file with data at two measurement heights:
 
@@ -170,8 +156,8 @@ Example of a valid Row 2 for a file with data at two measurement heights:
      - °C
      - *must contain "temp"*
 
-Data Rows 3 and higher
-......................
+Data Rows 3 and Higher
+~~~~~~~~~~~~~~~~~~~~~~
 
 The data rows must contain columns of wind resource data in the order defined by the labels in Row 2.
 

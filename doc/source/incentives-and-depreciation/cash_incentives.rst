@@ -13,7 +13,7 @@ A cash incentive is an amount paid to the project that contributes to the projec
 
 After running a simulation, you can display incentive amounts in the project :doc:`cash flow <../results/cashflow>` and in results :doc:`graphs <../results/graphs>` and :doc:`tables <../results/data>`.
 
-.. note:: See :doc:`depreciation` for information about investment tax credits, production tax credits, and depreciation.
+.. note:: See :doc:`tax_credits_depreciation` for information about investment tax credits, production tax credits, and depreciation.
 
 Investment Based Incentive (IBI)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -38,7 +38,7 @@ For the Single Owner and other front-of-meter financial models, the effect of th
   The upper limit of the incentive in dollars. For incentives with no limits, type the value 1e+099.
 
 Tax Implications
-................
+----------------
 
 The check boxes in the Taxable Incentive and Reduces Depreciation and ITC Bases columns determine whether each IBI qualifies as income for tax purposes, reduces the basis used to calculate the ITC, or reduces the basis used to calculate the depreciation amount, respectively.
 
@@ -90,7 +90,7 @@ Check an option for each capacity based incentive that applies to the project, a
   The upper limit of the incentive in dollars. For incentives with no limits, type the value 1e+099.
 
 Tax Implications
-................
+----------------
 
 The check boxes in the Taxable Incentive and Reduces Depreciation and ITC Bases columns determine whether each CBI qualifies as income for tax purposes, reduces the basis used to calculate the ITC, or reduces the basis used to calculate the depreciation amount, respectively.
 
@@ -135,7 +135,7 @@ For the Single Owner and other front-of-meter financial models, you can see the 
 .. note:: If you use an annual schedule to assign PBI amounts to specific years, SAM ignores the escalation rate.
 
 Tax Implications
-................
+----------------
 
 The check boxes in the Taxable Incentive column determine whether each PBI qualifies as income for tax purposes, reduces the basis used to calculate the PBI, or reduces the basis used to calculate the depreciation amount, respectively.
 
@@ -149,7 +149,7 @@ The check boxes in the Taxable Incentive column determine whether each PBI quali
   The state and federal tax rates are inputs on the :doc:`Financial Parameters <../financial-parameters/fin_overview>`   page.
 
 PBI and Debt Service
-....................
+--------------------
 
 For financial models with debt, you can specify whether the PBI is available for debt service. If the PBI is available for debt service, SAM includes it in the total revenue as taxable income, otherwise it is included in the total pre-tax cash flow as part of the cash flow from from operating activities.
 
@@ -157,7 +157,7 @@ For financial models with debt, you can specify whether the PBI is available for
   When you check the option for a PBI, SAM includes the PBI amount in the cash available for debt service (CAFDS).
 
 Specifying Annual for PBI Values
-................................
+--------------------------------
 
 You can specify each PBI as either a single value (amount or percentage) that applies to all years in the analysis period defined on the Financial Parameters page, or you can assign a different value to each year in the analysis period using an annual schedule.
 

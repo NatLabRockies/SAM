@@ -14,11 +14,12 @@ The SAM CSV format supports hourly and subhourly data with up to a one-minute re
 SAM requires a valid value for all time steps for each data element. It does not fill data gaps. It does perform some checks on the weather data before running a simulation, and displays messages about problems with the data in the simulation :doc:`notices <../results/notices>`. You can also run the **Solar Resource File Checker** :doc:`macro <../reference/macros>` to perform the checks without running a simulation.
 
 Header
-......
+~~~~~~
 
-The header rows provide location information and metadata, and identify the data columns.
+The first two rows are header rows that provide location information and metadata, and identify the data columns.
 
 Row 1
+-----
 
 Row 1 contains labels for the location data and metadata, and must include at least the following, which may be in any order and with any capitalization:
 
@@ -39,6 +40,7 @@ For example, a valid Row 1 might look like this:
 See the table below for a complete list of Row 1 header fields, accepted labels, and and units. 
 
 Row 2
+-----
 
 Row 2 contains values for the location data and metadata identified by the labels in Row 1. The required latitude, longitude, time zone, and elevation are numbers that SAM uses in sun position calculations during simulations:
 
@@ -108,23 +110,26 @@ The remaining header fields, such as source, location ID, city, state, and other
      - *version*
 
 Solar Resource Data
-...................
+~~~~~~~~~~~~~~~~~~~
+
+Rows 3 and higher contain solar resource data.
 
 Row 3
+-----
 
-  Labels identifying the data columns. SAM uses the labels to identify the columns, so they can be in any order. SAM requires a complete column of data for each data element. The Minute column is optional for hourly data. 
+Labels identifying the data columns. SAM uses the labels to identify the columns, so they can be in any order. SAM requires a complete column of data for each data element. The Minute column is optional for hourly data. 
 
-  For example, a valid Row 3 might look like this:
+For example, a valid Row 3 might look like this::
 
-*Year,Month,Day,Hour,Minute,GHI,DNI,DHI,Tdry,Tdew,RH,Pres,Wspd,Wdir,Snow Depth*
+    Year,Month,Day,Hour,Minute,GHI,DNI,DHI,Tdry,Tdew,RH,Pres,Wspd,Wdir,Snow Depth
 
 See the table below for a complete list of valid Row 3 header values and units. See the description of the **Units flag** above if you want to include an additional row for units in your file.
 
 Row 4-8,760 (for hourly data, more rows for sub-hourly data)
 
-Data identified in Row 3. For example:
+Data identified in Row 3. For example::
 
-*1988,1,1,0,0,0,0,5.6,-3.3,53,983,2.1,200,0*
+    1988,1,1,0,0,0,0,5.6,-3.3,53,983,2.1,200,0
 
 SAM assumes that the weather data uses the following units:
 
@@ -219,4 +224,3 @@ SAM assumes that the weather data uses the following units:
    * - Aerosol optical depth
      - 0..1
      - *aod, aerosol, aerosol optical depth*
-

@@ -27,7 +27,7 @@ Battery Storage Results
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Metrics
-.......
+-------
 
 .. list-table::
    :width: 100%
@@ -45,7 +45,7 @@ Metrics
      - The percentage of total battery charge energy delivered by the power system (PV array in the case of the PV Battery model). If the percentage is less than 100%, the remaining charge energy was supplied by the grid.
 
 Lifetime Data
-.............
+-------------
 
 .. list-table::
    :width: 100%
