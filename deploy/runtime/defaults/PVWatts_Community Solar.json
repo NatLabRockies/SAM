@@ -9210,7 +9210,7 @@
     "mera_name2": "Replacement Reserve 2",
     "mera_name3": "Replacement Reserve 3",
     "module_costunits": 0.0,
-    "module_is_bifacial": 1.0,
+    "module_is_bifacial": 0.0,
     "module_num_units": 1.0,
     "module_power": 3000.0,
     "module_total": 1020000.0000000001,
