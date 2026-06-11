@@ -4161,6 +4161,7 @@
         "\tssc_var( obj, 'geotherm.cost.inj_prod_well_ratio', ${geotherm.cost.inj_prod_well_ratio});\r",
         "\tssc_var( obj, 'drilling_success_rate', ${drilling_success_rate});\r",
         "\tssc_var( obj, 'stim_success_rate', ${stim_success_rate});\r",
+        "\tssc_var( obj, 'stimulation_type', ${stimulation_type});\r",
         "\tssc_var( obj, 'failed_prod_flow_ratio', ${failed_prod_flow_ratio});\r",
         "\r",
         "\tssc_var( obj, 'dt_prod_well', ${dt_prod_well} );",
