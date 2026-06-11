@@ -11,6 +11,7 @@ The System Advisor Model™ (SAM™) is a performance and financial model design
 
 * Researchers
 
+For information about SAM versions see :doc:`../reference/release_notes`.
 
 SAM makes performance predictions and cost of energy estimates for grid-connected power projects based on installation and operating costs and system design parameters that you specify as inputs to the model.
 
