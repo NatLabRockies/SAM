@@ -120,34 +120,6 @@ Unless you choose one of the POA options, SAM's detailed photovoltaic model alwa
 **POA from pyranometer**
   Use this option if your weather file contains irradiance data measured in the plane of the array by a pyranometer. SAM uses a POA decomposition model to calculate the DNI and DHI components of the POA irradiance for angle-of-incidence effect calculations.
 
- 
-
-
-.. note:: For a technical description of the POA option, see Freeman (2016) Using Measured Plane-of-Array Data Directly in Photovoltaic Modeling: Methodology and Validation, available from https://sam.nlr.gov/photovoltaic/pv-publications.
-
-.. note:: 
-
-   When you choose a POA option, SAM uses an irradiance decomposition model to calculate DNI and DHI values, which it reports in the results for your reference. It only uses the calculated DNI and DHI values under the following conditions:
-
-   - With the **POA from pyranometer** option to calculate a reduction in DNI due to angle-of-incidence effects.
-   - When you enable external shading, SAM applies the beam and diffuse irradiance shading factors to the calculated DNI and DHI values, and then calculates the irradiance incident on the subarray to account for shading.
-   - When you use the CEC module model with the heat transfer method for temperature correction.
-
-.. note:: When you use POA data, be careful to check that your array orientation, shading, soiling, and snow model inputs are consistent with your POA data. If your system has more than one subarray, SAM uses the POA data for each subarray. This requires that all subarrays have the same orientation and tracking, but SAM does not enforce this requirement. SAM also allows you to enable shading, soiling, and the snow model with POA data. If the irradiance data already accounts for these effects, you should disable those inputs.
-
-Spectral Correction Factors
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Spectral correction factors adjust the effective irradiance on PV modules to account for different amounts of irradiance from each wavelength of light depending on the atmospheric conditions, and different cell technologies' responses to different spectral content. Air mass is the relative measure of the optical atmosphere length and is alwas used in estimating the air mass impact on spectrum. For thin film modules especially, using models that account for other atmospheric conditions such as the amount of precipitable water and the clearsky index can lead to better estimates of effective irradiance. For more details about these methods, see the `SAM website <https://sam.nlr.gov/photovoltaic/pv-publications.html>`__.
-
-**Air mass only**
-  This is the default option, and is most useful for crystalline silicon module analysis. It accounts for the impact of air mass on the spectrum, but does not account for other atmospheric conditions.
-
-**Air mass and precipitable water**
-  This option accounts for the impact of air mass and precipitable water on the spectrum, and has model coefficients for both silicon, thin film, and other cell types.
-
-**Air mass and clearsky index**
-  This option accounts for the impact of air mass and clearsky index on the spectrum, and has model coefficients for both silicon, thin film, and other cell types without requiring precipitable water in the weather data.
   .. note:: For a technical description of the POA option, see Freeman (2016) Using Measured Plane-of-Array Data Directly in Photovoltaic Modeling: Methodology and Validation, available from https://sam.nlr.gov/photovoltaic/pv-publications.
 
      When you choose a POA option, SAM uses an irradiance decomposition model to calculate DNI and DHI values, which it reports in the results for your reference. It only uses the calculated DNI and DHI values under the following conditions:

@@ -843,3 +843,17 @@ It accounts for spectral effects by applying an air mass modifier to the plane-o
   These are the five air mass modifier equation coefficients (a0...a4) from the equation for    from Page 14 of King (2004):
 
   The default values are from the Sandia module model's library for the First Solar FS-267 module.
+
+Spectral Correction
+~~~~~~~~~~~~~~~~~~~
+
+Spectral correction factors adjust the effective irradiance on PV modules to account for different amounts of irradiance from each wavelength of light depending on the atmospheric conditions, and different cell technologies' responses to different spectral content. Air mass is the relative measure of the optical atmosphere length and is alwas used in estimating the air mass impact on spectrum. For thin film modules especially, using models that account for other atmospheric conditions such as the amount of precipitable water and the clearsky index can lead to better estimates of effective irradiance. For more details about these methods, see the `SAM website <https://sam.nlr.gov/photovoltaic/pv-publications.html>`__.
+
+**Air mass only**
+  This is the default option, and is most useful for crystalline silicon module analysis. It accounts for the impact of air mass on the spectrum, but does not account for other atmospheric conditions.
+
+**Air mass and precipitable water**
+  This option accounts for the impact of air mass and precipitable water on the spectrum, and has model coefficients for both silicon, thin film, and other cell types.
+
+**Air mass and clearsky index**
+  This option accounts for the impact of air mass and clearsky index on the spectrum, and has model coefficients for both silicon, thin film, and other cell types without requiring precipitable water in the weather data.
