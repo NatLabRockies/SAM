@@ -43,7 +43,7 @@
     "array_type": 2.0,
     "azimuth": 180.0,
     "batt_simple_enable": 0.0,
-    "bifaciality": 0.0,
+    "bifaciality": 0.7,
     "c_construction_cost": [
         100.0,
         0.0,

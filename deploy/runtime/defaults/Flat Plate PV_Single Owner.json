@@ -40199,8 +40199,8 @@
     "ptc_sta_escal": 0.0,
     "ptc_sta_term": 10.0,
     "pv.radmode.is_shown": 0.0,
-    "pv.specmode.is_shown": 0.0,
     "pv_capex_cost_choice": 0.0,
+    "pv_spectral.is_shown": 0.0,
     "rate_escalation": [
         0.0
     ],
@@ -40375,7 +40375,7 @@
     "spe_voc": 49.2,
     "spectral_correction_celltech": "monoSi",
     "spectral_correction_model_choice": 0.0,
-    "spectral_correction_msg": "Any model will work for monocrystalline or multicrystalline Silicon cell types.\n",
+    "spectral_correction_msg": "No spectral correction messages.\n",
     "spectral_recommend_choice": 0.0,
     "start_day_of_year": 3.335046e-317,
     "start_day_of_year_tod_ui": 3.335046e-317,

@@ -51,7 +51,7 @@
     "batt_salvage_percentage": 0.0,
     "batt_salvage_value": 0.0,
     "batt_simple_enable": 0.0,
-    "bifaciality": 0.0,
+    "bifaciality": 0.7,
     "bos_equip_fixed": 0.0,
     "bos_equip_perarea": 0.0,
     "bos_equip_perwatt": 0.32,

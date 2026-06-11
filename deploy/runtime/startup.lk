@@ -288,15 +288,15 @@ function setup_detailed_pv_pages(bin)
 	addpage( [['Solar Resource Download', 
 	           'Solar Resource Library', 
 	           'Solar Resource Information', 
-	           {'name'='PV Albedo and Radiation', 'caption' = 'Albedo - Sky Diffuse Model - Irradiance Data (Advanced)', 'collapsible'=true, 'collapsible_var'='pv.radmode.is_shown'},
-	           {'name'='PV Spectral Correction', 'caption' = 'Spectral Correction Factors', 'collapsible'=true, 'collapsible_var'= 'pv.specmode.is_shown'} ]], 
+	           {'name'='PV Albedo and Radiation', 'caption' = 'Albedo - Sky Diffuse Model - Irradiance Data (Advanced)', 'collapsible'=true, 'collapsible_var'='pv.radmode.is_shown'}]], 
 	           { 'sidebar'='Location and Resource', 'help'='detailed-photovoltaic-model/pv_location_and_resource', 'bin_name' = bin});
 	addpage( [['Simple Efficiency Module Model'],
 			  ['CEC Performance Model with Module Database'],
 			  ['CEC Performance Model with User Entered Specifications'],
 			  ['Sandia PV Array Performance Model with Module Database'],
 			  ['IEC61853 Single Diode Model'] ], 
-			  {'sidebar'='Module', 'help'='detailed-photovoltaic-model/pv_module', 'exclusive_var'='module_model' , 'bin_name' = bin});
+			  {'sidebar'='Module', 'help'='detailed-photovoltaic-model/pv_module', 'exclusive_var'='module_model' , 
+			  'exclusive_footer_pages'=[{'name'='PV Spectral Correction', 'caption'='Spectral Correction','collapsible'=true,'collapsible_var'='pv_spectral.is_shown','collapsed_by_default'=true}], 'bin_name' = bin});
 	addpage( [['Inverter CEC Database', 'Inverter Temp Derate CEC DB'],
 			  ['Inverter Datasheet', 'Inverter Temp Derate DS'],
 			  ['Inverter Part Load Curve', 'Inverter Temp Derate PLC'],

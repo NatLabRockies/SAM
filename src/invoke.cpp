@@ -600,9 +600,28 @@ static void fcall_addpage( lk::invoke_t &cxt )
 				for( size_t i=0;i<vec.length();i++ )
 				{
 					PageInfo pi;
-					pi.Name = vec.index(i)->as_string();
-					pi.Caption = pi.Name;
-					excl_header_pages.push_back( pi );
+                    lk::vardata_t& item = vec.index(i)->deref();
+                    if (item.type() == lk::vardata_t::HASH)
+                    {
+                        if (lk::vardata_t* name = item.lookup("name"))
+                            pi.Name = name->as_string();
+                        else
+                            continue; // skip if no name provided
+                        pi.Caption = pi.Name; // default caption is the name
+                        if (lk::vardata_t* capt = item.lookup("caption"))
+                            pi.Caption = capt->as_string();
+                        if (lk::vardata_t* is_collap = item.lookup("collapsible"))
+                            pi.Collapsible = is_collap->as_boolean();
+                        if (lk::vardata_t* var = item.lookup("collapsible_var"))
+                            pi.CollapsiblePageVar = var->as_string();
+                        if (lk::vardata_t* initial = item.lookup("collapsed_by_default"))
+                            pi.CollapsedByDefault = initial->as_boolean();
+                    }
+                    else {
+                        pi.Name = vec.index(i)->as_string();
+                        pi.Caption = pi.Name;
+                        excl_header_pages.push_back(pi);
+                    }
 				}
 			}
 
@@ -632,15 +651,39 @@ static void fcall_addpage( lk::invoke_t &cxt )
                 for (size_t i = 0; i < vec.length(); i++)
                 {
                     PageInfo pi;
-                    pi.Name = vec.index(i)->as_string();
-                    pi.Caption = pi.Name;
+                    lk::vardata_t& item = vec.index(i)->deref();
+                    if (item.type() == lk::vardata_t::HASH)
+                    {
+                        if (lk::vardata_t* name = item.lookup("name"))
+                            pi.Name = name->as_string();
+                        else
+                            continue; // skip if no name provided
+                        pi.Caption = pi.Name; // default caption is the name
+                        if (lk::vardata_t* capt = item.lookup("caption"))
+                            pi.Caption = capt->as_string();
+                        if (lk::vardata_t* is_collap = item.lookup("collapsible"))
+                            pi.Collapsible = is_collap->as_boolean();
+                        if (lk::vardata_t* var = item.lookup("collapsible_var"))
+                            pi.CollapsiblePageVar = var->as_string();
+                        if (lk::vardata_t* initial = item.lookup("collapsed_by_default"))
+                            pi.CollapsedByDefault = initial->as_boolean();
+                        
+                    }
+                    else {
+                        pi.Name = vec.index(i)->as_string();
+                        pi.Caption = pi.Name;
+                        pi.Collapsible = true;
+                        pi.CollapsedByDefault = true;
+                        
+                    }
                     excl_footer_pages.push_back(pi);
                 }
             }
+            
 
         }
 	}
-	SamApp::Config().AddInputPageGroup( pages, sidebar, help, exclusive_var, excl_header_pages, exclusive_tabs, exclusive_hide, bin_name, exclusive_top);
+	SamApp::Config().AddInputPageGroup( pages, sidebar, help, exclusive_var, excl_header_pages, exclusive_tabs, exclusive_hide, bin_name, exclusive_top, excl_footer_pages);
 }
 
 
