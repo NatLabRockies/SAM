@@ -1,6 +1,8 @@
 
 Capacity payments are is an annual payment to the project for available capacity. SAM reports the annual capacity payment revenue in the project :doc:`cash flow <../results/cashflow>`.
 
+The capacity payment is either the fixed amount you specify, or the product of the capacity payement ($/MW), system nameplate capacity (MW), and capacity credit (%).
+
 .. note:: If your project does not involve capacity payments, set **Capacity payment amount** to zero.
 
 **Capacity basis**

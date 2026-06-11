@@ -3,13 +3,9 @@ System Design
 
 The System Design page shows inputs for design point parameters that determine the system's nameplate capacity. Use the System Design inputs to define the nominal ratings of the system, and then specify details for each part of the system on the appropriate input pages.
 
- 
-
-
 .. note:: All of the system design inputs are nominal values, or values at the system's design point. SAM calculates actual values during simulation and reports them in the :doc:`results <../getting-started/results_page>`.
 
-
-.. note:: When you change the value of the following input variables, you should optimize the field geometry on the :doc:`Heliostat Field <iph_mspt_heliostat_field>` page to be sure that the solar field geometry (number and position of heliostats, tower height, and receiver height and aspect ratio) is appropriate for the new value: **Design point DNI**, **Solar multiple**, **Design turbine gross output**, **Cycle thermal efficiency**.
+   When you change the value of the following input variables, you should optimize the field geometry on the :doc:`Heliostat Field <iph_mspt_heliostat_field>` page to be sure that the solar field geometry (number and position of heliostats, tower height, and receiver height and aspect ratio) is appropriate for the new value: **Design point DNI**, **Solar multiple**, **Design turbine gross output**, **Cycle thermal efficiency**.
 
 Heliostat Field
 ~~~~~~~~~~~~~~~

@@ -26,7 +26,7 @@ The following is a list of all of the URLs that SAM may use. You can find this l
     https://developer.nlr.gov/api/nsrdb/v2/solar/nsrdb-data-query.json?&api_key=<SAMAPIKEY>&email=<USEREMAIL>&wkt=POINT(<LON>%20<LAT>)
     https://developer.nlr.gov/api/sam/v1/tracker
     https://sam.nlr.gov/sites/default/files/content/updates/messages.html
-    https://samrepo.nrelcloud.org/updates/welcome.lk
+    https://samrepo.nlr.gov/updates/welcome.lk
     https://nrel.github.io/SAM/doc/releasenotes.html
     https://developer.nlr.gov/api/reopt/stable/job/<RUN_UUID>/results/?api_key=<SAMAPIKEY>
     https://developer.nlr.gov/api/reopt/stable/job?format=json&api_key=<SAMAPIKEY>

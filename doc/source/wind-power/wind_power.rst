@@ -12,7 +12,7 @@ Wind Power Model Algorithm
 
 SAM's wind power model uses wind resource data that you specify on the :doc:`Wind Resource <wind_resource>` page to calculate the electricity delivered to the grid by a wind farm that consists of one or more wind turbines.
 
-SAM can either read wind resource data from a time series data file in the :doc:`SRW <../weather-file-formats/weather_format_srw_wind>` format, or make calculations based on an estimate of the wind resource specified using a Weibull distribution.
+SAM can either read wind resource data from a time series data file in the :doc:`SAM CSV for wind <../weather-file-formats/weather_format_csv_wind>` format, or make calculations based on an estimate of the wind resource specified using a Weibull distribution.
 
 SAM calculates the wind farm's output over a single year in hourly time steps. It uses the following algorithm to calculate the wind farm output for each time step of the simulation:
 

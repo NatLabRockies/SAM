@@ -1,7 +1,6 @@
-
 The System Control inputs determine the operating parameters of the system.
 
-.. note:: The physical trough and molten salt power tower models in SAM use a new power cycle and system dispatch model that does not support thermocline storage or fossil backup because they were not incorporated into the new dispatch controller logic. If you want to use those features, you can use the legacy version SAM 2015.6.30 for power towers or SAM 2018.11.11 for the Physical Trough model, available on the SAM website `Download page <https://sam.nlr.gov/download>`__.
+.. note:: The physical trough and molten salt power tower models in SAM use a power cycle and system dispatch model that does not support thermocline storage or fossil backup because they are not incorporated into the dispatch controller logic. If you want to model thermocline storage or fossil backup, you can use the legacy version SAM 2015.6.30 for power towers or SAM 2018.11.11 for the Physical Trough model, available on the SAM website `Download page <https://sam.nlr.gov/download>`__.
 
 Plant Energy Consumption
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -58,7 +57,7 @@ When you run a simulation without enabling optimization, SAM attempts to operate
   The penalty imposed for changing power cycle electrical production from one time step to the next. By penalizing changes, the resulting dispatch profile exhibits improved stability and is potentially more realizable in practice. Increasing this penalty may reduce achieved revenue for the project. This penalty affects the optimal solution, which seeks to maximize revenue. This value does not affect actual operating costs or the calculated SAM financial metrics.
 
 **Objective function time weighting exponent**
-  The relative weight due to time in the dispatch optimization objective function. A weighting factor of 0.99 indicates that the objective function terms are multiplied by *0.99**\ :sup:`t`\*    for each timestep t in the optimization horizon (48 hours, by default). A value of 1.0 indicates no time weighting, a value less than one indicates that – all things equal – generation is preferred sooner than later, and a value greater than one indicates that generation is preferred later than sooner. As the value is displaced from unity, the optimization algorithm is typically able to solve the dispatch problem more quickly, but the resulting revenue may decrease. Note that a value of 0.99 corresponds to an objective discounting in the 24th time period (one day ahead) of *0.99**\ :sup:`24`\**= 0.79*, which is to say that the optimization routine values revenue generated in hour one 21% more than in hour 24, though revenue multipliers and efficiency terms may be identical.
+  The relative weight due to time in the dispatch optimization objective function. A weighting factor of 0.99 indicates that the objective function terms are multiplied by *0.99**\ :sup:`t`\* for each timestep t in the optimization horizon (48 hours, by default). A value of 1.0 indicates no time weighting, a value less than one indicates that, all things equal, generation is preferred sooner than later, and a value greater than one indicates that generation is preferred later than sooner. As the value is displaced from unity, the optimization algorithm is typically able to solve the dispatch problem more quickly, but the resulting revenue may decrease. Note that a value of 0.99 corresponds to an objective discounting in the 24th time period (one day ahead) of *0.99**\ :sup:`24`\**= 0.79*, which is to say that the optimization routine values revenue generated in hour one 21% more than in hour 24, though revenue multipliers and efficiency terms may be identical.
 
 **Maximum branch and bound iterations**
   Limits the number of iterations in the optimization routine. If you are experiencing problems with the optimization, you can increase the number. The default value is 30,000.
@@ -87,20 +86,26 @@ The dispatch control periods determine the timing of adjustments to the power cy
 **Use output fraction as maximum cycle output**
   Check this box if you want to limit the power cycle output to the turbine output fraction you specify for dispatch control instead of the **Maximum turbine over design operation** on the Power Cycle page. If you do not check the box and the turbine over design operation is greater than the highest turbine output fraction, the power cycle may operate at the higher value, exceeding the maximum dispatch limit under some conditions.
 
-**Turbine output fraction**
-  For each of up to nine time-of-delivery periods, specify a multiple of the power cycle thermal input to scale the system's electrical output up or down as desired to match power pricing schedules or other time-dependent constraints.
+**Turbine/Heat sink output fraction**
+  For each of up to nine time-of-delivery periods, specify a multiple of the power cycle or heat sink thermal input to scale the system's electrical output up or down as desired to match power pricing schedules or other time-dependent constraints.
 
 **Hybrid cooling fraction**
-  For each of up to nine time-of-delivery periods, specify how much of the cooling load should be handled by the wet-cooling system. Each value in the table is a fraction of the design cooling load. For example, if you want 60% of heat rejection load to go to wet cooling in Period 1, type 0.6 for Period 1. Directing part of the heat rejection load to the wet cooling system reduces the total condenser temperature and improves performance, but increases the water requirement. SAM sizes the wet-cooling system to match the maximum fraction that you specify in the hybrid dispatch table, and sizes the air-cooling system to meet the full cooling load.
+  This option is only available for performance models that support hybrid cooling. For each of up to nine time-of-delivery periods, specify how much of the cooling load should be handled by the wet-cooling system. Each value in the table is a fraction of the design cooling load. For example, if you want 60% of heat rejection load to go to wet cooling in Period 1, type 0.6 for Period 1. Directing part of the heat rejection load to the wet cooling system reduces the total condenser temperature and improves performance, but increases the water requirement. SAM sizes the wet-cooling system to match the maximum fraction that you specify in the hybrid dispatch table, and sizes the air-cooling system to meet the full cooling load.
+
+**Use hourly heat sink fraction**
+  Check this box to use time series heat sink fractions instead of time-of-use (TOU) fractions. Click **Edit array** to paste or import the time series values.
+
+**Copy schedule from TOD Factors page**
+  Click this button to copy weekday and weekend schedules from the PPA price time-of-delivery (TOD) multipliers when you want to the system to respond to power prices. The TOD multipliers are either on the Revenue page or the Financial Parameters page, depending on the financial model.
 
 Defining Dispatch Schedules
-...........................
+---------------------------
 
 The storage dispatch schedules determine when each of the nine periods apply during weekdays and weekends throughout the year.
 
 If your analysis includes :ref:`PPA price multipliers <revenue-ppa-tod>` and you want to use the same schedule for the multipliers and for the power cycle dispatch control, click **Copy schedule from TOD Factors** page to apply the TOD Factors schedule matrices to the dispatch schedule matrices.
 
-To specify a weekday or weekend schedule:
+**To specify a weekday or weekend schedule:**
 
 #. Assign values as appropriate to the **Turbine output** fraction and **Hybrid cooling fraction** for each of the up to nine periods.
 
@@ -233,4 +238,3 @@ The 34 operating modes are described in the table below. Note that single digit 
      - CR_DF, PC_SU, TES_FULL, AUX_OFF
    * - 34
      - CR_DF, PC_SU, TES_OFF, AUX_OFF
-

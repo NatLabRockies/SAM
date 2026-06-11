@@ -43,6 +43,6 @@ Single year data represents the weather at a location for a specific year. Singl
 
 The following are examples of weather files that contain single-year data:
 
-* Single-year files from the NSRDB's PSM data.
+* Single-year files from the NSRDB.
 
-* Wind data files (SRW) from the NLR Wind Integration Dataset.
+* Wind data files from the NLR WIND Toolkit.

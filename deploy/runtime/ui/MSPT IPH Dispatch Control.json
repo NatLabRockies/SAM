@@ -352,7 +352,7 @@
                 },
                 "ColLabels": {
                     "Type": 5.0,
-                    "String": "Turbine output fraction"
+                    "String": "Heat sink output fraction"
                 },
                 "NumRowsLabel": {
                     "Type": 5.0,

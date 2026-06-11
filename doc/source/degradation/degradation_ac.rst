@@ -38,8 +38,7 @@ In some situations, you may want to assign a different degradation rate to diffe
 
    Because Year 1 is the first year of operation before degradation begins, you should set the degradation rate for Year 1 (the first row in the degradation table) to zero.
 
-To enter an annual schedule of degradation rates:
-.................................................
+**To enter an annual schedule of degradation rates:**
 
 .. include:: ../includes/snip_annual_values.rst
 

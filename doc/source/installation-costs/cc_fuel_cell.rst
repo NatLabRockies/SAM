@@ -17,14 +17,14 @@ A direct capital cost represents an expense for a specific piece of equipment or
 **Module, $/Wdc or $/Unit**
   You can specify the module cost either in $/Wdc or $/unit:
 
-* Dollars per watt multiplied by **System nameplate capacity** from the :doc:`PV System <../fuel-cell/fuelcell_pv_system>` page, or
+* Dollars per watt multiplied by **System nameplate capacity** from the :doc:`PV System <../pvwatts/pvwatts_system_design>` page, or
 
 * Dollars per unit, where the number of modules is assumed to be one.
 
 **Inverter, $/Wac or $/Unit**
   For PVWatts, the inverter cost is either dollars per watt AC or DC, or dollars per inverter:
 
-* Dollars per watt DC multiplied by the system nameplate capacity from the :doc:`PV System <../fuel-cell/fuelcell_pv_system>` page, or
+* Dollars per watt DC multiplied by the system nameplate capacity from the :doc:`PV System <../pvwatts/pvwatts_system_design>` page, or
 
 * Dollars per watt AC multiplied by the system nameplate capacity and divided by the DC to AC Derate Factor on the :doc:`System Design <../pvwatts/pvwatts_system_design>` page, or
 
@@ -44,7 +44,7 @@ The other direct capital cost categories, **Balance of system equipment**, **Ins
   A fixed cost in dollars.
 
 **PV $/Wdc**
-  A cost proportional to the PV array's DC nameplate capacity, equal to the **System nameplate size on the** on the :doc:`PV System <../fuel-cell/fuelcell_pv_system>` page.
+  A cost proportional to the PV array's DC nameplate capacity, equal to the **System nameplate size on the** on the :doc:`PV System <../pvwatts/pvwatts_system_design>` page.
 
 **Battery $/kW**
   A cost proportional to the battery's nominal power rating, equal to the **Maximum charge power (AC)** on the :doc:`Battery Storage <../battery-storage/battery_storage>` page.
@@ -71,7 +71,7 @@ The five indirect cost categories, **Permitting and environmental studies**, **E
   A percentage of the **Total direct cost** value shown under Direct Capital costs.
 
 **PV $/Wdc**
-  A cost proportional to the PV array's DC nameplate capacity, equal to the **System nameplate size on the** on the :doc:`PV System <../fuel-cell/fuelcell_pv_system>` page.
+  A cost proportional to the PV array's DC nameplate capacity, equal to the **System nameplate size on the** on the :doc:`PV System <../pvwatts/pvwatts_system_design>` page.
 
 **Battery $/kW**
   A cost proportional to the battery's nominal power rating, equal to the **Maximum charge power (AC)** on the :doc:`Battery Storage <../battery-storage/battery_storage>` page.

@@ -18,7 +18,7 @@ If you just want to quickly size the system for an array with a single subarray,
 
 #. Type a value for **Desired DC to AC ratio**, or use the default value. SAM automatically calcualtes the total inverter capacity. For example, given a 454 kWac inverter, for a 227 kWdc array with a DC to AC ratio of 1.2, the number of inverters is 2: *500 kWdc ÷ 227 kWdc = 2.2*.
 
-#. If your system includes battery storage, configure the battery bank on the :doc:`../battery-storage/battery_storage_btm` page.
+#. If your system includes battery storage, configure the battery bank on the Battery Cell and System page.
 
 See :ref:`pv-sizing` for configuration examples and detailed sizing instructions.
 
@@ -199,7 +199,7 @@ If your system has one inverter and supports up to four maximum power point trac
 
 If your system has one inverter and more than four MPPTs, model the system with one MPPT. Alternatively, depending on the design of your system, it may be possible to use a single MPPT number to represent a group of MPPTs in your system that are connected to modules with the same orientation, tracking, and shading.
 
-If your system has more than one inverter and more than one subarray, SAM assumes that all inverters operate at the same voltage determined by a single MPPT. The inverter input voltage is either the average of the subarray voltages or calculated using an iterative method, depending on the method you choose for :ref:`the voltage mismatch option <pvmismatchoption>`.
+If your system has more than one inverter and more than one subarray, SAM assumes that all inverters operate at the same voltage determined by a single MPPT. The inverter input voltage is either the average of the subarray voltages or calculated using an iterative method, depending on the method you choose for :ref:`pvmismatchoption`.
 
 See :doc:`pv_sizing_instructions` for more details and examples.
 

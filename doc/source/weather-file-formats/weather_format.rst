@@ -3,16 +3,11 @@ Weather File Formats
 
 A SAM weather file is a text file that contains data describing the solar, wind, or marine energy resource at a particular location for a period of one year. SAM uses the following weather file formats:
 
-* :doc:`SAM CSV format for solar <weather_format_sam_csv_solar>`
+* :doc:`CSV format for solar <weather_format_sam_csv_solar>`
 
-
-* :doc:`SAM CSV format for wind <weather_format_csv_wind>`
-
+* :doc:`CSV format for wind <weather_format_csv_wind>`
 
 * :doc:`CSV format for marine energy <weather_format_csv_marine_energy>`
-
-
-* :doc:`SRW format for wind <weather_format_srw_wind>` (this is an old format, please use the SAM CSV format for wind)
 
 For a description of how the different performance models use weather data, see :doc:`Weather Data Elements <../weather-data/weather_data_elements>`. 
 
@@ -30,3 +25,5 @@ SAM can read solar resource data from files in the TMY3 and TMY2 legacy formats 
 * The `TMY2 file format <https://nsrdb.nlr.gov/data-sets/archives.html>`__ is a text format with the extension .tm2 developed for the NSRDB 1961-1990 dataset. The TMY2 format is not delimited, which makes the data in the text file difficult to read. You can use SAM's time series data viewer to examine and export the data in a TMY2 file. For a description of the format see the `TMY2 user's manual <https://www.osti.gov/biblio/87130>`__.
 
 * The EPW file format was developed for the U.S. Department of Energy's EnergyPlus building simulation model. EPW files store comma-delimited data, and use the extension .epw. The first eight rows of a file in EPW format stores header data. SAM's performance models use only the latitude, longitude, elevation, and time zone data from the header to calculate solar angles. The remaining 8,760 rows store weather data used by the SAM performance models and other data describing the quality of the data that SAM ignores. For more details about the EPW format see the `Weather Data Format Definition <https://bigladdersoftware.com/epx/docs/8-2/auxiliary-programs/epw-csv-format-inout.html>`__ page.
+
+* The SRW format was the original wind resource format for SAM's Wind Power model. It is now obsolete and has been replaced by the `CSV format for wind <weather_format_csv_wind>`.
