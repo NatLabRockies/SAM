@@ -1,7 +1,7 @@
 {
     "Name": "PV Spectral Correction",
-    "Width": 886.0,
-    "Height": 318.0,
+    "Width": 1008.0,
+    "Height": 190.0,
     "FormObjects": {
         "GroupBox": {
             "Visible": 1.0,
@@ -12,19 +12,19 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 9.0
+                    "Integer": 6.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 12.0
+                    "Integer": 3.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 870.0
+                    "Integer": 1000.0
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 299.0
+                    "Integer": 182.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -32,7 +32,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "PV Spectral Correction Modeling"
+                    "String": "Spectral Correction Options"
                 },
                 "Bold": {
                     "Type": 2.0,
@@ -49,19 +49,19 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 39.0
+                    "Integer": 15.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 45.0
+                    "Integer": 21.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 795.0
+                    "Integer": 980.0
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 78.0
+                    "Integer": 51.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -69,7 +69,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "Spectral correction factors adjust the effective irradiance on PV modules to account for different amounts of irradiance from each wavelength of light depending on the atmospheric conditions, and different cell technologies' responses to different spectral content. Air mass is the relative measure of the optical atmosphere length and is alwas used in estimating the air mass impact on spectrum. For thin film modules especially, using models that account for other atmospheric conditions such as the amount of precipitable water and the clearsky index can lead to better estimates of effective irradiance. "
+                    "String": "Spectral correction adjusts the irradiance incident on the photovoltaic cell to account for the effect of the atmosphere on the solar spectrum and the cell's response to different wavelengths of light. Choose whether spectral correction should account only for air mass, air mass and precipitable water, or air mass and clearsky index. The Air Mass and Clearsky option may be best for thin film modules."
                 },
                 "TextColour": {
                     "Type": 4.0,
@@ -102,131 +102,7 @@
                 }
             }
         },
-        "Label": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "object 75"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 39.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 141.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 255.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 39.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Caption": {
-                    "Type": 5.0,
-                    "String": "Apply spectral correction factors based on:"
-                },
-                "TextColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "Bold": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "FontSize": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "WordWrap": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "AlignRight": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "AlignTop": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                }
-            }
-        },
-        "Label": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "object 76"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 324.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 171.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 63.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Caption": {
-                    "Type": 5.0,
-                    "String": "Cell type:"
-                },
-                "TextColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "Bold": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "FontSize": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "WordWrap": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                },
-                "AlignRight": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "AlignTop": {
-                    "Type": 2.0,
-                    "Boolean": 0.0
-                }
-            }
-        },
-        "MultilineText": {
+        "TextEntry": {
             "Visible": 1.0,
             "ObjectProperties": {
                 "Name": {
@@ -235,19 +111,19 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 396.0
+                    "Integer": 360.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 168.0
+                    "Integer": 78.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 271.0
+                    "Integer": 270.0
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 30.0
+                    "Integer": 24.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -294,11 +170,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 39.0
+                    "Integer": 24.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 192.0
+                    "Integer": 75.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -306,7 +182,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 90.0
+                    "Integer": 72.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -343,11 +219,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 324.0
+                    "Integer": 297.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 207.0
+                    "Integer": 111.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -355,7 +231,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 69.0
+                    "Integer": 54.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -411,24 +287,24 @@
         "spectral_correction_celltech": {
             "Version": 4.0,
             "Type": 4.0,
-            "Label": "",
+            "Label": "Cell type",
             "Units": "",
             "Group": "",
             "IndexLabels": "",
             "Flags": 8.0,
             "DefaultValue": "",
-            "UIObject": "MultilineText",
+            "UIObject": "TextEntry",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
         "spectral_correction_model_choice": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "Spectral correction model choice",
             "Units": "",
             "Group": "",
-            "IndexLabels": "",
-            "Flags": 2.0,
+            "IndexLabels": "Air mass only|Air mass and precipitable water|Air mass and clearsky index",
+            "Flags": 3.0,
             "DefaultValue": 0.0,
             "UIObject": "RadioChoice",
             "sscVariableName": "",
@@ -517,48 +393,35 @@
         "};\r",
         "\r",
         "equations{'$MIMO spectral recommend'} = define() {\r",
-        "\t//choice = ${spectral_recommend_choice};\r",
         "\tmodel = ${module_model};\r",
         "\tis_cec = model == 1 || model == 2;\r",
         "\tspec_model = ${spectral_correction_model_choice};\r",
         "\tmsg = '';\r",
         "\tif (spec_model == 0) {\r",
-        "\t\t\r",
-        "\t\t//enable('spectral_correction_model_choice', false);\r",
         "\t\tif (${celltech} < 2) {\r",
         "\t\t\tmsg += 'No spectral correction messages.\\n';\r",
-        "\t\t\t//if (choice) ${spectral_correction_model_choice} = 0;\r",
         "\t\t}\r",
         "\t\telse {\r",
-        "\t\t\tmsg += 'The chosen model may not fully account for the accurate spectral response of this cell type.\\n';\r",
+        "\t\t\tmsg += 'The Air Mass Only option may not be the best option for this cell type. Consider using the Air Mass and Precipitable Water option.\\n';\r",
         "\t\t}\r",
         "\t}\r",
         "\tif (spec_model == 1) {\r",
         "\t\tif (isnan(${annual_precipitation})) {\r",
-        "\t\t\tmsg += 'Annual precipitable water was not calculated from the weather file. Ensure that precipitable water is included in the weather file before using the Airmass and precipitable water option.\\n';\r",
-        "\t}\r",
-        "\tif (spec_model == 2) {\r",
+        "\t\t\tmsg += 'The precipitable water option requires a weather file with total precipitable water data. To use this option, choose a weather file on the Location and Resource page that includes precipitable water data.';\r",
+        "\t\t}\r",
+        "\t\tif (spec_model == 2) {\r",
         "\t\t\tif(isnan(${annual_csky_global})) {\r",
-        "\t\t\t\tmsg += 'Could not find clearsky ghi from weather data. Clearsky irradiance will still be calculated from weather data during the simulation. \\n';\r",
-        "\t\t\t\t//if (choice) ${spectral_correction_model_choice} = 1;\r",
+        "\t\t\t\tmsg += 'The weather file on the Location and Resource page does not include clearsky irradiance data. The spectral correction model will calculate clearsky data instead of using data from the weather file.';\r",
         "\t\t\t}\r",
-        "\t\t\t//else {\r",
-        "\t\t\t\t//if (choice) ${spectral_correction_model_choice} =  2;\r",
-        "\t\t\t//}\r",
-        "\t\t\t\t\r",
-        "\t}\r",
-        "\t\t/*\r",
-        "\t\telse {\r",
-        "\t\t\t${spectral_correction_model_choice} = 1;\r",
-        "\t\t}*/\r",
+        "\t\t}\r",
         "\t}\r",
         "\tif (${celltech} > 5) { // can't identify cell type\r",
-        "\t\tmsg += 'The cell type could not be identified for the module defined above.\\n';\r",
+        "\t\tmsg += 'The cell type could not be identified for the current module. Spectral correction will be based on coefficients for mono-crystalline modules.';\r",
         "\t}\r",
-        "\tif (msg == '') { msg = 'No spectral correction messages.'; }\r",
+        "\tif (msg == '') {\r",
+        "\t\tmsg = 'No spectral correction messages.';\r",
+        "\t}\r",
         "\t${spectral_correction_msg} = msg;\r",
-        "\t\t//property('spectral_correction_msg', 'Text', msg);\r",
-        "\t\t\r",
         "};\r",
         "\r",
         "\t\t\t"
