@@ -144,7 +144,7 @@ set_target_properties(export_config
     DEBUG_POSTFIX "d"
     PREFIX ""
     )
-target_compile_features(export_config PUBLIC cxx_std_11)
+target_compile_features(export_config PUBLIC cxx_std_20)
 
 if (MSVC)
     set_target_properties(export_config
@@ -177,7 +177,7 @@ else()
             PATHS $ENV{SSC_LIB} $ENV{SSC_LIB} $ENV{SSCDIR}/build/ssc $ENV{SSCDIR}/build/ssc/Release)
     target_link_libraries(export_config optimized ${WEX_LIB} optimized ${SSC_LIB} optimized ${LK_LIB})
 
-    if (CMAKE_BUILD_TYPE STREQUAL "Debug" OR MSVC)
+    if (CMAKE_BUILD_TYPE STREQUAL "Debug")
         unset(LKD_LIB CACHE)
         unset(WEXD_LIB CACHE)
         unset(SSCD_LIB CACHE)
@@ -223,6 +223,16 @@ file(TO_NATIVE_PATH $ENV{SAMNTDIR}/api API_DEST)
 set(EXPORT_RUN "$<TARGET_FILE:export_config> --api ${API_DEST} --pysam ${PYSAM}")
 
 if (MSVC)
+
+    file(GLOB SSC_DLLS "$ENV{SSCDIR}/build/ssc/Release/*.dll")
+    foreach( file_i ${SSC_DLLS})
+        add_custom_command(
+        TARGET export_config
+        POST_BUILD
+        COMMAND ${CMAKE_COMMAND}
+        ARGS -E copy ${file_i} "$<TARGET_FILE_DIR:export_config>"
+    )
+    endforeach( file_i )
 
     file(GLOB ORTOOLS_DLLS "$ENV{ORTOOLSDIR}/bin/*.dll")
     foreach( file_i ${ORTOOLS_DLLS})
