@@ -25,7 +25,8 @@ set(SAM_SOURCES
         ../../src/variables.cpp
         ../../src/equations.cpp)
 
-file(TO_CMAKE_PATH ../../../ssc/shared/lib_util.cpp SSC_SOURCES)
+#file(TO_CMAKE_PATH ../../../ssc/shared/lib_util.cpp SSC_SOURCES)
+file(TO_CMAKE_PATH $ENV{SSCDIR}/shared/lib_util.cpp SSC_SOURCES)
 
 
 #####################################################################################################################
