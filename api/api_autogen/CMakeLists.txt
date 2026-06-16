@@ -170,12 +170,16 @@ else()
     find_library( WEX_LIB
             NAMES wex.a wex.lib
             PATHS $ENV{WEX_LIB} $ENV{WEXDIR}/build $ENV{WEXDIR}/build/Release)
+    message("wex_lib: ${WEX_LIB}")
     find_library( LK_LIB
             NAMES lk.a lk.lib
             PATHS $ENV{LK_LIB} $ENV{LKDIR}/build $ENV{LKDIR}/build/Release)
+    message("lk_lib: ${LK_LIB}")
     find_library( SSC_LIB
             NAMES ssc.dylib ssc.lib ssc.so
             PATHS $ENV{SSC_LIB} $ENV{SSC_LIB} $ENV{SSCDIR}/build/ssc $ENV{SSCDIR}/build/ssc/Release)
+    message("ssc_lib: ${SSC_LIB}")
+
     target_link_libraries(export_config optimized ${WEX_LIB} optimized ${SSC_LIB} optimized ${LK_LIB})
 
     if (CMAKE_BUILD_TYPE STREQUAL "Debug")
