@@ -2221,6 +2221,7 @@
         "\tproperty( 'summary_caption' , 'Caption' , msg_caption );\r",
         "\tproperty( 'summary_caption' , 'TextColour' , msg_color );\r",
         "\tenable('annual_snow', is_pv );\r",
+        "\tenable('annual_precipitation',is_pv);\r",
         "\tenable('annual_albedo',is_pv );\r",
         "\r",
         "\t// calculate and display annual summary data\r",
