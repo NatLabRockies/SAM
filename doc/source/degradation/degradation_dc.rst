@@ -45,8 +45,7 @@ In some situations, you may want to use "schedule mode" to assign a different de
 
    Because Year 1 is the first year of operation before degradation begins, you should set the degradation rate for Year 1 (the first row in the degradation table) to zero.
 
-To enter an annual schedule of degradation rates:
-.................................................
+**To enter an annual schedule of degradation rates:**
 
 .. include:: ../includes/snip_annual_values.rst
 
@@ -56,3 +55,5 @@ Memory Saving Option for Subhourly Simulations
 If you are running subhourly simulations over the analysis period, the number of values for each output variable can be very large. For, example, one-minute simulations over a 25-year analysis period would result in 1 time step/min × 60 min/hr × 8,760 hr/yr × 25 yr = 13,140,000 time steps, so each output variable would store over 13 million values.
 
 If your computer is experiencing memory problems, or if the tables and graphs on the Results page are not working properly, you can clear **Save all output variables over analysis period** to reduce the amount of memory required to display simulation results.That will cause SAM to save only a selection of variables in "lifetime mode" with values over the entire analysis period. The remaining variables will only store one year's worth of data so you can still examine hourly data to see how the system performs.
+
+.. note:: The option must be checked for PV Battery configurations that require lifetime outputs for battery life calculations.

@@ -11,7 +11,7 @@ Fuel Cell Operation
 The fuel cell operation parameters determine the fuel cell operates.
 
 Dispatch Options
-................
+----------------
 
 **Fixed output**
   Operate the fuel cell at a fixed percentage of the fuel cell rated capacity at all times.
@@ -36,7 +36,7 @@ Dispatch Options
    For the input dispatch option, click **Edit array** to provide a time series array of either kW or percentage values at which to operate the fuel cell in each simulation time step.
 
 Operation Options
-.................
+-----------------
 
 **Allowed to shut down**
   Allow the fuel cell to shut down completely when it is not not needed to meet dispatch requirements.
@@ -44,13 +44,4 @@ Operation Options
 **Idle at minimum power**
   Run the fuel cell at the minimum unit output from the :doc:`Fuel Cell <fuelcell_fuel_cell>`   page when it is not needed to meet dispatch requirements.
 
-Storage Battery Dispatch (Behind Meter)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. include:: ../includes/snip_battery_dispatch_btm.rst
-
-Storage Battery Dispatch (Front of Meter)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. include:: ../includes/snip_battery_dispatch_fom.rst
 

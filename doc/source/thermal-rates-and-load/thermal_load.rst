@@ -4,7 +4,7 @@ Thermal Load
 The Thermal Load page allows you to specify a thermal load for systems that generate usable heat. You can input heat usage data by importing hourly or subhourly heat usage data from a text file, or paste it from a spreadsheet or other program. It also provides options for scaling the time series load data to match annual or monthly heating requirements.
 
 Thermal Load Data
-.................
+-----------------
 
 **Heat usage**
   Click **Edit data** to either cut and paste load data from another program or to import data from a properly formatted text file. See :ref:`Working with Time Series Load Data <electric-load-timeseries>` for instructions.
@@ -28,7 +28,7 @@ Thermal Load Data
   Opens the :doc:`time series data viewer <../reference/time_series_viewer>`   to display graphs of the load data.
 
 Monthly Load Summary
-....................
+--------------------
 
 SAM displays the table of monthly and annual totals to help you verify that the load data is correct.
 
@@ -48,5 +48,10 @@ SAM displays the table of monthly and annual totals to help you verify that the 
 **Annual Peak**
   The maximum load value that occurs in the year.
 
-.. include:: ../includes/snip_load_annual_adjustment.rst
+**Load annual growth rate, %/yr**
+  The load growth rate scales the load in years two and later by the percentage you specify. For example, if you specify a load growth rate of 0.5% per year, for each year in the analysis period specified on the :doc:`Financial Parameters <../financial-parameters/fin_overview>`   page, SAM would increase the load value in each time step by 0.5% of the previous year's load value for the same time step.
+
+  You can also assign load growth rates to specific years using the annual schedule:
+
+.. include:: /includes/snip_annual_values.rst 
 

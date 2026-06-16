@@ -1,15 +1,15 @@
 SRW Format for Wind
 ===================
 
-The SRW format is a comma-delimited text format with the extension .srw for the wind power performance model. 
+The SRW format is an obsolete comma-delimited text format with the extension .srw for the wind power performance model. A description is provided here in case you are working with old wind resource files. 
 
-**Note.** As of SAM 2022.11.21 r1, SAM works with the new :doc:`SAM CSV Format for Wind <weather_format_srw_wind>`, which is compatible with wind resource data from the `NLR WIND Toolkit API <https://developer.nlr.gov/docs/wind/wind-toolkit/wtk-download/>`__ and `NLR RE Explorer <https://www.re-explorer.org/>`__. If you are creating wind resource files to use with SAM, we recommend you use this new format instead of the SRW format.
+.. important:: As of SAM 2022.11.21 r1, SAM works with the new :doc:`SAM CSV Format for Wind <weather_format_srw_wind>`, which is compatible with wind resource data from the `NLR WIND Toolkit API <https://developer.nlr.gov/docs/wind/wind-toolkit/wtk-download/>`__ and `NLR RE Explorer <https://www.re-explorer.org/>`__. If you are creating wind resource files to use with SAM, we recommend you use this new format instead of the SRW format.
 
 .. image:: ../images/SS_WindResource-csvfile.png
    :align: center
    :alt: SS_WindResource-csvfile.png
 
-The format allows you to use wind resource data at one or more heights above the ground, and is designed to be flexible enough to handle a range of data.
+The SRW format allows you to use wind resource data at one or more heights above the ground, and is designed to be flexible enough to handle a range of data.
 
 * The file stores four data types: wind speed, wind direction, air temperature, and atmospheric pressure.
 
@@ -28,7 +28,7 @@ The format allows you to use wind resource data at one or more heights above the
 * The file does not contain time zone information. The NLR WIND Toolkit data assumes data time steps are in UTC, where Row 1 is the hour ending at 1 a.m.
 
 Header Rows 1 and 2
-...................
+~~~~~~~~~~~~~~~~~~~
 
 The first two rows of the file store information about the location, and descriptive text that you can use for any purpose. SAM displays some of this information in the fields on the Wind Resource page, but does not use any of this information in simulation calculations.
 
@@ -41,13 +41,9 @@ The first two rows of the file store information about the location, and descrip
 
   SAM ignores the extra commas at the end of the row that your spreadsheet software may insert.
 
- 
-
-
 .. note:: SAM uses the air temperature and atmospheric pressure data for each time step to adjust the turbine power curve. It does not use the elevation above sea level for this purpose.
 
-
-.. note:: SAM reads the first 8 columns and ignores any additional columns. For example, it ignores the time zone in Column 9 and number of data rows in Column 10.
+   SAM reads the first 8 columns and ignores any additional columns. For example, it ignores the time zone in Column 9 and number of data rows in Column 10.
 
 **Row 2**
   <data source>
@@ -57,7 +53,7 @@ The first two rows of the file store information about the location, and descrip
   SAM ignores the extra commas at the end of the row that your spreadsheet software may insert.
 
 Header Rows 3 - 5
-.................
+~~~~~~~~~~~~~~~~~
 
 Rows 3 and 4 tell SAM what data each column contains. SAM determines the type of data for each column based on the information in Rows 3 and 4. Rows 3 and 4 must have the same number of columns as the resource data rows.
 
@@ -85,7 +81,7 @@ Rows 3 and 4 tell SAM what data each column contains. SAM determines the type of
   Measurement height above the ground in meters for the resource data for each column defined in Row 3. Each column in Row 5 must contain an integer or decimal value.
 
 Resource Data Rows 6 and Higher
-...............................
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The resource data rows store the wind speed, wind direction, ambient temperature, and atmospheric pressure values.
 
