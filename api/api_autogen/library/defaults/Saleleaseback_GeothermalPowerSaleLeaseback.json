@@ -99,7 +99,7 @@
 			"depr_alloc_sl_39_percent": 0,
 			"depr_alloc_sl_5_percent": 0,
 			"depr_basis_mat": [
-				[1.000000, 147483561.649419, 100.000000, 1.000000, 0.000000, 0.000000],
+				[1.000000, 132083914.655506, 100.000000, 1.000000, 0.000000, 0.000000],
 				[2.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000]
 			],
 			"depr_bonus_fed": 100,
@@ -233,7 +233,7 @@
 		"ElectricityRates": {
 		},
 		"SaleLeaseback": {
-			"construction_financing_cost": 1.81405e+07,
+			"construction_financing_cost": 1.62463e+07,
 			"cost_dev_fee_percent": 3,
 			"cost_equity_closing": 300000,
 			"cost_other_financing": 0,
@@ -244,11 +244,11 @@
 			"salvage_percentage": 0,
 			"sponsor_operating_margin": 20,
 			"sponsor_operating_margin_escalation": 2,
-			"system_recapitalization_cost": 5.06036e+07,
+			"system_recapitalization_cost": 4.15803e+07,
 			"system_use_lifetime_output": 1,
 			"system_use_recapitalization": 1,
 			"tax_investor_required_lease_reserve": 6,
-			"total_installed_cost": 1.47484e+08
+			"total_installed_cost": 1.32084e+08
 		},
 		"UtilityBill": {
 		},
