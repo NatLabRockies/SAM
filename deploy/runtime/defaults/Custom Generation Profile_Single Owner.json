@@ -19138,7 +19138,7 @@
     "months_receivables_reserve": 0.0,
     "months_working_reserve": 6.0,
     "nameplate_capacity": 100000.0,
-    "nominal_discount_rate": 9.060000000000003,
+    "nominal_discount_rate": 9.060000000000004,
     "non_energy_expenses": [
         0.0
     ],
@@ -19210,7 +19210,7 @@
     "ppa_escalation": 1.0,
     "ppa_multiplier_model": 0.0,
     "ppa_price_input": [
-        0.24
+        0.14000000059604646
     ],
     "ppa_soln_mode": 1.0,
     "prop_tax_assessed_decline": 0.0,
