@@ -854,7 +854,7 @@
                 },
                 "Prefix": {
                     "Type": 5.0,
-                    "String": ""
+                    "String": "$"
                 },
                 "Suffix": {
                     "Type": 5.0,
@@ -937,7 +937,7 @@
                 },
                 "Prefix": {
                     "Type": 5.0,
-                    "String": ""
+                    "String": "$"
                 },
                 "Suffix": {
                     "Type": 5.0,
@@ -1024,7 +1024,7 @@
                 },
                 "Suffix": {
                     "Type": 5.0,
-                    "String": ""
+                    "String": "%"
                 },
                 "ThousandsSep": {
                     "Type": 2.0,
@@ -1107,7 +1107,7 @@
                 },
                 "Suffix": {
                     "Type": 5.0,
-                    "String": ""
+                    "String": "%"
                 },
                 "ThousandsSep": {
                     "Type": 2.0,
