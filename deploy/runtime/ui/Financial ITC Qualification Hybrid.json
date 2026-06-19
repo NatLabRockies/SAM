@@ -1856,7 +1856,7 @@
                 },
                 "Items": {
                     "Type": 6.0,
-                    "StringList": "Determine ITC qualification from system components|Determine ITC qualification frrom depreciation class allocations"
+                    "StringList": "Determine ITC qualification from system components|Determine ITC qualification from depreciation class allocations"
                 },
                 "ShowCaptions": {
                     "Type": 2.0,
@@ -3078,7 +3078,7 @@
             "Label": "",
             "Units": "",
             "Group": "ITC Qualifying Costs",
-            "IndexLabels": "Determine ITC qualification from system components|Determine ITC qualification frrom depreciation class allocations",
+            "IndexLabels": "Determine ITC qualification from system components|Determine ITC qualification from depreciation class allocations",
             "Flags": 0.0,
             "DefaultValue": 0.0,
             "UIObject": "RadioChoice",
