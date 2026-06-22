@@ -55,7 +55,7 @@ function variable_name_change(new, old){
 	value(new, oldvalue(old), 'Variable name changed from \"' + old + '\" to \"' +  new + '\"');
 }
 
-version_upgrade{'2026.2.19'} = define() {
+version_upgrade{'2026.7.3'} = define() {
 	const cfg = config();
 	
 	is_itc_fin = ( cfg.fin == 'Single Owner' || cfg.fin == 'Leveraged Partnership Flip' || cfg.fin == 'All Equity Partnership Flip' || cfg.fin == 'Sale Leaseback' || cfg.fin == 'Merchant Plant' || cfg.fin == 'Community Solar' || cfg.fin == 'Host Developer');
