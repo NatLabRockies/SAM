@@ -3335,7 +3335,7 @@
         "ppa_escalation": 1.0,
         "ppa_multiplier_model": 0.0,
         "ppa_price_input": [
-            0.05
+            0.10000000149011612
         ],
         "pv.radmode.is_shown": 0.0,
         "ref_conditions": "Total Irradiance = 1000 W/m2, Cell temp = 25 C",
@@ -16134,7 +16134,7 @@
         "ppa_escalation": 1.0,
         "ppa_multiplier_model": 0.0,
         "ppa_price_input": [
-            0.05
+            0.10000000149011612
         ],
         "pv.storage.p1.charge": 1.0,
         "pv.storage.p1.discharge": 0.0,
@@ -34751,7 +34751,7 @@
         "ppa_escalation": 1.0,
         "ppa_multiplier_model": 0.0,
         "ppa_price_input": [
-            0.05
+            0.10000000149011612
         ],
         "ppa_soln_mode": 1.0,
         "prop_tax_assessed_decline": 0.0,
