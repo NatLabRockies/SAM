@@ -1,4 +1,7 @@
 {
+    "ac_degradation": [
+        0.0
+    ],
     "adjust": 0.0,
     "adjust_constant": 0.0,
     "adjust_en_periods": 0.0,
@@ -71,11 +74,8 @@
     "escal_other": [
         0.0
     ],
-    "first_year_output": 30274.56,
+    "first_year_output": 30274.559999999998,
     "first_year_output_peak": 3.84,
-    "ac_degradation": [
-        0.0
-    ],
     "grid_curtailment": [
         1e38,
         1e38,
@@ -26389,7 +26389,7 @@
         1.71415,
         1.87435
     ],
-    "nominal_discount_rate": 9.060000000000004,
+    "nominal_discount_rate": 9.060000000000003,
     "normalize_to_utility_bill": 0.0,
     "peak_1": 1.85407,
     "peak_10": 2.55071,

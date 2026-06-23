@@ -1401,6 +1401,7 @@
         "\tvalue('total_installed_cost', value('total_installed_cost'));\r",
         "\trefresh('total_installed_cost');\r",
         "\trefresh();\r",
-        "};"
+        "};\r",
+        ""
     ]
 }

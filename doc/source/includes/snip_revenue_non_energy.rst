@@ -15,6 +15,9 @@ Non-Energy Revenue
 **Non-energy revenue retained by energy owner, %**
   Percent of non-energy revenue to include in the project cash flow. Use this input to specify revenue sharing agreements, for example, an agrivoltaic project where 5% of the crop revenue is retained by the solar owner in each year.
 
+**Non-energy revenue available for debt service**
+  Check this box if the system owner can use non-energy revenue to service debt. If the box is checked, SAM includes non-energy revenue in cash available for debt service (CAFDS).
+
 Non-Energy Expenses
 ...................
 
@@ -27,6 +30,9 @@ Non-Energy Expenses
 **Non-energy expenses paid by energy owner, %**
   Percent of non-energy expenses to include in the project cash flow. Use this input to specify revenue sharing agreements, for example, an agrivoltaic project where 5% of farm expenses is paid by the solar owner in each year.
 
+**Non-energy expenses impact debt service**
+  Check this box to include non-energy expenses in the system owner's total operating expenses, which reduce the amount of cash available for debt service. If the box is checked, SAM includes the owner share of non-revenue expenses in the earnings before interest, taxes, depreciation and amortization (EBITDA) cash flow line item. If the box is not checked, the owner share of non-energy expenses is included in the system owner's operating activities line item.
+
 Energy Owner Portion of Energy Revenue and Expenses
 ...................................................
 
@@ -37,6 +43,3 @@ Use these inputs to specify revenue sharing agreements between the energy owner 
 
 **Energy expenses paid by energy owner, %**
   Percent of energy operating expenses to include in the project cash flow. This includes costs for operation and maintenance costs, battery replacement, electricity purchases to charge the battery, property tax and land-lease, but debt-related costs.
-
-
-

@@ -6,7 +6,7 @@
 SAM Help
 ========
 
-This is the user documentation for the System Advisor Model™ (SAM™), developed by the National Laboratory of the Rockies (NLR).
+This is the user documentation for the System Advisor Model™ (SAM™) developed by the National Laboratory of the Rockies (NLR).
 
 .. important:: To display SAM Help correctly in the Safari web browser on a Mac, go to Settings, Advanced Settings, and enable **Show features for web developers**. Developer mode is required in Safari to load CSS and Javascript from local files.
 

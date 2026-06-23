@@ -28,7 +28,7 @@ SAM uses the following types of files to store and transfer data. The file forma
   File format used to store :doc:`report <reports>`   templates.
 
 **SRW**
-  Text file containing :doc:`wind resource <../weather-file-formats/weather_format_srw_wind>`   data for the wind power model.
+  Obsolete file format for wind resource data.
 
 **TM2**
   Deprecated weather file format from old versions of the NSRDB.

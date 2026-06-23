@@ -8,14 +8,14 @@ The first row of data in the weather file is for the time step beginning at 12 a
 SAM does not account for leap years or for daylight savings time. 
 
 Wind Resource Data
-..................
+~~~~~~~~~~~~~~~~~~
 
-For wind resource data (:doc:`SRW <../weather-file-formats/weather_format_srw_wind>`), the last two columns of the first header row indicate the time step in hours (1=hourly, 0.25=15-minute, etc.), and number of time steps (8,760 for hourly, 35,040 for 15-minute, etc.). The values in the header must match the number of rows.
+For wind resource data (:doc:`SAM CSV format for wind <../weather-file-formats/weather_format_csv_wind>`), the last two columns of the first header row indicate the time step in hours (1=hourly, 0.25=15-minute, etc.), and number of time steps (8,760 for hourly, 35,040 for 15-minute, etc.). The values in the header must match the number of rows.
 
 Solar Resource Data
-...................
+~~~~~~~~~~~~~~~~~~~
 
-For solar resource data (:doc:`SAM CSV <../weather-file-formats/weather_format_sam_csv_solar>`), the weather file's time step depends on the number of weather data rows (not including the header rows) in the weather file. A file for hourly simulations should contain 8,760 data rows. A weather file for 15-minute simulations should have 8,760 hours per year × 4 time steps per hour = 35,040 data rows.
+For solar resource data (:doc:`SAM CSV format for solar <../weather-file-formats/weather_format_sam_csv_solar>`), the weather file's time step depends on the number of weather data rows (not including the header rows) in the weather file. A file for hourly simulations should contain 8,760 data rows. A weather file for 15-minute simulations should have 8,760 hours per year × 4 time steps per hour = 35,040 data rows.
 
 Air mass calculations use the site elevation value from the weather file header and the solar zenith angle calculated for each time step.
 

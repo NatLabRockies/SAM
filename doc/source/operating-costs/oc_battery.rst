@@ -43,5 +43,6 @@ Land Lease costs
 
 Using Annual Schedules to Specify Operating costs in Specific Years
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. include:: ../includes/snip_o_and_m_periodic_costs.rst
 

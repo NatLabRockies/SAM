@@ -435,7 +435,7 @@ void WelcomeScreen::OnCommand( wxCommandEvent &evt )
 	}
 		break;
 	case ID_GET_STARTED:
-		SamApp::ShowHelp( "getting_started");
+		SamApp::ShowHelp( "getting-started/welcome_page");
 		break;
 	case ID_OPEN_SCRIPT:
 		SamScriptWindow::OpenFiles();
