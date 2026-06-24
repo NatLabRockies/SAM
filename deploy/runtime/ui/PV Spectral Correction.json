@@ -69,7 +69,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "Spectral correction adjusts the irradiance incident on the photovoltaic cell to account for the effect of the atmosphere on the solar spectrum and the cell's response to different wavelengths of light. Choose whether spectral correction should account only for air mass, air mass and precipitable water, or air mass and clearsky index. The Air Mass and Clearsky option may be best for thin film modules."
+                    "String": "Spectral correction adjusts the irradiance incident on the photovoltaic cell to account for the effect of the atmosphere on the solar spectrum and the cell's response to different wavelengths of light. Choose whether spectral correction should account only for air mass, air mass and precipitable water, or air mass and clearsky index. The air mass only model is generally acceptable for silicon technologies, and the other two models are generally better for thin film technologies. See Help for more information."
                 },
                 "TextColour": {
                     "Type": 4.0,
