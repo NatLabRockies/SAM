@@ -797,7 +797,7 @@ function setup_geothermal_power_pages(is_fin_model)
 		addpage( [[ 'Geothermal System Design No Fin', 'Geothermal Plant and Equipment' ]], { 'sidebar'='Plant and Equipment', 'help'='geothermal/geo_plant_equipment' } );
 	}
 	//addpage( [[ 'Geothermal Power Block' ]], { 'sidebar'='Power Block', 'help'='geothermal/geo_power_block' } );
-	addpage( [[ 'GETEM Power Cycle' ],[ 'Geothermal Power Block' ]], 
+	addpage( [[ 'GETEM Power Cycle' ],[ 'Reduced Order - Legacy' ]], 
 			{ 'sidebar'='Power Block', 'help'='geothermal/geo_power_block', 'exclusive_var' = 'geo_cycle_model_type',
 			'exclusive_header_pages' = ['Geothermal Power Block Common']} );
 	//addpage( [[ 'Rankine Cycle Air or Evaporative Cooling' ], [ 'User-Defined Power Cycle' ]],
