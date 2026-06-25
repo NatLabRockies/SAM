@@ -3,6 +3,130 @@ Release Notes
 
 These are the software release notes for the System Advisor Model™ (SAM™) developed by the Department of Energy's National Laboratory of the Rockies (NLR).
 
+.. _2026-7-3:
+
+SAM 2026.7.3, SSC xxx: July 3, 2026
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This version updates the Solar Resource input page, adds new options for specifying ITC qualifying cost, xxx.
+
+General (SAM 2026.7.3)
+----------------------
+
+Add support for day of week so time-dependent time series input data can synchronize with weather data. (`SAM 2109 <https://github.com/NatLabRockies/SAM/pull/2109>`__, `SSC 1352 <https://github.com/NatLabRockies/SAM/pull/1352>`__)
+
+Add support for solar performance models to download polar datasets from the National Solar Radiation Database (NSRDB). (`SAM 2026 <https://github.com/NatLabRockies/SAM/pull/2026>`__)
+
+Update Solar Resource File Converter macro to handle recent changes to SolarAnywhere format. (`SAM 2170 <https://github.com/NatLabRockies/SAM/pull/2170>`__)
+
+Move Help documentation to open source platform. (`SAM 2145 <https://github.com/NatLabRockies/SAM/pull/2145>`__, `SAM 2141 <https://github.com/NatLabRockies/SAM/pull/2141>`__)
+
+Add better support for running hybrid system model from SSC Software Development Kit and PySAM. (`SSC 1356 <https://github.com/NatLabRockies/SAM/pull/1366>`__)
+
+Financial Models (SAM 2026.7.3)
+-------------------------------
+
+Add option to Single Owner financial model for non-energy revenue streams. (`SAM 2190 <https://github.com/NatLabRockies/SAM/pull/2190>`__, `SAM 2194 <https://github.com/NatLabRockies/SAM/pull/2194>`__, `SSC 1398 <https://github.com/NatLabRockies/SAM/pull/1398>`__, `SSC 1387 <https://github.com/NatLabRockies/SAM/pull/1397>`__)
+
+Add option for determining ITC qualifying costs and depreciation basis based on system components to existing option based on percentage of total installed cost. (`SAM 2187 <https://github.com/NatLabRockies/SAM/pull/2187>`__, `SSC 1395 <https://github.com/NatLabRockies/SAM/pull/1395>`__, `SSC 1376 <https://github.com/NatLabRockies/SAM/pull/1376>`__, `SSC 1370 <https://github.com/NatLabRockies/SAM/pull/1370>`__)
+
+Update default PPA price and retail electricity rates to account for reduction in default incentives. (`SAM 2217 <https://github.com/NatLabRockies/SAM/pull/2217>`__)
+
+Fix errors for Send-to-Excel-with-equations for Community Solar financial model. (`SAM 2169 <https://github.com/NatLabRockies/SAM/pull/2169>`__)
+
+Fix issue with curtailment input array. (`SAM 2139 <https://github.com/NatLabRockies/SAM/pull/2139>`__, `SSC 1366 <https://github.com/NatLabRockies/SAM/pull/1366>`__)
+
+Fix Merchant Plant problem with incorrect cash flow revenue when market prices assigned using the Lifetime Matrix UI widget in Annual mode. (`SSC 1389 <https://github.com/NatLabRockies/SAM/pull/1389>`__)
+
+Battery Storage (SAM 2026.7.3)
+------------------------------
+
+Fix front-of-meter (FOM) battery automatic dispatch with custom forecast option for Custom Generation - Battery configurations. (`SAM 2211 <https://github.com/NatLabRockies/SAM/pull/2211>`__)
+
+Update Battery Compare Cases macro to report battery roundtrip efficiency and fix metrics for standalone battery. (`SAM 2176 <https://github.com/NatLabRockies/SAM/pull/2176>`__)
+
+Add option to discharge to grid for behind-the-meter (BTM) retail rates battery dispatch option. (`SAM 2158 <https://github.com/NatLabRockies/SAM/pull/2158>`__)
+
+Allow charge from grid limited system power for manual battery dispatch option. (`SAM 2115 <https://github.com/NatLabRockies/SAM/pull/2187>`__, `SSC 1348 <https://github.com/NatLabRockies/SAM/pull/1348>`__)
+
+Fix problem with battery target power and current available at a given state of charge. (`SSC 1362 <https://github.com/NatLabRockies/SAM/pull/1362>`__)
+
+Fix problem that caused a crash when running battery model from PySAM. (`SSC 1347 <https://github.com/NatLabRockies/SAM/pull/1347>`__)
+
+Detailed Photovoltaic (2026.7.3)
+--------------------------------
+
+Reorganize user interface input pages to improve usability. (`SAM 2135 <https://github.com/NatLabRockies/SAM/pull/2135>`__, `SAM 2120 <https://github.com/NatLabRockies/SAM/pull/2120>`__)
+
+Add support for downloading snow depth data from online databases. (`SAM 2089 <https://github.com/NatLabRockies/SAM/pull/2089>`__, `SSC 1335 <https://github.com/NatLabRockies/SAM/pull/1335>`__)
+
+Fix PV uncertainty inputs to prevent invalid P-values. (`SAM 2160 <https://github.com/NatLabRockies/SAM/pull/2160>`__)
+
+Add sample LK script to generate a photovoltaic losses bar graph. (`SAM 2142 <https://github.com/NatLabRockies/SAM/pull/2142>`__)
+
+Update PVsyst OND - PAN to SAM macro to improve error messages and better handle parameters not provided in PAN files. (`SAM 2112 <https://github.com/NatLabRockies/SAM/pull/2112>`__)
+
+Improve Detailed PV and PVWatts albedo error messages. (`SSC 1385 <https://github.com/NatLabRockies/SAM/pull/1385>`__)
+
+Fix memory problem with snow data. (`SSC 1372 <https://github.com/NatLabRockies/SAM/pull/1372>`__)
+
+Improve module six-parameter solver. (`SSC 1373 <https://github.com/NatLabRockies/SAM/pull/1373>`__)
+
+Fix issues with sky diffuse shading calculations in photovoltaic shading model. (`SSC 1355 <https://github.com/NatLabRockies/SAM/pull/1355>`__)
+
+PVWatts (SAM 2026.7.3)
+----------------------
+
+Move bifacial input from Advanced Parameters section to make it more obvious. (`SAM 2200 <https://github.com/NatLabRockies/SAM/pull/2200>`__)
+
+Use detailed battery model for PVWatts configurations to allow for access to all battery features. (`SAM 2105 <https://github.com/NatLabRockies/SAM/pull/2105>`__)
+
+For PVWatts-Battery configurations, add battery replacements to cash flow, and fix some default values. (`SAM 2185 <https://github.com/NatLabRockies/SAM/pull/2185>`__)
+
+For PVWatts-Battery configurations, allow module area estimate for land area calculations. (`SAM 2107 <https://github.com/NatLabRockies/SAM/pull/2107>`__)
+
+Geothermal (SAM 2026.7.3)
+-------------------------
+
+Update geothermal model costs and improve power block input options. (`SAM 2198 <https://github.com/NatLabRockies/SAM/pull/2198>`__, `SSC 1402 <https://github.com/NatLabRockies/SAM/pull/1402>`__)
+
+Marine Energy (SAM 2026.7.3)
+----------------------------
+
+Fix JPD generation and update cost documentation. (`SAM 2197 <https://github.com/NatLabRockies/SAM/pull/2197>`__)
+
+Update wave resource input page to improve usability and add Puerto Rico data downloads. (`SAM 2128 <https://github.com/NatLabRockies/SAM/pull/2128>`__, `SSC 1357 <https://github.com/NatLabRockies/SAM/pull/1357>`__, `SSC 1401 <https://github.com/NatLabRockies/SAM/pull/1401>`__)
+
+Concentrating Solar Power (SAM 2026.7.3)
+----------------------------------------
+
+Add options to physical trough model Collectors input page for specifying solar position, field incidence table, or incidence angle modifier coefficients. Previous versions only supported incidence angle modifier coefficients. (`SAM 2182 <https://github.com/NatLabRockies/SAM/pull/2182>`__, `SAM 2195 <https://github.com/NatLabRockies/SAM/pull/2195>`__, `SSC 1392 <https://github.com/NatLabRockies/SAM/pull/1392>`__)
+
+Update Supercritical Carbon Dioxide Python script and change log. (`SAM 2118 <https://github.com/NatLabRockies/SAM/pull/2118>`__, `SSC 1353 <https://github.com/NatLabRockies/SAM/pull/1353>`__, `SAM 2127 <https://github.com/NatLabRockies/SAM/pull/2127>`__)
+
+Fix CSP model adjustment factor indexing. (`SSC 1369 <https://github.com/NatLabRockies/SAM/pull/1369>`__)
+
+Wind Power (SAM 2026.7.3)
+-------------------------
+
+Update wind resource downloads from WIND Toolkit. (`SAM 2202 <https://github.com/NatLabRockies/SAM/pull/2202>`__)
+
+Change wind power simulation from single year to lifetime (over analysis period) for consistency with other performance models. (`SAM 2174 <https://github.com/NatLabRockies/SAM/pull/2174>`__, `SSC 1386 <https://github.com/NatLabRockies/SSC/pull/1386>`__)
+
+Remove Siting Considerations macrodue due to discontinued web service. (`SAM 2165 <https://github.com/NatLabRockies/SAM/pull/2165>`__)
+
+Remove deprecated LandBOSSE Python models. (`SAM 2154 <https://github.com/NatLabRockies/SAM/pull/2154>`__, `SSC 1375 <https://github.com/NatLabRockies/SAM/pull/1375>`__)
+
+Custom Generation Profil (SAM 2026.7.3)
+---------------------------------------
+
+Add option to use lifetime (over analysis period) generation data as input. (`SAM 2166 <https://github.com/NatLabRockies/SAM/pull/2166>`__, `SSC 1384 <https://github.com/NatLabRockies/SSC/pull/1384>`__)
+
+Fuel Cell (SAM 2026.7.3)
+------------------------
+
+Add warnings when fuel cell dispatch time-of-delivery (TOD) periods are incorrect. (`SAM 2196 <https://github.com/NatLabRockies/SAM/pull/2196>`__, `SSC 1400 <https://github.com/NatLabRockies/SAM/pull/1400>`__)
+
 .. _2025-4-16-r2:
 
 SAM 2025.4.16 Revision 2, SSC 306: April 21, 2026
