@@ -68,7 +68,7 @@ Update PVsyst OND - PAN to SAM macro to improve error messages and better handle
 
 Improve Detailed PV and PVWatts albedo error messages. (`SSC 1385 <https://github.com/NatLabRockies/SAM/pull/1385>`__)
 
-Fix memory problem with snow data. (`SSC 1372 <https://github.com/NatLabRockies/SAM/pull/1372>`__)
+Fix memory problem with snow data. (`SSC 1377 <https://github.com/NatLabRockies/ssc/pull/1377>`__)
 
 Improve module six-parameter solver. (`SSC 1373 <https://github.com/NatLabRockies/SAM/pull/1373>`__)
 
@@ -80,6 +80,8 @@ PVWatts (SAM 2026.7.3)
 Move bifacial input from Advanced Parameters section to make it more obvious. (`SAM 2200 <https://github.com/NatLabRockies/SAM/pull/2200>`__)
 
 Use detailed battery model for PVWatts configurations to allow for access to all battery features. (`SAM 2105 <https://github.com/NatLabRockies/SAM/pull/2105>`__)
+
+Run PVWatts in lifetime mode with linear, DC degradation by default. (`SAM 2105 <https://github.com/NatLabRockies/SAM/pull/2105>`__)
 
 For PVWatts-Battery configurations, add battery replacements to cash flow, and fix some default values. (`SAM 2185 <https://github.com/NatLabRockies/SAM/pull/2185>`__)
 
@@ -111,13 +113,13 @@ Wind Power (SAM 2026.7.3)
 
 Update wind resource downloads from WIND Toolkit. (`SAM 2202 <https://github.com/NatLabRockies/SAM/pull/2202>`__)
 
-Change wind power simulation from single year to lifetime (over analysis period) for consistency with other performance models. (`SAM 2174 <https://github.com/NatLabRockies/SAM/pull/2174>`__, `SSC 1386 <https://github.com/NatLabRockies/SSC/pull/1386>`__)
+Change wind power simulation from single year to lifetime (over analysis period) for consistency with other performance models, including changing from compounding to linear degradation. (`SAM 2174 <https://github.com/NatLabRockies/SAM/pull/2174>`__, `SSC 1386 <https://github.com/NatLabRockies/SSC/pull/1386>`__)
 
 Remove Siting Considerations macrodue due to discontinued web service. (`SAM 2165 <https://github.com/NatLabRockies/SAM/pull/2165>`__)
 
 Remove deprecated LandBOSSE Python models. (`SAM 2154 <https://github.com/NatLabRockies/SAM/pull/2154>`__, `SSC 1375 <https://github.com/NatLabRockies/SAM/pull/1375>`__)
 
-Custom Generation Profil (SAM 2026.7.3)
+Custom Generation Profile (SAM 2026.7.3)
 ---------------------------------------
 
 Add option to use lifetime (over analysis period) generation data as input. (`SAM 2166 <https://github.com/NatLabRockies/SAM/pull/2166>`__, `SSC 1384 <https://github.com/NatLabRockies/SSC/pull/1384>`__)
