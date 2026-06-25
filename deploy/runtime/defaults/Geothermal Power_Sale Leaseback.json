@@ -9618,6 +9618,7 @@
     "gen": [
         0.0
     ],
+    "geo_cycle_model_type": 0.0,
     "geo_financial_model": -999.0,
     "geopowerblock.pwrb.condenser_type": 2.0,
     "geopowerblock.pwrb.model_name": "0",
@@ -19878,6 +19879,7 @@
     "show_CapitalCostSO": 1.0,
     "show_ReserveAccounts": 1.0,
     "show_construction_period": 1.0,
+    "simulation_timestep_type": 0.0,
     "solar_data_file_name": "blythe_ca_33.617773_-114.588261_psmv3_60_tmy.csv",
     "solar_data_source": "NSRDB",
     "solar_resource": "blythe_ca_33.617773_-114.588261_psmv3_60_tmy",

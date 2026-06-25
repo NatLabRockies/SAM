@@ -9638,6 +9638,7 @@
     "gen": [
         0.0
     ],
+    "geo_cycle_model_type": 0.0,
     "geo_financial_model": -999.0,
     "geopowerblock.pwrb.condenser_type": 2.0,
     "geopowerblock.pwrb.model_name": "0",
@@ -19922,6 +19923,7 @@
     "show_DebtConstDSCR": 1.0,
     "show_ReserveAccounts": 1.0,
     "show_construction_period": 1.0,
+    "simulation_timestep_type": 0.0,
     "solar_data_file_name": "fargo_nd_46.9_-96.8_mts1_60_tmy.csv",
     "solar_data_source": "TMY2",
     "solar_resource": "fargo_nd_46.9_-96.8_mts1_60_tmy",
