@@ -12429,7 +12429,7 @@
         "};\r",
         "\r",
         "equations{ 'geotherm.cost.plant_size' } = define() {\r",
-        "\treturn  ${gross_cost_output_calc};\r",
+        "\treturn  ${gross_output_calc}*1000;\r",
         "};\r",
         "\r",
         "equations{ 'geotherm.cost.confirm_wells_num' } = define() {\r",

@@ -18508,7 +18508,6 @@
         1e38
     ],
     "grid_interconnection_limit_kwac": 100000.0,
-    "gross_cost_output_calc": -999.0,
     "gross_output_calc": -999.0,
     "gross_output_ui": 0.0,
     "hc_ctl1": 0.0,
