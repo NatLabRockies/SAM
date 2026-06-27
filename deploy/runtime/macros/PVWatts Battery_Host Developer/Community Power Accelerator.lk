@@ -9,18 +9,13 @@ performance models with the following financial models:</p>
 <li>Third Party Ownership Host/Developer</li>
 </ul>
 
-<p>This macro is an initial implementation intended as a 
-proof-of-concept. If you have questions or suggestions for improving the macro, 
-please contact us at <a href="mailto:sam.support@nrel.gov">sam.support@nrel.gov</a>.</p>
-
 <p>The macro generates reports showing annual CPA meaningful benefits based on
-the SAM model inputs for the current case and two CPA macro parameters.</p>
+the SAM model inputs for the current case and two CPA macro parameters on the upper right corner of this page.</p>
 
-<p>SAM does not have inputs to account for annual CPA meaningful benefits. Those
-benefits are the two input parameters to this macro. When you run the macro, it 
-adds the sum of the two parameters to the existing Fixed Annual Cost input on the
-Operating Costs page so that they are accounted for in SAM's cash flow calculations. 
-Table 1 below describes the inputs and parameters used to calculate each 
+<p>The SAM financial parameters input pages do not have specific inputs for community meaningful benefits. 
+Input those values on the top right of this screen. When you run the macro, it adds the sum of the two 
+parameters to the existing Fixed Annual Cost input on the Operating Costs page so that they are accounted 
+for in SAM's cash flow calculations. Table 1 below describes the inputs and parameters used to calculate each 
 benefit.</p>
 
 <p>
@@ -34,9 +29,10 @@ benefit.</p>
 
 <p>To use the macro:</p>
 <ol>
-<li>Review inputs on the SAM input pages and modify as appropriate for the project you are modeling.</li>
+<li>If you haven't already, review the inputs on the SAM input pages and modify as appropriate for the project you are modeling.</li>
 <li>Type a value for each of the two CPA macro parameters at the top right of this window.</li>
-<li>Click <strong>Run macro</strong>.</li>
+<li>Click <strong>Run macro</strong> at the top of this page.</li>
+<li>This macro will run the SAM case that you've set up with the macro inputs added to SAM financial model inputs as shown in Table 1. </li>
 </ol>
 
 <p>
@@ -48,7 +44,7 @@ fixed cost annual input is correct before running this macro.
 </td></tr></table>
 </p>
 
-<p>When the macro finishes, you should see the following:</p>
+<p>As the macro is running, <strong>SAM will open multiple windows</strong>. When it is finished, you should see the following:</p>
 
 <ul>
 <li>A PDF file with a summary of performance metrics and a table of annual benefits.</li>
