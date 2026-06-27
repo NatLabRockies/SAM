@@ -10,7 +10,7 @@ performance models with the following financial models:</p>
 
 <p>This macro is an initial implementation intended as a 
 proof-of-concept. If you have questions or suggestions for improving the macro, 
-please contact us at <a href="mailto:sam.support@nrel.gov">sam.support@nrel.gov</a>.</p>
+please contact us at <a href="mailto:sam.support@nlr.gov">sam.support@nlr.gov</a>.</p>
 
 <p>The macro generates reports showing annual CPA meaningful benefits based on
 the SAM model inputs for the current case and two CPA macro parameters.</p>
