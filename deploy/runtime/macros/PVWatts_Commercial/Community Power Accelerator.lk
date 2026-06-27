@@ -10,7 +10,7 @@ performance models with the following financial models:</p>
 </ul>
 
 <p>The macro generates reports showing annual CPA meaningful benefits based on
-the SAM model inputs for the current case and two CPA macro parameters on the upper right corner of this page.</p>
+the SAM model inputs for the current case and the CPA macro parameters on the upper right corner of this page.</p>
 
 <p>The SAM financial parameters input pages do not have specific inputs for community meaningful benefits. 
 Input those values on the top right of this screen. When you run the macro, it adds the sum of the two 
@@ -57,7 +57,9 @@ fixed cost annual input is correct before running this macro.
 @*/
 
 //@ name=communitybenefitspayments;type=number;label=Community benefits payment ($/yr):;value=5000
+//@ name=communitybenefitspaymentsterm;type=number;label=How many years benefits payments will be provided:;value=10
 //@ name=jobtraining;type=number;label=Job training value ($/yr):;value=25000
+//@ name=jobtrainingterm;type=number;label=How many years job training will be provided:;value=10
 
 if ( typeof(macro) == 'unknown' ) 
 {
@@ -68,14 +70,36 @@ if ( typeof(macro) == 'unknown' )
 outln('Running...');
 
 communitybenefitspayments = macro.communitybenefitspayments;
+communitybenefitspaymentsterm = macro.communitybenefitspaymentsterm;
 jobtraining = macro.jobtraining;
+jobtrainingterm = macro.jobtrainingterm;
+
+ap = round(to_real(get('analysis_period')));
+
+x=alloc(ap);
 
 om = get('om_fixed');
-
-x = om;
-x[0] += to_real(communitybenefitspayments);
-x[0] += to_real(jobtraining);
-
+cbp = to_real(communitybenefitspayments);
+cpb_t = to_real(communitybenefitspaymentsterm);
+jt = to_real(jobtraining);
+jt_t = to_real(jobtrainingterm);
+if(#om > 1) //schedule mode
+{
+	for(i = 0; i < ap; i++)
+	{
+		x[i] = om[i];
+		if (i < cpb_t) x[i] += cbp; //add the community benefits payments only for the indicated term
+		if (i < jt_t) x[i] += jt; //add the job training payments only for the indicated term
+	}
+}
+else { //value mode
+	for(i = 0; i < ap; i++)
+	{
+		x[i] = om[0];
+		if (i < cpb_t) x[i] += cbp; //add the community benefits payments only for the indicated term
+		if (i < jt_t) x[i] += jt; //add the job training payments only for the indicated term
+	}
+}
 set('om_fixed', x );
 
 msg = '';
@@ -86,7 +110,7 @@ msg += '\nCPA job training costs ($/yr) = ' + sprintf('%m',jobtraining);
 msg += '\n-----------------------------------------------';
 msg += '\nFixed annual cost ($/yr) = ' + sprintf('%m',to_string(x[0]));
 
-outln('Fixed annual cost on Operating Costs page set to sum of ' + to_string(om[0]) +', '+ communitybenefitspayments +', ' + jobtraining);
+outln('Year 1 fixed annual cost on Operating Costs page set to sum of ' + to_string(om[0]) +', '+ communitybenefitspayments +', ' + jobtraining);
 ok = show_page('Operating Costs');
 if (ok) {
 	pagenote(msg);
@@ -119,7 +143,7 @@ varbenefits = ['Energy savings to beneficiary','Community benefits payments','Jo
 varcf = ['cf_energy_value','cf_om_fixed_expense','cf_om_fixed_expense','cf_after_tax_net_equity_cost_flow','cf_after_tax_cash_flow'];
 varmultiplier = [1.0,fixedcommunitybenefitspayments/fixedtotal,fixedjobtraining/fixedtotal,1.0,1.0];
 
-ap = round(to_real(get('analysis_period')));
+
 
 // html table
 str_html = '<table bgcolor=#dddddd width=100%>';

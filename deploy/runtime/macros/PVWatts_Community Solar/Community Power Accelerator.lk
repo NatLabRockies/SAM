@@ -8,7 +8,7 @@ performance models with the following financial models:</p>
 <li>Third Party Ownership Host/Developer</li>
 
 <p>The macro generates reports showing annual CPA meaningful benefits based on
-the SAM model inputs for the current case and two CPA macro parameters on the upper right corner of this page.</p>
+the SAM model inputs for the current case and the CPA macro parameters on the upper right corner of this page.</p>
 
 <p>The SAM financial parameters input pages do not have specific inputs for community meaningful benefits. 
 Input those values on the top right of this screen. When you run the macro, it 
@@ -60,7 +60,9 @@ that the values of these inputs are correct before running this macro.
 //@ name=energysavings;type=number;label=Energy savings to subscriber ($/kWh);value=0.1
 //@ name=leasepayment;type=number;label=Lease payment to owner ($/yr):;value=50000
 //@ name=communitybenefitspayments;type=number;label=Community benefits payment ($/yr):;value=5000
+//@ name=communitybenefitspaymentsterm;type=number;label=How many years benefits payments will be provided:;value=10
 //@ name=jobtraining;type=number;label=Job training value ($/yr):;value=25000
+//@ name=jobtrainingterm;type=number;label=How many years job training will be provided:;value=10
 
 if ( typeof(macro) == 'unknown' ) 
 {
@@ -73,15 +75,32 @@ outln('Running...');
 energysavings = macro.energysavings; 
 leasepayment = macro.leasepayment; 
 communitybenefitspayments = macro.communitybenefitspayments;
+communitybenefitspaymentsterm = macro.communitybenefitspaymentsterm;
 jobtraining = macro.jobtraining;
+jobtrainingterm = macro.jobtrainingterm;
 
-x=alloc(1);
+ap = round(to_real(get('analysis_period')));
+
+x=alloc(ap);
 
 om = get('om_fixed');
-x[0] = to_real(leasepayment);
-x[0] += om[0];
+lp = to_real(leasepayment);
+if(#om > 1) //schedule mode
+{
+	for(i = 0; i < ap; i++)
+	{
+		x[i] = om[i] + lp;
+	}
+}
+else { //value mode
+	user_om = om[0];
+	for(i = 0; i < ap; i++)
+	{
+		x[i] = lp + user_om;
+	}
+}
 set('om_fixed', x ); // 7/2/2025-lease payment is cost to project and changed to fixed_om
-outln('Fixed annual cost on Operating Costs page set to ' + to_string(x[0]) + ' = ' + to_string(om[0]) + ' = ' + leasepayment);
+outln('Year 1 fixed annual cost on Operating Costs page set to ' + to_string(x[0]) + ' = ' + to_string(om[0]) + ' = ' + leasepayment);
 
 msg = '';
 msg +='Fixed annual cost calculated by Community Power Accelerator (CPA) macro as sum of project fixed operating costs and lease payments to owner:';
@@ -112,11 +131,30 @@ msg += '\n-----------------------------------------------';
 msg += '\nSubscriber 1 bill credit rate ($/kWh) = ' + sprintf('%m',to_string(x[0]));
 
 frc = get('cs_cost_recurring_fixed');
-x[0] = to_real(communitybenefitspayments);
-x[0] += to_real(jobtraining);
-x[0] += frc[0];
+cbp = to_real(communitybenefitspayments);
+cpb_t = to_real(communitybenefitspaymentsterm);
+jt = to_real(jobtraining);
+jt_t = to_real(jobtrainingterm);
+if(#frc > 1) //schedule mode
+{
+	for(i = 0; i < ap; i++)
+	{
+		x[i] = frc[i];
+		if (i < cpb_t) x[i] += cbp; //add the community benefits payments only for the indicated term
+		if (i < jt_t) x[i] += jt; //add the job training payments only for the indicated term
+	}
+}
+else { //value mode
+	for(i = 0; i < ap; i++)
+	{
+		x[i] = frc[0];
+		if (i < cpb_t) x[i] += cbp; //add the community benefits payments only for the indicated term
+		if (i < jt_t) x[i] += jt; //add the job training payments only for the indicated term
+	}
+}
+
 set('cs_cost_recurring_fixed', x );
-outln('Recurring annual fixed cost on Community Solar page set to ' + to_string(x[0]) + ' = ' + to_string(frc[0]) +' + '+ communitybenefitspayments + ' + ' + jobtraining);
+outln('Year 1 recurring annual fixed cost on Community Solar page set to ' + to_string(x[0]) + ' = ' + to_string(frc[0]) +' + '+ communitybenefitspayments + ' + ' + jobtraining);
 
 msg += '\n';
 msg +='\nRecurring annual fixed cost calculated as sum of recurring cost, community benefits payment, and job training value:';
@@ -158,8 +196,6 @@ data = {'fixedjobtraining' = fixedjobtraining, 'fixedcommunitybenefitspayments' 
 varbenefits = ['Energy savings to subscriber','Lease payments to owner','Community benefits payments','Job training','After-tax costs','After-tax cash flow'];
 varcf = ['cf_subscriber1_bill_credit_amount','cf_om_fixed_expense','cf_community_solar_recurring_fixed','cf_community_solar_recurring_fixed','cf_project_return_aftertax_cash','cf_project_return_aftertax']; // 7/2/2025 meeting Lease payment to owner is cf_om_fixed
 varmultiplier = [1.0,1.0,fixedcommunitybenefitspayments/fixedtotal,fixedjobtraining/fixedtotal,1.0,1.0];
-
-ap = round(to_real(get('analysis_period')));
 
 // html table
 str_html = '<table bgcolor=#dddddd width=100%>';
