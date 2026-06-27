@@ -10,6 +10,11 @@ set(CMAKE_OSX_DEPLOYMENT_TARGET "12" CACHE STRING "Minimum OS X deployment versi
 
 set(CMAKE_XCODE_ATTRIBUTE_OTHER_CODE_SIGN_FLAGS "-o linker-signed")
 
+set(CMAKE_CXX_STANDARD 20)
+
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF) 
+
 
 #####################################################################################################################
 #
@@ -27,7 +32,7 @@ if (SAMAPI_EXPORT)
 	add_subdirectory(api)
 endif()
 
-include_directories(src $ENV{WEXDIR}/include $ENV{LKDIR}/include $ENV{SSCDIR} $ENV{RAPIDJSONDIR} ../tcs )
+include_directories(src $ENV{WEXDIR}/include $ENV{LKDIR}/include $ENV{SSCDIR} $ENV{RAPIDJSONDIR} $ENV{ORTOOLSDIR}/include ../tcs )
 
 set(SAM_SRC src/private.h
     src/main_add.h
@@ -79,7 +84,6 @@ set(SAM_SRC src/private.h
 	src/shadingfactors.cpp src/shadingfactors.h
 	src/materials.cpp      src/materials.h
 	src/codegenerator.cpp  src/codegenerator.h
-	src/pythonhandler.cpp src/pythonhandler.h
 	src/combinecases.cpp src/combinecases.h
     src/ptesdesignptdialog.cpp src/ptesdesignptdialog.h
     src/geotools.cpp       src/geotools.h)
@@ -90,6 +94,7 @@ set(SAM_SRC src/private.h
 # Compile Options per Platform
 #
 #####################################################################################################################
+
 
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
@@ -108,7 +113,7 @@ else(MSVC)
 	else()
 		add_compile_options(-Wno-deprecated)
 	endif()
-	add_compile_options(-Wall -Wno-unknown-pragmas -Wno-overloaded-virtual -std=c++11)
+	add_compile_options(-Wall -Wno-unknown-pragmas -Wno-overloaded-virtual)
 	if(CMAKE_BUILD_TYPE STREQUAL "Debug")
 		add_compile_definitions(_DEBUG)
 	else()
@@ -134,16 +139,52 @@ if (UNIX)
     endif ()
 
     if (APPLE)
-        find_package(wxWidgets REQUIRED xrc webview stc richtext ribbon propgrid aui gl html qa adv core xml net base )
+        find_package(wxWidgets  QUIET REQUIRED xrc webview stc richtext ribbon propgrid aui gl html qa adv core xml net base )
     else()
-	    find_package(wxWidgets REQUIRED xrc stc richtext ribbon propgrid aui gl html qa adv core xml net base )
+	    find_package(wxWidgets QUIET  REQUIRED xrc stc richtext ribbon propgrid aui gl html qa adv core xml net base )
     endif()
 else()
-	set(wxWidgets_ROOT_DIR $ENV{WXMSW3})
-	find_package(wxWidgets REQUIRED xrc webview stc richtext ribbon propgrid aui gl html qa adv core xml net base scintilla)
+#    set(wxWidgets_ROOT_DIR $ENV{WXMSW3})
+#    find_package(wxWidgets QUIET REQUIRED xrc stc richtext ribbon propgrid aui gl html qa adv core xml net base scintilla)
+    set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "Debug and Release Builds Configured" FORCE)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /std:c++20")
+    # for linking to Release build of ortools 
+    set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreadedDLL")
+    # Get the current debug flags and remove the /D_DEBUG option.
+    string(REPLACE "/D_DEBUG" "" CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}")
+    # following does not force release libraries for wxWidgets using find_package
+    #set(CMAKE_MAP_IMPORTED_CONFIG_DEBUG RELEASE)
+
+    set(wxWidgets_ROOT_DIR $ENV{WXMSW3})
+    find_package(wxWidgets QUIET  REQUIRED xrc webview stc richtext ribbon propgrid aui gl html qa adv core xml net base scintilla)
+
+    # message("All wxWidgets: " ${wxWidgets_LIBRARIES})
+    set(FOUND "false")
+    foreach(lib ${wxWidgets_LIBRARIES})
+        string(FIND ${lib} "optimized" INDEX)
+        string(FIND ${lib} "debug" INDEX2)
+        string(FIND ${lib} "wxWidgets" INDEX3)
+        if (INDEX GREATER_EQUAL 0) # skip once
+            set(FOUND "true")
+            continue()
+        elseif((INDEX2 LESS 0) AND (INDEX3 LESS 0))
+            set(FOUND "true")
+        endif()
+        if (${FOUND} STREQUAL "true")
+            set(FOUND "false")
+            message("lib: ${lib}")
+            list(APPEND WX_LIBS_LIST ${lib})
+        endif()
+    endforeach()
+
+    list(JOIN WX_LIBS_LIST ";" wxWidgets_LIBRARIES)
+    # message("Link Libraries for wxWidgets: ${wxWidgets_LIBRARIES}")
 endif()
 
-include(${wxWidgets_USE_FILE})
+if (wxWidgets_FOUND)
+    include(${wxWidgets_USE_FILE})
+endif ()
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${wxWidgets_CXX_FLAGS}")
 
 
 #####################################################################################################################
@@ -272,6 +313,7 @@ endif()
 
 target_link_libraries(${SAM_EXE} ${wxWidgets_LIBRARIES})
 
+
 if (UNIX)
 	target_link_libraries(${SAM_EXE} -lm -lcurl)
 elseif (MSVC)
@@ -280,6 +322,10 @@ elseif (MSVC)
 				PATHS $ENV{WEXDIR}/build_resources/libcurl_ssl_x64/lib)
 	target_link_libraries(${SAM_EXE} ${CURL_LIB} Winhttp)
 endif()
+
+
+find_package(ortools NO_MODULE REQUIRED)
+target_link_libraries(${SAM_EXE} ortools::ortools)
 
 
 #####################################################################################################################
@@ -345,29 +391,6 @@ if (UNIX)
                 COMMAND cp ${SSC_SO} ${SAM_APP}/linux_64
         )
 
-        #		install(TARGETS ${SAM_EXE}
-        #			RUNTIME DESTINATION linux_64)
-        #		install(FILES ${SSC_LIB}
-        #			DESTINATION linux_64)
-        #		install(FILES Sandia/linux/lhs.bin Sandia/linux/stepwise.bin
-        #			DESTINATION runtime/bin)
-        #		install(DIRECTORY build_linux/GtkTheme
-        #			DESTINATION linux_64)
-        #		install(DIRECTORY deploy/libraries deploy/runtime deploy/solar_resource deploy/wind_resource
-        #			DESTINATION .)
-
-        #		set(CPACK_GENERATOR "STGZ;TGZ")
-        #		set(CPACK_PACKAGE_FILE_NAME "sam.deploy")
-        #		set(CPACK)
-        #		include(CPack)
-        #		add_custom_target( installer
-        #			COMMAND "rm" "-f" "install0"
-        #			COMMAND "echo" "#!/bin/sh" ">" "install0"
-        #			COMMAND "echo" "SAMVER=Open.Source" ">>" "install0"
-        #			COMMAND "cat" "install0" "${CMAKE_SOURCE_DIR}/build_linux/install.sh" "sam.deploy.tar.gz" ">" "sam-linux-$(SAMVER).run"
-        #			COMMAND "chmod" "a+x" "sam-linux-$(SAMVER).run"
-        #			COMMAND "./sam-linux-$(SAMVER).run"
-        #			DEPENDS SAM)
     endif()
 else()
     set( LIBCURL_FILES
@@ -411,5 +434,17 @@ else()
         COMMAND ${CMAKE_COMMAND}
         ARGS -E copy $ENV{SSCDIR}/ssc/sscapi.h ${CMAKE_CURRENT_SOURCE_DIR}/deploy/runtime
     )
+
+    file(GLOB ORTOOLS_DLLS "$ENV{ORTOOLSDIR}/bin/*.dll")
+    foreach( file_i ${ORTOOLS_DLLS})
+        add_custom_command(
+        TARGET ${SAM_EXE}
+        POST_BUILD
+        COMMAND ${CMAKE_COMMAND}
+        ARGS -E copy ${file_i} ${SAMEXE_DIR}
+    )
+    endforeach( file_i )
+
+
 endif()
 

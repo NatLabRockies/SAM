@@ -106,9 +106,13 @@
     "annual_albedo": 0.183951,
     "annual_beam": 7.33564,
     "annual_crit": 0.0,
+    "annual_csky_beam": 0.0,
+    "annual_csky_diffuse": 0.0,
+    "annual_csky_global": 0.0,
     "annual_diffuse": 1.34843,
     "annual_global": 5.79476,
     "annual_peak": 4.30453,
+    "annual_precipitation": 0.0,
     "annual_snow": NaN,
     "annual_tdry": 21.9385,
     "annual_twet": NaN,
@@ -137,7 +141,7 @@
         0.5
     ],
     "degradation": [
-        0.5
+        0.0
     ],
     "elev": 358.0,
     "en_belpe": 0.0,
@@ -26527,7 +26531,7 @@
         1.71415,
         1.87435
     ],
-    "nominal_discount_rate": 9.060000000000004,
+    "nominal_discount_rate": 9.060000000000003,
     "normalize_to_utility_bill": 0.0,
     "peak_1": 1.85407,
     "peak_10": 2.55071,

@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -194,9 +194,6 @@ void export_files(const std::string& config, std::set<std::string>& processed_cm
     for (auto & primary_cmod : primary_cmods){
         processed_cmods.insert(util::lower_case(primary_cmod));
 
-        if (primary_cmod == "wind_landbosse")
-            continue;
-
         std::cout << "Exporting for " << config << ": " << primary_cmod << "... ";
         // get all the expressions
         builder_generator b_gen(&ce);
@@ -358,7 +355,6 @@ int main(int argc, char *argv[]){
 
         std::string cmods;
         for (auto &c : primary_cmods){
-            if (c == "wind_landbosse") continue;
             cmods += ":doc:`../modules/" + format_as_symbol(c) + "`, ";
         }
         cmods.pop_back();
@@ -432,7 +428,6 @@ int main(int argc, char *argv[]){
     assert(models_file.is_open());
 
     for (auto & it : models_sorted) {
-        if (it.first == "WindLandbosse") continue;
         models_file << it.second;
         cmod_toctree.append("    ../modules/");
         cmod_toctree.append(it.first);

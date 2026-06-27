@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -207,7 +207,7 @@ void LocationSetup::OnAddressChange( wxCommandEvent & )
 	double lon = std::numeric_limits<double>::quiet_NaN();
 	double tz = std::numeric_limits<double>::quiet_NaN();
 	
-	// use GeoTools::GeocodeGoogle for non-NREL builds and set google_api_key in private.h
+	// use GeoTools::GeocodeGoogle for non-NLR builds and set google_api_key in private.h
 	if (GeoTools::GeocodeDeveloper(m_address->GetValue(), &lat, &lon))
 	{
 		m_lat->SetValue(lat);
@@ -1828,7 +1828,7 @@ bool ShadeScripting::CloseDoc()
 	if (m_script->GetModify())
 	{
 		Raise();
-		wxString id = m_fileName.IsEmpty() ? "untitled" : m_fileName;
+		wxString id = m_fileName.IsEmpty() ? wxString("untitled") : m_fileName;
 		int result = wxMessageBox("Script modified. Save it?\n\n" + id, "Query", wxYES_NO|wxCANCEL);
 		if ( result == wxCANCEL 
 			|| (result == wxYES && !Save()) )
@@ -2414,19 +2414,13 @@ void ShadeTool::OnCommand( wxCommandEvent &evt)
 	case ID_VIEW_XY: m_book->SetSelection( PG_SCENE ); m_view->SetMode( m_view->TOP_VIEW ); break;
 	case ID_VIEW_XZ: m_book->SetSelection( PG_SCENE ); m_view->SetMode( m_view->Z_VIEW ); break;
 	case ID_FEEDBACK:
-		wxLaunchDefaultBrowser( "mailto://sam.support@nrel.gov?subject=Shade Calculator - Beta Feedback" );
+		wxLaunchDefaultBrowser( "mailto://sam.support@nlr.gov?subject=Shade Calculator - Beta Feedback" );
 		break;
 	case wxID_HELP:
 #ifdef S3D_STANDALONE
-		
-#if defined(__WXMSW__)||defined(__WXOSX__)
-		m_book->SetSelection( PG_HELP );
-#else
 		wxLaunchDefaultBrowser( "file:///" + m_dataPath + "/help/index.html" );
-#endif
-
 #else
-		SamApp::ShowHelp( "3d_shade_calculator" );
+		SamApp::ShowHelp( "shade-calculator-reference/sc-overview" );
 #endif
 		break;
 	}

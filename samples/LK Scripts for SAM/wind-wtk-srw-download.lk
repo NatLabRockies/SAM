@@ -1,16 +1,16 @@
 ////////////////////////////////////////////////////////////////////////////////
 /*
 
-This script downloads a wind data file in the SAM SRW format from the NREL
+This script downloads a wind data file in the SAM SRW format from the NLR
 WIND Toolkit dataset for a given latitude and longitude.
 	
 See API documentation at
-https://developer.nrel.gov/docs/wind/wind-toolkit/wtk-srw-download/
+https://developer.nlr.gov/docs/wind/wind-toolkit/wtk-srw-download/
 
 **Note** As of SAM 2022.11.21 r2, we recommend using wind resource data from
 the wtk-download endpoint instead of the wtk-srw-download endpoint because it
 provides access to subhourly data, and uses the new SAM CSV format for Wind
-that is consistent with files from other NREL Developer WIND Toolkit API
+that is consistent with files from other NLR Developer WIND Toolkit API
 endpoints and with RE Explorer.
 
 Tested in SAM 2020.11.21 r1
@@ -18,7 +18,7 @@ Tested in SAM 2020.11.21 r1
 */
 ////////////////////////////////////////////////////////////////////////////////
 
-// To use this API outside of SAM, get your own API key from https://developer.nrel.gov
+// To use this API outside of SAM, get your own API key from https://developer.nlr.gov
 // and set api_key and api_email to values for your key.
 api_key = '<SAMAPIKEY>';
 api_email = '<USEREMAIL>';
@@ -33,8 +33,8 @@ path = choose_dir( cwd(), 'Choose Folder to Store SRW File' );
 fname = 'wind_toolkit_' + to_string( year ) + '_' + to_string( lat ) + '_' + to_string ( lon ) + '_' + to_string( height ) + 'm.srw';
 f = path +'/' + fname;
 
-// special NREL Developer API endpoint for SAM
-url = 'https://developer.nrel.gov/api/wind-toolkit/v2/wind/wtk-srw-download?year=<YEAR>&lat=<LAT>&lon=<LON>&hubheight=<HUBHEIGHT>&api_key=<YOURAPIKEY>&email=<YOUREMAIL>';
+// special NLR Developer API endpoint for SAM
+url = 'https://developer.nlr.gov/api/wind-toolkit/v2/wind/wtk-srw-download?year=<YEAR>&lat=<LAT>&lon=<LON>&hubheight=<HUBHEIGHT>&api_key=<YOURAPIKEY>&email=<YOUREMAIL>';
 url = replace(url, '<YEAR>', year);
 url = replace(url, '<LAT>', lat);
 url = replace(url, '<LON>', lon);

@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -83,5 +83,11 @@ SAM_EXPORT void SAM_Reopt_size_standalone_battery_post_eqn(ssc_data_t data, SAM_
 SAM_EXPORT void SAM_getem_om_cost_calc_eqn(SAM_table data, SAM_error* err) {
     translateExceptions(err, [&] {
         getem_om_cost_calc(data);
+        });
+}
+
+SAM_EXPORT void SAM_size_battery(SAM_table data, SAM_error* err) {
+    translateExceptions(err, [&] {
+        Size_battery(data);
         });
 }

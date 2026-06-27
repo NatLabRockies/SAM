@@ -4641,7 +4641,6 @@
         "\r",
         "};\r",
         "\r",
-        "\r",
         "equations{ 'cec_aspect_ratio' } = define() {\r",
         "\tif ( ${lib_length} == 0 || ${lib_width} == 0 )\r",
         "\t\treturn ${ui_aspect_ratio};\r",
@@ -4685,7 +4684,15 @@
         "\t",
         "equations{'cec_step'} = define() {",
         "\treturn ${step};",
-        "};"
+        "};\r",
+        "\r",
+        "\r",
+        "\t\t\r",
+        "\t\t\r",
+        "\t\t\r",
+        "\t\r",
+        "\t\t\r",
+        "\t\t"
     ],
     "Callbacks": [
         "function cec_module_update_ui()",
@@ -4807,7 +4814,7 @@
         "\t\ti_string = to_string(i+1);\r",
         "\t\tif ((i == 0 || value(\"subarray\" + i_string + \"_enable\") == 1) && value(\"cec_is_bifacial\") == 1) {\r",
         "\t\t\tif (value(\"subarray\" + i_string + \"_track_mode\") == 1) { //single axis\r",
-        "\t\t\t\tmax_height = value(\"ui_subarray\" + i_string + \"_length_side\") / 2.0 * sind(value(\"subarray\" + i_string + \"_rotlim\"));\r",
+        "\t\t\t\tmax_height = value(\"subarray\" + i_string + \"_ui_length_side\") / 2.0 * sind(value(\"subarray\" + i_string + \"_rotlim\"));\r",
         "\t\t\t\tmsg = property('lbl_bifacial', 'Caption');\r",
         "\t\t\t\tif (height < max_height) {\r",
         "\t\t\t\t\tif (msg == '')\r",
