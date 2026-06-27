@@ -4186,7 +4186,7 @@
         "\tn_subarrays_max = 4;\r",
         "\tfor (i=2;i<=n_subarrays_max;i++) {\r",
         "\t\tprefix = 'subarray'+to_string(i);\r",
-        "\t\tif (prefix+'_enable') {\r",
+        "\t\tif (value(prefix+'_enable') == 1) {\r",
         "\t\t\tenable(prefix + '_electrical_mismatch',  is_bifacial() && !calculate_mismatch);\r",
         "\t\t}\t\r",
         "\t}\t\r",
