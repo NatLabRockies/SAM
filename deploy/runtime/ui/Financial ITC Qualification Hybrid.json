@@ -2743,19 +2743,6 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
-        "batt_itc_basis_cost_include": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "",
-            "Units": "",
-            "Group": "ITC Qualifying Costs",
-            "IndexLabels": "",
-            "Flags": 0.0,
-            "DefaultValue": 0.0,
-            "UIObject": "CheckBox",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
         "batt_itc_basis_cost_sta_include": {
             "Version": 4.0,
             "Type": 1.0,
@@ -3075,11 +3062,11 @@
         "itc_qualification_choice": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "ITC qualification options",
             "Units": "",
             "Group": "ITC Qualifying Costs",
             "IndexLabels": "Determine ITC qualification from system components|Determine ITC qualification from depreciation class allocations",
-            "Flags": 0.0,
+            "Flags": 3.0,
             "DefaultValue": 0.0,
             "UIObject": "RadioChoice",
             "sscVariableName": "",
@@ -3147,19 +3134,6 @@
             "Flags": 9.0,
             "DefaultValue": 0.0,
             "UIObject": "Numeric",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "system_itc_basis_cost_include": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "System cost qualifies for ITC",
-            "Units": "",
-            "Group": "ITC Qualifying Costs",
-            "IndexLabels": "",
-            "Flags": 0.0,
-            "DefaultValue": 0.0,
-            "UIObject": "CheckBox",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
