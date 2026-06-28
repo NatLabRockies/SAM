@@ -24,7 +24,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 89.0
+                    "Integer": 104.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -209,7 +209,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 39.0
+                    "Integer": 54.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -1909,7 +1909,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 507.0
+                    "Integer": 522.0
                 },
                 "Width": {
                     "Type": 3.0,

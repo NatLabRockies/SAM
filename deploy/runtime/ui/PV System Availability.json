@@ -1,7 +1,7 @@
 {
     "Name": "PV System Availability",
-    "Width": 1010.0,
-    "Height": 169.0,
+    "Width": 1008.0,
+    "Height": 173.0,
     "FormObjects": {
         "Divider": {
             "Visible": 1.0,
@@ -12,11 +12,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 15.0
+                    "Integer": 18.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 51.0
+                    "Integer": 60.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -62,11 +62,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 540.0
+                    "Integer": 543.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 75.0
+                    "Integer": 84.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -123,11 +123,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 39.0
+                    "Integer": 42.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 75.0
+                    "Integer": 84.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -184,11 +184,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 516.0
+                    "Integer": 519.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 51.0
+                    "Integer": 60.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -246,7 +246,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 161.0
+                    "Integer": 167.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -271,11 +271,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 15.0
+                    "Integer": 18.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 21.0
+                    "Integer": 24.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -283,7 +283,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 24.0
+                    "Integer": 33.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
