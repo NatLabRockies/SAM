@@ -843,3 +843,17 @@ It accounts for spectral effects by applying an air mass modifier to the plane-o
   These are the five air mass modifier equation coefficients (a0...a4) from the equation for    from Page 14 of King (2004):
 
   The default values are from the Sandia module model's library for the First Solar FS-267 module.
+
+Spectral Correction
+~~~~~~~~~~~~~~~~~~~
+
+Spectral correction factors adjust the effective irradiance on PV modules to account for different amounts of irradiance from each wavelength of light depending on the atmospheric conditions, and different cell technologies' responses to different spectral content. Air mass is the relative measure of the optical atmosphere length and is alwas used in estimating the air mass impact on spectrum. For thin film modules especially, using models that account for other atmospheric conditions such as the amount of precipitable water and the clearsky index can lead to better estimates of effective irradiance. For more details about these methods, see the `SAM website <https://sam.nlr.gov/photovoltaic/pv-publications.html>`__.
+
+**Air mass only**
+  This is the default option, and is most useful for crystalline silicon module analysis. It accounts for the impact of air mass on the spectrum, but does not account for other atmospheric conditions. This is an implementation of the approach described in De Soto et al. (2006) `Improvement and Validation of a Model for Photovoltaic Array Performance <https://doi.org/10.1016/j.solener.2005.06.010>`__ and used in the `Sandia PV Array Performance Model <https://pvpmc.sandia.gov/modeling-guide/2-dc-module-iv/point-value-models/sandia-pv-array-performance-model/>`__.
+
+**Air mass and precipitable water**
+  This option accounts for the impact of air mass and precipitable water on the spectrum, and has model coefficients for both silicon, thin film, and other cell types. This is an implementation of the approach described in Lee et al. (2016) `Spectral correction for photovoltaic module performance based on air mass and precipitable water <https://doi.org/10.1109/PVSC.2016.7749836>`__.
+
+**Air mass and clearsky index**
+  This option accounts for the impact of air mass and clearsky index on the spectrum, and has model coefficients for both silicon, thin film, and other cell types without requiring precipitable water in the weather data. This is an implementation of the approach described in Pelland et a. (2020) `Development and Testing of the PVSPEC Model of Photovoltaic Spectral Mismatch Factor <https://doi.org/10.1109/PVSC45281.2020.9300932>`__.

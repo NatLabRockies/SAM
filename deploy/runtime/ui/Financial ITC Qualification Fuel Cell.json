@@ -854,7 +854,7 @@
                 },
                 "Prefix": {
                     "Type": 5.0,
-                    "String": ""
+                    "String": "$"
                 },
                 "Suffix": {
                     "Type": 5.0,
@@ -937,7 +937,7 @@
                 },
                 "Prefix": {
                     "Type": 5.0,
-                    "String": ""
+                    "String": "$"
                 },
                 "Suffix": {
                     "Type": 5.0,
@@ -1024,7 +1024,7 @@
                 },
                 "Suffix": {
                     "Type": 5.0,
-                    "String": ""
+                    "String": "%"
                 },
                 "ThousandsSep": {
                     "Type": 2.0,
@@ -1107,7 +1107,7 @@
                 },
                 "Suffix": {
                     "Type": 5.0,
-                    "String": ""
+                    "String": "%"
                 },
                 "ThousandsSep": {
                     "Type": 2.0,
@@ -2248,6 +2248,10 @@
         "\tenable('fuel_cell_itc_basis_cost_fed_include', !choice);\r",
         "\tenable('fuel_cell_itc_basis_cost_sta_include', !choice);\r",
         "\tenable('itc_basis_percent_input', !choice);\r",
+        "\tenable('itc_basis_cost_percent_fed', !choice);\r",
+        "\tenable('itc_basis_cost_percent_sta', !choice);\r",
+        "\tenable('itc_basis_cost_capex_fed', !choice);\r",
+        "\tenable('itc_basis_cost_capex_sta', !choice);\r",
         "\t\r",
         "\t//Depreciation Driven Controls\r",
         "\tshow('itc_qual_warning', choice);\r",

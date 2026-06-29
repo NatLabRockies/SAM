@@ -4684,7 +4684,15 @@
         "\t",
         "equations{'cec_step'} = define() {",
         "\treturn ${step};",
-        "};"
+        "};\r",
+        "\r",
+        "\r",
+        "\t\t\r",
+        "\t\t\r",
+        "\t\t\r",
+        "\t\r",
+        "\t\t\r",
+        "\t\t"
     ],
     "Callbacks": [
         "function cec_module_update_ui()",
