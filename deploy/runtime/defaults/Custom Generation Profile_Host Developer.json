@@ -36697,7 +36697,7 @@
         184.05
     ],
     "nameplate_capacity": 9707.12,
-    "nominal_discount_rate": 9.060000000000003,
+    "nominal_discount_rate": 9.060000000000004,
     "non_itc_basis_depreciation_allocation": 0.0,
     "non_itc_basis_percent_depr": 100.0,
     "normalize_to_utility_bill": 0.0,
@@ -36800,7 +36800,7 @@
     "solution_mode_message": "",
     "spec_mode": 0.0,
     "start_day_of_year": 0.0,
-    "start_day_of_year_load_ui": 3.335046e-317,
+    "start_day_of_year_load_ui": 0.0,
     "start_day_of_year_tod_ui": 0.0,
     "state_tax_rate": [
         7.0
