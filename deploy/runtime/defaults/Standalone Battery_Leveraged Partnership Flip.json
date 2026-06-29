@@ -29158,8 +29158,8 @@
     "standalonebatt.cost.sales_tax.percent": 100.0,
     "standalonebatt.cost.sales_tax.total": 3723004.720764,
     "standalonebatt.cost.sales_tax.value": 5.0,
-    "start_day_of_year": 3.335046e-317,
-    "start_day_of_year_tod_ui": 3.335046e-317,
+    "start_day_of_year": 0.0,
+    "start_day_of_year_tod_ui": 0.0,
     "state_tax_rate": [
         7.0
     ],

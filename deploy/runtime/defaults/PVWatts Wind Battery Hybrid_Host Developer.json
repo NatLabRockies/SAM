@@ -20624,7 +20624,6 @@
         "annual_peak": 274.231,
         "batt_basis_cost": 421090.49934,
         "batt_itc_basis_cost_fed_include": 1.0,
-        "batt_itc_basis_cost_include": 0.0,
         "batt_itc_basis_cost_sta_include": 1.0,
         "batt_itc_basis_percent": 21.323334390530769,
         "batt_minimum_outage_SOC": 10.0,
@@ -65554,7 +65553,6 @@
             7.0
         ],
         "system_capacity": 569.5652173913044,
-        "system_itc_basis_cost_include": 0.0,
         "term_int_rate": 7.0,
         "term_tenor": 18.0,
         "tod_library": "Uniform Dispatch",

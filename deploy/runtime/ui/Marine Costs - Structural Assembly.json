@@ -3801,7 +3801,7 @@
         "insurance_during_construction_cost_modeled": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": " ",
+            "Label": "Insurance during construction modeled cost",
             "Units": "$",
             "Group": "ME Costs - Structural Assembly",
             "IndexLabels": "",

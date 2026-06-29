@@ -56510,7 +56510,6 @@
         "annual_peak": 274.231,
         "batt_basis_cost": 429431.7728924999,
         "batt_itc_basis_cost_fed_include": 1.0,
-        "batt_itc_basis_cost_include": 0.0,
         "batt_itc_basis_cost_sta_include": 1.0,
         "batt_itc_basis_percent": 9.516366319480131,
         "batt_minimum_outage_SOC": 10.0,
@@ -119584,7 +119583,6 @@
             7.0
         ],
         "system_capacity": 769.5652173913044,
-        "system_itc_basis_cost_include": 0.0,
         "term_int_rate": 7.0,
         "term_tenor": 18.0,
         "thermal_1": 493720.8040000014,
