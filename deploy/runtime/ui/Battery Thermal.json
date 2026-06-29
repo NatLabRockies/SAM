@@ -1,7 +1,7 @@
 {
     "Name": "Battery Thermal",
-    "Width": 1051.0,
-    "Height": 565.0,
+    "Width": 1053.0,
+    "Height": 604.0,
     "FormObjects": {
         "GroupBox": {
             "Visible": 1.0,
@@ -24,7 +24,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 559.0
+                    "Integer": 589.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -219,7 +219,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 351.0
+                    "Integer": 372.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -430,7 +430,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 351.0
+                    "Integer": 372.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -513,7 +513,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 408.0
+                    "Integer": 429.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -596,7 +596,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 441.0
+                    "Integer": 462.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -720,7 +720,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 441.0
+                    "Integer": 462.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -803,7 +803,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 471.0
+                    "Integer": 492.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -886,7 +886,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 408.0
+                    "Integer": 429.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1082,7 +1082,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 381.0
+                    "Integer": 402.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1173,7 +1173,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 327.0
+                    "Integer": 348.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1252,7 +1252,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 504.0
+                    "Integer": 525.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1260,7 +1260,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 48.0
+                    "Integer": 66.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -1384,7 +1384,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 75.0
+                    "Integer": 96.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,

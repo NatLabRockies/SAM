@@ -1,7 +1,7 @@
 {
     "Name": "PV Soiling Shading Snow",
-    "Width": 1009.0,
-    "Height": 717.0,
+    "Width": 1003.0,
+    "Height": 734.0,
     "FormObjects": {
         "Label": {
             "Visible": 1.0,
@@ -78,7 +78,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 477.0
+                    "Integer": 501.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -466,7 +466,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 594.0
+                    "Integer": 618.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -515,7 +515,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 123.0
+                    "Integer": 150.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -618,7 +618,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 594.0
+                    "Integer": 618.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -928,7 +928,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 621.0
+                    "Integer": 645.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -987,7 +987,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 621.0
+                    "Integer": 645.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1024,7 +1024,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 675.0
+                    "Integer": 699.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1083,7 +1083,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 675.0
+                    "Integer": 699.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1124,7 +1124,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 648.0
+                    "Integer": 672.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1183,7 +1183,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 540.0
+                    "Integer": 564.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1245,7 +1245,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 525.0
+                    "Integer": 549.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1389,7 +1389,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 54.0
+                    "Integer": 66.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -1567,7 +1567,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 648.0
+                    "Integer": 672.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1778,7 +1778,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 477.0
+                    "Integer": 501.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2146,7 +2146,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 477.0
+                    "Integer": 501.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2514,7 +2514,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 477.0
+                    "Integer": 501.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2882,7 +2882,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 477.0
+                    "Integer": 501.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -3084,7 +3084,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 621.0
+                    "Integer": 645.0
                 },
                 "Width": {
                     "Type": 3.0,

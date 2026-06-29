@@ -1,7 +1,7 @@
 {
     "Name": "Financial Merchant Plant Description",
-    "Width": 864.0,
-    "Height": 126.0,
+    "Width": 863.0,
+    "Height": 182.0,
     "FormObjects": {
         "GroupBox": {
             "Visible": 1.0,
@@ -24,7 +24,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 119.0
+                    "Integer": 164.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -61,7 +61,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 64.0
+                    "Integer": 91.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -111,11 +111,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 168.0
+                    "Integer": 165.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 93.0
+                    "Integer": 120.0
                 },
                 "Width": {
                     "Type": 3.0,
