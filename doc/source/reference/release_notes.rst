@@ -120,14 +120,21 @@ Remove Siting Considerations macrodue due to discontinued web service. (`SAM 216
 Remove deprecated LandBOSSE Python models. (`SAM 2154 <https://github.com/NatLabRockies/SAM/pull/2154>`__, `SSC 1375 <https://github.com/NatLabRockies/SAM/pull/1375>`__)
 
 Custom Generation Profile (SAM 2026.7.3)
----------------------------------------
+----------------------------------------
 
 Add option to use lifetime (over analysis period) generation data as input. (`SAM 2166 <https://github.com/NatLabRockies/SAM/pull/2166>`__, `SSC 1384 <https://github.com/NatLabRockies/SSC/pull/1384>`__)
 
 Fuel Cell (SAM 2026.7.3)
 ------------------------
 
-Add warnings when fuel cell dispatch time-of-delivery (TOD) periods are incorrect. (`SAM 2196 <https://github.com/NatLabRockies/SAM/pull/2196>`__, `SSC 1400 <https://github.com/NatLabRockies/SAM/pull/1400>`__)
+Add warnings when fuel cell dispatch time-of-delivery (TOD) periods are incorrect. (`SAM 2196 <https://github.com/NatLabRockies/SAM/pull/2196>`__, `SSC 1400 <https://github.com/NatLabRockies/SSC/pull/1400>`__)
+
+Developer Updates (2026.7.3)
+----------------------------
+
+Integrate Google OR-Tools to provide access to optimization libraries to SAM model developers. (`SAM 21460 <https://github.com/NatLabRockies/SAM/pull/2146>`__)
+
+Update to wxWidgets 3.2.8. (`SAM 2114 <https://github.com/NatLabRockies/SAM/pull/2114>`__)
 
 .. _2025-4-16-r2:
 

@@ -45,7 +45,7 @@ The model is described in Gilman, P. (2015). SAM Photovoltaic Model Technical Re
 SAM's implementation of the model uses the `air mass model <https://pvpmc.sandia.gov/modeling-guide/2-dc-module-iv/effective-irradiance/spectral-mismatch-models/>`__ for spectral mismatch from the Sandia Array Performance Model with "a" coefficients for polycrystalline modules from Table A1 of De Soto W.; Klein, S.; Beckman, W.; (2006) `Improvement and validation of a model for photovoltaic array performance <https://www.sciencedirect.com/science/article/abs/pii/S0038092X05002410>`__. Solar Energy. Vol 80 Issue 1. pp 78-88.
 
 To use the CEC Performance Model with Module Database:
-......................................................
+------------------------------------------------------
 
 #. On the Module page, choose **CEC Performance Model**.
 
@@ -117,7 +117,7 @@ The heat transfer method uses a steady state heat transfer model to calculate ce
 .. _module-tempcorr-noct:
 
 NOCT Method Parameters
-......................
+----------------------
 
 The NOCT method parameters are enabled for the **Nominal operating cell (NOCT) method** option.
 
@@ -135,7 +135,7 @@ The NOCT method parameters are enabled for the **Nominal operating cell (NOCT) m
 .. _module-tempcorr-heat-transfer:
 
 Heat Transfer Method Parameters
-...............................
+-------------------------------
 
 The heat transfer method parameters are enabled for the **Heat transfer method** option.
 
@@ -163,7 +163,7 @@ The heat transfer method parameters are enabled for the **Heat transfer method**
   Enabled when **Mounting configuratino** is **gap**. The distance between the back of the modules and the roof or wall surface behind the module.
 
 Transient Thermal Model Correction
-..................................
+----------------------------------
 
 .. include:: ../includes/snip_pv_transient_thermal_model.rst
 
