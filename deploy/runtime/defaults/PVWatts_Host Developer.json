@@ -33,9 +33,13 @@
     "annual_albedo": 0.183951,
     "annual_beam": 7.33564,
     "annual_crit": 0.0,
+    "annual_csky_beam": 0.0,
+    "annual_csky_diffuse": 0.0,
+    "annual_csky_global": 0.0,
     "annual_diffuse": 1.34843,
     "annual_global": 5.79476,
     "annual_peak": 274.231,
+    "annual_precipitation": 0.0,
     "annual_snow": NaN,
     "annual_tdry": 21.9385,
     "annual_twet": NaN,
@@ -36914,7 +36918,7 @@
     "ppa_escalation": 1.0,
     "ppa_multiplier_model": 0.0,
     "ppa_price_input": [
-        0.106
+        0.10000000149011612
     ],
     "ppa_soln_mode": 0.0,
     "prop_tax_assessed_decline": 0.0,
@@ -38823,7 +38827,7 @@
             1.0,
             1e38,
             0.0,
-            0.05,
+            0.1599999964237213,
             0.0
         ],
         [
@@ -38831,7 +38835,7 @@
             1.0,
             1e38,
             0.0,
-            0.075,
+            0.10000000149011612,
             0.0
         ],
         [
@@ -38839,7 +38843,7 @@
             1.0,
             1e38,
             0.0,
-            0.06,
+            0.15000000596046449,
             0.0
         ],
         [
@@ -38847,7 +38851,7 @@
             1.0,
             1e38,
             0.0,
-            0.05,
+            0.10000000149011612,
             0.0
         ]
     ],

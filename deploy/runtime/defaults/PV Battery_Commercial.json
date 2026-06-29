@@ -9509,9 +9509,13 @@
     "annual_albedo": 0.1839506853933204,
     "annual_beam": 7.335643835616439,
     "annual_crit": 0.0,
+    "annual_csky_beam": 0.0,
+    "annual_csky_diffuse": 0.0,
+    "annual_csky_global": 0.0,
     "annual_diffuse": 1.3484328767123289,
     "annual_global": 5.794761643835617,
     "annual_peak": 274.231,
+    "annual_precipitation": 0.0,
     "annual_snow": NaN,
     "annual_tdry": 21.938470319634705,
     "annual_twet": NaN,
@@ -28414,6 +28418,7 @@
     "cec_transient_thermal_model_unit_mass": 11.0919,
     "cec_v_mp_ref": 41.4,
     "cec_v_oc_ref": 49.2,
+    "celltech": 0.0,
     "chk_update_peaks": 1.0,
     "city": "-",
     "clipping_correction_method_ui": 0.0,
@@ -84628,6 +84633,7 @@
     "pv.storage.p6.dischargetogrid": 0.0,
     "pv.storage.p6.gridcharge": 0.0,
     "pv_capex_cost_choice": 0.0,
+    "pv_spectral.is_shown": 0.0,
     "rate_escalation": [
         0.0
     ],
@@ -84794,6 +84800,10 @@
     "spe_transient_thermal_model_unit_mass": 0.0,
     "spe_vmp": 41.4,
     "spe_voc": 49.2,
+    "spectral_correction_celltech": "monoSi",
+    "spectral_correction_model_choice": 0.0,
+    "spectral_correction_msg": "No spectral correction messages.\n",
+    "spectral_recommend_choice": 0.0,
     "start_day_of_year": 3.335046e-317,
     "start_day_of_year_load_ui": 3.335046e-317,
     "state": "-",
@@ -86979,7 +86989,7 @@
             1.0,
             1e38,
             0.0,
-            0.05,
+            0.1599999964237213,
             0.0
         ],
         [
@@ -86987,7 +86997,7 @@
             1.0,
             1e38,
             0.0,
-            0.075,
+            0.10000000149011612,
             0.0
         ],
         [
@@ -86995,7 +87005,7 @@
             1.0,
             1e38,
             0.0,
-            0.06,
+            0.15000000596046449,
             0.0
         ],
         [
@@ -87003,7 +87013,7 @@
             1.0,
             1e38,
             0.0,
-            0.05,
+            0.10000000149011612,
             0.0
         ]
     ],
