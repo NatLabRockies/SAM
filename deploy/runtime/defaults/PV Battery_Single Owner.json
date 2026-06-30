@@ -51060,10 +51060,10 @@
     "spe_voc": 49.2,
     "spectral_correction_celltech": "monoSi",
     "spectral_correction_model_choice": 0.0,
-    "spectral_correction_msg": "No spectral correction messages.\n",
+    "spectral_correction_msg": "No spectral correction messages.",
     "spectral_recommend_choice": 0.0,
-    "start_day_of_year": 3.335046e-317,
-    "start_day_of_year_tod_ui": 3.335046e-317,
+    "start_day_of_year": 0.0,
+    "start_day_of_year_tod_ui": 0.0,
     "state": "-",
     "state_tax_rate": [
         7.0
