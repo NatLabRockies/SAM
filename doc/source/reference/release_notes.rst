@@ -14,20 +14,27 @@ This version updates Geothermal model costs and power block input options.
 
 Other highlights include:
 
-* Weather Data:
-	* Downloads from the National Solar Radiation Database (NSRDB) include new data for the Arctic region.
-	* Photovoltaic models can download snow depth data for U.S. locations for the snow loss model.
-    * The Location and Resource page is reorganized for better usability.
-* Photovoltaic Models:
-	* The full battery model is available for PVWatts.
-	* The Detailed Photovoltaic model has a new look and options for spectral correction.
-* Financial Models:
-	* ITC qualifying costs can be based on only battery-related costs for PV systems, on specific components of a hybrid system, or on a percentage of the total installed cost.
-	* The Commercial financial model uses the same detailed depreciation inputs as the Single Owner and other front-of-meter financial models.
-	* The Single Owner financial model has a new option for non-energy revenue to support projects like agrivoltaics.
-* CSP models:
-	* The Physical Trough model has a new two-dimensional optical model.
-	* The Molten Salt Power Tower model has a new option (in Beta) to control the plant for net plant electricity output.
+* Weather Data
+
+  * Downloads from the National Solar Radiation Database (NSRDB) include new data for the Arctic region.
+  * Photovoltaic models can download snow depth data for U.S. locations for the snow loss model.
+  * The Location and Resource page is reorganized for better usability.
+
+* Photovoltaic Models
+
+  * The full battery model is available for PVWatts.
+  * The Detailed Photovoltaic model has a new look and options for spectral correction.
+
+* Financial Models
+
+  * ITC qualifying costs can be based on only battery-related costs for PV systems, on specific components of a hybrid system, or on a percentage of the total installed cost.
+  * The Commercial financial model uses the same detailed depreciation inputs as the Single Owner and other front-of-meter financial models.
+  * The Single Owner financial model has a new option for non-energy revenue to support projects like agrivoltaics.
+
+* CSP models
+
+  * The Physical Trough model has a new two-dimensional optical model.
+  * The Molten Salt Power Tower model has a new option (in Beta) to control the plant for net plant electricity output.
 
 For a complete list of code revisions associated with this version, see the `SAM <https://github.com/NatLabRockies/SAM/pulls?q=is%3Apr+milestone%3A%22SAM+2026+Release%22+is%3Aclosed>`__ and `SSC <https://github.com/NatLabRockies/ssc/pulls?q=is%3Apr+milestone%3A%22SAM+2026+Release%22+is%3Aclosed>`__ GitHub repositories.
 
