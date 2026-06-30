@@ -8,7 +8,7 @@ These are the software release notes for the System Advisor Model™ (SAM™) de
 SAM 2026.7.3, SSC 308: July 3, 2026
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Highlights of SAM 2026.7.3 include reorganizing the Detailed Photovoltaic and Solar Resource input pages, new options for specifying ITC qualifying costs to better reflect current U.S. market conditions, .
+Highlights of SAM 2026.7.3 include reorganizing the Detailed Photovoltaic and Solar Resource input pages, new options for specifying ITC qualifying costs to better reflect current U.S. market conditions, and making the full battery model available for PVWatts.
 
 General (SAM 2026.7.3)
 ----------------------
