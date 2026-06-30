@@ -1,7 +1,7 @@
 {
     "Name": "Geothermal Power Block Common",
-    "Width": 688.0,
-    "Height": 199.0,
+    "Width": 617.0,
+    "Height": 91.0,
     "FormObjects": {
         "RadioChoice": {
             "Visible": 1.0,
@@ -12,11 +12,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 288.0
+                    "Integer": 168.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 48.0
+                    "Integer": 18.0
                 },
                 "Width": {
                     "Type": 3.0,
