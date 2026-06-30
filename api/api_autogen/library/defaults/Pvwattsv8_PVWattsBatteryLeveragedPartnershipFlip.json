@@ -13,7 +13,7 @@
 			"array_type": 2,
 			"azimuth": 180,
 			"batt_simple_enable": 1,
-			"bifaciality": 0,
+			"bifaciality": 0.7,
 			"dc_ac_ratio": 1.3,
 			"en_snowloss": 0,
 			"gcr": 0.3,
@@ -50,6 +50,8 @@
 				[0.000000, 0.000000, 0.000000]
 			],
 			"adjust_timeindex": [0.000000]
+		},
+		"SpectralCorrection": {
 		}
 	}
 }
