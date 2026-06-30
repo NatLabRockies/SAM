@@ -857,3 +857,5 @@ Spectral correction factors adjust the effective irradiance on PV modules to acc
 
 **Air mass and clearsky index**
   This option accounts for the impact of air mass and clearsky index on the spectrum, and has model coefficients for both silicon, thin film, and other cell types without requiring precipitable water in the weather data. This is an implementation of the approach described in Pelland et a. (2020) `Development and Testing of the PVSPEC Model of Photovoltaic Spectral Mismatch Factor <https://doi.org/10.1109/PVSC45281.2020.9300932>`__.
+
+.. note:: Spectral correction is implemented in SSC and PySAM as `spectral_correction_model_choice` with options 0=Air Mass Only (De Soto), 1=Air mass and precipitable water (Lee), 2=Air mass and clearsky index (Pelland).
