@@ -131,7 +131,7 @@ Update wind resource downloads to latest data from WIND Toolkit. (`SAM 2202 <htt
 
 Change wind power simulation from single year to lifetime (over analysis period) for consistency with other performance models. This changes wind power annual degradation from compounding to linear. (`SAM 2174 <https://github.com/NatLabRockies/SAM/pull/2174>`__, `SSC 1386 <https://github.com/NatLabRockies/SSC/pull/1386>`__)
 
-Remove Siting Considerations macrodue due to discontinued web service. (`SAM 2165 <https://github.com/NatLabRockies/SAM/pull/2165>`__)
+Remove Siting Considerations macro due due to discontinued web service. (`SAM 2165 <https://github.com/NatLabRockies/SAM/pull/2165>`__)
 
 Remove deprecated LandBOSSE Python models. (`SAM 2154 <https://github.com/NatLabRockies/SAM/pull/2154>`__, `SSC 1375 <https://github.com/NatLabRockies/SAM/pull/1375>`__)
 
