@@ -996,7 +996,7 @@ Fuel Cell
 SAM 2021.12.02 r2, SSC 274: June 6 , 2022
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This is a maintenance update to :ref:`SAM 2021.12.02 Revision 1 <#2021-12-02>`__.
+This is a maintenance update to :ref:`SAM 2021.12.02 Revision 1 <2021-12-02>`.
 
 - Improve feedback for parametric simulation graphs when they cannot be displayed. (`1051 <https://github.com/NatLabRockies/SAM/pull/1051>`__)
 - Change labels on Results page Metrics table and graphs to be more consistent with output variable labels. (`1045 <https://github.com/NatLabRockies/SAM/pull/1045>`__)
