@@ -1,7 +1,7 @@
 {
     "Name": "Geothermal Plant and Equipment",
-    "Width": 849.0,
-    "Height": 823.0,
+    "Width": 850.0,
+    "Height": 832.0,
     "FormObjects": {
         "CheckBox": {
             "Visible": 1.0,

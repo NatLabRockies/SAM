@@ -1,7 +1,7 @@
 {
     "Name": "Physical Trough IPH Dispatch Control",
-    "Width": 843.0,
-    "Height": 731.0,
+    "Width": 847.0,
+    "Height": 738.0,
     "FormObjects": {
         "Label": {
             "Visible": 1.0,

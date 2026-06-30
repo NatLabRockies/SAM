@@ -1,7 +1,7 @@
 {
     "Name": "PV Soiling Shading Snow",
-    "Width": 1003.0,
-    "Height": 734.0,
+    "Width": 1013.0,
+    "Height": 739.0,
     "FormObjects": {
         "Label": {
             "Visible": 1.0,
@@ -503,7 +503,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 0.0
+                    "Integer": 6.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -511,7 +511,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 999.0
+                    "Integer": 1000.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -585,7 +585,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 999.0
+                    "Integer": 1000.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -1241,7 +1241,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 0.0
+                    "Integer": 6.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1249,7 +1249,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 999.0
+                    "Integer": 1000.0
                 },
                 "Height": {
                     "Type": 3.0,

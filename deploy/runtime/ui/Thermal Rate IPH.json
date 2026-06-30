@@ -1,7 +1,7 @@
 {
     "Name": "Thermal Rate IPH",
-    "Width": 1153.0,
-    "Height": 606.0,
+    "Width": 849.0,
+    "Height": 306.0,
     "FormObjects": {
         "Label": {
             "Visible": 1.0,

@@ -1,7 +1,7 @@
 {
     "Name": "Fuel Cell Costs Hybrid",
-    "Width": 945.0,
-    "Height": 617.0,
+    "Width": 948.0,
+    "Height": 630.0,
     "FormObjects": {
         "GroupBox": {
             "Visible": 1.0,
