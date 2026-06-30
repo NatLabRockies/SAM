@@ -4,7 +4,7 @@ Non-energy revenue and expenses allow for modeling of a project that earns reven
 .. note:: For the escalation rate inputs below, specify an escalation rate of zero for revenue or expense cost that increases annually at the rate of inflation, a positive escalation rate for one that increases at a higher rate than the inflation rate, or a negative escalation rate for one that increases at a lower rate than the inflation rate. (Set the inflation rate to the negative value of the inflation rate for revenue or expense that does not increase with inflation.)
 
 Non-Energy Revenue
-..................
+------------------
 
 **Gross non-energy revenue, $/year**
   Annual non-energy revenues to include in the project cash flow.
@@ -19,7 +19,7 @@ Non-Energy Revenue
   Check this box if the system owner can use non-energy revenue to service debt. If the box is checked, SAM includes non-energy revenue in cash available for debt service (CAFDS).
 
 Non-Energy Expenses
-...................
+-------------------
 
 **Gross non-energy expenses, $/year**
   Annual non-energy expenses that to include in the project cash flow.
@@ -34,7 +34,7 @@ Non-Energy Expenses
   Check this box to include non-energy expenses in the system owner's total operating expenses, which reduce the amount of cash available for debt service. If the box is checked, SAM includes the owner share of non-revenue expenses in the earnings before interest, taxes, depreciation and amortization (EBITDA) cash flow line item. If the box is not checked, the owner share of non-energy expenses is included in the system owner's operating activities line item.
 
 Energy Owner Portion of Energy Revenue and Expenses
-...................................................
+---------------------------------------------------
 
 Use these inputs to specify revenue sharing agreements between the energy owner and a partner entity. For example, a project where 95% of the energy revenue is retained by the system owner in each year, and 5% is retained by the partner entity; or a project where 90% of energy expenses are paid by the system owner, and 10% paid by the partner entity. Note that the remaining revenue or costs are not accounted for in the SAM's cash flow, which does not represent the partner entity cash flow.
  

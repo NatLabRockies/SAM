@@ -28,7 +28,7 @@ To see the effect of the PTC on the :doc:`cash flow <../results/cashflow>`, for 
   For both the state and federal PTC, SAM rounds the annual PTC rate in cents/kWh to the nearest 0.1 cent as described in Notice 2010-37 of `IRS Bulletin 2010-18 <https://www.irs.gov/irb/2010-18_IRB/ar11.html>`__  .
 
 Specifying Annual PTC Tax Credit Values
-.......................................
+---------------------------------------
 
 For the PTC, you can specify the tax credit as either a single value (amount or percentage) that applies to all years in the analysis period defined on the Financial Parameters page, or you can assign a different value to each year in the analysis period using an annual schedule.
 
@@ -77,7 +77,7 @@ To see the effect of the ITC on the :doc:`cash flow <../results/cashflow>`, for 
   The check boxes determine whether the basis used to calculate federal depreciation, state depreciation, or both should be reduced by the tax credit amount. When you check the box for an ITC, SAM reduces the depreciable basis by 50% of the ITC amount as specified by U.S. Internal Revenue Service rules.
 
 Specifying Annual ITC Values
-............................
+----------------------------
 
 You can specify ITC amounts and percentages either as a single value for an ITC that only applies in Year 1, or as annual values that applies over multiple years. By default, you enter the ITC amount or percentage as a single value. The blue "Value" label on the blue and gray button next to the input variable indicates the single value mode is active for the variable:
 
@@ -145,7 +145,7 @@ SAM makes the following simplifying assumptions:
 * Investment-based incentives and capacity-based incentives reduce the depreciation basis proportionally.
 
 Depreciation Basis for ITC Qualifying Cost from System Components
-.................................................................
+-----------------------------------------------------------------
 
 These options are available for the **Determine ITC qualification from system components** option under "ITC Qualification Options."" They are disabled for the **Determine ITC qualification from depreciation class allocations**.
 
@@ -166,7 +166,7 @@ These options are available for the **Determine ITC qualification from system co
 .. note:: If your project qualifies for bonus depreciation, check the appropriate boxes for **Qualifies for Bonus Depreciation** under "Depreciation Class Allocations and Bonus Depreciation." See below for details.
 
 Depreciation Class Allocations and Bonus Depreciation
-.....................................................
+-----------------------------------------------------
 
 These options are available for the **Determine ITC qualification from depreciation class allocations** option under "ITC Qualification Options."" They are disabled for the **Determine ITC qualification from system components**.
 

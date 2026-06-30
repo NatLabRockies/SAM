@@ -31,7 +31,7 @@ Example Compensation Scenarios
 The following examples show how SAM calculates compensation for energy services, ancillary services, and capacity payments under different conditions for a single time step.
 
 Scenario 1 : Energy service with generation in time step sufficient to meet energy cleared capacity
-...................................................................................................
+---------------------------------------------------------------------------------------------------
 
 .. list-table::
    :width: 100%
@@ -48,7 +48,7 @@ Scenario 1 : Energy service with generation in time step sufficient to meet ener
 *Energy Compensation ($) = 50 MW × 1 hour × $30/MWh = $1,500*
 
 Scenario 2: Energy service with generation in time step not sufficient to meet energy cleared capacity.
-.......................................................................................................
+-------------------------------------------------------------------------------------------------------
 
 .. list-table::
    :width: 100%
@@ -65,7 +65,7 @@ Scenario 2: Energy service with generation in time step not sufficient to meet e
 This scenario causes the simulation to stop because the generation of 42 MW is less than the energy cleared capacity of 50 MW. To resolve the error, either the generation in that time step would need to be increased, or the energy cleared capacity would have to be decreased.
 
 Scenario 3: Energy and ancillary service with generation in time step sufficient to clear both energy and ancillary capacity requirements.
-..........................................................................................................................................
+------------------------------------------------------------------------------------------------------------------------------------------
 
 .. list-table::
    :width: 100%
@@ -92,7 +92,7 @@ Scenario 3: Energy and ancillary service with generation in time step sufficient
 *Total Compensation ($) = $1,500 + $150 = $1,650*
 
 Scenario 4: Energy and ancillary service with generation in time step sufficient to clear energy capacity requirement but not ancillary capacity requirement.
-.............................................................................................................................................................
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 .. list-table::
    :width: 100%
@@ -119,7 +119,7 @@ Scenario 4: Energy and ancillary service with generation in time step sufficient
   This scenario causes a simulation error because the remaining capacity of 15 MW is less than the ancillary cleared capacity of 20 MW. To resolve the error, either the generation in that time step would need to be increased, or the ancillary cleared capacity would have to be reduced.
 
 Scenario 5 : Energy service and capacity payments with generation in time step sufficient to meet energy cleared capacity.
-..........................................................................................................................
+--------------------------------------------------------------------------------------------------------------------------
 
 .. list-table::
    :width: 100%
