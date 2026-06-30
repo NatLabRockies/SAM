@@ -1331,7 +1331,38 @@ document.write(`
 </section>
 <section id="sam-2026-7-3-ssc-308-july-3-2026">
 <span id="id1"></span><h1>SAM 2026.7.3, SSC 308: July 3, 2026<a class="headerlink" href="#sam-2026-7-3-ssc-308-july-3-2026" title="Link to this heading">#</a></h1>
-<p>Highlights of SAM 2026.7.3 include reorganizing the Detailed Photovoltaic and Solar Resource input pages, new options for specifying ITC qualifying costs to better reflect current U.S. market conditions, and making the full battery model available for PVWatts.</p>
+<p>This is the first version we have released as the National Laboratory of the Rockies (formerly the National Renewable Energy Laboratory).</p>
+<p>This version updates Geothermal model costs and power block input options.</p>
+<p>Other highlights include:</p>
+<ul class="simple">
+<li><p>Weather Data</p>
+<ul>
+<li><p>Downloads from the National Solar Radiation Database (NSRDB) include new data for the Arctic region.</p></li>
+<li><p>Photovoltaic models can download snow depth data for U.S. locations for the snow loss model.</p></li>
+<li><p>The Location and Resource page is reorganized for better usability.</p></li>
+</ul>
+</li>
+<li><p>Photovoltaic Models</p>
+<ul>
+<li><p>The full battery model is available for PVWatts.</p></li>
+<li><p>The Detailed Photovoltaic model has a new look and options for spectral correction.</p></li>
+</ul>
+</li>
+<li><p>Financial Models</p>
+<ul>
+<li><p>ITC qualifying costs can be based on only battery-related costs for PV systems, on specific components of a hybrid system, or on a percentage of the total installed cost.</p></li>
+<li><p>The Commercial financial model uses the same detailed depreciation inputs as the Single Owner and other front-of-meter financial models.</p></li>
+<li><p>The Single Owner financial model has a new option for non-energy revenue to support projects like agrivoltaics.</p></li>
+</ul>
+</li>
+<li><p>CSP models</p>
+<ul>
+<li><p>The Physical Trough model has a new two-dimensional optical model.</p></li>
+<li><p>The Molten Salt Power Tower model has a new option (in Beta) to control the plant for net plant electricity output.</p></li>
+</ul>
+</li>
+</ul>
+<p>For a complete list of code revisions associated with this version, see the <a class="reference external" href="https://github.com/NatLabRockies/SAM/pulls?q=is%3Apr+milestone%3A%22SAM+2026+Release%22+is%3Aclosed">SAM</a> and <a class="reference external" href="https://github.com/NatLabRockies/ssc/pulls?q=is%3Apr+milestone%3A%22SAM+2026+Release%22+is%3Aclosed">SSC</a> GitHub repositories.</p>
 <section id="general-sam-2026-7-3">
 <h2>General (SAM 2026.7.3)<a class="headerlink" href="#general-sam-2026-7-3" title="Link to this heading">#</a></h2>
 <p>Add support for day of week so time-dependent time series input data can synchronize with weather data. (<a class="reference external" href="https://github.com/NatLabRockies/SAM/pull/2109">SAM 2109</a>, <a class="reference external" href="https://github.com/NatLabRockies/SAM/pull/1352">SSC 1352</a>)</p>
@@ -1345,7 +1376,7 @@ document.write(`
 <section id="financial-models-sam-2026-7-3">
 <h2>Financial Models (SAM 2026.7.3)<a class="headerlink" href="#financial-models-sam-2026-7-3" title="Link to this heading">#</a></h2>
 <p>Add option to Single Owner financial model for non-energy revenue streams. (<a class="reference external" href="https://github.com/NatLabRockies/SAM/pull/2190">SAM 2190</a>, <a class="reference external" href="https://github.com/NatLabRockies/SAM/pull/2194">SAM 2194</a>, <a class="reference external" href="https://github.com/NatLabRockies/SAM/pull/1398">SSC 1398</a>, <a class="reference external" href="https://github.com/NatLabRockies/SAM/pull/1397">SSC 1387</a>)</p>
-<p>Add option for determining ITC qualifying costs and depreciation basis based on system components to existing option based on percentage of total installed cost. (<a class="reference external" href="https://github.com/NatLabRockies/SAM/pull/2187">SAM 2187</a>, <a class="reference external" href="https://github.com/NatLabRockies/SAM/pull/1395">SSC 1395</a>, <a class="reference external" href="https://github.com/NatLabRockies/SAM/pull/1376">SSC 1376</a>, <a class="reference external" href="https://github.com/NatLabRockies/SAM/pull/1370">SSC 1370</a>)</p>
+<p>Add option for determining ITC qualifying costs and depreciation basis based on system components to existing option based on percentage of total installed cost, and update Commercial fiancial model to use the same detailed depreciation inputs as the front-of-meter (FOM) financial models. (<a class="reference external" href="https://github.com/NatLabRockies/SAM/pull/2187">SAM 2187</a>, <a class="reference external" href="https://github.com/NatLabRockies/SAM/pull/1395">SSC 1395</a>, <a class="reference external" href="https://github.com/NatLabRockies/SAM/pull/1376">SSC 1376</a>, <a class="reference external" href="https://github.com/NatLabRockies/SAM/pull/1370">SSC 1370</a>)</p>
 <p>Update default PPA price and retail electricity rates to account for reduction in default incentives. (<a class="reference external" href="https://github.com/NatLabRockies/SAM/pull/2217">SAM 2217</a>)</p>
 <p>Fix errors for Send-to-Excel-with-equations for Community Solar financial model. (<a class="reference external" href="https://github.com/NatLabRockies/SAM/pull/2169">SAM 2169</a>)</p>
 <p>Fix issue with curtailment input array. (<a class="reference external" href="https://github.com/NatLabRockies/SAM/pull/2139">SAM 2139</a>, <a class="reference external" href="https://github.com/NatLabRockies/SAM/pull/1366">SSC 1366</a>)</p>
@@ -1405,7 +1436,7 @@ document.write(`
 <h2>Wind Power (SAM 2026.7.3)<a class="headerlink" href="#wind-power-sam-2026-7-3" title="Link to this heading">#</a></h2>
 <p>Update wind resource downloads to latest data from WIND Toolkit. (<a class="reference external" href="https://github.com/NatLabRockies/SAM/pull/2202">SAM 2202</a>)</p>
 <p>Change wind power simulation from single year to lifetime (over analysis period) for consistency with other performance models. This changes wind power annual degradation from compounding to linear. (<a class="reference external" href="https://github.com/NatLabRockies/SAM/pull/2174">SAM 2174</a>, <a class="reference external" href="https://github.com/NatLabRockies/SSC/pull/1386">SSC 1386</a>)</p>
-<p>Remove Siting Considerations macrodue due to discontinued web service. (<a class="reference external" href="https://github.com/NatLabRockies/SAM/pull/2165">SAM 2165</a>)</p>
+<p>Remove Siting Considerations macro due due to discontinued web service. (<a class="reference external" href="https://github.com/NatLabRockies/SAM/pull/2165">SAM 2165</a>)</p>
 <p>Remove deprecated LandBOSSE Python models. (<a class="reference external" href="https://github.com/NatLabRockies/SAM/pull/2154">SAM 2154</a>, <a class="reference external" href="https://github.com/NatLabRockies/SAM/pull/1375">SSC 1375</a>)</p>
 </section>
 <section id="custom-generation-profile-sam-2026-7-3">
@@ -1449,7 +1480,7 @@ document.write(`
 <section id="sam-2025-4-16-ssc-302-april-16-2025">
 <span id="id2"></span><h1>SAM 2025.4.16, SSC 302: April 16, 2025<a class="headerlink" href="#sam-2025-4-16-ssc-302-april-16-2025" title="Link to this heading">#</a></h1>
 <p>This version updates the geothermal power model with more drilling cost detail, improved capital and O&amp;M cost models, and improved PySAM geothermal functionality. It also adds an option for a counterflow heat exchanger to SAM’s Industrial Process Heat (IPH) models for a more realistic representation of the thermal load, and includes several improvements to the battery dispatch and degradation calculations, including a new option to allow the battery to discharge to grid for retail rates dispatch, among other improvements and bug fixes.</p>
-<p>For a complete list of code revisions associated with this version, see the <a class="reference external" href="https://github.com/NREL/SAM/pulls?q=is%3Apr+milestone%3A%22SAM+Spring+2025+Release%22+is%3Aclosed">SAM</a> and <a class="reference external" href="https://github.com/NREL/ssc/pulls?q=is%3Apr+milestone%3A%22SAM+Spring+2025+Release%22+is%3Aclosed">SSC</a> GitHub repositories. Highlights include:</p>
+<p>For a complete list of code revisions associated with this version, see the <a class="reference external" href="https://github.com/NREL/SAM/pulls?q=is%3Apr+milestone%3A%22SAM+Spring+2025+Release%22+is%3Aclosed">SAM</a> and <a class="reference external" href="https://github.com/NREL/ssc/pulls?q=is%3Apr+milestone%3A%22SAM+Spring+2025+Release%22+is%3Aclosed">SSC</a> GitHub repositories.</p>
 <section id="general-sam-2025-4-16">
 <h2>General (SAM 2025.4.16)<a class="headerlink" href="#general-sam-2025-4-16" title="Link to this heading">#</a></h2>
 <p>Update API call for electricity rate download-by-zip-code option. API now requires geocoding zip code to latitude/longitude before API call. (<a class="reference external" href="https://github.com/NREL/SAM/pull/2053">SAM 2053</a>)</p>
@@ -1541,7 +1572,7 @@ document.write(`
 <li><p>Speed up simulation run times of Detailed PV and PVWatts performance models.</p></li>
 <li><p>Updated PV module and inverter libraries.</p></li>
 </ul>
-<p>For a complete list of code revisions associated with this version, see the <a class="reference external" href="https://github.com/NREL/SAM/pulls?q=is%3Apr+milestone%3A%22SAM+Fall+2024+Release%22+is%3Aclosed">SAM</a> and <a class="reference external" href="https://github.com/NREL/ssc/pulls?q=is%3Apr+milestone%3A%22SAM+Fall+2024+Release%22+is%3Aclosed">SSC</a> GitHub repositories. Highlights include:</p>
+<p>For a complete list of code revisions associated with this version, see the <a class="reference external" href="https://github.com/NREL/SAM/pulls?q=is%3Apr+milestone%3A%22SAM+Fall+2024+Release%22+is%3Aclosed">SAM</a> and <a class="reference external" href="https://github.com/NREL/ssc/pulls?q=is%3Apr+milestone%3A%22SAM+Fall+2024+Release%22+is%3Aclosed">SSC</a> GitHub repositories.</p>
 <section id="general-sam-2024-12-12">
 <h2>General (SAM 2024.12.12)<a class="headerlink" href="#general-sam-2024-12-12" title="Link to this heading">#</a></h2>
 <p>Update weather file downloads to NREL NSRDB GOES V4 dataset covering 1998 - 2023. (<a class="reference external" href="https://github.com/NREL/SAM/pull/1945">SAM 1945</a>)</p>

@@ -8,7 +8,35 @@ These are the software release notes for the System Advisor Model™ (SAM™) de
 SAM 2026.7.3, SSC 308: July 3, 2026
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Highlights of SAM 2026.7.3 include reorganizing the Detailed Photovoltaic and Solar Resource input pages, new options for specifying ITC qualifying costs to better reflect current U.S. market conditions, and making the full battery model available for PVWatts.
+This is the first version we have released as the National Laboratory of the Rockies (formerly the National Renewable Energy Laboratory).
+
+This version updates Geothermal model costs and power block input options.
+
+Other highlights include:
+
+* Weather Data
+
+  * Downloads from the National Solar Radiation Database (NSRDB) include new data for the Arctic region.
+  * Photovoltaic models can download snow depth data for U.S. locations for the snow loss model.
+  * The Location and Resource page is reorganized for better usability.
+
+* Photovoltaic Models
+
+  * The full battery model is available for PVWatts.
+  * The Detailed Photovoltaic model has a new look and options for spectral correction.
+
+* Financial Models
+
+  * ITC qualifying costs can be based on only battery-related costs for PV systems, on specific components of a hybrid system, or on a percentage of the total installed cost.
+  * The Commercial financial model uses the same detailed depreciation inputs as the Single Owner and other front-of-meter financial models.
+  * The Single Owner financial model has a new option for non-energy revenue to support projects like agrivoltaics.
+
+* CSP models
+
+  * The Physical Trough model has a new two-dimensional optical model.
+  * The Molten Salt Power Tower model has a new option (in Beta) to control the plant for net plant electricity output.
+
+For a complete list of code revisions associated with this version, see the `SAM <https://github.com/NatLabRockies/SAM/pulls?q=is%3Apr+milestone%3A%22SAM+2026+Release%22+is%3Aclosed>`__ and `SSC <https://github.com/NatLabRockies/ssc/pulls?q=is%3Apr+milestone%3A%22SAM+2026+Release%22+is%3Aclosed>`__ GitHub repositories.
 
 General (SAM 2026.7.3)
 ----------------------
@@ -32,7 +60,7 @@ Financial Models (SAM 2026.7.3)
 
 Add option to Single Owner financial model for non-energy revenue streams. (`SAM 2190 <https://github.com/NatLabRockies/SAM/pull/2190>`__, `SAM 2194 <https://github.com/NatLabRockies/SAM/pull/2194>`__, `SSC 1398 <https://github.com/NatLabRockies/SAM/pull/1398>`__, `SSC 1387 <https://github.com/NatLabRockies/SAM/pull/1397>`__)
 
-Add option for determining ITC qualifying costs and depreciation basis based on system components to existing option based on percentage of total installed cost. (`SAM 2187 <https://github.com/NatLabRockies/SAM/pull/2187>`__, `SSC 1395 <https://github.com/NatLabRockies/SAM/pull/1395>`__, `SSC 1376 <https://github.com/NatLabRockies/SAM/pull/1376>`__, `SSC 1370 <https://github.com/NatLabRockies/SAM/pull/1370>`__)
+Add option for determining ITC qualifying costs and depreciation basis based on system components to existing option based on percentage of total installed cost, and update Commercial fiancial model to use the same detailed depreciation inputs as the front-of-meter (FOM) financial models. (`SAM 2187 <https://github.com/NatLabRockies/SAM/pull/2187>`__, `SSC 1395 <https://github.com/NatLabRockies/SAM/pull/1395>`__, `SSC 1376 <https://github.com/NatLabRockies/SAM/pull/1376>`__, `SSC 1370 <https://github.com/NatLabRockies/SAM/pull/1370>`__)
 
 Update default PPA price and retail electricity rates to account for reduction in default incentives. (`SAM 2217 <https://github.com/NatLabRockies/SAM/pull/2217>`__)
 
@@ -131,7 +159,7 @@ Update wind resource downloads to latest data from WIND Toolkit. (`SAM 2202 <htt
 
 Change wind power simulation from single year to lifetime (over analysis period) for consistency with other performance models. This changes wind power annual degradation from compounding to linear. (`SAM 2174 <https://github.com/NatLabRockies/SAM/pull/2174>`__, `SSC 1386 <https://github.com/NatLabRockies/SSC/pull/1386>`__)
 
-Remove Siting Considerations macrodue due to discontinued web service. (`SAM 2165 <https://github.com/NatLabRockies/SAM/pull/2165>`__)
+Remove Siting Considerations macro due due to discontinued web service. (`SAM 2165 <https://github.com/NatLabRockies/SAM/pull/2165>`__)
 
 Remove deprecated LandBOSSE Python models. (`SAM 2154 <https://github.com/NatLabRockies/SAM/pull/2154>`__, `SSC 1375 <https://github.com/NatLabRockies/SAM/pull/1375>`__)
 
@@ -187,7 +215,7 @@ SAM 2025.4.16, SSC 302: April 16, 2025
 
 This version updates the geothermal power model with more drilling cost detail, improved capital and O&M cost models, and improved PySAM geothermal functionality. It also adds an option for a counterflow heat exchanger to SAM's Industrial Process Heat (IPH) models for a more realistic representation of the thermal load, and includes several improvements to the battery dispatch and degradation calculations, including a new option to allow the battery to discharge to grid for retail rates dispatch, among other improvements and bug fixes.
 
-For a complete list of code revisions associated with this version, see the `SAM <https://github.com/NREL/SAM/pulls?q=is%3Apr+milestone%3A%22SAM+Spring+2025+Release%22+is%3Aclosed>`__ and `SSC <https://github.com/NREL/ssc/pulls?q=is%3Apr+milestone%3A%22SAM+Spring+2025+Release%22+is%3Aclosed>`__ GitHub repositories. Highlights include:
+For a complete list of code revisions associated with this version, see the `SAM <https://github.com/NREL/SAM/pulls?q=is%3Apr+milestone%3A%22SAM+Spring+2025+Release%22+is%3Aclosed>`__ and `SSC <https://github.com/NREL/ssc/pulls?q=is%3Apr+milestone%3A%22SAM+Spring+2025+Release%22+is%3Aclosed>`__ GitHub repositories.
 
 General (SAM 2025.4.16)
 -----------------------
@@ -324,7 +352,7 @@ Other highlights include:
 - Speed up simulation run times of Detailed PV and PVWatts performance models.
 - Updated PV module and inverter libraries.
 
-For a complete list of code revisions associated with this version, see the `SAM <https://github.com/NREL/SAM/pulls?q=is%3Apr+milestone%3A%22SAM+Fall+2024+Release%22+is%3Aclosed>`__ and `SSC <https://github.com/NREL/ssc/pulls?q=is%3Apr+milestone%3A%22SAM+Fall+2024+Release%22+is%3Aclosed>`__ GitHub repositories. Highlights include:
+For a complete list of code revisions associated with this version, see the `SAM <https://github.com/NREL/SAM/pulls?q=is%3Apr+milestone%3A%22SAM+Fall+2024+Release%22+is%3Aclosed>`__ and `SSC <https://github.com/NREL/ssc/pulls?q=is%3Apr+milestone%3A%22SAM+Fall+2024+Release%22+is%3Aclosed>`__ GitHub repositories.
 
 General (SAM 2024.12.12)
 ------------------------
