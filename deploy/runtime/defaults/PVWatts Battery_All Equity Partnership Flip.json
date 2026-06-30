@@ -9953,7 +9953,7 @@
     "battery_total": 74460094.41528,
     "battery_total_cost_lcos": 78183099.136044,
     "battery_voltage_shown": 0.0,
-    "bifaciality": 0.7,
+    "bifaciality": 0.0,
     "bos_equip_fixed": 0.0,
     "bos_equip_perarea": 0.0,
     "bos_equip_perwatt": 0.32,
