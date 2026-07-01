@@ -299,6 +299,18 @@ For the title of step-by-step instructions, use **bold** text (`**bold**`) inste
 #. This is Step 4.
 ```
 
+For multi-level lists, separate indented sections with blank lines:
+
+```
+* First item in bullet list.
+* Second item.
+
+  * First sub-item of second item.
+  * Second sub-item.
+
+* Third item.
+```
+
 ## Variable Definitions
 
 Use this format for variable descriptions and definitions. Note definition lines are preceded by two (2) spaces. There must not be a blank line before the first line of the definition.
