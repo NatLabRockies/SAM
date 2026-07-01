@@ -519,6 +519,10 @@
 		},
 		"GridLimits": {
 		},
+		"SpectralCorrection": {
+			"celltech": 0,
+			"spectral_correction_model_choice": 0
+		},
 		"HybridCosts": {
 			"land_area": 400.395,
 			"om_capacity": [19.000000],

@@ -1,7 +1,7 @@
 {
     "Name": "Financial Debt DSCR or Debt Fraction",
-    "Width": 860.0,
-    "Height": 361.0,
+    "Width": 862.0,
+    "Height": 404.0,
     "FormObjects": {
         "GroupBox": {
             "Visible": 1.0,
@@ -24,7 +24,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 350.0
+                    "Integer": 386.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -281,7 +281,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 312.0
+                    "Integer": 342.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -773,7 +773,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 78.0
+                    "Integer": 111.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -1249,7 +1249,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 267.0
+                    "Integer": 297.0
                 },
                 "Width": {
                     "Type": 3.0,

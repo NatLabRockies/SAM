@@ -1,7 +1,7 @@
 {
     "Name": "Financial ITC Depreciation Allocation",
-    "Width": 860.0,
-    "Height": 196.0,
+    "Width": 868.0,
+    "Height": 227.0,
     "FormObjects": {
         "RadioChoice": {
             "Visible": 1.0,
@@ -12,11 +12,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 30.0
+                    "Integer": 33.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 81.0
+                    "Integer": 105.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -61,11 +61,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 318.0
+                    "Integer": 321.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 132.0
+                    "Integer": 156.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -102,11 +102,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 582.0
+                    "Integer": 585.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 132.0
+                    "Integer": 156.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -185,11 +185,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 318.0
+                    "Integer": 321.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 159.0
+                    "Integer": 183.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -226,11 +226,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 582.0
+                    "Integer": 585.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 159.0
+                    "Integer": 183.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -321,7 +321,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 186.0
+                    "Integer": 210.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -346,11 +346,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 582.0
+                    "Integer": 585.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 105.0
+                    "Integer": 129.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -420,7 +420,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 54.0
+                    "Integer": 81.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,

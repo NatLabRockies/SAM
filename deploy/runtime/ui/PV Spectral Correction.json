@@ -1,7 +1,7 @@
 {
     "Name": "PV Spectral Correction",
-    "Width": 1008.0,
-    "Height": 190.0,
+    "Width": 1016.0,
+    "Height": 261.0,
     "FormObjects": {
         "GroupBox": {
             "Visible": 1.0,
@@ -24,7 +24,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 182.0
+                    "Integer": 236.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -53,7 +53,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 21.0
+                    "Integer": 24.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -61,7 +61,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 51.0
+                    "Integer": 93.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -111,11 +111,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 360.0
+                    "Integer": 363.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 78.0
+                    "Integer": 135.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -170,11 +170,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 24.0
+                    "Integer": 27.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 75.0
+                    "Integer": 132.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -219,11 +219,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 297.0
+                    "Integer": 300.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 111.0
+                    "Integer": 168.0
                 },
                 "Width": {
                     "Type": 3.0,
