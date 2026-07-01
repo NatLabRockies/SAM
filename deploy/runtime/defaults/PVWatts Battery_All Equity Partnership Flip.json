@@ -29165,7 +29165,7 @@
     "itc_basis_percent_depr": 40.59412230966581,
     "itc_basis_percent_input": 0.0,
     "itc_fed_amount": [
-        0.0
+        30.0
     ],
     "itc_fed_amount_deprbas_fed": 1.0,
     "itc_fed_amount_deprbas_sta": 1.0,
@@ -29957,15 +29957,15 @@
     "property_assessed_value": 192597092.1101253,
     "property_tax_rate": 0.0,
     "ptc_fed_amount": [
-        0.03
+        0.0
     ],
-    "ptc_fed_escal": 2.5,
+    "ptc_fed_escal": 0.0,
     "ptc_fed_term": 0.0,
     "ptc_sta_amount": [
         0.0
     ],
     "ptc_sta_escal": 0.0,
-    "ptc_sta_term": 10.0,
+    "ptc_sta_term": 0.0,
     "pv.storage.p1.charge": 1.0,
     "pv.storage.p1.discharge": 0.0,
     "pv.storage.p1.dischargetogrid": 0.0,
