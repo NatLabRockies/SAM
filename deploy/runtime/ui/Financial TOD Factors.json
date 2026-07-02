@@ -612,7 +612,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 666.0
+                    "Integer": 663.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -674,7 +674,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 369.0
+                    "Integer": 366.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -732,7 +732,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 12.0
+                    "Integer": 15.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -744,7 +744,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 69.0
+                    "Integer": 60.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -806,7 +806,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 84.0
+                    "Integer": 60.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,

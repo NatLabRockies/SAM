@@ -1,7 +1,7 @@
 {
     "Name": "PV Row Dimensions and Spacing",
-    "Width": 1011.0,
-    "Height": 602.0,
+    "Width": 1010.0,
+    "Height": 612.0,
     "FormObjects": {
         "Label": {
             "Visible": 1.0,
@@ -1162,7 +1162,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 596.0
+                    "Integer": 602.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,

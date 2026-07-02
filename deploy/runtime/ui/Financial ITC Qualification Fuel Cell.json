@@ -2238,7 +2238,7 @@
         "\r",
         "\tmsg = 'Choose \\\"Determine ITC qualification from system components\\\" above to enable these inputs.';\r",
         "\tif (value('itc_qualification_choice') == 0) {\r",
-        "\t\tmsg = 'Specify depreciation allocations based on ITC qualifying costs. This option allows for only two depreciation classes: One for ITC qualifying costs and another for non-qualifying costs. The depreciation basis can be either the federal ITC qualifying cost or the state ITC qualifying cost.';\r",
+        "\t\tmsg = 'Depreciation allocations are based on ITC qualifying costs. This option allows for two depreciation classes for ITC qualifying costs and non-qualifying costs. Depreciation basis can be federal ITC qualifying cost or state ITC qualifying cost.';",
         "\t}\r",
         "\tproperty('lbl_system_components','Caption',msg);\r",
         "\r",
