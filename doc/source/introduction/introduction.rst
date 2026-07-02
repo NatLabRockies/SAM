@@ -254,7 +254,7 @@ The DOE, NLR, and Sandia continue to use the model for program planning and gran
 Downloading SAM and User Support
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-SAM is free software and runs on Windows, MacOS, and Linux. It requires about 500 MB of storage space on your computer. See :doc:`Software Installation <../reference/installation>` for details.
+SAM is free software and runs on Windows, MacOS, and Linux. See :doc:`Software Installation <../reference/installation>` for installation details.
 
 To run SAM, you must register your copy of SAM by providing NLR with a valid email address.
 
