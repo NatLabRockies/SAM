@@ -107,7 +107,7 @@ SAM provides two options for determining the portion of project costs that quali
 **Determine ITC qualification from system components**
   For systems without storage, choose this option to base the ITC on the total installed cost.
   
-  For systems with electricy battery storage, you can choose this option to base the ITC on only the battery-related installation costs.
+  For systems with electric battery storage, you can choose this option to base the ITC on only the battery-related installation costs.
 
   The **Non-storage installed cost** is the sum of all costs on the Installation Costs page except battery-related costs. The percentage is of the total installed cost on the Installation Costs page. For systems with no battery storage, non-storage installed cost is the same as total installed cost.
 
@@ -115,7 +115,7 @@ SAM provides two options for determining the portion of project costs that quali
 
   For **Qualifies for ITC**, check the box for each cost (non-storage or battery storage) that qualifies for the ITC for both federal and state tax purposes.
 
-.. note:: For residential projects, use the **Qualifies for ITC** check boxes to determine the costs that qualify for the ITC. Accelerated depreciation does not apply to residential projects, so those inputs are not available for the Residential financial model.
+.. note:: For residential projects, use the **Qualifies for ITC** check boxes to determine the costs that qualify for the ITC. Depreciation deductions are not available for residential projects, so those inputs are not available for the Residential financial model.
 
 **Determine ITC qualification from depreciation class allocations**
   Use this option to determine ITC qualifying costs from depreciation class allocations.
@@ -126,6 +126,8 @@ Depreciation Basis and Allocation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 These inputs allow you to specify how SAM calculates depreciation amounts, and to specify an optional bonus depreciation.
+
+.. note:: Depreciation Basis and Allocation inputs are not available for the Residential financial model because depreciation deductions are not available for residential projects.
 
 The depreciation basis is the **Total depreciation basis prior to allocation** output variable. It is the sum of the total installed cost and any financing costs that apply to the project, including debt-related costs, construction financing cost, and the cost of funding reserves.
 

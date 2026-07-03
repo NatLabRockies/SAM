@@ -993,7 +993,7 @@ document.write(`
 </div>
 <dl>
 <dt><strong>Determine ITC qualification from system components</strong></dt><dd><p>For systems without storage, choose this option to base the ITC on the total installed cost.</p>
-<p>For systems with electricy battery storage, you can choose this option to base the ITC on only the battery-related installation costs.</p>
+<p>For systems with electric battery storage, you can choose this option to base the ITC on only the battery-related installation costs.</p>
 <p>The <strong>Non-storage installed cost</strong> is the sum of all costs on the Installation Costs page except battery-related costs. The percentage is of the total installed cost on the Installation Costs page. For systems with no battery storage, non-storage installed cost is the same as total installed cost.</p>
 <p>The <strong>Battery storage installed cost</strong> is only visible for systems with electric battery storage (standalone battery, PV-Battery, or hybrid systems with battery storage). It is the sum of battery-related costs on the Installation Costs page: Battery direct cost specified in $/kWh and $/kW of battery DC capacity, battery indirect cost specified as a percent of indirect costs, and portion of sales tax that applies to battery costs. The percentage is of the total installed cost on the Installation Costs page.</p>
 <p>For <strong>Qualifies for ITC</strong>, check the box for each cost (non-storage or battery storage) that qualifies for the ITC for both federal and state tax purposes.</p>
@@ -1001,7 +1001,7 @@ document.write(`
 </dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For residential projects, use the <strong>Qualifies for ITC</strong> check boxes to determine the costs that qualify for the ITC. Accelerated depreciation does not apply to residential projects, so those inputs are not available for the Residential financial model.</p>
+<p>For residential projects, use the <strong>Qualifies for ITC</strong> check boxes to determine the costs that qualify for the ITC. Depreciation deductions are not available for residential projects, so those inputs are not available for the Residential financial model.</p>
 </div>
 <dl>
 <dt><strong>Determine ITC qualification from depreciation class allocations</strong></dt><dd><p>Use this option to determine ITC qualifying costs from depreciation class allocations.</p>
@@ -1012,6 +1012,10 @@ document.write(`
 <section id="depreciation-basis-and-allocation">
 <h2>Depreciation Basis and Allocation<a class="headerlink" href="#depreciation-basis-and-allocation" title="Link to this heading">#</a></h2>
 <p>These inputs allow you to specify how SAM calculates depreciation amounts, and to specify an optional bonus depreciation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Depreciation Basis and Allocation inputs are not available for the Residential financial model because depreciation deductions are not available for residential projects.</p>
+</div>
 <p>The depreciation basis is the <strong>Total depreciation basis prior to allocation</strong> output variable. It is the sum of the total installed cost and any financing costs that apply to the project, including debt-related costs, construction financing cost, and the cost of funding reserves.</p>
 <p>The depreciation amount for each class is the product of the total depreciation basis prior to allocation and the allocation percentage for that class.</p>
 <p>The sum of allocation percentages may be less than 100% to account for situations where the total depreciation basis prior to allocation includes non-depreciable assets or costs. In this case, the total amount allocated for depreciation is less than the total depreciation basis prior to allocation. See the <strong>Gross Amount Allocated</strong> column in the Depreciation and ITC table in the project <a class="reference internal" href="../results/cashflow.html"><span class="doc">cash flow</span></a>.</p>
