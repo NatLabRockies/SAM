@@ -2938,7 +2938,7 @@ setup_pvwatts_battery_pages(true);
 setup_lifetime_page( DEGRADATION_DC_LIFETIME );
 addpage( [[ 'PV Battery Capital Costs' ],
 		[ 'PVWatts Battery Capital Cost Curve', 'PV Capex Table', 'PV Capex Table AC', 'PV Capex Table Battery']], { 'sidebar'='Installation Costs', 'help'='installation-costs/cc_pv','exclusive_var'='pv_capex_cost_choice' } );
-addpage( [[ 'Operating Costs' ]], {'sidebar' = 'Operating Costs', 'help'='operating-costs/oc_operating'} );
+addpage( [[ 'Operating Costs PV Battery' ]], {'sidebar' = 'Operating Costs', 'help'='operating-costs/oc_pv-battery'} );
 setup_residential_pages( LOAD_BELPE ); //includes building load calculator
 
 setconfig( 'PVWatts Battery', 'Commercial' );
@@ -2947,7 +2947,7 @@ setup_pvwatts_battery_pages(true);
 setup_lifetime_page( DEGRADATION_DC_LIFETIME );
 addpage( [[ 'PV Battery Capital Costs' ],
 		[ 'PVWatts Battery Capital Cost Curve', 'PV Capex Table', 'PV Capex Table AC', 'PV Capex Table Battery']], { 'sidebar'='Installation Costs', 'help'='installation-costs/cc_pv','exclusive_var'='pv_capex_cost_choice' } );
-addpage( [[ 'Operating Costs' ]], {'sidebar' = 'Operating Costs', 'help'='operating-costs/oc_operating'} );
+addpage( [[ 'Operating Costs PV Battery' ]], {'sidebar' = 'Operating Costs', 'help'='operating-costs/oc_pv-battery'} );
 setup_commercial_pages(LOAD_SIMPLE); //belpe not valid for commercial
 
 setconfig( 'PVWatts Battery', 'Host Developer' );
@@ -2956,7 +2956,7 @@ setup_pvwatts_battery_pages(true);
 setup_lifetime_page( DEGRADATION_DC_LIFETIME );
 addpage( [[ 'PV Battery Capital Costs' ],
 		[ 'PVWatts Battery Capital Cost Curve', 'PV Capex Table', 'PV Capex Table AC', 'PV Capex Table Battery']], { 'sidebar'='Installation Costs', 'help'='installation-costs/cc_pv','exclusive_var'='pv_capex_cost_choice' } );
-addpage( [[ 'Operating Costs' ]], {'sidebar' = 'Operating Costs', 'help'='operating-costs/oc_operating'} );
+addpage( [[ 'Operating Costs PV Battery' ]], {'sidebar' = 'Operating Costs', 'help'='operating-costs/oc_pv-battery'} );
 setup_host_developer_pages( LOAD_SIMPLE ); //includes building load calculator by default in this function
 
 setconfig( 'PVWatts Battery', 'Third Party' );
