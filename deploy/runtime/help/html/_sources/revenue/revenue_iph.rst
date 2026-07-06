@@ -23,6 +23,7 @@ Price of Heat
 
 Time of Delivery
 ~~~~~~~~~~~~~~~~
+
 .. include:: ../includes/snip_revenue_tod_factors.rst
 
 

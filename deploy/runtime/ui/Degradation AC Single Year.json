@@ -1,7 +1,7 @@
 {
     "Name": "Degradation AC Single Year",
     "Width": 795.0,
-    "Height": 179.0,
+    "Height": 162.0,
     "FormObjects": {
         "GroupBox": {
             "Visible": 1.0,
@@ -24,7 +24,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 158.0
+                    "Integer": 146.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -61,7 +61,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 51.0
+                    "Integer": 36.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,

@@ -15,13 +15,9 @@ For energy and ancillary services, you can specify cleared capacity and price va
 
 * Subhourly: As long as you use a weather file with the same time step as the pricing time scale, values apply to each simulation time step (30, 20, 15, 10, 5, or 1-minute time steps are allowed).
 
- 
-
-
 .. note:: If the power generation (kW) in a given time step is less than the cleared capacity (MW) for energy and ancillary services in that time step, SAM generates a simulation error because this condition would be a violation of the merchant contract.
 
-
-.. note:: The merchant plant does not earn any revenue if the cleared capacity is zero for all time steps.
+   The merchant plant does not earn any revenue if the cleared capacity is zero for all time steps.
 
 Annual revenue from capacity payments can be calculated as a fixed price or a price per unit of eligible capacity with an optional annual capacity payment escalation rate.
 
@@ -171,16 +167,11 @@ Cambium price data is in real terms for a constant dollar year for the year prec
 
 #. Click **Edit lifetime data** to verify that the price data downloaded correctly.
 
- 
-
-
 .. note:: The Multiple Years option downloads 8760 hourly values for more than one year, which may take a few minutes to complete.
 
+   Only some years are available from the Cambium database. For example, Cambium 2023 data is available for 2025, 2030, 2035, 2040, 2045, and 2050. If you set the start date to 2030 for a project with a 25-year analysis period, SAM downloads cambium data for the available years between 2030 and 2050. For missing years, it copies data from the previous available year, so it would use 2030 data for 2031, 2032, 2033, and 2034.
 
-.. note:: Only some years are available from the Cambium database. For example, Cambium 2023 data is available for 2025, 2030, 2035, 2040, 2045, and 2050. If you set the start date to 2030 for a project with a 25-year analysis period, SAM downloads cambium data for the available years between 2030 and 2050. For missing years, it copies data from the previous available year, so it would use 2030 data for 2031, 2032, 2033, and 2034.
-
-
-.. note:: If you specify an escalation rate, SAM treats the start year as Year 0, and uses the escalation rate to adjust the values for later years. It does not apply the inflation rate from the Financial Parameters page to the downloaded price data.
+   If you specify an escalation rate, SAM treats the start year as Year 0, and uses the escalation rate to adjust the values for later years. It does not apply the inflation rate from the Financial Parameters page to the downloaded price data.
 
 Energy Market and Ancillary Service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
