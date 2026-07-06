@@ -19781,7 +19781,7 @@
         0.0
     ],
     "ptc_sta_escal": 0.0,
-    "ptc_sta_term": 10.0,
+    "ptc_sta_term": 0.0,
     "qdisp": [
         1.0,
         1.0,

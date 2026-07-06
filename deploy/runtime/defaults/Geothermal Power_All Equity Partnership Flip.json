@@ -19371,7 +19371,7 @@
         0.0
     ],
     "ptc_sta_escal": 0.0,
-    "ptc_sta_term": 10.0,
+    "ptc_sta_term": 0.0,
     "pump_casing_total_cost": 37532198.23782873,
     "pump_depth": 1123.1203058328284,
     "pump_efficiency": 67.5,

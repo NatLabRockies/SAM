@@ -10553,7 +10553,7 @@
         0.0
     ],
     "ptc_sta_escal": 0.0,
-    "ptc_sta_term": 10.0,
+    "ptc_sta_term": 0.0,
     "q_dot_heater_des": 669.9029126213592,
     "q_dot_tes_est": 0.8814426938789968,
     "q_pb_design": 279.126213592233,
