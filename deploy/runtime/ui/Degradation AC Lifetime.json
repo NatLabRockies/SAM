@@ -1,7 +1,7 @@
 {
     "Name": "Degradation AC Lifetime",
-    "Width": 789.0,
-    "Height": 176.0,
+    "Width": 788.0,
+    "Height": 162.0,
     "FormObjects": {
         "GroupBox": {
             "Visible": 1.0,
@@ -24,7 +24,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 167.0
+                    "Integer": 152.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -176,7 +176,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 57.0
+                    "Integer": 36.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
