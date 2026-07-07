@@ -161,7 +161,7 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started and Reference</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/index.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/introduction.html">About SAM</a></li>
@@ -235,6 +235,71 @@
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/optimization.html">Optimization</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/release_notes.html">Release Notes</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Weather Data</span></p>
 <ul class="nav bd-sidenav">
@@ -512,8 +577,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Financial Models</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../installation-costs/index.html">Installation Costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../installation-costs/installation_costs.html">Installation costs</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../installation-costs/index.html">Installation costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_pv.html">PV Installation costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_standalone_battery.html">Battery Installation costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_wind.html">Wind Installation costs</a></li>
@@ -531,7 +595,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_marine_energy.html">Marine Energy Installation costs</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../operating-costs/index.html">Operating Costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../operating-costs/index.html">Operating costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/operating_costs.html">Operating costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/oc_operating.html">Operating costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/oc_battery.html">Battery Operating costs</a></li>
@@ -839,25 +903,51 @@ document.write(`
 </li>
 <li class="toctree-l1"><a class="reference internal" href="pv_module.html">Module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="pv_module.html#cec-performance-model-with-module-database">CEC Performance Model with Module Database</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="pv_module.html#to-use-the-cec-performance-model-with-module-database">To use the CEC Performance Model with Module Database:</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="pv_module.html#module-characteristics-at-reference-conditions">Module Characteristics at Reference Conditions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pv_module.html#bifacial">Bifacial</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pv_module.html#temperature-correction">Temperature Correction</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#to-use-the-cec-performance-model-with-module-database">To use the CEC Performance Model with Module Database:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#module-characteristics-at-reference-conditions">Module Characteristics at Reference Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#bifacial">Bifacial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#temperature-correction">Temperature Correction</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pv_module.html#noct-method-parameters">NOCT Method Parameters</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pv_module.html#heat-transfer-method-parameters">Heat Transfer Method Parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pv_module.html#transient-thermal-model-correction">Transient Thermal Model Correction</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="pv_module.html#module-dimensions">Module Dimensions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pv_module.html#single-diode-model-parameters">Single-diode Model Parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#transient-thermal-model-correction">Transient Thermal Model Correction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#module-dimensions">Module Dimensions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#single-diode-model-parameters">Single-diode Model Parameters</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="pv_module.html#sandia-pv-array-performance-model-with-module-database">Sandia PV Array Performance Model with Module Database</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#id1">Module Characteristics at Reference Conditions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#physical-characteristics">Physical Characteristics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#sandia-temperature-correction">Sandia Temperature Correction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#guidelines-for-choosing-the-module-structure-mounting-a-b-dt-parameters">Guidelines for choosing the Module Structure - Mounting (a, b, dT) parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#sandia-temperature-correction-method">Sandia Temperature Correction Method</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#sandia-temperature-correction-equations">Sandia Temperature Correction Equations</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="pv_module.html#sandia-pv-array-performance-model-with-module-database">Sandia PV Array Performance Model with Module Database</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pv_module.html#simple-efficiency-module-model">Simple Efficiency Module Model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pv_module.html#cec-performance-model-with-user-entered-specifications">CEC Performance Model with User Entered Specifications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pv_module.html#iec-61853-single-diode-model">IEC 61853 Single Diode Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pv_module.html#simple-efficiency-module-model">Simple Efficiency Module Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#id2">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#characteristics">Characteristics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#bifacial-specifications">Bifacial Specifications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#radiation-level-and-efficiency-table">Radiation Level and Efficiency Table</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pv_module.html#cec-performance-model-with-user-entered-specifications">CEC Performance Model with User Entered Specifications</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#id3">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#general-information">General Information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#electrical-specifications">Electrical Specifications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#id4">Bifacial Specifications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#mounting-configuration">Mounting Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#nominal-maximum-power-ratings-at-stc">Nominal Maximum Power Ratings at STC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#save-load-data">Save / Load Data</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pv_module.html#iec-61853-single-diode-model">IEC 61853 Single Diode Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#id5">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#thermal-behavior">Thermal Behavior</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pv_module.html#optical-and-spectral-behavior">Optical and Spectral Behavior</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pv_module.html#spectral-correction">Spectral Correction</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="pv_inverter.html">Inverter</a><ul>

@@ -161,7 +161,7 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started and Reference</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/index.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/introduction.html">About SAM</a></li>
@@ -235,6 +235,71 @@
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/optimization.html">Optimization</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1"><a class="reference internal" href="release_notes.html">Release Notes</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Weather Data</span></p>
 <ul class="nav bd-sidenav">
@@ -512,8 +577,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Financial Models</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../installation-costs/index.html">Installation Costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../installation-costs/installation_costs.html">Installation costs</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../installation-costs/index.html">Installation costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_pv.html">PV Installation costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_standalone_battery.html">Battery Installation costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_wind.html">Wind Installation costs</a></li>
@@ -531,7 +595,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_marine_energy.html">Marine Energy Installation costs</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../operating-costs/index.html">Operating Costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../operating-costs/index.html">Operating costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/operating_costs.html">Operating costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/oc_operating.html">Operating costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/oc_battery.html">Battery Operating costs</a></li>
@@ -844,33 +908,35 @@ document.write(`
 <span id="installationfolder"></span><h2>SAM Installation Folder<a class="headerlink" href="#sam-installation-folder" title="Link to this heading">#</a></h2>
 <p>Your SAM installation contains the SAM executable file and supporting files and folders. You may need to access the SAM installation to find resource data files, SAM libraries, or to <a class="reference internal" href="#removesam"><span class="std std-ref">remove SAM</span></a> from your computer. Be careful not to modify, move, or delete any files in the folder unless you understand how SAM uses the file.</p>
 <p>The SAM installation folder is the folder that contains the SAM executable and its supporting files:</p>
-<p><strong>Windows</strong>
-*   By default, the SAM installation is in c:SAM, although you can install SAM in any folder on your computer.</p>
-<p><strong>Mac</strong>
-*   On a Mac, the SAM installation is the SAM application bundle, which is distributed on a disk image named sam-osx-.dmg  .</p>
-<ul class="simple">
-<li><p>SAM runs directly from the disk image, which can be in the Applications folder, desktop, or other folder on your computer.</p></li>
-<li><p>To open the application bundle, in Finder, control-click (or right-click) the SAM name and click <strong>Show Contents</strong>. If SAM is in your Applications folder, command-click the name to open it in Finder.</p></li>
-</ul>
-<p><strong>Linux</strong>
-*   In Linux, SAM installs by default in home/&lt;user&gt;/SAM/, although you can install SAM in any folder on your computer.</p>
+<p><strong>Windows</strong></p>
+<p>By default, the SAM installation is in c:SAM, although you can install SAM in any folder on your computer.</p>
+<p><strong>Mac</strong></p>
+<p>On a Mac, the SAM installation is the SAM application bundle, which is distributed on a disk image named sam-osx.dmg.</p>
+<p>SAM runs directly from the disk image, which can be in the Applications folder, desktop, or other folder on your computer.</p>
+<p>To open the application bundle, in Finder, control-click (or right-click) the SAM name and click <strong>Show Contents</strong>. If SAM is in your Applications folder, command-click the name to open it in Finder.</p>
+<p><strong>Linux</strong></p>
+<p>In Linux, SAM installs by default in home/&lt;user&gt;/SAM/, although you can install SAM in any folder on your computer.</p>
 </section>
 <section id="removing-sam-from-your-computer">
 <span id="removesam"></span><h2>Removing SAM from your computer<a class="headerlink" href="#removing-sam-from-your-computer" title="Link to this heading">#</a></h2>
 <p>When you install a new version of SAM or no longer need the software, you can remove it from your computer:</p>
-<p><strong>Windows</strong>
-#.   In the Windows Control Panel, under <strong>Programs</strong>, click <strong>Uninstall a Program</strong> (Control PanelProgramsPrograms and Features  ), and select the SAM version you want to uninstall from the list. The SAM program is listed as SAM &lt;version number&gt;.</p>
+<p><strong>Windows</strong></p>
 <ol class="arabic simple">
+<li><p>In the Windows Control Panel, under <strong>Programs</strong>, click <strong>Uninstall a Program</strong> (Control PanelProgramsPrograms and Features  ), and select the SAM version you want to uninstall from the list. The SAM program is listed as SAM &lt;version number&gt;.</p></li>
 <li><p>Click <strong>Uninstall</strong>.</p></li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Any files in the <a class="reference internal" href="#installationfolder"><span class="std std-ref">SAM installation folder</span></a> that you added or modified are not removed by the uninstall process. You can safely delete the folder if you do not need those files.</p>
 </div>
-<p><strong>Mac</strong>
-*   Drag the SAM application bundle to the Trash.</p>
-<p><strong>Linux</strong>
-*   Open a terminal window and run   <em>rm -rf /path/to/SAM/</em>  .</p>
+<p><strong>Mac</strong></p>
+<ul class="simple">
+<li><p>Drag the SAM application bundle to the Trash.</p></li>
+</ul>
+<p><strong>Linux</strong></p>
+<ul class="simple">
+<li><p>Open a terminal window and run   <em>rm -rf /path/to/SAM/</em>  .</p></li>
+</ul>
 </section>
 <section id="running-multiple-versions-of-sam">
 <h2>Running multiple versions of SAM<a class="headerlink" href="#running-multiple-versions-of-sam" title="Link to this heading">#</a></h2>

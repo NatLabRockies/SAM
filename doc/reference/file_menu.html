@@ -161,7 +161,7 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started and Reference</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/index.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/introduction.html">About SAM</a></li>
@@ -235,6 +235,71 @@
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/optimization.html">Optimization</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1"><a class="reference internal" href="release_notes.html">Release Notes</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Weather Data</span></p>
 <ul class="nav bd-sidenav">
@@ -512,8 +577,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Financial Models</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../installation-costs/index.html">Installation Costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../installation-costs/installation_costs.html">Installation costs</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../installation-costs/index.html">Installation costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_pv.html">PV Installation costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_standalone_battery.html">Battery Installation costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_wind.html">Wind Installation costs</a></li>
@@ -531,7 +595,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_marine_energy.html">Marine Energy Installation costs</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../operating-costs/index.html">Operating Costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../operating-costs/index.html">Operating costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/operating_costs.html">Operating costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/oc_operating.html">Operating costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/oc_battery.html">Battery Operating costs</a></li>
@@ -823,39 +887,33 @@ document.write(`
 <h1>File Menu<a class="headerlink" href="#file-menu" title="Link to this heading">#</a></h1>
 <p>SAM’s File menu provides access to commands for managing projects and scripts, and opening the inputs browser. See <a class="reference internal" href="function_keys.html"><span class="doc">Keyboard Shortcuts</span></a> for additional functions.</p>
 <img alt="SS_Menu-Start.png" class="align-center" src="../_images/SS_Menu-Start.png" />
-<p>New project</p>
-<p>Create a new project file using default input values. SAM opens a project with a single case and no results.</p>
-<p>New script</p>
-<blockquote>
-<div><p>Open the script editor for a new new <a class="reference internal" href="macros.html"><span class="doc">LK script</span></a>  .</p>
-</div></blockquote>
-<p>Open project</p>
-<p>Open an existing SAM project file (.sam) file.</p>
-<p>Open script</p>
-<blockquote>
-<div><p>Open an existing script file (.lk  ) in the script editor.</p>
-</div></blockquote>
-<p>Save</p>
-<p>Save the project as a SAM (.sam) file in its current location.</p>
+<dl>
+<dt><strong>New project</strong></dt><dd><p>Create a new project file using default input values. SAM opens a project with a single case and no results.</p>
+</dd>
+<dt><strong>New script</strong></dt><dd><p>Open the script editor for a new new <a class="reference internal" href="macros.html"><span class="doc">LK script</span></a>  .</p>
+</dd>
+<dt><strong>Open project</strong></dt><dd><p>Open an existing SAM project file (.sam) file.</p>
+</dd>
+<dt><strong>Open script</strong></dt><dd><p>Open an existing script file (.lk  ) in the script editor.</p>
+</dd>
+<dt><strong>Save</strong></dt><dd><p>Save the project as a SAM (.sam) file in its current location.</p>
 <p>This option saves annual and monthly results, but does not save hourly results to minimize the size of the file. When you open the file after closing it you will need to run a simulation to view hourly data on the <a class="reference internal" href="../getting-started/results_page.html"><span class="doc">Results</span></a> page.</p>
-<p>Save As</p>
-<p>Save the project as a SAM (.sam) file in a different location or with a new name.</p>
-<p>Save with hourly results</p>
-<p>Save the project as a SAM (.sam) file in its current location, and include hourly results.</p>
+</dd>
+<dt><strong>Save As</strong></dt><dd><p>Save the project as a SAM (.sam) file in a different location or with a new name.</p>
+</dd>
+<dt><strong>Save with hourly results</strong></dt><dd><p>Save the project as a SAM (.sam) file in its current location, and include hourly results.</p>
 <p>Use this option if you want hourly data to be available on the Results page when you or someone else next open the file after closing it.</p>
-<p>Import cases</p>
-<blockquote>
-<div><p>Import one or more cases from another .sam   project file.</p>
-</div></blockquote>
-<p>Inputs browser</p>
-<blockquote>
-<div><p>The <a class="reference internal" href="inputs_browser.html"><span class="doc">inputs browser</span></a>   lists all of the input variables for all cases in the project file. You can use the browser to export a list of input variables and their values to CSV files, and to compare input variables across cases in your file.</p>
-</div></blockquote>
-<p>Close</p>
-<p>Close the project without exiting SAM or saving a file.</p>
+</dd>
+<dt><strong>Import cases</strong></dt><dd><p>Import one or more cases from another .sam   project file.</p>
+</dd>
+<dt><strong>Inputs browser</strong></dt><dd><p>The <a class="reference internal" href="inputs_browser.html"><span class="doc">inputs browser</span></a>   lists all of the input variables for all cases in the project file. You can use the browser to export a list of input variables and their values to CSV files, and to compare input variables across cases in your file.</p>
+</dd>
+<dt><strong>Close</strong></dt><dd><p>Close the project without exiting SAM or saving a file.</p>
 <p>SAM displays the <a class="reference internal" href="../getting-started/welcome_page.html"><span class="doc">Welcome page</span></a> when you close a project.</p>
-<p>Quit</p>
-<p>Close the project and exit SAM without saving a file.</p>
+</dd>
+<dt><strong>Quit</strong></dt><dd><p>Close the project and exit SAM without saving a file.</p>
+</dd>
+</dl>
 </section>
 
 

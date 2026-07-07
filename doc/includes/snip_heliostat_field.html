@@ -161,7 +161,7 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started and Reference</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/index.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/introduction.html">About SAM</a></li>
@@ -235,6 +235,71 @@
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/optimization.html">Optimization</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/release_notes.html">Release Notes</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Weather Data</span></p>
 <ul class="nav bd-sidenav">
@@ -512,8 +577,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Financial Models</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../installation-costs/index.html">Installation Costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../installation-costs/installation_costs.html">Installation costs</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../installation-costs/index.html">Installation costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_pv.html">PV Installation costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_standalone_battery.html">Battery Installation costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_wind.html">Wind Installation costs</a></li>
@@ -531,7 +595,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_marine_energy.html">Marine Energy Installation costs</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../operating-costs/index.html">Operating Costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../operating-costs/index.html">Operating costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/operating_costs.html">Operating costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/oc_operating.html">Operating costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/oc_battery.html">Battery Operating costs</a></li>
@@ -1111,7 +1175,7 @@ document.write(`
 <p>The <a class="reference external" href="https://www.osti.gov/biblio/1231208">DELSOL3</a> code from Sandia National Laboratories was implemented in SAM 2014.1.14 and older versions through the PTGen program described in the thesis <em>Simulation and Predictive Performance Modeling of Utility-Scale Central Receiver System Power Plants</em> (Wagner 2008) (<a class="reference external" href="http://digital.library.wisc.edu/1793/45001">PDF 33 MB</a>).</p>
 <p>To use SolarPILOT for optimization:</p>
 <ol class="arabic simple">
-<li><p>On the <a class="reference internal" href="../installation-costs/installation_costs.html"><span class="doc">Installation Costs</span></a> page, enter values for the capital costs.</p></li>
+<li><p>On the <a class="reference internal" href="../installation-costs/index.html"><span class="doc">Installation Costs</span></a> page, enter values for the capital costs.</p></li>
 <li><p>On the <a class="reference internal" href="../csp-power-tower-molten-salt/mspt_heliostat_field.html"><span class="doc">Heliostat Field</span></a>, <a class="reference internal" href="../csp-power-tower-molten-salt/mspt_power_cycle.html"><span class="doc">Power Cycle</span></a>, and <a class="reference internal" href="../csp-power-tower-molten-salt/mspt_tower_and_receiver.html"><span class="doc">Tower and Receiver</span></a> pages, enter values defining geometry and optical parameters.  The optimization algorithm works by exploring the design near the initial guess values, so be sure to enter your best guess for tower height, receiver diameter, and receiver height based on the system you are simulating.</p></li>
 <li><p>On the Heliostat Field page, enter values to define the parameters of the optimization.</p></li>
 <li><p>On the Heliostat Field page, click <strong>Optimize Solar Field Geometry</strong>.</p></li>

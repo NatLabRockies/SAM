@@ -161,7 +161,7 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started and Reference</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/index.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/introduction.html">About SAM</a></li>
@@ -235,6 +235,71 @@
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/optimization.html">Optimization</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/release_notes.html">Release Notes</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Weather Data</span></p>
 <ul class="nav bd-sidenav">
@@ -512,8 +577,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Financial Models</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../installation-costs/index.html">Installation Costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../installation-costs/installation_costs.html">Installation costs</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../installation-costs/index.html">Installation costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_pv.html">PV Installation costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_standalone_battery.html">Battery Installation costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_wind.html">Wind Installation costs</a></li>
@@ -531,7 +595,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_marine_energy.html">Marine Energy Installation costs</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../operating-costs/index.html">Operating Costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../operating-costs/index.html">Operating costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/operating_costs.html">Operating costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/oc_operating.html">Operating costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/oc_battery.html">Battery Operating costs</a></li>
@@ -864,7 +928,7 @@ document.write(`
 </section>
 <section id="solution-mode-1-specify-irr-target">
 <h2>Solution Mode 1: Specify IRR Target<a class="headerlink" href="#solution-mode-1-specify-irr-target" title="Link to this heading">#</a></h2>
-<p>The Specify IRR Target option allows you to specify an IRR target value and the year that you would like the IRR to be achieved. SAM finds the <a class="reference internal" href="../financial-metrics/mtf_ppa_price.html"><span class="doc">PPA price</span></a> required to meet the target given your assumptions including financial parameters, <a class="reference internal" href="../incentives-and-depreciation/cash_incentives.html"><span class="doc">incentives</span></a> and <a class="reference internal" href="../incentives-and-depreciation/tax_credits_depreciation.html"><span class="doc">depreciation</span></a>, and the project’s <a class="reference internal" href="../installation-costs/installation_costs.html"><span class="doc">installation</span></a> and <a class="reference internal" href="../operating-costs/operating_costs.html"><span class="doc">operating</span></a> costs.</p>
+<p>The Specify IRR Target option allows you to specify an IRR target value and the year that you would like the IRR to be achieved. SAM finds the <a class="reference internal" href="../financial-metrics/mtf_ppa_price.html"><span class="doc">PPA price</span></a> required to meet the target given your assumptions including financial parameters, <a class="reference internal" href="../incentives-and-depreciation/cash_incentives.html"><span class="doc">incentives</span></a> and <a class="reference internal" href="../incentives-and-depreciation/tax_credits_depreciation.html"><span class="doc">depreciation</span></a>, and the project’s <a class="reference internal" href="../installation-costs/index.html"><span class="doc">installation</span></a> and <a class="reference internal" href="../operating-costs/operating_costs.html"><span class="doc">operating</span></a> costs.</p>
 <p>SAM uses an iterative algorithm to search for the PPA price that meets the IRR target in the year you specify. If it cannot find a solution, it finds the PPA price that results in an IRR and year as close as possible to the target values.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1007,7 +1071,7 @@ document.write(`
 <p>SAM determines the annual property tax payment by calculating an assessed value for each year in the cash flow, and applying the assessed percent to that value. The assessed value may decline from year to year at the rate you specify. The assessed percent and tax rate both remain constant from year to year.</p>
 <p>For residential projects, the property tax amount is the only operating cost that can be deducted from state and federal income tax.</p>
 <dl>
-<dt><strong>Assessed Percent</strong></dt><dd><p>The assessed value of property subject to property taxes as a percentage of the system total installed cost specified on the <a class="reference internal" href="../installation-costs/installation_costs.html"><span class="doc">Installation Costs</span></a>   page. SAM uses this value to calculate the assessed property value in year one of the project cash flow.</p>
+<dt><strong>Assessed Percent</strong></dt><dd><p>The assessed value of property subject to property taxes as a percentage of the system total installed cost specified on the <a class="reference internal" href="../installation-costs/index.html"><span class="doc">Installation Costs</span></a>   page. SAM uses this value to calculate the assessed property value in year one of the project cash flow.</p>
 </dd>
 <dt><strong>Assessed Value</strong></dt><dd><p>The assessed property value in Year One of the project cash flow:</p>
 <p><em>Assessed Value ($) = Assessed Percent (%) × Total Installed Cost ($)</em></p>
@@ -1082,7 +1146,7 @@ document.write(`
 <dl class="simple">
 <dt><strong>Other financing cost</strong></dt><dd><p>A dollar amount for financing costs not included in the equity closing cost or development fee.</p>
 </dd>
-<dt><strong>Development fee (Partnership Flip and Sale Leaseback models only)</strong></dt><dd><p>A fee paid to the developer in Year 0, specified as a percentage of the total installed cost on the <a class="reference internal" href="../installation-costs/installation_costs.html"><span class="doc">Installation Costs</span></a>   page. The developer is liable for tax on the development fee in Year 1.</p>
+<dt><strong>Development fee (Partnership Flip and Sale Leaseback models only)</strong></dt><dd><p>A fee paid to the developer in Year 0, specified as a percentage of the total installed cost on the <a class="reference internal" href="../installation-costs/index.html"><span class="doc">Installation Costs</span></a>   page. The developer is liable for tax on the development fee in Year 1.</p>
 </dd>
 </dl>
 <p><em>Development Fee ($) = Development Fee (%) × Total Installed Cost ($)</em></p>

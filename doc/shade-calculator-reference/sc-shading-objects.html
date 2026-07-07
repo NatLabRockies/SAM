@@ -161,7 +161,7 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started and Reference</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/index.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/introduction.html">About SAM</a></li>
@@ -235,6 +235,71 @@
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/optimization.html">Optimization</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/release_notes.html">Release Notes</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Weather Data</span></p>
 <ul class="nav bd-sidenav">
@@ -512,8 +577,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Financial Models</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../installation-costs/index.html">Installation Costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../installation-costs/installation_costs.html">Installation costs</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../installation-costs/index.html">Installation costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_pv.html">PV Installation costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_standalone_battery.html">Battery Installation costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_wind.html">Wind Installation costs</a></li>
@@ -531,7 +595,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_marine_energy.html">Marine Energy Installation costs</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../operating-costs/index.html">Operating Costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../operating-costs/index.html">Operating costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/operating_costs.html">Operating costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/oc_operating.html">Operating costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/oc_battery.html">Battery Operating costs</a></li>
@@ -817,8 +881,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#box">Box</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cylinder">Cylinder</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#box">Box</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cylinder">Cylinder</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#roof">Roof</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tree">Tree</a></li>
 </ul>
@@ -864,9 +930,8 @@ document.write(`
 <dt><strong>Sides only</strong></dt><dd><p>False is a box with six sides. True is a box with no top or bottom, useful for parapets or wall enclosures.</p>
 </dd>
 </dl>
-</section>
 <section id="cylinder">
-<h2>Cylinder<a class="headerlink" href="#cylinder" title="Link to this heading">#</a></h2>
+<h3>Cylinder<a class="headerlink" href="#cylinder" title="Link to this heading">#</a></h3>
 <p>A cylinder shading object is useful for representing poles, chimneys, some kinds of roof protrusions, and other cylindrical objects.</p>
 <dl class="simple">
 <dt>A Cylinder Shading Object in 3D Scene View</dt><dd><p>and its Properties</p>
@@ -883,6 +948,7 @@ document.write(`
 <dt><strong>Color</strong></dt><dd><p>Color used to render the cylinder in 3D scene, bird’s eye, and elevations view. Does not affect shade analysis. Type a color name to change the color.</p>
 </dd>
 </dl>
+</section>
 </section>
 <section id="roof">
 <h2>Roof<a class="headerlink" href="#roof" title="Link to this heading">#</a></h2>
@@ -977,8 +1043,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#box">Box</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cylinder">Cylinder</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#box">Box</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cylinder">Cylinder</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#roof">Roof</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tree">Tree</a></li>
 </ul>

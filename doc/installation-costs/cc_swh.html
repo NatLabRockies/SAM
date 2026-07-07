@@ -161,7 +161,7 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started and Reference</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/index.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/introduction.html">About SAM</a></li>
@@ -235,6 +235,71 @@
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/optimization.html">Optimization</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/release_notes.html">Release Notes</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Weather Data</span></p>
 <ul class="nav bd-sidenav">
@@ -512,8 +577,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Financial Models</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Installation Costs</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="installation_costs.html">Installation costs</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Installation costs</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="cc_pv.html">PV Installation costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cc_standalone_battery.html">Battery Installation costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cc_wind.html">Wind Installation costs</a></li>
@@ -531,7 +595,7 @@
 <li class="toctree-l2"><a class="reference internal" href="cc_marine_energy.html">Marine Energy Installation costs</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../operating-costs/index.html">Operating Costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../operating-costs/index.html">Operating costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/operating_costs.html">Operating costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/oc_operating.html">Operating costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/oc_battery.html">Battery Operating costs</a></li>
@@ -853,22 +917,18 @@ document.write(`
 </div>
 <dl class="simple">
 <dt><strong>Collector cost, $/m**</strong><sup>2</sup>****or $/Unit or $/W**</dt><dd><p>The cost of collectors in the system. You can either include labor costs for collector installation in the collector cost, or account for it separately using the installation cost category. The total collector cost is calculated as either:</p>
-</dd>
-</dl>
 <ul class="simple">
 <li><p>Dollars per square meter multiplied by collector area on the <a class="reference internal" href="../solar-water-heating/swh_system.html"><span class="doc">SWH System page</span></a>, or</p></li>
 <li><p>Dollars per unit, representing the total collector cost, or</p></li>
 <li><p>Dollars per thermal watt of collector capacity multiplied by the nameplate capacity on the <a class="reference internal" href="../solar-water-heating/swh_system.html"><span class="doc">SWH System page</span></a>  .</p></li>
 </ul>
-<dl class="simple">
-<dt><strong>Storage cost, $/m**</strong><sup>3</sup>****or $/Unit**</dt><dd><p>The cost of the solar storage tanks. The total storage cost is either:</p>
 </dd>
-</dl>
+<dt><strong>Storage cost, $/m**</strong><sup>3</sup>****or $/Unit**</dt><dd><p>The cost of the solar storage tanks. The total storage cost is either:</p>
 <ul class="simple">
 <li><p>Dollars per cubic meters multiplied by the storage volume on the <a class="reference internal" href="../solar-water-heating/swh_system.html"><span class="doc">SWH System page</span></a>, or</p></li>
 <li><p>Dollars per unit, representing the total storage cost.</p></li>
 </ul>
-<dl class="simple">
+</dd>
 <dt><strong>Balance of system, $</strong></dt><dd><p>A fixed cost that can be used to account for costs not included in the collector and storage cost categories, for example, the mounting racks and piping.</p>
 </dd>
 <dt><strong>Installation cost, $</strong></dt><dd><p>A fixed cost that can be used to account for labor or other costs not included in the other cost categories.</p>
@@ -915,12 +975,10 @@ document.write(`
 <section id="sales-tax">
 <h2>Sales tax<a class="headerlink" href="#sales-tax" title="Link to this heading">#</a></h2>
 <dl class="simple">
-<dt><strong>Sales tax of, %</strong></dt><dd><p>The sales tax rate from the Financial Parameters page.</p>
-</dd>
-<dt><strong>applies to, %</strong></dt><dd><p>The sales tax basis as a percentage of the total direct cost.</p>
+<dt><strong>Sales tax basis, %</strong></dt><dd><p>The percentage of total direct cost used to the calculate sales tax amount.</p>
 </dd>
 </dl>
-<p>SAM calculates the total sales tax amount by multiplying the sales tax rate from the <a class="reference internal" href="../financial-parameters/fin_overview.html"><span class="doc">Financial Parameters</span></a> page by the sales tax basis on the Installation costs page:</p>
+<p>SAM calculates the total sales tax amount by multiplying the sales tax rate from the <a class="reference internal" href="../financial-parameters/fin_overview.html"><span class="doc">Financial Parameters</span></a> page by the sales tax basis on the Installation Costs page:</p>
 <p><em>Total Sales Tax ($) = Sales Tax Rate (%) × Sales Tax Basis (%) × Total Direct Cost ($)</em></p>
 <p>For an explanation of the effect of sales tax on income tax, see <strong>Sales Tax</strong> on the <a class="reference internal" href="../financial-parameters/fin_overview.html"><span class="doc">Financial Parameters</span></a> topic for the financial model you are using (Residential, Commercial, Single Owner, etc.)</p>
 </section>

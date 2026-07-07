@@ -161,7 +161,7 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started and Reference</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/index.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/introduction.html">About SAM</a></li>
@@ -235,6 +235,71 @@
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/optimization.html">Optimization</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/release_notes.html">Release Notes</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Weather Data</span></p>
 <ul class="nav bd-sidenav">
@@ -512,8 +577,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Financial Models</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../installation-costs/index.html">Installation Costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../installation-costs/installation_costs.html">Installation costs</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../installation-costs/index.html">Installation costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_pv.html">PV Installation costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_standalone_battery.html">Battery Installation costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_wind.html">Wind Installation costs</a></li>
@@ -531,7 +595,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_marine_energy.html">Marine Energy Installation costs</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../operating-costs/index.html">Operating Costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../operating-costs/index.html">Operating costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/operating_costs.html">Operating costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/oc_operating.html">Operating costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/oc_battery.html">Battery Operating costs</a></li>
@@ -853,9 +917,6 @@ document.write(`
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If the power generation (kW) in a given time step is less than the cleared capacity (MW) for energy and ancillary services in that time step, SAM generates a simulation error because this condition would be a violation of the merchant contract.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
 <p>The merchant plant does not earn any revenue if the cleared capacity is zero for all time steps.</p>
 </div>
 <p>Annual revenue from capacity payments can be calculated as a fixed price or a price per unit of eligible capacity with an optional annual capacity payment escalation rate.</p>
@@ -1051,13 +1112,7 @@ document.write(`
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The Multiple Years option downloads 8760 hourly values for more than one year, which may take a few minutes to complete.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
 <p>Only some years are available from the Cambium database. For example, Cambium 2023 data is available for 2025, 2030, 2035, 2040, 2045, and 2050. If you set the start date to 2030 for a project with a 25-year analysis period, SAM downloads cambium data for the available years between 2030 and 2050. For missing years, it copies data from the previous available year, so it would use 2030 data for 2031, 2032, 2033, and 2034.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
 <p>If you specify an escalation rate, SAM treats the start year as Year 0, and uses the escalation rate to adjust the values for later years. It does not apply the inflation rate from the Financial Parameters page to the downloaded price data.</p>
 </div>
 </section>

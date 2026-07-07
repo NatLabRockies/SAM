@@ -17,12 +17,12 @@ SAM's source code is available at https://github.com/NatLabRockies/SAM.
 
 Software developer tools are available at https://sam.nlr.gov/sdk, and the PySAM Python package is available at https://pysam.readthedocs.io.
 
-Getting Started and Reference
------------------------------
+Overview
+--------
 
 .. toctree::
    :maxdepth: 1
-   :caption: Getting Started and Reference
+   :caption: Overview
 
    introduction/index
    getting-started/index

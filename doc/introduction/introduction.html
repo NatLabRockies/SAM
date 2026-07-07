@@ -161,7 +161,7 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started and Reference</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Introduction</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">About SAM</a></li>
@@ -236,6 +236,7 @@
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/release_notes.html">Release Notes</a></li>
+
 
 
 
@@ -576,8 +577,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Financial Models</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../installation-costs/index.html">Installation Costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../installation-costs/installation_costs.html">Installation costs</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../installation-costs/index.html">Installation costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_pv.html">PV Installation costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_standalone_battery.html">Battery Installation costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_wind.html">Wind Installation costs</a></li>
@@ -595,7 +595,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_marine_energy.html">Marine Energy Installation costs</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../operating-costs/index.html">Operating Costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../operating-costs/index.html">Operating costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/operating_costs.html">Operating costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/oc_operating.html">Operating costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/oc_battery.html">Battery Operating costs</a></li>
@@ -881,22 +881,20 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sam-models-and-databases">SAM Models and Databases</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#results-tables-graphs-and-reports">Results: Tables, Graphs, and Reports</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-models">Performance Models</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#financial-models">Financial Models</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sam-models-and-databases">SAM Models and Databases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results-tables-graphs-and-reports">Results: Tables, Graphs, and Reports</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-models">Performance Models</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#financial-models">Financial Models</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#residential-and-commercial-projects">Residential and Commercial Projects</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#power-purchase-agreement-ppa-merchant-plant-and-community-solar-projects">Power Purchase Agreement (PPA), Merchant Plant, and Community Solar Projects</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#project-cash-flow">Project Cash Flow</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#incentives">Incentives</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#residential-and-commercial-projects">Residential and Commercial Projects</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#power-purchase-agreement-ppa-merchant-plant-and-community-solar-projects">Power Purchase Agreement (PPA), Merchant Plant, and Community Solar Projects</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-cash-flow">Project Cash Flow</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#incentives">Incentives</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-options">Analysis Options</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#software-development-history-and-users">Software Development History and Users</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-sam-and-user-support">Downloading SAM and User Support</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-structure">Model Structure</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-options">Analysis Options</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-development-history-and-users">Software Development History and Users</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-sam-and-user-support">Downloading SAM and User Support</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-structure">Model Structure</a></li>
 </ul>
             </nav>
         </div>
@@ -948,8 +946,9 @@ document.write(`
 <li><p>Tax and cash incentive amounts and rates.</p></li>
 </ul>
 <p>Once you are satisfied with the input variable values, you run a simulation, and then examine results. A typical analysis involves running simulations, examining results, revising inputs, and repeating that process until you understand and have confidence in the results.</p>
+</section>
 <section id="results-tables-graphs-and-reports">
-<h3>Results: Tables, Graphs, and Reports<a class="headerlink" href="#results-tables-graphs-and-reports" title="Link to this heading">#</a></h3>
+<h2>Results: Tables, Graphs, and Reports<a class="headerlink" href="#results-tables-graphs-and-reports" title="Link to this heading">#</a></h2>
 <p>SAM displays simulation results in tables and graphs, ranging from the metrics table displaying the project’s net present value (NPV), first year annual production, and other single-value metrics, to the detailed annual cash flow and hourly performance data that can be viewed in tabular or graphical form.</p>
 <p>A built-in graphing tool displays a set of default graphs and allows for creation of custom graphs. All graphs and tables can be exported in various formats for inclusion in reports and presentations, and also for further analysis with spreadsheet or other software.</p>
 <p>The Results page displays graphs of results that you can easily export to your documents:</p>
@@ -958,7 +957,7 @@ document.write(`
 <img alt="Overview_ReportGenerator.png" class="align-center" src="../_images/Overview_ReportGenerator.png" />
 </section>
 <section id="performance-models">
-<h3>Performance Models<a class="headerlink" href="#performance-models" title="Link to this heading">#</a></h3>
+<h2>Performance Models<a class="headerlink" href="#performance-models" title="Link to this heading">#</a></h2>
 <p>SAM’s performance models make hour-by-hour calculations of a power system’s electric output, generating a set of 8,760 hourly values that represent the system’s electricity production over a single year. Some performance models also support subhourly simulations. You can explore the system’s performance characteristics in detail by viewing tables and graphs of the hourly and monthly performance data, or use performance metrics such as the system’s total annual output and capacity factor for more general performance evaluations.</p>
 <p>The Time Series graph on the Results page showing hourly electricity generation for a 100 MW parabolic trough system with 6 hours of storage in Tucson, Arizona:</p>
 <img alt="Overview_MainWindowTimeSeriesGraph.png" class="align-center" src="../_images/Overview_MainWindowTimeSeriesGraph.png" />
@@ -980,7 +979,7 @@ document.write(`
 </ul>
 </section>
 <section id="financial-models">
-<h3>Financial Models<a class="headerlink" href="#financial-models" title="Link to this heading">#</a></h3>
+<h2>Financial Models<a class="headerlink" href="#financial-models" title="Link to this heading">#</a></h2>
 <p>SAM’s financial models calculate financial metrics for various kinds of power projects based on a project’s cash flows over an analysis period that you specify. The financial models use the system’s electrical output calculated by the performance model to calculate the series of annual cash flows.</p>
 <p>SAM includes financial models for the following kinds of projects:</p>
 <ul class="simple">
@@ -999,10 +998,8 @@ document.write(`
 <li><p>Merchant plant</p></li>
 <li><p>Simple LCOE calculator using fixed charge rate method</p></li>
 </ul>
-</section>
-</section>
 <section id="residential-and-commercial-projects">
-<h2>Residential and Commercial Projects<a class="headerlink" href="#residential-and-commercial-projects" title="Link to this heading">#</a></h2>
+<h3>Residential and Commercial Projects<a class="headerlink" href="#residential-and-commercial-projects" title="Link to this heading">#</a></h3>
 <p>Residential and commercial projects are financed through either a loan or cash payment, and recover investment costs by selling electricity through either a net metering or time-of-use pricing agreement. For these projects, SAM reports the following financial metrics in addition to a detailed annual cash flow:</p>
 <ul class="simple">
 <li><p>Levelized cost of energy (LCOE)</p></li>
@@ -1012,7 +1009,7 @@ document.write(`
 </ul>
 </section>
 <section id="power-purchase-agreement-ppa-merchant-plant-and-community-solar-projects">
-<h2>Power Purchase Agreement (PPA), Merchant Plant, and Community Solar Projects<a class="headerlink" href="#power-purchase-agreement-ppa-merchant-plant-and-community-solar-projects" title="Link to this heading">#</a></h2>
+<h3>Power Purchase Agreement (PPA), Merchant Plant, and Community Solar Projects<a class="headerlink" href="#power-purchase-agreement-ppa-merchant-plant-and-community-solar-projects" title="Link to this heading">#</a></h3>
 <p>PPA projects are assumed to sell electricity through a power purchase agreement at a fixed price with optional annual escalation and time-of-delivery (TOD)  factors. For these projects, SAM calculates a detailed annual cash flow and the following metrics:</p>
 <ul class="simple">
 <li><p>Levelized cost of energy (LCOE)</p></li>
@@ -1024,7 +1021,7 @@ document.write(`
 <p>SAM can either calculate the internal rate of return based on a power price you specify, or calculate the power price based on the rate of return you specify.</p>
 </section>
 <section id="project-cash-flow">
-<h2>Project Cash Flow<a class="headerlink" href="#project-cash-flow" title="Link to this heading">#</a></h2>
+<h3>Project Cash Flow<a class="headerlink" href="#project-cash-flow" title="Link to this heading">#</a></h3>
 <p>SAM calculates financial metrics from project cash flows representing the value of energy savings for projects using retail electricity rates, and the value of revenue from electricity sales for projects selling electricity under a power purchase agreement. For the PPA partnership models, SAM calculates cash flows from the project perspective and from the perspective of each partner.</p>
 <p>The following image shows several rows of the cash flow table for a PPA project:</p>
 <img alt="Overview_MainWindowCashFlow.png" class="align-center" src="../_images/Overview_MainWindowCashFlow.png" />
@@ -1040,7 +1037,7 @@ document.write(`
 </ul>
 </section>
 <section id="incentives">
-<h2>Incentives<a class="headerlink" href="#incentives" title="Link to this heading">#</a></h2>
+<h3>Incentives<a class="headerlink" href="#incentives" title="Link to this heading">#</a></h3>
 <p>The financial model can account for a wide range of incentive payments and tax credits:</p>
 <ul class="simple">
 <li><p>Investment based incentives (IBI)</p></li>
@@ -1050,8 +1047,10 @@ document.write(`
 <li><p>Production tax credits (PTC)</p></li>
 <li><p>Depreciation (MACRS, Straight-line, custom, bonus, etc.)</p></li>
 </ul>
+</section>
+</section>
 <section id="analysis-options">
-<h3>Analysis Options<a class="headerlink" href="#analysis-options" title="Link to this heading">#</a></h3>
+<h2>Analysis Options<a class="headerlink" href="#analysis-options" title="Link to this heading">#</a></h2>
 <p>In addition to simulating a system’s performance over a single year and calculating a project cash flow over a multi-year period, SAM’s analysis options make it possible to conduct studies involving multiple simulations, linking SAM inputs to a Microsoft Excel workbook, and working with custom simulation modules.</p>
 <p>The following options are for analyses that investigate impacts of variations and uncertainty in assumptions about weather, performance, cost, and financial parameters on model results:</p>
 <ul class="simple">
@@ -1063,13 +1062,13 @@ document.write(`
 <p>SAM also makes it possible to work with external models developed in Excel with Excel Exchange, which allows Excel to calculate the value of input variables, and automatically pass values of input variables between SAM and Excel.</p>
 </section>
 <section id="software-development-history-and-users">
-<h3>Software Development History and Users<a class="headerlink" href="#software-development-history-and-users" title="Link to this heading">#</a></h3>
+<h2>Software Development History and Users<a class="headerlink" href="#software-development-history-and-users" title="Link to this heading">#</a></h2>
 <p>SAM, originally called the “Solar Advisor Model” was developed by the National Laboratory of the Rockies in collaboration with Sandia National Laboratories in 2005, and at first used internally by the U.S. Department of Energy’s Solar Energy Technologies Program for systems-based analysis of solar technology improvement opportunities within the program. The first public version was released in August 2007 as Version 1, making it possible for solar energy professionals to analyze photovoltaic systems and concentrating solar power parabolic trough systems in the same modeling platform using consistent financial assumptions. Since 2007, two new versions have been released each year, adding new technologies and financial models. In 2010, the name changed to “System Advisor Model” to reflect the addition of non-solar technologies.</p>
 <p>The DOE, NLR, and Sandia continue to use the model for program planning and grant programs. Since the first public release, over 35,000 people representing manufacturers, project developers, academic researchers, and policy makers have downloaded the software. Manufacturers are using the model to evaluate the impact of efficiency improvements or cost reductions in their products on the cost of energy from installed systems. Project developers use SAM to evaluate different system configurations to maximize earnings from electricity sales. Policy makers and designers use the model to experiment with different incentive structures.</p>
 </section>
 <section id="downloading-sam-and-user-support">
-<h3>Downloading SAM and User Support<a class="headerlink" href="#downloading-sam-and-user-support" title="Link to this heading">#</a></h3>
-<p>SAM is free software and runs on Windows, MacOS, and Linux. It requires about 500 MB of storage space on your computer. See <a class="reference internal" href="../reference/installation.html"><span class="doc">Software Installation</span></a> for details.</p>
+<h2>Downloading SAM and User Support<a class="headerlink" href="#downloading-sam-and-user-support" title="Link to this heading">#</a></h2>
+<p>SAM is free software and runs on Windows, MacOS, and Linux. See <a class="reference internal" href="../reference/installation.html"><span class="doc">Software Installation</span></a> for installation details.</p>
 <p>To run SAM, you must register your copy of SAM by providing NLR with a valid email address.</p>
 <p>SAM’s website includes software descriptions, links to publications about SAM and other resources:</p>
 <p>The following resources are available for learning to use SAM and for getting help with your analysis:</p>
@@ -1083,7 +1082,7 @@ document.write(`
 <img alt="Overview_HelpSystem.png" class="align-center" src="../_images/Overview_HelpSystem.png" />
 </section>
 <section id="model-structure">
-<h3>Model Structure<a class="headerlink" href="#model-structure" title="Link to this heading">#</a></h3>
+<h2>Model Structure<a class="headerlink" href="#model-structure" title="Link to this heading">#</a></h2>
 <p>SAM consists of a graphical user interface, SAM Simulation Core (SSC), and an application programming interface (API). The graphical user interface is the part of SAM that you see, and provides access to input variables and simulation controls, and displays tables and graphs of results. SSC performs a time-step-by-time-step simulation of a power system’s performance, and financial calculations to generate a project cash flow and financial metrics. The API allows programs to interact with SSC. You can write software to interact with the API using the <a class="reference internal" href="../reference/sdk.html"><span class="doc">software development kit (SDK)</span></a>, which includes a Python package called <a class="reference external" href="https://NLR-pysam.readthedocs.io/en/main/">PySAM</a>.</p>
 <p>SAM’s <a class="reference internal" href="../reference/macros.html"><span class="doc">scripting language</span></a>, called LK, allows you to automate certain tasks from inside the graphical user interface. If you have some experience writing computer programs, you can easily learn to write LK scripts to set the values of input variables by reading them from a text file or based on calculations in the script, run simulations, and write values of results to a text file. You can also use LK to automatically run a series of simulations using different weather files.</p>
 <p><a class="reference internal" href="../reference/excel_exchange.html"><span class="doc">Excel Exchange</span></a> allows you to use Microsoft Excel to calculate values of input variables. With Excel Exchange, each time you run a simulation, SAM opens a spreadsheet and, depending on how you’ve configured Excel Exchange, writes values from SAM input pages to the spreadsheet, and reads values from the spreadsheet to use in simulations. This makes it possible to use spreadsheet formulas to calculate values of SAM input variables.</p>
@@ -1097,7 +1096,6 @@ document.write(`
 <li><p>When you click the Simulate button, SAM runs the SSC performance and financial models. For advanced analyses, you can configure simulations for <a class="reference internal" href="../simulation-options/parametrics.html"><span class="doc">optimization</span></a> or <a class="reference internal" href="../simulation-options/stochastic.html"><span class="doc">sensitivity analyses</span></a> before running a simulation.</p></li>
 <li><p>SAM displays graphs and tables of <a class="reference internal" href="../getting-started/results_page.html"><span class="doc">results</span></a> in the user interface.</p></li>
 </ol>
-</section>
 </section>
 </section>
 
@@ -1146,22 +1144,20 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sam-models-and-databases">SAM Models and Databases</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#results-tables-graphs-and-reports">Results: Tables, Graphs, and Reports</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-models">Performance Models</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#financial-models">Financial Models</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sam-models-and-databases">SAM Models and Databases</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#results-tables-graphs-and-reports">Results: Tables, Graphs, and Reports</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#performance-models">Performance Models</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#financial-models">Financial Models</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#residential-and-commercial-projects">Residential and Commercial Projects</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#power-purchase-agreement-ppa-merchant-plant-and-community-solar-projects">Power Purchase Agreement (PPA), Merchant Plant, and Community Solar Projects</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#project-cash-flow">Project Cash Flow</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#incentives">Incentives</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#residential-and-commercial-projects">Residential and Commercial Projects</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#power-purchase-agreement-ppa-merchant-plant-and-community-solar-projects">Power Purchase Agreement (PPA), Merchant Plant, and Community Solar Projects</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-cash-flow">Project Cash Flow</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#incentives">Incentives</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-options">Analysis Options</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#software-development-history-and-users">Software Development History and Users</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-sam-and-user-support">Downloading SAM and User Support</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-structure">Model Structure</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analysis-options">Analysis Options</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#software-development-history-and-users">Software Development History and Users</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#downloading-sam-and-user-support">Downloading SAM and User Support</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#model-structure">Model Structure</a></li>
 </ul>
   </nav></div>
 

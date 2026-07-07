@@ -161,7 +161,7 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started and Reference</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/index.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/introduction.html">About SAM</a></li>
@@ -235,6 +235,71 @@
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/optimization.html">Optimization</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/release_notes.html">Release Notes</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Weather Data</span></p>
 <ul class="nav bd-sidenav">
@@ -512,8 +577,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Financial Models</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../installation-costs/index.html">Installation Costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../installation-costs/installation_costs.html">Installation costs</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../installation-costs/index.html">Installation costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_pv.html">PV Installation costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_standalone_battery.html">Battery Installation costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_wind.html">Wind Installation costs</a></li>
@@ -531,7 +595,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_marine_energy.html">Marine Energy Installation costs</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../operating-costs/index.html">Operating Costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../operating-costs/index.html">Operating costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/operating_costs.html">Operating costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/oc_operating.html">Operating costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../operating-costs/oc_battery.html">Battery Operating costs</a></li>
@@ -879,7 +943,7 @@ document.write(`
 <section id="external-shading">
 <span id="pvexternalshading"></span><h2>External Shading<a class="headerlink" href="#external-shading" title="Link to this heading">#</a></h2>
 <p>External shading is shading of the photovoltaic subarray by trees, buildings, roof protrusions and other nearby objects. SAM represents a shadow on the subarray in a given time step by a single <strong>beam irradiance shading loss</strong> for that time step, which it determines from data you provide in the beam shade loss tables in the <a class="reference internal" href="../window-reference/win_edit_shading_data.html"><span class="doc">Edit Shading Data window</span></a>. SAM reduces the plane-of-array beam irradiance by the shading loss percentage. For example, if a shadow occupies 25% of the subarray’s surface area at 11 am, the beam shading loss for 11 am would be 25%. A shading loss of 0 means there is no shade on the subarray, and a loss of 100% means that no beam irradiance reaches the subarray.</p>
-<p>When you specify beam irradiance shading losses by time step, you can use SAM’s partial shading model to estimate the impact of partial shading on the array’s electrical output. The partial shading model does not work with the month-by-hour or solar azimuth-by-altitude beam shade loss tables. For more information about the partial shading model, see MacAlpine, S.; Deline, C. (2015) Simplified Method for Modeling the Impact of Arbitrary Partial Shading Conditions on PV Array Performance. National Renewable Energy Laboratory. 8 pp.; NREL/CP-5J00-64570. (<a class="reference external" href="https://docs.nlr.gov/docs/fy15osti/64570.pdf">PDF 699 KB</a>)</p>
+<p>When you specify beam irradiance shading losses by time step, you can use SAM’s partial shading model to estimate the impact of partial shading on the array’s electrical output. The partial shading model does not work with the month-by-hour or solar azimuth-by-altitude beam shade loss tables. For more information about the partial shading model, see MacAlpine, S.; Deline, C. (2015) Simplified Method for Modeling the Impact of Arbitrary Partial Shading Conditions on PV Array Performance. National Renewable Energy Laboratory. NREL/CP-5J00-64570. (<a class="reference external" href="https://docs.nlr.gov/docs/fy15osti/64570.pdf">PDF 699 KB</a>)</p>
 <p>SAM accounts for the effect of external shading on the plane-of-array diffuse irradiance using a single <strong>sky diffuse shading loss</strong> for the entire year.</p>
 <p>You can generate beam and diffuse irradiance shading loss data using SAM’s <a class="reference internal" href="../shade-calculator-reference/sc-overview.html"><span class="doc">3D Shade Calculator</span></a> or outside of SAM. SAM can <a class="reference internal" href="../window-reference/win_edit_shading_data.html#importshadingdata"><span class="std std-ref">import beam and diffuse shading data</span></a> from files created by PVSyst, and beam shading data from files created by the Solmetric Suneye, and Solar Pathfinder software.</p>
 <p>To model external shading of a subarray in SAM, you provide a set of beam shading loss percentages in one of the beam shade loss tables, and a single sky diffuse shading loss.</p>
@@ -941,7 +1005,7 @@ document.write(`
 <p>SAM’s snow model estimates the loss in system output during time steps when the array is covered in snow using snow depth data, the subarray’s tilt angle, plane-of-array irradiance, and ambient temperature. The model assumes that the subarray is completely covered with snow when the snow depth data indicates a snowfall, and that snow slides off the array as the ambient temperature increases. For a detailed description of the snow model, see the following publications available from the from the SAM website’s <a class="reference external" href="https://sam.nlr.gov/photovoltaic/pv-publications.html">PV Publications page</a>.:</p>
 <ul class="simple">
 <li><p>Gilman, P.; Dobos, A.; DiOrio, N.; Freeman, J.; Janzou, S.; Ryberg, D. (2018) SAM Photovoltaic Model Technical Reference Update. 93 pp.; NREL/TP-6A20-67399</p></li>
-<li><p>Ryberg, D.; Freeman, J. (2017). Integration, Validation and Application of a PV Snow Coverage Model in SAM. National Renewable Energy Laboratory. 33 pp. TP-6A20-68705 available along with other technical documentation from the <a class="reference external" href="https://sam.nlr.gov/photovoltaic/pv-publications.html">SAM website</a>.</p></li>
+<li><p>Ryberg, D.; Freeman, J. (2017).  Integration, Validation and Application of a PV Snow Coverage Model in SAM. National Renewable Energy Laboratory. TP-6A20-68705 available along with other technical documentation from the <a class="reference external" href="https://sam.nlr.gov/photovoltaic/pv-publications.html">SAM website</a>.</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

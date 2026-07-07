@@ -161,7 +161,7 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting Started and Reference</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/index.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/introduction.html">About SAM</a></li>
@@ -235,6 +235,71 @@
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/optimization.html">Optimization</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/release_notes.html">Release Notes</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Weather Data</span></p>
 <ul class="nav bd-sidenav">
@@ -512,8 +577,7 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Financial Models</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../installation-costs/index.html">Installation Costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../installation-costs/installation_costs.html">Installation costs</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../installation-costs/index.html">Installation costs</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_pv.html">PV Installation costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_standalone_battery.html">Battery Installation costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_wind.html">Wind Installation costs</a></li>
@@ -531,7 +595,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../installation-costs/cc_marine_energy.html">Marine Energy Installation costs</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Operating Costs</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Operating costs</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="operating_costs.html">Operating costs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="oc_operating.html">Operating costs</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Battery Operating costs</a></li>
@@ -837,10 +901,7 @@ document.write(`
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The operating cost inputs are in Year 1 dollars. SAM applies the inflation rate from the Financial Parameters page to calculate the operating cost in each year of the cash flow. If you specify a non-zero escalation rate for an operating cost category, it applies both the inflation rate and escalation rate.</p>
-</div>
-<p><strong>Note.</strong> For financial models with reserve accounts on the Financial Parameters page, you can use either the operating costs or the major equipment replacement reserve accounts for the cost of major equipment replacements.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<p>For financial models with reserve accounts on the Financial Parameters page, you can use either the operating costs or the major equipment replacement reserve accounts for the cost of major equipment replacements.</p>
 <p>For expenses such as component replacements that occur in particular years, you can use an <a class="reference internal" href="#oc-battery-annualschedule"><span class="std std-ref">annual schedule</span></a> to assign costs to individual years.</p>
 </div>
 <dl>
@@ -854,13 +915,11 @@ document.write(`
 <dt><strong>Variable cost by generation</strong></dt><dd><p>A variable annual cost proportional to the annual output of the photovoltaic system (MWac) or power plant (MWac), and annual energy discharged by the battery (MWac). The variable operating cost of the battery is calculated from the total energy discharged to the grid and load (for behind-the-meter batteries).</p>
 </dd>
 <dt><strong>Replacement cost, $/kWhdc of battery nameplate capacity</strong></dt><dd><p>The replacement cost in Year 1 dollars per unit of nameplate battery capacity as defined above.</p>
-</dd>
-</dl>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>To include battery replacements costs in your analysis, be sure to choose a battery replacement option on the <a class="reference internal" href="../battery-storage/battery_life.html"><span class="doc">Battery Life</span></a> page.</p>
 </div>
-<dl>
+</dd>
 <dt><strong>Escalation rate, %/yr</strong></dt><dd><p>For each operating cost category, you can specify an optional annual <strong>Escalation Rate</strong> to represent an expected annual increase or decrease in operating cost above the annual inflation rate specified on the <a class="reference internal" href="../financial-parameters/fin_overview.html"><span class="doc">Financial Parameters</span></a>   page.</p>
 <p>Specify an escalation rate of zero for an operating cost that increases annually at the rate of inflation, a positive escalation rate for a cost that increases at a higher rate than the inflation rate, or a negative escalation rate for a cost that increases at a lower rate than the inflation rate. (Set the inflation rate to the negative value of the inflation rate for a cost that does not increase with inflation.)</p>
 </dd>
