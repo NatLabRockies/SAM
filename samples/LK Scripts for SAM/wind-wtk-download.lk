@@ -1,9 +1,9 @@
 /*
 
 This script downloads a wind resource data file from the wtk-download endpoint
-on the NREL Developer Network WIND Toolkit API:
+on the NLR Developer Network WIND Toolkit API:
 
-https://developer.nrel.gov/docs/wind/wind-toolkit/wtk-download/
+https://developer.nlr.gov/docs/wind/wind-toolkit/wtk-download/
 
 It puts the file in the SAM Downloaded Weather Files folder.
 
@@ -27,13 +27,13 @@ latitude = 32.10;
 
 ////////////////////////////////////////////////////////////////////////////////
 
-// to use the API outside of SAM, get your own NREL Developer API key from 
-// https://developer.nrel.gov and set 'key' and 'email' to the values for your key
+// to use the API outside of SAM, get your own NLR Developer API key from 
+// https://developer.nlr.gov and set 'key' and 'email' to the values for your key
 key = '<SAMAPIKEY>';
 email = '<USEREMAIL>';
 
 
-url = 'https://developer.nrel.gov/api/wind-toolkit/v2/wind/wtk-download.csv?&api_key='+key+'&email='+email+'&full_name=SAM%20User&affiliation=none&reason=none&wkt=POINT(<LON>%20<LAT>)&utc=false&leap_day=false&names=<YEAR>&interval=<INTERVAL>&attributes=<ATTRS>';
+url = 'https://developer.nlr.gov/api/wind-toolkit/v2/wind/wtk-download.csv?&api_key='+key+'&email='+email+'&full_name=SAM%20User&affiliation=none&reason=none&wkt=POINT(<LON>%20<LAT>)&utc=false&leap_day=false&names=<YEAR>&interval=<INTERVAL>&attributes=<ATTRS>';
 url = replace(url, '<LON>', longitude);
 url = replace(url, '<LAT>', latitude);
 url = replace(url, '<INTERVAL>', timestep); 

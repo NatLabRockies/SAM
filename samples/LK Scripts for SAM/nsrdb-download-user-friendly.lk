@@ -16,7 +16,7 @@ To download a selection of U.S. Cities, please follow these steps:
 --------------------------------------------------------------------------------
 
 Given a location name, street address, or latitude and longitude for a location 
-in the NREL National Solar Radiation Database (NSRDB), this script prompts
+in the NLR National Solar Radiation Database (NSRDB), this script prompts
 you to select the data file(s) you want to download.
 
 The script will also read a list of locations from a CSV file with either of
@@ -56,9 +56,9 @@ Updated and tested with SAM 2021.12.02
 
 //////////////////////////////////////////////////////////////////////////////*/
 
-// Get your own API key at https://developer.nrel.gov
+// Get your own API key at https://developer.nlr.gov
 api_key = '<SAMAPIKEY>';
-api_email = 'sam.support@nrel.gov';
+api_email = 'sam.support@nlr.gov';
 
 // folder to store weather files (script creates subfolder for each location).
 
@@ -199,7 +199,7 @@ for ( s=0 ; s<#site.lat; s++ )
 	// on first pass, get list of available versions and urls
 	if ( s == 0 )
 	{
-		base_url = 'https://developer.nrel.gov/api/nsrdb/v2/solar/';
+		base_url = 'https://developer.nlr.gov/api/nsrdb/v2/solar/';
 		query_url = 'nsrdb-data-query.json?api_key='+api_key+'&wkt=POINT(' + to_string(site.lon[s]) + '+' + to_string(site.lat[s]) + ')';
 		url = base_url + query_url;
 		json_str = curl( url );

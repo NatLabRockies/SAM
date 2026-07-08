@@ -141,6 +141,14 @@ extern "C"
 	SAM_EXPORT void SAM_Pvsamv1_Losses_en_snow_model_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
+	 * Set snow_array: Hourly snow depth  [cm]
+	 * options: None
+	 * constraints: None
+	 * required if: ?
+	 */
+	SAM_EXPORT void SAM_Pvsamv1_Losses_snow_array_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
+
+	/**
 	 * Set snow_slide_coefficient: Snow Slide Coefficient
 	 * options: None
 	 * constraints: None
@@ -459,6 +467,14 @@ extern "C"
 	 * required if: *
 	 */
 	SAM_EXPORT void SAM_Pvsamv1_Losses_transmission_loss_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
+	 * Set use_snow_weather_file: Use the snow depth from the weather file [0/1]
+	 * options: 0=user-specified,1=weatherfile
+	 * constraints: None
+	 * required if: *
+	 */
+	SAM_EXPORT void SAM_Pvsamv1_Losses_use_snow_weather_file_nset(SAM_table ptr, double number, SAM_error *err);
 
 
 	//
@@ -5087,6 +5103,14 @@ extern "C"
 	 */
 	SAM_EXPORT void SAM_Pvsamv1_BatteryDispatch_dispatch_manual_system_charge_first_nset(SAM_table ptr, double number, SAM_error *err);
 
+	/**
+	 * Set start_day_of_year: Start day of year for TOD periods [0..6]
+	 * options: 0=Monday, 6=Sunday
+	 * constraints: None
+	 * required if: ?=0
+	 */
+	SAM_EXPORT void SAM_Pvsamv1_BatteryDispatch_start_day_of_year_nset(SAM_table ptr, double number, SAM_error *err);
+
 
 	//
 	// SystemCosts parameters
@@ -5433,6 +5457,14 @@ extern "C"
 	SAM_EXPORT void SAM_Pvsamv1_ElectricityRates_rate_escalation_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
 
 	/**
+	 * Set start_day_of_year: Start day of year for TOD periods [0..6]
+	 * options: 0=Monday, 6=Sunday
+	 * constraints: None
+	 * required if: ?=0
+	 */
+	SAM_EXPORT void SAM_Pvsamv1_ElectricityRates_start_day_of_year_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
 	 * Set ur_annual_min_charge: Annual minimum charge [$]
 	 * options: None
 	 * constraints: None
@@ -5687,6 +5719,83 @@ extern "C"
 
 
 	//
+	// SpectralCorrection parameters
+	//
+
+	/**
+	 * Set celltech: Cell technology
+	 * options: None
+	 * constraints: None
+	 * required if: ?=0
+	 */
+	SAM_EXPORT void SAM_Pvsamv1_SpectralCorrection_celltech_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
+	 * Set coeff_inputs_king: Coefficients for King spectral correction function
+	 * options: None
+	 * constraints: LENGTH=5
+	 * required if: ?
+	 */
+	SAM_EXPORT void SAM_Pvsamv1_SpectralCorrection_coeff_inputs_king_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
+
+	/**
+	 * Set coeff_inputs_lee: Coefficients for Lee spectral correction function
+	 * options: None
+	 * constraints: LENGTH=6
+	 * required if: ?
+	 */
+	SAM_EXPORT void SAM_Pvsamv1_SpectralCorrection_coeff_inputs_lee_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
+
+	/**
+	 * Set coeff_inputs_pelland: Coefficients for Pelland spectral correction function
+	 * options: None
+	 * constraints: LENGTH=3
+	 * required if: ?
+	 */
+	SAM_EXPORT void SAM_Pvsamv1_SpectralCorrection_coeff_inputs_pelland_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
+
+	/**
+	 * Set max_abs_airmass: Maximum absolute airmass
+	 * options: None
+	 * constraints: None
+	 * required if: ?=10
+	 */
+	SAM_EXPORT void SAM_Pvsamv1_SpectralCorrection_max_abs_airmass_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
+	 * Set max_prec_water: Maximum precipitable water
+	 * options: None
+	 * constraints: None
+	 * required if: ?=8
+	 */
+	SAM_EXPORT void SAM_Pvsamv1_SpectralCorrection_max_prec_water_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
+	 * Set min_abs_airmass: Minimum absolute airmass
+	 * options: None
+	 * constraints: None
+	 * required if: ?=0.58
+	 */
+	SAM_EXPORT void SAM_Pvsamv1_SpectralCorrection_min_abs_airmass_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
+	 * Set min_prec_water: Minimum precipitable water
+	 * options: None
+	 * constraints: None
+	 * required if: ?=0.1
+	 */
+	SAM_EXPORT void SAM_Pvsamv1_SpectralCorrection_min_prec_water_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
+	 * Set spectral_correction_model_choice: Spectral correction model choice [0/1/2]
+	 * options: None
+	 * constraints: None
+	 * required if: ?=0
+	 */
+	SAM_EXPORT void SAM_Pvsamv1_SpectralCorrection_spectral_correction_model_choice_nset(SAM_table ptr, double number, SAM_error *err);
+
+
+	//
 	// HybridCosts parameters
 	//
 
@@ -5806,6 +5915,8 @@ extern "C"
 
 	SAM_EXPORT double SAM_Pvsamv1_Losses_en_snow_model_nget(SAM_table ptr, SAM_error *err);
 
+	SAM_EXPORT double* SAM_Pvsamv1_Losses_snow_array_aget(SAM_table ptr, int* length, SAM_error *err);
+
 	SAM_EXPORT double SAM_Pvsamv1_Losses_snow_slide_coefficient_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Pvsamv1_Losses_subarray1_dcwiring_loss_nget(SAM_table ptr, SAM_error *err);
@@ -5885,6 +5996,8 @@ extern "C"
 	SAM_EXPORT double SAM_Pvsamv1_Losses_transformer_no_load_loss_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Pvsamv1_Losses_transmission_loss_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Pvsamv1_Losses_use_snow_weather_file_nget(SAM_table ptr, SAM_error *err);
 
 
 	/**
@@ -7129,6 +7242,8 @@ extern "C"
 
 	SAM_EXPORT double SAM_Pvsamv1_BatteryDispatch_dispatch_manual_system_charge_first_nget(SAM_table ptr, SAM_error *err);
 
+	SAM_EXPORT double SAM_Pvsamv1_BatteryDispatch_start_day_of_year_nget(SAM_table ptr, SAM_error *err);
+
 
 	/**
 	 * SystemCosts Getters
@@ -7234,6 +7349,8 @@ extern "C"
 
 	SAM_EXPORT double* SAM_Pvsamv1_ElectricityRates_rate_escalation_aget(SAM_table ptr, int* length, SAM_error *err);
 
+	SAM_EXPORT double SAM_Pvsamv1_ElectricityRates_start_day_of_year_nget(SAM_table ptr, SAM_error *err);
+
 	SAM_EXPORT double SAM_Pvsamv1_ElectricityRates_ur_annual_min_charge_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double* SAM_Pvsamv1_ElectricityRates_ur_billing_demand_lookback_percentages_mget(SAM_table ptr, int* nrows, int* ncols, SAM_error *err);
@@ -7300,6 +7417,29 @@ extern "C"
 	SAM_EXPORT double* SAM_Pvsamv1_GridLimits_grid_curtailment_aget(SAM_table ptr, int* length, SAM_error *err);
 
 	SAM_EXPORT double SAM_Pvsamv1_GridLimits_grid_interconnection_limit_kwac_nget(SAM_table ptr, SAM_error *err);
+
+
+	/**
+	 * SpectralCorrection Getters
+	 */
+
+	SAM_EXPORT double SAM_Pvsamv1_SpectralCorrection_celltech_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double* SAM_Pvsamv1_SpectralCorrection_coeff_inputs_king_aget(SAM_table ptr, int* length, SAM_error *err);
+
+	SAM_EXPORT double* SAM_Pvsamv1_SpectralCorrection_coeff_inputs_lee_aget(SAM_table ptr, int* length, SAM_error *err);
+
+	SAM_EXPORT double* SAM_Pvsamv1_SpectralCorrection_coeff_inputs_pelland_aget(SAM_table ptr, int* length, SAM_error *err);
+
+	SAM_EXPORT double SAM_Pvsamv1_SpectralCorrection_max_abs_airmass_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Pvsamv1_SpectralCorrection_max_prec_water_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Pvsamv1_SpectralCorrection_min_abs_airmass_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Pvsamv1_SpectralCorrection_min_prec_water_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Pvsamv1_SpectralCorrection_spectral_correction_model_choice_nget(SAM_table ptr, SAM_error *err);
 
 
 	/**

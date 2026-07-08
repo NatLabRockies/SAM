@@ -1,7 +1,7 @@
 {
     "Name": "Financial TOD Factors",
-    "Width": 861.0,
-    "Height": 1002.0,
+    "Width": 864.0,
+    "Height": 1017.0,
     "FormObjects": {
         "Button": {
             "Visible": 1.0,
@@ -16,7 +16,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 300.0
+                    "Integer": 306.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -53,7 +53,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 963.0
+                    "Integer": 978.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -90,7 +90,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 963.0
+                    "Integer": 978.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -164,7 +164,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 966.0
+                    "Integer": 981.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -264,11 +264,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 288.0
+                    "Integer": 324.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 375.0
+                    "Integer": 390.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -309,11 +309,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 288.0
+                    "Integer": 324.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 672.0
+                    "Integer": 687.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -358,7 +358,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 399.0
+                    "Integer": 390.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -366,7 +366,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 285.0
+                    "Integer": 243.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -450,6 +450,68 @@
                 }
             }
         },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "lbl_start_day_message"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 54.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 663.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 234.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
         "Divider": {
             "Visible": 1.0,
             "ObjectProperties": {
@@ -463,7 +525,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 945.0
+                    "Integer": 960.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -521,7 +583,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 993.0
+                    "Integer": 1008.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -546,11 +608,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 288.0
+                    "Integer": 324.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 651.0
+                    "Integer": 663.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -608,11 +670,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 288.0
+                    "Integer": 324.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 354.0
+                    "Integer": 366.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -670,7 +732,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 12.0
+                    "Integer": 15.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -682,7 +744,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 54.0
+                    "Integer": 60.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -732,19 +794,19 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 195.0
+                    "Integer": 207.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 279.0
+                    "Integer": 285.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 657.0
+                    "Integer": 645.0
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 66.0
+                    "Integer": 60.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -834,6 +896,47 @@
                 }
             }
         },
+        "Choice": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "start_day_of_year_tod_ui"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 171.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 636.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 117.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Items": {
+                    "Type": 6.0,
+                    "StringList": "Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday"
+                },
+                "Selection": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
         "Library": {
             "Visible": 1.0,
             "ObjectProperties": {
@@ -847,7 +950,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 135.0
+                    "Integer": 141.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -10504,6 +10607,19 @@
             "sscVariableName": " ",
             "sscVariableValue": ""
         },
+        "start_day_of_year_tod_ui": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "January 1 day of week",
+            "Units": "",
+            "Group": "Time of Delivery Factors",
+            "IndexLabels": "",
+            "Flags": 2.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Choice",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "tod_library": {
             "Version": 4.0,
             "Type": 4.0,
@@ -10672,6 +10788,16 @@
         "\t\t}",
         "\t}",
         "};",
-        ""
+        "\r",
+        "on_change{'start_day_of_year_tod_ui'} = define() {\r",
+        "\tvalue('start_day_of_year', value('start_day_of_year_tod_ui'));\r",
+        "\tmsg = '';\r",
+        "\tif(financing() == 'Host Developer') {\r",
+        "\t\tvalue('start_day_of_year_load_ui', value('start_day_of_year'));\r",
+        "\t\tmsg = 'January 1 day of week is linked to input on Electric Load page.';\r",
+        "\t}\r",
+        "\tproperty('lbl_start_day_message','Caption',msg);\r",
+        "\r",
+        "};"
     ]
 }

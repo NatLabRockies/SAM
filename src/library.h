@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -106,8 +106,8 @@ bool ShowWaveResourceDataSettings();
 bool ShowTidalResourceDataSettings();
 bool ScanWaveResourceData(const wxString &db_file, bool show_busy = false);
 bool ScanWaveResourceTSData(const wxString &db_file, bool show_busy = false);
-bool ScanTidalResourceData(const wxString& db_file, bool show_busy = false);
-wxString WaveResourceTSData_makeJPD(const wxString& db_file, bool show_busy = false);
+bool ScanTidalResourceTSData(const wxString& db_file, bool show_busy = false);
+wxString WaveResourceTSData_makeJPD(const wxString& db_file, ssc_number_t* resource_matrix = 0, bool show_busy = false);
 
 class LibraryCtrl;
 class wxTextCtrl;

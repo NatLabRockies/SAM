@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -114,7 +114,7 @@ size_t config_extractor::load_variables_into_graph(VarTable &vt) {
     else{
         wxArrayString cmod_names = vt.ListAll(nullptr);
         for (size_t j = 0; j < cmod_names.size(); j++) {
-            std::string cmod_symbol = cmod_names[j];
+            std::string cmod_symbol = cmod_names[j].ToStdString();
             auto vtt = vt.Get(cmod_symbol)->Table();
             wxArrayString var_names = vtt.ListAll(nullptr);
             for (size_t i = 0; i < var_names.size(); i++){

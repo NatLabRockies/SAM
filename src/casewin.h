@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -87,6 +87,9 @@ public:
 
 	wxString GetCurrentContext();
 	void UpdatePageNote();
+	void UpdateNotesIcon();
+	void UpdateNotesIconChildren(wxDataViewModel* model, const wxDataViewItem& parent);
+	//void IterateChildren(wxDataViewCtrl* myDVC, wxDataViewModel* model, const wxDataViewItem& parent)
 	void CheckAndUpdateNotes(const wxArrayString& inputPageHelpContext);
 	bool HasPageNote( const wxString &id );
 	void ShowPageNote( );
@@ -96,6 +99,8 @@ public:
 
 	bool RunBaseCase( bool silent = false, wxString *messages = 0 );
 	void UpdateResults();
+
+	bool ExportCashflowExcel();
 
 	bool RunSSCBaseCase(wxString& fn, bool silent = false, wxString* messages = 0);
 
@@ -123,6 +128,7 @@ private:
 			CollapseCheck = 0;
 			Collapsible = false;
 			HeaderPage = false;
+			FooterPage = false;
 			ndxHybrid = 0;
 		}
 
@@ -132,6 +138,7 @@ private:
 		wxString CollapsibleVar;
 		CollapsePaneCtrl *CollapseCheck;
 		bool HeaderPage;
+		bool FooterPage;
 		size_t ndxHybrid;
 	};
 
@@ -143,7 +150,7 @@ private:
     wxMetroListBox *m_exclRadioButton;
 	wxMetroTabList *m_exclPageTabList;
 	void UpdatePageListForConfiguration( const std::vector<PageInfo> &pages, ConfigInfo *cfg, size_t ndxHybrid );
-	void LoadPageList( const std::vector<PageInfo> &list, bool header );
+	void LoadPageList( const std::vector<PageInfo> &list, bool header, bool footer = false );
 	void SetupActivePage();
 	void LayoutPage();
 	void DetachCurrentInputPage();
@@ -174,7 +181,6 @@ private:
     void OnTreeCollapsing(wxDataViewEvent &evt );
 	virtual void OnCaseEvent( Case *, CaseEvent & );
 	void OnSubNotebookPageChanged( wxNotebookEvent &evt );
-
 
 	DECLARE_EVENT_TABLE();
 };

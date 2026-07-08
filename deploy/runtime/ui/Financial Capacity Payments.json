@@ -86,7 +86,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 75.0
+                    "Integer": 72.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -461,7 +461,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 204.0
+                    "Integer": 207.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -519,7 +519,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 330.0
+                    "Integer": 333.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -581,7 +581,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 330.0
+                    "Integer": 333.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -927,10 +927,8 @@
         "",
         "equations{ 'cp_battery_nameplate' } = define() {",
         "\tt = technology();",
-        "\tif ( (t=='PV Battery') || (t=='Custom Generation Battery') || (t=='Standalone Battery') )",
+        "\tif ( (t=='PV Battery') || (t=='Custom Generation Battery' || t == 'PVWatts Battery' ) || (t=='Standalone Battery') )",
         "\t\t{ x = ${batt_power_discharge_max_kwac}/1000; }",
-        "\telseif ( t == 'PVWatts Battery' )\t",
-        "\t\t{ x = ${batt_simple_kw}/1000; }",
         "\telseif ( t == 'ETES' )",
         "\t\t{ x = ${cp_system_nameplate}; }",
         "\telse",

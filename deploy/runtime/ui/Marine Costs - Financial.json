@@ -1,7 +1,7 @@
 {
     "Name": "Marine Costs - Financial",
-    "Width": 1093.0,
-    "Height": 469.0,
+    "Width": 1059.0,
+    "Height": 518.0,
     "FormObjects": {
         "Label": {
             "Visible": 1.0,
@@ -12,11 +12,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 12.0
+                    "Integer": 15.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 225.0
+                    "Integer": 276.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -74,11 +74,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 21.0
+                    "Integer": 24.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 324.0
+                    "Integer": 375.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -136,11 +136,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 12.0
+                    "Integer": 15.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 258.0
+                    "Integer": 309.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -198,11 +198,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 21.0
+                    "Integer": 24.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 291.0
+                    "Integer": 342.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -260,11 +260,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 834.0
+                    "Integer": 837.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 363.0
+                    "Integer": 414.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -343,11 +343,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 663.0
+                    "Integer": 666.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 393.0
+                    "Integer": 444.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -384,11 +384,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 834.0
+                    "Integer": 837.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 363.0
+                    "Integer": 414.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -467,11 +467,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 834.0
+                    "Integer": 837.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 258.0
+                    "Integer": 309.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -550,11 +550,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 561.0
+                    "Integer": 564.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 258.0
+                    "Integer": 309.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -624,103 +624,20 @@
                 }
             }
         },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "insurance_during_construction_cost_rvalue"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 714.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 258.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 100.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                }
-            }
-        },
         "Choice": {
             "Visible": 1.0,
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "insurance_during_construction_method"
+                    "String": "insurance_during_construction_cost_method"
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 240.0
+                    "Integer": 243.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 258.0
+                    "Integer": 309.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -753,15 +670,15 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "insurance_during_construction_modeled"
+                    "String": "insurance_during_construction_cost_modeled"
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 438.0
+                    "Integer": 441.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 258.0
+                    "Integer": 309.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -831,6 +748,89 @@
                 }
             }
         },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "insurance_during_construction_cost_rvalue"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 717.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 309.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
         "Label": {
             "Visible": 1.0,
             "ObjectProperties": {
@@ -840,15 +840,15 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 993.0
+                    "Integer": 978.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 273.0
+                    "Integer": 324.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 90.0
+                    "Integer": 60.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -902,15 +902,15 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 993.0
+                    "Integer": 978.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 240.0
+                    "Integer": 291.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 90.0
+                    "Integer": 60.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -964,15 +964,15 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 993.0
+                    "Integer": 978.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 339.0
+                    "Integer": 390.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 90.0
+                    "Integer": 60.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -1026,15 +1026,15 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 993.0
+                    "Integer": 978.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 306.0
+                    "Integer": 357.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 90.0
+                    "Integer": 60.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -1088,11 +1088,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 807.0
+                    "Integer": 810.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 351.0
+                    "Integer": 402.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1146,11 +1146,11 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 1062.0
+                    "Integer": 1032.0
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 429.0
+                    "Integer": 489.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -1175,11 +1175,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 288.0
+                    "Integer": 291.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 198.0
+                    "Integer": 249.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1241,7 +1241,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 138.0
+                    "Integer": 168.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1303,7 +1303,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 363.0
+                    "Integer": 414.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1361,11 +1361,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 431.0
+                    "Integer": 435.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 198.0
+                    "Integer": 249.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1435,7 +1435,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 78.0
+                    "Integer": 117.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -1485,11 +1485,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 678.0
+                    "Integer": 681.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 198.0
+                    "Integer": 249.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1547,11 +1547,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 819.0
+                    "Integer": 822.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 198.0
+                    "Integer": 249.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1609,11 +1609,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 834.0
+                    "Integer": 837.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 324.0
+                    "Integer": 375.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1692,11 +1692,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 561.0
+                    "Integer": 564.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 324.0
+                    "Integer": 375.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1775,11 +1775,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 240.0
+                    "Integer": 243.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 324.0
+                    "Integer": 375.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1816,11 +1816,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 438.0
+                    "Integer": 441.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 324.0
+                    "Integer": 375.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1899,11 +1899,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 714.0
+                    "Integer": 717.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 324.0
+                    "Integer": 375.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1978,15 +1978,98 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "project_contingency_budget_cost"
+                    "String": "project_contingency_budget_cost_rvalue"
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 834.0
+                    "Integer": 717.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 225.0
+                    "Integer": 276.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "project_contingency_cost"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 837.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 276.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2061,98 +2144,15 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "project_contingency_budget_cost_rvalue"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 714.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 225.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 100.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 3.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
                     "String": "project_contingency_cost_input"
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 561.0
+                    "Integer": 564.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 225.0
+                    "Integer": 276.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2231,11 +2231,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 240.0
+                    "Integer": 243.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 225.0
+                    "Integer": 276.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2268,15 +2268,15 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
-                    "String": "project_contingency_modeled"
+                    "String": "project_contingency_cost_modeled"
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 438.0
+                    "Integer": 441.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 225.0
+                    "Integer": 276.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2355,11 +2355,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 834.0
+                    "Integer": 837.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 291.0
+                    "Integer": 342.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2438,11 +2438,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 561.0
+                    "Integer": 564.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 291.0
+                    "Integer": 342.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2521,11 +2521,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 240.0
+                    "Integer": 243.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 291.0
+                    "Integer": 342.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2558,15 +2558,98 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
+                    "String": "reserve_accounts_cost_modeled"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 441.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 342.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": "$"
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
                     "String": "reserve_accounts_cost_rvalue"
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 714.0
+                    "Integer": 717.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 291.0
+                    "Integer": 342.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2645,11 +2728,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 561.0
+                    "Integer": 564.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 291.0
+                    "Integer": 342.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2682,89 +2765,6 @@
                 "Prefix": {
                     "Type": 5.0,
                     "String": ""
-                },
-                "Suffix": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "ThousandsSep": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "Editable": {
-                    "Type": 2.0,
-                    "Boolean": 1.0
-                },
-                "ForeColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 0.0,
-                        "Green": 0.0,
-                        "Blue": 0.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "BackColour": {
-                    "Type": 4.0,
-                    "Color": {
-                        "Red": 255.0,
-                        "Green": 255.0,
-                        "Blue": 255.0,
-                        "Alpha": 255.0
-                    }
-                },
-                "TabOrder": {
-                    "Type": 3.0,
-                    "Integer": -1.0
-                }
-            }
-        },
-        "Numeric": {
-            "Visible": 1.0,
-            "ObjectProperties": {
-                "Name": {
-                    "Type": 5.0,
-                    "String": "reserve_accounts_modeled"
-                },
-                "X": {
-                    "Type": 3.0,
-                    "Integer": 438.0
-                },
-                "Y": {
-                    "Type": 3.0,
-                    "Integer": 291.0
-                },
-                "Width": {
-                    "Type": 3.0,
-                    "Integer": 100.0
-                },
-                "Height": {
-                    "Type": 3.0,
-                    "Integer": 24.0
-                },
-                "Tool Tip": {
-                    "Type": 5.0,
-                    "String": ""
-                },
-                "Value": {
-                    "Type": 1.0,
-                    "Double": 0.0
-                },
-                "Mode": {
-                    "Type": 3.0,
-                    "Integer": 1.0
-                },
-                "Format": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Decimals": {
-                    "Type": 3.0,
-                    "Integer": 0.0
-                },
-                "Prefix": {
-                    "Type": 5.0,
-                    "String": "$"
                 },
                 "Suffix": {
                     "Type": 5.0,
@@ -2811,11 +2811,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 939.0
+                    "Integer": 942.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 258.0
+                    "Integer": 309.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2848,11 +2848,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 939.0
+                    "Integer": 942.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 324.0
+                    "Integer": 375.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2885,11 +2885,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 939.0
+                    "Integer": 942.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 225.0
+                    "Integer": 276.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2922,11 +2922,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 549.0
+                    "Integer": 552.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 198.0
+                    "Integer": 249.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -3084,11 +3084,11 @@
         "insurance_during_construction_cost": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": " ",
-            "Units": " ",
+            "Label": "Insurance during construction cost",
+            "Units": "$",
             "Group": "ME Costs - Financial",
             "IndexLabels": "",
-            "Flags": 8.0,
+            "Flags": 9.0,
             "DefaultValue": 0.0,
             "UIObject": "Default",
             "sscVariableName": "",
@@ -3107,6 +3107,19 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
+        "insurance_during_construction_cost_method": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Insurance during construction cost method ",
+            "Units": " ",
+            "Group": "ME Costs - Financial",
+            "IndexLabels": "Enter in $/kW|Enter in $| Use Modeled Costs ($)|Use Array Scaling",
+            "Flags": 3.0,
+            "DefaultValue": 2.0,
+            "UIObject": "Choice",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "insurance_during_construction_cost_rvalue": {
             "Version": 4.0,
             "Type": 1.0,
@@ -3117,19 +3130,6 @@
             "Flags": 1.0,
             "DefaultValue": 0.0,
             "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "insurance_during_construction_method": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Insurance during construction cost method ",
-            "Units": " ",
-            "Group": "ME Costs - Financial",
-            "IndexLabels": "Enter in $/kW|Enter in $| Use Modeled Costs ($)|Use Array Scaling",
-            "Flags": 3.0,
-            "DefaultValue": 2.0,
-            "UIObject": "Choice",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
@@ -3201,11 +3201,11 @@
         "other_financial_cost": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": " ",
-            "Units": " ",
+            "Label": "Other financial cost",
+            "Units": "$",
             "Group": "ME Costs - Financial",
             "IndexLabels": "",
-            "Flags": 8.0,
+            "Flags": 9.0,
             "DefaultValue": 0.0,
             "UIObject": "Default",
             "sscVariableName": "",
@@ -3276,27 +3276,14 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
-        "project_contingency_budget_cost": {
+        "project_contingency_cost": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": " ",
-            "Units": " ",
+            "Label": "Project contingency budget cost",
+            "Units": "$",
             "Group": "ME Costs - Financial",
             "IndexLabels": "",
-            "Flags": 8.0,
-            "DefaultValue": 0.0,
-            "UIObject": "Default",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "project_contingency_budget_cost_rvalue": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "Project contingency budget cost scaling value",
-            "Units": "",
-            "Group": "ME Costs - Financial",
-            "IndexLabels": "",
-            "Flags": 1.0,
+            "Flags": 9.0,
             "DefaultValue": 0.0,
             "UIObject": "Default",
             "sscVariableName": "",
@@ -3328,14 +3315,27 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
+        "project_contingency_cost_rvalue": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Project contingency budget cost scaling value",
+            "Units": "",
+            "Group": "ME Costs - Financial",
+            "IndexLabels": "",
+            "Flags": 1.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "reserve_accounts_cost": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": " ",
-            "Units": " ",
+            "Label": "Reserve account cost",
+            "Units": "$",
             "Group": "ME Costs - Financial",
             "IndexLabels": "",
-            "Flags": 8.0,
+            "Flags": 9.0,
             "DefaultValue": 0.0,
             "UIObject": "Default",
             "sscVariableName": "",
@@ -3463,7 +3463,7 @@
         "equations {'financial_cost_total'} = define() {",
         "\tif (${financial_cost_override}!=1)",
         "\t{",
-        "\t\treturn ${project_contingency_budget_cost}+${insurance_during_construction_cost}+",
+        "\t\treturn ${project_contingency_cost}+${insurance_during_construction_cost}+",
         "\t\t${reserve_accounts_cost}+${other_financial_cost};",
         "\t}",
         "\telse",
@@ -3526,10 +3526,10 @@
         "\tenable('project_contingency_budget_cost_rvalue', value('project_contingency_cost_method')==3);",
         "\t\r",
         "\t//Insurance during Construction",
-        "\tshow('insurance_during_construction_cost_total',value('insurance_during_construction_method')==2);",
+        "\tshow('insurance_during_construction_cost_total',value('insurance_during_construction_cost_method')==2);",
         "\t//show('insurance_during_construction_cost_input',value('insurance_during_construction_method')!=2);",
-        "\tenable('insurance_during_construction_cost_input',value('insurance_during_construction_method')!=2);",
-        "\tenable('insurance_during_construction_cost_rvalue',value('insurance_during_construction_method')==3);",
+        "\tenable('insurance_during_construction_cost_input',value('insurance_during_construction_cost_method')!=2);",
+        "\tenable('insurance_during_construction_cost_rvalue',value('insurance_during_construction_cost_method')==3);",
         "\t\r",
         "\t//Reserve Accounts",
         "\tshow('reserve_accounts_cost_total',value('reserve_accounts_cost_method')==3);",
@@ -3562,7 +3562,7 @@
         "\tshow('financial_override_label',override_value==1);",
         "\t",
         "\t//Project Contingency Budget Inputs",
-        "\tenable('project_contingency_budget_cost',override_value==0);",
+        "\tenable('project_contingency_cost',override_value==0);",
         "\tif (value('project_contingency_cost_method') < 2) {",
         "\t\tenable('project_contingency_cost_input',override_value==0);",
         "\t}",
@@ -3571,7 +3571,7 @@
         "\t",
         "\t//Insurance during Construction Inputs",
         "\tenable('insurance_during_construction_cost',override_value==0);",
-        "\tif (value('insurance_during_construction_method') < 2) {",
+        "\tif (value('insurance_during_construction_cost_method') < 2) {",
         "\t\tenable('insurance_during_construction_cost_input',override_value==0);",
         "\t}",
         "\tenable('insurance_during_construction_method',override_value==0);",

@@ -1,0 +1,3161 @@
+{
+    "Name": "PV Tracking and Orientation",
+    "Width": 1008.0,
+    "Height": 463.0,
+    "FormObjects": {
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "Label122"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 30.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 396.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 266.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Backtracking"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "Label1228321"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 30.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 423.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 266.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Tracker rotation limit (deg)"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "Label12284"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 30.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 369.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 266.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Azimuth angle (deg)"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "Label13"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 30.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 342.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 266.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Seasonal tilt angles (deg)"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "Label1341"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 30.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 315.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 266.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Tilt angle (deg)"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "GroupBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "group box"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 6.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 999.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 75.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Subarrays"
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "lbl_tr_sub_1"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 300.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 110.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Subarray 1"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "lbl_tr_sub_2"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 447.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 110.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Subarray 2"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "lbl_tr_sub_3"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 594.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 110.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Subarray 3"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "lbl_tr_sub_4"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 744.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 110.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Subarray 4"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "lbl_track_orient_warnings"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 849.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 285.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 153.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 162.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "GroupBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 4"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 6.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 84.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 1000.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 374.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Tracking and Orientation"
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 7"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 15.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 980.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Enable and disable subarrays on the System Sizing page."
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 78"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 15.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 102.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 980.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Tracking and orientation options determine whether and how modules in each subarray follows the movement of the sun across the sky."
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Image": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "pv_orientation"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 57.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 174.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 200.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 110.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Image": {
+                    "Type": 7.0,
+                    "Image": "PV Tracking and Orientation.png"
+                },
+                "Centered": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray1_azimuth"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 300.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 369.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 5.0
+                }
+            }
+        },
+        "CheckBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray1_backtrack"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 300.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 396.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 101.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Enable"
+                },
+                "State": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 6.0
+                }
+            }
+        },
+        "MonthlyFactor": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray1_monthly_tilt"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 300.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 342.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Description": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 4.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray1_rotlim"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 300.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 423.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 7.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray1_tilt"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 300.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 315.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                }
+            }
+        },
+        "CheckBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray1_tilt_eq_lat"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 300.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 288.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 110.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Tilt=latitude"
+                },
+                "State": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 2.0
+                }
+            }
+        },
+        "RadioChoice": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray1_track_mode"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 300.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 159.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 135.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 120.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Selection": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                },
+                "Items": {
+                    "Type": 6.0,
+                    "StringList": "Fixed|One-axis tracking|Two-axis tracking|Azimuth tracking|Seasonal tilt"
+                },
+                "ShowCaptions": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Horizontal": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray2_azimuth"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 447.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 369.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 12.0
+                }
+            }
+        },
+        "CheckBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray2_backtrack"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 447.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 396.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 101.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Enable"
+                },
+                "State": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 13.0
+                }
+            }
+        },
+        "MonthlyFactor": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray2_monthly_tilt"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 447.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 342.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Description": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 11.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray2_rotlim"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 447.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 423.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 14.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray2_tilt"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 447.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 315.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 10.0
+                }
+            }
+        },
+        "CheckBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray2_tilt_eq_lat"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 447.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 288.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 110.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Tilt=latitude"
+                },
+                "State": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 9.0
+                }
+            }
+        },
+        "RadioChoice": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray2_track_mode"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 447.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 159.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 135.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 120.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Selection": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                },
+                "Items": {
+                    "Type": 6.0,
+                    "StringList": "Fixed|One-axis tracking|Two-axis tracking|Azimuth tracking|Seasonal tilt"
+                },
+                "ShowCaptions": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Horizontal": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 8.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray3_azimuth"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 594.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 369.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 19.0
+                }
+            }
+        },
+        "CheckBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray3_backtrack"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 594.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 396.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 98.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Enable"
+                },
+                "State": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 20.0
+                }
+            }
+        },
+        "MonthlyFactor": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray3_monthly_tilt"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 594.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 342.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Description": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 18.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray3_rotlim"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 594.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 423.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray3_tilt"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 594.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 315.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 17.0
+                }
+            }
+        },
+        "CheckBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray3_tilt_eq_lat"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 594.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 288.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 110.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Tilt=latitude"
+                },
+                "State": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 16.0
+                }
+            }
+        },
+        "RadioChoice": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray3_track_mode"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 594.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 159.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 135.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 120.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Selection": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                },
+                "Items": {
+                    "Type": 6.0,
+                    "StringList": "Fixed|One-axis tracking|Two-axis tracking|Azimuth tracking|Seasonal tilt"
+                },
+                "ShowCaptions": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Horizontal": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 15.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray4_azimuth"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 744.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 369.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 26.0
+                }
+            }
+        },
+        "CheckBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray4_backtrack"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 744.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 396.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 101.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Enable"
+                },
+                "State": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 27.0
+                }
+            }
+        },
+        "MonthlyFactor": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray4_monthly_tilt"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 744.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 342.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Description": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 25.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray4_rotlim"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 744.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 423.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 28.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray4_tilt"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 744.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 315.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                }
+            }
+        },
+        "CheckBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray4_tilt_eq_lat"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 744.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 288.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 110.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": "110"
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Tilt=latitude"
+                },
+                "State": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 23.0
+                }
+            }
+        },
+        "RadioChoice": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray4_track_mode"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 744.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 159.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 135.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 120.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": "0"
+                },
+                "Selection": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                },
+                "Items": {
+                    "Type": 6.0,
+                    "StringList": "Fixed|One-axis tracking|Two-axis tracking|Azimuth tracking|Seasonal tilt"
+                },
+                "ShowCaptions": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Horizontal": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 22.0
+                }
+            }
+        }
+    },
+    "VarDatabase": {
+        "subarray1_azimuth": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Azimuth 1",
+            "Units": "degrees",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 180.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray1_backtrack": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Enable backtracking 1",
+            "Units": " ",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "CheckBox",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray1_monthly_tilt": {
+            "Version": 4.0,
+            "Type": 2.0,
+            "Label": "Subarray 1 monthly tilt input for seasonal tilt arrays",
+            "Units": "degrees",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": [
+                0.0,
+                40.0,
+                40.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                40.0,
+                40.0,
+                40.0
+            ],
+            "UIObject": "MonthlyFactor",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray1_rotlim": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Tracker rotation limit 1",
+            "Units": "degrees",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 45.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray1_tilt": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Tilt 1",
+            "Units": "degrees",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray1_tilt_eq_lat": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Set tilt to latitude 1",
+            "Units": " ",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "CheckBox",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray1_track_mode": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Tracking mode 1",
+            "Units": " ",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "Fixed|One-axis tracking|Two-axis tracking|Azimuth tracking|Seasonal tilt",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "RadioChoice",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray2_azimuth": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Azimuth 2",
+            "Units": "degrees",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 180.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray2_backtrack": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Enable backtracking 2",
+            "Units": " ",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "CheckBox",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray2_monthly_tilt": {
+            "Version": 4.0,
+            "Type": 2.0,
+            "Label": "Subarray 2 monthly tilt input for seasonal tilt arrays",
+            "Units": "degrees",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": [
+                0.0,
+                40.0,
+                40.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                40.0,
+                40.0,
+                40.0
+            ],
+            "UIObject": "MonthlyFactor",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray2_rotlim": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Tracker rotation limit 2",
+            "Units": "degrees",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 45.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray2_tilt": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Tilt 2",
+            "Units": "degrees",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 20.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray2_tilt_eq_lat": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Set tilt to latitude 2",
+            "Units": " ",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "CheckBox",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray2_track_mode": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Tracking mode 2",
+            "Units": " ",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "Fixed|One-axis tracking|Two-axis tracking|Azimuth tracking|Seasonal tilt",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "RadioChoice",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray3_azimuth": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Azimuth 3",
+            "Units": "degrees",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 180.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray3_backtrack": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Enable backtracking 3",
+            "Units": " ",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "CheckBox",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray3_monthly_tilt": {
+            "Version": 4.0,
+            "Type": 2.0,
+            "Label": "Subarray 3 monthly tilt input for seasonal tilt arrays",
+            "Units": "degrees",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": [
+                0.0,
+                40.0,
+                40.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                40.0,
+                40.0,
+                40.0
+            ],
+            "UIObject": "MonthlyFactor",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray3_rotlim": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Tracker rotation limit 3",
+            "Units": "degrees",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 45.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray3_tilt": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Tilt 3",
+            "Units": "degrees",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 20.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray3_tilt_eq_lat": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Set tilt to latitude 3",
+            "Units": " ",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "CheckBox",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray3_track_mode": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Tracking mode 3",
+            "Units": " ",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "Fixed|One-axis tracking|Two-axis tracking|Azimuth tracking|Seasonal tilt",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "RadioChoice",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray4_azimuth": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Azimuth 4",
+            "Units": "degrees",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 180.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray4_backtrack": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Enable backtracking 4",
+            "Units": " ",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "CheckBox",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray4_monthly_tilt": {
+            "Version": 4.0,
+            "Type": 2.0,
+            "Label": "Subarray 4 monthly tilt input for seasonal tilt arrays",
+            "Units": "degrees",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": [
+                0.0,
+                40.0,
+                40.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                40.0,
+                40.0,
+                40.0
+            ],
+            "UIObject": "MonthlyFactor",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray4_rotlim": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Tracker rotation limit 4",
+            "Units": "degrees",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 45.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray4_tilt": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Tilt 4",
+            "Units": "degrees",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 20.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray4_tilt_eq_lat": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Set tilt to latitude 4",
+            "Units": " ",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "CheckBox",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray4_track_mode": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Tracking mode 4",
+            "Units": " ",
+            "Group": "PV Tracking and Orientation",
+            "IndexLabels": "Fixed|One-axis tracking|Two-axis tracking|Azimuth tracking|Seasonal tilt",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "RadioChoice",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        }
+    },
+    "Equations": [],
+    "Callbacks": [
+        "function tracking_options(subarray_number) {\r",
+        "\r",
+        "\tprefix = 'subarray' + to_string(subarray_number) + '_';\t\r",
+        "\r",
+        "\t//Tracking inputs\r",
+        "\ttracking = value(prefix + 'track_mode');\r",
+        "\tbacktrack = value(prefix + 'backtrack');\r",
+        "\r",
+        "\t//seasonal tilt vs normal tilts\r",
+        "\tseasonal = (tracking == 4);\r",
+        "\tenable(prefix + 'monthly_tilt', seasonal);\r",
+        "\tenable(prefix + 'tilt_eq_lat', !seasonal);\r",
+        "\tenable(prefix + 'tilt', !seasonal);\r",
+        "\r",
+        "\t//tilt=lat checkbox: subarray must be enabled and tracking mode must be fixed, 1-axis, or A-axis\t\r",
+        "\tenable(prefix + 'tilt_eq_lat', (tracking == 0 || tracking == 1 || tracking == 3));\t\r",
+        "\r",
+        "\t//tilt: subarray must be enabled, tracking mode must be fixed, 1-axis, or A-axis, and tilt=lat must not be checked\r",
+        "\ttel = value(prefix+'tilt_eq_lat');\r",
+        "\tenable(prefix + 'tilt', (tel==0) && (tracking == 0 || tracking == 1 || tracking == 3));\r",
+        "\r",
+        "\t//azimuth: subarray must be enabled, tracking mode must be fixed, 1-axis, or seasonal\r",
+        "\tenable( prefix+'azimuth', (tracking == 1 || tracking == 0 || tracking == 4) );\t\r",
+        "\r",
+        "\t//tracker rotation limit and backtracking: subarray must be enabled, tracking mode must be 1-axis\r",
+        "\tenable( prefix+'rotlim', (tracking == 1) );\r",
+        "\tenable( prefix+'backtrack', (tracking==1) );\t\r",
+        "}\r",
+        "\r",
+        "// spatial albedo only available for fixed, 1-axis or seasonal tilt tracking\r",
+        "// this function is called on PV Albedo and Radiation form\r",
+        "function enable_disable_spatial_albedos()\r",
+        "{\r",
+        "\te1 = true;\r",
+        "\te2 = value('subarray2_enable');\r",
+        "\te3 = value('subarray3_enable');\r",
+        "\te4 = value('subarray4_enable');\r",
+        "\tt1 = value('subarray1_track_mode');\r",
+        "\tt2 = value('subarray2_track_mode');\r",
+        "\tt3 = value('subarray3_track_mode');\r",
+        "\tt4 = value('subarray4_track_mode');\r",
+        "\t\r",
+        "\tif (\r",
+        "\t     (e1 && (t1 == 0 || t1 == 1 || t1 == 4))\r",
+        "\t  || (e2 && (t2 == 0 || t2 == 1 || t2 == 4))\r",
+        "\t  || (e3 && (t3 == 0 || t3 == 1 || t3 == 4))\r",
+        "\t  || (e4 && (t4 == 0 || t4 == 1 || t4 == 4)) ) {\r",
+        "\t\tenable('use_spatial_albedos', 1);\r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\tvalue('use_spatial_albedos', 0);\r",
+        "\t\tenable('use_spatial_albedos', 0);\r",
+        "\t}\r",
+        "}\r",
+        "\r",
+        "// show message if azimuth value is out of range to avoid triggering simulation message\r",
+        "function tracking_orientation_warnings() {\r",
+        "\tn_subarrays_max = 4;\r",
+        "\tazimuth_ok = true;\r",
+        "\ttilt_ok = true;\r",
+        "\trotlim_ok = true;\r",
+        "\tfor (n_sub=1; n_sub<=n_subarrays_max; n_sub++ ) {\r",
+        "\t\t// if this subarray is disabled clear message\r",
+        "\t\tif ( n_sub > 1 && value('subarray' + to_string(n_sub) + '_enable') == 0 ) {\r",
+        "\t\t\tproperty('lbl_track_orient_warnings','Caption',''); \r",
+        "\t\t}\r",
+        "\t\telse {\r",
+        "\t\t\tazimuth =  value('subarray' + to_string(n_sub) + '_azimuth');\r",
+        "\t\t\ttilt =  value('subarray' + to_string(n_sub) + '_tilt');\r",
+        "\t\t\trotlim =  value('subarray' + to_string(n_sub) + '_rotlim');\t\r",
+        "\t\t\tif ( azimuth < 0 || azimuth > 359.9 ) { //max in ssc vartable is 359.9\r",
+        "\t\t\t\tazimuth_ok = false;\r",
+        "\t\t\t}\r",
+        "\t\t\tif (tilt < 0 || tilt > 90.0) {\r",
+        "\t\t\t\ttilt_ok = false;\r",
+        "\t\t\t}\r",
+        "\t\t\tif (rotlim < 0 || rotlim > 85 ) {\r",
+        "\t\t\t\trotlim_ok = false;\r",
+        "\t\t\t}\r",
+        "\t\t}\r",
+        "\t}\r",
+        "\r",
+        "\tmsg = '';\r",
+        "\tif ( azimuth_ok == false ) {\r",
+        "\t\tif ( msg != '' ) { msg += ' '; }\r",
+        "\t\tmsg += 'Azimuth must be between 0 and 359.9 degrees.';\r",
+        "\t}\r",
+        "\tif ( tilt_ok == false ) {\r",
+        "\t\tif ( msg != '' ) { msg += ' '; }\r",
+        "\t\tmsg += 'Tilt must be between 0 and 90 degrees.';\r",
+        "\t}\t\r",
+        "\tif ( rotlim_ok == false ) {\r",
+        "\t\tif ( msg != '' ) { msg += ' '; }\r",
+        "\t\tmsg +='Tracker rotation limit must be between 0 and 85 degrees.';\r",
+        "\t}\r",
+        "\tproperty('lbl_track_orient_warnings','Caption',msg); \r",
+        "}\r",
+        "\r",
+        "on_load {'PV Tracking and Orientation'} = define() {\r",
+        "\tn_subarrays_max = 4;\r",
+        "\tvars = [ 'azimuth',\r",
+        "\t\t'backtrack',\r",
+        "\t\t'monthly_tilt',\r",
+        "\t\t'rotlim',\r",
+        "\t\t'tilt',\r",
+        "\t\t'tilt_eq_lat',\r",
+        "\t\t'track_mode' ];\r",
+        "\t\t\r",
+        "\t// hide inputs for disabled subarrays (always show subarray 1 inputs)\r",
+        "\tfor ( i=2; i<=n_subarrays_max; i++ ) {\r",
+        "\t\tprefix = 'subarray' + to_string(i) + '_';\r",
+        "\t\tfor (j=0;j<#vars;j++) {\r",
+        "\t\t\tshow( prefix + vars[j], value( prefix + 'enable') == 1 );\r",
+        "\t\t}\t\r",
+        "\t}\r",
+        "\trefresh();\r",
+        "\t\r",
+        "\tfor (i=0;i<n_subarrays_max;i++) {\r",
+        "\t\ttracking_options(i+1);\r",
+        "\t}\r",
+        "\t\r",
+        "\ttracking_orientation_warnings();\r",
+        "\r",
+        "};\r",
+        "\r",
+        "on_change{'subarray1_track_mode'} = define() {\r",
+        "\ttracking_options(1);\r",
+        "\tenable_disable_spatial_albedos();\r",
+        "\tterrain_enable(1);\r",
+        "};\r",
+        "on_change{'subarray2_track_mode'} = define() {\r",
+        "\ttracking_options(2);\r",
+        "\tenable_disable_spatial_albedos();\r",
+        "\tterrain_enable(2);\r",
+        "};\r",
+        "on_change{'subarray3_track_mode'} = define() {\r",
+        "\ttracking_options(3);\r",
+        "\tenable_disable_spatial_albedos();\r",
+        "\tterrain_enable(3);\r",
+        "};\r",
+        "on_change{'subarray4_track_mode'} = define() {\r",
+        "\ttracking_options(4);\r",
+        "\tenable_disable_spatial_albedos();\r",
+        "\tterrain_enable(4);\r",
+        "};\r",
+        "\r",
+        "on_change{'subarray1_tilt_eq_lat'} = define() { \r",
+        "\tenable('subarray1_tilt', value('subarray1_tilt_eq_lat') == 0);\r",
+        "};\r",
+        "on_change{'subarray2_tilt_eq_lat'} = define() { \r",
+        "\tenable('subarray2_tilt', value('subarray2_tilt_eq_lat') == 0);\r",
+        "};\r",
+        "on_change{'subarray3_tilt_eq_lat'} = define() { \r",
+        "\tenable('subarray3_tilt', value('subarray3_tilt_eq_lat') == 0);\r",
+        "};\r",
+        "on_change{'subarray4_tilt_eq_lat'} = define() { \r",
+        "\tenable('subarray4_tilt', value('subarray4_tilt_eq_lat') == 0);\r",
+        "};\r",
+        "\r",
+        "on_change{'subarray1_tilt'} = define() { \r",
+        "\ttracking_orientation_warnings();\r",
+        "};\r",
+        "on_change{'subarray2_tilt'} = define() { \r",
+        "\ttracking_orientation_warnings();\r",
+        "};\r",
+        "on_change{'subarray3_tilt'} = define() { \r",
+        "\ttracking_orientation_warnings();\r",
+        "};\r",
+        "on_change{'subarray4_tilt'} = define() { \r",
+        "\ttracking_orientation_warnings();\r",
+        "};\r",
+        "\r",
+        "on_change{'subarray1_azimuth'} = define() { \r",
+        "\ttracking_orientation_warnings();\r",
+        "};\r",
+        "on_change{'subarray2_azimuth'} = define() { \r",
+        "\ttracking_orientation_warnings();\r",
+        "};\r",
+        "on_change{'subarray3_azimuth'} = define() { \r",
+        "\ttracking_orientation_warnings();\r",
+        "};\r",
+        "on_change{'subarray4_azimuth'} = define() { \r",
+        "\ttracking_orientation_warnings();\r",
+        "};\r",
+        "\r",
+        "on_change{'subarray1_rotlim'} = define() { \r",
+        "\ttracking_orientation_warnings();\r",
+        "};\r",
+        "on_change{'subarray2_rotlim'} = define() { \r",
+        "\ttracking_orientation_warnings();\r",
+        "};\r",
+        "on_change{'subarray3_rotlim'} = define() { \r",
+        "\ttracking_orientation_warnings();\r",
+        "};\r",
+        "on_change{'subarray4_rotlim'} = define() { \r",
+        "\ttracking_orientation_warnings();\r",
+        "};\r",
+        "\r",
+        "on_change{'subarray1_backtrack'} = define() { \r",
+        "\tterrain_enable(1);\r",
+        "};\r",
+        "on_change{'subarray2_backtrack'} = define() { \r",
+        "\tterrain_enable(2);\r",
+        "};\r",
+        "on_change{'subarray3_backtrack'} = define() { \r",
+        "\tterrain_enable(3);\r",
+        "};\r",
+        "on_change{'subarray4_backtrack'} = define() { \r",
+        "\tterrain_enable(4);\r",
+        "};"
+    ]
+}

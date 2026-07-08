@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -62,7 +62,7 @@ struct smart_ptr
 extern const char *sam_api_key;
 extern const char* geocode_api_key;
 extern const char* google_api_key;
-extern const char* bing_api_key;
+extern const char* azure_api_key;
 
 class wxSimplebook;
 class wxPanel;
@@ -101,6 +101,8 @@ public:
 	CaseWindow *CreateCaseWindow( Case *c );
 	void DeleteCaseWindow( Case *c );
 	bool SwitchToCaseWindow( const wxString &name );
+
+	void UpdateAllPageNotes();
 
 	bool LoadProject( const wxString &file );
 	bool SaveProject( const wxString &file );
@@ -252,6 +254,7 @@ struct InputPageGroup
 	bool OrganizeAsExclusivePages;
 	wxString ExclusivePageVar;
 	std::vector< PageInfo > ExclusiveHeaderPages;
+    std::vector< PageInfo > ExclusiveFooterPages;
     std::vector< PageInfo > BinSummary;
 	bool ExclusiveTabs;
     bool ExclusiveHide;
@@ -323,7 +326,8 @@ public:
 		const wxString &hlpcxt,
 		const wxString &exclvar,
 		const std::vector<PageInfo> &exclhdr_pages,
-		bool excl_tabs, bool excl_hide, wxString bin_name, bool excl_top);
+		bool excl_tabs, bool excl_hide, wxString bin_name, bool excl_top,
+		const std::vector<PageInfo> &exclftr_pages = std::vector<PageInfo>());
 
 	wxArrayString GetTechnologies();
 	wxArrayString GetFinancingForTech(const wxString &tech);
@@ -373,6 +377,7 @@ public:
 	static wxFileHistory &FileHistory();
 	static wxArrayString RecentFiles();
 	static void ShowHelp( const wxString &context = wxEmptyString );
+	static wxString AboutSAM();
 	static wxString VersionStr( bool with_patches = false, bool short_style = false );
 	static int VersionMajor();
 	static int VersionMinor();
@@ -389,12 +394,6 @@ public:
 	static ScriptDatabase &GlobalCallbacks();
 
 	static bool LoadAndRunScriptFile( const wxString &script_file, wxArrayString *errors = 0 );
-
-	static std::string GetPythonConfigPath();
-	static void LoadPythonConfig();
-	static bool CheckPythonPackage(const std::string& pip_name);
-	static void InstallPython();
-    static void InstallPythonPackage(const std::string& pip_name);
 
 	static bool VarTablesFromJSONFile(ConfigInfo* ci, std::vector<VarTable>& vt, const std::string& file);
 
@@ -453,7 +452,7 @@ private:
 
 bool ShowConfigurationDialog( wxWindow *parent, wxString *tech, wxString *fin, bool *reset );
 
-
+std::string ORTool_LinearProgrammingExample();
 
 #endif
 

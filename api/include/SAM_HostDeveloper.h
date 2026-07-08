@@ -143,6 +143,14 @@ extern "C"
 	 */
 	SAM_EXPORT void SAM_HostDeveloper_Revenue_ppa_soln_tolerance_nset(SAM_table ptr, double number, SAM_error *err);
 
+	/**
+	 * Set start_day_of_year: Start day of year for TOD periods [0..6]
+	 * options: 0=Monday, 6=Sunday
+	 * constraints: None
+	 * required if: ?=0
+	 */
+	SAM_EXPORT void SAM_HostDeveloper_Revenue_start_day_of_year_nset(SAM_table ptr, double number, SAM_error *err);
+
 
 	//
 	// FinancialParameters parameters
@@ -151,7 +159,7 @@ extern "C"
 	/**
 	 * Set analysis_period: Analyis period [years]
 	 * options: None
-	 * constraints: INTEGER,MIN=0,MAX=50
+	 * constraints: INTEGER,MIN=0,MAX=100
 	 * required if: ?=30
 	 */
 	SAM_EXPORT void SAM_HostDeveloper_FinancialParameters_analysis_period_nset(SAM_table ptr, double number, SAM_error *err);
@@ -892,7 +900,7 @@ extern "C"
 	 * Set depr_alloc_macrs_15_percent: 15-yr MACRS depreciation federal and state allocation [%]
 	 * options: None
 	 * constraints: MIN=0,MAX=100
-	 * required if: ?=1.5
+	 * required if: ?=0
 	 */
 	SAM_EXPORT void SAM_HostDeveloper_Depreciation_depr_alloc_macrs_15_percent_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -900,7 +908,7 @@ extern "C"
 	 * Set depr_alloc_macrs_5_percent: 5-yr MACRS depreciation federal and state allocation [%]
 	 * options: None
 	 * constraints: MIN=0,MAX=100
-	 * required if: ?=89
+	 * required if: ?=0
 	 */
 	SAM_EXPORT void SAM_HostDeveloper_Depreciation_depr_alloc_macrs_5_percent_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -908,7 +916,7 @@ extern "C"
 	 * Set depr_alloc_sl_15_percent: 15-yr straight line depreciation federal and state allocation [%]
 	 * options: None
 	 * constraints: MIN=0,MAX=100
-	 * required if: ?=3
+	 * required if: ?=0
 	 */
 	SAM_EXPORT void SAM_HostDeveloper_Depreciation_depr_alloc_sl_15_percent_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -916,7 +924,7 @@ extern "C"
 	 * Set depr_alloc_sl_20_percent: 20-yr straight line depreciation federal and state allocation [%]
 	 * options: None
 	 * constraints: MIN=0,MAX=100
-	 * required if: ?=3
+	 * required if: ?=0
 	 */
 	SAM_EXPORT void SAM_HostDeveloper_Depreciation_depr_alloc_sl_20_percent_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -924,7 +932,7 @@ extern "C"
 	 * Set depr_alloc_sl_39_percent: 39-yr straight line depreciation federal and state allocation [%]
 	 * options: None
 	 * constraints: MIN=0,MAX=100
-	 * required if: ?=0.5
+	 * required if: ?=0
 	 */
 	SAM_EXPORT void SAM_HostDeveloper_Depreciation_depr_alloc_sl_39_percent_nset(SAM_table ptr, double number, SAM_error *err);
 
@@ -935,6 +943,14 @@ extern "C"
 	 * required if: ?=0
 	 */
 	SAM_EXPORT void SAM_HostDeveloper_Depreciation_depr_alloc_sl_5_percent_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
+	 * Set depr_basis_mat: Depreciation Basis Matrix
+	 * options: None
+	 * constraints: col 0=tech no, col 1=basis amount ($), col 2=% of total installed cost, col 3=fed itc qual 0/1, col 4=state itc qual 0/1, col 5=depreciation selection(0=macrs 5, 1=macrs 15, 2=sl 5, 3=sl 15, 4=sl 20, 5=sl 39, 6=custom)
+	 * required if: depr_en_basis_mat=1
+	 */
+	SAM_EXPORT void SAM_HostDeveloper_Depreciation_depr_basis_mat_mset(SAM_table ptr, double* mat, int nrows, int ncols, SAM_error *err);
 
 	/**
 	 * Set depr_bonus_fed: Federal bonus depreciation [%]
@@ -1068,9 +1084,17 @@ extern "C"
 	 * Set depr_custom_schedule: Custom depreciation schedule [%]
 	 * options: None
 	 * constraints: None
-	 * required if: *
+	 * required if: None
 	 */
 	SAM_EXPORT void SAM_HostDeveloper_Depreciation_depr_custom_schedule_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
+
+	/**
+	 * Set depr_en_basis_mat: Enable Depreciation Basis Matrix [0/1]
+	 * options: None
+	 * constraints: BOOLEAN
+	 * required if: ?=0
+	 */
+	SAM_EXPORT void SAM_HostDeveloper_Depreciation_depr_en_basis_mat_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
 	 * Set depr_fedbas_method: Method of federal depreciation reduction
@@ -2052,6 +2076,14 @@ extern "C"
 	 */
 	SAM_EXPORT void SAM_HostDeveloper_ChargesByMonth_utility_bill_w_sys_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
 
+	/**
+	 * Set utility_bill_wo_sys: Electricity bill without system [$]
+	 * options: None
+	 * constraints: None
+	 * required if: *
+	 */
+	SAM_EXPORT void SAM_HostDeveloper_ChargesByMonth_utility_bill_wo_sys_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
+
 
 	//
 	// SystemOutput parameters
@@ -2505,6 +2537,8 @@ extern "C"
 
 	SAM_EXPORT double SAM_HostDeveloper_Revenue_ppa_soln_tolerance_nget(SAM_table ptr, SAM_error *err);
 
+	SAM_EXPORT double SAM_HostDeveloper_Revenue_start_day_of_year_nget(SAM_table ptr, SAM_error *err);
+
 
 	/**
 	 * FinancialParameters Getters
@@ -2722,6 +2756,8 @@ extern "C"
 
 	SAM_EXPORT double SAM_HostDeveloper_Depreciation_depr_alloc_sl_5_percent_nget(SAM_table ptr, SAM_error *err);
 
+	SAM_EXPORT double* SAM_HostDeveloper_Depreciation_depr_basis_mat_mget(SAM_table ptr, int* nrows, int* ncols, SAM_error *err);
+
 	SAM_EXPORT double SAM_HostDeveloper_Depreciation_depr_bonus_fed_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_HostDeveloper_Depreciation_depr_bonus_fed_custom_nget(SAM_table ptr, SAM_error *err);
@@ -2755,6 +2791,8 @@ extern "C"
 	SAM_EXPORT double SAM_HostDeveloper_Depreciation_depr_bonus_sta_sl_5_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double* SAM_HostDeveloper_Depreciation_depr_custom_schedule_aget(SAM_table ptr, int* length, SAM_error *err);
+
+	SAM_EXPORT double SAM_HostDeveloper_Depreciation_depr_en_basis_mat_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_HostDeveloper_Depreciation_depr_fedbas_method_nget(SAM_table ptr, SAM_error *err);
 
@@ -3015,6 +3053,8 @@ extern "C"
 	SAM_EXPORT double* SAM_HostDeveloper_ChargesByMonth_true_up_credits_ym_mget(SAM_table ptr, int* nrows, int* ncols, SAM_error *err);
 
 	SAM_EXPORT double* SAM_HostDeveloper_ChargesByMonth_utility_bill_w_sys_aget(SAM_table ptr, int* length, SAM_error *err);
+
+	SAM_EXPORT double* SAM_HostDeveloper_ChargesByMonth_utility_bill_wo_sys_aget(SAM_table ptr, int* length, SAM_error *err);
 
 
 	/**

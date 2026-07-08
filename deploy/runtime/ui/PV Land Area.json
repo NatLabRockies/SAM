@@ -1,7 +1,7 @@
 {
     "Name": "PV Land Area",
-    "Width": 883.0,
-    "Height": 252.0,
+    "Width": 1013.0,
+    "Height": 254.0,
     "FormObjects": {
         "Label": {
             "Visible": 1.0,
@@ -198,7 +198,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 63.0
+                    "Integer": 15.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -206,7 +206,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 774.0
+                    "Integer": 970.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -256,7 +256,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 872.0
+                    "Integer": 1000.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -289,7 +289,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 129.0
+                    "Integer": 126.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -359,7 +359,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 36.0
+                    "Integer": 45.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -413,7 +413,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 129.0
+                    "Integer": 126.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -803,7 +803,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 200.0
+                    "Integer": 216.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -873,7 +873,7 @@
                 },
                 "TabOrder": {
                     "Type": 3.0,
-                    "Integer": 1.0
+                    "Integer": 3.0
                 }
             }
         },
@@ -886,7 +886,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 200.0
+                    "Integer": 216.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -956,7 +956,7 @@
                 },
                 "TabOrder": {
                     "Type": 3.0,
-                    "Integer": 2.0
+                    "Integer": 4.0
                 }
             }
         },
@@ -969,7 +969,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 292.0
+                    "Integer": 306.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1010,7 +1010,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 200.0
+                    "Integer": 216.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1080,7 +1080,7 @@
                 },
                 "TabOrder": {
                     "Type": 3.0,
-                    "Integer": -1.0
+                    "Integer": 2.0
                 }
             }
         },
@@ -1429,7 +1429,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 69.0
+                    "Integer": 72.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1461,7 +1461,7 @@
                 },
                 "TabOrder": {
                     "Type": 3.0,
-                    "Integer": -1.0
+                    "Integer": 1.0
                 }
             }
         }
@@ -1471,7 +1471,7 @@
             "Version": 4.0,
             "Type": 1.0,
             "Label": "Total land area estimate",
-            "Units": " ",
+            "Units": "acres",
             "Group": "PV Land Area",
             "IndexLabels": "",
             "Flags": 9.0,
@@ -1523,7 +1523,7 @@
             "Version": 4.0,
             "Type": 1.0,
             "Label": "Land area multiplier",
-            "Units": " ",
+            "Units": "",
             "Group": "PV Land Area",
             "IndexLabels": "",
             "Flags": 2.0,
@@ -1536,7 +1536,7 @@
             "Version": 4.0,
             "Type": 1.0,
             "Label": "Additional land area",
-            "Units": " ",
+            "Units": "",
             "Group": "PV Land Area",
             "IndexLabels": "",
             "Flags": 2.0,
@@ -1629,7 +1629,7 @@
             "Label": "Use acre per MW input",
             "Units": "0/1",
             "Group": "PV Land Area",
-            "IndexLabels": "Automatically calculate from module area|Enter area per capacity in acres/MWe",
+            "IndexLabels": "Automatically calculate from module area|Enter area per capacity in acres/MWac",
             "Flags": 1.0,
             "DefaultValue": 0.0,
             "UIObject": "RadioChoice",
@@ -1638,68 +1638,59 @@
         }
     },
     "Equations": [
-        "equations{ 'ui_ac_capacity' } = define() ",
-        "{\r",
-        "\tif (technology() == 'Flat Plate PV' || technology() == 'PV Battery' || technology() == 'Photovoltaic Wind Battery Hybrid' ) ",
-        "\t{",
+        "equations{ 'ui_ac_capacity' } = define() {\r",
+        "\tif ( technology() == 'Flat Plate PV' || technology() == 'PV Battery' || technology() == 'Photovoltaic Wind Battery Hybrid' ) {\r",
         "\t\treturn ${total_inverter_capacity}/1000;",
         "\t}\r",
-        "\telse",
-        "\t{",
+        "\telse {",
         "\t\treturn ${ac_nameplate}/1000;",
         "\t}\t",
         "};",
         "",
-        "equations{ 'ui_total_module_area' } = define() ",
-        "{",
+        "equations{ 'ui_total_module_area' } = define() {",
         "\treturn ${total_module_area};",
         "};",
         "",
-        "equations{ 'ui_total_module_area_acres' } = define() ",
-        "{",
+        "equations{ 'ui_total_module_area_acres' } = define() {",
         "\treturn ${total_module_area} / 4046.86;",
         "};",
         "",
-        "equations{ 'ui_total_module_area_ha' } = define() ",
-        "{",
+        "equations{ 'ui_total_module_area_ha' } = define() {",
         "\treturn ${total_module_area} / 10000;",
         "};",
         "",
-        "equations{ 'ui_array_land_area_acres' } = define() ",
-        "{\r",
-        "\tif (${ui_use_acre_per_mw} == 0)  // caclulate from module area",
+        "equations{ 'ui_array_land_area_acres' } = define() {\r",
+        "\tif (${ui_use_acre_per_mw} == 0)  // calculate from module area",
         "\t{\t\r",
-        "\t\tif (technology() == 'Flat Plate PV' || technology() == 'PV Battery' || technology() == 'Photovoltaic Wind Battery Hybrid'  ) ",
-        "\t\t{",
+        "\t\tif ( technology() == 'Flat Plate PV' || technology() == 'PV Battery' || technology() == 'Photovoltaic Wind Battery Hybrid'  ) {\r",
         "\t\t\ttotal_land_area_meters = ${subarray1_land_area};",
-        "\t\t\tif (${subarray2_enable})",
-        "\t\t\t\ttotal_land_area_meters += ${subarray2_land_area};",
-        "\t\t\tif (${subarray3_enable}) ",
-        "\t\t\t\ttotal_land_area_meters += ${subarray3_land_area};",
-        "\t\t\tif (${subarray4_enable})",
-        "\t\t\t\ttotal_land_area_meters += ${subarray4_land_area};",
+        "\t\t\tif (${subarray2_enable}) {",
+        "\t\t\t\ttotal_land_area_meters += ${subarray2_land_area};\r",
+        "\t\t\t}\t",
+        "\t\t\tif (${subarray3_enable}) {",
+        "\t\t\t\ttotal_land_area_meters += ${subarray3_land_area};\r",
+        "\t\t\t}\t",
+        "\t\t\tif (${subarray4_enable}) {",
+        "\t\t\t\ttotal_land_area_meters += ${subarray4_land_area};\r",
+        "\t\t\t}\t",
         "\t\t\treturn total_land_area_meters / 4046.86;",
         "\t\t}",
-        "\t\telse \r",
-        "\t\t{",
+        "\t\telse { // pvwatts\r",
         "\t\t\tarea = ${ui_total_module_area} / ${gcr};",
         "\t\t\treturn area / 4046.86;",
         "\t\t}",
         "\t}",
         "\telse { // calculate from user entered acres/MWac",
-        "\t\tif (technology() == 'Flat Plate PV' || technology() == 'PV Battery' || technology() == 'Photovoltaic Wind Battery Hybrid' ) \r",
-        "\t\t{",
+        "\t\tif (technology() == 'Flat Plate PV' || technology() == 'PV Battery' || technology() == 'Photovoltaic Wind Battery Hybrid' ) {\r",
         "\t\t\treturn ${ui_land_area_per_mw} * ${total_inverter_capacity}/1000;",
         "\t\t}",
-        "\t\telse\r",
-        "\t\t{",
+        "\t\telse {",
         "\t\t\treturn ${ui_land_area_per_mw} * ${ac_nameplate}/1000;",
         "\t\t}\r",
         "\t}",
         "};",
         "",
-        "equations{ 'ui_array_land_area_ha' } = define() ",
-        "{",
+        "equations{ 'ui_array_land_area_ha' } = define() {",
         "\treturn ${ui_array_land_area_acres} / 2.47105;",
         "};",
         "",
@@ -1712,12 +1703,7 @@
         "};"
     ],
     "Callbacks": [
-        "on_change{'ui_use_acre_per_mw'} = define() {",
-        "\tland_area_choice();",
-        "};",
-        "",
-        "function land_area_choice()",
-        "{",
+        "function land_area_choice() {",
         "\tcheck = value('ui_use_acre_per_mw');",
         "\tenable('ui_land_area_per_mw', check == 1);",
         "}",
@@ -1725,6 +1711,10 @@
         "on_load{'PV Land Area'} = define() {",
         "\tland_area_choice();",
         "};",
+        "\r",
+        "on_change{'ui_use_acre_per_mw'} = define() {\r",
+        "\tland_area_choice();\r",
+        "};\r",
         ""
     ]
 }

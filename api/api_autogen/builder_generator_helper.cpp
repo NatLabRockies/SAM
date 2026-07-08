@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -198,7 +198,7 @@ std::string ssc_value_to_json(int ssc_type, VarValue* vv){
             json += "\"invalid\"";
             break;
         case SSC_STRING:
-            json += "\"" + (vv? vv->AsString() : "" ) + "\"";
+            json += "\"" + (vv? vv->AsString() : wxString("") ) + "\"";
             break;
         case SSC_NUMBER:
             if (vv && vv->Value() > std::numeric_limits<double>::max()){
@@ -207,7 +207,7 @@ std::string ssc_value_to_json(int ssc_type, VarValue* vv){
                 json += c;
             }
             else
-                json += (vv? vv->AsString() : "0" );
+                json += (vv? vv->AsString() : wxString("0") );
             break;
         case SSC_ARRAY:
             json += "[";

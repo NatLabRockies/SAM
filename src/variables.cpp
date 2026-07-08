@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -845,7 +845,6 @@ bool VarTable::Write_JSON(const std::string& file, const wxArrayString& asCalcul
 
 	// TODO - hybrids - write out based on compute modules similar to test input files for cmod_hybrid_test.cpp
 	rapidjson::StringBuffer os;
-//	rapidjson::PrettyWriter<rapidjson::StringBuffer> writer(os); // MSPT/MP 64MB JSON, 6.7MB txt, JSON Zip 242kB 
 	// SAM issue 1856 handle writing inf and nan
 	rapidjson::PrettyWriter<rapidjson::StringBuffer,rapidjson::UTF8<char>,rapidjson::UTF8<char>,rapidjson::CrtAllocator, rapidjson::kWriteNanAndInfFlag> writer(os); // MSPT/MP 64MB JSON, 6.7MB txt, JSON Zip 242kB 
 	//writer.SetMaxDecimalPlaces(6); // sets small values (e.g. 2.3e-8 to zero so cannot use

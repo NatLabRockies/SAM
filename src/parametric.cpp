@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -852,6 +852,11 @@ void ParametricViewer::OnMenuItem(wxCommandEvent &evt)
 	case ID_SHOW_ALL_INPUTS:
 		if ((int)m_grid_data->GetRuns().size() > m_grid_data->GetRunNumberForRowNumber(m_selected_grid_row)){
 			if (m_grid_data->GetRuns()[m_grid_data->GetRunNumberForRowNumber(m_selected_grid_row)])	{
+				// If uninitialized, init and set up variables from the parametric grid
+				if (m_grid_data->GetRuns()[m_grid_data->GetRunNumberForRowNumber(m_selected_grid_row)]->GetInputSize() < 1)
+				{
+					m_grid_data->PrepareSimulations();
+				}
 				std::vector<VarTable*> pvts;
 				for (size_t i = 0; i < m_case->GetConfiguration()->Technology.size(); i++)
 					pvts.push_back(m_grid_data->GetRuns()[m_grid_data->GetRunNumberForRowNumber(m_selected_grid_row)]->GetInputVarTable(i));
@@ -868,6 +873,11 @@ void ParametricViewer::OnMenuItem(wxCommandEvent &evt)
 				// create new case with updated vartable
 				if (Case* dup = dynamic_cast<Case*>(m_case->Duplicate()))
 				{
+					// If uninitialized, init and set up variables from the parametric grid
+					if (m_grid_data->GetRuns()[m_grid_data->GetRunNumberForRowNumber(m_selected_grid_row)]->GetInputSize() < 1)
+					{
+						m_grid_data->PrepareSimulations();
+					}
 					// update var table
 					auto pvtParametric = m_grid_data->GetRuns()[m_grid_data->GetRunNumberForRowNumber(m_selected_grid_row)]->GetInputVarTable(0); // TODO:hybrids
 					for (auto it = pvtParametric->begin(); it != pvtParametric->end(); ++it) {
@@ -1034,7 +1044,7 @@ bool ParametricViewer::ImportAsMatrix(wxString& vals, VarValue& vv) {
 	return false;
 }
 
-bool ParametricViewer::ImportAsTable(wxString& vals, VarValue& vv) {
+bool ParametricViewer::ImportAsTable(wxString& vals, VarValue& _vv) {
 	wxArrayString entries = wxSplit(vals, '|');
 	if (entries.Count() < 2) return false;
 	VarTable vt;
@@ -1061,7 +1071,7 @@ bool ParametricViewer::ImportAsTable(wxString& vals, VarValue& vv) {
 		}
 		vt.Set(var[0], vv);
 	}
-	vv.Set(vt);
+	_vv.Set(vt);
 	return true;
 }
 
@@ -1566,7 +1576,7 @@ void ParametricViewer::SendToExcel()
 }
 
 
-void ParametricViewer::OnGridColSort(wxGridEvent& evt)
+void ParametricViewer::OnGridColSort(wxGridEvent& )
 {
 	RemoveAllPlots();
 	AddAllPlots();
@@ -2173,9 +2183,9 @@ void ParametricGridData::UpdateSetup()
 
 	// sorted order
 	m_var_names.Clear();
-	for (size_t i = 0; i < m_input_names.Count(); i++)
+	for (i = 0; i < m_input_names.Count(); i++)
 		m_var_names.push_back(m_input_names[i]);
-	for (size_t i = 0; i < m_output_names.Count(); i++)
+	for (i = 0; i < m_output_names.Count(); i++)
 		m_var_names.push_back(m_output_names[i]);
 
 	m_cols = m_par.Setup.size();
@@ -2368,7 +2378,6 @@ void ParametricGridData::SortColumn(const int& col, const bool& asc)
 		}
 	}
 }
-
 
 int ParametricGridData::GetRunNumberForRowNumber(const int& rowNum)
 {
@@ -3034,7 +3043,53 @@ std::vector<Simulation *> ParametricGridData::GetRuns()
 	return sims;
 }
 
+std::vector<Simulation*> ParametricGridData::PrepareSimulations() {
+	SimulationDialog tpd("Preparing simulations...", 1);
+	std::vector<Simulation*> sims;
+	int total_runs = 0;
+	for (size_t i = 0; i < m_par.Runs.size(); i++)
+		if (!m_valid_run[i]) total_runs++;
+	if (total_runs == 0) total_runs = m_par.Runs.size();
 
+	for (size_t i = 0; i < m_par.Runs.size(); i++)
+	{
+		// reset all simulation objects to copy over latest value if changed on input page (no listeners)
+		m_valid_run[i] = false;
+
+		if (!m_valid_run[i])
+		{
+			m_par.Runs[i]->Clear();
+
+			for (int col = 0; col < m_cols; col++)
+			{
+				if (IsInput(col))
+				{
+					if (VarValue* vv = &m_par.Setup[col].Values[i])
+					{
+						// set for simulation
+//						m_par.Runs[i]->Override(m_var_names[col], *vv, m_par.Setup[col].ndxHybrid); // TODO: hybrids
+						m_par.Runs[i]->Override(m_par.Setup[col].varName, *vv, m_par.Setup[col].ndxHybrid);
+					}
+				}
+			}
+			// Excel exchange if necessary
+			ExcelExchange& ex = m_case->ExcelExch();
+			if (ex.Enabled) {
+				for (size_t ndxHybrids = 0; ndxHybrids < m_case->GetConfiguration()->Technology.size(); ndxHybrids++)
+					ExcelExchange::RunExcelExchange(ex, m_case->Values(ndxHybrids), m_par.Runs[i]);
+			}
+
+			if (!m_par.Runs[i]->Prepare())
+				wxMessageBox(wxString::Format("internal error preparing simulation %d for parametric: %s", (int)(i + 1), m_par.Runs[i]->GetErrors()[0]));
+
+			tpd.Update(0, (float)i / (float)total_runs * 100.0f, wxString::Format("%d of %d", (int)(i + 1), (int)total_runs));
+		}
+
+		m_par.Runs[i]->SetName(wxString::Format("Parametric #%d", (int)(i + 1)));
+		sims.push_back(m_par.Runs[i]);
+	}
+	return sims;
+}
 
 bool ParametricGridData::RunSimulations_multi()
 {
@@ -3051,46 +3106,8 @@ bool ParametricGridData::RunSimulations_multi()
 	if (total_runs == 0) total_runs = m_par.Runs.size();
 
 	std::vector<Simulation*> sims;
-	for (size_t i = 0; i < m_par.Runs.size(); i++)
-	{
-		// reset all simulation objects to copy over latest value if changed on input page (no listeners)
-		m_valid_run[i] = false;
 
-		if (!m_valid_run[i])
-		{
-			m_par.Runs[i]->Clear();
-
-			for (int col = 0; col < m_cols; col++)
-			{
-				if (IsInput(col))
-				{
-					if (VarValue *vv = &m_par.Setup[col].Values[i])
-					{
-						// set for simulation
-//						m_par.Runs[i]->Override(m_var_names[col], *vv, m_par.Setup[col].ndxHybrid); // TODO: hybrids
-						m_par.Runs[i]->Override(m_par.Setup[col].varName, *vv, m_par.Setup[col].ndxHybrid); 
-					}
-				}
-			}
-			// Excel exchange if necessary
-			ExcelExchange &ex = m_case->ExcelExch();
-			if (ex.Enabled) {
-				for (size_t ndxHybrids = 0; ndxHybrids < m_case->GetConfiguration()->Technology.size(); ndxHybrids++)
-				ExcelExchange::RunExcelExchange(ex, m_case->Values(ndxHybrids), m_par.Runs[i]);
-			}
-
-			if (!m_par.Runs[i]->Prepare())
-				wxMessageBox(wxString::Format("internal error preparing simulation %d for parametric: %s", (int)(i + 1), m_par.Runs[i]->GetErrors()[0]));
-
-			tpd.Update(0, (float)i / (float)total_runs * 100.0f, wxString::Format("%d of %d", (int)(i + 1), (int)total_runs));
-		}
-
-		m_par.Runs[i]->SetName( wxString::Format("Parametric #%d", (int)(i+1) ) );
-		sims.push_back(m_par.Runs[i]);
-	}
-
-
-//	int time_prep = sw.Time();
+	sims = PrepareSimulations();
 	sw.Start();
 
 	if ( nthread > (int)sims.size() ) nthread = sims.size();
@@ -3613,7 +3630,7 @@ void Parametric_QS::OnCommand(wxCommandEvent &evt)
 		}
 		case wxID_HELP:
 		{
-			SamApp::ShowHelp("parametric_quick_setup");
+			SamApp::ShowHelp("window-reference/win_parametric_quick_setup");
 			break;
 		}
 		case  ID_setupOption:
@@ -3662,7 +3679,7 @@ void Parametric_QS::OnEditValues(wxCommandEvent &)
 		{
 			if (ShowEditValuesDialog(
 				"Edit Parametric Values for '" + varinfo->Label +
-				((varinfo->Units != "") ? (" (" + varinfo->Units + ")'") : "'"),
+				((varinfo->Units != "") ? (" (" + varinfo->Units + ")'") : wxString("'")),
 				values, var_name, ndx_hybrid))
 			{
 				SetValuesList(m_input_names[idx], values);
@@ -3674,11 +3691,11 @@ void Parametric_QS::OnEditValues(wxCommandEvent &)
 }
 
 bool Parametric_QS::ShowFixedDomainDialog(const wxString &title,
-	const wxArrayString &names, const wxArrayString &labels, wxArrayString &list,
+	const wxArrayString &_names, const wxArrayString &labels, wxArrayString &list,
 	bool expand_all)
 {
 	SelectVariableDialog dlg(this, title);
-	dlg.SetItems(names, labels);
+	dlg.SetItems(_names, labels);
 	dlg.SetCheckedNames(list);
 	if (expand_all)
 		dlg.ShowAllItems();
@@ -3745,7 +3762,7 @@ bool Parametric_QS::ShowEditValuesDialog(const wxString &title,
 		{
 			// translate back to integer values
 			values.Clear();
-			for (int i = 0; i<(int)cur_items.Count(); i++)
+			for (i = 0; i<(int)cur_items.Count(); i++)
 				values.Add(wxString::Format("%d", fixed_items.Index(cur_items[i])));
 
 			return true;
@@ -4205,11 +4222,11 @@ void Parametric_QS::RefreshVariableList()
 	lstVariables->Freeze();
 	lstVariables->Clear();
 
-	for (size_t i = 0; i<m_input_names.Count(); i++)
+	for (size_t ii = 0; ii<m_input_names.Count(); ii++)
 	{
 		size_t ndx_hybrid;
 		wxString var_name;
-		UpdateVarNameNdxHybrid(m_input_names[i], &var_name, &ndx_hybrid);
+		UpdateVarNameNdxHybrid(m_input_names[ii], &var_name, &ndx_hybrid);
 
 		VarInfo *vi = m_case->Variables(ndx_hybrid).Lookup(var_name);
 		if (!vi)
@@ -4229,12 +4246,12 @@ void Parametric_QS::RefreshVariableList()
 
 		// update m_input_values if necessary
 		// add items
-		wxArrayString items = GetValuesDisplayList(m_input_names[i]);
+		wxArrayString items = GetValuesDisplayList(m_input_names[ii]);
 		if (items.Count() == 0) // add base case value
 		{
 			wxArrayString values;
-			values.Add(m_input_names[i]);
-			wxString val = GetBaseCaseValue(m_input_names[i]);
+			values.Add(m_input_names[ii]);
+			wxString val = GetBaseCaseValue(m_input_names[ii]);
 			values.Add(val);
 			m_input_values.push_back(values);
 		}

@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -65,8 +65,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <lk/codegen.h>
 #include <lk/env.h>
 #include <lk/parse.h>
-
-//#include "../resource/nrel.cpng"
 
 #include "main.h"
 #include "invoke.h"
@@ -225,7 +223,7 @@ void WelcomeScreen::RunWelcomeScript( const wxString &script )
 	env.register_funcs( lk::stdlib_basic() );
 
 	// note: do not register SYSIO functions to improve security when running
-	// LK code downloaded directly from sam.nrel.gov in the welcome window
+	// LK code downloaded directly from sam.nlr.gov in the welcome window
 
 	env.register_funcs( lk::stdlib_string() );
 	env.register_funcs( lk::stdlib_math() );
@@ -437,7 +435,7 @@ void WelcomeScreen::OnCommand( wxCommandEvent &evt )
 	}
 		break;
 	case ID_GET_STARTED:
-		SamApp::ShowHelp( "getting_started");
+		SamApp::ShowHelp( "getting-started/welcome_page");
 		break;
 	case ID_OPEN_SCRIPT:
 		SamScriptWindow::OpenFiles();
@@ -483,7 +481,7 @@ void WelcomeScreen::OnCommand( wxCommandEvent &evt )
 		break;
 
 	case wxID_HELP:
-		SamApp::ShowHelp( "welcome_page" );
+		SamApp::ShowHelp( "getting-started/welcome_page" );
 		break;
 
 	case wxID_EXIT:

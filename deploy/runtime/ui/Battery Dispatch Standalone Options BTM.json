@@ -1,7 +1,7 @@
 {
     "Name": "Battery Dispatch Standalone Options BTM",
-    "Width": 1056.0,
-    "Height": 188.0,
+    "Width": 1057.0,
+    "Height": 208.0,
     "FormObjects": {
         "CheckBox": {
             "Visible": 1.0,
@@ -16,7 +16,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 84.0
+                    "Integer": 87.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -412,7 +412,7 @@
         "\t\tshow('batt_dispatch_auto_btm_can_discharge_to_grid', false);",
         "\t\trefresh();",
         "\t}",
-        "\telse if (option == 2)",
+        "\telse if (option == 2 || option == 4)",
         "\t{",
         "\t\tvalue('batt_dispatch_auto_can_gridcharge', 1);",
         "\t\tenable('batt_dispatch_auto_can_gridcharge', false);",

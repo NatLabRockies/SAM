@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -38,20 +38,32 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 class GeoTools
 {
 public:
+
     // Use Google Geocoding API to return lat/lon from address
     // Requires a Google Cloud Project account with billing enabled
-    // This is an alternative to GeocodeDeveloper for non-NREL builds of SAM
+    // This is an alternative to GeocodeDeveloper for non-NLR builds of SAM
     // Google API key is defined in private.h
-    static bool GeocodeGoogle(const wxString& address,
-        double* lat, double* lon, double* tz = 0, bool showprogress = true);
+    static bool GeocodeGoogle(const wxString& address, double* lat, double* lon, double* tz = 0, bool showprogress = true);
 
-    // Use private NREL Developer API (MapQuest wrapper) to return lat/lon from address
-    // Requires a special private API key from NREL defined in private.h
-    static bool GeocodeDeveloper(const wxString& address,
-        double* lat, double* lon, double* tz = 0, bool showprogress = true);
+    // Use private NLR Developer API (MapQuest wrapper) to return lat/lon from address
+    // Requires a special private API key from NLR defined in private.h
+    static bool GeocodeDeveloper(const wxString& address, double* lat, double* lon, bool showprogress = true);
+
+    // Use Microsoft Azure API to return time zone from lat/lon
+    // Azure Map API key is defined in private.h
+    static bool GetTimeZone(double* lat, double* lon, double* tz, bool showprogress = true);
+
+    // Convert array of degrees, minutes, seconds to decimal degrees (DD)
+    static bool dms_to_dd(double &d, double &m, double &s, double* dd);
+
+	// Convert a string of degrees, minutes, seconds to an array of degrees, minutes, seconds
+    static bool coordinate_to_dms(wxString& coord, double* d, double* m, double* s);
+
+    // Convert a coordinate pair in any format to an array of two coordinates in the same format
+	static bool coordinates_to_lat_lon(wxString& coord, wxString& lat, wxString& lon);
 
     enum MapProvider {
-        GOOGLE_MAPS, BING_MAPS
+        GOOGLE_MAPS, AZURE_MAPS
     };
 
     // Return a map for a given lat/lon and zoom level as a bitmap image

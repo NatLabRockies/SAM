@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -184,6 +184,9 @@ public:
 	int GetTotalElapsedTime() { return m_totalElapsedMsec; }
 	// SSC compute module execution time only
 	int GetSSCElapsedTime() { return m_sscElapsedMsec; }
+
+	// size of input, useful for checking if initialized already
+	size_t GetInputSize() { return m_inputs.size(); } const
 
 	wxArrayString GetModels() { return m_simlist; }
 	bool SetModels(); // sets m_simlist - also done in Prepare

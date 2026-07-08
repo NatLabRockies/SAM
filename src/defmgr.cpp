@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -689,7 +689,7 @@ void DefaultsManager::OnModify( wxCommandEvent & )
 					}
 
 					rapidjson::StringBuffer os;
-					rapidjson::PrettyWriter<rapidjson::StringBuffer> writer(os); // MSPT/MP 64MB JSON, 6.7MB txt, JSON Zip 242kB
+					rapidjson::PrettyWriter<rapidjson::StringBuffer, rapidjson::UTF8<char>, rapidjson::UTF8<char>, rapidjson::CrtAllocator, rapidjson::kWriteNanAndInfFlag> writer(os); // MSPT/MP 64MB JSON, 6.7MB txt, JSON Zip 242kB 
 					doc.Accept(writer);
 					wxString sfn = file;
 					wxFileName fn(sfn);
@@ -778,7 +778,8 @@ void DefaultsManager::OnDeleteVar(wxCommandEvent &)
 					}
 
 					rapidjson::StringBuffer os;
-					rapidjson::PrettyWriter<rapidjson::StringBuffer> writer(os); // MSPT/MP 64MB JSON, 6.7MB txt, JSON Zip 242kB
+					rapidjson::PrettyWriter<rapidjson::StringBuffer, rapidjson::UTF8<char>, rapidjson::UTF8<char>, rapidjson::CrtAllocator, rapidjson::kWriteNanAndInfFlag> writer(os); // MSPT/MP 64MB JSON, 6.7MB txt, JSON Zip 242kB 
+
 					doc.Accept(writer);
 					wxString sfn = file;
 					wxFileName fn(sfn);

@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -37,6 +37,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <wx/statline.h>
 #include <wx/tokenzr.h>
 #include <wx/dir.h>
+#include <wx/gdicmn.h>
 
 #include <wex/exttree.h>
 #include <wex/exttext.h>
@@ -65,6 +66,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "macro.h"
 
 #include "../resource/graph.cpng"
+#include "../resource/notes.cpng"
+
 
 class CollapsePaneCtrl : public wxPanel
 {
@@ -147,16 +150,11 @@ BEGIN_EVENT_TABLE( CaseWindow, wxSplitterWindow )
 	EVT_LISTBOX( ID_INPUTPAGELIST, CaseWindow::OnCommand )
     EVT_DATAVIEW_SELECTION_CHANGED(ID_TechTree, CaseWindow::OnTree)
 	EVT_DATAVIEW_ITEM_COLLAPSING(ID_TechTree, CaseWindow::OnTreeCollapsing)
-
-//    EVT_DATAVIEW_ITEM_START_EDITING(ID_TechTree, CaseWindow::OnTreeActivated)
-//    EVT_DATAVIEW_ITEM_ACTIVATED(ID_TechTree, CaseWindow::OnTreeActivated)
-    //EVT_LISTBOX( ID_TechTree, CaseWindow::OnCommand)
 	EVT_BUTTON( ID_EXCL_BUTTON, CaseWindow::OnCommand )
     EVT_LISTBOX( ID_EXCL_RADIO, CaseWindow::OnCommand)
 	EVT_CHECKBOX( ID_COLLAPSE, CaseWindow::OnCommand )
 	EVT_MENU_RANGE( ID_EXCL_OPTION, ID_EXCL_OPTION_MAX, CaseWindow::OnCommand )
 	EVT_LISTBOX( ID_EXCL_TABLIST, CaseWindow::OnCommand )
-
 	EVT_NOTEBOOK_PAGE_CHANGED( ID_PAGES, CaseWindow::OnSubNotebookPageChanged )
 	EVT_NOTEBOOK_PAGE_CHANGED( ID_BASECASE_PAGES, CaseWindow::OnSubNotebookPageChanged )
 END_EVENT_TABLE()
@@ -177,7 +175,7 @@ CaseWindow::CaseWindow( wxWindow *parent, Case *c )
 	wxFont lafont(*wxNORMAL_FONT);
 	lafont.SetWeight(wxFONTWEIGHT_BOLD);
 
-	m_pageNote = 0;
+	m_pageNote = new PageNote(this); // create page note before m_pageFlipper adds pages
 	m_currentGroup = 0;
 
 	// navigation menu objects
@@ -297,8 +295,6 @@ CaseWindow::CaseWindow( wxWindow *parent, Case *c )
 	SetMinimumPaneSize( 50 );
 	SplitVertically( m_left_panel, m_pageFlipper, (int)(210*xScale) );
 	
-	m_pageNote = new PageNote( this );
- 
 	// load page note window geometry
 	int nw_xrel, nw_yrel, nw_w, nw_h;
 	double sf = wxGetScreenHDScale();
@@ -500,6 +496,46 @@ bool CaseWindow::RunSSCBaseCase(wxString& fn, bool silent, wxString* messages)
 }
 
 
+bool CaseWindow::ExportCashflowExcel()
+{
+	if (m_case != NULL) {
+
+		// if no outputs run a simulation. this approach could result in exported cash flow not matching current inputs if user modifies inputs without running a simulation before exporting
+		if (m_case->BaseCase().Outputs().size() == 0) {
+			RunBaseCase();
+		}
+
+		// all cash flow models have cf_om_fixed_expense output except standalone battery
+		bool is_cf_model;
+		if (auto* vv = m_case->BaseCase().GetOutput("cf_om_fixed_expense"))
+			is_cf_model = true;
+		else if (auto* vv1 = m_case->BaseCase().GetOutput("cf_om_fixed1_expense")) // standalone battery
+			is_cf_model = true;
+		else
+			is_cf_model = false;
+
+		if ( is_cf_model ) {
+#ifdef __WXMSW__
+				//	UpdateResults();
+				m_baseCaseResults->Export(EXP_CASHFLOW, EXP_SEND_EXCEL);
+				return true;
+#else
+				wxMessageBox("Excel export is only supported on Windows systems.");
+				return false;
+#endif
+		}
+		else {
+			wxMessageBox("No cash flow to export. Export cash flow requires a cash flow-based financial model.");
+			return false;
+		}
+	}
+	else {
+		wxMessageBox("No active case selected.");
+		return false;
+	}
+}
+
+
 void CaseWindow::UpdateResults()
 {
 	m_baseCaseResults->Setup( &m_case->BaseCase() );
@@ -573,7 +609,7 @@ bool CaseWindow::GenerateReport( wxString pdffile, wxString templfile, VarValue 
 		
 		if (validfiles.Count() == 0)
 		{
-			wxMessageBox( "SAM could not find any templates valid for the current technology and financing combination.\n\nPlease contact SAM user support at sam.support@nrel.gov for more information." );
+			wxMessageBox( "SAM could not find any templates valid for the current technology and financing combination.\n\nPlease contact SAM user support at sam.support@nlr.gov for more information." );
 			return false;
 		}
 
@@ -637,6 +673,8 @@ bool CaseWindow::GenerateReport( wxString pdffile, wxString templfile, VarValue 
 
 void CaseWindow::OnTree(wxDataViewEvent &evt)
 {
+	UpdateNotesIcon(); // when leaving a page and notes erased
+
 	m_pageFlipper->SetSelection(0);
 	wxDataViewItem dvi = evt.GetItem();
 	if (!dvi.IsOk())
@@ -660,10 +698,30 @@ void CaseWindow::OnTree(wxDataViewEvent &evt)
 	else {
 		m_currentSelection = evt.GetItem();
 	}
+
+	/*
+	if (HasPageNote(GetCurrentContext())) {
+		m_navigationMenu->SetItemIcon(m_currentSelection, wxBitmapBundle::FromBitmap(wxBITMAP_PNG_FROM_DATA(notes)));
+		//m_navigationMenu->im // TODO set images and override onImagesChanged method to show notes icon
+		m_navigationMenu->Refresh();
+	}
+	// update all navigation items note icon
+	m_navigationMenu->get
+	auto bmb = wxBitmapBundle::FromBitmap(wxBITMAP_PNG_FROM_DATA(notes));
+	for (size_t i = 0; i < m_pageGroups.size(); i++)
+		if (HasPageNote(m_pageGroups[i]->HelpContext)
+			m_currentGroup = m_pageGroups[i];
+
+	*/
+
+
 	wxString title = m_navigationMenu->GetItemText(m_currentSelection);
 	m_navigationMenu->SetFocus();
 	SwitchToInputPage(title);
 
+	m_left_panel->Layout(); // Issue 1552
+//	wxVariant x = wxDataViewIconText("text", wxBitmapBundle::FromBitmap(wxBITMAP_PNG_FROM_DATA(notes)));
+//	m_navigationMenu->SetItemData(m_currentSelection,(wxClientData*) & x);
 }
 
 void CaseWindow::OnTreeCollapsing(wxDataViewEvent& evt)
@@ -1045,13 +1103,29 @@ wxArrayString CaseWindow::GetInputPages()
 bool CaseWindow::SwitchToNavigationMenu(const wxString& name)
 {
 	// iterate over menu tree items and match "name" or select first item (SAM issue 1618)
-	wxDataViewItem dvi;// = m_navigationMenu->GetNthChild(wxDataViewItem(0), 0);
+	wxDataViewItem dvi, dvi_child;// = m_navigationMenu->GetNthChild(wxDataViewItem(0), 0);
 	bool found = false;
+
 	int count = m_navigationMenu->GetChildCount(wxDataViewItem(0));
 	for (int i = 0; i < count && !found; i++) {
 		dvi = m_navigationMenu->GetNthChild(wxDataViewItem(0), i);
-		if (dvi.IsOk() && m_navigationMenu->GetItemText(dvi) == name)
-			found = true;
+		// should be a lambda function but not more than one deep...
+		if (m_navigationMenu->IsContainer(dvi)) {
+			int count_child = m_navigationMenu->GetChildCount(dvi);
+			for (int j = 0; j < count_child && !found; j++) {
+				dvi_child = m_navigationMenu->GetNthChild(dvi, j);
+				wxString stmp = m_navigationMenu->GetItemText(dvi_child); // for debugging
+				if (dvi_child.IsOk() && stmp == name) {
+					found = true;
+					dvi = dvi_child;
+				}
+			}
+		}
+		else {
+			wxString stmp = m_navigationMenu->GetItemText(dvi);
+			if (dvi.IsOk() && m_navigationMenu->GetItemText(dvi) == name)
+				found = true;
+		}
 	}
 	// first item if not found
 	if (!found)
@@ -1063,9 +1137,10 @@ bool CaseWindow::SwitchToNavigationMenu(const wxString& name)
 	if (dvi.IsOk()) {
 		m_navigationMenu->SetCurrentItem(dvi);
 		m_currentSelection = (dvi);
-		SwitchToInputPage(m_navigationMenu->GetItemText(dvi));
+		m_left_panel->SetFocus();
+		SwitchToPage(m_navigationMenu->GetItemText(dvi));
+		m_left_panel->Layout();
 	}
-
 
 	return true;
 }
@@ -1076,7 +1151,7 @@ bool CaseWindow::SwitchToInputPage( const wxString &name )
 	wxBusyCursor wait;
 //	m_inputPagePanel->Freeze();
 
-	//DetachCurrentInputPage();
+//	DetachCurrentInputPage();
 
 	m_currentGroup = 0;
 	for( size_t i=0;i<m_pageGroups.size();i++ )
@@ -1100,6 +1175,9 @@ bool CaseWindow::SwitchToInputPage( const wxString &name )
 //	if ( m_inputPageList->GetStringSelection() != name )
 	int p = m_inputPageList->Find(name);
 	m_inputPageList->Select( p );
+	m_inputPageList->Refresh();
+	m_navigationMenu->Layout();
+	m_left_panel->Layout();// try to force onPaint call for the input page list
 
 	return true;
 }
@@ -1137,13 +1215,15 @@ bool CaseWindow::SwitchToPage( const wxString &name )
 	else
 	{
 		m_pageFlipper->SetSelection( PG_INPUTS );
-		return SwitchToInputPage( name );
+//		return SwitchToInputPage(name);
+		SwitchToInputPage(name);
+		m_left_panel->Layout();
 	}
 
 	return true;
 }
 
-void CaseWindow::LoadPageList( const std::vector<PageInfo> &list, bool header )
+void CaseWindow::LoadPageList( const std::vector<PageInfo> &list, bool header, bool footer )
 {
 	for( size_t ii=0;ii<list.size();ii++ )
 	{
@@ -1164,6 +1244,7 @@ void CaseWindow::LoadPageList( const std::vector<PageInfo> &list, bool header )
 
 		pds->Collapsible = pi.Collapsible;
 		pds->HeaderPage = header;
+		pds->FooterPage = footer;
 
 		bool load_page = true;
 
@@ -1198,6 +1279,7 @@ void CaseWindow::SetupActivePage()
 	
 	std::vector<PageInfo> *active_headers = 0;
 	std::vector<PageInfo> *active_pages = 0;
+	std::vector<PageInfo> *active_footers = 0;
 	
 	if ( m_currentGroup->Pages.size() > 1 && !m_currentGroup->ExclusivePageVar.IsEmpty() )
 	{
@@ -1244,6 +1326,7 @@ void CaseWindow::SetupActivePage()
 
 			active_pages = &( m_currentGroup->Pages[excl_idx] );
 			active_headers = &( m_currentGroup->ExclusiveHeaderPages );
+			active_footers = &( m_currentGroup->ExclusiveFooterPages );
 		}
 		else
 		{
@@ -1263,8 +1346,9 @@ void CaseWindow::SetupActivePage()
 	}
 	
 	// setup active display states	
-	if ( active_headers ) LoadPageList( *active_headers, true );
-	if ( active_pages ) LoadPageList( *active_pages, false );
+	if ( active_headers ) LoadPageList( *active_headers, true, false );
+	if ( active_pages ) LoadPageList( *active_pages, false, false );
+	if ( active_footers ) LoadPageList( *active_footers, false, true );
 
 	LayoutPage();
 
@@ -1295,23 +1379,9 @@ void CaseWindow::LayoutPage()
 		}
 	}	
 
-	// input pages are stacked upon one another
-	for( size_t i=0;i<m_currentActivePages.size();i++ )
+	// positions a single PageDisplayState's controls at the current y offset
+	auto place_page = [&]( PageDisplayState &pds )
 	{
-		PageDisplayState &pds = *m_currentActivePages[i];
-
-		
-		if ( i==exclPanelPos && m_exclPanel->IsShown() )
-		{
-			wxSize excl_size( m_exclPanel->GetBestSize() );
-			m_exclPanel->SetSize( 0, y, 
-				available_size.x > 500 ? available_size.x : 500,
-				excl_size.y );
-			m_exclPanel->Layout();
-			y += excl_size.y;
-		}
-
-
 		if( pds.CollapseCheck != 0 )
 		{
 			wxSize szbest = pds.CollapseCheck->GetBestSize();
@@ -1341,6 +1411,34 @@ void CaseWindow::LayoutPage()
 			y += sz.y;
 			if ( sz.x > x ) x = sz.x;
 		}
+	};
+
+	// input pages are stacked upon one another: non-footer pages first
+	for( size_t i=0;i<m_currentActivePages.size();i++ )
+	{
+		PageDisplayState &pds = *m_currentActivePages[i];
+
+		if ( pds.FooterPage ) continue; // place footers after all other pages
+
+		if ( i==exclPanelPos && m_exclPanel->IsShown() )
+		{
+			wxSize excl_size( m_exclPanel->GetBestSize() );
+			m_exclPanel->SetSize( 0, y, 
+				available_size.x > 500 ? available_size.x : 500,
+				excl_size.y );
+			m_exclPanel->Layout();
+			y += excl_size.y;
+		}
+
+		place_page( pds );
+	}
+
+	// footer pages always render last, in their relative order
+	for( size_t i=0;i<m_currentActivePages.size();i++ )
+	{
+		PageDisplayState &pds = *m_currentActivePages[i];
+		if ( !pds.FooterPage ) continue;
+		place_page( pds );
 	}
 	
 	m_inputPageScrollWin->SetScrollbars(1, 1, x, y);
@@ -1415,6 +1513,7 @@ void CaseWindow::UpdateConfiguration()
 			UpdatePageListForConfiguration( group->Pages[kk], cfg, group->ndxHybrid );
 
 		UpdatePageListForConfiguration( group->ExclusiveHeaderPages, cfg, group->ndxHybrid );
+		UpdatePageListForConfiguration( group->ExclusiveFooterPages, cfg, group->ndxHybrid );
 
 		m_inputPageList->Add( m_pageGroups[i]->SideBarLabel, i == m_pageGroups.size()-1, m_pageGroups[i]->HelpContext );
 
@@ -1469,7 +1568,7 @@ void CaseWindow::UpdateConfiguration()
     if (cfg->TechnologyFullName.Contains("Generic")) return; //if generic get out of the loop
     
 	wxDataViewItem dvi = m_navigationMenu->GetNthChild(wxDataViewItem(0), 0);
-	if (m_navigationMenu->IsContainer(dvi)) {
+	if (dvi.IsOk() && m_navigationMenu->IsContainer(dvi)) {
 		dvi = m_navigationMenu->GetNthChild(dvi, 0);
 	}
 
@@ -1479,7 +1578,7 @@ void CaseWindow::UpdateConfiguration()
 	}
 
 	// check for orphaned notes and if any found add to first page per Github issue 796
-	CheckAndUpdateNotes(inputPageHelpContext);
+//	CheckAndUpdateNotes(inputPageHelpContext);
 
 	m_szsims->Clear(true);
 	if (m_case->GetTechnology().Contains("wave") || m_case->GetTechnology().Contains("tidal")) {
@@ -1577,11 +1676,55 @@ void CaseWindow::UpdatePageNote()
 	// update ID
 	m_lastPageNoteId = GetCurrentContext();
 
-	// update text on page note
+		// update text on page note
 	wxString text = m_case->RetrieveNote( m_lastPageNoteId );
 	m_pageNote->SetText(text);
-	m_pageNote->Show( SamApp::Window()->GetCurrentCaseWindow() == this && !text.IsEmpty() );
+
+	bool bShowNote = SamApp::Window()->GetCurrentCaseWindow() == this && !text.IsEmpty();
+
+	m_pageNote->Show( bShowNote );
+
+	UpdateNotesIcon();
 }
+
+void CaseWindow::UpdateNotesIcon()
+{
+	wxDataViewModel* model = m_navigationMenu->GetModel();
+	if (!model)
+		return;
+
+	// Get the invisible root item
+	wxDataViewItem root = model->GetParent(wxDataViewItem(nullptr)); 
+
+	// Start iteration (depth-first traversal shown)
+	UpdateNotesIconChildren(model, root);
+}
+
+void CaseWindow::UpdateNotesIconChildren(wxDataViewModel* model, const wxDataViewItem& parent)
+{
+	wxDataViewItemArray children;
+	model->GetChildren(parent, children);
+	for (const wxDataViewItem& child : children) {
+		// Check if the child item has a note
+		bool bShowNote = false;
+		for (auto pg : m_pageGroups) {
+			if (pg->SideBarLabel == m_navigationMenu->GetItemText(child))
+				bShowNote = HasPageNote(pg->HelpContext);
+		}
+
+		if (bShowNote) {
+			m_navigationMenu->SetItemIcon(child, wxBitmapBundle::FromBitmap(wxBITMAP_PNG_FROM_DATA(notes)));
+		}
+		else {
+			m_navigationMenu->SetItemIcon(child, wxNullBitmap);
+		}
+		// Recursively check its children if it's a container
+		if (model->IsContainer(child)) {
+			UpdateNotesIconChildren(model, child);
+		}
+	}
+}
+
 
 void CaseWindow::ShowPageNote()
 {
@@ -1600,7 +1743,7 @@ bool CaseWindow::HasPageNote(const wxString &id)
 	return !id.IsEmpty() && !m_case->RetrieveNote(id).IsEmpty();
 }
 
-void CaseWindow::OnSubNotebookPageChanged( wxNotebookEvent & )
+void CaseWindow::OnSubNotebookPageChanged( wxNotebookEvent &evt )
 {
 	// common event handler for notebook page events to update the page note
 	UpdatePageNote();
@@ -2196,7 +2339,7 @@ void NumericRangeDialog::OnCommand(wxCommandEvent &evt)
 	switch(evt.GetId())
 	{
 	case wxID_HELP:
-		SamApp::ShowHelp("edit_parametric_variables");
+		SamApp::ShowHelp("window-reference/win_edit_parametric_variables");
 		break;
 
 	case ID_values:

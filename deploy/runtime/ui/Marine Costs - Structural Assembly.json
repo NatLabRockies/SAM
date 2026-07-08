@@ -12,7 +12,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 192.0
+                    "Integer": 189.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -406,7 +406,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 195.0
+                    "Integer": 192.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -716,7 +716,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 363.0
+                    "Integer": 360.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1172,7 +1172,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 291.0
+                    "Integer": 288.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1271,7 +1271,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 288.0
+                    "Integer": 285.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1333,7 +1333,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 120.0
+                    "Integer": 117.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1395,7 +1395,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 276.0
+                    "Integer": 273.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1457,7 +1457,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 315.0
+                    "Integer": 312.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1519,7 +1519,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 315.0
+                    "Integer": 312.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1581,7 +1581,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 198.0
+                    "Integer": 195.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1643,7 +1643,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 102.0
+                    "Integer": 99.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1705,7 +1705,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 288.0
+                    "Integer": 285.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1767,7 +1767,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 315.0
+                    "Integer": 312.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1829,7 +1829,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 315.0
+                    "Integer": 312.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1891,7 +1891,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 96.0
+                    "Integer": 93.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -1953,7 +1953,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 291.0
+                    "Integer": 288.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -3798,10 +3798,10 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
-        "insurance_during_construction_modeled": {
+        "insurance_during_construction_cost_modeled": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": " ",
+            "Label": "Insurance during construction modeled cost",
             "Units": "$",
             "Group": "ME Costs - Structural Assembly",
             "IndexLabels": "",
@@ -4331,7 +4331,7 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
-        "project_contingency_modeled": {
+        "project_contingency_cost_modeled": {
             "Version": 4.0,
             "Type": 1.0,
             "Label": " ",
@@ -4344,7 +4344,7 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
-        "reserve_accounts_modeled": {
+        "reserve_accounts_cost_modeled": {
             "Version": 4.0,
             "Type": 1.0,
             "Label": " ",
@@ -4719,23 +4719,82 @@
         "\t",
         "\tssc_var(obj,'structural_assembly_cost_method', ${structural_assembly_cost_method});",
         "\tssc_var(obj,'structural_assembly_cost_input', ${structural_assembly_cost_input});",
-        "\t//ssc_var(obj,'structural_assembly_cost_total', ${structural_assembly_cost_total});",
+        "\tssc_var(obj,'structural_assembly_cost_total', ${structural_assembly_cost_total});",
+        "\tssc_var(obj,'structural_assembly_cost_rvalue', ${structural_assembly_cost_rvalue});\r",
+        "\t\r",
         "\tssc_var(obj,'power_takeoff_system_cost_method', ${power_takeoff_system_cost_method});",
         "\tssc_var(obj,'power_takeoff_system_cost_input', ${power_takeoff_system_cost_input});",
-        "\t//ssc_var(obj,'power_takeoff_system_cost_total', ${power_takeoff_system_cost_total});",
+        "\tssc_var(obj,'power_takeoff_system_cost_total', ${power_takeoff_system_cost_total});",
+        "\tssc_var(obj,'power_takeoff_system_cost_rvalue', ${power_takeoff_system_cost_rvalue});\r",
+        "\t\r",
         "\tssc_var(obj,'mooring_found_substruc_cost_method', ${mooring_found_substruc_cost_method});",
         "\tssc_var(obj,'mooring_found_substruc_cost_input', ${mooring_found_substruc_cost_input});",
-        "\t//ssc_var(obj,'mooring_found_substruc_cost_total', ${mooring_found_substruc_cost_total});\t",
+        "\tssc_var(obj,'mooring_found_substruc_cost_total', ${mooring_found_substruc_cost_total});\t",
+        "\tssc_var(obj,'mooring_found_substruc_cost_rvalue', ${mooring_found_substruc_cost_rvalue});\t\r",
         "\t",
         "\tssc_var(obj,'development_cost_method', ${development_cost_method});",
         "\tssc_var(obj,'development_cost_input', ${development_cost_input});",
+        "\tssc_var(obj,'development_cost_total', ${development_cost_total});\r",
+        "\tssc_var(obj,'development_cost_rvalue', ${development_cost_rvalue});\r",
+        "\t\r",
         "\tssc_var(obj,'eng_and_mgmt_cost_method', ${eng_and_mgmt_cost_method});",
         "\tssc_var(obj,'eng_and_mgmt_cost_input', ${eng_and_mgmt_cost_input});",
+        "\tssc_var(obj,'eng_and_mgmt_cost_total', ${eng_and_mgmt_cost_total});\r",
+        "\tssc_var(obj,'eng_and_mgmt_cost_rvalue', ${eng_and_mgmt_cost_rvalue});\r",
+        "\t\r",
         "\tssc_var(obj,'assembly_and_install_cost_method', ${assembly_and_install_cost_method});",
         "\tssc_var(obj,'assembly_and_install_cost_input', ${assembly_and_install_cost_input});",
+        "\tssc_var(obj,'assembly_and_install_cost_total', ${assembly_and_install_cost_total});\r",
+        "\tssc_var(obj,'assembly_and_install_cost_rvalue', ${assembly_and_install_cost_rvalue});\r",
+        "\t\r",
         "\tssc_var(obj,'other_infrastructure_cost_method', ${other_infrastructure_cost_method});",
         "\tssc_var(obj,'other_infrastructure_cost_input', ${other_infrastructure_cost_input});",
-        "\t",
+        "\tssc_var(obj,'other_infrastructure_cost_total', ${other_infrastructure_cost_total});\r",
+        "\tssc_var(obj,'other_infrastructure_cost_rvalue', ${other_infrastructure_cost_rvalue});\r",
+        "\t\r",
+        "\tssc_var(obj, 'elec_infras_cost_method', ${elec_infras_cost_method});\r",
+        "\tssc_var(obj, 'elec_infras_cost_input', ${elec_infras_cost_input});\r",
+        "\tssc_var(obj, 'elec_infras_cost_modeled', ${elec_infras_cost_modeled});\r",
+        "\tssc_var(obj, 'elec_infras_cost_total', ${elec_infras_cost_total});\r",
+        "\tssc_var(obj, 'elec_infras_cost_rvalue', ${elec_infras_cost_rvalue});\r",
+        "\r",
+        "\tssc_var(obj,'site_access_port_staging_cost_method', ${site_access_port_staging_cost_method});\r",
+        "\tssc_var(obj,'site_access_port_staging_cost_input', ${site_access_port_staging_cost_input});\r",
+        "\tssc_var(obj,'site_access_port_staging_cost_total', ${site_access_port_staging_cost_total});\r",
+        "\tssc_var(obj,'site_access_port_staging_cost_rvalue', ${site_access_port_staging_cost_rvalue});\r",
+        "\r",
+        "\tssc_var(obj,'plant_commissioning_cost_method', ${plant_commissioning_cost_method});\r",
+        "\tssc_var(obj,'plant_commissioning_cost_input', ${plant_commissioning_cost_input});\r",
+        "\tssc_var(obj,'plant_commissioning_cost_rvalue', ${plant_commissioning_cost_rvalue});\r",
+        "\r",
+        "\tssc_var(obj, 'project_contingency_cost_method', ${project_contingency_cost_method});\r",
+        "\tssc_var(obj, 'project_contingency_cost_input', ${project_contingency_cost_input});\r",
+        "\tssc_var(obj, 'project_contingency_cost_rvalue', ${project_contingency_cost_rvalue});\r",
+        "\r",
+        "\tssc_var(obj, 'insurance_during_construction_cost_method', ${insurance_during_construction_cost_method});\r",
+        "\tssc_var(obj, 'insurance_during_construction_cost_input', ${insurance_during_construction_cost_input});\r",
+        "\tssc_var(obj, 'insurance_during_construction_cost_rvalue', ${insurance_during_construction_cost_rvalue});\r",
+        "\t\r",
+        "\tssc_var(obj, 'reserve_accounts_cost_method', ${reserve_accounts_cost_method});\r",
+        "\tssc_var(obj, 'reserve_accounts_cost_input', ${reserve_accounts_cost_input});\r",
+        "\tssc_var(obj, 'reserve_accounts_cost_rvalue', ${reserve_accounts_cost_rvalue});\r",
+        "\tssc_var(obj, 'reserve_accounts_cost_total', ${reserve_accounts_cost_total});\r",
+        "\r",
+        "\tssc_var(obj, 'other_financial_cost_method', ${other_financial_cost_method});\r",
+        "\tssc_var(obj, 'other_financial_cost_input', ${other_financial_cost_input});\r",
+        "\tssc_var(obj, 'other_financial_cost_rvalue', ${other_financial_cost_rvalue});\r",
+        "\t\r",
+        "\tssc_var(obj, 'operations_cost_method', ${operations_cost_method});\r",
+        "\tssc_var(obj, 'operations_cost_input', ${operations_cost_input});\r",
+        "\tssc_var(obj, 'operations_cost_rvalue', ${operations_cost_rvalue});\r",
+        "\tssc_var(obj, 'operations_cost_total', ${operations_cost_total});\r",
+        "\r",
+        "\tssc_var(obj, 'maintenance_cost_method', ${maintenance_cost_method});\r",
+        "\tssc_var(obj, 'maintenance_cost_input', ${maintenance_cost_input});\r",
+        "\tssc_var(obj, 'maintenance_cost_rvalue', ${maintenance_cost_rvalue});\r",
+        "\tssc_var(obj, 'maintenance_cost_total', ${maintenance_cost_total});\r",
+        "\t\r",
+        "\t/*",
         "\tssc_var(obj,'array_cable_system_cost_method', ${array_cable_system_cost_method});",
         "\tssc_var(obj,'array_cable_system_cost_input', ${array_cable_system_cost_input});",
         "\tssc_var(obj,'export_cable_system_cost_method', ${export_cable_system_cost_method});",
@@ -4746,7 +4805,7 @@
         "\tssc_var(obj,'offshore_substation_cost_input', ${offshore_substation_cost_input});",
         "\tssc_var(obj,'other_elec_infra_cost_method', ${other_elec_infra_cost_method});",
         "\tssc_var(obj,'other_elec_infra_cost_input', ${other_elec_infra_cost_input});",
-        "\t",
+        "\t*/",
         "\tssc_var(obj,'marine_energy_tech', ${marine_energy_tech});",
         "//\tif (${marine_energy_tech} < 0.5)",
         "\ttech = technology();",
@@ -4768,29 +4827,59 @@
         "\t",
         "\t",
         "\t${structural_assembly_cost_modeled} = ssc_var( obj, 'structural_assembly_cost_modeled' );",
+        "\t${structural_assembly_cost} = ssc_var( obj, 'structural_assembly_cost' );\r",
+        "\t\r",
         "\t${power_takeoff_system_cost_modeled} = ssc_var( obj, 'power_takeoff_system_cost_modeled' );",
+        "\t${power_takeoff_system_cost} = ssc_var( obj, 'power_takeoff_system_cost' );\r",
+        "\t\r",
         "\t${mooring_found_substruc_cost_modeled} = ssc_var( obj, 'mooring_found_substruc_cost_modeled' );",
+        "\t${mooring_found_substruc_cost} = ssc_var( obj, 'mooring_found_substruc_cost' );\r",
         "",
         "\t${development_cost_modeled} = ssc_var( obj, 'development_cost_modeled' );",
+        "\t${development_cost} = ssc_var( obj, 'development_cost' );\r",
+        "\r",
         "\t${eng_and_mgmt_cost_modeled} = ssc_var( obj, 'eng_and_mgmt_cost_modeled' );",
+        "\t${eng_and_mgmt_cost} = ssc_var( obj, 'eng_and_mgmt_cost' );\r",
+        "\r",
         "\t${plant_commissioning_cost_modeled} = ssc_var( obj, 'plant_commissioning_cost_modeled' );",
+        "\t${plant_commissioning_cost} = ssc_var( obj, 'plant_commissioning_cost' );\r",
+        "\r",
         "\t${site_access_port_staging_cost_modeled} = ssc_var( obj, 'site_access_port_staging_cost_modeled' );",
+        "\t${site_access_port_staging_cost} = ssc_var( obj, 'site_access_port_staging_cost' );\r",
+        "\r",
         "\t${assembly_and_install_cost_modeled} = ssc_var( obj, 'assembly_and_install_cost_modeled' );",
+        "\t${assembly_and_install_cost} = ssc_var( obj, 'assembly_and_install_cost' );\r",
+        "\r",
         "\t${other_infrastructure_cost_modeled} = ssc_var( obj, 'other_infrastructure_cost_modeled' );",
-        "",
+        "\t${other_infrastructure_cost} = ssc_var( obj, 'other_infrastructure_cost' );\r",
+        "\t\r",
+        "\t${elec_infras_cost} = ssc_var( obj, 'elec_infras_cost');\r",
+        "\t\r",
+        "\t${project_contingency_cost_modeled} = ssc_var( obj, 'project_contingency_cost_modeled');\r",
+        "\t${project_contingency_cost} = ssc_var( obj, 'project_contingency_cost');\r",
+        "\t\r",
+        "\t${insurance_during_construction_cost_modeled} = ssc_var( obj, 'insurance_during_construction_cost_modeled');\r",
+        "\t${insurance_during_construction_cost} = ssc_var( obj, 'insurance_during_construction_cost');\r",
+        "\t\r",
+        "\t${reserve_accounts_cost_modeled} = ssc_var( obj, 'reserve_accounts_cost_modeled');\r",
+        "\t${reserve_accounts_cost} = ssc_var( obj, 'reserve_accounts_cost');\r",
+        "\t\r",
+        "\t${other_financial_cost_modeled} = ssc_var( obj, 'other_financial_cost_modeled');\r",
+        "\t${other_financial_cost} = ssc_var( obj, 'other_financial_cost');",
         "\t//${array_cable_system_cost_modeled} = ssc_var( obj, 'array_cable_system_cost_modeled' );",
         "\t//${export_cable_system_cost_modeled} = ssc_var( obj, 'export_cable_system_cost_modeled' );",
         "\t//${onshore_substation_cost_modeled} = ssc_var( obj, 'onshore_substation_cost_modeled' );",
         "\t//${offshore_substation_cost_modeled} = ssc_var( obj, 'offshore_substation_cost_modeled' );",
-        "\t${other_elec_infra_cost_modeled} = ssc_var( obj, 'other_elec_infra_cost_modeled' );",
-        "",
-        "\t${project_contingency_modeled} = ssc_var( obj, 'project_contingency' );",
-        "\t${insurance_during_construction_modeled} = ssc_var( obj, 'insurance_during_construction' );",
-        "\t${reserve_accounts_modeled} = ssc_var( obj, 'reserve_accounts' );",
-        "",
-        "\t${operations_cost_modeled} = ssc_var( obj, 'operations_cost' );",
-        "\t${maintenance_cost_modeled} = ssc_var( obj, 'maintenance_cost' );",
+        "\t//${other_elec_infra_cost_modeled} = ssc_var( obj, 'other_elec_infra_cost_modeled' );",
         "\t",
+        "\t//${project_contingency_modeled} = ssc_var( obj, 'project_contingency' );",
+        "\t//${insurance_during_construction_modeled} = ssc_var( obj, 'insurance_during_construction' );",
+        "\t//${reserve_accounts_modeled} = ssc_var( obj, 'reserve_accounts' );",
+        "",
+        "\t${operations_cost_modeled} = ssc_var( obj, 'operations_cost_modeled' );",
+        "\t${operations_cost} = ssc_var( obj, 'operations_cost');\r",
+        "\t${maintenance_cost_modeled} = ssc_var( obj, 'maintenance_cost_modeled' );",
+        "\t${maintenance_cost} = ssc_var(obj, 'maintenance_cost');",
         "\t/*${total_capital_cost_per_kwh} = ssc_var(obj, 'total_capital_cost_per_kwh');",
         "\t${total_device_cost_per_kwh} = ssc_var(obj, 'total_device_cost_per_kwh');",
         "\t${total_bos_cost_per_kwh} = ssc_var(obj, 'total_bos_cost_per_kwh');",
@@ -4826,7 +4915,7 @@
         "\t\treturn 2;",
         "\t}",
         "};",
-        "",
+        "/*",
         "equations {'structural_assembly_cost'} = define() {",
         "\tarray_scaling_b_value = -log(1-${structural_assembly_cost_rvalue})/log(2);\r",
         "\treturn ?${structural_assembly_cost_method}",
@@ -4837,7 +4926,7 @@
         "\t\t\t\t${structural_assembly_cost_total},\r",
         "\t\t\t\t(${structural_assembly_cost_input}*pow(${number_devices},-array_scaling_b_value))*${number_devices}",
         "\t\t\t];",
-        "};",
+        "};*/",
         "",
         "equations {'total_installed_cost_structural'} = define() {",
         "\treturn ${structural_assembly_cost};",

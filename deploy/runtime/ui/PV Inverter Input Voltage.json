@@ -1,0 +1,1772 @@
+{
+    "Name": "PV Inverter Input Voltage",
+    "Width": 1009.0,
+    "Height": 460.0,
+    "FormObjects": {
+        "Divider": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "HLine12"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 12.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 72.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 980.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 16.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Orientation": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Colour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 120.0,
+                        "Green": 120.0,
+                        "Blue": 120.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Multiple MPPT Inputs"
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Button": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "btn_reset_inverter_voltages"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 273.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 276.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 28.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Copy ratings from Inverter page"
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 6.0
+                }
+            }
+        },
+        "RadioChoice": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "enable_mismatch_vmax_calc"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 405.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 399.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Selection": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Items": {
+                    "Type": 6.0,
+                    "StringList": "Average of subarray voltages|Estimate subarray mismatch loss (long simulation run time)"
+                },
+                "ShowCaptions": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Horizontal": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 10.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "inv_num_mppt"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 135.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 141.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "lbl_inverter_voltage_message"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 567.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 255.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 426.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 75.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "lbl_mismatch_message"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 432.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 405.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 261.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "lbl_mppt_warning"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 789.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 141.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 207.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "mppt_hi_inverter"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 450.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 279.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 82.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 9999.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 8.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "mppt_low_inverter"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 450.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 252.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 82.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 9999.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 7.0
+                }
+            }
+        },
+        "Divider": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 22"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 15.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 333.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 980.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 16.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Orientation": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Colour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 120.0,
+                        "Green": 120.0,
+                        "Blue": 120.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Inverter Input Voltage for Multiple Subarrays"
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Divider": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 225"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 12.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 183.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 980.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 16.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Orientation": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Colour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 120.0,
+                        "Green": 120.0,
+                        "Blue": 120.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Inverter Voltage Limits"
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "GroupBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 4"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 6.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 1000.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 455.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Inverter Input Voltage"
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 7"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 15.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 354.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 980.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "For a system with a single MPPT and more than one subarray, choose how to calculate the inverter input voltage. The average option is best for most applications. The voltage mismatch loss option requires long simulation run times."
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 711"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 15.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 980.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "The nominal DC voltage of each subarray is determined by the number of modules per string above. Use the options below to specify how SAM determines the inverter input voltage(s). "
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 714"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 15.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 90.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 980.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "For a system with one inverter, to model an inverter input voltage for each subarray, set the number of MPPTs equal to the number of subarrays and assign an MPPT number to each subarray."
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 716"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 15.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 201.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 980.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "The inverter clips the subarray voltage to the minimum and maximum inverter voltage ratings so that the subarray voltage is never less than Vmppt_low or greater than Vmppt_high."
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 73"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 198.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 141.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 98.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "MPPT number"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray1_mppt_input"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 300.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 141.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 2.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray2_mppt_input"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 429.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 141.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray3_mppt_input"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 558.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 141.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 4.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray4_mppt_input"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 687.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 141.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 5.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "vdcmax_inverter"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 450.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 306.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 82.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 9999.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 9.0
+                }
+            }
+        }
+    },
+    "VarDatabase": {
+        "enable_mismatch_vmax_calc": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Enable subarray voltage mismatch calculation",
+            "Units": " ",
+            "Group": "PV Inverter Input Voltage",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "RadioChoice",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "inv_num_mppt": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Number of MPPTs",
+            "Units": "",
+            "Group": "PV Inverter Input Voltage",
+            "IndexLabels": "",
+            "Flags": 2.0,
+            "DefaultValue": 1.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "mppt_hi_inverter": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Vmppt_high",
+            "Units": "Vdc",
+            "Group": "PV Inverter Input Voltage",
+            "IndexLabels": "",
+            "Flags": 2.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "mppt_low_inverter": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Vmppt_low",
+            "Units": "Vdc",
+            "Group": "PV Inverter Input Voltage",
+            "IndexLabels": "",
+            "Flags": 2.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray1_mppt_input": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Subarray 1 inverter MPPT input",
+            "Units": " ",
+            "Group": "PV Inverter Input Voltage",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 1.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray2_mppt_input": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Subarray 2 inverter MPPT input",
+            "Units": " ",
+            "Group": "PV Inverter Input Voltage",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 1.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray3_mppt_input": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Subarray 3 inverter MPPT input",
+            "Units": " ",
+            "Group": "PV Inverter Input Voltage",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 1.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray4_mppt_input": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Subarray 4 inverter MPPT input",
+            "Units": " ",
+            "Group": "PV Inverter Input Voltage",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 1.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "vdcmax_inverter": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Vdc_max",
+            "Units": "Vdc",
+            "Group": "PV Inverter Input Voltage",
+            "IndexLabels": "",
+            "Flags": 2.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        }
+    },
+    "Equations": [],
+    "Callbacks": [
+        "// resets max DC, max MPPT, min MPPT voltages to values from inverter page should run from inverter page when values change there\r",
+        "function reset_inverter_voltages() {\r",
+        "\tvalue('vdcmax_inverter', ?${inverter_model}[\r",
+        "\t\t${inv_snl_vdcmax},\r",
+        "\t\t${inv_ds_vdcmax},\r",
+        "\t\t${inv_pd_vdcmax},\r",
+        "\t\t${inv_cec_cg_vdcmax}] ); \r",
+        "\r",
+        "\tvalue('mppt_low_inverter', ?${inverter_model}[ \t\r",
+        "\t\t${inv_snl_mppt_low}, \r",
+        "\t\t${inv_ds_mppt_low}, \r",
+        "\t\t${inv_pd_mppt_low},\r",
+        "\t\t${inv_cec_cg_mppt_low}] );\r",
+        "\r",
+        "\tvalue('mppt_hi_inverter', ?${inverter_model}[ \r",
+        "\t\t${inv_snl_mppt_hi}, \r",
+        "\t\t${inv_ds_mppt_hi},\r",
+        "\t\t${inv_pd_mppt_hi},\r",
+        "\t\t${inv_cec_cg_mppt_hi}] );\r",
+        "}\r",
+        "\r",
+        "function inverter_voltage_message() {\r",
+        "\tx = value('inverter_model');\r",
+        "\tinv_vlow = ?x [value('inv_snl_mppt_low'), value('inv_ds_mppt_low'), value('inv_pd_mppt_low'),value('inv_cec_cg_mppt_low')];\r",
+        "    inv_vhi = ?x [value('inv_snl_mppt_hi'), value('inv_ds_mppt_hi'), value('inv_pd_mppt_hi'),value('inv_cec_cg_mppt_hi')];\r",
+        "    inv_vmax = ?x [value('inv_snl_vdcmax'), value('inv_ds_vdcmax'), value('inv_pd_vdcmax'),value('inv_cec_cg_vdcmax')];\r",
+        "\tmsg = '';\r",
+        "\tn=0;\r",
+        "\tif ( value('mppt_low_inverter') != inv_vlow ) {\r",
+        "\t\tmsg += 'Vmppt_low is different from value on Inverter page: ' + inv_vlow + ' Vdc.\\n'; \r",
+        "\t\tn++;\r",
+        "\t}\r",
+        "\tif ( value('mppt_hi_inverter') != inv_vhi ) {\r",
+        "\t\tif (n>0) {msg+=' ';}\r",
+        "\t\tmsg += 'Vmppt_high is different from value on inverter page: ' + inv_vhi + ' Vdc.\\n'; \r",
+        "\t\tn++;\r",
+        "\t}\r",
+        "\tif ( value('vdcmax_inverter') != inv_vmax ) { \r",
+        "\t\tif (n>0) {msg+=' ';}\r",
+        "\t\tmsg += 'Vdc_max is different from value on inverter page: ' + inv_vmax + ' Vdc.';\r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\tmsg = 'Change the voltage ratings here to use different values than the values on the Inverter page.';\r",
+        "\t}\r",
+        "\r",
+        "\tif ( inv_voltage_warning() == '' ) {\r",
+        "\t\tproperty('lbl_inverter_voltage_message','Caption', msg);\r",
+        "\t\tproperty('lbl_inverter_voltage_message','TextColour', 'black');\r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\tproperty('lbl_inverter_voltage_message','Caption', inv_voltage_warning());\t\r",
+        "\t\tproperty('lbl_inverter_voltage_message','TextColour', 'red');\r",
+        "\t}\t\r",
+        "\r",
+        "}\r",
+        "\r",
+        "//show warning about MPPT input number\r",
+        "function mppt_warning() {\r",
+        "\tn_enabled_subarrays = 1;\r",
+        "\tn_subarrays_max = 4;\r",
+        "\r",
+        "\tmppt_input_list = to_string(value('subarray1_mppt_input'));\r",
+        "\tfor (i=2; i<=n_subarrays_max; i++) {\r",
+        "\t\tif ( value('subarray' + to_string(i) + '_enable') == true ) {\r",
+        "\t\t\tn_enabled_subarrays++;\r",
+        "\t\t\tmppt_input_list += to_string(value('subarray' + to_string(i) + '_mppt_input'));\r",
+        "\t\t}\r",
+        "\t}\r",
+        "\t\r",
+        "\tmsg = '';\r",
+        "\tcolor = 'black';\r",
+        "\tif ( value('inverter_count') > 1 ) {\r",
+        "\t\tmsg = 'Multiple MPPT is only supported for systems with one inverter.';\r",
+        "\t\tcolor = 'black';\r",
+        "\t}\r",
+        "\telseif ( value('inv_num_mppt') < 1 || value('inv_num_mppt') > n_subarrays_max ){\r",
+        "\t\tmsg = 'Number of MPPTs must be between 1 and ' + to_string(n_subarrays_max) +'.';\r",
+        "\t\tcolor = 'red';\r",
+        "\t}\r",
+        "\telseif ( value('inv_num_mppt') > 1 && n_enabled_subarrays != value('inv_num_mppt') ) {\r",
+        "\t\tmsg = 'The number of enabled subarrays must be the same as the number of MPPTs.';\r",
+        "\t\tcolor = 'red';\r",
+        "\t}\r",
+        "\telseif ( value('inv_num_mppt') > 1 ) {\r",
+        "\t\ten = true; // subarray 1 is always enabled\r",
+        "\t\tfor (i = 1; i <= n_subarrays_max; i++)\r",
+        "\t\t{\r",
+        "\t\t\tvar = 'subarray' + to_string(i) + '_mppt_input';\r",
+        "\t\t\tif ( i > 1 ) {\r",
+        "\t\t\t\ten = value('subarray' + to_string(i) + '_enable');\r",
+        "\t\t\t}\r",
+        "\r",
+        "\t\t\tif ( en == true && first_of(mppt_input_list,value(var)) != last_of(mppt_input_list,value(var) ) ) {\r",
+        "\t\t\t\tmsg = 'MPPT number ' + value(var) + ' is assigned to more than one subarray.';\r",
+        "\t\t\t\tcolor = 'red';\r",
+        "\t\t\t}\t\r",
+        "\t\t\telseif ( en == true && value(var) > value('inv_num_mppt') ) {\r",
+        "\t\t\t\tmsg = 'MPPT number must be between 1 and the number of MPPTs.';\r",
+        "\t\t\t\tcolor = 'red';\r",
+        "\t\t\t}\r",
+        "\t\t}\r",
+        "\t}\r",
+        "\tproperty('lbl_mppt_warning','Caption',msg);\r",
+        "\tproperty('lbl_mppt_warning','TextColour',color);\r",
+        "}\r",
+        "\r",
+        "function inv_voltage_warning() {\r",
+        "\tmsg = '';\r",
+        "\tvhi = value('mppt_hi_inverter');\r",
+        "\tvlow = value('mppt_low_inverter');\r",
+        "\tvmax = value('vdcmax_inverter');\r",
+        "\r",
+        "\tif ( vhi > vmax ) { msg = 'Inverter maximum MPPT voltage is greater than inverter maximum DC voltage.';}\r",
+        "\tif ( vhi < vlow ) { msg = 'Inverter maximum MPPT voltage is less than inverter minimum MPPT voltage.';}\r",
+        "\tif ( vlow > vhi ) { msg = 'Inverter minimum MPPT voltage is greater than inverter maximum MPPT voltage.';}\r",
+        "\r",
+        "\treturn msg;\r",
+        "} \r",
+        "\r",
+        "function mismatch_message() {\r",
+        "\tmsg = '';\r",
+        "\tcolor = 'black';\r",
+        "\t\r",
+        "\tif (value('inv_num_mppt') > 1 ) {\r",
+        "\t\tmsg = 'Estimate subarray mismatch is not available for multiple MPPTs.';\r",
+        "\t\tcolor = 'black';\r",
+        "\t}\r",
+        "\t\r",
+        "\tproperty('lbl_mismatch_message','Caption',msg);\r",
+        "\tproperty('lbl_mismatch_message','TextColour',color);\r",
+        "}\r",
+        "\r",
+        " // this also needs to be called from the PV Subarrays and String Size form\r",
+        "function enable_mppt() {\r",
+        "\tn_subarrays_max = 4;\r",
+        "\r",
+        "\t// show mppt inputs for enabled subarrays\r",
+        "\tfor ( i=2; i<=n_subarrays_max; i++ ) {\r",
+        "\t\tshow('subarray'+to_string(i)+'_mppt_input', value('subarray'+to_string(i)+'_enable') == 1);\r",
+        "\t}\r",
+        "\trefresh();\r",
+        "\r",
+        "\t// if one inverter enable/disable mppt inputs\r",
+        "\tif (value('inverter_count') == 1) {\r",
+        "\t\ten = value('inv_num_mppt') > 1;  // only enable mppt inputs if number of MPPTs is greater than 1\r",
+        "\t\tenable('inv_num_mppt',true);\r",
+        "\t\tenable('subarray1_mppt_input',en);\r",
+        "\t\tfor (i=2; i<=n_subarrays_max; i++){\r",
+        "\t\t\tif ( value('subarray'+to_string(i)+'_enable') == 1) {\r",
+        "\t\t\t\tenable('subarray'+to_string(i)+'_mppt_input',en);\r",
+        "\t\t\t}\t\r",
+        "\t\t}\r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\tenable('inv_num_mppt',false);\r",
+        "\t\tenable('subarray1_mppt_input',false);\r",
+        "\t\tfor (i=2; i<=n_subarrays_max; i++){\r",
+        "\t\t\tif ( value('subarray'+to_string(i)+'_enable') == 1) {\r",
+        "\t\t\t\tenable('subarray'+to_string(i)+'_mppt_input',false);\r",
+        "\t\t\t}\t\r",
+        "\t\t}\r",
+        "\t}\r",
+        "}\r",
+        "\r",
+        "on_load{'PV Inverter Input Voltage'} = define() {\r",
+        "\tenable_mppt();\r",
+        "\tmppt_warning();\r",
+        "\tinverter_voltage_message();\r",
+        "\tmismatch_message();\r",
+        "};\r",
+        "\r",
+        "on_change{'btn_reset_inverter_voltages'} = define() {\r",
+        "\treset_inverter_voltages();\r",
+        "};\r",
+        "\r",
+        "on_change{'mppt_low_inverter'} = define() {\r",
+        "\tinverter_voltage_message();\r",
+        "};\r",
+        "\r",
+        "on_change{'mppt_hi_inverter'} = define() {\r",
+        "\tinverter_voltage_message();\r",
+        "};\r",
+        "\r",
+        "on_change{'vdcmax_inverter'} = define() {\r",
+        "\tinverter_voltage_message();\r",
+        "};\r",
+        "\r",
+        "on_change{'inv_num_mppt'} = define() {\r",
+        "\tenable_mppt();\r",
+        "\tmppt_warning();\r",
+        "\tmismatch_message();\t\r",
+        "\tenable('enable_mismatch_vmax_calc', value('inv_num_mppt') == 1);\r",
+        "};\r",
+        "\r",
+        "on_change{'enable_mismatch_vmax_calc'} = define() {\r",
+        "\tmismatch_message();\t\r",
+        "};\r",
+        "\r",
+        "on_change{'subarray1_mppt_input'} = define() {\r",
+        "\tmppt_warning();\r",
+        "};\r",
+        "on_change{'subarray2_mppt_input'} = define() {\r",
+        "\tmppt_warning();\r",
+        "};\r",
+        "on_change{'subarray3_mppt_input'} = define() {\r",
+        "\tmppt_warning();\r",
+        "};\r",
+        "on_change{'subarray4_mppt_input'} = define() {\r",
+        "\tmppt_warning();\r",
+        "};"
+    ]
+}

@@ -2724,7 +2724,8 @@
         "on_load{\"Financial LCOE Calc with Costs Page\"} = define()",
         "{",
         "\tenable_disable();",
-        "\tcfin_is_zero_check();",
+        "\tcfin_is_zero_check();\r",
+        "\tchange_schedule_length();",
         "};",
         "",
         "",
@@ -2736,6 +2737,11 @@
         "",
         "on_change{'c_construction_cost'} = define() { cfin_is_zero_check(); };",
         "",
-        ""
+        "function change_schedule_length() \r",
+        "{\r",
+        "\tyears = value('c_lifetime');\r",
+        "\tproperty('c_depreciation_schedule', 'FixedLength', years);\r",
+        "\tproperty('c_construction_cost', 'FixedLength', years);\r",
+        "}"
     ]
 }

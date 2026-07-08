@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Sustainable Energy, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -68,7 +68,7 @@ static wxColour SelectColour(204,204,204);
 static wxColour BackColour(243,243,243);
 
 InputPageList::InputPageList(wxWindow *parent, int id, const wxPoint &pos, const wxSize &size)
-	: wxScrolledWindow(parent,id, pos, size, wxBORDER_NONE)
+	: wxScrolledWindow(parent,id, pos, size, wxBORDER_NONE | wxFULL_REPAINT_ON_RESIZE)
 {
 	SetBackgroundStyle(wxBG_STYLE_CUSTOM);
 	SetBackgroundColour( BackColour );
@@ -273,8 +273,8 @@ void InputPageList::OnPaint(wxPaintEvent &)
 
 		dc.SetBackground( wxBrush( GetBackgroundColour() ) );
 
-		if (g_notesBitmap.IsOk() && m_caseWin 
-			 && m_caseWin->HasPageNote( m_items[i].resource ) )
+//		if (g_notesBitmap.IsOk() && m_caseWin 
+//			 && m_caseWin->HasPageNote( m_items[i].resource ) )
 		{
 //			int tx_w = dc.GetTextExtent( m_items[i].name ).GetWidth();
 			dc.DrawBitmap(g_notesBitmap, 

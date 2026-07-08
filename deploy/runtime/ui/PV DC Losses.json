@@ -1,0 +1,4281 @@
+{
+    "Name": "PV DC Losses",
+    "Width": 1011.0,
+    "Height": 467.0,
+    "FormObjects": {
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "Label12"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 30.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 165.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 266.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Diodes and connections (%)"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "Label121"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 30.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 138.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 266.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Module mismatch (%)"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "Label1213"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 30.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 219.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 266.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Tracking error (%)"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "Label123"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 30.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 300.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 266.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "DC power optimizer loss (%)"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "Label1231"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 30.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 327.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 266.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Total DC power loss (%)"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "Label12350"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 30.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 246.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 266.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Nameplate (%)"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "Label14"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 30.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 192.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 266.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "DC wiring (%)"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "Label_bifacial_3"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 30.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 273.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 266.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Bifacial electrical mismatch (%)"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Button": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "btn_dc_opt"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 588.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 423.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 160.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 28.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "DC optimizers"
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 33.0
+                }
+            }
+        },
+        "Button": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "btn_microinverter"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 426.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 423.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 160.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 28.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Microinverters"
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 32.0
+                }
+            }
+        },
+        "Button": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "btn_string_inv"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 261.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 423.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 160.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 28.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Central inverters"
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 31.0
+                }
+            }
+        },
+        "CheckBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "calculate_bifacial_electrical_mismatch"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 789.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 273.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 213.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Calculate bifacial mismatch"
+                },
+                "State": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 30.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "dcoptimizer_loss"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 300.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 300.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 7.0
+                }
+            }
+        },
+        "GroupBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "group box"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 6.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 999.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 75.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Subarrays"
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "lbl_dc_optimizer"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 429.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 300.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 477.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 112.0,
+                        "Green": 112.0,
+                        "Blue": 112.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "lbl_tr_sub_1"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 300.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 110.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Subarray 1"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "lbl_tr_sub_2"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 429.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 110.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Subarray 2"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "lbl_tr_sub_3"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 558.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 110.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Subarray 3"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "lbl_tr_sub_4"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 687.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 110.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Subarray 4"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Divider": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 2120"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 15.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 378.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 980.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 16.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Orientation": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Colour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 120.0,
+                        "Green": 120.0,
+                        "Blue": 120.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Default DC Losses"
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "GroupBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 4"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 6.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 84.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 1000.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 374.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "DC Losses"
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 7"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 15.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 980.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Enable and disable subarrays on the System Sizing page."
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 715"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 18.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 102.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 903.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 36.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "DC losses apply to the electrical output of each subarray and account for losses not calculated by the module performance model."
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 719"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 396.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 972.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Apply default losses to replace DC losses for all subarrays with default values appropriate for central inverters, microinverters, or DC optmizers."
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 721"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 246.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 354.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 465.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Total DC power loss = 100% * [  1 - the product of ( 1 - loss/100%  )  ]"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": -2.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray1_dcloss"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 300.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 327.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 8.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray1_dcwiring_loss"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 300.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 192.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray1_diodeconn_loss"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 300.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 165.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 2.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray1_electrical_mismatch"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 300.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 273.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 6.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray1_mismatch_loss"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 300.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 138.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray1_nameplate_loss"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 300.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 246.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 5.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray1_tracking_loss"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 300.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 219.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 4.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray2_dcloss"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 429.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 327.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 15.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray2_dcwiring_loss"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 429.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 192.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 11.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray2_diodeconn_loss"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 429.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 165.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 10.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray2_electrical_mismatch"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 429.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 273.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 14.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray2_mismatch_loss"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 429.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 138.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 9.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray2_nameplate_loss"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 429.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 246.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 13.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray2_tracking_loss"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 429.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 219.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 12.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray3_dcloss"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 558.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 327.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 22.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray3_dcwiring_loss"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 558.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 192.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 18.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray3_diodeconn_loss"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 558.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 165.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 17.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray3_electrical_mismatch"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 558.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 273.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray3_mismatch_loss"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 558.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 138.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 16.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray3_nameplate_loss"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 558.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 246.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 20.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray3_tracking_loss"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 558.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 219.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 19.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray4_dcloss"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 687.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 327.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 29.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray4_dcwiring_loss"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 687.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 192.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 25.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray4_diodeconn_loss"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 687.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 165.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray4_electrical_mismatch"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 687.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 273.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 28.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray4_mismatch_loss"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 687.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 138.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 23.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray4_nameplate_loss"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 687.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 246.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 27.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray4_tracking_loss"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 687.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 219.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 26.0
+                }
+            }
+        }
+    },
+    "VarDatabase": {
+        "calculate_bifacial_electrical_mismatch": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Calculate bifacial electrical mismatch",
+            "Units": "0/1",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 1.0,
+            "UIObject": "CheckBox",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "dcoptimizer_loss": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "DC power optimizer loss",
+            "Units": "% of DC output",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray1_dcloss": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Total DC power loss 1",
+            "Units": "% of DC output",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 9.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray1_dcwiring_loss": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "DC wiring loss 1",
+            "Units": "% of DC output",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 2.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray1_diodeconn_loss": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Diodes and connections loss 1",
+            "Units": "% of DC output",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.5,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray1_electrical_mismatch": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Electrical mismatch 1",
+            "Units": "% of DC output",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray1_mismatch_loss": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Module mismatch loss 1",
+            "Units": "% of DC output",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 2.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray1_nameplate_loss": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Nameplate loss 1",
+            "Units": "% of DC output",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray1_tracking_loss": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Tracking error loss 1",
+            "Units": "% of DC output",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray2_dcloss": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Total DC power loss 2",
+            "Units": "% of DC output",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 9.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray2_dcwiring_loss": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "DC wiring loss 2",
+            "Units": "% of DC output",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 2.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray2_diodeconn_loss": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Diodes and connections loss 2",
+            "Units": "% of DC output",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.5,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray2_electrical_mismatch": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Electrical mismatch 2",
+            "Units": "% of DC output",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray2_mismatch_loss": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Module mismatch loss 2",
+            "Units": "% of DC output",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 2.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray2_nameplate_loss": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Nameplate loss 2",
+            "Units": "% of DC output",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray2_tracking_loss": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Tracking error loss 2",
+            "Units": "% of DC output",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray3_dcloss": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Total DC power loss 3",
+            "Units": "% of DC output",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 9.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray3_dcwiring_loss": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "DC wiring loss 3",
+            "Units": "% of DC output",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 2.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray3_diodeconn_loss": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Diodes and connections loss 3",
+            "Units": "% of DC output",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.5,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray3_electrical_mismatch": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Electrical mismatch 3",
+            "Units": "% of DC output",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray3_mismatch_loss": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Module mismatch loss 3",
+            "Units": "% of DC output",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 2.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray3_nameplate_loss": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Nameplate loss 3",
+            "Units": "% of DC output",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray3_tracking_loss": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Tracking error loss 3",
+            "Units": "% of POA irradiance",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray4_dcloss": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Total DC power loss 4",
+            "Units": "% of DC output",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 9.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray4_dcwiring_loss": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "DC wiring loss 4",
+            "Units": "% of DC output",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 2.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray4_diodeconn_loss": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Diodes and connections loss 4",
+            "Units": "% of DC output",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.5,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray4_electrical_mismatch": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Electrical mismatch 4",
+            "Units": "% of DC output",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray4_mismatch_loss": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Module mismatch loss 4",
+            "Units": "% of DC output",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 2.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray4_nameplate_loss": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Nameplate loss 4",
+            "Units": "% of DC output",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray4_tracking_loss": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Tracking error loss 4",
+            "Units": "% of POA irradiance",
+            "Group": "PV DC Losses",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        }
+    },
+    "Equations": [
+        "equations{ 'subarray1_dcloss' } = define() {\r",
+        "\treturn (1 - \r",
+        "\t(1-${subarray1_mismatch_loss}/100)\r",
+        "\t*(1-${subarray1_diodeconn_loss}/100)\r",
+        "\t*(1-${subarray1_dcwiring_loss}/100)\r",
+        "\t*(1-${subarray1_tracking_loss}/100)\r",
+        "\t*(1-${subarray1_nameplate_loss}/100)\r",
+        "\t*(1-${dcoptimizer_loss}/100)\r",
+        "\t)*100; \r",
+        "};\r",
+        "\r",
+        "equations{ 'subarray2_dcloss' } = define() {\r",
+        "\treturn (1 -\r",
+        "\t(1-${subarray2_mismatch_loss}/100)\r",
+        "\t*(1-${subarray2_diodeconn_loss}/100)\r",
+        "\t*(1-${subarray2_dcwiring_loss}/100)\r",
+        "\t*(1-${subarray2_tracking_loss}/100)\r",
+        "\t*(1-${subarray2_nameplate_loss}/100)\r",
+        "\t*(1-${dcoptimizer_loss}/100)\r",
+        "\t)*100; \r",
+        "};\r",
+        "\r",
+        "equations{ 'subarray3_dcloss' } = define() {\r",
+        "\treturn (1 -\r",
+        "\t(1-${subarray3_mismatch_loss}/100)\r",
+        "\t*(1-${subarray3_diodeconn_loss}/100)\r",
+        "\t*(1-${subarray3_dcwiring_loss}/100)\r",
+        "\t*(1-${subarray3_tracking_loss}/100)\r",
+        "\t*(1-${subarray3_nameplate_loss}/100)\r",
+        "\t*(1-${dcoptimizer_loss}/100)\r",
+        "\t)*100; \r",
+        "};\r",
+        "\t\r",
+        "equations{ 'subarray4_dcloss' } = define() {\r",
+        "\treturn (1 -\r",
+        "\t(1-${subarray4_mismatch_loss}/100)\r",
+        "\t*(1-${subarray4_diodeconn_loss}/100)\r",
+        "\t*(1-${subarray4_dcwiring_loss}/100)\r",
+        "\t*(1-${subarray4_tracking_loss}/100)\r",
+        "\t*(1-${subarray4_nameplate_loss}/100)\r",
+        "\t*(1-${dcoptimizer_loss}/100)\r",
+        "\t)*100; \r",
+        "};\r",
+        ""
+    ],
+    "Callbacks": [
+        "function bifacial_mismatch_enable() {\r",
+        "\tcalculate_mismatch = value('calculate_bifacial_electrical_mismatch') == 1;\r",
+        "\tenable('subarray1_electrical_mismatch', is_bifacial() && !calculate_mismatch);\r",
+        "\tn_subarrays_max = 4;\r",
+        "\tfor (i=2;i<=n_subarrays_max;i++) {\r",
+        "\t\tprefix = 'subarray'+to_string(i);\r",
+        "\t\tif (value(prefix+'_enable') == 1) {\r",
+        "\t\t\tenable(prefix + '_electrical_mismatch',  is_bifacial() && !calculate_mismatch);\r",
+        "\t\t}\t\r",
+        "\t}\t\r",
+        "}\r",
+        "\r",
+        "on_load{'PV DC Losses'} = define() {\r",
+        "\tn_subarrays_max = 4;\r",
+        "\tvars = [ 'dcloss',\r",
+        "\t\t     'dcwiring_loss',\r",
+        "\t\t     'diodeconn_loss',\r",
+        "\t\t     'electrical_mismatch',\r",
+        "\t\t     'mismatch_loss',\r",
+        "\t\t     'nameplate_loss',\r",
+        "\t\t     'tracking_loss'];\t\r",
+        "\t\r",
+        "\t// hide inputs for disabled subarrays (always show subarray 1 inputs)\r",
+        "\tfor ( i=2; i<=n_subarrays_max; i++ ) {\r",
+        "\t\tprefix = 'subarray' + to_string(i) + '_';\r",
+        "\t\t// show inputs for enabled subarrays\r",
+        "\t\tif ( value( prefix + 'enable') == 1 )  {\r",
+        "\t\t\tfor (j=0;j<#vars;j++) {\r",
+        "\t\t\t\tshow( prefix + vars[j], 1 );\r",
+        "\t\t\t}\t\r",
+        "\t\t}\r",
+        "\t\t// hide inputs for disabled subarrays\r",
+        "\t\telse {\r",
+        "\t\t\tfor (j=0;j<#vars;j++) {\r",
+        "\t\t\t\tshow( prefix + vars[j], 0 );\r",
+        "\t\t\t}\t\r",
+        "\t\t}\r",
+        "\t}\r",
+        "\trefresh();\r",
+        "\t\r",
+        "\tenable('calculate_bifacial_electrical_mismatch', is_bifacial());\r",
+        "\tbifacial_mismatch_enable(); //this will enable or disable bifacial inputs, so needs to be called even if not bifacial\r",
+        "\t\r",
+        "\tmsg = '';\r",
+        "\tif ( value('subarray2_enable') || value('subarray3_enable') || value('subarray4_enable') ) {\r",
+        "\t\tmsg = 'DC power optimizer loss applies to all subarrays.';\r",
+        "\t}\r",
+        "\tproperty('lbl_dc_optimizer', 'Caption', msg);\t\r",
+        "\r",
+        "};\r",
+        "\r",
+        "on_change{'calculate_bifacial_electrical_mismatch'} = define() {\r",
+        "\tbifacial_mismatch_enable();\r",
+        "};\r",
+        "\r",
+        "on_change{'btn_string_inv'} = define() {\r",
+        "\tvalue('acwiring_loss', 1);\r",
+        "\tfor (i=1; i<=4; i++)\r",
+        "\t{\r",
+        "\t\tprefix = \"subarray\" + to_string(i) + \"_\";\r",
+        "\t\tvalue(prefix + 'mismatch_loss', 2);\r",
+        "\t\tvalue(prefix + 'diodeconn_loss', 0.5);\r",
+        "\t\tvalue(prefix + 'dcwiring_loss', 2);\r",
+        "\t\tvalue(prefix + 'tracking_loss', 0);\r",
+        "\t\tvalue(prefix + 'nameplate_loss', 0);\r",
+        "\t}\t\r",
+        "\tvalue('dcoptimizer_loss', 0);\r",
+        "};\r",
+        "\r",
+        "on_change{'btn_microinverter'} = define() {\r",
+        "\tvalue('acwiring_loss', 1);\r",
+        "\tfor (i=1; i<=4; i++)\r",
+        "\t{\r",
+        "\t\tprefix = \"subarray\" + to_string(i) + \"_\";\r",
+        "\t\tvalue(prefix + 'mismatch_loss', 0);\r",
+        "\t\tvalue(prefix + 'diodeconn_loss', 0.5);\r",
+        "\t\tvalue(prefix + 'dcwiring_loss', 2);\r",
+        "\t\tvalue(prefix + 'tracking_loss', 0);\r",
+        "\t\tvalue(prefix + 'nameplate_loss', 0);\r",
+        "\t}\t\r",
+        "\tvalue('dcoptimizer_loss', 0);\r",
+        "};\r",
+        "\r",
+        "on_change{'btn_dc_opt'} = define() {\r",
+        "\tvalue('acwiring_loss', 1);\r",
+        "\tfor (i=1; i<=4; i++)\r",
+        "\t{\r",
+        "\t\tprefix = \"subarray\" + to_string(i) + \"_\";\r",
+        "\t\tvalue(prefix + 'mismatch_loss', 0);\r",
+        "\t\tvalue(prefix + 'diodeconn_loss', 0.5);\r",
+        "\t\tvalue(prefix + 'dcwiring_loss', 2);\r",
+        "\t\tvalue(prefix + 'tracking_loss', 0);\r",
+        "\t\tvalue(prefix + 'nameplate_loss', 0);\r",
+        "\t}\t\r",
+        "\tvalue('dcoptimizer_loss', 1);\r",
+        "};\r",
+        ""
+    ]
+}

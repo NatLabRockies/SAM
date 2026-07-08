@@ -36,7 +36,8 @@
 			"ppa_escalation": 1,
 			"ppa_multiplier_model": 0,
 			"ppa_price_input": [0.150000],
-			"ppa_soln_mode": 1
+			"ppa_soln_mode": 1,
+			"start_day_of_year": 0
 		},
 		"FinancialParameters": {
 			"analysis_period": 25,
@@ -75,13 +76,20 @@
 			"term_tenor": 18
 		},
 		"SystemCosts": {
-			"om_capacity": [59.380000],
+			"add_om_num_types": 1,
+			"om_batt_capacity_cost": [5.250000],
+			"om_batt_fixed_cost": [0.000000],
+			"om_batt_nameplate": 1200.54,
+			"om_batt_replacement_cost": [280.000000],
+			"om_batt_variable_cost": [0.000000],
+			"om_capacity": [22.000000],
 			"om_capacity_escal": 0,
 			"om_fixed": [0.000000],
 			"om_fixed_escal": 0,
 			"om_production": [0.000000],
 			"om_production_escal": 0,
-			"total_installed_cost": 1.44459e+06
+			"om_replacement_cost_escal": 0,
+			"total_installed_cost": 1.40803e+06
 		},
 		"LandLease": {
 		},
@@ -102,36 +110,41 @@
 			"itc_sta_percent_maxvalue": [99999999999999997748809823456034029568.000000],
 			"ptc_fed_amount": [0.000000],
 			"ptc_fed_escal": 0,
-			"ptc_fed_term": 10,
+			"ptc_fed_term": 0,
 			"ptc_sta_amount": [0.000000],
 			"ptc_sta_escal": 0,
-			"ptc_sta_term": 10
+			"ptc_sta_term": 0
 		},
 		"Depreciation": {
 			"depr_alloc_custom_percent": 0,
-			"depr_alloc_macrs_15_percent": 1.5,
-			"depr_alloc_macrs_5_percent": 90,
-			"depr_alloc_sl_15_percent": 2.5,
-			"depr_alloc_sl_20_percent": 3,
+			"depr_alloc_macrs_15_percent": 0,
+			"depr_alloc_macrs_5_percent": 100,
+			"depr_alloc_sl_15_percent": 0,
+			"depr_alloc_sl_20_percent": 0,
 			"depr_alloc_sl_39_percent": 0,
 			"depr_alloc_sl_5_percent": 0,
-			"depr_bonus_fed": 0,
+			"depr_basis_mat": [
+				[1.000000, 924842.600972, 65.683555, 0.000000, 0.000000, 0.000000],
+				[2.000000, 483185.024307, 34.316445, 1.000000, 1.000000, 0.000000]
+			],
+			"depr_bonus_fed": 100,
 			"depr_bonus_fed_custom": 0,
 			"depr_bonus_fed_macrs_15": 1,
 			"depr_bonus_fed_macrs_5": 1,
-			"depr_bonus_fed_sl_15": 0,
-			"depr_bonus_fed_sl_20": 0,
+			"depr_bonus_fed_sl_15": 1,
+			"depr_bonus_fed_sl_20": 1,
 			"depr_bonus_fed_sl_39": 0,
-			"depr_bonus_fed_sl_5": 0,
-			"depr_bonus_sta": 0,
+			"depr_bonus_fed_sl_5": 1,
+			"depr_bonus_sta": 100,
 			"depr_bonus_sta_custom": 0,
 			"depr_bonus_sta_macrs_15": 1,
 			"depr_bonus_sta_macrs_5": 1,
-			"depr_bonus_sta_sl_15": 0,
-			"depr_bonus_sta_sl_20": 0,
+			"depr_bonus_sta_sl_15": 1,
+			"depr_bonus_sta_sl_20": 1,
 			"depr_bonus_sta_sl_39": 0,
-			"depr_bonus_sta_sl_5": 0,
+			"depr_bonus_sta_sl_5": 1,
 			"depr_custom_schedule": [0.000000],
+			"depr_en_basis_mat": 1,
 			"depr_fedbas_method": 1,
 			"depr_itc_fed_custom": 0,
 			"depr_itc_fed_macrs_15": 0,
@@ -261,10 +274,11 @@
 [0]			],
 			"nm_dollars_applied_ym": [
 [0]			],
-			"utility_bill_w_sys": [0]
+			"utility_bill_w_sys": [0],
+			"utility_bill_wo_sys": [0]
 		},
 		"SystemOutput": {
-			"degradation": [0.500000],
+			"degradation": [0.000000],
 			"gen": [0],
 			"system_capacity": 540
 		},
@@ -274,17 +288,23 @@
 		"Recapitalization": {
 		},
 		"TimeOfDelivery": {
-			"system_use_lifetime_output": 0
+			"system_use_lifetime_output": 1
 		},
 		"ConstructionFinancing": {
-			"construction_financing_cost": 37920.5
+			"construction_financing_cost": 36960.7
 		},
 		"BatterySystem": {
-			"battery_per_kWh": 184
+			"batt_computed_bank_capacity": 1200.54,
+			"batt_replacement_option": 1,
+			"batt_replacement_schedule_percent": [0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000, 0.000000],
+			"battery_per_kWh": 184,
+			"en_batt": 1,
+			"en_standalone_batt": 0,
+			"en_wave_batt": 0
 		},
 		"LCOS": {
 			"batt_salvage_percentage": 0,
-			"battery_total_cost_lcos": 518341
+			"battery_total_cost_lcos": 483185
 		},
 		"ElectricityRates": {
 			"rate_escalation": [0.000000]

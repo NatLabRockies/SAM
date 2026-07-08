@@ -632,6 +632,14 @@ extern "C"
 	SAM_EXPORT void SAM_Geothermal_GeoHourly_specify_pump_work_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
+	 * Set start_day_of_year: Start day of year for TOD periods [0..6]
+	 * options: 0=Monday, 6=Sunday
+	 * constraints: None
+	 * required if: ?=0
+	 */
+	SAM_EXPORT void SAM_Geothermal_GeoHourly_start_day_of_year_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
 	 * Set startup_frac: % thermal power for startup [%]
 	 * options: None
 	 * constraints: None
@@ -927,6 +935,8 @@ extern "C"
 
 	SAM_EXPORT double SAM_Geothermal_GeoHourly_specify_pump_work_nget(SAM_table ptr, SAM_error *err);
 
+	SAM_EXPORT double SAM_Geothermal_GeoHourly_start_day_of_year_nget(SAM_table ptr, SAM_error *err);
+
 	SAM_EXPORT double SAM_Geothermal_GeoHourly_startup_frac_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Geothermal_GeoHourly_startup_time_nget(SAM_table ptr, SAM_error *err);
@@ -979,6 +989,8 @@ extern "C"
 
 	SAM_EXPORT double SAM_Geothermal_Outputs_bottom_hole_pressure_nget(SAM_table ptr, SAM_error *err);
 
+	SAM_EXPORT double SAM_Geothermal_Outputs_brine_effectiveness_nget(SAM_table ptr, SAM_error *err);
+
 	SAM_EXPORT double SAM_Geothermal_Outputs_capacity_factor_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Geothermal_Outputs_condensate_pump_power_nget(SAM_table ptr, SAM_error *err);
@@ -988,6 +1000,8 @@ extern "C"
 	SAM_EXPORT double SAM_Geothermal_Outputs_cw_pump_work_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Geothermal_Outputs_cwflow_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Geothermal_Outputs_dt_rock_well_head_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Geothermal_Outputs_eff_secondlaw_nget(SAM_table ptr, SAM_error *err);
 
@@ -1010,6 +1024,8 @@ extern "C"
 	SAM_EXPORT double SAM_Geothermal_Outputs_lifetime_output_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_Geothermal_Outputs_lp_flash_pressure_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_Geothermal_Outputs_max_brine_effectiveness_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double* SAM_Geothermal_Outputs_monthly_energy_aget(SAM_table ptr, int* length, SAM_error *err);
 

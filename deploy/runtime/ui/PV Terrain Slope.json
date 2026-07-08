@@ -1,0 +1,1100 @@
+{
+    "Name": "PV Terrain Slope",
+    "Width": 1009.0,
+    "Height": 112.0,
+    "FormObjects": {
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "Label12283"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 30.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 75.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 266.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Terrain azimuth (deg)"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "Label1228310"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 30.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 266.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Terrain slope (deg)"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "lbl"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 15.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 980.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Terrain slope angles describe the inclination of the flat, uniformly sloped ground."
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "lbl_terrain"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 792.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 201.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 51.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "GroupBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "object 4"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 6.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 1000.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 104.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "Terrain Slope"
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray1_slope_azm"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 300.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 75.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 2.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray1_slope_tilt"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 300.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray2_slope_azm"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 429.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 75.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 4.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray2_slope_tilt"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 429.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray3_slope_azm"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 558.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 75.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 6.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray3_slope_tilt"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 558.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 5.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray4_slope_azm"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 687.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 75.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 8.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "subarray4_slope_tilt"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 687.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 48.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 7.0
+                }
+            }
+        }
+    },
+    "VarDatabase": {
+        "subarray1_slope_azm": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Slope azimuth 1",
+            "Units": "degrees",
+            "Group": "PV Terrain Slope",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray1_slope_tilt": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Slope tilt 1",
+            "Units": "degrees",
+            "Group": "PV Terrain Slope",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray2_slope_azm": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Slope azimuth 2",
+            "Units": "degrees",
+            "Group": "PV Terrain Slope",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray2_slope_tilt": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Slope tilt 2",
+            "Units": "degrees",
+            "Group": "PV Terrain Slope",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray3_slope_azm": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Slope azimuth 3",
+            "Units": "degrees",
+            "Group": "PV Terrain Slope",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray3_slope_tilt": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Slope tilt 3",
+            "Units": "degrees",
+            "Group": "PV Terrain Slope",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray4_slope_azm": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Slope azimuth 4",
+            "Units": "degrees",
+            "Group": "PV Terrain Slope",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "subarray4_slope_tilt": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Slope tilt 4",
+            "Units": "degrees",
+            "Group": "PV Terrain Slope",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Numeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        }
+    },
+    "Equations": [],
+    "Callbacks": [
+        "function terrain_enable(n_sub) {\r",
+        "\tone_axis_tracking = value('subarray'+to_string(n_sub)+'_track_mode') == 1;\r",
+        "\tbacktracking = value('subarray'+to_string(n_sub)+'_backtrack') == 1;\r",
+        "\tlinear_self_shading = value('subarray'+to_string(n_sub)+'_shade_mode') == 2;\r",
+        "\ten = (one_axis_tracking && backtracking) || linear_self_shading;\r",
+        "\tenable('subarray'+to_string(n_sub)+'_slope_azm', en);\r",
+        "\tenable('subarray'+to_string(n_sub)+'_slope_tilt', en);\r",
+        "\tshow_message = !en;\r",
+        "\tmsg = '';\r",
+        "\tcolor = 'black';\r",
+        "\tif (show_message) {\r",
+        "\t\tmsg = 'Terrain slope requires one-axis tracking with backtracking or linear self-shading.';\r",
+        "\t\tcolor = 'black';\r",
+        "\t}\r",
+        "\tproperty('lbl_terrain','Caption',msg);\r",
+        "\tproperty('lbl_terrain','TextColour',color);\r",
+        "}\r",
+        "\r",
+        "on_load {'PV Terrain Slope'} = define() {\r",
+        "\tn_subarrays_max = 4;\r",
+        "\tvars = [ 'slope_azm',\r",
+        "\t\t'slope_tilt' ];\r",
+        "\r",
+        "\tterrain_enable(1); // subarray 1 always enabled\r",
+        "\t\t\r",
+        "\t// hide inputs for disabled subarrays (always show subarray 1 inputs)\r",
+        "\tfor ( i=2; i<=n_subarrays_max; i++ ) {\r",
+        "\t\tprefix = 'subarray' + to_string(i) + '_';\r",
+        "\t\tfor (j=0;j<#vars;j++) {\r",
+        "\t\t\tshow( prefix + vars[j], value( prefix + 'enable') == 1 );\r",
+        "\t\t}\r",
+        "\t\tterrain_enable(i);\t\r",
+        "\t}\r",
+        "\trefresh();\r",
+        "};"
+    ]
+}

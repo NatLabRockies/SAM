@@ -92,6 +92,12 @@ SAM_EXPORT void SAM_Pvsamv1_Losses_en_snow_model_nset(SAM_table ptr, double numb
 	});
 }
 
+SAM_EXPORT void SAM_Pvsamv1_Losses_snow_array_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_array(ptr, "snow_array", arr, length);
+	});
+}
+
 SAM_EXPORT void SAM_Pvsamv1_Losses_snow_slide_coefficient_nset(SAM_table ptr, double number, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_number(ptr, "snow_slide_coefficient", number);
@@ -329,6 +335,12 @@ SAM_EXPORT void SAM_Pvsamv1_Losses_transformer_no_load_loss_nset(SAM_table ptr, 
 SAM_EXPORT void SAM_Pvsamv1_Losses_transmission_loss_nset(SAM_table ptr, double number, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_number(ptr, "transmission_loss", number);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_Losses_use_snow_weather_file_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "use_snow_weather_file", number);
 	});
 }
 
@@ -3716,6 +3728,12 @@ SAM_EXPORT void SAM_Pvsamv1_BatteryDispatch_dispatch_manual_system_charge_first_
 	});
 }
 
+SAM_EXPORT void SAM_Pvsamv1_BatteryDispatch_start_day_of_year_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "start_day_of_year", number);
+	});
+}
+
 SAM_EXPORT void SAM_Pvsamv1_SystemCosts_om_batt_replacement_cost_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_array(ptr, "om_batt_replacement_cost", arr, length);
@@ -3956,6 +3974,12 @@ SAM_EXPORT void SAM_Pvsamv1_ElectricityRates_rate_escalation_aset(SAM_table ptr,
 	});
 }
 
+SAM_EXPORT void SAM_Pvsamv1_ElectricityRates_start_day_of_year_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "start_day_of_year", number);
+	});
+}
+
 SAM_EXPORT void SAM_Pvsamv1_ElectricityRates_ur_annual_min_charge_nset(SAM_table ptr, double number, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_number(ptr, "ur_annual_min_charge", number);
@@ -4142,6 +4166,60 @@ SAM_EXPORT void SAM_Pvsamv1_GridLimits_grid_interconnection_limit_kwac_nset(SAM_
 	});
 }
 
+SAM_EXPORT void SAM_Pvsamv1_SpectralCorrection_celltech_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "celltech", number);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_SpectralCorrection_coeff_inputs_king_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_array(ptr, "coeff_inputs_king", arr, length);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_SpectralCorrection_coeff_inputs_lee_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_array(ptr, "coeff_inputs_lee", arr, length);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_SpectralCorrection_coeff_inputs_pelland_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_array(ptr, "coeff_inputs_pelland", arr, length);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_SpectralCorrection_max_abs_airmass_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "max_abs_airmass", number);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_SpectralCorrection_max_prec_water_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "max_prec_water", number);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_SpectralCorrection_min_abs_airmass_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "min_abs_airmass", number);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_SpectralCorrection_min_prec_water_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "min_prec_water", number);
+	});
+}
+
+SAM_EXPORT void SAM_Pvsamv1_SpectralCorrection_spectral_correction_model_choice_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "spectral_correction_model_choice", number);
+	});
+}
+
 SAM_EXPORT void SAM_Pvsamv1_HybridCosts_degradation_aset(SAM_table ptr, double* arr, int length, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_array(ptr, "degradation", arr, length);
@@ -4319,6 +4397,16 @@ SAM_EXPORT double SAM_Pvsamv1_Losses_en_snow_model_nget(SAM_table ptr, SAM_error
 	translateExceptions(err, [&]{
 	if (!ssc_data_get_number(ptr, "en_snow_model", &result))
 		make_access_error("SAM_Pvsamv1", "en_snow_model");
+	});
+	return result;
+}
+
+SAM_EXPORT double* SAM_Pvsamv1_Losses_snow_array_aget(SAM_table ptr, int* length, SAM_error *err){
+	double* result = nullptr;
+	translateExceptions(err, [&]{
+	result = ssc_data_get_array(ptr, "snow_array", length);
+	if (!result)
+		make_access_error("SAM_Pvsamv1", "snow_array");
 	});
 	return result;
 }
@@ -4683,6 +4771,15 @@ SAM_EXPORT double SAM_Pvsamv1_Losses_transmission_loss_nget(SAM_table ptr, SAM_e
 	translateExceptions(err, [&]{
 	if (!ssc_data_get_number(ptr, "transmission_loss", &result))
 		make_access_error("SAM_Pvsamv1", "transmission_loss");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_Losses_use_snow_weather_file_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "use_snow_weather_file", &result))
+		make_access_error("SAM_Pvsamv1", "use_snow_weather_file");
 	});
 	return result;
 }
@@ -9846,6 +9943,15 @@ SAM_EXPORT double SAM_Pvsamv1_BatteryDispatch_dispatch_manual_system_charge_firs
 	return result;
 }
 
+SAM_EXPORT double SAM_Pvsamv1_BatteryDispatch_start_day_of_year_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "start_day_of_year", &result))
+		make_access_error("SAM_Pvsamv1", "start_day_of_year");
+	});
+	return result;
+}
+
 SAM_EXPORT double* SAM_Pvsamv1_SystemCosts_om_batt_replacement_cost_aget(SAM_table ptr, int* length, SAM_error *err){
 	double* result = nullptr;
 	translateExceptions(err, [&]{
@@ -10225,6 +10331,15 @@ SAM_EXPORT double* SAM_Pvsamv1_ElectricityRates_rate_escalation_aget(SAM_table p
 	return result;
 }
 
+SAM_EXPORT double SAM_Pvsamv1_ElectricityRates_start_day_of_year_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "start_day_of_year", &result))
+		make_access_error("SAM_Pvsamv1", "start_day_of_year");
+	});
+	return result;
+}
+
 SAM_EXPORT double SAM_Pvsamv1_ElectricityRates_ur_annual_min_charge_nget(SAM_table ptr, SAM_error *err){
 	double result;
 	translateExceptions(err, [&]{
@@ -10513,6 +10628,90 @@ SAM_EXPORT double SAM_Pvsamv1_GridLimits_grid_interconnection_limit_kwac_nget(SA
 	translateExceptions(err, [&]{
 	if (!ssc_data_get_number(ptr, "grid_interconnection_limit_kwac", &result))
 		make_access_error("SAM_Pvsamv1", "grid_interconnection_limit_kwac");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_SpectralCorrection_celltech_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "celltech", &result))
+		make_access_error("SAM_Pvsamv1", "celltech");
+	});
+	return result;
+}
+
+SAM_EXPORT double* SAM_Pvsamv1_SpectralCorrection_coeff_inputs_king_aget(SAM_table ptr, int* length, SAM_error *err){
+	double* result = nullptr;
+	translateExceptions(err, [&]{
+	result = ssc_data_get_array(ptr, "coeff_inputs_king", length);
+	if (!result)
+		make_access_error("SAM_Pvsamv1", "coeff_inputs_king");
+	});
+	return result;
+}
+
+SAM_EXPORT double* SAM_Pvsamv1_SpectralCorrection_coeff_inputs_lee_aget(SAM_table ptr, int* length, SAM_error *err){
+	double* result = nullptr;
+	translateExceptions(err, [&]{
+	result = ssc_data_get_array(ptr, "coeff_inputs_lee", length);
+	if (!result)
+		make_access_error("SAM_Pvsamv1", "coeff_inputs_lee");
+	});
+	return result;
+}
+
+SAM_EXPORT double* SAM_Pvsamv1_SpectralCorrection_coeff_inputs_pelland_aget(SAM_table ptr, int* length, SAM_error *err){
+	double* result = nullptr;
+	translateExceptions(err, [&]{
+	result = ssc_data_get_array(ptr, "coeff_inputs_pelland", length);
+	if (!result)
+		make_access_error("SAM_Pvsamv1", "coeff_inputs_pelland");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_SpectralCorrection_max_abs_airmass_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "max_abs_airmass", &result))
+		make_access_error("SAM_Pvsamv1", "max_abs_airmass");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_SpectralCorrection_max_prec_water_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "max_prec_water", &result))
+		make_access_error("SAM_Pvsamv1", "max_prec_water");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_SpectralCorrection_min_abs_airmass_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "min_abs_airmass", &result))
+		make_access_error("SAM_Pvsamv1", "min_abs_airmass");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_SpectralCorrection_min_prec_water_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "min_prec_water", &result))
+		make_access_error("SAM_Pvsamv1", "min_prec_water");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_Pvsamv1_SpectralCorrection_spectral_correction_model_choice_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "spectral_correction_model_choice", &result))
+		make_access_error("SAM_Pvsamv1", "spectral_correction_model_choice");
 	});
 	return result;
 }

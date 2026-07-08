@@ -30,10 +30,14 @@
             0.2
         ],
         "analysis_period": 25.0,
-        "annual_albedo": 0.18395068539332039,
+        "annual_albedo": 0.1839506853933204,
         "annual_beam": 7.335643835616439,
+        "annual_csky_beam": 0.0,
+        "annual_csky_diffuse": 0.0,
+        "annual_csky_global": 0.0,
         "annual_diffuse": 1.3484328767123289,
         "annual_global": 5.794761643835617,
+        "annual_precipitation": 0.0,
         "annual_snow": NaN,
         "annual_tdry": 21.938470319634705,
         "annual_twet": NaN,
@@ -51,8 +55,11 @@
         "contingency_percent": 4.0,
         "country": "-",
         "dc_ac_ratio": 1.15,
-        "degradation": [
+        "dc_degradation": [
             0.5
+        ],
+        "degradation": [
+            0.0
         ],
         "elev": 358.0,
         "en_snowloss": 0.0,
@@ -67,7 +74,7 @@
         "grid_per_watt": 0.05,
         "grid_percent": 0.0,
         "grid_total": 27000.0,
-        "in_location": "Type a location name, street address, or lat,lon in decimal degrees",
+        "in_location": "",
         "in_location_list": "15458 Denver W Pkwy, Golden CO 804041|phoenix,az|45.5,-120.9|Manaus,Brazil",
         "in_location_options": 0.0,
         "in_nsrdb_options": 0.0,
@@ -89,7 +96,7 @@
         "inverter_total": 27000.0,
         "inverterarray_power": 469.5652173913044,
         "is_advanced": 0.0,
-        "land_area_value": 2.3409962811973519,
+        "land_area_value": 2.340996281197352,
         "land_fixed": 0.0,
         "land_per_acre": 0.0,
         "land_per_watt": 0.0,
@@ -122,7 +129,7 @@
         "module_power": 540.0,
         "module_total": 232200.0,
         "module_type": 0.0,
-        "modulearray_area": 2842.1052631578947,
+        "modulearray_area": 2842.105263157895,
         "modulearray_power": 540.0,
         "om_capacity": [
             22.0
@@ -190,7 +197,6 @@
             0.0
         ],
         "solar_data_file_name": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
-        "solar_data_file_name_load": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
         "solar_data_source": "NSRDB",
         "solar_resource": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy",
         "solar_resource_file": "phoenix_az_33.450495_-111.983688_psmv3_60_tmy.csv",
@@ -199,24 +205,24 @@
         "step": 3600.0,
         "subtotal_direct": 680400.0,
         "system_capacity": 540.0,
-        "system_use_lifetime_output": 0.0,
+        "system_use_lifetime_output": 1.0,
         "tilt": 20.0,
         "total_direct_cost": 707616.0,
         "total_indirect_cost": 205200.0,
         "total_installed_cost": 948196.8,
-        "total_land_area": 2.3409962811973519,
-        "total_module_area": 2842.1052631578947,
+        "total_land_area": 2.340996281197352,
+        "total_module_area": 2842.105263157895,
         "tz": -7.0,
-        "ui_ac_capacity": 0.46956521739130438,
-        "ui_array_land_area_acres": 2.3409962811973519,
-        "ui_array_land_area_ha": 0.9473690460319911,
+        "ui_ac_capacity": 0.4695652173913044,
+        "ui_array_land_area_acres": 2.340996281197352,
+        "ui_array_land_area_ha": 0.9473690460319912,
         "ui_array_land_area_multiplier": 1.0,
         "ui_land_area_additional": 0.0,
         "ui_land_area_additional_units": 0.0,
         "ui_land_area_per_mw": 0.0,
         "ui_step_minutes": 60.0,
-        "ui_total_land_area_ha": 0.9473690460319911,
-        "ui_total_module_area": 2842.1052631578947,
+        "ui_total_land_area_ha": 0.9473690460319912,
+        "ui_total_module_area": 2842.105263157895,
         "ui_total_module_area_acres": 0.7022988843592055,
         "ui_total_module_area_ha": 0.28421052631578949,
         "ui_use_acre_per_mw": 0.0,
@@ -229,6 +235,9 @@
     "Wind": {
         "a_error_test_number": 17.345,
         "a_error_test_string": "\"default err msg\"",
+        "ac_degradation": [
+            0.64
+        ],
         "adjust": 0.0,
         "adjust_constant": 0.0,
         "adjust_en_periods": 0.0,
@@ -258,17 +267,14 @@
         ],
         "desired_farm_size": 5.0,
         "elec_eff_loss": 1.91,
-        "elec_loss_total": 2.0080899999999959,
+        "elec_loss_total": 2.008089999999996,
         "elec_parasitic_loss": 0.1,
         "env_degrad_loss": 1.8,
         "env_env_loss": 0.4,
         "env_exposure_loss": 0.0,
         "env_icing_loss": 0.21,
         "env_loss_total": 2.398195120000002,
-        "est_bos_cost": 0.0,
-        "est_turbine_cost": 0.0,
         "inflation_rate": 2.5,
-        "install_type": 0.0,
         "om_capacity": [
             39.0
         ],
@@ -288,7 +294,6 @@
         "ops_strategies_loss": 0.0,
         "reference_capacity": 100.0,
         "reference_number_turbines": 1.0,
-        "reference_resource_file": "AZ Eastern-Rolling Hills.srw",
         "reference_sales_tax_percent": 5.0,
         "resource_definition_type": 0.0,
         "rows": 1.0,
@@ -299,12 +304,12 @@
         "specify_label": 0.0,
         "step": 3600.0,
         "system_capacity": 100.0,
-        "system_use_lifetime_output": 0.0,
+        "system_use_lifetime_output": 1.0,
         "total_installed_cost": 605500.0,
         "total_installed_cost_per_kw": 6055.0,
         "turb_generic_loss": 1.7,
         "turb_hysteresis_loss": 0.4,
-        "turb_loss_total": 3.9544963841199989,
+        "turb_loss_total": 3.954496384119999,
         "turb_perf_loss": 1.1,
         "turb_specific_loss": 0.81,
         "turbine_cost_fixed": 0.0,
@@ -9349,7 +9354,7 @@
         "batt_cell_power_charge_max": 2.0,
         "batt_cell_power_discharge_max": 2.0,
         "batt_chem": 1.0,
-        "batt_computed_bank_capacity": 1200.5431199999999,
+        "batt_computed_bank_capacity": 1200.54312,
         "batt_computed_series": 126.0,
         "batt_computed_stacks_series": 0.0,
         "batt_computed_strings": 1064.0,
@@ -10329,9 +10334,9 @@
         "batt_minimum_modetime": 10.0,
         "batt_num_cells": 134064.0,
         "batt_power_charge_max_kwac": 312.64143749999996,
-        "batt_power_charge_max_kwdc": 300.13577999999998,
+        "batt_power_charge_max_kwdc": 300.13578,
         "batt_power_discharge_max_kwac": 288.1303487999999,
-        "batt_power_discharge_max_kwdc": 300.13577999999998,
+        "batt_power_discharge_max_kwdc": 300.13578,
         "batt_pv_ac_forecast": [
             0.0
         ],
@@ -10374,7 +10379,7 @@
         "batt_ui_bank_voltage": 501.48,
         "batt_ui_cell_voltage": 3.98,
         "batt_ui_inverter_eff": 96.0,
-        "batt_ui_nominal_bank_power": 300.13577999999998,
+        "batt_ui_nominal_bank_power": 300.13578,
         "batt_unit_capacity": 400.0,
         "batt_unit_surface_area": 30.0,
         "batt_user_specified_weather_file_peak_shaving": "",
@@ -10406,13 +10411,13 @@
                 0.5
             ]
         ],
-        "batt_volume": 14.640769756097559,
-        "battery_energy": 1200.5431199999999,
+        "batt_volume": 14.64076975609756,
+        "battery_energy": 1200.54312,
         "battery_indirect_cost_percent": 0.0,
         "battery_losses_shown": 0.0,
         "battery_per_kW": 667.0,
         "battery_per_kWh": 184.0,
-        "battery_power": 300.13577999999998,
+        "battery_power": 300.13578,
         "battery_thermal_shown": 0.0,
         "battery_total": 421090.49934,
         "battery_total_cost_lcos": 421090.49934,
@@ -11762,6 +11767,7 @@
         "en_wave_batt": 0.0,
         "grid_interconnection_limit_kwac": 20000.0,
         "inflation_rate": 2.5,
+        "lbl_btm_dispatch_message": "",
         "load": [
             65.6374,
             62.5244,
@@ -20539,7 +20545,7 @@
         "om_batt_fixed_cost": [
             0.0
         ],
-        "om_batt_nameplate": 1200.5431199999999,
+        "om_batt_nameplate": 1200.54312,
         "om_batt_replacement_cost": [
             280.0
         ],
@@ -20611,11 +20617,15 @@
         "ui_step_minutes": 60.0
     },
     "Hybrid": {
-        "ac_nameplate": 469.565,
+        "ac_nameplate": 469.5652173913044,
         "analysis_period": 25.0,
         "analysis_period_warning": "",
         "annual_crit": 0.0,
         "annual_peak": 274.231,
+        "batt_basis_cost": 421090.49934,
+        "batt_itc_basis_cost_fed_include": 1.0,
+        "batt_itc_basis_cost_sta_include": 1.0,
+        "batt_itc_basis_percent": 21.323334390530769,
         "batt_minimum_outage_SOC": 10.0,
         "batt_power_discharge_max_kwac": 288.1303487999999,
         "batt_replacement_option": 1.0,
@@ -20681,7 +20691,7 @@
         "const_per_principal4": 0.0,
         "const_per_principal5": 0.0,
         "const_per_principal_total": 1974787.29934,
-        "const_per_total1": 51838.166607675004,
+        "const_per_total1": 51838.16660767501,
         "const_per_total2": 0.0,
         "const_per_total3": 0.0,
         "const_per_total4": 0.0,
@@ -20691,7 +20701,7 @@
         "const_per_upfront_rate3": 0.0,
         "const_per_upfront_rate4": 0.0,
         "const_per_upfront_rate5": 0.0,
-        "construction_financing_cost": 51838.166607675004,
+        "construction_financing_cost": 51838.16660767501,
         "cost_debt_closing": 0.0,
         "cost_debt_fee": 2.75,
         "cost_other_financing": 0.0,
@@ -29477,6 +29487,10 @@
         "crit_load_user_data": [
             0.0
         ],
+        "custom_generation_basis_cost": 0.0,
+        "customgeneration_itc_basis_cost_fed_include": 0.0,
+        "customgeneration_itc_basis_cost_sta_include": 0.0,
+        "customgeneration_itc_basis_percent": 0.0,
         "debt_message": "",
         "debt_option": 1.0,
         "debt_percent": 60.0,
@@ -29488,26 +29502,63 @@
         "depr_alloc_sl_20_percent": 0.0,
         "depr_alloc_sl_39_percent": 0.0,
         "depr_alloc_sl_5_percent": 0.0,
-        "depr_bonus_fed": 0.0,
+        "depr_allocation_choice": 0.0,
+        "depr_basis_mat": [
+            [
+                1.0,
+                948196.8,
+                48.015135620778,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                2.0,
+                605500.0,
+                30.661529988691244,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                3.0,
+                421090.49934,
+                21.323334390530769,
+                1.0,
+                1.0,
+                0.0
+            ],
+            [
+                6.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        ],
+        "depr_bonus_fed": 100.0,
         "depr_bonus_fed_custom": 0.0,
         "depr_bonus_fed_macrs_15": 0.0,
         "depr_bonus_fed_macrs_5": 1.0,
-        "depr_bonus_fed_sl_15": 0.0,
-        "depr_bonus_fed_sl_20": 0.0,
+        "depr_bonus_fed_sl_15": 1.0,
+        "depr_bonus_fed_sl_20": 1.0,
         "depr_bonus_fed_sl_39": 0.0,
-        "depr_bonus_fed_sl_5": 0.0,
-        "depr_bonus_sta": 0.0,
+        "depr_bonus_fed_sl_5": 1.0,
+        "depr_bonus_sta": 100.0,
         "depr_bonus_sta_custom": 0.0,
         "depr_bonus_sta_macrs_15": 0.0,
         "depr_bonus_sta_macrs_5": 1.0,
-        "depr_bonus_sta_sl_15": 0.0,
-        "depr_bonus_sta_sl_20": 0.0,
+        "depr_bonus_sta_sl_15": 1.0,
+        "depr_bonus_sta_sl_20": 1.0,
         "depr_bonus_sta_sl_39": 0.0,
-        "depr_bonus_sta_sl_5": 0.0,
+        "depr_bonus_sta_sl_5": 1.0,
         "depr_custom_schedule": [
             0.0
         ],
+        "depr_en_basis_mat": 1.0,
         "depr_fedbas_method": 1.0,
+        "depr_itc_fed_capex": 0.0,
         "depr_itc_fed_custom": 0.0,
         "depr_itc_fed_macrs_15": 0.0,
         "depr_itc_fed_macrs_5": 1.0,
@@ -29515,6 +29566,7 @@
         "depr_itc_fed_sl_20": 0.0,
         "depr_itc_fed_sl_39": 0.0,
         "depr_itc_fed_sl_5": 0.0,
+        "depr_itc_sta_capex": 0.0,
         "depr_itc_sta_custom": 0.0,
         "depr_itc_sta_macrs_15": 0.0,
         "depr_itc_sta_macrs_5": 1.0,
@@ -38351,6 +38403,10 @@
         ],
         "flip_target_percent": 11.0,
         "flip_target_year": 20.0,
+        "fuel_cell_basis_cost": 0.0,
+        "fuel_cell_itc_basis_cost_fed_include": 0.0,
+        "fuel_cell_itc_basis_cost_sta_include": 0.0,
+        "fuel_cell_itc_basis_percent": 0.0,
         "grid_curtailment": [
             1e38,
             1e38,
@@ -47117,9 +47173,13 @@
         "grid_outage": [
             0.0
         ],
-        "host_nominal_discount_rate": 9.060000000000003,
+        "host_nominal_discount_rate": 9.060000000000004,
         "host_real_discount_rate": 6.4,
+        "hybrid_basis_cost": 0.0,
         "hybrid_capital_cost": 0.0,
+        "hybrid_itc_basis_cost_fed_include": 0.0,
+        "hybrid_itc_basis_cost_sta_include": 0.0,
+        "hybrid_itc_basis_percent": 0.0,
         "ibi_fed_amount": 0.0,
         "ibi_fed_amount_deprbas_fed": 0.0,
         "ibi_fed_amount_deprbas_sta": 0.0,
@@ -47167,6 +47227,14 @@
         "inflation_rate": 2.5,
         "insurance_rate": 0.0,
         "is_btm": 0.0,
+        "itc_basis_cost": 0.0,
+        "itc_basis_cost_capex_fed": 421090.49934,
+        "itc_basis_cost_capex_sta": 421090.49934,
+        "itc_basis_cost_percent_fed": 21.323334390530769,
+        "itc_basis_cost_percent_sta": 21.323334390530769,
+        "itc_basis_depreciation_allocation": 0.0,
+        "itc_basis_percent_depr": 21.323334390530769,
+        "itc_basis_percent_input": 0.0,
         "itc_fed_amount": [
             0.0
         ],
@@ -47180,6 +47248,7 @@
         "itc_fed_percent_maxvalue": [
             1e38
         ],
+        "itc_qualification_choice": 0.0,
         "itc_sta_amount": [
             0.0
         ],
@@ -65360,7 +65429,7 @@
             33.5754
         ],
         "loan_moratorium": 0.0,
-        "mera_cost1": 56956.50000000001,
+        "mera_cost1": 56956.52173913044,
         "mera_cost2": 0.0,
         "mera_cost3": 0.0,
         "mera_name1": "Replacement Reserve 1",
@@ -65382,7 +65451,9 @@
             156.2,
             184.05
         ],
-        "nominal_discount_rate": 9.060000000000003,
+        "nominal_discount_rate": 9.060000000000004,
+        "non_itc_basis_depreciation_allocation": 0.0,
+        "non_itc_basis_percent_depr": 78.67666560946924,
         "normalize_to_utility_bill": 0.0,
         "om_capacity": 0.0,
         "om_fixed": 0.0,
@@ -65446,12 +65517,17 @@
             0.0
         ],
         "ptc_fed_escal": 0.0,
-        "ptc_fed_term": 10.0,
+        "ptc_fed_term": 0.0,
         "ptc_sta_amount": [
             0.0
         ],
         "ptc_sta_escal": 0.0,
-        "ptc_sta_term": 10.0,
+        "ptc_sta_term": 0.0,
+        "pv_basis_cost": 948196.8,
+        "pv_itc_basis_cost": 0.0,
+        "pv_itc_basis_cost_fed_include": 0.0,
+        "pv_itc_basis_cost_sta_include": 0.0,
+        "pv_itc_basis_percent": 48.015135620778,
         "pv_total_installed_cost": 948196.8,
         "rate_escalation": [
             0.0
@@ -65467,11 +65543,16 @@
         "show_DebtConstDSCR": 1.0,
         "show_ReserveAccounts": 1.0,
         "show_construction_period": 1.0,
+        "show_depr_alloc": 1.0,
+        "show_itc_qualification": 1.0,
         "solution_mode_message": "",
+        "start_day_of_year": 3.335046e-317,
+        "start_day_of_year_load_ui": 3.335046e-317,
+        "start_day_of_year_tod_ui": 3.335046e-317,
         "state_tax_rate": [
             7.0
         ],
-        "system_capacity": 569.565,
+        "system_capacity": 569.5652173913044,
         "term_int_rate": 7.0,
         "term_tenor": 18.0,
         "tod_library": "Uniform Dispatch",
@@ -65481,9 +65562,16 @@
         "ui_battery_cost": 421090.49934,
         "ui_customgeneration_capacity": 0.0,
         "ui_customgeneration_cost": 0.0,
+        "ui_depr_alloc_custom_percent": 0.0,
+        "ui_depr_alloc_macrs_15_percent": 0.0,
+        "ui_depr_alloc_macrs_5_percent": 0.0,
+        "ui_depr_alloc_sl_15_percent": 0.0,
+        "ui_depr_alloc_sl_20_percent": 0.0,
+        "ui_depr_alloc_sl_39_percent": 0.0,
+        "ui_depr_alloc_sl_5_percent": 0.0,
         "ui_fuel_cell_capacity": 0.0,
         "ui_fuel_cell_cost": 0.0,
-        "ui_hyb_pv_capacity": 469.565,
+        "ui_hyb_pv_capacity": 469.5652173913044,
         "ui_pv_cost": 948196.8,
         "ui_wacc": 6.709740000000002,
         "ui_wind_cost": 605500.0,
@@ -66884,7 +66972,7 @@
                 1.0,
                 1e38,
                 0.0,
-                0.05,
+                0.1599999964237213,
                 0.0
             ],
             [
@@ -66892,7 +66980,7 @@
                 1.0,
                 1e38,
                 0.0,
-                0.075,
+                0.10000000149011612,
                 0.0
             ],
             [
@@ -66900,7 +66988,7 @@
                 1.0,
                 1e38,
                 0.0,
-                0.06,
+                0.15000000596046449,
                 0.0
             ],
             [
@@ -66908,7 +66996,7 @@
                 1.0,
                 1e38,
                 0.0,
-                0.05,
+                0.10000000149011612,
                 0.0
             ]
         ],
@@ -66971,6 +67059,10 @@
             300.0,
             300.0
         ],
+        "wind_basis_cost": 605500.0,
+        "wind_itc_basis_cost_fed_include": 0.0,
+        "wind_itc_basis_cost_sta_include": 0.0,
+        "wind_itc_basis_percent": 30.661529988691244,
         "wind_system_capacity": 100.0,
         "wind_total_installed_cost": 605500.0
     }

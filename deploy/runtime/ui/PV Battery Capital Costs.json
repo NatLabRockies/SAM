@@ -6841,7 +6841,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 501.0
+                    "Integer": 465.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -6849,7 +6849,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 210.0
+                    "Integer": 246.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -6965,7 +6965,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 501.0
+                    "Integer": 468.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -6973,7 +6973,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 210.0
+                    "Integer": 243.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -9562,8 +9562,7 @@
         "};",
         "",
         "equations{ 'modulearray_area' } = define() {",
-        "\tif ( technology() == 'PVWatts Battery' ) {return 0;}",
-        "\telse {return ${total_module_area};}",
+        "\treturn ${total_module_area};",
         "};",
         "",
         "equations{ 'total_indirect_cost' } = define() {",
@@ -9625,15 +9624,12 @@
         "};",
         "\t",
         "equations { 'battery_energy' } = define () {",
-        "\tif( technology() == 'PV Battery' )",
-        "\t{ return ?${en_batt}[0,${batt_computed_bank_capacity}]; }",
-        "\telse { return ${batt_simple_kwh}; }",
+        "\treturn ?${en_batt}[0,${batt_computed_bank_capacity}];",
+        "",
         "};",
         "",
         "equations { 'battery_power' } = define () {",
-        "\tif( technology() == 'PV Battery' )",
-        "\t{ return  ?${en_batt}[0,${batt_power_discharge_max_kwdc}]; }",
-        "\telse { return ${batt_simple_kw}; }",
+        "\treturn  ?${en_batt}[0,${batt_power_discharge_max_kwdc}];",
         "};",
         "",
         "equations{'battery_total_cost_lcos'} = define() {",

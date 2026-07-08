@@ -106,16 +106,24 @@
     "annual_albedo": 0.217164,
     "annual_beam": 7.36408,
     "annual_crit": 0.0,
+    "annual_csky_beam": 0.0,
+    "annual_csky_diffuse": 0.0,
+    "annual_csky_global": 0.0,
     "annual_diffuse": 1.33978,
     "annual_draw": 73000.0,
     "annual_global": 5.83819,
     "annual_peak": 4.30453,
+    "annual_precipitation": 0.0,
     "annual_snow": NaN,
     "annual_tdry": 18.1261,
     "annual_twet": NaN,
     "annual_wspd": 2.35368,
     "area_coll": 2.98,
     "azimuth": 0.0,
+    "batt_itc_basis_cost": 0.0,
+    "batt_itc_basis_cost_fed_include": 0.0,
+    "batt_itc_basis_cost_sta_include": 0.0,
+    "batt_itc_basis_percent": 0.0,
     "batt_salvage_percentage": 0.0,
     "batt_salvage_value": 0.0,
     "bos": 1000.0,
@@ -17693,6 +17701,27 @@
     "degradation": [
         0.0
     ],
+    "depr_basis_mat": [
+        [
+            1.0,
+            8059.8,
+            100.0,
+            0.0,
+            0.0,
+            7.0
+        ],
+        [
+            2.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            7.0
+        ]
+    ],
+    "depr_en_basis_mat": 1.0,
+    "depr_itc_fed_capex": 0.0,
+    "depr_itc_sta_capex": 0.0,
     "draw": [
         0.0,
         2.36168,
@@ -26545,7 +26574,7 @@
     "ibi_uti_percent_maxvalue": 1e38,
     "ibi_uti_percent_tax_fed": 1.0,
     "ibi_uti_percent_tax_sta": 1.0,
-    "in_location": "Type a location name, street address, or lat,lon in decimal degrees",
+    "in_location": "",
     "in_location_list": "15458 Denver W Pkwy, Golden CO 804041|phoenix,az|45.5,-120.9|Manaus,Brazil",
     "in_location_options": 0.0,
     "in_nsrdb_options": 0.0,
@@ -26557,19 +26586,25 @@
     "irrad_mode": 0.0,
     "is_advanced": 0.0,
     "is_btm": 1.0,
+    "itc_basis_cost_capex_fed": 0.0,
+    "itc_basis_cost_capex_sta": 0.0,
+    "itc_basis_cost_percent_fed": 0.0,
+    "itc_basis_cost_percent_sta": 0.0,
+    "itc_basis_percent_input": 0.0,
     "itc_fed_amount": [
         0.0
     ],
     "itc_fed_amount_deprbas_fed": 1.0,
     "itc_fed_amount_deprbas_sta": 1.0,
     "itc_fed_percent": [
-        30.0
+        0.0
     ],
     "itc_fed_percent_deprbas_fed": 1.0,
     "itc_fed_percent_deprbas_sta": 1.0,
     "itc_fed_percent_maxvalue": [
         1e38
     ],
+    "itc_qualification_choice": 0.0,
     "itc_sta_amount": [
         0.0
     ],
@@ -44226,12 +44261,12 @@
         0.0
     ],
     "ptc_fed_escal": 0.0,
-    "ptc_fed_term": 10.0,
+    "ptc_fed_term": 0.0,
     "ptc_sta_amount": [
         0.0
     ],
     "ptc_sta_escal": 0.0,
-    "ptc_sta_term": 10.0,
+    "ptc_sta_term": 0.0,
     "pump_eff": 0.85,
     "pump_power": 45.0,
     "rate_escalation": [
@@ -53034,11 +53069,9 @@
             0.0
         ]
     ],
-    "show_cash_incentives": 1.0,
-    "show_tax_credits": 1.0,
+    "show_itc_qualification": 1.0,
     "sky_model": 0.0,
     "solar_data_file_name": "tucson_az_32.116521_-110.933042_psmv3_60_tmy.csv",
-    "solar_data_file_name_load": "tucson_az_32.116521_-110.933042_psmv3_60_tmy.csv",
     "solar_data_source": "NSRDB",
     "solar_resource": "tucson_az_32.116521_-110.933042_psmv3_60_tmy",
     "solar_resource_file": "tucson_az_32.116521_-110.933042_psmv3_60_tmy.csv",
@@ -53052,6 +53085,9 @@
     "srcc_test_fluid": 0.0,
     "srcc_test_fluid_display": "Water",
     "srcc_type": "Glazed Flat-Plate",
+    "start_day_of_year": 0.0,
+    "start_day_of_year_belpe_ui": 0.0,
+    "start_day_of_year_load_ui": 0.0,
     "state": "-",
     "state_tax_rate": [
         7.0
@@ -53061,6 +53097,10 @@
     "storage": 600.0,
     "storage_cost_units": 0.0,
     "system_capacity": 3.418059999999999,
+    "system_itc_basis_cost": 8059.8,
+    "system_itc_basis_cost_fed_include": 0.0,
+    "system_itc_basis_cost_sta_include": 0.0,
+    "system_itc_basis_percent": 100.0,
     "system_use_lifetime_output": 0.0,
     "tank_h2d_ratio": 2.0,
     "test_flow": 0.045528,

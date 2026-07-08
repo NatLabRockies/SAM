@@ -325,14 +325,22 @@
     "annual_albedo": 0.217164,
     "annual_beam": 7.36408,
     "annual_crit": 0.0,
+    "annual_csky_beam": 0.0,
+    "annual_csky_diffuse": 0.0,
+    "annual_csky_global": 0.0,
     "annual_diffuse": 1.33978,
     "annual_global": 5.83819,
     "annual_peak": 274.243,
+    "annual_precipitation": 0.0,
     "annual_snow": NaN,
     "annual_tdry": 18.1261,
     "annual_twet": NaN,
     "annual_wspd": 2.35368,
     "azimuth": 0.0,
+    "batt_itc_basis_cost": 0.0,
+    "batt_itc_basis_cost_fed_include": 0.0,
+    "batt_itc_basis_cost_sta_include": 0.0,
+    "batt_itc_basis_percent": 0.0,
     "batt_salvage_percentage": 0.0,
     "batt_salvage_value": 0.0,
     "calc_aperture_area_at_sm_1": 429383.9,
@@ -427,16 +435,71 @@
     "degradation": [
         0.0
     ],
-    "depr_fed_custom": [
+    "depr_alloc_custom_percent": 0.0,
+    "depr_alloc_macrs_15_percent": 0.0,
+    "depr_alloc_macrs_5_percent": 100.0,
+    "depr_alloc_none": 0.0,
+    "depr_alloc_sl_15_percent": 0.0,
+    "depr_alloc_sl_20_percent": 0.0,
+    "depr_alloc_sl_39_percent": 0.0,
+    "depr_alloc_sl_5_percent": 0.0,
+    "depr_allocation_choice": 0.0,
+    "depr_basis_mat": [
+        [
+            1.0,
+            528447654.2770882,
+            100.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        [
+            2.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    ],
+    "depr_bonus_fed": 100.0,
+    "depr_bonus_fed_custom": 0.0,
+    "depr_bonus_fed_macrs_15": 1.0,
+    "depr_bonus_fed_macrs_5": 1.0,
+    "depr_bonus_fed_sl_15": 1.0,
+    "depr_bonus_fed_sl_20": 1.0,
+    "depr_bonus_fed_sl_39": 0.0,
+    "depr_bonus_fed_sl_5": 1.0,
+    "depr_bonus_sta": 100.0,
+    "depr_bonus_sta_custom": 0.0,
+    "depr_bonus_sta_macrs_15": 1.0,
+    "depr_bonus_sta_macrs_5": 1.0,
+    "depr_bonus_sta_sl_15": 1.0,
+    "depr_bonus_sta_sl_20": 1.0,
+    "depr_bonus_sta_sl_39": 0.0,
+    "depr_bonus_sta_sl_5": 1.0,
+    "depr_custom_schedule": [
         0.0
     ],
-    "depr_fed_sl_years": 7.0,
-    "depr_fed_type": 1.0,
-    "depr_sta_custom": [
-        0.0
-    ],
-    "depr_sta_sl_years": 7.0,
-    "depr_sta_type": 1.0,
+    "depr_en_basis_mat": 1.0,
+    "depr_fedbas_method": 1.0,
+    "depr_itc_fed_capex": 0.0,
+    "depr_itc_fed_custom": 0.0,
+    "depr_itc_fed_macrs_15": 0.0,
+    "depr_itc_fed_macrs_5": 0.0,
+    "depr_itc_fed_sl_15": 0.0,
+    "depr_itc_fed_sl_20": 0.0,
+    "depr_itc_fed_sl_39": 0.0,
+    "depr_itc_fed_sl_5": 0.0,
+    "depr_itc_sta_capex": 0.0,
+    "depr_itc_sta_custom": 0.0,
+    "depr_itc_sta_macrs_15": 0.0,
+    "depr_itc_sta_macrs_5": 0.0,
+    "depr_itc_sta_sl_15": 0.0,
+    "depr_itc_sta_sl_20": 0.0,
+    "depr_itc_sta_sl_39": 0.0,
+    "depr_itc_sta_sl_5": 0.0,
+    "depr_stabas_method": 1.0,
     "diswos": [
         0.0
     ],
@@ -9285,7 +9348,7 @@
     "ibi_uti_percent_maxvalue": 1e38,
     "ibi_uti_percent_tax_fed": 1.0,
     "ibi_uti_percent_tax_sta": 1.0,
-    "in_location": "Type a location name, street address, or lat,lon in decimal degrees",
+    "in_location": "",
     "in_location_list": "|||",
     "in_location_options": 0.0,
     "in_nsrdb_options": 0.0,
@@ -9294,19 +9357,27 @@
     "insurance_rate": 0.5,
     "is_advanced": 0.0,
     "is_btm": 1.0,
+    "itc_basis_cost_capex_fed": 0.0,
+    "itc_basis_cost_capex_sta": 0.0,
+    "itc_basis_cost_percent_fed": 0.0,
+    "itc_basis_cost_percent_sta": 0.0,
+    "itc_basis_depreciation_allocation": 0.0,
+    "itc_basis_percent_depr": 0.0,
+    "itc_basis_percent_input": 0.0,
     "itc_fed_amount": [
         0.0
     ],
     "itc_fed_amount_deprbas_fed": 1.0,
     "itc_fed_amount_deprbas_sta": 1.0,
     "itc_fed_percent": [
-        30.0
+        0.0
     ],
     "itc_fed_percent_deprbas_fed": 1.0,
     "itc_fed_percent_deprbas_sta": 1.0,
     "itc_fed_percent_maxvalue": [
         1e38
     ],
+    "itc_qualification_choice": 0.0,
     "itc_sta_amount": [
         0.0
     ],
@@ -26951,6 +27022,8 @@
         185.168
     ],
     "nominal_discount_rate": 9.060000000000003,
+    "non_itc_basis_depreciation_allocation": 0.0,
+    "non_itc_basis_percent_depr": 100.0,
     "normalize_to_utility_bill": 0.0,
     "om_capacity": [
         66.0
@@ -27022,12 +27095,12 @@
         0.0
     ],
     "ptc_fed_escal": 0.0,
-    "ptc_fed_term": 10.0,
+    "ptc_fed_term": 0.0,
     "ptc_sta_amount": [
         0.0
     ],
     "ptc_sta_escal": 0.0,
-    "ptc_sta_term": 10.0,
+    "ptc_sta_term": 0.0,
     "qdisp": [
         0.0
     ],
@@ -27040,13 +27113,14 @@
     "salvage_value": 0.0,
     "sca_library": "Solargenix SGX-1",
     "scale_factor": 1.0,
-    "show_cash_incentives": 1.0,
-    "show_tax_credits": 1.0,
+    "show_depr_alloc": 1.0,
+    "show_itc_qualification": 1.0,
     "solar_data_file_name": "tucson_az_32.116521_-110.933042_psmv3_60_tmy.csv",
-    "solar_data_file_name_load": "tucson_az_32.116521_-110.933042_psmv3_60_tmy.csv",
     "solar_data_source": "NSRDB",
     "solar_resource": "tucson_az_32.116521_-110.933042_psmv3_60_tmy",
     "solar_resource_file": "tucson_az_32.116521_-110.933042_psmv3_60_tmy.csv",
+    "start_day_of_year": 0.0,
+    "start_day_of_year_load_ui": 0.0,
     "state": "-",
     "state_tax_rate": [
         7.0
@@ -27054,6 +27128,10 @@
     "station_id": "67345",
     "step": 3600.0,
     "system_capacity": 99900.0,
+    "system_itc_basis_cost": 528447654.2770882,
+    "system_itc_basis_cost_fed_include": 0.0,
+    "system_itc_basis_cost_sta_include": 0.0,
+    "system_itc_basis_percent": 100.0,
     "system_use_lifetime_output": 0.0,
     "tilt": 0.0,
     "total_direct_cost": 451777751.5452941,
@@ -27100,6 +27178,13 @@
             0.0
         ]
     ],
+    "ui_depr_alloc_custom_percent": 0.0,
+    "ui_depr_alloc_macrs_15_percent": 0.0,
+    "ui_depr_alloc_macrs_5_percent": 0.0,
+    "ui_depr_alloc_sl_15_percent": 0.0,
+    "ui_depr_alloc_sl_20_percent": 0.0,
+    "ui_depr_alloc_sl_39_percent": 0.0,
+    "ui_depr_alloc_sl_5_percent": 0.0,
     "ui_design_exact_area_sm_1": 428939.49947033,
     "ui_design_exact_num_scas_sm_1": 912.0550701048906,
     "ui_disp_1_fossil": 0.0,

@@ -556,6 +556,11 @@
 			"tip":  "Use the annual growth rate to model a load that increases from year to year.\n(Use a negative growth rate for a load that decreases.)"
 		},
 		{
+			"name": "tt_start_day",
+			"title": "January 1 Day of Week",
+			"tip":  "Day of week for January 1 in the year represented by the load data.\nUse the default (Monday) unless your simulation is for a specific year."
+		},
+		{
 			"name": "tt_load_scale_monthly",
 			"title": "Monthly Electricity Usage for Scaling",
 			"tip":  "Click Edit Values to scale the load by month to match monthly data from an electricity bill.\nThis will match the total kWh by month to the electricity bill data, but the peak kW will\ndepend on the load you provide and may differ from the peaks reported on the electricity bill."
