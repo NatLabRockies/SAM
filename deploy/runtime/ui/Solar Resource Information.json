@@ -16,7 +16,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 387.0
+                    "Integer": 399.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -348,7 +348,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 360.0
+                    "Integer": 372.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -431,7 +431,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 333.0
+                    "Integer": 345.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1223,7 +1223,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 28.0
+                    "Integer": 43.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,

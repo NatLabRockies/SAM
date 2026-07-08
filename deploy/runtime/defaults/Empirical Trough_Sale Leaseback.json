@@ -19624,7 +19624,7 @@
         0.0
     ],
     "ptc_sta_escal": 0.0,
-    "ptc_sta_term": 10.0,
+    "ptc_sta_term": 0.0,
     "qdisp": [
         0.0
     ],
@@ -19651,8 +19651,8 @@
     "sponsor_operating_margin": 20.0,
     "sponsor_operating_margin_amount": 1998000.0,
     "sponsor_operating_margin_escalation": 2.0,
-    "start_day_of_year": 3.335046e-317,
-    "start_day_of_year_tod_ui": 3.335046e-317,
+    "start_day_of_year": 0.0,
+    "start_day_of_year_tod_ui": 0.0,
     "state": "-",
     "state_tax_rate": [
         7.0

@@ -1,7 +1,7 @@
 {
     "Name": "Financial ITC Qualification Hybrid",
-    "Width": 861.0,
-    "Height": 403.0,
+    "Width": 862.0,
+    "Height": 375.0,
     "FormObjects": {
         "Label": {
             "Visible": 1.0,
@@ -12,11 +12,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 633.0
+                    "Integer": 655.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 150.0
+                    "Integer": 117.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -24,7 +24,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 21.0
+                    "Integer": 24.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -74,11 +74,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 534.0
+                    "Integer": 562.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 150.0
+                    "Integer": 117.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -86,7 +86,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 21.0
+                    "Integer": 24.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -136,11 +136,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 528.0
+                    "Integer": 548.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 126.0
+                    "Integer": 90.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -148,7 +148,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 21.0
+                    "Integer": 24.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -198,11 +198,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 216.0
+                    "Integer": 234.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 198.0
+                    "Integer": 171.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -281,11 +281,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 564.0
+                    "Integer": 591.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 201.0
+                    "Integer": 171.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -293,7 +293,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 21.0
+                    "Integer": 24.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -322,11 +322,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 663.0
+                    "Integer": 684.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 201.0
+                    "Integer": 171.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -334,7 +334,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 21.0
+                    "Integer": 24.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -363,11 +363,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 336.0
+                    "Integer": 354.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 198.0
+                    "Integer": 171.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -446,11 +446,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 441.0
+                    "Integer": 459.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 198.0
+                    "Integer": 171.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -508,11 +508,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 216.0
+                    "Integer": 234.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 279.0
+                    "Integer": 252.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -591,11 +591,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 663.0
+                    "Integer": 684.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 279.0
+                    "Integer": 252.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -603,7 +603,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 21.0
+                    "Integer": 24.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -632,11 +632,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 564.0
+                    "Integer": 591.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 279.0
+                    "Integer": 252.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -644,7 +644,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 21.0
+                    "Integer": 24.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -673,11 +673,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 336.0
+                    "Integer": 354.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 279.0
+                    "Integer": 252.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -756,11 +756,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 441.0
+                    "Integer": 459.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 279.0
+                    "Integer": 252.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -818,11 +818,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 216.0
+                    "Integer": 234.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 252.0
+                    "Integer": 225.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -901,11 +901,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 564.0
+                    "Integer": 591.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 255.0
+                    "Integer": 225.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -913,7 +913,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 21.0
+                    "Integer": 24.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -942,11 +942,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 663.0
+                    "Integer": 684.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 255.0
+                    "Integer": 225.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -954,7 +954,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 21.0
+                    "Integer": 24.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -983,11 +983,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 336.0
+                    "Integer": 354.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 252.0
+                    "Integer": 225.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1066,11 +1066,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 441.0
+                    "Integer": 459.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 252.0
+                    "Integer": 225.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1128,11 +1128,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 216.0
+                    "Integer": 234.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 306.0
+                    "Integer": 279.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1211,11 +1211,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 564.0
+                    "Integer": 591.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 306.0
+                    "Integer": 279.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1223,7 +1223,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 21.0
+                    "Integer": 24.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -1252,11 +1252,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 663.0
+                    "Integer": 684.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 306.0
+                    "Integer": 279.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1264,7 +1264,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 21.0
+                    "Integer": 24.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -1293,11 +1293,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 336.0
+                    "Integer": 354.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 306.0
+                    "Integer": 279.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1376,11 +1376,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 441.0
+                    "Integer": 459.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 306.0
+                    "Integer": 279.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1438,11 +1438,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 495.0
+                    "Integer": 522.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 336.0
+                    "Integer": 309.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1521,11 +1521,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 594.0
+                    "Integer": 615.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 336.0
+                    "Integer": 309.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1604,11 +1604,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 495.0
+                    "Integer": 522.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 363.0
+                    "Integer": 336.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1687,11 +1687,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 594.0
+                    "Integer": 615.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 363.0
+                    "Integer": 336.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1774,11 +1774,11 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 78.0
+                    "Integer": 63.0
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 360.0
+                    "Integer": 387.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -1790,7 +1790,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "See depreciation class allocations below."
+                    "String": "See depreciation class allocations below for ITC qualification."
                 },
                 "TextColour": {
                     "Type": 4.0,
@@ -1836,7 +1836,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 78.0
+                    "Integer": 63.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1844,7 +1844,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 51.0
+                    "Integer": 54.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -1893,7 +1893,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 391.0
+                    "Integer": 364.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -1918,11 +1918,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 105.0
+                    "Integer": 132.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 363.0
+                    "Integer": 336.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1984,7 +1984,7 @@
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 27.0
+                    "Integer": 24.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1992,7 +1992,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 48.0
+                    "Integer": 36.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -2042,11 +2042,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 105.0
+                    "Integer": 132.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 336.0
+                    "Integer": 309.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2104,11 +2104,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 216.0
+                    "Integer": 234.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 171.0
+                    "Integer": 144.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2187,11 +2187,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 564.0
+                    "Integer": 591.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 174.0
+                    "Integer": 144.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2199,7 +2199,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 21.0
+                    "Integer": 24.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -2228,11 +2228,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 663.0
+                    "Integer": 684.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 174.0
+                    "Integer": 144.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2240,7 +2240,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 21.0
+                    "Integer": 24.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -2269,11 +2269,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 336.0
+                    "Integer": 354.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 171.0
+                    "Integer": 144.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2352,11 +2352,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 441.0
+                    "Integer": 459.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 171.0
+                    "Integer": 144.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2414,11 +2414,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 216.0
+                    "Integer": 234.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 225.0
+                    "Integer": 198.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2497,11 +2497,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 564.0
+                    "Integer": 591.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 228.0
+                    "Integer": 198.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2509,7 +2509,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 21.0
+                    "Integer": 24.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -2538,11 +2538,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 663.0
+                    "Integer": 684.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 228.0
+                    "Integer": 198.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2550,7 +2550,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 21.0
+                    "Integer": 24.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -2579,11 +2579,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 336.0
+                    "Integer": 354.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 225.0
+                    "Integer": 198.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2662,11 +2662,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 441.0
+                    "Integer": 459.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 225.0
+                    "Integer": 198.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2738,19 +2738,6 @@
             "Group": "ITC Qualifying Costs",
             "IndexLabels": "",
             "Flags": 3.0,
-            "DefaultValue": 0.0,
-            "UIObject": "CheckBox",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "batt_itc_basis_cost_include": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "",
-            "Units": "",
-            "Group": "ITC Qualifying Costs",
-            "IndexLabels": "",
-            "Flags": 0.0,
             "DefaultValue": 0.0,
             "UIObject": "CheckBox",
             "sscVariableName": "",
@@ -3075,11 +3062,11 @@
         "itc_qualification_choice": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "",
+            "Label": "ITC qualification options",
             "Units": "",
             "Group": "ITC Qualifying Costs",
             "IndexLabels": "Determine ITC qualification from system components|Determine ITC qualification from depreciation class allocations",
-            "Flags": 0.0,
+            "Flags": 3.0,
             "DefaultValue": 0.0,
             "UIObject": "RadioChoice",
             "sscVariableName": "",
@@ -3147,19 +3134,6 @@
             "Flags": 9.0,
             "DefaultValue": 0.0,
             "UIObject": "Numeric",
-            "sscVariableName": "",
-            "sscVariableValue": ""
-        },
-        "system_itc_basis_cost_include": {
-            "Version": 4.0,
-            "Type": 1.0,
-            "Label": "System cost qualifies for ITC",
-            "Units": "",
-            "Group": "ITC Qualifying Costs",
-            "IndexLabels": "",
-            "Flags": 0.0,
-            "DefaultValue": 0.0,
-            "UIObject": "CheckBox",
             "sscVariableName": "",
             "sscVariableValue": ""
         },
@@ -3399,6 +3373,7 @@
     ],
     "Callbacks": [
         "on_load{'Financial ITC Qualification Hybrid'} = define() {\r",
+        "\tcheck_residential();\r",
         "\tset_itc_basis_choice();\r",
         "\titc_basis_depreciation_choice();\r",
         "\tshow_tech_itc();\r",
@@ -3408,6 +3383,15 @@
         "\tset_itc_basis_choice();\r",
         "\titc_basis_depreciation_choice();\r",
         "};\r",
+        "\r",
+        "// residential not avaialble for hybrids, but include this in case we add it in the future\r",
+        "function check_residential() {\r",
+        "\tfin = financing();\r",
+        "\tif (fin == 'Residential') {\r",
+        "\t\tenable('itc_qualification_choice', false);\r",
+        "\t\tvalue('itc_qualification_choice', 0);\r",
+        "\t}\r",
+        "}\r",
         "\r",
         "function show_tech_itc() {\r",
         "\ttech = technology();\r",
@@ -3430,14 +3414,30 @@
         "\r",
         "\r",
         "function set_itc_basis_choice() {\r",
-        "\tchoice = value('itc_qualification_choice');\r",
         "\r",
-        "\t// ui text on depreciation form\r",
+        "\t// residential not available for residential, but include this in case we add it in the future\r",
+        " \tis_depr_fin = financing() != 'Residential';\r",
+        "\r",
+        "\t// ui text on depreciation forms\r",
         "\tmsg = '';\r",
         "\tif (value('itc_qualification_choice') == 0) {\r",
-        "\t\tmsg = 'Allocations are based on system components.';\r",
+        "\t\tmsg = 'Choose \\\"Determine ITC qualification from depreciation class allocations\\\" above to enable these inputs.';\r",
         "\t}\r",
         "\tproperty('lbl_alloc_inputs','Caption',msg);\r",
+        "\r",
+        "\tmsg = 'Choose \\\"Determine ITC qualification from system components\\\" above to enable these inputs.';\r",
+        "\tif (value('itc_qualification_choice') == 0) {\r",
+        "\t\tmsg = 'Depreciation allocations are based on ITC qualifying costs. This option allows for two depreciation classes for ITC qualifying costs and non-qualifying costs. Depreciation basis can be federal ITC qualifying cost or state ITC qualifying cost.';",
+        "\t}\r",
+        "\tproperty('lbl_system_components','Caption',msg);\r",
+        "\r",
+        "\tmsg = 'Applied allocations are from allocation inputs. If bonus depreciation applies, enter federal and state percentages and check the box for each class that qualifies for bonus depreciation.';\r",
+        "\tif (value('itc_qualification_choice') == 0) {\r",
+        "\t\tmsg = 'Applied allocations are from ITC qualification above. If bonus depreciation applies, enter federal and state percentages and check the box for each class that qualifies for bonus depreciation.';\r",
+        "\t}\r",
+        "\tproperty('lbl_applied_allocations','Caption',msg);\r",
+        "\r",
+        "\tchoice = value('itc_qualification_choice');\r",
         "\t\r",
         "\t//Installed Costs Driven Controls\r",
         "\tenable('depr_itc_fed_capex', !choice);\r",
@@ -3458,26 +3458,29 @@
         "\tenable('itc_basis_cost_percent_sta', !choice);\r",
         "\tenable('itc_basis_cost_capex_fed', !choice);\r",
         "\tenable('itc_basis_cost_capex_sta', !choice);\r",
-        "\t\r",
-        "\t//Depreciation Driven Controls\r",
-        "\tenable('depr_itc_fed_macrs_5', choice);\r",
-        "\tenable('depr_itc_sta_macrs_5', choice);\r",
-        "\tenable('depr_itc_fed_macrs_15', choice);\r",
-        "\tenable('depr_itc_sta_macrs_15', choice);\r",
-        "\tenable('depr_itc_fed_sl_5', choice);\r",
-        "\tenable('depr_itc_sta_sl_5', choice);\r",
-        "\tenable('depr_itc_fed_sl_15', choice);\r",
-        "\tenable('depr_itc_sta_sl_15', choice);\r",
-        "\tenable('depr_itc_fed_sl_20', choice);\r",
-        "\tenable('depr_itc_sta_sl_20', choice);\r",
-        "\tenable('depr_itc_fed_sl_39', choice);\r",
-        "\tenable('depr_itc_sta_sl_39', choice);\r",
-        "\tenable('depr_itc_fed_custom', choice);\r",
-        "\tenable('depr_itc_sta_custom', choice);\r",
-        "\tenable('depr_custom_schedule',choice);\r",
         "\tshow('itc_qual_warning', choice);\r",
-        "\t\r",
         "\trefresh();\r",
+        "\r",
+        "\t// Depreciation driven controls\r",
+        "\tif (is_depr_fin) {\r",
+        "\t\tenable('depr_itc_fed_macrs_5', choice);\r",
+        "\t\tenable('depr_itc_sta_macrs_5', choice);\r",
+        "\t\tenable('depr_itc_fed_macrs_15', choice);\r",
+        "\t\tenable('depr_itc_sta_macrs_15', choice);\r",
+        "\t\tenable('depr_itc_fed_sl_5', choice);\r",
+        "\t\tenable('depr_itc_sta_sl_5', choice);\r",
+        "\t\tenable('depr_itc_fed_sl_15', choice);\r",
+        "\t\tenable('depr_itc_sta_sl_15', choice);\r",
+        "\t\tenable('depr_itc_fed_sl_20', choice);\r",
+        "\t\tenable('depr_itc_sta_sl_20', choice);\r",
+        "\t\tenable('depr_itc_fed_sl_39', choice);\r",
+        "\t\tenable('depr_itc_sta_sl_39', choice);\r",
+        "\t\tenable('depr_itc_fed_custom', choice);\r",
+        "\t\tenable('depr_itc_sta_custom', choice);\r",
+        "\t\tis_custom_depr = (value('itc_basis_depreciation_allocation')==6 || value('non_itc_basis_depreciation_allocation')==6);\r",
+        "\t\tenable('depr_custom_schedule',(choice||is_custom_depr));\r",
+        "\t}\r",
+        "\r",
         "}\r",
         "\r",
         "function itc_basis_depreciation_choice() {\r",
