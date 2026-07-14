@@ -3707,7 +3707,7 @@ addpage( [[ {'name'='Battery Dispatch Automated FOM', 'caption'='Automated'} ], 
 //PVWatts + MSPT + Battery
 
 setconfig('PVWatts CSPTowerMoltenSalt Battery Hybrid', 'Single Owner' );
-setmodules( ['pvwattsv8', 'tcsmolten_salt', 'grid', 'utilityrate5', 'singleowner']);
+setmodules( ['pvwattsv8', 'tcsmolten_salt', 'battery', 'grid', 'utilityrate5', 'singleowner']);
 sethybridvariabledependencies([
 { 'IndependentVartableIndex' = 0,'IndependentVariableName' = 'ac_nameplate', 'DependentVartableIndex' = 3,'DependentVariableName' = 'ac_nameplate'},
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'solar_resource_file', 'DependentVartableIndex' = 0,'DependentVariableName' = 'solar_resource_file'}, // solar resource (Pv)

@@ -182,6 +182,9 @@ SSCEXPORT ssc_number_t *ssc_var_get_matrix( ssc_var_t p_var, int *nrows, int *nc
 /** Returns a reference to the ssc_data_t table stored in p_var. */
 SSCEXPORT ssc_data_t ssc_var_get_table( ssc_var_t p_var);
 
+/** Returns the key name of the table at index. */
+SSCEXPORT const char* ssc_data_get_table_key_name(ssc_data_t p_data, int index);
+
 /** Returns a reference to the r-th variable entry in the variant array. */
 SSCEXPORT ssc_var_t ssc_var_get_var_array(ssc_var_t p_var, int r);
 
