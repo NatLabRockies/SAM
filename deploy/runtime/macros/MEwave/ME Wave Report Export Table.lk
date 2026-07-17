@@ -407,7 +407,7 @@ otherinfras = get('other_infrastructure_cost');
 
 //get financial costs
 
-projectContingency = get('project_contingency_budget_cost');
+projectContingency = get('project_contingency_cost');
 //outln('Project Contingency = ' + projectContingency);
 
 insurance = get('insurance_during_construction_cost');
