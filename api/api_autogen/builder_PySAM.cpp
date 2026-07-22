@@ -1,7 +1,7 @@
 /*
 BSD 3-Clause License
 
-Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NREL/SAM/blob/develop/LICENSE
+Copyright (c) Alliance for Energy Innovation, LLC. See also https://github.com/NatLabRockies/SAM/blob/develop/LICENSE
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -988,7 +988,7 @@ void builder_PySAM::create_PySAM_files(const std::string &cmod, const std::strin
     fx_file << "\t:members:\n\n";
 
     std::string cmod_doc = tech_symbol + " is a wrapper for the SSC compute module `cmod_" + cmod;
-    cmod_doc += ".cpp <https://github.com/NREL/ssc/blob/develop/ssc/cmod_" + util::lower_case(cmod) + ".cpp>`_\n\n";
+    cmod_doc += ".cpp <https://github.com/NatLabRockies/ssc/blob/develop/ssc/cmod_" + util::lower_case(cmod) + ".cpp>`_\n\n";
 
     fx_file << cmod_doc;
 
