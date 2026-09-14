@@ -9677,7 +9677,7 @@
         "dscr_maximum_debt_fraction": 100.0,
         "dscr_reserve_months": 0.0,
         "elev": 274.0,
-        "en_batt": 0.0,
+        "en_batt": 1.0,
         "en_electricity_rates": 0.0,
         "en_snowloss": 0.0,
         "en_user_spec_losses": 0.0,
