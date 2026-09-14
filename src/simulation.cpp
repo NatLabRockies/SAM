@@ -595,8 +595,8 @@ bool Simulation::Prepare()
 			if (0 == m_inputs[ndx_hybrid].Get(it->first))
 				m_inputs[ndx_hybrid].Set(it->first, *(it->second));
 	}
+	// Ty's project
 	for (size_t ndx_hybrid = 0; ndx_hybrid < nHybrids; ndx_hybrid++) {
-		// Ty's project
 		m_case->HybridizeForEquations(ndx_hybrid, m_inputs[ndx_hybrid]);
 	}
 
