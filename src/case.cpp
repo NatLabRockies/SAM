@@ -1485,7 +1485,7 @@ void Case::VariableChanged( const wxString &var, size_t ndxHybrid)
 	SendEvent( ce );
 
 	// issue the request for any calculations to be updated as needed
-	Recalculate( var, ndxHybrid);
+	Recalculate( var, ndxHybrid, false);
 }
 
 void Case::VariablesChanged( const wxArrayString &list, size_t ndxHybrid)

@@ -430,7 +430,13 @@ void ActiveInputPage::OnNativeEvent( wxCommandEvent &evt )
 			// SAM 1922 - set eqnCase for ssc_auto_exec var_exists calls
 			SamApp::Window()->SetEquationCase(m_case);
 
-			m_case->Recalculate( obj->GetName(), m_ndxHybrid );
+			try {
+				m_case->Recalculate(obj->GetName(), m_ndxHybrid, false);
+			}
+			catch (std::exception e) {
+				wxLogStatus("Variable " + obj->GetName() + " changed by user interaction, exception:" + e.what());
+				return;
+			}
 
 			// prevent further updates of analysis period dependent variables
 			if (obj->GetName() == "analysis_period")
