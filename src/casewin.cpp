@@ -353,6 +353,29 @@ CaseWindow::~CaseWindow()
 	m_case->RemoveListener( this );
 }
 
+void CaseWindow::RefreshPages()
+{
+	wxArrayString pages = GetInputPages();
+	if (pages.size() > 0) {
+		Freeze();
+		// go through and load all pages to trigger on-load events - addresses SAM issue 1520 and other requests
+		for (int i = 0; i <= m_case->GetConfiguration()->Technology.size() - 1; i++) {
+			for (int j = 0; j < m_case->GetConfiguration()->InputPageGroups[i].size(); j++)
+				SwitchToInputPage(m_case->GetConfiguration()->InputPageGroups[i][j]->SideBarLabel);
+		}
+		// load first page of hybrid and non-hybrid configurations
+		if (m_case->GetConfiguration()->Technology.size() > 1) // hybrid	
+			SwitchToNavigationMenu(m_case->GetConfiguration()->InputPageGroups[m_case->GetConfiguration()->Technology.size() - 1][0]->SideBarLabel);
+		else
+			SwitchToNavigationMenu(pages[0]);
+
+		// reevaluate all equations address SAM #1583
+		m_case->EvaluateEquations();
+
+		Thaw();
+	} //mp trying to not overwrite first page switch at start
+
+}
 
 void CaseWindow::SaveCurrentViewProperties()
 {
@@ -1041,6 +1064,8 @@ void CaseWindow::OnCaseEvent( Case *, CaseEvent &evt )
 		m_pvuncertainty->ConfigurationChanged();
 
 		SamApp::Project().SetModified( true );
+
+		RefreshPages(); // to update pages by calling onload for each page
 
 		m_left_panel->Layout();
 

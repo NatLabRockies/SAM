@@ -95,6 +95,7 @@ public:
 	void ShowPageNote( );
 	void SetPageNote( const wxString &text );
 
+	void RefreshPages();
 	void SaveCurrentViewProperties();
 
 	bool RunBaseCase( bool silent = false, wxString *messages = 0 );
