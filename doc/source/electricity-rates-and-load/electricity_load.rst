@@ -15,7 +15,7 @@ There are three options for specifying the building or facility's electric load:
 
 * :ref:`Calculate Load Data <belpe>` automatically calculates hourly load data for a residential building from a monthly electricity bill, basic building energy parameters, and solar resource data. This option is only available with the residential or third party ownership financial models for performance models that use a solar resource weather file.
 
-.. note:: You can use the Download Electric Load :doc:`macro <../reference/macros>` to automatically import reference residential and commercial building load data from the `Commercial and Residential Hourly Load Profiles for all TMY3 Locations in the United States <https://data.openei.org/submissions/153>`__ to SAM.
+.. note:: You can use the Download Electric Load :doc:`macro <../simulation-options/macros>` to automatically import reference residential and commercial building load data from the `Commercial and Residential Hourly Load Profiles for all TMY3 Locations in the United States <https://data.openei.org/submissions/153>`__ to SAM.
 
    For estimates of roof area available for different commercial building types, see the table at https://www.energy.gov/eere/buildings/commercial-reference-buildings and divide the total building area by the number of floors.
 
@@ -172,7 +172,7 @@ For hourly data, SAM requires a column of 8,760 data rows, where each row contai
 
 The load data time convention should follow the :doc:`weather file time convention <../weather-data/weather_time_convention>`. SAM assumes that January first is a Monday, defines weekdays as Monday-Friday and weekends as Saturday-Sunday, and does not account for daylight savings time or leap years.
 
-When you use sub-hourly load data with hourly weather data, SAM uses hourly average load values to for the energy charge calculations, and the sub-hourly data to determine the peak load for demand charges. If you use sub-hourly weather data, you must also use sub-hourly load data with the same time step. (You can use hourly weather data with sub-hourly load data, but not vice versa.) For solar projects, you can use the Advanced Download option on the Solar Resource page to see if 15-minute weather data is available, or you can use the Solar Resource Interpolation :doc:`macro <../reference/macros>` to convert hourly weather data to match the load data time step.
+When you use sub-hourly load data with hourly weather data, SAM uses hourly average load values to for the energy charge calculations, and the sub-hourly data to determine the peak load for demand charges. If you use sub-hourly weather data, you must also use sub-hourly load data with the same time step. (You can use hourly weather data with sub-hourly load data, but not vice versa.) For solar projects, you can use the Advanced Download option on the Solar Resource page to see if 15-minute weather data is available, or you can use the Solar Resource Interpolation :doc:`macro <../simulation-options/macros>` to convert hourly weather data to match the load data time step.
 
 Importing Data from a File
 ~~~~~~~~~~~~~~~~~~~~~~~~~~

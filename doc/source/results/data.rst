@@ -5,7 +5,7 @@ The **Data Tables** tab on the Results page allows you to create a table of time
 
 To view time series data in graphical form, use the :doc:`Time Series <timeseries>` tab.
 
-For descriptions of some key output metrics, see :doc:`Financial Metrics <../financial-metrics/mtf_overview>` and :doc:`Performance Metrics <../performance-metrics/mtp_overview>`.
+For descriptions of some key output metrics, see :doc:`Financial Metrics <../financial-metrics/index>` and :doc:`Performance Metrics <../performance-metrics/index>`.
 
 To create a table of data:
 

@@ -5,7 +5,7 @@ The biopower model is a performance- and cost-modeling tool for assessing the bi
 
 You specify the basic mass and energy balances for the plant's combustor and steam turbine.
 
-SAM generates performance :doc:`metrics <../results/summary>` such as heat rate, thermal efficiency, and capacity factor. It also generates :doc:`financial metrics <../financial-metrics/mtf_overview>` such as the levelized cost of energy (LCOE), net present value (NPV), and payback period.
+SAM generates performance :doc:`metrics <../results/summary>` such as heat rate, thermal efficiency, and capacity factor. It also generates :doc:`financial metrics <../financial-metrics/index>` such as the levelized cost of energy (LCOE), net present value (NPV), and payback period.
 
 Dedicated biomass power facilities are generally on the order of 1 – 60 MW, but SAM can evaluate plants of any size.
 

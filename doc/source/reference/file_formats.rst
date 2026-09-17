@@ -16,7 +16,7 @@ SAM uses the following types of files to store and transfer data. The file forma
   Graphics file format used to export graph images.
 
 **LK**
-  Text file containing :doc:`LK script <macros>`   for automating SAM analyses.
+  Text file containing :doc:`LK script <lk_script>`   for automating SAM analyses.
 
 **PNG**
   Graphics file format used to export graph images.

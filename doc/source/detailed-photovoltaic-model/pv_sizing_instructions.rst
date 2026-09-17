@@ -16,7 +16,7 @@ SAM provides two options on the :doc:`pv_system_size` page for specifying the nu
 
 * If you are modeling a system with one subarray, you can check :ref:`Specify desired size and DC/AC ratio <autosize>`, and see what values SAM calculates for the number modules per string and number of strings in parallel.
 
-For information about how SAM models inverter clipping losses, see :ref:`Inverter Clipping Loss <clipping>`. You can run the System Sizing :doc:`macro <../reference/macros>` to generate a detailed report about clipping losses and the inverter's MPPT performance.
+For information about how SAM models inverter clipping losses, see :ref:`Inverter Clipping Loss <clipping>`. You can run the System Sizing :doc:`macro <../simulation-options/macros>` to generate a detailed report about clipping losses and the inverter's MPPT performance.
 
 The following examples show how to design common system configurations in SAM. The examples show a few modules for a small system for clarity, but the same approach can be used for large systems with thousands of modules and multiple inverters. See :ref:`Microinverters <microinverters>` for a microinverter configuration example.
 
@@ -193,7 +193,7 @@ Detailed Example
 
 This detailed example demonstrates one approach for choosing optimal values for the numbers of modules and inverters based on the array's expected DC output instead of its nameplate capacity. Before you start choose a system size in kWdc and a DC to AC ratio for the system.
 
-.. note:: You can use the :doc:`System Sizing macro<../reference/macros>` to generate a report that you can use to compare the system's operating characteristics to design values, and generate a list of alternative modules that might work with the inverter you chose.
+.. note:: You can use the :doc:`System Sizing macro<../simulation-options/macros>` to generate a report that you can use to compare the system's operating characteristics to design values, and generate a list of alternative modules that might work with the inverter you chose.
 
 **Detailed example steps:**
 

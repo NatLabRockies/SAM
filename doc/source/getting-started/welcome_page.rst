@@ -25,7 +25,7 @@ To open an existing SAM project:
 
 To create or open an LK script:
 
-* Click **New script** to create a new :doc:`script <../reference/macros>`, or click **Open script** to open an existing script stored in a .lk file.
+* Click **New script** to create a new :doc:`script <../simulation-options/macros>`, or click **Open script** to open an existing script stored in a .lk file.
 
 To see or change your registration information:
 

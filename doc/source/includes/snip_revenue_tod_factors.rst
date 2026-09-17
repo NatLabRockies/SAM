@@ -20,7 +20,7 @@ SAM calculates the PPA price for each hour by multiplying the Year 1 :doc:`PPA p
 .. note:: When you click **Apply values from library**, SAM replaces the TOD data with data from the library. If you are using your own TOD data, you can use the **Save data to file** button at the bottom of the Time of Delivery Factors page to save your data.
 
 **Download forecast price data from Cambium**
-  If you do not have time series price data for your analysis, you can download hourly marginal cost data for modeled futures of the U.S. electricity sector from the `NLR Scenario Viewer <https://scenarioviewer.nlr.gov/>`__  . SAM runs the Cambium Time Series Prices :doc:`macro <../reference/macros>`, which prompts you to choose from the available price data, and then automatically sets the following inputs:
+  If you do not have time series price data for your analysis, you can download hourly marginal cost data for modeled futures of the U.S. electricity sector from the `NLR Scenario Viewer <https://scenarioviewer.nlr.gov/>`__  . SAM runs the Cambium Time Series Prices :doc:`macro <../simulation-options/macros>`, which prompts you to choose from the available price data, and then automatically sets the following inputs:
 
 * Chooses the **Specify PPA price** option.
 

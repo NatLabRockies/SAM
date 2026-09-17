@@ -1,7 +1,7 @@
 Weather Data and LK
 ===================
 
-Use the following variables and functions to work with weather files from an :doc:`LK script <../reference/macros>`.
+Use the following variables and functions to work with weather files from an :doc:`LK script <../simulation-options/macros>`.
 
 To specify a file that is in your solar resource library, set ```solar_resource``` to the file name as it appears in the library with no extension:
 

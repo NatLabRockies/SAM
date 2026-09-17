@@ -1,24 +1,9 @@
-Macros and Scripting
-====================
+LK Script
+=========
 
-An LK script is code that you write in a SAM file to automate assigning values to SAM inputs, running simulations, and reading and writing SAM results. A macro is an LK script packaged with SAM that you run from the Macros page.
+An LK script is code that you write in a SAM file to automate assigning values to SAM inputs, running simulations, and reading and writing SAM results.
 
-Running Macros
-~~~~~~~~~~~~~~
-
-SAM comes with a set of LK scripts packaged as macros. Macros are designed to allow you to run scripts without having to write it.
-
-To run a macro:
-
-* Click Macros.
-
-.. image:: ../images/SS_MainWindow-MacrosButton.png
-   :align: center
-   :alt: SS_MainWindow-MacrosButton.png
-
-.. image:: ../images/SS_Macro-Overview.png
-   :align: center
-   :alt: SS_Macro-Overview.png
+.. note:: SAM comes with a set of pre-written LK scripts called macros that you run from the :doc:`../simulation-options/macros` page.
 
 Creating and Editing Scripts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -80,7 +65,7 @@ Note the spaces between each parameter.
 
 For example, in Windows, the command might look like this:
 
-c:/sam/2021.12.02/x64/sam.exe not-a-sam-file c:/test.lk
+c:/sam/2026.7.3/x64/sam.exe not-a-sam-file c:/test.lk
 
 The command starts the SAM desktop application, opens the .lk file in a script editor and runs the script (equivalent to clicking the Run button in the script editor). The middle parameter is required (it can be any string), but does not do anything. You have to manually close SAM when you are finished.
 

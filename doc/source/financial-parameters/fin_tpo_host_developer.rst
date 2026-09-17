@@ -13,7 +13,7 @@ You can use the Third Party Ownership - Host model to:
 
 * Compare the host's "indifference point" to the PPA price to compare the host cost and savings.
 
-You can use the **Indifference vs PPA** :doc:`macro <../reference/macros>` to generate a graph of the :doc:`host indifference point <../financial-metrics/mtf_indifference_point>` and :doc:`PPA price <../financial-metrics/mtf_ppa_price>` over a range of system sizes to help determine how large the system would need to be to be economically feasible from the host's perspective:
+You can use the **Indifference vs PPA** :doc:`macro <../simulation-options/macros>` to generate a graph of the :doc:`host indifference point <../financial-metrics/mtf_indifference_point>` and :doc:`PPA price <../financial-metrics/mtf_ppa_price>` over a range of system sizes to help determine how large the system would need to be to be economically feasible from the host's perspective:
 
 .. image:: ../images/IMG_FinHostIndifferencePlot.png
    :align: center

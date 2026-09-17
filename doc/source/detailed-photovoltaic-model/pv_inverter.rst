@@ -496,7 +496,7 @@ After running a simulation, you can explore the effect of power limiting and vol
 
 For a complete list of detailed photovoltaic model time series outputs, see :doc:`pv_results`.
 
-You can run the **System Sizing** :doc:`macro <../reference/macros>` to generate a detailed report about clipping losses and the inverter's MPPT performance.
+You can run the **System Sizing** :doc:`macro <../simulation-options/macros>` to generate a detailed report about clipping losses and the inverter's MPPT performance.
 
 .. _postsimulationwarnings:
 

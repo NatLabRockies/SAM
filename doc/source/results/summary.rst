@@ -10,9 +10,9 @@ Metrics Table
 
 For a list and descriptions of the variables in the Metrics table, see
 
-* :doc:`Financial Metrics <../financial-metrics/mtf_overview>` for metrics from the financial models, such as :doc:`levelized cost of energy (LCOE) <../financial-metrics/mtf_lcoe>`, :doc:`levelized PPA price <../financial-metrics/mtf_lppa>`, :doc:`payback period <../financial-metrics/mtf_payback>`, :doc:`IRR <../financial-metrics/mtf_irr>`, etc..
+* :doc:`Financial Metrics <../financial-metrics/index>` for metrics from the financial models, such as :doc:`levelized cost of energy (LCOE) <../financial-metrics/mtf_lcoe>`, :doc:`levelized PPA price <../financial-metrics/mtf_lppa>`, :doc:`payback period <../financial-metrics/mtf_payback>`, :doc:`IRR <../financial-metrics/mtf_irr>`, etc..
 
-* :doc:`Performance Metrics <../performance-metrics/mtp_overview>` for metrics from the performance models, such as :doc:`annual energy <../performance-metrics/mtp_annual_energy>`, :doc:`capacity factor <../performance-metrics/mtp_capacity_factor>`, etc.
+* :doc:`Performance Metrics <../performance-metrics/index>` for metrics from the performance models, such as :doc:`annual energy <../performance-metrics/mtp_annual_energy>`, :doc:`capacity factor <../performance-metrics/mtp_capacity_factor>`, etc.
 
 The Metrics table shows financial model results from the :doc:`Cash flow <cashflow>` tab and performance model results. For example, this Metrics table shows results for the detailed photovoltaic performance model and single owner financial model:
 
