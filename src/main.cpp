@@ -2555,10 +2555,10 @@ static HelpWin* gs_helpWin = 0;
 void SamApp::ShowHelp( const wxString &help_context )
 {
     wxString url;
-    url = help_context;
-    if ( url.Left(1) == ":" ) // display things like :about in custom window
+    if ( help_context.Left(1) == ":" ) // display things like :about in custom window
     {
-        wxWindow *modal_active = 0;
+		url = help_context;
+		wxWindow *modal_active = 0;
         wxWindow *nonmodal_tlw = 0;
         for( wxWindowList::iterator wl = wxTopLevelWindows.begin(); wl != wxTopLevelWindows.end(); ++wl )
         {
@@ -2601,6 +2601,7 @@ void SamApp::ShowHelp( const wxString &help_context )
 	{
 		wxFileName fn( SamApp::GetRuntimePath() + "/help/html/" );
 		fn.MakeAbsolute();
+
 		if ( help_context.IsEmpty() )
             url = "file:///" + fn.GetFullPath( wxPATH_NATIVE ) + "index.html";
         else
@@ -3207,7 +3208,7 @@ void ConfigDialog::OnFinTree(wxDataViewEvent &evt)
 
 void ConfigDialog::OnHelp(wxCommandEvent &)
 {
-	SamApp::ShowHelp( "choose_models" );
+	SamApp::ShowHelp( "getting-started/choose_models" );
 }
 
 void ConfigDialog::OnOk( wxCommandEvent & )

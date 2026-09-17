@@ -357,7 +357,7 @@ public:
 	void OnHelp( wxCommandEvent & )
 	{
 #ifndef S3D_STANDALONE
-		SamApp::ShowHelp( "edit_data_table_column" );
+		SamApp::ShowHelp( "window-reference/edit_data_table_column" );
 #endif
 	}
 
@@ -3264,7 +3264,7 @@ public:
 		}
 		else if (evt.GetId() == wxID_HELP)
 		{
-			SamApp::ShowHelp("edit_data_lifetime");
+			SamApp::ShowHelp("window-reference/edit_data_lifetime");
 		}
 	}
 
@@ -5221,7 +5221,7 @@ public:
 		else if (evt.GetId() == IDDD_PASTE)
 			Grid->Paste( wxExtGridCtrl::PASTE_ALL );
 		else if (evt.GetId() == wxID_HELP)
-			SamApp::ShowHelp("edit_data_table_column");
+			SamApp::ShowHelp("window-reference/edit_data_table_column");
 	}
 
 	DECLARE_EVENT_TABLE();

@@ -498,7 +498,7 @@ public:
 
 	void OnHelp( wxCommandEvent & )
 	{
-		SamApp::ShowHelp( "excel_exchange");
+		SamApp::ShowHelp( "window-reference/win_excel_exchange");
 	}
 
 	DECLARE_EVENT_TABLE();

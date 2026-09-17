@@ -841,40 +841,40 @@ wxString ResultsViewer::GetCurrentContext() const
 {
     switch (GetSelection())
     {
-    case 0: return "summary";
-    case 1: return "data";
-    case 2: return "losses";
-    case 3: return "graphs";
-    case 4: return "cashflow";
-    case 5: return "timeseries";
-    case 6: return "profiles";
-    case 7: return "statistics";
-    case 8: return "heatmap";
-    case 9: return "pdfcdf";
-    case 10:
-        // TODO: remove this when uncertainties available for all technologies
-        if (CaseWindow* cw = static_cast<CaseWindow*>(this->GetParent()->GetParent()))
-        {
-            wxString tech_model = cw->GetCase()->GetConfiguration()->TechnologyFullName;
-            if (tech_model == "Wind Power")
-                return "uncertainties";
-            else if (tech_model == "Flat Plate PV" || tech_model == "PV Battery")
-                return "spatial";
-            else
-                return "notices";
-        }
-    case 11:
-        // TODO: remove this when uncertainties available for all technologies
-        if (CaseWindow* cw = static_cast<CaseWindow*>(this->GetParent()->GetParent()))
-        {
-            wxString tech_model = cw->GetCase()->GetConfiguration()->TechnologyFullName;
-            if ( tech_model == "PV Battery")
-                return "dispatch";
-            else
-                return "notices";
-        }
-    case 12: return "notices";
-    default: return "results";
+        case 0: return "results/summary";
+        case 1: return "results/data";
+        case 2: return "results/losses";
+        case 3: return "results/graphs";
+        case 4: return "results/cashflow";
+        case 5: return "results/timeseries";
+        case 6: return "results/profiles";
+        case 7: return "results/statistics";
+        case 8: return "results/heatmap";
+        case 9: return "results/pdfcdf";
+        case 10:
+            // TODO: remove this when uncertainties available for all technologies
+            if (CaseWindow* cw = static_cast<CaseWindow*>(this->GetParent()->GetParent()))
+            {
+                wxString tech_model = cw->GetCase()->GetConfiguration()->TechnologyFullName;
+                if (tech_model == "Wind Power")
+                    return "results/uncertainties";
+                else if (tech_model == "Flat Plate PV" || tech_model == "PV Battery")
+                    return "results/spatial";
+                else
+                    return "results/notices";
+            }
+        case 11:
+            // TODO: remove this when uncertainties available for all technologies
+            if (CaseWindow* cw = static_cast<CaseWindow*>(this->GetParent()->GetParent()))
+            {
+                wxString tech_model = cw->GetCase()->GetConfiguration()->TechnologyFullName;
+                if (tech_model == "PV Battery")
+                    return "results/dispatch";
+                else
+                    return "results/notices";
+            }
+        case 12: return "results/notices";
+        default: return "results/index";
     }
 }
 

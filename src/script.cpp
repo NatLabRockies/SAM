@@ -755,7 +755,7 @@ void SamScriptWindow::OnVariables( wxCommandEvent & )
 
 void SamScriptWindow::OnHelp( )
 {
-	SamApp::ShowHelp( "macros" );
+	SamApp::ShowHelp( "reference/lk_script" );
 }
 
 void SamScriptWindow::OnScriptStarted()

@@ -1760,28 +1760,28 @@ wxString CaseWindow::GetCurrentContext()
 	{
 	case 0: // inputs page
 		if ( m_currentGroup ) id = m_currentGroup->HelpContext;
-		else id = "inputs";
+		else id = "index";
 		break;
 	case 1: // base case results
 		id = m_baseCaseResults->GetCurrentContext();
 		break;
 	case 2: // parametrics
-		id = "parametrics";
+		id = "simulation-options/parametrics";
 		break;
 	case 3:
-		id = "stochastic";
+		id = "simulation-options/stochastic";
 		break;
 	case 4:
-		id = "p50p90";
+		id = "simulation-options/p50p90";
 		break;
 	case 5:
-		id = "macros";
+		id = "simulation-options/macros";
 		break;
 	case 6:
-		id = "pvuncertainty";
+		id = "simulation-options/pvuncertainty";
 		break;
 	default:
-		id = "results";
+		id = "simulation-options/index";
 		break;
 	}
 
