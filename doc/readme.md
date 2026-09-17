@@ -94,17 +94,17 @@ For Windows:
 
 ## Help Context IDs in SAM
 
-SAM uses Help Context IDs to open context-specific Help files from the SAM user interface.
+SAM uses Help context IDs to open context-specific Help files from the SAM user interface.
 
-The Help context ID is a string "chapter-name/topic_name" that points to the folder and file name of the HTML for the Help topic. For example, the Help topic for the behind-the-meter Battery Dispatch input page is "battery-storage/battery_dispatch_btm".
+The Help context ID is a string "chapter-name/topic_name" that points to the folder and file name of the HTML for the Help topic. For example, the Help topic for the behind-the-meter Battery Dispatch input page is "battery-storage/battery_dispatch_btm". 
 
-The Help context ID is the path to the HTML file without the `.html` extension. The extension is added by the `ShowHelp()` function in `SAM/main.cpp`.
+The `SamApp::ShowHelp()` function in `SAM/main.cpp` constructs the correct URL from a Help context ID and opens it in the appropriate browser. 
 
-Help context IDs are defined in different places in the SAM code depending on the context.
+The Help context ID is defined in from different places depending on the context:
+ 
+### Input Pages
 
-### SAM Input Pages
-
-Help context IDs for SAM input pages are defined in `startup.lk`. The `addpage()` function for the input page "help" parameter points to the folder and file name of the HMTL file for the page's Help topic.
+Help context IDs for SAM input pages are defined in `startup.lk`. The `addpage()` function for the input page `help` parameter points to the folder and file name of the HMTL file for the page's Help topic.
 
 For example, for the **Battery Dispatch** page for behind the meter batteries, the help id is defined by the `'help' = 'battery-storage/battery_dispatch_btm'` parameter:
 
@@ -121,9 +121,11 @@ addpage( [[ {'name'='Battery Dispatch Peak Shaving BTM', 'caption'='Peak Shaving
             'exclusive_tabs'=true, 'exclusive_hide'=true, 'bin_name'='Battery' } );
 ```
 
-### SAM Windows
+### Windows
 
-Help IDs for SAM windows are defined by the event handler in the window definition.
+Help context IDs for SAM windows are defined by the event handler in the window definition.
+
+To find all SAM window Help IDs, search the SAM project for "wxID_HELP", or more specifically "case wxID_HELP" and "if (evt.GetId() == wxID_HELP)".
 
 For example, for the "Combine Cases" window (`SAM/combinecases.cpp`):
 
@@ -154,7 +156,11 @@ For the "Edit Losses" window (`SAM/lossadj.cpp`):
 ...
 ```
 
-To find all SAM window Help IDs, search the SAM project for "wxID_HELP", or more specifically "case wxID_HELP" and "if (evt.GetId() == wxID_HELP)".
+## Results Page Tabs and Simulation Options
+
+Help context IDs for tabs on the Results page are defined in `ResultsViewer::GetCurrentContext()` in `results.cpp`.
+
+For simulation options (Parametrics, Stochastic, etc.), Help IDs are defiend in `CaseWindow::GetCurrentContext()` in `casewin.cpp`.
 
 ## Checking for Broken Links
 
@@ -255,7 +261,7 @@ Limit section headings to three levels.
 
 In reStructuredText, headings are identified by underline characters (https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#sections). The character used to underline the text determines the heading level based on the "succession of headings" in each file. This means that each file can use different characters to represent heading levels.
 
-For SAM Help, the convention is to use the order defined below for heading levels. However, if a given file uses a different order, for example (~,-,'), then, for that  file an underline of "~" would be for Heading 1, "-" for Heading 2, and "'" for Heading 3, even if other files use the convention below.
+For SAM Help, the convention is to use the order defined below for heading levels.
 
 ```
 Heading 1: Topic Title
@@ -271,12 +277,12 @@ The section title is for sections of the topic and for labels of group boxes in 
 Heading 3: Subsection Title
 ---------------------------
 
-A subsection title correlates with divider labels in the user interface.
+A subsection title corresponds to a divider label in the user interface.
 
 Heading 2: Another Section Title
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The "~" character now represents Heading 2 because of the order above.
+The "~" represents Heading 2 because of the order established above.
 ```
 
 ## Lists and Step-by-step Instructions
@@ -332,7 +338,7 @@ When creating and editing cross references, you may need to clean and rebuild th
 
 Use `:doc:` for a cross reference to a topic file to create a hyperlink that points to the beginning of the file.
 
-To use the file's title as the hyperlink text:
+To use the file's title as the hyperlink text (omit the path `.rst` from the file name):
 
 ```
 This is a reference to :doc:`path/to/filename`
