@@ -198,7 +198,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../reference/notes.html">Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/excel_exchange.html">Excel Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/libraries.html">Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/macros.html">Macros and Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/lk_script.html">LK Script</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/sdk.html">Software Development Kit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/file_formats.html">File Formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/installation.html">Software Installation</a></li>
@@ -227,12 +227,11 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../simulation-options/index.html">Simulation Options</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../simulation-options/simulation_options.html">Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/parametrics.html">Parametric Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/stochastic.html">Stochastic Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/p50p90.html">P50/P90 Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/pvuncertainty.html">Uncertainty</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../simulation-options/optimization.html">Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulation-options/macros.html">Macros</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/release_notes.html">Release Notes</a></li>
@@ -665,7 +664,6 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../financial-metrics/index.html">Financial Metrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_overview.html">Financial Metrics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_debt_and_equity.html">Debt and Equity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_revenues.html">Electricity Bill and Savings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_indifference_point.html">Indifference Point</a></li>
@@ -682,7 +680,6 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../performance-metrics/index.html">Performance Metrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_overview.html">Performance Metrics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_biomass_usage.html">Annual Biomass Usage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_energy.html">Annual Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_water_usage.html">Annual Water Usage</a></li>
@@ -925,7 +922,7 @@ document.write(`
 <p>SAM can only model systems with one type of module and one type of inverter.</p>
 <p>Choosing an appropriate module and inverter for your system depends on many factors, some of which are outside of the scope of SAM. Finding the right combination of inverter and module to model for your system in SAM will probably require some trial and error and iteration.</p>
 <p>Reference conditions depend on the conditions used to define the parameters on the <a class="reference internal" href="pv_module.html"><span class="doc">Module</span></a> page. For the Sandia and CEC module models, reference conditions are at Standard Test Conditions (STC), which is defined as 1,000 W/m² incident radiation and 25ºC cell temperature.</p>
-<p>You can run the <strong>System Sizing</strong> <a class="reference internal" href="../reference/macros.html"><span class="doc">macro</span></a> to generate a report to help you ensure the system is sized correctly.</p>
+<p>You can run the <strong>System Sizing</strong> <a class="reference internal" href="../simulation-options/macros.html"><span class="doc">macro</span></a> to generate a report to help you ensure the system is sized correctly.</p>
 </div>
 </section>
 <section id="id1">
@@ -1027,7 +1024,7 @@ document.write(`
 <p><em>Subarray Voc (V) = Module Voc (V) × Modules Per String in Subarray</em></p>
 <p><em>Subarray Vmp (V) = Module Vmp (V) × Modules Per String in Subarray</em></p>
 <p>As an initial rule of thumb, choose a number of modules per string so that the string Voc is less than the inverter’s maximum DC voltage rating, and the string Vmp is between the inverter’s minimum and maximum MPPT voltage rating.</p>
-<p>Run a simulation and look at the operating voltages in the results to see how they compare to the voltage ratings and your design requirements. You can also use the System Sizing <a class="reference internal" href="../reference/macros.html"><span class="doc">macro</span></a> to help refine your design.</p>
+<p>Run a simulation and look at the operating voltages in the results to see how they compare to the voltage ratings and your design requirements. You can also use the System Sizing <a class="reference internal" href="../simulation-options/macros.html"><span class="doc">macro</span></a> to help refine your design.</p>
 </dd>
 <dt><strong>Strings in parallel in subarray</strong></dt><dd><p>The number of strings of modules connected in parallel to form a subarray, which along with the number of modules per string in each subarray determines the array nameplate DC capacity.</p>
 <p>For each subarray that has more than one string in parallel, SAM calculates the subarray voltage using the <a class="reference internal" href="#pvmismatchoption"><span class="std std-ref">PV subarray voltage</span></a> mismatch method you choose.</p>

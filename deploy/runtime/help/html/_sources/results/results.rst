@@ -5,10 +5,10 @@ SAM displays tables and graphs of results from the performance and financial mod
 
 For detailed descriptions of key output metrics shown in the Results page tables and graphs, see
 
-* :doc:`Financial Metrics <../financial-metrics/mtf_overview>`
+* :doc:`Financial Metrics <../financial-metrics/index>`
 
 
-* :doc:`Performance Metrics <../performance-metrics/mtp_overview>`
+* :doc:`Performance Metrics <../performance-metrics/index>`
 
 
 For a general description of the Results page with screenshots, see the Getting Started topic :doc:`Results <../getting-started/results_page>`.

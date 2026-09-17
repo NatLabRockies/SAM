@@ -198,7 +198,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../reference/notes.html">Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/excel_exchange.html">Excel Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/libraries.html">Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/macros.html">Macros and Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/lk_script.html">LK Script</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/sdk.html">Software Development Kit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/file_formats.html">File Formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/installation.html">Software Installation</a></li>
@@ -227,12 +227,11 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../simulation-options/index.html">Simulation Options</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../simulation-options/simulation_options.html">Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/parametrics.html">Parametric Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/stochastic.html">Stochastic Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/p50p90.html">P50/P90 Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/pvuncertainty.html">Uncertainty</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../simulation-options/optimization.html">Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulation-options/macros.html">Macros</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/release_notes.html">Release Notes</a></li>
@@ -665,7 +664,6 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../financial-metrics/index.html">Financial Metrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_overview.html">Financial Metrics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_debt_and_equity.html">Debt and Equity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_revenues.html">Electricity Bill and Savings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_indifference_point.html">Indifference Point</a></li>
@@ -682,7 +680,6 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../performance-metrics/index.html">Performance Metrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_overview.html">Performance Metrics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_biomass_usage.html">Annual Biomass Usage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_energy.html">Annual Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_water_usage.html">Annual Water Usage</a></li>
@@ -912,7 +909,7 @@ document.write(`
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you are modeling a supercritical Carbon dioxide (sCO2) cycle, you can use the <strong>sCO2 Cycle Integration</strong> <a class="reference internal" href="../reference/macros.html"><span class="doc">macro</span></a> with the` NLR Supercritical Carbon Dioxide (sCO2) Python model &lt;<a class="github reference external" href="https://github.com/NatLabRockies/SAM/tree/develop/samples/CSP/sco2_analysis_python_V2">NatLabRockies/SAM</a>&gt;`__. SAM 2020.2.29 is the most recent version to include an sCO2 option on the Power Cycle page.</p>
+<p>If you are modeling a supercritical Carbon dioxide (sCO2) cycle, you can use the <strong>sCO2 Cycle Integration</strong> <a class="reference internal" href="../simulation-options/macros.html"><span class="doc">macro</span></a> with the` NLR Supercritical Carbon Dioxide (sCO2) Python model &lt;<a class="github reference external" href="https://github.com/NatLabRockies/SAM/tree/develop/samples/CSP/sco2_analysis_python_V2">NatLabRockies/SAM</a>&gt;`__. SAM 2020.2.29 is the most recent version to include an sCO2 option on the Power Cycle page.</p>
 </div>
 <img alt="SS_MSPT_power-cycle-options.png" class="align-center" src="../_images/SS_MSPT_power-cycle-options.png" />
 <p>The power cycle model is described in the following publications listed on the SAM website at <a class="reference external" href="https://sam.nlr.gov/concentrating-solar-power/csp-publications.html">https://sam.nlr.gov/concentrating-solar-power/csp-publications.html</a>:</p>
@@ -1009,7 +1006,7 @@ document.write(`
 <h2>User Defined Power Cycle<a class="headerlink" href="#user-defined-power-cycle" title="Link to this heading">#</a></h2>
 <p>The user-defined power cycle model requires that you provide data from your own power cycle model that describes the cycle’s performance for a range of operating conditions. If you do not have such data, you should use the Rankine cycle model.</p>
 <p>For a description of the input data requirements, see Neises, T.; Boyd, M. (DRAFT 2021). Description of SAM’s CSP User-defined Power Cycle Model (<a class="reference external" href="https://sam.nlr.gov/images/web_page_files/Neises-DRAFT-user-defined-power-cycle-v4-2021.pdf">PDF 235 KB</a>). It is available with other documentation of SAM’s CSP models on the SAM website at <a class="reference external" href="https://sam.nlr.gov/concentrating-solar-power/csp-publications.html">https://sam.nlr.gov/concentrating-solar-power/csp-publications.html</a>.</p>
-<p>If you are modeling a supercritical Carbon dioxide (sCO2) cycle, you can use the sCO2 Cycle Integration <a class="reference internal" href="../reference/macros.html"><span class="doc">macro</span></a> with the` NLR Supercritical Carbon Dioxide (sCO2) Python model &lt;<a class="github reference external" href="https://github.com/NatLabRockies/SAM/tree/develop/samples/CSP/sco2_analysis_python_V2">NatLabRockies/SAM</a>&gt;`__ to generate input data for the User Defined Power Cycle model.</p>
+<p>If you are modeling a supercritical Carbon dioxide (sCO2) cycle, you can use the sCO2 Cycle Integration <a class="reference internal" href="../simulation-options/macros.html"><span class="doc">macro</span></a> with the` NLR Supercritical Carbon Dioxide (sCO2) Python model &lt;<a class="github reference external" href="https://github.com/NatLabRockies/SAM/tree/develop/samples/CSP/sco2_analysis_python_V2">NatLabRockies/SAM</a>&gt;`__ to generate input data for the User Defined Power Cycle model.</p>
 </section>
 <section id="user-defined-power-cycle-design-parameters">
 <h2>User-defined Power Cycle Design Parameters<a class="headerlink" href="#user-defined-power-cycle-design-parameters" title="Link to this heading">#</a></h2>

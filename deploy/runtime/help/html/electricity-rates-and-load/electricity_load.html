@@ -198,7 +198,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../reference/notes.html">Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/excel_exchange.html">Excel Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/libraries.html">Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/macros.html">Macros and Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/lk_script.html">LK Script</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/sdk.html">Software Development Kit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/file_formats.html">File Formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/installation.html">Software Installation</a></li>
@@ -227,12 +227,11 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../simulation-options/index.html">Simulation Options</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../simulation-options/simulation_options.html">Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/parametrics.html">Parametric Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/stochastic.html">Stochastic Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/p50p90.html">P50/P90 Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/pvuncertainty.html">Uncertainty</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../simulation-options/optimization.html">Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulation-options/macros.html">Macros</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/release_notes.html">Release Notes</a></li>
@@ -665,7 +664,6 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../financial-metrics/index.html">Financial Metrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_overview.html">Financial Metrics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_debt_and_equity.html">Debt and Equity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_revenues.html">Electricity Bill and Savings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_indifference_point.html">Indifference Point</a></li>
@@ -682,7 +680,6 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../performance-metrics/index.html">Performance Metrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_overview.html">Performance Metrics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_biomass_usage.html">Annual Biomass Usage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_energy.html">Annual Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_water_usage.html">Annual Water Usage</a></li>
@@ -921,7 +918,7 @@ document.write(`
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can use the Download Electric Load <a class="reference internal" href="../reference/macros.html"><span class="doc">macro</span></a> to automatically import reference residential and commercial building load data from the <a class="reference external" href="https://data.openei.org/submissions/153">Commercial and Residential Hourly Load Profiles for all TMY3 Locations in the United States</a> to SAM.</p>
+<p>You can use the Download Electric Load <a class="reference internal" href="../simulation-options/macros.html"><span class="doc">macro</span></a> to automatically import reference residential and commercial building load data from the <a class="reference external" href="https://data.openei.org/submissions/153">Commercial and Residential Hourly Load Profiles for all TMY3 Locations in the United States</a> to SAM.</p>
 <p>For estimates of roof area available for different commercial building types, see the table at <a class="reference external" href="https://www.energy.gov/eere/buildings/commercial-reference-buildings">https://www.energy.gov/eere/buildings/commercial-reference-buildings</a> and divide the total building area by the number of floors.</p>
 <p>If you are modeling a project with critical loads, specify the critical load on the <a class="reference internal" href="../grid/grid_outage.html"><span class="doc">Grid Outage</span></a> page.</p>
 </div>
@@ -1067,7 +1064,7 @@ document.write(`
 <p>SAM requires load data in a single column of average kilowatt per time step values. The number of data rows depends on the time step.</p>
 <p>For hourly data, SAM requires a column of 8,760 data rows, where each row contains a value in kilowatts representing the average power required by the load over the hour. For subhourly data, SAM requires a column of 8,760 × Number of Time Steps per Hour data rows, with kilowatt values representing the average electric power over the period of a single time step.</p>
 <p>The load data time convention should follow the <a class="reference internal" href="../weather-data/weather_time_convention.html"><span class="doc">weather file time convention</span></a>. SAM assumes that January first is a Monday, defines weekdays as Monday-Friday and weekends as Saturday-Sunday, and does not account for daylight savings time or leap years.</p>
-<p>When you use sub-hourly load data with hourly weather data, SAM uses hourly average load values to for the energy charge calculations, and the sub-hourly data to determine the peak load for demand charges. If you use sub-hourly weather data, you must also use sub-hourly load data with the same time step. (You can use hourly weather data with sub-hourly load data, but not vice versa.) For solar projects, you can use the Advanced Download option on the Solar Resource page to see if 15-minute weather data is available, or you can use the Solar Resource Interpolation <a class="reference internal" href="../reference/macros.html"><span class="doc">macro</span></a> to convert hourly weather data to match the load data time step.</p>
+<p>When you use sub-hourly load data with hourly weather data, SAM uses hourly average load values to for the energy charge calculations, and the sub-hourly data to determine the peak load for demand charges. If you use sub-hourly weather data, you must also use sub-hourly load data with the same time step. (You can use hourly weather data with sub-hourly load data, but not vice versa.) For solar projects, you can use the Advanced Download option on the Solar Resource page to see if 15-minute weather data is available, or you can use the Solar Resource Interpolation <a class="reference internal" href="../simulation-options/macros.html"><span class="doc">macro</span></a> to convert hourly weather data to match the load data time step.</p>
 </section>
 <section id="importing-data-from-a-file">
 <h2>Importing Data from a File<a class="headerlink" href="#importing-data-from-a-file" title="Link to this heading">#</a></h2>

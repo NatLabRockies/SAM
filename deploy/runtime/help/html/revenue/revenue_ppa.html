@@ -198,7 +198,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../reference/notes.html">Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/excel_exchange.html">Excel Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/libraries.html">Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/macros.html">Macros and Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/lk_script.html">LK Script</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/sdk.html">Software Development Kit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/file_formats.html">File Formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/installation.html">Software Installation</a></li>
@@ -227,12 +227,11 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../simulation-options/index.html">Simulation Options</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../simulation-options/simulation_options.html">Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/parametrics.html">Parametric Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/stochastic.html">Stochastic Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/p50p90.html">P50/P90 Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/pvuncertainty.html">Uncertainty</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../simulation-options/optimization.html">Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulation-options/macros.html">Macros</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/release_notes.html">Release Notes</a></li>
@@ -665,7 +664,6 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../financial-metrics/index.html">Financial Metrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_overview.html">Financial Metrics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_debt_and_equity.html">Debt and Equity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_revenues.html">Electricity Bill and Savings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_indifference_point.html">Indifference Point</a></li>
@@ -682,7 +680,6 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../performance-metrics/index.html">Performance Metrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_overview.html">Performance Metrics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_biomass_usage.html">Annual Biomass Usage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_energy.html">Annual Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_water_usage.html">Annual Water Usage</a></li>
@@ -1010,7 +1007,7 @@ Use this option to assign a TOD factor to each simulation time step. For example
 <p>When you click <strong>Apply values from library</strong>, SAM replaces the TOD data with data from the library. If you are using your own TOD data, you can use the <strong>Save data to file</strong> button at the bottom of the Time of Delivery Factors page to save your data.</p>
 </div>
 <dl class="simple">
-<dt><strong>Download forecast price data from Cambium</strong></dt><dd><p>If you do not have time series price data for your analysis, you can download hourly marginal cost data for modeled futures of the U.S. electricity sector from the <a class="reference external" href="https://scenarioviewer.nlr.gov/">NLR Scenario Viewer</a>  . SAM runs the Cambium Time Series Prices <a class="reference internal" href="../reference/macros.html"><span class="doc">macro</span></a>, which prompts you to choose from the available price data, and then automatically sets the following inputs:</p>
+<dt><strong>Download forecast price data from Cambium</strong></dt><dd><p>If you do not have time series price data for your analysis, you can download hourly marginal cost data for modeled futures of the U.S. electricity sector from the <a class="reference external" href="https://scenarioviewer.nlr.gov/">NLR Scenario Viewer</a>  . SAM runs the Cambium Time Series Prices <a class="reference internal" href="../simulation-options/macros.html"><span class="doc">macro</span></a>, which prompts you to choose from the available price data, and then automatically sets the following inputs:</p>
 </dd>
 </dl>
 <ul>

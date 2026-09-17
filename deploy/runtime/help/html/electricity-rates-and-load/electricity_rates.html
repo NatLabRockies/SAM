@@ -198,7 +198,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../reference/notes.html">Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/excel_exchange.html">Excel Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/libraries.html">Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/macros.html">Macros and Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/lk_script.html">LK Script</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/sdk.html">Software Development Kit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/file_formats.html">File Formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/installation.html">Software Installation</a></li>
@@ -227,12 +227,11 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../simulation-options/index.html">Simulation Options</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../simulation-options/simulation_options.html">Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/parametrics.html">Parametric Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/stochastic.html">Stochastic Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/p50p90.html">P50/P90 Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/pvuncertainty.html">Uncertainty</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../simulation-options/optimization.html">Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulation-options/macros.html">Macros</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/release_notes.html">Release Notes</a></li>
@@ -665,7 +664,6 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../financial-metrics/index.html">Financial Metrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_overview.html">Financial Metrics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_debt_and_equity.html">Debt and Equity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_revenues.html">Electricity Bill and Savings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_indifference_point.html">Indifference Point</a></li>
@@ -682,7 +680,6 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../performance-metrics/index.html">Performance Metrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_overview.html">Performance Metrics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_biomass_usage.html">Annual Biomass Usage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_energy.html">Annual Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_water_usage.html">Annual Water Usage</a></li>
@@ -922,7 +919,7 @@ document.write(`
 <p>In order to calculate the electricity bill savings, SAM calculates the both the electricity bill required to meet the electric load without the renewable energy system and the bill with the system, assuming the same rate structure for both cases. For details, see <a class="reference internal" href="electricity_bill_results.html"><span class="doc">electricity bill results</span></a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you are modeling a rate switching scenario, where the electricity rate structure for the electricity bill without the system is different from the rate structure for the bill with the system, you can use the <strong>Value of RE</strong> <a class="reference internal" href="../reference/macros.html"><span class="doc">macro</span></a> to specify two different electricity rates and calculate key metrics based on the results of two separate simulations.</p>
+<p>If you are modeling a rate switching scenario, where the electricity rate structure for the electricity bill without the system is different from the rate structure for the bill with the system, you can use the <strong>Value of RE</strong> <a class="reference internal" href="../simulation-options/macros.html"><span class="doc">macro</span></a> to specify two different electricity rates and calculate key metrics based on the results of two separate simulations.</p>
 <p>For photovoltaic systems with inverters that consume power at night or concentrating power systems (CSP) with night-time parasitic loads, the system may generate net negative power at night or during other times that the system is not generating power. For behind-the-meter projects, the cost of this power is included in the energy charge portion of the monthly electricity bill. For front-of-meter projects with or without batteries, the cost of this power is treated as a tax-deductible operating expense at prices determined by inputs on the <a class="reference internal" href="electricity_purchases.html"><span class="doc">Electricity Purchases</span></a> page.</p>
 </div>
 <section id="overview">

@@ -198,7 +198,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../reference/notes.html">Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/excel_exchange.html">Excel Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/libraries.html">Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/macros.html">Macros and Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/lk_script.html">LK Script</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/sdk.html">Software Development Kit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/file_formats.html">File Formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/installation.html">Software Installation</a></li>
@@ -227,12 +227,11 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../simulation-options/index.html">Simulation Options</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../simulation-options/simulation_options.html">Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/parametrics.html">Parametric Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/stochastic.html">Stochastic Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/p50p90.html">P50/P90 Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/pvuncertainty.html">Uncertainty</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../simulation-options/optimization.html">Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulation-options/macros.html">Macros</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/release_notes.html">Release Notes</a></li>
@@ -665,7 +664,6 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../financial-metrics/index.html">Financial Metrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_overview.html">Financial Metrics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_debt_and_equity.html">Debt and Equity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_revenues.html">Electricity Bill and Savings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_indifference_point.html">Indifference Point</a></li>
@@ -682,7 +680,6 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../performance-metrics/index.html">Performance Metrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_overview.html">Performance Metrics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_biomass_usage.html">Annual Biomass Usage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_energy.html">Annual Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_water_usage.html">Annual Water Usage</a></li>
@@ -908,7 +905,7 @@ document.write(`
 <p>SAM can read solar resource data from files in the TMY3 and TMY2 legacy formats from the NLR National Solar Radiation Database (NSRDB). These older formats are from datasets that have been replaced by the latest NSRDB PSM datasets. SAM can also read weather files in the EPW format developed for the Energy Plus software.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can use SAM’s Weather File Converter <a class="reference internal" href="../reference/macros.html"><span class="doc">macro</span></a> to convert from these and other weather file formats including PVsyst CSV, PVGIS 5 CSV, and SolarAnywhere to the SAM CSV format.</p>
+<p>You can use SAM’s Weather File Converter <a class="reference internal" href="../simulation-options/macros.html"><span class="doc">macro</span></a> to convert from these and other weather file formats including PVsyst CSV, PVGIS 5 CSV, and SolarAnywhere to the SAM CSV format.</p>
 </div>
 <ul class="simple">
 <li><p>The <a class="reference external" href="https://nsrdb.nlr.gov/data-sets/archives.html">TMY3 file format</a> is a comma-delimited text format with the extension .csv developed for the NSRDB 1991-2005 dataset. The first row of a TMY3 file stores data describing the location’s name, and the geographic coordinates, time zone, and elevation above sea level data required for sun angle calculations. The second row stores the column headings showing units for each data element. Rows 3-8762 store weather data elements used by SAM’s performance models. Many of the data elements are not used by the SAM performance models. Note. Opening and saving a TMY3 file in Excel can cause formatting changes that renders the file unreadable by SAM’s weather file reader. Use SAM’s <a class="reference internal" href="../reference/time_series_viewer.html"><span class="doc">time series data</span></a> viewer to explore the data without modifying it, or to export it to CSV or Excel files. For a complete description of the TMY3 file format, see the TMY3 user’s manual (<a class="reference external" href="https://docs.nlr.gov/docs/fy07osti/41364.pdf">PDF 1.7 MB</a>).</p></li>

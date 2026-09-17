@@ -30,7 +30,7 @@ See :ref:`pv-sizing` for configuration examples and detailed sizing instructions
 
    Reference conditions depend on the conditions used to define the parameters on the :doc:`Module <pv_module>` page. For the Sandia and CEC module models, reference conditions are at Standard Test Conditions (STC), which is defined as 1,000 W/m² incident radiation and 25ºC cell temperature.
 
-   You can run the **System Sizing** :doc:`macro <../reference/macros>` to generate a report to help you ensure the system is sized correctly.
+   You can run the **System Sizing** :doc:`macro <../simulation-options/macros>` to generate a report to help you ensure the system is sized correctly.
 
 System Size
 ~~~~~~~~~~~
@@ -161,7 +161,7 @@ The Subarrays and String Size inputs determine the electrical layout of each sub
 
   As an initial rule of thumb, choose a number of modules per string so that the string Voc is less than the inverter's maximum DC voltage rating, and the string Vmp is between the inverter's minimum and maximum MPPT voltage rating.
   
-  Run a simulation and look at the operating voltages in the results to see how they compare to the voltage ratings and your design requirements. You can also use the System Sizing :doc:`macro <../reference/macros>` to help refine your design.
+  Run a simulation and look at the operating voltages in the results to see how they compare to the voltage ratings and your design requirements. You can also use the System Sizing :doc:`macro <../simulation-options/macros>` to help refine your design.
 
 **Strings in parallel in subarray**
   The number of strings of modules connected in parallel to form a subarray, which along with the number of modules per string in each subarray determines the array nameplate DC capacity.

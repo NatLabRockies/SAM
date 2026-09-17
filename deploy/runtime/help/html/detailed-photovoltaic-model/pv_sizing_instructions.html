@@ -198,7 +198,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../reference/notes.html">Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/excel_exchange.html">Excel Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/libraries.html">Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/macros.html">Macros and Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/lk_script.html">LK Script</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/sdk.html">Software Development Kit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/file_formats.html">File Formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/installation.html">Software Installation</a></li>
@@ -227,12 +227,11 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../simulation-options/index.html">Simulation Options</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../simulation-options/simulation_options.html">Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/parametrics.html">Parametric Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/stochastic.html">Stochastic Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/p50p90.html">P50/P90 Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/pvuncertainty.html">Uncertainty</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../simulation-options/optimization.html">Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulation-options/macros.html">Macros</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/release_notes.html">Release Notes</a></li>
@@ -665,7 +664,6 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../financial-metrics/index.html">Financial Metrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_overview.html">Financial Metrics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_debt_and_equity.html">Debt and Equity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_revenues.html">Electricity Bill and Savings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_indifference_point.html">Indifference Point</a></li>
@@ -682,7 +680,6 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../performance-metrics/index.html">Performance Metrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_overview.html">Performance Metrics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_biomass_usage.html">Annual Biomass Usage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_energy.html">Annual Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_water_usage.html">Annual Water Usage</a></li>
@@ -924,7 +921,7 @@ document.write(`
 <li><p>The best way is to <a class="reference internal" href="#manual"><span class="std std-ref">specify the number of modules and inverters</span></a> yourself.</p></li>
 <li><p>If you are modeling a system with one subarray, you can check <a class="reference internal" href="#autosize"><span class="std std-ref">Specify desired size and DC/AC ratio</span></a>, and see what values SAM calculates for the number modules per string and number of strings in parallel.</p></li>
 </ul>
-<p>For information about how SAM models inverter clipping losses, see <a class="reference internal" href="pv_inverter.html#clipping"><span class="std std-ref">Inverter Clipping Loss</span></a>. You can run the System Sizing <a class="reference internal" href="../reference/macros.html"><span class="doc">macro</span></a> to generate a detailed report about clipping losses and the inverter’s MPPT performance.</p>
+<p>For information about how SAM models inverter clipping losses, see <a class="reference internal" href="pv_inverter.html#clipping"><span class="std std-ref">Inverter Clipping Loss</span></a>. You can run the System Sizing <a class="reference internal" href="../simulation-options/macros.html"><span class="doc">macro</span></a> to generate a detailed report about clipping losses and the inverter’s MPPT performance.</p>
 <p>The following examples show how to design common system configurations in SAM. The examples show a few modules for a small system for clarity, but the same approach can be used for large systems with thousands of modules and multiple inverters. See <a class="reference internal" href="pv_inverter.html#microinverters"><span class="std std-ref">Microinverters</span></a> for a microinverter configuration example.</p>
 <section id="example-1-one-string-one-inverter-one-mppt">
 <h3>Example 1: One string, one inverter, one MPPT<a class="headerlink" href="#example-1-one-string-one-inverter-one-mppt" title="Link to this heading">#</a></h3>
@@ -1106,7 +1103,7 @@ document.write(`
 <p>This detailed example demonstrates one approach for choosing optimal values for the numbers of modules and inverters based on the array’s expected DC output instead of its nameplate capacity. Before you start choose a system size in kWdc and a DC to AC ratio for the system.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can use the <a class="reference internal" href="../reference/macros.html"><span class="doc">System Sizing macro</span></a> to generate a report that you can use to compare the system’s operating characteristics to design values, and generate a list of alternative modules that might work with the inverter you chose.</p>
+<p>You can use the <a class="reference internal" href="../simulation-options/macros.html"><span class="doc">System Sizing macro</span></a> to generate a report that you can use to compare the system’s operating characteristics to design values, and generate a list of alternative modules that might work with the inverter you chose.</p>
 </div>
 <p><strong>Detailed example steps:</strong></p>
 <ol class="arabic">

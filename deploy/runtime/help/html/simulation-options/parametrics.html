@@ -51,7 +51,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Stochastic Simulations" href="stochastic.html" />
-    <link rel="prev" title="Simulation" href="simulation_options.html" />
+    <link rel="prev" title="Simulation Options" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -198,7 +198,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../reference/notes.html">Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/excel_exchange.html">Excel Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/libraries.html">Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/macros.html">Macros and Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/lk_script.html">LK Script</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/sdk.html">Software Development Kit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/file_formats.html">File Formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/installation.html">Software Installation</a></li>
@@ -227,12 +227,11 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Simulation Options</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="simulation_options.html">Simulation</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Parametric Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="stochastic.html">Stochastic Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="p50p90.html">P50/P90 Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pvuncertainty.html">Uncertainty</a></li>
-<li class="toctree-l2"><a class="reference internal" href="optimization.html">Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macros.html">Macros</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/release_notes.html">Release Notes</a></li>
@@ -665,7 +664,6 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../financial-metrics/index.html">Financial Metrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_overview.html">Financial Metrics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_debt_and_equity.html">Debt and Equity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_revenues.html">Electricity Bill and Savings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_indifference_point.html">Indifference Point</a></li>
@@ -682,7 +680,6 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../performance-metrics/index.html">Performance Metrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_overview.html">Performance Metrics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_biomass_usage.html">Annual Biomass Usage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_energy.html">Annual Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_water_usage.html">Annual Water Usage</a></li>
@@ -1095,7 +1092,7 @@ document.write(`
 <p>You can also use your computer’s clipboard to export data from the table by selecting cells in the table and pressing Ctrl-C to copy the data to the clipboard. Click a column or row heading to select a column or row, or click the empty heading at the top left corner of the table to select the entire table. This method copies data without column or row headers.</p>
 </div>
 <p>If you are working with the <a class="reference internal" href="../reference/sdk.html"><span class="doc">SAM Software Development Kit (SDK)</span></a>, you can also export the parametric inputs to LK for SDKtool. Note that SAM exports each parametric case as a separate LK script, but you can modify the script yourself to add loops to perform the parametric simulations in the script.</p>
-<p>If you are working with <a class="reference internal" href="../reference/macros.html"><span class="doc">LK script</span></a> in SAM, you can modify the LK for SDKtool to work in SAM by removing the calls to the <code class="docutils literal notranslate"><span class="pre">`clear()`</span></code> and <code class="docutils literal notranslate"><span class="pre">`run()`</span></code> functions, and by replacing the <code class="docutils literal notranslate"><span class="pre">`var()`</span></code> function with <code class="docutils literal notranslate"><span class="pre">`set()`</span></code>.</p>
+<p>If you are working with <a class="reference internal" href="macros.html"><span class="doc">LK script</span></a> in SAM, you can modify the LK for SDKtool to work in SAM by removing the calls to the <code class="docutils literal notranslate"><span class="pre">`clear()`</span></code> and <code class="docutils literal notranslate"><span class="pre">`run()`</span></code> functions, and by replacing the <code class="docutils literal notranslate"><span class="pre">`var()`</span></code> function with <code class="docutils literal notranslate"><span class="pre">`set()`</span></code>.</p>
 </section>
 </section>
 
@@ -1111,12 +1108,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="simulation_options.html"
+       href="index.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Simulation</p>
+        <p class="prev-next-title">Simulation Options</p>
       </div>
     </a>
     <a class="right-next"

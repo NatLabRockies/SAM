@@ -14,7 +14,7 @@ Reference
    notes
    excel_exchange
    libraries
-   macros
+   lk_script
    sdk
    file_formats
    installation

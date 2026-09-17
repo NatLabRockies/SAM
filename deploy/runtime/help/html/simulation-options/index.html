@@ -50,7 +50,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'simulation-options/index';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Simulation" href="simulation_options.html" />
+    <link rel="next" title="Parametric Simulations" href="parametrics.html" />
     <link rel="prev" title="WIND Toolkit Download" href="../window-reference/win_wind_toolkit_download.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -198,7 +198,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../reference/notes.html">Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/excel_exchange.html">Excel Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/libraries.html">Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/macros.html">Macros and Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/lk_script.html">LK Script</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/sdk.html">Software Development Kit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/file_formats.html">File Formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/installation.html">Software Installation</a></li>
@@ -227,12 +227,11 @@
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Simulation Options</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="simulation_options.html">Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parametrics.html">Parametric Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="stochastic.html">Stochastic Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="p50p90.html">P50/P90 Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pvuncertainty.html">Uncertainty</a></li>
-<li class="toctree-l2"><a class="reference internal" href="optimization.html">Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macros.html">Macros</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/release_notes.html">Release Notes</a></li>
@@ -665,7 +664,6 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../financial-metrics/index.html">Financial Metrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_overview.html">Financial Metrics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_debt_and_equity.html">Debt and Equity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_revenues.html">Electricity Bill and Savings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_indifference_point.html">Indifference Point</a></li>
@@ -682,7 +680,6 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../performance-metrics/index.html">Performance Metrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_overview.html">Performance Metrics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_biomass_usage.html">Annual Biomass Usage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_energy.html">Annual Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_water_usage.html">Annual Water Usage</a></li>
@@ -858,7 +855,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -874,6 +873,15 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-simulations">Multiple Simulations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulation-option-topics">Simulation Option Topics</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -885,12 +893,22 @@ document.write(`
                   
   <section id="simulation-options">
 <h1>Simulation Options<a class="headerlink" href="#simulation-options" title="Link to this heading">#</a></h1>
+<p>A simulation is the set of calculations made by the performance and financial models to calculate <a class="reference internal" href="../results/results.html"><span class="doc">results</span></a>. The performance model makes a one set of calculations for each time step in the <a class="reference internal" href="../weather-data/weather_data.html"><span class="doc">weather file</span></a> (8,760 time steps for an hourly weather file), and the financial model makes another set of calculations for each year in the analysis period that you specify on the <a class="reference internal" href="../financial-parameters/fin_overview.html"><span class="doc">Financial Parameters</span></a> page.</p>
+<p>You can <a class="reference internal" href="../getting-started/run_simulations.html"><span class="doc">run simulations</span></a> from SAM, or from a <a class="reference internal" href="macros.html"><span class="doc">macro or script</span></a>.</p>
+<section id="multiple-simulations">
+<h2>Multiple Simulations<a class="headerlink" href="#multiple-simulations" title="Link to this heading">#</a></h2>
+<p>Some analysis scenarios require more than one simulation. For example, an optimization may require running simulations for a range of values for one or more input variables. SAM offers three options for multiple simulations:</p>
+<ul class="simple">
+<li><p>A <a class="reference internal" href="parametrics.html"><span class="doc">parametric</span></a> simulation allows you to assign multiple values to one or more input variables and create graphs showing the dependence of a result on those variables. For example, you can use a parametric analysis to create a graph of a photovoltaic system’s annual electricity output versus the array tilt and azimuth angles, or, for a parabolic trough system, you can create a graph of levelized cost of energy (LCOE) versus solar multiple to determine the optimal solar field size.</p></li>
+<li><p>A <a class="reference internal" href="stochastic.html"><span class="doc">stochastic</span></a> analysis is similar to a parametric analysis, except that SAM automatically generates values of input variables over a range and probability distribution that you specify.</p></li>
+<li><p>A <a class="reference internal" href="p50p90.html"><span class="doc">P50/P90</span></a> analysis involves running a simulation for a set ten or more single-year weather files for consecutive years, and then sorting the annual electrical output and other metrics in order of increasing occurrence over the time period. You can use that information to estimate the certainty of SAM’s output predictions given your assumptions.</p></li>
+</ul>
+<p>You can also design your own models that require multiple simulations by writing a <a class="reference internal" href="macros.html"><span class="doc">script</span></a> in SAM, or you can call the SAM simulation core (SSC) outside of SAM with the <a class="reference internal" href="../reference/sdk.html"><span class="doc">software development kit</span></a>.</p>
+</section>
+<section id="simulation-option-topics">
+<h2>Simulation Option Topics<a class="headerlink" href="#simulation-option-topics" title="Link to this heading">#</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="simulation_options.html">Simulation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="simulation_options.html#multiple-simulations">Multiple Simulations</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="parametrics.html">Parametric Simulations</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="parametrics.html#set-up-parametric-inputs">Set Up Parametric Inputs</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="parametrics.html#option-1-quick-setup">Option 1. Quick Setup</a></li>
@@ -925,9 +943,10 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="pvuncertainty.html#uncertainty-graphs-and-p-value">Uncertainty Graphs and P-value</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="optimization.html">Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="macros.html">Macros</a></li>
 </ul>
 </div>
+</section>
 </section>
 
 
@@ -951,11 +970,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="simulation_options.html"
+       href="parametrics.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Simulation</p>
+        <p class="prev-next-title">Parametric Simulations</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -965,6 +984,22 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#multiple-simulations">Multiple Simulations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#simulation-option-topics">Simulation Option Topics</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

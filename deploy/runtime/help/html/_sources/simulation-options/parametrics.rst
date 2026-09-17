@@ -252,6 +252,6 @@ The export tools allow you to export the table of parametric simulation results 
 
 If you are working with the :doc:`SAM Software Development Kit (SDK) <../reference/sdk>`, you can also export the parametric inputs to LK for SDKtool. Note that SAM exports each parametric case as a separate LK script, but you can modify the script yourself to add loops to perform the parametric simulations in the script.
 
-If you are working with :doc:`LK script <../reference/macros>` in SAM, you can modify the LK for SDKtool to work in SAM by removing the calls to the ```clear()``` and ```run()``` functions, and by replacing the ```var()``` function with ```set()```.
+If you are working with :doc:`LK script <../simulation-options/macros>` in SAM, you can modify the LK for SDKtool to work in SAM by removing the calls to the ```clear()``` and ```run()``` functions, and by replacing the ```var()``` function with ```set()```.
 
 .. |SS_MainWindow-ParametricsButton| image:: ../images/SS_MainWindow-ParametricsButton.png

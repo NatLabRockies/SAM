@@ -122,7 +122,7 @@ PV Smoothing
 
 The PV smoothing algorithm dispatches the battery to reduce rapid fluctuations in a photovoltaic-battery system's output that can occur on partly cloudy days.
 
-.. note:: The PV smoothing algorithms requires a simulation time step of 15 minutes or smaller. For SAM's photovoltaic models, the simulation time step is determined by the temporal resolution of the weather file. You can download 15-minute and 5-minute weather data from the NLR National Solar Radiation Database by choosing the **Advanced download** option on the Location and Resource page, or you can convert data from an hourly weather file to subhourly time steps using the "Solar Resource Interpolation" :doc:`macro <../reference/macros>`.
+.. note:: The PV smoothing algorithms requires a simulation time step of 15 minutes or smaller. For SAM's photovoltaic models, the simulation time step is determined by the temporal resolution of the weather file. You can download 15-minute and 5-minute weather data from the NLR National Solar Radiation Database by choosing the **Advanced download** option on the Location and Resource page, or you can convert data from an hourly weather file to subhourly time steps using the "Solar Resource Interpolation" :doc:`macro <../simulation-options/macros>`.
 
    When you choose the PV smoothing dispatch option, be sure to check the charge options to allow the battery to charge from the system, grid or both.
 

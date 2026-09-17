@@ -198,7 +198,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../reference/notes.html">Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/excel_exchange.html">Excel Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/libraries.html">Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/macros.html">Macros and Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/lk_script.html">LK Script</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/sdk.html">Software Development Kit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/file_formats.html">File Formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/installation.html">Software Installation</a></li>
@@ -227,12 +227,11 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../simulation-options/index.html">Simulation Options</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../simulation-options/simulation_options.html">Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/parametrics.html">Parametric Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/stochastic.html">Stochastic Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/p50p90.html">P50/P90 Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/pvuncertainty.html">Uncertainty</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../simulation-options/optimization.html">Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulation-options/macros.html">Macros</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/release_notes.html">Release Notes</a></li>
@@ -665,7 +664,6 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../financial-metrics/index.html">Financial Metrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_overview.html">Financial Metrics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_debt_and_equity.html">Debt and Equity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_revenues.html">Electricity Bill and Savings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_indifference_point.html">Indifference Point</a></li>
@@ -682,7 +680,6 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../performance-metrics/index.html">Performance Metrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_overview.html">Performance Metrics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_biomass_usage.html">Annual Biomass Usage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_energy.html">Annual Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_water_usage.html">Annual Water Usage</a></li>
@@ -887,7 +884,7 @@ document.write(`
 <h1>Biomass Combustion<a class="headerlink" href="#biomass-combustion" title="Link to this heading">#</a></h1>
 <p>The biopower model is a performance- and cost-modeling tool for assessing the biomass power resource of a location. SAM can model biopower plants that use crop and wood residues as a feedstock. It can also model a supplementary coal feedstock for a co-fired plant, or completely coal-fed power plant for comparison with a biopower option. You can also specify custom feedstocks.</p>
 <p>You specify the basic mass and energy balances for the plant’s combustor and steam turbine.</p>
-<p>SAM generates performance <a class="reference internal" href="../results/summary.html"><span class="doc">metrics</span></a> such as heat rate, thermal efficiency, and capacity factor. It also generates <a class="reference internal" href="../financial-metrics/mtf_overview.html"><span class="doc">financial metrics</span></a> such as the levelized cost of energy (LCOE), net present value (NPV), and payback period.</p>
+<p>SAM generates performance <a class="reference internal" href="../results/summary.html"><span class="doc">metrics</span></a> such as heat rate, thermal efficiency, and capacity factor. It also generates <a class="reference internal" href="../financial-metrics/index.html"><span class="doc">financial metrics</span></a> such as the levelized cost of energy (LCOE), net present value (NPV), and payback period.</p>
 <p>Dedicated biomass power facilities are generally on the order of 1 – 60 MW, but SAM can evaluate plants of any size.</p>
 <p>For a technical description of the biopower model, see Jorgenson, J.; Gilman, P.; Dobos, A. (2011). Technical Manual for the SAM Biomass Power Generation Model. 40 pp.; NREL Report No. TP-6A20-52688. <a class="reference external" href="https://docs.nlr.gov/docs/fy11osti/52688.pdf">https://docs.nlr.gov/docs/fy11osti/52688.pdf</a></p>
 </section>

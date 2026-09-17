@@ -11,7 +11,7 @@ SAM's File menu provides access to commands for managing projects and scripts, a
   Create a new project file using default input values. SAM opens a project with a single case and no results.
 
 **New script**
-  Open the script editor for a new new :doc:`LK script <macros>`  .
+  Open the script editor for a new new :doc:`LK script <lk_script>`  .
 
 **Open project**
   Open an existing SAM project file (.sam) file.

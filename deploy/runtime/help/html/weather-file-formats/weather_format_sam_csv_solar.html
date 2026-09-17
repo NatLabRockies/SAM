@@ -198,7 +198,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../reference/notes.html">Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/excel_exchange.html">Excel Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/libraries.html">Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/macros.html">Macros and Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/lk_script.html">LK Script</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/sdk.html">Software Development Kit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/file_formats.html">File Formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/installation.html">Software Installation</a></li>
@@ -227,12 +227,11 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../simulation-options/index.html">Simulation Options</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../simulation-options/simulation_options.html">Simulation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/parametrics.html">Parametric Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/stochastic.html">Stochastic Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/p50p90.html">P50/P90 Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../simulation-options/pvuncertainty.html">Uncertainty</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../simulation-options/optimization.html">Optimization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulation-options/macros.html">Macros</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/release_notes.html">Release Notes</a></li>
@@ -665,7 +664,6 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../financial-metrics/index.html">Financial Metrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_overview.html">Financial Metrics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_debt_and_equity.html">Debt and Equity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_revenues.html">Electricity Bill and Savings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_indifference_point.html">Indifference Point</a></li>
@@ -682,7 +680,6 @@
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../performance-metrics/index.html">Performance Metrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_overview.html">Performance Metrics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_biomass_usage.html">Annual Biomass Usage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_energy.html">Annual Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_water_usage.html">Annual Water Usage</a></li>
@@ -907,7 +904,7 @@ document.write(`
 <img alt="SS_SolarResource-samcsv-file.png" class="align-center" src="../_images/SS_SolarResource-samcsv-file.png" />
 <p>For examples of files in the SAM CSV format, see files in the <em>solar_resource</em> folder of your <a class="reference internal" href="../reference/installation.html#installationfolder"><span class="std std-ref">SAM installation folder</span></a>.</p>
 <p>The SAM CSV format supports hourly and subhourly data with up to a one-minute resolution. SAM recognizes the weather file’s time resolution based on the number of data rows in the weather file. For example, SAM recognizes a file with 8,670 data rows as an hourly data file, and a file with 35,040 rows as 15-minute data. A minute column is optional for hourly data, and required for sub-hourly data. By default, for hourly data SAM calculates sun position angles at the mid-point of the hour. However, if you specify the optional minute column for the hourly data, SAM calculates the sun position at the minute indicated in that column. For sub-hourly data, sun angles are calculated for the minute indicated in the Minute column. See <a class="reference internal" href="../weather-data/weather_time_convention.html"><span class="doc">Time Convention and Sun Position</span></a> for additional details.</p>
-<p>SAM requires a valid value for all time steps for each data element. It does not fill data gaps. It does perform some checks on the weather data before running a simulation, and displays messages about problems with the data in the simulation <a class="reference internal" href="../results/notices.html"><span class="doc">notices</span></a>. You can also run the <strong>Solar Resource File Checker</strong> <a class="reference internal" href="../reference/macros.html"><span class="doc">macro</span></a> to perform the checks without running a simulation.</p>
+<p>SAM requires a valid value for all time steps for each data element. It does not fill data gaps. It does perform some checks on the weather data before running a simulation, and displays messages about problems with the data in the simulation <a class="reference internal" href="../results/notices.html"><span class="doc">notices</span></a>. You can also run the <strong>Solar Resource File Checker</strong> <a class="reference internal" href="../simulation-options/macros.html"><span class="doc">macro</span></a> to perform the checks without running a simulation.</p>
 <section id="header">
 <h2>Header<a class="headerlink" href="#header" title="Link to this heading">#</a></h2>
 <p>The first two rows are header rows that provide location information and metadata, and identify the data columns.</p>

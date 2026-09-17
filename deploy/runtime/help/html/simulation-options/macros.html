@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Financial Metrics &#8212; SAM Help</title>
+    <title>Macros &#8212; SAM Help</title>
   
   
   
@@ -47,11 +47,11 @@
     <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'financial-metrics/mtf_overview';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'simulation-options/macros';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Debt and Equity" href="mtf_debt_and_equity.html" />
-    <link rel="prev" title="Financial Metrics" href="index.html" />
+    <link rel="next" title="Release Notes" href="../reference/release_notes.html" />
+    <link rel="prev" title="Uncertainty" href="pvuncertainty.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -162,7 +162,7 @@
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Overview</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../introduction/index.html">Introduction</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/introduction.html">About SAM</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/technology_options.html">Performance Models</a></li>
@@ -198,7 +198,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../reference/notes.html">Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/excel_exchange.html">Excel Exchange</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/libraries.html">Libraries</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/macros.html">Macros and Scripting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference/lk_script.html">LK Script</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/sdk.html">Software Development Kit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/file_formats.html">File Formats</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../reference/installation.html">Software Installation</a></li>
@@ -226,13 +226,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../window-reference/win_wind_toolkit_download.html">WIND Toolkit Download</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../simulation-options/index.html">Simulation Options</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../simulation-options/simulation_options.html">Simulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../simulation-options/parametrics.html">Parametric Simulations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../simulation-options/stochastic.html">Stochastic Simulations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../simulation-options/p50p90.html">P50/P90 Simulations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../simulation-options/pvuncertainty.html">Uncertainty</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../simulation-options/optimization.html">Optimization</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Simulation Options</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="parametrics.html">Parametric Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="stochastic.html">Stochastic Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="p50p90.html">P50/P90 Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pvuncertainty.html">Uncertainty</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Macros</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/release_notes.html">Release Notes</a></li>
@@ -646,7 +645,7 @@
 </details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Results</span></p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../results/index.html">Results Page</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../results/results.html">Results</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../results/summary.html">Summary</a></li>
@@ -664,25 +663,23 @@
 <li class="toctree-l2"><a class="reference internal" href="../results/notices.html">Notices</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Financial Metrics</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Financial Metrics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mtf_debt_and_equity.html">Debt and Equity</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mtf_revenues.html">Electricity Bill and Savings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mtf_indifference_point.html">Indifference Point</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mtf_irr.html">Internal Rate of Return (IRR)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mtf_levelized.html">Levelized Values</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mtf_lcoe.html">Levelized cost of Energy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mtf_lcos.html">Levelized Cost of Storage (LCOS)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mtf_lppa.html">Levelized PPA price (LPPA)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mtf_npv.html">Net Present Value (NPV)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mtf_payback.html">Payback Period</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mtf_ppa_price.html">PPA Price</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mtf_ppa_escalation.html">PPA Price Escalation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mtf_costs.html">Net Capital Cost</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../financial-metrics/index.html">Financial Metrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_debt_and_equity.html">Debt and Equity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_revenues.html">Electricity Bill and Savings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_indifference_point.html">Indifference Point</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_irr.html">Internal Rate of Return (IRR)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_levelized.html">Levelized Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_lcoe.html">Levelized cost of Energy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_lcos.html">Levelized Cost of Storage (LCOS)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_lppa.html">Levelized PPA price (LPPA)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_npv.html">Net Present Value (NPV)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_payback.html">Payback Period</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_ppa_price.html">PPA Price</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_ppa_escalation.html">PPA Price Escalation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../financial-metrics/mtf_costs.html">Net Capital Cost</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../performance-metrics/index.html">Performance Metrics</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_overview.html">Performance Metrics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_biomass_usage.html">Annual Biomass Usage</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_energy.html">Annual Energy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance-metrics/mtp_annual_water_usage.html">Annual Water Usage</a></li>
@@ -787,7 +784,7 @@
       
       
       
-      <li><a href="../_sources/financial-metrics/mtf_overview.rst" target="_blank"
+      <li><a href="../_sources/simulation-options/macros.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -858,9 +855,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -871,19 +866,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Financial Metrics</h1>
+    <h1>Macros</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">Additional Resources</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -893,23 +880,19 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="financial-metrics">
-<h1>Financial Metrics<a class="headerlink" href="#financial-metrics" title="Link to this heading">#</a></h1>
-<p>The financial metrics are the selection of single-value results from the financial model that appear in the Metrics table on the <a class="reference internal" href="../results/summary.html"><span class="doc">Summary</span></a> page. The financial metrics are calculated from values in the project <a class="reference internal" href="../results/cashflow.html"><span class="doc">cash flow</span></a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You can find more financial metrics under <strong>Single Value</strong> on the <a class="reference internal" href="../results/data.html"><span class="doc">Data Tables</span></a> and <a class="reference internal" href="../results/graphs.html"><span class="doc">Graphs</span></a> tabs of the Results page.</p>
-</div>
-<p>See <a class="reference internal" href="../performance-metrics/mtp_overview.html"><span class="doc">Performance Metrics</span></a> for a description of results generated by the performance model.</p>
-<img alt="SS_MetricsTable.png" class="align-center" src="../_images/SS_MetricsTable.png" />
-<p>SAM displays different metrics depending on the <a class="reference internal" href="../introduction/fin_overview.html"><span class="doc">financial model</span></a> for the case. For example, SAM displays the payback period for the residential and commercial financial model, but  not for the PPA models.</p>
-<p>For tips on interpreting financial metrics, see <a class="reference internal" href="mtf_npv.html#interpreting"><span class="std std-ref">Interpreting the NPV</span></a>.</p>
-<section id="additional-resources">
-<h2>Additional Resources<a class="headerlink" href="#additional-resources" title="Link to this heading">#</a></h2>
-<p>You can explore the methodology for some of SAM’s financial models by downloading the spreadsheets from the <a class="reference external" href="https://sam.nlr.gov/financial-models">SAM website</a>. Each of the spreadsheets duplicates SAM’s cash flow equations using Excel formulas.</p>
-<p>For the residential, commercial, and single owner financial models, you can also use the <strong>Send to Excel</strong> button from the <a class="reference internal" href="../results/cashflow.html"><span class="doc">Cash Flow</span></a> on the Results page to export your project’s financial inputs to an Excel workbook with the SAM financial model implemented using Excel formulas.</p>
-<p>For more information about the levelized cost of energy (LCOE) and other economic metrics for renewable energy projects, see <em>Manual for the Economic Evaluation of Energy Efficiency and Renewable Energy Technologies</em>. (Short 1995) <a class="reference external" href="https://docs.nlr.gov/docs/legosti/old/5173.pdf">https://docs.nlr.gov/docs/legosti/old/5173.pdf</a>.</p>
-</section>
+  <section id="macros">
+<h1>Macros<a class="headerlink" href="#macros" title="Link to this heading">#</a></h1>
+<p>A macro is a pre-written <a class="reference internal" href="../reference/lk_script.html"><span class="doc">LK script</span></a> that comes with SAM. Macros are designed to allow you to run a script without having to write it.</p>
+<p><strong>To run a macro:</strong></p>
+<ol class="arabic">
+<li><p>Click <strong>Macros</strong>.</p>
+<img alt="SS_MainWindow-MacrosButton.png" class="align-center" src="../_images/SS_MainWindow-MacrosButton.png" />
+</li>
+<li><p>Choose a macro from the list, and review the macro description and instructions.</p></li>
+<li><p>If the macro has parameters listed on the right side of the page, review and modify them as necessary.</p></li>
+<li><p>Click <strong>Run macro</strong> at the top of the page to run the macro. The console at the bottom of the page may display progress and information as the macro runs.</p></li>
+</ol>
+<img alt="SS_Macro-Overview.png" class="align-center" src="../_images/SS_Macro-Overview.png" />
 </section>
 
 
@@ -924,20 +907,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="index.html"
+       href="pvuncertainty.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Financial Metrics</p>
+        <p class="prev-next-title">Uncertainty</p>
       </div>
     </a>
     <a class="right-next"
-       href="mtf_debt_and_equity.html"
+       href="../reference/release_notes.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Debt and Equity</p>
+        <p class="prev-next-title">Release Notes</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -947,21 +930,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-resources">Additional Resources</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

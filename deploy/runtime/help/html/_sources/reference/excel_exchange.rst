@@ -13,7 +13,7 @@ Using Excel Exchange involves the following steps:
 
 For an example of SAM with Excel Exchange, download the files excel-exchange-example.sam and excel-exchange-example.xlsx from the `Sample Files collection <https://github.com/NatLabRockies/SAM/tree/develop/samples>`__ in the SAM GitHub repository. To run it, place both files in the same folder on your computer, open the SAM file, and run a simulation.
 
-.. note:: Excel Exchange is designed to allow you to read values of SAM *input* variables from an Excel workbook. *You cannot use Excel Exchange to write values of SAM results to a workbook.* If you want to export results to Excel, you can use one of the options described in :doc:`Export Data and Graphs <export_data>`, or you can write a :doc:`script <macros>` to export SAM results.
+.. note:: Excel Exchange is designed to allow you to read values of SAM *input* variables from an Excel workbook. *You cannot use Excel Exchange to write values of SAM results to a workbook.* If you want to export results to Excel, you can use one of the options described in :doc:`Export Data and Graphs <export_data>`, or you can write a :doc:`script <lk_script>` to export SAM results.
 
 .. note:: Excel Exchange works in the Windows version of SAM and requires that Microsoft Excel be installed on your computer. It will not work with other spreadsheet software or in the Mac or Linux versions of SAM.
 

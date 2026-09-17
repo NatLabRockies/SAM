@@ -3,7 +3,7 @@ Script-only Parameters
 
 The parameters described in this section can only be accessed using SAM's LK scripting language and are useful for modeling design details and configurations that are not available from the input pages in SAM's user interface.
 
-For more about the LK scripting language, see :doc:`Macros and Scripting <../reference/macros>`.
+For more about the LK scripting language, see :doc:`Macros and Scripting <../simulation-options/macros>`.
 
 For a sample script illustrating how to set some of these script-only parameters, see the `molten_salt_trough.lk <https://github.com/NatLabRockies/SAM/blob/develop/samples/LK%20Scripts%20for%20SAM/molten-salt-trough.lk>`__ file in the SAM Open Source repository on GitHub.com.
 

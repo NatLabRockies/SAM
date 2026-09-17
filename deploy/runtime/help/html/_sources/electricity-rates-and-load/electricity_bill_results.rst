@@ -7,7 +7,7 @@ The electricity bill is the residential or commercial building owner's monthly e
  
 * **Without system:** The customer's electricity bill if the entire load is met with grid power only.
 
-.. note:: If you are modeling a rate switching scenario, where the electricity rate structure for the electricity bill without the system is different from the rate structure for the bill with the system, you can use the **Value of RE System** :doc:`macro <../reference/macros>` to specify two different electricity rates and calculate key metrics based on the results of two separate simulations.
+.. note:: If you are modeling a rate switching scenario, where the electricity rate structure for the electricity bill without the system is different from the rate structure for the bill with the system, you can use the **Value of RE System** :doc:`macro <../simulation-options/macros>` to specify two different electricity rates and calculate key metrics based on the results of two separate simulations.
 
 .. _utility-bill-metrics:
 

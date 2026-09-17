@@ -19,7 +19,7 @@ SAM uses the Latin Hypercube Sampling (LHS) and STEPWISE packages from Sandia Na
 
 * For the stochastic simulation regression results, SAM uses the STEPWISE package, https://github.com/sandialabs/stepwise/.
 
-SAM's :doc:`LK scripting language <../reference/macros>` includes LHS functions so you can create input distributions from your LK scripts. See the `LK samples on the SAM GitHub.com <https://github.com/NatLabRockies/SAM/tree/develop/samples/LK%20Scripts%20for%20SAM>`__ repository for an example.
+SAM's :doc:`LK scripting language <../simulation-options/macros>` includes LHS functions so you can create input distributions from your LK scripts. See the `LK samples on the SAM GitHub.com <https://github.com/NatLabRockies/SAM/tree/develop/samples/LK%20Scripts%20for%20SAM>`__ repository for an example.
 
 For a video demonstration of stochastic simulations in SAM, see `Parametric and Statistical Analysis in SAM <https://sam.nlr.gov/simulation-options.html>`__.
 
