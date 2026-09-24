@@ -1,7 +1,7 @@
 {
     "Name": "Financial Non Energy Revenue",
-    "Width": 859.0,
-    "Height": 389.0,
+    "Width": 862.0,
+    "Height": 415.0,
     "FormObjects": {
         "SchedNumeric": {
             "Visible": 1.0,
@@ -12,11 +12,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 333.0
+                    "Integer": 336.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 354.0
+                    "Integer": 375.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -52,7 +52,7 @@
                 },
                 "TabOrder": {
                     "Type": 3.0,
-                    "Integer": -1.0
+                    "Integer": 10.0
                 }
             }
         },
@@ -65,11 +65,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 333.0
+                    "Integer": 336.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 327.0
+                    "Integer": 348.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -105,7 +105,7 @@
                 },
                 "TabOrder": {
                     "Type": 3.0,
-                    "Integer": -1.0
+                    "Integer": 9.0
                 }
             }
         },
@@ -118,11 +118,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 333.0
+                    "Integer": 336.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 222.0
+                    "Integer": 240.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -158,7 +158,48 @@
                 },
                 "TabOrder": {
                     "Type": 3.0,
-                    "Integer": -1.0
+                    "Integer": 5.0
+                }
+            }
+        },
+        "CheckBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "non_energy_expenses_ds"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 792.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 240.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 40.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "State": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 8.0
                 }
             }
         },
@@ -171,11 +212,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 333.0
+                    "Integer": 336.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 249.0
+                    "Integer": 270.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -241,7 +282,7 @@
                 },
                 "TabOrder": {
                     "Type": 3.0,
-                    "Integer": -1.0
+                    "Integer": 6.0
                 }
             }
         },
@@ -254,11 +295,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 333.0
+                    "Integer": 336.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 276.0
+                    "Integer": 297.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -294,7 +335,7 @@
                 },
                 "TabOrder": {
                     "Type": 3.0,
-                    "Integer": -1.0
+                    "Integer": 7.0
                 }
             }
         },
@@ -307,11 +348,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 336.0
+                    "Integer": 339.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 120.0
+                    "Integer": 141.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -347,7 +388,48 @@
                 },
                 "TabOrder": {
                     "Type": 3.0,
-                    "Integer": -1.0
+                    "Integer": 1.0
+                }
+            }
+        },
+        "CheckBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "non_energy_revenue_ds"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 792.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 141.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 40.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "State": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 4.0
                 }
             }
         },
@@ -360,11 +442,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 336.0
+                    "Integer": 339.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 147.0
+                    "Integer": 168.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -430,7 +512,7 @@
                 },
                 "TabOrder": {
                     "Type": 3.0,
-                    "Integer": -1.0
+                    "Integer": 2.0
                 }
             }
         },
@@ -443,11 +525,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 336.0
+                    "Integer": 339.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 174.0
+                    "Integer": 195.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -483,7 +565,7 @@
                 },
                 "TabOrder": {
                     "Type": 3.0,
-                    "Integer": -1.0
+                    "Integer": 3.0
                 }
             }
         },
@@ -496,11 +578,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 15.0
+                    "Integer": 18.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 309.0
+                    "Integer": 330.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -546,11 +628,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 15.0
+                    "Integer": 18.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 204.0
+                    "Integer": 225.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -596,11 +678,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 15.0
+                    "Integer": 18.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 105.0
+                    "Integer": 126.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -658,7 +740,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 381.0
+                    "Integer": 405.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -695,7 +777,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 78.0
+                    "Integer": 96.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -703,7 +785,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "Non-energy revenue and expenses are optional inputs for revenue and expenses that do not depend on kWh of energy or kW of capacity. Non-energy revenue and expenses affect EBITDA, and non-energy revenue is available for debt service. Energy revenue retained and energy expenses paid percentages represent revenue and cost sharing agreements between the owner of the energy system and other entities. In Value mode, SAM applies both inflation and escalation to the first year value to calculate out-year values. In Schedule mode, neither inflation nor escalation applies. See Help for details."
+                    "String": "Non-energy revenue and expenses are optional inputs for revenue and expenses that do not depend on kWh of energy or kW of capacity. Non-energy revenue and expenses optionally affect EBITDA, and non-energy revenue can be available for debt service. Energy revenue retained and energy expenses paid percentages represent revenue and cost sharing agreements between the owner of the energy system and other entities. In Value mode, SAM applies both inflation and escalation to the first year value to calculate out-year values. In Schedule mode, neither inflation nor escalation applies. See Help for details."
                 },
                 "TextColour": {
                     "Type": 4.0,
@@ -783,6 +865,19 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
+        "non_energy_expenses_ds": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Non-energy expenses impact debt service",
+            "Units": "",
+            "Group": "Non-energy Revenue",
+            "IndexLabels": "",
+            "Flags": 2.0,
+            "DefaultValue": 1.0,
+            "UIObject": "CheckBox",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "non_energy_expenses_escal": {
             "Version": 4.0,
             "Type": 1.0,
@@ -823,6 +918,19 @@
                 0.0
             ],
             "UIObject": "SchedNumeric",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "non_energy_revenue_ds": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Non-energy revenue available for debt service",
+            "Units": "",
+            "Group": "Non-energy Revenue",
+            "IndexLabels": "",
+            "Flags": 2.0,
+            "DefaultValue": 1.0,
+            "UIObject": "CheckBox",
             "sscVariableName": "",
             "sscVariableValue": ""
         },

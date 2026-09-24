@@ -77,22 +77,6 @@ extern "C"
 	SAM_EXPORT void SAM_TcsmoltenSalt_SystemControl_T_tank_hot_init_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set ampl_data_dir: AMPL data file directory
-	 * options: None
-	 * constraints: None
-	 * required if: ?=''
-	 */
-	SAM_EXPORT void SAM_TcsmoltenSalt_SystemControl_ampl_data_dir_sset(SAM_table ptr, const char* str, SAM_error *err);
-
-	/**
-	 * Set ampl_exec_call: System command to run AMPL code
-	 * options: None
-	 * constraints: None
-	 * required if: ?='ampl sdk_solution.run'
-	 */
-	SAM_EXPORT void SAM_TcsmoltenSalt_SystemControl_ampl_exec_call_sset(SAM_table ptr, const char* str, SAM_error *err);
-
-	/**
 	 * Set anc_elec_output: Ancillary electrical generation (PV) [kWe]
 	 * options: None
 	 * constraints: None
@@ -333,14 +317,6 @@ extern "C"
 	SAM_EXPORT void SAM_TcsmoltenSalt_SystemControl_is_PAR_HTR_allowed_in_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
 
 	/**
-	 * Set is_ampl_engine: Run dispatch optimization with external AMPL engine
-	 * options: None
-	 * constraints: None
-	 * required if: ?=0
-	 */
-	SAM_EXPORT void SAM_TcsmoltenSalt_SystemControl_is_ampl_engine_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
 	 * Set is_control_target_elec: 0 (default): control targets heat into cycle
 	 * options: None
 	 * constraints: None
@@ -421,14 +397,6 @@ extern "C"
 	SAM_EXPORT void SAM_TcsmoltenSalt_SystemControl_is_tod_pc_target_also_pc_max_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
-	 * Set is_write_ampl_dat: Write AMPL data files for dispatch run
-	 * options: None
-	 * constraints: None
-	 * required if: ?=0
-	 */
-	SAM_EXPORT void SAM_TcsmoltenSalt_SystemControl_is_write_ampl_dat_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
 	 * Set pb_fixed_par: Fixed parasitic load - runs at all times [MWe/MWcap]
 	 * options: None
 	 * constraints: None
@@ -459,6 +427,22 @@ extern "C"
 	 * required if: None
 	 */
 	SAM_EXPORT void SAM_TcsmoltenSalt_SystemControl_pc_startup_time_remain_init_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
+	 * Set pv_generation_profile: Co-located PV generation for CSP to dispatch around. [kWe]
+	 * options: None
+	 * constraints: None
+	 * required if: None
+	 */
+	SAM_EXPORT void SAM_TcsmoltenSalt_SystemControl_pv_generation_profile_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
+
+	/**
+	 * Set pv_total_installed_cost: Total installed cost of co-located PV system [$]
+	 * options: None
+	 * constraints: None
+	 * required if: ?=0.0
+	 */
+	SAM_EXPORT void SAM_TcsmoltenSalt_SystemControl_pv_total_installed_cost_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
 	 * Set q_dot_elec_to_PAR_HTR_in: User-provided electrical power to parallel heater [-]
@@ -2679,99 +2663,6 @@ extern "C"
 	SAM_EXPORT void SAM_TcsmoltenSalt_AdjustmentFactors_sf_adjust_timeindex_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
 
 
-	//
-	// HybridCosts parameters
-	//
-
-	/**
-	 * Set degradation: Annual AC degradation [%]
-	 * options: None
-	 * constraints: None
-	 * required if: ?=0.0
-	 */
-	SAM_EXPORT void SAM_TcsmoltenSalt_HybridCosts_degradation_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
-
-	/**
-	 * Set land_area: Total land area [acres]
-	 * options: None
-	 * constraints: None
-	 * required if: ?=0
-	 */
-	SAM_EXPORT void SAM_TcsmoltenSalt_HybridCosts_land_area_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
-	 * Set om_capacity: Capacity-based O&M amount [$/kWcap]
-	 * options: !battery,!fuelcell
-	 * constraints: None
-	 * required if: ?=0.0
-	 */
-	SAM_EXPORT void SAM_TcsmoltenSalt_HybridCosts_om_capacity_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
-
-	/**
-	 * Set om_capacity_escal: Capacity-based O&M escalation [%/year]
-	 * options: None
-	 * constraints: None
-	 * required if: ?=0.0
-	 */
-	SAM_EXPORT void SAM_TcsmoltenSalt_HybridCosts_om_capacity_escal_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
-	 * Set om_fixed: Fixed O&M annual amount [$/year]
-	 * options: !battery,!fuelcell
-	 * constraints: None
-	 * required if: ?=0.0
-	 */
-	SAM_EXPORT void SAM_TcsmoltenSalt_HybridCosts_om_fixed_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
-
-	/**
-	 * Set om_fixed_escal: Fixed O&M escalation [%/year]
-	 * options: None
-	 * constraints: None
-	 * required if: ?=0.0
-	 */
-	SAM_EXPORT void SAM_TcsmoltenSalt_HybridCosts_om_fixed_escal_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
-	 * Set om_land_lease: Land lease cost [$/acre]
-	 * options: None
-	 * constraints: None
-	 * required if: ?=0
-	 */
-	SAM_EXPORT void SAM_TcsmoltenSalt_HybridCosts_om_land_lease_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
-
-	/**
-	 * Set om_land_lease_escal: Land lease cost escalation [%/yr]
-	 * options: None
-	 * constraints: None
-	 * required if: ?=0
-	 */
-	SAM_EXPORT void SAM_TcsmoltenSalt_HybridCosts_om_land_lease_escal_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
-	 * Set om_production: Production-based O&M amount [$/MWh]
-	 * options: !battery,!fuelcell
-	 * constraints: None
-	 * required if: ?=0.0
-	 */
-	SAM_EXPORT void SAM_TcsmoltenSalt_HybridCosts_om_production_aset(SAM_table ptr, double* arr, int length, SAM_error *err);
-
-	/**
-	 * Set om_production_escal: Production-based O&M escalation [%/year]
-	 * options: None
-	 * constraints: None
-	 * required if: ?=0.0
-	 */
-	SAM_EXPORT void SAM_TcsmoltenSalt_HybridCosts_om_production_escal_nset(SAM_table ptr, double number, SAM_error *err);
-
-	/**
-	 * Set total_installed_cost: Total installed cost [$]
-	 * options: None
-	 * constraints: None
-	 * required if: *
-	 */
-	SAM_EXPORT void SAM_TcsmoltenSalt_HybridCosts_total_installed_cost_nset(SAM_table ptr, double number, SAM_error *err);
-
-
 	/**
 	 * SolarResource Getters
 	 */
@@ -2790,10 +2681,6 @@ extern "C"
 	SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_T_tank_cold_init_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_T_tank_hot_init_nget(SAM_table ptr, SAM_error *err);
-
-	SAM_EXPORT const char* SAM_TcsmoltenSalt_SystemControl_ampl_data_dir_sget(SAM_table ptr, SAM_error *err);
-
-	SAM_EXPORT const char* SAM_TcsmoltenSalt_SystemControl_ampl_exec_call_sget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double* SAM_TcsmoltenSalt_SystemControl_anc_elec_output_aget(SAM_table ptr, int* length, SAM_error *err);
 
@@ -2855,8 +2742,6 @@ extern "C"
 
 	SAM_EXPORT double* SAM_TcsmoltenSalt_SystemControl_is_PAR_HTR_allowed_in_aget(SAM_table ptr, int* length, SAM_error *err);
 
-	SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_is_ampl_engine_nget(SAM_table ptr, SAM_error *err);
-
 	SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_is_control_target_elec_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_is_dispatch_nget(SAM_table ptr, SAM_error *err);
@@ -2877,8 +2762,6 @@ extern "C"
 
 	SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_is_tod_pc_target_also_pc_max_nget(SAM_table ptr, SAM_error *err);
 
-	SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_is_write_ampl_dat_nget(SAM_table ptr, SAM_error *err);
-
 	SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_pb_fixed_par_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_pc_op_mode_initial_nget(SAM_table ptr, SAM_error *err);
@@ -2886,6 +2769,10 @@ extern "C"
 	SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_pc_startup_energy_remain_initial_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_pc_startup_time_remain_init_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double* SAM_TcsmoltenSalt_SystemControl_pv_generation_profile_aget(SAM_table ptr, int* length, SAM_error *err);
+
+	SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_pv_total_installed_cost_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double* SAM_TcsmoltenSalt_SystemControl_q_dot_elec_to_PAR_HTR_in_aget(SAM_table ptr, int* length, SAM_error *err);
 
@@ -3511,33 +3398,6 @@ extern "C"
 
 
 	/**
-	 * HybridCosts Getters
-	 */
-
-	SAM_EXPORT double* SAM_TcsmoltenSalt_HybridCosts_degradation_aget(SAM_table ptr, int* length, SAM_error *err);
-
-	SAM_EXPORT double SAM_TcsmoltenSalt_HybridCosts_land_area_nget(SAM_table ptr, SAM_error *err);
-
-	SAM_EXPORT double* SAM_TcsmoltenSalt_HybridCosts_om_capacity_aget(SAM_table ptr, int* length, SAM_error *err);
-
-	SAM_EXPORT double SAM_TcsmoltenSalt_HybridCosts_om_capacity_escal_nget(SAM_table ptr, SAM_error *err);
-
-	SAM_EXPORT double* SAM_TcsmoltenSalt_HybridCosts_om_fixed_aget(SAM_table ptr, int* length, SAM_error *err);
-
-	SAM_EXPORT double SAM_TcsmoltenSalt_HybridCosts_om_fixed_escal_nget(SAM_table ptr, SAM_error *err);
-
-	SAM_EXPORT double* SAM_TcsmoltenSalt_HybridCosts_om_land_lease_aget(SAM_table ptr, int* length, SAM_error *err);
-
-	SAM_EXPORT double SAM_TcsmoltenSalt_HybridCosts_om_land_lease_escal_nget(SAM_table ptr, SAM_error *err);
-
-	SAM_EXPORT double* SAM_TcsmoltenSalt_HybridCosts_om_production_aget(SAM_table ptr, int* length, SAM_error *err);
-
-	SAM_EXPORT double SAM_TcsmoltenSalt_HybridCosts_om_production_escal_nget(SAM_table ptr, SAM_error *err);
-
-	SAM_EXPORT double SAM_TcsmoltenSalt_HybridCosts_total_installed_cost_nget(SAM_table ptr, SAM_error *err);
-
-
-	/**
 	 * Outputs Getters
 	 */
 
@@ -3717,8 +3577,6 @@ extern "C"
 
 	SAM_EXPORT double SAM_TcsmoltenSalt_Outputs_cav_rec_width_calc_nget(SAM_table ptr, SAM_error *err);
 
-	SAM_EXPORT double* SAM_TcsmoltenSalt_Outputs_cf_land_lease_expense_aget(SAM_table ptr, int* length, SAM_error *err);
-
 	SAM_EXPORT double* SAM_TcsmoltenSalt_Outputs_clearsky_aget(SAM_table ptr, int* length, SAM_error *err);
 
 	SAM_EXPORT double SAM_TcsmoltenSalt_Outputs_const_per_interest1_nget(SAM_table ptr, SAM_error *err);
@@ -3827,6 +3685,10 @@ extern "C"
 
 	SAM_EXPORT double SAM_TcsmoltenSalt_Outputs_disp_presolve_nvar_ann_nget(SAM_table ptr, SAM_error *err);
 
+	SAM_EXPORT double* SAM_TcsmoltenSalt_Outputs_disp_pv_expected_aget(SAM_table ptr, int* length, SAM_error *err);
+
+	SAM_EXPORT double* SAM_TcsmoltenSalt_Outputs_disp_qeh_expected_aget(SAM_table ptr, int* length, SAM_error *err);
+
 	SAM_EXPORT double* SAM_TcsmoltenSalt_Outputs_disp_qpbsu_expected_aget(SAM_table ptr, int* length, SAM_error *err);
 
 	SAM_EXPORT double* SAM_TcsmoltenSalt_Outputs_disp_qsf_expected_aget(SAM_table ptr, int* length, SAM_error *err);
@@ -3854,6 +3716,8 @@ extern "C"
 	SAM_EXPORT double* SAM_TcsmoltenSalt_Outputs_disp_tes_expected_aget(SAM_table ptr, int* length, SAM_error *err);
 
 	SAM_EXPORT double* SAM_TcsmoltenSalt_Outputs_disp_thermeff_expected_aget(SAM_table ptr, int* length, SAM_error *err);
+
+	SAM_EXPORT double* SAM_TcsmoltenSalt_Outputs_disp_wparasitic_expected_aget(SAM_table ptr, int* length, SAM_error *err);
 
 	SAM_EXPORT double* SAM_TcsmoltenSalt_Outputs_disp_wpb_expected_aget(SAM_table ptr, int* length, SAM_error *err);
 
@@ -4112,6 +3976,10 @@ extern "C"
 	SAM_EXPORT double SAM_TcsmoltenSalt_Outputs_ui_direct_subtotal_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_TcsmoltenSalt_Outputs_vel_rec_htf_des_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double* SAM_TcsmoltenSalt_Outputs_w_dot_net_pc_max_aget(SAM_table ptr, int* length, SAM_error *err);
+
+	SAM_EXPORT double* SAM_TcsmoltenSalt_Outputs_w_dot_net_pc_target_aget(SAM_table ptr, int* length, SAM_error *err);
 
 	SAM_EXPORT double* SAM_TcsmoltenSalt_Outputs_wspd_aget(SAM_table ptr, int* length, SAM_error *err);
 
