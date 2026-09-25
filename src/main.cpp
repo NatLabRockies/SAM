@@ -508,7 +508,8 @@ CaseWindow *MainWindow::CreateCaseWindow( Case *c )
 
 	// when creating a new case, at least
 	// show the first input page
-   
+	win->RefreshPages(); // refactored so that changing configuration will also refresh the pages, but this is needed for new cases
+/*
 	wxArrayString pages = win->GetInputPages();
 	if (pages.size() > 0) {
 		win->Freeze();
@@ -528,6 +529,8 @@ CaseWindow *MainWindow::CreateCaseWindow( Case *c )
 
 		win->Thaw();
 	} //mp trying to not overwrite first page switch at start
+	*/
+
 	return win;
 }
 
