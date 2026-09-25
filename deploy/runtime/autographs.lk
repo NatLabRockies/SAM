@@ -306,6 +306,22 @@ autographs { 'PVWatts Wind FuelCell Battery Hybrid|Host Developer' } = define ()
 	}
 };
 
+autographs { 'PVWatts CSPTowerMoltenSalt Battery Hybrid|SingleOwner' } = define () {
+	// monthly energy
+	agraph( 'pvwatts_monthly_energy,csptowermoltensalt_monthly_energy', 'Monthly Generation in Year 1', '', 'kWh' , -1, false, true, 'bottom', 1 );
+	
+	// after-tax cash flow
+	agraph( 'cf_project_return_aftertax', 'After-tax Cash Flow', 'Year', '$', -1, true, false, 'bottom' );
+
+	// heatmaps here because of slow loading for scrolling
+	agraph( 'pvwatts_annual_energy_distribution_time', 'PVWatts annual AC energy in Year 1 (kW)', 'Day', 'Hour', -1, true, false, 'bottom', 4);
+	agraph( 'csptowermoltensalt_annual_energy_distribution_time', 'CSP annual AC energy in Year 1 (kW)', 'Day', 'Hour', -1, true, false, 'bottom', 4);
+
+	// annual energy shows degradation
+	agraph( 'cf_energy_net', 'Annual Generation', 'Year', 'kWh', -1, true, false,'bottom' );
+
+};
+
 
 autographs { 'Photovoltaic Wind Battery Hybrid|Single Owner' } = define () {
 	// monthly energy
