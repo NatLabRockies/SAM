@@ -4268,7 +4268,7 @@
         "on_change{'ui_field_htf_type'} = define()",
         "{\t",
         "\t// Option 9 was \"User-defined\" but removed",
-        "\t// as per https://github.com/NREL/SAM/issues/316 ",
+        "\t// as per https://github.com/NatLabRockies/SAM/issues/316 ",
         "\t// see also ui_tes_htf_type on ",
         "\t// Empirical Trough Thermal Storage page",
         "\tbCustomHTF = value('ui_field_htf_type') == 9;",

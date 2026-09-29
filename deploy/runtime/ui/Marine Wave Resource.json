@@ -36,7 +36,7 @@
                 },
                 "URL": {
                     "Type": 5.0,
-                    "String": "https://sam.nrel.gov/weather-data"
+                    "String": "https://sam.nlr.gov/weather-data"
                 },
                 "TabOrder": {
                     "Type": 3.0,

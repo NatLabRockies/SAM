@@ -248,11 +248,11 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "Performance Model Documentation page on SAM website"
+                    "String": "PV Performance Model Documentation page on SAM website"
                 },
                 "URL": {
                     "Type": 5.0,
-                    "String": "https://sam.nrel.gov/performance"
+                    "String": "https://sam.nlr.gov/photovoltaic/pv-publications.html"
                 },
                 "TabOrder": {
                     "Type": 3.0,

@@ -448,7 +448,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "NREL Cambium Hourly Price Data Download"
+                    "String": "NLR Cambium Hourly Price Data Download"
                 },
                 "Bold": {
                     "Type": 2.0,
@@ -485,7 +485,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "NREL's Cambium database provides hourly marginal cost data for modeled futures of the U.S. electricity sector. This data may be suitable as approximations of market prices for the energy market or ancillary services to use with SAM's Merchant Plant financial model. See Help for details."
+                    "String": "NLR's Cambium database provides hourly marginal cost data for modeled futures of the U.S. electricity sector. This data may be suitable as approximations of market prices for the energy market or ancillary services to use with SAM's Merchant Plant financial model. See Help for details."
                 },
                 "TextColour": {
                     "Type": 4.0,
