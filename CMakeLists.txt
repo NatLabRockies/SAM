@@ -86,7 +86,9 @@ set(SAM_SRC src/private.h
 	src/codegenerator.cpp  src/codegenerator.h
 	src/combinecases.cpp src/combinecases.h
     src/ptesdesignptdialog.cpp src/ptesdesignptdialog.h
-    src/geotools.cpp       src/geotools.h)
+    src/geotools.cpp       src/geotools.h
+    src/GeoTOUGHFrame.cpp       src/GeoTOUGHFrame.h
+    )
 
 
 #####################################################################################################################

@@ -94,6 +94,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "ptesdesignptdialog.h"
 #include "geotools.h"
 #include "nohrsc.h"
+#include "GeoTOUGHFrame.h"
 
 
 
@@ -307,6 +308,7 @@ static void fcall_dview_tidal_data_file(lk::invoke_t& cxt)
 
     frame->Show();
 }
+
 
 static void fcall_dview_solar_data_file(lk::invoke_t& cxt)
 {
@@ -3871,6 +3873,23 @@ static bool copy_mat(lk::invoke_t &cxt, wxString sched_name, matrix_t<double> &m
 	return true;
 }
 
+
+static void fcall_geothermal_reservoir_inputs(lk::invoke_t& cxt)
+{
+	LK_DOC("geothermal_reservoir_inputs", "Calculate GEOPHIRES/TOUGH reservoir pressure and temperature in a frame.", "(string:none):matrix");
+
+	GeoTOUGHFrame* frame = new GeoTOUGHFrame(SamApp::Window(), "Geothermal Reservoir Inputs", wxDefaultPosition, wxScaleSize(1000, 700));
+
+	frame->ShowModal();
+
+	//return matrix
+	matrix_t<double> results = frame->GetResults();
+	cxt.result().empty_hash();
+	copy_mat(cxt, "results", results);
+}
+
+
+
 void fcall_geocode(lk::invoke_t& cxt)
 {
   	LK_DOC("geocode",
@@ -6536,6 +6555,7 @@ lk::fcall_t* invoke_general_funcs()
             fcall_dview_solar_data_file,
             fcall_dview_wave_data_file,
             fcall_dview_tidal_data_file,
+			fcall_geothermal_reservoir_inputs,
             fcall_pdfreport,
             fcall_pagenote,
             fcall_macrocall,
