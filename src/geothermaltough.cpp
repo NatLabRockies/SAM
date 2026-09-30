@@ -14,7 +14,7 @@
 #include "rapidjson/writer.h"
 #include "rapidjson/error/en.h"
 #include "rapidjson/prettywriter.h"
-#include "GeoTOUGHFrame.h"
+#include "geothermaltough.h"
 #include "object.h"
 
 // Progress bar updating
@@ -143,37 +143,40 @@ std::string CallPyInstallerWithProgressAndJSON(const std::wstring& exePath, cons
     return finalJsonOutput;
 }
 
-GeoTOUGHFrame::GeoTOUGHFrame(wxWindow* parent, const wxString& title,const wxPoint& pos, const wxSize& size) : wxDialog(parent, wxID_ANY, title, pos, size) {
-        wxPanel* panel = new wxPanel(this, wxID_ANY);
+geothermaltough::geothermaltough(wxWindow* parent, const wxString& title,const wxPoint& pos, const wxSize& size, long style) : wxDialog(parent, wxID_ANY, title, pos, size, style) {
+//        wxPanel* panel = new wxPanel(this, wxID_ANY);
 
         // Layout UI Controls
         wxBoxSizer* sizer = new wxBoxSizer(wxVERTICAL);
 
-        m_runButton = new wxButton(panel, wxID_ANY, "Execute PyInstaller Task");
+        m_runButton = new wxButton(this, wxID_ANY, "Execute PyInstaller Task");
 
         // Add a clean structural layout gauge bar
-        m_progressBar = new wxGauge(panel, wxID_ANY, 100, wxDefaultPosition, wxDefaultSize, wxGA_HORIZONTAL);
+        m_progressBar = new wxGauge(this, wxID_ANY, 100, wxDefaultPosition, wxDefaultSize, wxGA_HORIZONTAL);
  
-        m_outputText = new wxTextCtrl(panel, wxID_ANY, "", wxDefaultPosition, wxDefaultSize, wxTE_MULTILINE | wxTE_READONLY);
+        m_outputText = new wxTextCtrl(this, wxID_ANY, "", wxDefaultPosition, wxDefaultSize, wxTE_MULTILINE | wxTE_READONLY);
 
         sizer->Add(m_runButton, 0, wxALL | wxEXPAND, 10);
         sizer->Add(m_progressBar, 0, wxALL | wxEXPAND, 10);
 
         sizer->Add(m_outputText, 1, wxALL | wxEXPAND, 10);
-        panel->SetSizer(sizer);
+
+        sizer->Add(CreateButtonSizer(wxHELP | wxOK | wxCANCEL), 0, wxALL | wxEXPAND, 10);
+
+        SetSizerAndFit(sizer);
 
         // Bind UI Actions
-        m_runButton->Bind(wxEVT_BUTTON, &GeoTOUGHFrame::OnRunTask, this);
+        m_runButton->Bind(wxEVT_BUTTON, &geothermaltough::OnRunTask, this);
        
         // Bind worker thread synchronization notifications safely
-        this->Bind(wxEVT_PYTHON_PROGRESS, &GeoTOUGHFrame::OnProgressTick, this);
+        this->Bind(wxEVT_PYTHON_PROGRESS, &geothermaltough::OnProgressTick, this);
 
         // Bind the custom thread completion event back to our handler
-        this->Bind(wxEVT_PYTHON_THREAD_COMPLETED, &GeoTOUGHFrame::OnThreadCompletion, this);
+        this->Bind(wxEVT_PYTHON_THREAD_COMPLETED, &geothermaltough::OnThreadCompletion, this);
     }
 
 
-void GeoTOUGHFrame::TestData(std::wstring absoluteJsonPath)
+void geothermaltough::TestData(std::wstring absoluteJsonPath)
     {
 
         // Simulate an MxN matrix (e.g., 500 time-steps x 4 reservoir depths)
@@ -234,7 +237,7 @@ void GeoTOUGHFrame::TestData(std::wstring absoluteJsonPath)
     }
 
 
-void GeoTOUGHFrame::RunExample7Simulation(std::wstring absoluteJsonPath)
+void geothermaltough::RunExample7Simulation(std::wstring absoluteJsonPath)
     {
         // Create an active RapidJSON memory allocator node frame
         rapidjson::Document doc;
@@ -318,7 +321,7 @@ void GeoTOUGHFrame::RunExample7Simulation(std::wstring absoluteJsonPath)
         }
     }
 
-void GeoTOUGHFrame::OnRunTask(wxCommandEvent& event) {
+void geothermaltough::OnRunTask(wxCommandEvent& event) {
         m_runButton->Enable(false);
         m_progressBar->SetValue(0);
 
@@ -380,14 +383,14 @@ void GeoTOUGHFrame::OnRunTask(wxCommandEvent& event) {
     }
 
 
-void GeoTOUGHFrame::OnProgressTick(wxThreadEvent& event) {
+void geothermaltough::OnProgressTick(wxThreadEvent& event) {
         int progression = event.GetInt();
         m_progressBar->SetValue(progression);
         m_outputText->AppendText(wxString::Format(L"Executing simulation steps... %d%% complete\n", progression));
     }
 
 
-void GeoTOUGHFrame::OnThreadCompletion(wxThreadEvent& event) {
+void geothermaltough::OnThreadCompletion(wxThreadEvent& event) {
         m_runButton->Enable(true);
         m_progressBar->SetValue(100);
 
@@ -501,7 +504,7 @@ void GeoTOUGHFrame::OnThreadCompletion(wxThreadEvent& event) {
 
     }
 
-void GeoTOUGHFrame::ExportSimulationReport(const std::wstring& filename,
+void geothermaltough::ExportSimulationReport(const std::wstring& filename,
                                                 const std::vector<double>& timeSteps, 
                                                 const std::vector<double>& temperatures, 
                                                 const std::vector<double>& pressures) {

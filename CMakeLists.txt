@@ -87,7 +87,7 @@ set(SAM_SRC src/private.h
 	src/combinecases.cpp src/combinecases.h
     src/ptesdesignptdialog.cpp src/ptesdesignptdialog.h
     src/geotools.cpp       src/geotools.h
-    src/GeoTOUGHFrame.cpp       src/GeoTOUGHFrame.h
+    src/geothermaltough.cpp       src/geothermaltough.h
     )
 
 

@@ -214,7 +214,8 @@
     "Callbacks": [
         "on_change{'btn_TOUGHSimulation'} = define() {\r",
         "\thash = geothermal_reservoir_inputs();\r",
-        "\tvalue(\"reservoir_model_inputs\", hash{'results'});\r",
+        "\tif (hash{'success'}==1.0)\r",
+        "\t\tvalue(\"reservoir_model_inputs\", hash{'results'});\r",
         "};\r",
         "\r",
         ""

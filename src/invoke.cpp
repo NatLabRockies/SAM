@@ -94,7 +94,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "ptesdesignptdialog.h"
 #include "geotools.h"
 #include "nohrsc.h"
-#include "GeoTOUGHFrame.h"
+#include "geothermaltough.h"
 
 
 
@@ -3878,14 +3878,18 @@ static void fcall_geothermal_reservoir_inputs(lk::invoke_t& cxt)
 {
 	LK_DOC("geothermal_reservoir_inputs", "Calculate GEOPHIRES/TOUGH reservoir pressure and temperature in a frame.", "(string:none):matrix");
 
-	GeoTOUGHFrame* frame = new GeoTOUGHFrame(SamApp::Window(), "Geothermal Reservoir Inputs", wxDefaultPosition, wxScaleSize(1000, 700));
+	geothermaltough* dlg = new geothermaltough(SamApp::Window(), "Geothermal Reservoir Inputs", wxDefaultPosition, wxScaleSize(1000, 700), (wxCAPTION | wxCLOSE_BOX | wxCLIP_CHILDREN | wxRESIZE_BORDER));
 
-	frame->ShowModal();
-
-	//return matrix
-	matrix_t<double> results = frame->GetResults();
 	cxt.result().empty_hash();
-	copy_mat(cxt, "results", results);
+
+	if (dlg->ShowModal() == wxID_OK) {
+		//return matrix
+		matrix_t<double> results = dlg->GetResults();
+		copy_mat(cxt, "results", results);
+		cxt.result().hash_item("success",1.0);
+	}
+	else
+		cxt.result().hash_item("success", 0.0);
 }
 
 

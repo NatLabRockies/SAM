@@ -1,5 +1,5 @@
-#ifndef GEOTOUGHFRAME_H
-#define GEOTOUGHFRAME_H
+#ifndef geothermaltough_H
+#define geothermaltough_H
 
 
 #include <wx/wx.h>
@@ -10,12 +10,12 @@
 
 
 // --- Main application Window ---
-class GeoTOUGHFrame : public wxDialog {
+class geothermaltough : public wxDialog {
 public:
-    GeoTOUGHFrame(wxWindow* parent, const wxString& title = "GeoTOUGH Multi-Physics Simulation Studio",
+    geothermaltough(wxWindow* parent, const wxString& title = "GeoTOUGH Multi-Physics Simulation Studio",
         const wxPoint& pos = wxDefaultPosition,
-        const wxSize& size = wxSize(1024, 768));
-    virtual ~GeoTOUGHFrame() {};
+        const wxSize& size = wxSize(1024, 768), long style = (wxCAPTION | wxCLOSE_BOX | wxCLIP_CHILDREN | wxRESIZE_BORDER));
+    virtual ~geothermaltough() {};
 
     matrix_t<double> GetResults() { return m_results; }
 
@@ -38,4 +38,4 @@ private:
 	matrix_t<double> m_results;
 };
 
-#endif // GEOTOUGHFRAME_H
+#endif // geothermaltough_H
