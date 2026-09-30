@@ -143,7 +143,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "Download a wind resource file from the online NREL WIND Toolkit (continental U.S. locations only)"
+                    "String": "Download a wind resource file from the online NLR WIND Toolkit (continental U.S. locations only)"
                 },
                 "Bold": {
                     "Type": 2.0,
@@ -279,7 +279,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "Click Download and enter location information for your project site. SAM downloads wind resource data as an .srw file from the NREL WIND Toolkit and stores it in the Downloaded Weather Files folder on your computer shown under \"Use a weather file stored on your computer\" below.  If your request fails or results in an error message, please try again until it succeeds."
+                    "String": "Click Download and enter location information for your project site. SAM downloads wind resource data as an .srw file from the NLR WIND Toolkit and stores it in the Downloaded Weather Files folder on your computer shown under \"Use a weather file stored on your computer\" below.  If your request fails or results in an error message, please try again until it succeeds."
                 },
                 "TextColour": {
                     "Type": 4.0,
@@ -1501,7 +1501,7 @@
         "\t//otherwise, everything went fine, assign the file",
         "\tvalue( 'user_specified_wf_wind', file );",
         "\tvalue( 'use_specific_wf_wind', 1 );",
-        "\tmsgbox(\"Success!\\nFile downloaded from NREL WIND Toolkit:\\n\\n\" + file);",
+        "\tmsgbox(\"Success!\\nFile downloaded from NLR WIND Toolkit:\\n\\n\" + file);",
         "\tenable( 'user_specified_wf_wind', 1);",
         "\tenable( 'select_wf_wind', 1);",
         "};",

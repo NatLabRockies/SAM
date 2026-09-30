@@ -1217,7 +1217,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "The fixed-charge rate method of calculating the levelized cost of energy simplifies time-dependent calculations and is appropriate for market-level analysis such as for the NREL Annual Technology Baseline, or for very preliminary project analysis. The cash flow method of SAM's other financial models is more suitable for more detailed project analysis. See Help for details."
+                    "String": "The fixed-charge rate method of calculating the levelized cost of energy simplifies time-dependent calculations and is appropriate for market-level analysis such as for the NLR Annual Technology Baseline, or for very preliminary project analysis. The cash flow method of SAM's other financial models is more suitable for more detailed project analysis. See Help for details."
                 },
                 "TextColour": {
                     "Type": 4.0,

@@ -588,7 +588,7 @@
                 },
                 "URL": {
                     "Type": 5.0,
-                    "String": "https://reopt.nrel.gov/tool"
+                    "String": "https://reopt.nlr.gov/tool"
                 },
                 "TabOrder": {
                     "Type": 3.0,

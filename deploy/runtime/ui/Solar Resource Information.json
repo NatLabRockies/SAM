@@ -2279,7 +2279,7 @@
         "\t{\r",
         "\t\tif ( tech == csp_techs[i] ) \r",
         "\t\t{\r",
-        "\t\t\tstr = 'CSP models use a different time convention than NREL NSRDB data. See Help for details.';\r",
+        "\t\t\tstr = 'CSP models use a different time convention than NSRDB data. See Help for details.';\r",
         "\t\t}\t\r",
         "\t}\r",
         "\tif ( tech == 'Biopower' )\r",

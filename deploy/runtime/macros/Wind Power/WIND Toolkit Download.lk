@@ -4,7 +4,7 @@
 
 <ol>
 <li>WIND Toolkit Data V2 (wtk-download): 5-, 15-, 30- and 60-minute data for 2007-2014.</li>
-<li>HRRR MET Toolkit (wtk-hrrr-met-toolkit-v1-0-0-download): Hourly data for 2015-2025</li>
+<li>HRRR MET Toolkit (wtk-hrrr-met-toolkit-v1-0-0-download): Hourly data for 2015-2025.</li>
 </ol>
 
 <p>Click <strong>Run macro</strong> above to start the macro.</p>
@@ -12,7 +12,6 @@
 <p>WIND Toolkit Data Downloads API documentation: <a href="https://developer.nlr.gov/docs/wind/wind-toolkit/">WIND Toolkit APIs on NLR Developer Network</a>.</p>
 
 @*/
-
 
 // return an item's index in an array
 function get_endpoint_index(arr, item) {
@@ -62,17 +61,12 @@ time_step = choose_from_list(available_attributes{'available_intervals'}[endpoin
 
 year = choose_from_list(available_attributes{'available_years'}[endpoint_index], 'Choose a year for ' + available_attributes{'names'}[endpoint_index], 'Choose a Year');
 
-//base_url = webapi('windtoolkit');
 base_url = 'https://developer.nlr.gov/api/wind-toolkit/v2/wind/<ENDPOINT>.csv?&api_key=<SAMAPIKEY>&email=<USEREMAIL>&full_name=SAM%20User&affiliation=none&reason=none&wkt=POINT(<LON>%20<LAT>)&utc=false&leap_day=false&names=<YEAR>&interval=<INTERVAL>&attributes=<ATTRS>';
 
-api_key = 'J9rjyBKwxH0RZ63WkHtqHo50RPs8JlZKeVKGRePX';
-email = 'sam.support@nrel.gov';
 lon = -104.9;
 lat = 41.0;
 
-url = replace(base_url, '<SAMAPIKEY>', api_key);
-url = replace(url, '<USEREMAIL>', email);
-url = replace(url, '<ENDPOINT>', endpoint_name);
+url = replace(base_url, '<ENDPOINT>', endpoint_name);
 url = replace(url, '<LON>', lon);
 url = replace(url, '<LAT>', lat);
 url = replace(url, '<YEAR>', year);
