@@ -569,9 +569,9 @@ bool Simulation::Setup()
 }
 
 bool Simulation::Prepare()
-{	
-	ConfigInfo *cfg = m_case->GetConfiguration();
-	if ( !cfg )
+{
+	ConfigInfo* cfg = m_case->GetConfiguration();
+	if (!cfg)
 	{
 		m_errors.Add("no valid configuration for this case");
 		return false;
@@ -594,7 +594,14 @@ bool Simulation::Prepare()
 			++it)
 			if (0 == m_inputs[ndx_hybrid].Get(it->first))
 				m_inputs[ndx_hybrid].Set(it->first, *(it->second));
+	}
+	// Ty's project
+	for (size_t ndx_hybrid = 0; ndx_hybrid < nHybrids; ndx_hybrid++) {
+		m_case->HybridizeForEquations(ndx_hybrid, m_inputs[ndx_hybrid]);
+	}
 
+	for (size_t ndx_hybrid = 0; ndx_hybrid < nHybrids; ndx_hybrid++) {
+	
 		// recalculate all the equations
 		CaseEvaluator eval(m_case, m_inputs[ndx_hybrid], m_case->Equations(ndx_hybrid));// update m_inputs for hybrids
 		int n = eval.CalculateAll(ndx_hybrid);
@@ -894,8 +901,11 @@ bool Simulation::CmodInputsToSSCData(ssc_module_t p_mod, ssc_data_t p_data) {
     while (const ssc_info_t p_inf = ssc_module_var_info(p_mod, pidx++)) {
         int var_type = ssc_info_var_type(p_inf);   // SSC_INPUT, SSC_OUTPUT, SSC_INOUT
         int data_type = ssc_info_data_type(p_inf); // SSC_STRING, SSC_NUMBER, SSC_ARRAY, SSC_MATRIX
-        wxString name(ssc_info_name(p_inf)); // assumed to be non-null
-        wxString reqd(ssc_info_required(p_inf));
+        // address exception on MacOS
+        const char* p_cName = ssc_info_name(p_inf);
+        wxString name(p_cName ? p_cName : "");
+        const char* p_cReqd = ssc_info_required(p_inf);
+        wxString reqd(p_cReqd ? p_cReqd : "");
 
         if (var_type == SSC_INPUT || var_type == SSC_INOUT) {
             // handle ssc variable names

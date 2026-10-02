@@ -158,6 +158,8 @@ bool EqnDatabase::PreProcessScript( wxString *text, wxArrayString* errors)
 		// expand function for use in equations to parse inputs and outputs
 		wxString cm = args[1];
 		cm.Replace("'", "");
+//		wxString short_name = args[3];
+//		short_name.Replace("'", "");
 		ssc_module_t p_mod = ssc_module_create((const char*)cm.ToUTF8());
 		if (!p_mod)	{
 			errors->Add("could not create ssc module: " + cm);
@@ -203,6 +205,7 @@ bool EqnDatabase::PreProcessScript( wxString *text, wxArrayString* errors)
 					arg[1] = compute module name
 					arg[2] = sim_type value
 					*/
+//					strReplace += "\tif (var_exists_hybrid(\"" + ssc_var_name + "\",\"" + short_name.Trim() + "\"))\n"; // SAM issue 1634
 					strReplace += "\tif (var_exists(\"" + ssc_var_name + "\"))\n"; // SAM issue 1634
 					strReplace += "\t\tssc_var(" + args[0] + ", \"" + ssc_var_name + "\"," + lk_var_name + ");\n";
 				}
