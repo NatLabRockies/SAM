@@ -901,8 +901,11 @@ bool Simulation::CmodInputsToSSCData(ssc_module_t p_mod, ssc_data_t p_data) {
     while (const ssc_info_t p_inf = ssc_module_var_info(p_mod, pidx++)) {
         int var_type = ssc_info_var_type(p_inf);   // SSC_INPUT, SSC_OUTPUT, SSC_INOUT
         int data_type = ssc_info_data_type(p_inf); // SSC_STRING, SSC_NUMBER, SSC_ARRAY, SSC_MATRIX
-        wxString name(ssc_info_name(p_inf)); // assumed to be non-null
-        wxString reqd(ssc_info_required(p_inf));
+        // address exception on MacOS
+        const char* p_cName = ssc_info_name(p_inf);
+        wxString name(p_cName ? p_cName : "");
+        const char* p_cReqd = ssc_info_required(p_inf);
+        wxString reqd(p_cReqd ? p_cReqd : "");
 
         if (var_type == SSC_INPUT || var_type == SSC_INOUT) {
             // handle ssc variable names
