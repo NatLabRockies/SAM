@@ -158,8 +158,6 @@ bool EqnDatabase::PreProcessScript( wxString *text, wxArrayString* errors)
 		// expand function for use in equations to parse inputs and outputs
 		wxString cm = args[1];
 		cm.Replace("'", "");
-//		wxString short_name = args[3];
-//		short_name.Replace("'", "");
 		ssc_module_t p_mod = ssc_module_create((const char*)cm.ToUTF8());
 		if (!p_mod)	{
 			errors->Add("could not create ssc module: " + cm);

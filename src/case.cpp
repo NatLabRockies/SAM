@@ -207,9 +207,6 @@ int CaseEvaluator::CalculateAll(size_t ndxHybrid)
 		}
 	}
 
-	// Ty's project
-	//m_case->HybridizeForEquations(ndxHybrid, *m_vt);
-
 	int nevals = EqnEvaluator::CalculateAll();
 	if ( nevals >= 0 ) nevals += nlibchanges;
 

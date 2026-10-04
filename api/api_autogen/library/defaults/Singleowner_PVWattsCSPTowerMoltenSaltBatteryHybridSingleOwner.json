@@ -92,7 +92,7 @@
 			"itc_fed_percent": [30.000000],
 			"itc_fed_percent_deprbas_fed": 1,
 			"itc_fed_percent_deprbas_sta": 1,
-			"itc_fed_percent_maxvalue": [1.000000],
+			"itc_fed_percent_maxvalue": [0.000000],
 			"itc_sta_amount": [0.000000],
 			"itc_sta_amount_deprbas_fed": 0,
 			"itc_sta_amount_deprbas_sta": 0,
@@ -407,8 +407,8 @@
 		"Monthly": {
 		},
 		"NonEnergyRevenue": {
-			"energy_expenses_ret": [0.000000],
-			"energy_revenue_ret": [0.000000],
+			"energy_expenses_ret": [100.000000],
+			"energy_revenue_ret": [100.000000],
 			"non_energy_expenses": [0.000000],
 			"non_energy_expenses_ds": 1,
 			"non_energy_expenses_escal": 0,

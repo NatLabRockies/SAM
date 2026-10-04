@@ -1970,45 +1970,6 @@ void fcall_var_exists(lk::invoke_t& cxt)
 }
 
 
-void fcall_var_exists_hybrid(lk::invoke_t& cxt)
-{
-	LK_DOC("var_exists_hybrid", "Check by name if an input or output variable exists in current case using short_name in startp.lk", "(string:name, string:short_name comma list):bool");
-
-	Case* c = nullptr;
-	if (CaseCallbackContext* ci = static_cast<CaseCallbackContext*>(cxt.user_data()))
-		*c = ci->GetCase();
-	else if (SamApp::Window()->GetEquationCase() != nullptr)
-		c = SamApp::Window()->GetEquationCase();
-	else
-		c = SamApp::Window()->GetCurrentCase();
-	if (c != nullptr) {
-		wxString name = cxt.arg(0).as_string();
-		wxString short_name = cxt.arg(1).as_string(); // comma list of short names or blank
-		wxArrayString sn_list = wxSplit(short_name, '|');
-		for (size_t i = 0; i < sn_list.size(); i++)
-			sn_list[i] = sn_list[i].Lower();
-		auto cfg = c->GetConfiguration();
-		int ndxHybrid = 0;
-		VarValue* vv = NULL;
-		bool bfound = false;
-		for (size_t ndx = cfg->Technology.size() - 1; ndx > 0; ndx--) { // select ndxHybrid based on compute module position in
-			if ((sn_list.Index(cfg->Technology[ndx].Lower()) != wxNOT_FOUND) || (cfg->Technology.size()==1)) {
-				if (vv = c->Values(ndx).Get(name)) {
-					bfound = true;
-					ndxHybrid = ndx;
-				}
-			}
-		}
-		if (bfound)
-			cxt.result().assign(1);
-		else
-			cxt.result().assign((double)0);
-	}
-	else
-		cxt.result().assign((double)0);
-}
-
-
 
 void fcall_ssc_var_auto_exec(lk::invoke_t& cxt)
 {
@@ -6600,7 +6561,6 @@ lk::fcall_t* invoke_ssc_funcs()
 		fcall_ssc_var,
 		fcall_ssc_var_auto_exec,
 		fcall_var_exists,
-		fcall_var_exists_hybrid,
 		fcall_ssc_exec,
 		fcall_ssc_eqn,
 		0 };
