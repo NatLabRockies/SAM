@@ -388,8 +388,17 @@ static void fcall_configuration( lk::invoke_t &cxt )
 		if ( techlist.Index( tech ) == wxNOT_FOUND ) return;
 		wxArrayString finlist = SamApp::Config().GetFinancingForTech( tech );
 		if ( finlist.Index( fin ) == wxNOT_FOUND ) return;
-
-		cxt.result().assign( cc->SetConfiguration( tech, fin, true, 0 ) ? 1.0 : 0.0 ); // invoke silently - do not show error messages
+		bool b = cc->SetConfiguration(tech, fin, true, 0);
+/*		auto cw = SamApp::Window()->GetCaseWindow(cc);
+		cw->UpdateConfiguration();
+		cw->RefreshPages(); 
+		// load first page of hybrid and non-hybrid configurations
+		if (cc->GetConfiguration()->Technology.size() > 1) {// hybrid	
+			cw->SwitchToNavigationMenu(cc->GetConfiguration()->InputPageGroups[cc->GetConfiguration()->Technology.size() - 1][1]->SideBarLabel);
+			cw->SwitchToNavigationMenu(cc->GetConfiguration()->InputPageGroups[cc->GetConfiguration()->Technology.size() - 1][0]->SideBarLabel);
+		}
+*/
+		cxt.result().assign( b ? 1.0 : 0.0 ); // invoke silently - do not show error messages
 	}
 	else
 	{
