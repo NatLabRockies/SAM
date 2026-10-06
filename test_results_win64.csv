@@ -65,8 +65,8 @@ Standalone Battery,Merchant Plant,-6.8282e+06,27.1516,NA,; Warning: NPV is $-8.6
 Standalone Battery,Leveraged Partnership Flip,-6.8282e+06,74.8038,72.8932,; Warning: IRR at end of analysis period is not a number (NaN). This can indicate that revenues are too low to cover costs, or that they are excessively high compared to costs. Warning: IRR in target year is not a number (NaN). This can indicate that revenues are too low to cover costs, or that they are excessively high compared to costs. Warning: NPV is $-9.85039e+06. A negative NPV indicates project costs are higher than revenues.
 Standalone Battery,All Equity Partnership Flip,-6.8282e+06,79.0515,72.8932,; Warning: IRR at end of analysis period is not a number (NaN). This can indicate that revenues are too low to cover costs, or that they are excessively high compared to costs. Warning: IRR in target year is not a number (NaN). This can indicate that revenues are too low to cover costs, or that they are excessively high compared to costs. Warning: NPV is $-3.35545e+07. A negative NPV indicates project costs are higher than revenues.
 Standalone Battery,Sale Leaseback,-6.8282e+06,75.2289,72.8932,; Warning: IRR at end of analysis period is not a number (NaN). This can indicate that revenues are too low to cover costs, or that they are excessively high compared to costs. Warning: NPV is $-1.44754e+07. A negative NPV indicates project costs are higher than revenues. Warning: NPV is $-8.19532e+07. A negative NPV indicates project costs are higher than revenues.
-ETES,Single Owner,-466832928,17.2978,7.41203,; 
-PTES,Single Owner,-197511264,21.5709,10.3638,; 
+ETES,Single Owner,-466594880,17.2904,7.408,; 
+PTES,Single Owner,-197587024,21.5711,10.3673,; 
 Physical Trough,Single Owner,377429056,17.5683,14.5131,; 
 Physical Trough,Merchant Plant,377429056,16.1805,NA,; 
 Physical Trough,Leveraged Partnership Flip,377429056,17.9196,14.5131,; 
@@ -128,8 +128,8 @@ MEwave,Single Owner,65589748,78.0201,59.0541,; Warning: NPV is $-1.20896e+08. A 
 MEwave,LCOE Calculator,59434320,NA,NA,; 
 MEwave,None,594343,NA,NA,; 
 MEwave Battery,Single Owner,65027312,79.8171,59.0537,; Warning: NPV is $-1.31222e+08. A negative NPV indicates project costs are higher than revenues.
-MEtidal,LCOE Calculator,2.16152e+06,NA,NA,; 
 MEtidal,None,2.16152e+06,NA,NA,; 
+MEtidal,LCOE Calculator,2.16152e+06,NA,NA,; 
 Wind Power,Residential,48358.4,30.0676,NA,; 
 Wind Power,Commercial,327922,11.3009,NA,; 
 Wind Power,Single Owner,818888256,4.80817,3.2399,; Warning: NPV is $-1.19261e+08. A negative NPV indicates project costs are higher than revenues.
@@ -178,5 +178,5 @@ Photovoltaic Wind Battery Hybrid,Single Owner,601657408,10.9888,11.8416,; Notice
 Photovoltaic Wind Battery Hybrid,Host Developer,1.30379e+06,15.4337,16.5645,; Notice: Simulation time step is 60 minutes for pvsamv1. Notice: Simulation time step is 60 minutes for windpower.
 CustomGeneration PVWatts Wind FuelCell Battery Hybrid,Single Owner,1332349312,13.2619,11.7547,; Notice: Simulation time step is 60 minutes for custom_generation. Notice: Simulation time step is 60 minutes for pvwattsv8. Notice: Simulation time step is 60 minutes for windpower.
 CustomGeneration PVWatts Wind FuelCell Battery Hybrid,Host Developer,759754816,14.997,15.0853,; Notice: Simulation time step is 60 minutes for custom_generation. Notice: Simulation time step is 60 minutes for pvwattsv8. Notice: Simulation time step is 60 minutes for windpower.
-PVWatts CSPTowerMoltenSalt Battery Hybrid,Single Owner,308326784,23.0686,12.0797,; Notice: Simulation time step is 60 minutes for pvwattsv8.
+PVWatts CSPTowerMoltenSalt Battery Hybrid,Single Owner,308326784,25.0752,12.0797,; Notice: Simulation time step is 60 minutes for pvwattsv8.
 final_configuration_eof,none,NA,NA,NA,
