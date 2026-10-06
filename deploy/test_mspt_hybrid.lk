@@ -32,7 +32,7 @@ for (t=0; t<#technologies; t++)
 //	&& (technologies[t] != "Generic Battery")
 //	&& (technologies[t] != "Generic PVWatts Wind FuelCell Battery Hybrid")
 //	&& (technologies[t] != "MSPTV2"))
-	if (/*(technologies[t] ==  "CustomGeneration PVWatts Wind FuelCell Battery Hybrid") || */(technologies[t] ==  "PVWatts CSPTowerMoltenSalt Battery Hybrid") )
+	if ((technologies[t] ==  "MEwave") || (technologies[t] ==  "MSLF IPH") )
 	{
 	//Loop through all financing options for that technology
 	financing = list_financing(technologies[t]);
