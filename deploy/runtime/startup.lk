@@ -36,7 +36,7 @@ addconfig( 'MSLF IPH', ['None', 'LCOH Calculator', 'Single Owner', 'Commercial']
 // Marine Energy
 addconfig( 'MEwave', ['Single Owner', 'LCOE Calculator', 'None']);
 addconfig( 'MEwave Battery', ['Single Owner']);
-addconfig( 'MEtidal', ['LCOE Calculator', 'None']);
+addconfig( 'MEtidal', ['None','LCOE Calculator']);
 // Wind
 addconfig( 'Wind Power', [ 'Residential', 'Commercial', 'Single Owner', 'Merchant Plant', 'Leveraged Partnership Flip', 'All Equity Partnership Flip', 'Sale Leaseback', 'LCOE Calculator', 'None'] );
 // Fuel Cell-PV-Battery
