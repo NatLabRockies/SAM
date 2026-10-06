@@ -200,6 +200,12 @@ SAM_EXPORT void SAM_TcsmoltenSalt_SystemControl_disp_steps_per_hour_nset(SAM_tab
 	});
 }
 
+SAM_EXPORT void SAM_TcsmoltenSalt_SystemControl_disp_tes_min_buffer_nset(SAM_table ptr, double number, SAM_error *err){
+	translateExceptions(err, [&]{
+		ssc_data_set_number(ptr, "disp_tes_min_buffer", number);
+	});
+}
+
 SAM_EXPORT void SAM_TcsmoltenSalt_SystemControl_disp_time_weighting_nset(SAM_table ptr, double number, SAM_error *err){
 	translateExceptions(err, [&]{
 		ssc_data_set_number(ptr, "disp_time_weighting", number);
@@ -2711,6 +2717,15 @@ SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_disp_steps_per_hour_nget(SAM_t
 	translateExceptions(err, [&]{
 	if (!ssc_data_get_number(ptr, "disp_steps_per_hour", &result))
 		make_access_error("SAM_TcsmoltenSalt", "disp_steps_per_hour");
+	});
+	return result;
+}
+
+SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_disp_tes_min_buffer_nget(SAM_table ptr, SAM_error *err){
+	double result;
+	translateExceptions(err, [&]{
+	if (!ssc_data_get_number(ptr, "disp_tes_min_buffer", &result))
+		make_access_error("SAM_TcsmoltenSalt", "disp_tes_min_buffer");
 	});
 	return result;
 }

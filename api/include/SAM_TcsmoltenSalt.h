@@ -285,6 +285,14 @@ extern "C"
 	SAM_EXPORT void SAM_TcsmoltenSalt_SystemControl_disp_steps_per_hour_nset(SAM_table ptr, double number, SAM_error *err);
 
 	/**
+	 * Set disp_tes_min_buffer: Dispatch minimum TES buffer in hours of cycle thermal input [hr]
+	 * options: None
+	 * constraints: None
+	 * required if: ?=0.0
+	 */
+	SAM_EXPORT void SAM_TcsmoltenSalt_SystemControl_disp_tes_min_buffer_nset(SAM_table ptr, double number, SAM_error *err);
+
+	/**
 	 * Set disp_time_weighting: Dispatch optimization future time discounting factor
 	 * options: None
 	 * constraints: None
@@ -3446,6 +3454,8 @@ extern "C"
 	SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_disp_spec_scaling_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_disp_steps_per_hour_nget(SAM_table ptr, SAM_error *err);
+
+	SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_disp_tes_min_buffer_nget(SAM_table ptr, SAM_error *err);
 
 	SAM_EXPORT double SAM_TcsmoltenSalt_SystemControl_disp_time_weighting_nget(SAM_table ptr, SAM_error *err);
 
