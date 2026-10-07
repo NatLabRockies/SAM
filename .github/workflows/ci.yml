@@ -275,7 +275,6 @@ jobs:
       if: ${{ github.event_name == 'pull_request' }}
       run:  |
         echo "GIT_BRANCH=${{ github.head_ref }}" >> $GITHUB_ENV
-        echo "DEFAULT_BRANCH=$GITHUB_BASE_REF" >> $GITHUB_ENV
     - name: Get branch name for push
       shell: bash
       if: ${{ github.event_name == 'push' }}
