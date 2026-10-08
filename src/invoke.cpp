@@ -1955,7 +1955,7 @@ void fcall_var_exists(lk::invoke_t& cxt)
         VarValue* vv = NULL;
         bool bfound = false;
         for (size_t ndx = 0; ndx < cfg->Technology.size(); ndx++) { // select ndxHybrid based on compute module position in
-            if (vv = c->Values(ndxHybrid).Get(name)) {
+            if (vv = c->Values(ndx).Get(name)) {
                 bfound = true;
                 ndxHybrid = ndx;
             }
@@ -1968,6 +1968,8 @@ void fcall_var_exists(lk::invoke_t& cxt)
 	else
 		cxt.result().assign((double)0);
 }
+
+
 
 void fcall_ssc_var_auto_exec(lk::invoke_t& cxt)
 {
@@ -2493,6 +2495,7 @@ void fcall_ssc_exec( lk::invoke_t &cxt )
 			}
 
 			cxt.result().assign( errors );
+			cxt.error(errors); // force cxt.has_error() == true
 		}
 
 		ssc_module_free( mod );

@@ -203,6 +203,7 @@ bool EqnDatabase::PreProcessScript( wxString *text, wxArrayString* errors)
 					arg[1] = compute module name
 					arg[2] = sim_type value
 					*/
+//					strReplace += "\tif (var_exists_hybrid(\"" + ssc_var_name + "\",\"" + short_name.Trim() + "\"))\n"; // SAM issue 1634
 					strReplace += "\tif (var_exists(\"" + ssc_var_name + "\"))\n"; // SAM issue 1634
 					strReplace += "\t\tssc_var(" + args[0] + ", \"" + ssc_var_name + "\"," + lk_var_name + ");\n";
 				}

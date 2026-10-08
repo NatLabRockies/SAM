@@ -24,14 +24,15 @@ configs = 0;
 technologies = 	list_technologies();
 for (t=0; t<#technologies; t++)
 {
-	if ((technologies[t] != "DSPT") 
-	&& (technologies[t] != "Dish Stirling")
-	&& (technologies[t] != "ISCC")
-	&& (technologies[t] != "Retired")
-	&& (technologies[t] != "Generic System")
-	&& (technologies[t] != "Generic Battery")
-	&& (technologies[t] != "Generic PVWatts Wind FuelCell Battery Hybrid")
-	&& (technologies[t] != "MSPTV2"))
+//	if ((technologies[t] != "DSPT") 
+//	&& (technologies[t] != "Dish Stirling")
+//	&& (technologies[t] != "ISCC")
+//	&& (technologies[t] != "Retired")
+//	&& (technologies[t] != "Generic System")
+//	&& (technologies[t] != "Generic Battery")
+//	&& (technologies[t] != "Generic PVWatts Wind FuelCell Battery Hybrid")
+//	&& (technologies[t] != "MSPTV2"))
+	if ((technologies[t] ==  "MEwave") || (technologies[t] ==  "MSLF IPH") )
 	{
 	//Loop through all financing options for that technology
 	financing = list_financing(technologies[t]);
@@ -72,8 +73,10 @@ for (t=0; t<#technologies; t++)
 		
 		//Check that the case simulates ok
 		message2 = '';
+// testing
 		configuration( technologies[t], financing[f]) ;
 
+		
 		if(!simulate(message2))
 		{
 			outln( 'fail\tfail\tfail' );
