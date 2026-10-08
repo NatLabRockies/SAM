@@ -3720,6 +3720,8 @@ sethybridvariabledependencies([
 //{ 'IndependentVartableIndex' = 2,'IndependentVariableName' = 'fuelcell_power_nameplate', 'DependentVartableIndex' = 4,'DependentVariableName' = 'fuelcell_power_nameplate'}, // fuel cell costs hybrid
 { 'IndependentVartableIndex' = 1,'IndependentVariableName' = 'system_capacity', 'DependentVartableIndex' = 3,'DependentVariableName' = 'csptowermoltensalt_system_capacity'},
 { 'IndependentVartableIndex' = 1,'IndependentVariableName' = 'total_installed_cost', 'DependentVartableIndex' = 3,'DependentVariableName' = 'csptowermoltensalt_total_installed_cost'},
+{ 'IndependentVartableIndex' = 1,'IndependentVariableName' = 'csp.pt.cost.storage', 'DependentVartableIndex' = 3, 'DependentVariableName' = 'csptowermoltensalt_tes_installed_cost'},
+{ 'IndependentVartableIndex' = 1,'IndependentVariableName' = 'q_pb_design', 'DependentVartableIndex' = 3, 'DependentVariableName' = 'csptowermoltensalt_q_pb_design'},
 { 'IndependentVartableIndex' = 2,'IndependentVariableName' = 'total_installed_cost', 'DependentVartableIndex' = 3,'DependentVariableName' = 'battery_total_installed_cost'},
 { 'IndependentVartableIndex' = 2,'IndependentVariableName' = 'batt_power_discharge_max_kwac', 'DependentVartableIndex' = 3,'DependentVariableName' = 'batt_power_discharge_max_kwac'},
 { 'IndependentVartableIndex' = 3,'IndependentVariableName' = 'analysis_period', 'DependentVartableIndex' = 0,'DependentVariableName' = 'analysis_period'},

@@ -1,7 +1,7 @@
 {
     "Name": "Financial ITC Qualification Hybrid",
-    "Width": 861.0,
-    "Height": 403.0,
+    "Width": 864.0,
+    "Height": 558.0,
     "FormObjects": {
         "Label": {
             "Visible": 1.0,
@@ -12,7 +12,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 633.0
+                    "Integer": 696.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -74,7 +74,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 534.0
+                    "Integer": 597.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -136,7 +136,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 528.0
+                    "Integer": 591.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -198,7 +198,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 216.0
+                    "Integer": 279.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -281,7 +281,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 564.0
+                    "Integer": 627.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -322,7 +322,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 663.0
+                    "Integer": 726.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -363,7 +363,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 336.0
+                    "Integer": 399.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -446,7 +446,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 441.0
+                    "Integer": 504.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -508,11 +508,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 216.0
+                    "Integer": 279.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 279.0
+                    "Integer": 333.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -591,11 +591,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 663.0
+                    "Integer": 726.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 279.0
+                    "Integer": 333.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -632,11 +632,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 564.0
+                    "Integer": 627.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 279.0
+                    "Integer": 333.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -673,11 +673,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 336.0
+                    "Integer": 399.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 279.0
+                    "Integer": 333.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -756,11 +756,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 441.0
+                    "Integer": 504.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 279.0
+                    "Integer": 333.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -818,11 +818,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 216.0
+                    "Integer": 279.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 252.0
+                    "Integer": 306.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -901,11 +901,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 564.0
+                    "Integer": 627.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 255.0
+                    "Integer": 309.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -942,11 +942,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 663.0
+                    "Integer": 726.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 255.0
+                    "Integer": 309.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -983,11 +983,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 336.0
+                    "Integer": 399.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 252.0
+                    "Integer": 306.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1066,11 +1066,135 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 441.0
+                    "Integer": 504.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 306.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "%"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "fuel_cell_itc_basis_percent_lbl47"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 504.0
                 },
                 "Y": {
                     "Type": 3.0,
                     "Integer": 252.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": "%"
+                },
+                "TextColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "Bold": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "FontSize": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "WordWrap": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignRight": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "AlignTop": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                }
+            }
+        },
+        "Label": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "fuel_cell_itc_basis_percent_lbl4752"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 504.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 279.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1128,11 +1252,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 216.0
+                    "Integer": 279.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 306.0
+                    "Integer": 360.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1211,11 +1335,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 564.0
+                    "Integer": 627.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 306.0
+                    "Integer": 360.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1252,11 +1376,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 663.0
+                    "Integer": 726.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 306.0
+                    "Integer": 360.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1293,11 +1417,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 336.0
+                    "Integer": 399.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 306.0
+                    "Integer": 360.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1376,11 +1500,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 441.0
+                    "Integer": 504.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 306.0
+                    "Integer": 360.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1438,11 +1562,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 495.0
+                    "Integer": 558.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 336.0
+                    "Integer": 390.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1521,11 +1645,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 594.0
+                    "Integer": 657.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 336.0
+                    "Integer": 390.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1604,11 +1728,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 495.0
+                    "Integer": 558.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 363.0
+                    "Integer": 417.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1687,11 +1811,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 594.0
+                    "Integer": 657.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 363.0
+                    "Integer": 417.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -1872,6 +1996,254 @@
                 }
             }
         },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "mspt_basis_cost"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 279.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 252.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 2.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "CheckBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "mspt_itc_basis_cost_fed_include"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 627.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 255.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "State": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 8.0
+                }
+            }
+        },
+        "CheckBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "mspt_itc_basis_cost_sta_include"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 726.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 255.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "State": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 9.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "mspt_itc_basis_percent"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 399.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 252.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
         "GroupBox": {
             "Visible": 1.0,
             "ObjectProperties": {
@@ -1893,7 +2265,7 @@
                 },
                 "Height": {
                     "Type": 3.0,
-                    "Integer": 391.0
+                    "Integer": 544.0
                 },
                 "Tool Tip": {
                     "Type": 5.0,
@@ -1918,11 +2290,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 105.0
+                    "Integer": 168.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 363.0
+                    "Integer": 417.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2042,11 +2414,11 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 105.0
+                    "Integer": 168.0
                 },
                 "Y": {
                     "Type": 3.0,
-                    "Integer": 336.0
+                    "Integer": 390.0
                 },
                 "Width": {
                     "Type": 3.0,
@@ -2104,7 +2476,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 216.0
+                    "Integer": 279.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -2187,7 +2559,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 564.0
+                    "Integer": 627.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -2228,7 +2600,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 663.0
+                    "Integer": 726.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -2269,7 +2641,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 336.0
+                    "Integer": 399.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -2352,7 +2724,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 441.0
+                    "Integer": 504.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -2410,11 +2782,259 @@
             "ObjectProperties": {
                 "Name": {
                     "Type": 5.0,
+                    "String": "tes_basis_cost"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 279.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 279.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 2.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "CheckBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "tes_itc_basis_cost_fed_include"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 627.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 282.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "State": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 8.0
+                }
+            }
+        },
+        "CheckBox": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "tes_itc_basis_cost_sta_include"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 726.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 282.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 21.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Caption": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "State": {
+                    "Type": 2.0,
+                    "Boolean": 0.0
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": 9.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
+                    "String": "tes_itc_basis_percent"
+                },
+                "X": {
+                    "Type": 3.0,
+                    "Integer": 399.0
+                },
+                "Y": {
+                    "Type": 3.0,
+                    "Integer": 279.0
+                },
+                "Width": {
+                    "Type": 3.0,
+                    "Integer": 100.0
+                },
+                "Height": {
+                    "Type": 3.0,
+                    "Integer": 24.0
+                },
+                "Tool Tip": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Value": {
+                    "Type": 1.0,
+                    "Double": 0.0
+                },
+                "Mode": {
+                    "Type": 3.0,
+                    "Integer": 1.0
+                },
+                "Format": {
+                    "Type": 3.0,
+                    "Integer": 0.0
+                },
+                "Decimals": {
+                    "Type": 3.0,
+                    "Integer": 3.0
+                },
+                "Prefix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "Suffix": {
+                    "Type": 5.0,
+                    "String": ""
+                },
+                "ThousandsSep": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "Editable": {
+                    "Type": 2.0,
+                    "Boolean": 1.0
+                },
+                "ForeColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 0.0,
+                        "Green": 0.0,
+                        "Blue": 0.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "BackColour": {
+                    "Type": 4.0,
+                    "Color": {
+                        "Red": 255.0,
+                        "Green": 255.0,
+                        "Blue": 255.0,
+                        "Alpha": 255.0
+                    }
+                },
+                "TabOrder": {
+                    "Type": 3.0,
+                    "Integer": -1.0
+                }
+            }
+        },
+        "Numeric": {
+            "Visible": 1.0,
+            "ObjectProperties": {
+                "Name": {
+                    "Type": 5.0,
                     "String": "wind_basis_cost"
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 216.0
+                    "Integer": 279.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -2497,7 +3117,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 564.0
+                    "Integer": 627.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -2538,7 +3158,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 663.0
+                    "Integer": 726.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -2579,7 +3199,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 336.0
+                    "Integer": 399.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -2662,7 +3282,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 441.0
+                    "Integer": 504.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -3085,6 +3705,58 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
+        "mspt_basis_cost": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Molten salt power tower installed cost",
+            "Units": "$",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "mspt_itc_basis_cost_fed_include": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Molten salt power tower cost qualifies for federal ITC",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "mspt_itc_basis_cost_sta_include": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Molten salt power tower installed cost qualifies for state ITC",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 1.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "mspt_itc_basis_percent": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Molten salt power tower installed cost percent",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 9.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "pv_basis_cost": {
             "Version": 4.0,
             "Type": 1.0,
@@ -3163,6 +3835,58 @@
             "sscVariableName": "",
             "sscVariableValue": ""
         },
+        "tes_basis_cost": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Thermal energy storage installed cost",
+            "Units": "$",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 8.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "tes_itc_basis_cost_fed_include": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Thermal energy storage qualifies for federal ITC",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "tes_itc_basis_cost_sta_include": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Thermal energy storage qualifies for state ITC",
+            "Units": "",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 3.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
+        "tes_itc_basis_percent": {
+            "Version": 4.0,
+            "Type": 1.0,
+            "Label": "Thermal energy storage installed cost percent",
+            "Units": "%",
+            "Group": "",
+            "IndexLabels": "",
+            "Flags": 9.0,
+            "DefaultValue": 0.0,
+            "UIObject": "Default",
+            "sscVariableName": "",
+            "sscVariableValue": ""
+        },
         "wind_basis_cost": {
             "Version": 4.0,
             "Type": 1.0,
@@ -3237,6 +3961,14 @@
         "\treturn ${custom_generation_basis_cost} / ${total_installed_cost} * 100;\r",
         "};\r",
         "\r",
+        "equations{'mspt_itc_basis_percent'} = define() {\r",
+        "\treturn ${mspt_basis_cost} / ${total_installed_cost} * 100;\r",
+        "};\r",
+        "\r",
+        "equations{'tes_itc_basis_percent'} = define() {\r",
+        "\treturn ${tes_basis_cost} / ${total_installed_cost} * 100;\r",
+        "};\r",
+        "\r",
         "equations{'pv_itc_basis_percent'} = define() {\r",
         "\treturn ${pv_basis_cost} / ${total_installed_cost} * 100;\r",
         "};\r",
@@ -3246,6 +3978,7 @@
         "\tis_hybrid = strpos(tech, \"Hybrid\") != -1;\r",
         "\tis_fuel_cell = strpos(tech, \"Fuel\") != -1;\r",
         "\tis_custom = strpos(tech, \"Custom\") != -1;\r",
+        "\tis_mspt = strpos(tech, \"Molten\") != -1;\r",
         "\tif (is_hybrid) {\r",
         "\t\t${pv_basis_cost} = ${ui_pv_cost};\r",
         "\t\t${wind_basis_cost} = ${ui_wind_cost};\r",
@@ -3254,6 +3987,14 @@
         "\t\telse ${fuel_cell_basis_cost} = 0;\r",
         "\t\tif (is_custom)  ${custom_generation_basis_cost} = ${ui_customgeneration_cost};\r",
         "\t\telse ${custom_generation_basis_cost} = 0;\r",
+        "\t\tif (is_mspt) {\r",
+        "\t\t ${mspt_basis_cost} = ${ui_mspt_cost};\r",
+        "\t\t ${tes_basis_cost} = ${ui_tes_cost};\r",
+        "\t\t}\r",
+        "\t\telse {\r",
+        "\t\t ${mspt_basis_cost} = 0;\r",
+        "\t\t ${tes_basis_cost} = 0;\r",
+        "\t\t}\r",
         "\t}\r",
         "\telse { //PV-Batt_FuelCell configs\r",
         "\t\t${pv_basis_cost} = ${pv_itc_cost};\r",
@@ -3261,6 +4002,8 @@
         "\t\t${fuel_cell_basis_cost} = ${fuel_cell_itc_cost};\r",
         "\t\t${wind_basis_cost} = 0;\r",
         "\t\t${custom_generation_basis_cost} = 0;\r",
+        "\t\t${mspt_basis_cost} = 0;\r",
+        "\t\t${tes_basis_cost} = 0;\r",
         "\t}\r",
         "\t\t\r",
         "};\r",
@@ -3290,9 +4033,16 @@
         "\tif (${customgeneration_itc_basis_cost_fed_include}) {\r",
         "\t\ttotal+= ${custom_generation_basis_cost};\r",
         "\t}\r",
+        "\tif (${mspt_itc_basis_cost_fed_include}) {\r",
+        "\t\ttotal+= ${mspt_basis_cost};\r",
+        "\t}\r",
+        "\tif (${tes_itc_basis_cost_fed_include}) {\r",
+        "\t\ttotal+= ${tes_basis_cost};\r",
+        "\t}\r",
         "\tif (${hybrid_itc_basis_cost_fed_include}) {\r",
         "\t\ttotal+= ${hybrid_basis_cost};\r",
         "\t}\r",
+        "\t\r",
         "\treturn total;\r",
         "};\r",
         "\r",
@@ -3317,6 +4067,12 @@
         "\tif (${customgeneration_itc_basis_cost_sta_include}) {\r",
         "\t\ttotal+= ${custom_generation_basis_cost};\r",
         "\t}\r",
+        "\tif (${mspt_itc_basis_cost_sta_include}) {\r",
+        "\t\ttotal+= ${mspt_basis_cost};\r",
+        "\t}\r",
+        "\tif (${tes_itc_basis_cost_sta_include}) {\r",
+        "\t\ttotal+= ${tes_basis_cost};\r",
+        "\t}\r",
         "\tif (${hybrid_itc_basis_cost_sta_include}) {\r",
         "\t\ttotal+= ${hybrid_basis_cost};\r",
         "\t}\r",
@@ -3337,7 +4093,7 @@
         "equations{'depr_basis_mat'} = define() {\r",
         "\tis_customgeneration_tech = technology() == 'CustomGeneration PVWatts Wind FuelCell Battery Hybrid';\r",
         "\tis_fuel_cell_tech = ( technology() == 'PVWatts Wind FuelCell Battery Hybrid' || technology() == 'CustomGeneration PVWatts Wind FuelCell Battery Hybrid' ) ;\r",
-        "\t\r",
+        "\tis_mspt_tech = strpos(technology(), 'Molten') != -1;\r",
         "\trow_idx = 0;\r",
         "\tdata = [[]];\r",
         "\tfin = financing();\r",
@@ -3386,7 +4142,22 @@
         "\t\trow_idx++;\r",
         "\t}\r",
         "\t\r",
-        "\tdata[row_idx] = [6, ${hybrid_basis_cost}, ${hybrid_itc_basis_percent}, \r",
+        "\tif (is_mspt_tech) {\r",
+        "\t\tdata[row_idx] = [6, ${mspt_basis_cost}, ${mspt_itc_basis_percent}, \r",
+        "\t\t${mspt_itc_basis_cost_fed_include}, ${mspt_itc_basis_cost_sta_include}, non_itc_idx];\r",
+        "\t\tif((${depr_allocation_choice} == 0 && ${mspt_itc_basis_cost_fed_include}) || (${depr_allocation_choice} == 1 && ${mspt_itc_basis_cost_sta_include})) {\r",
+        "\t\t\tdata[row_idx][5] = itc_idx;\r",
+        "\t\t}\r",
+        "\t\trow_idx++;\r",
+        "\t\tdata[row_idx] = [6, ${tes_basis_cost}, ${tes_itc_basis_percent}, \r",
+        "\t\t${tes_itc_basis_cost_fed_include}, ${tes_itc_basis_cost_sta_include}, non_itc_idx];\r",
+        "\t\tif((${depr_allocation_choice} == 0 && ${tes_itc_basis_cost_fed_include}) || (${depr_allocation_choice} == 1 && ${tes_itc_basis_cost_sta_include})) {\r",
+        "\t\t\tdata[row_idx][5] = itc_idx;\r",
+        "\t\t}\r",
+        "\t\trow_idx++;\r",
+        "\t}\r",
+        "\t\r",
+        "\tdata[row_idx] = [7, ${hybrid_basis_cost}, ${hybrid_itc_basis_percent}, \r",
         "\t${hybrid_itc_basis_cost_fed_include}, ${hybrid_itc_basis_cost_sta_include}, non_itc_idx];\r",
         "\tif((${depr_allocation_choice} == 0 && ${hybrid_itc_basis_cost_fed_include}) || (${depr_allocation_choice} == 1 && ${hybrid_itc_basis_cost_sta_include})) {\r",
         "\t\tdata[row_idx][5] = itc_idx;\r",
@@ -3414,6 +4185,8 @@
         "\tis_fuel_cell_tech = strpos(tech, \"Fuel\") != -1;\r",
         "\tis_customgeneration_tech = strpos(tech, \"Custom\") != -1;\r",
         "\tis_hybrid = strpos(tech, \"Hybrid\") != -1;\r",
+        "\tis_mspt_tech = strpos(tech, \"Molten\") != -1;\r",
+        "\tis_wind_tech = strpos(tech, \"Wind\") != -1;\r",
         "\tshow( 'custom_generation_basis_cost',  is_customgeneration_tech );\r",
         "\tshow( 'customgeneration_itc_basis_percent', is_customgeneration_tech );\r",
         "\tshow( 'customgeneration_itc_basis_percent_lbl', is_customgeneration_tech);\r",
@@ -3424,6 +4197,16 @@
         "\tshow( 'fuel_cell_itc_basis_percent_lbl', is_fuel_cell_tech);\r",
         "\tshow('fuel_cell_itc_basis_cost_fed_include', is_fuel_cell_tech);\r",
         "\tshow('fuel_cell_itc_basis_cost_sta_include', is_fuel_cell_tech);\r",
+        "\tshow( 'mspt_basis_cost', is_mspt_tech );\r",
+        "\tshow( 'mspt_itc_basis_percent', is_mspt_tech);\r",
+        "\tshow( 'mspt_itc_basis_percent_lbl', is_mspt_tech);\r",
+        "\tshow('mspt_itc_basis_cost_fed_include', is_mspt_tech);\r",
+        "\tshow('mspt_itc_basis_cost_sta_include', is_mspt_tech);\r",
+        "\tshow( 'wind_basis_cost', is_wind_tech );\r",
+        "\tshow( 'wind_itc_basis_percent', is_wind_tech);\r",
+        "\tshow( 'wind_itc_basis_percent_lbl', is_wind_tech);\r",
+        "\tshow('wind_itc_basis_cost_fed_include', is_wind_tech);\r",
+        "\tshow('wind_itc_basis_cost_sta_include', is_wind_tech);\r",
         "\tshow('hybrid_basis_cost', is_hybrid);\r",
         "\trefresh();\r",
         "}\r",

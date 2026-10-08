@@ -829,7 +829,7 @@
             "IndexLabels": "",
             "Flags": 2.0,
             "DefaultValue": [
-                0.0
+                100.0
             ],
             "UIObject": "SchedNumeric",
             "sscVariableName": "",
@@ -844,7 +844,7 @@
             "IndexLabels": "",
             "Flags": 2.0,
             "DefaultValue": [
-                0.0
+                100.0
             ],
             "UIObject": "SchedNumeric",
             "sscVariableName": "",
