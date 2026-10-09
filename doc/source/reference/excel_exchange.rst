@@ -41,7 +41,7 @@ For an example of SAM with Excel Exchange, download the files `excel-exchange-ex
      :align: center
      :alt: SS_CaseMenu-ExcelExchange.png
 
-4. In the Excel Exchange Window, check **Turn on Excel Exchange for the base case simulation** to active Excel Exchange. You can clear the check box to keep the Excel Exchange configuration without running the Exchange when you run a simulation.
+4. In the Excel Exchange Window, check **Turn on Excel Exchange for the base case simulation** to activate Excel Exchange. You can clear the check box to keep the Excel Exchange configuration without executing the exchange when you run a simulation.
 
 5. For **Excel file**, click the |SS_Button-Ellipses| browse button and choose the Excel file you want to use for the exchange. You can remove the file path if you plan to keep the Excel and SAM files in the same folder.
 
