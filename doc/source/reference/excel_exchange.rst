@@ -49,9 +49,9 @@ For an example of SAM with Excel Exchange, download the files `excel-exchange-ex
 
 7. For each variable in the list, click its name, and
 
-  For **Excel range**, type either the cell reference (A1, C10, etc.) or range name (module_cost, NameplateCapacity, etc.) of the workbook cell or range associated with the SAM variable. Do not enclose the references or names in quotes.
+   For **Excel range**, type either the cell reference (A1, C10, etc.) or range name (module_cost, NameplateCapacity, etc.) of the workbook cell or range associated with the SAM variable. Do not enclose the references or names in quotes.
 
-  Click **Send variable value to Excel** if you want to send that variable's value to the Excel workbook, or **Capture variable value from Excel** if you want to read that variable's value from the Excel workbook.
+   Click **Send variable value to Excel** if you want to send that variable's value to the Excel workbook, or **Capture variable value from Excel** if you want to read that variable's value from the Excel workbook.
 
 8. Click **OK**.
 
