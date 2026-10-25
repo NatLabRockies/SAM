@@ -358,7 +358,7 @@ void geothermaltough::SetTOUGHParameters(const std::string& absoluteJsonPath) co
 
     // Alphanumeric strings must explicitly specify memory buffers to prevent scope dropouts
     doc.AddMember("TOUGH2 Model/File Name", rapidjson::Value("Doublet", allocator).Move(), allocator);
-    doc.AddMember("depth", 3.0, allocator); // Reservoir Depth [km]
+    doc.AddMember("Reservoir Depth", m_depth, allocator); // Reservoir Depth [km]
     doc.AddMember("Number of Segments", 1, allocator);
     doc.AddMember("Gradient 1", 50.0, allocator); // [deg.C/km]
     doc.AddMember("Maximum Temperature", 375.0, allocator); // [deg.C]
@@ -382,8 +382,8 @@ void geothermaltough::SetTOUGHParameters(const std::string& absoluteJsonPath) co
     doc.AddMember("Reservoir Porosity", 0.05, allocator);
     doc.AddMember("Reservoir Permeability", 6E-13, allocator); // [m2]
     doc.AddMember("Reservoir Thickness", 250.0, allocator); // [m]
-    doc.AddMember("Reservoir Width", 500.0, allocator); // [m]
-    doc.AddMember("Well Separation", 900.0, allocator); // [m]
+    doc.AddMember("Reservoir Width", m_width, allocator); // [m]
+    doc.AddMember("Well Separation", m_length, allocator); // [m]
 
     // --- 3. SURFACE TECHNICAL PARAMETERS ---
     doc.AddMember("End-Use Option", 2, allocator); // Direct-Use Heat
@@ -417,9 +417,6 @@ void geothermaltough::SetTOUGHParameters(const std::string& absoluteJsonPath) co
     doc.AddMember("pressure", 4200.0, allocator);
     // this is read in by the macro 
     doc.AddMember("TOUGH2 Executable Path", rapidjson::Value(m_tough_exe.mb_str(), allocator).Move(), allocator);
-    doc.AddMember("length", m_length, allocator);
-	doc.AddMember("width", m_width, allocator);
-	doc.AddMember("depth", m_depth, allocator);
 
 
     // --- 6. SERIALIZATION AND WRITER STREAM PIPELINE ---
@@ -457,7 +454,7 @@ void geothermaltough::OnRunTask(wxCommandEvent& event) {
 
 
         // 2. Spawn a native C++ worker thread to handle the blocking process execution
-        DWORD timeoutMs = 30000;
+        DWORD timeoutMs = 3000;
 /*
         std::thread worker([this, exePath, serializedJson, timeoutMs]() {
             // Run the synchronous pipe function inside the background context
