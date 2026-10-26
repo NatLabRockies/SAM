@@ -5,6 +5,8 @@ An LK script is code that you write in a SAM file to automate assigning values t
 
 .. note:: SAM comes with a set of pre-written LK scripts called macros that you run from the :doc:`../simulation-options/macros` page.
 
+For documentation of the LK scripting language, see https://sam.nlr.gov/images/web_page_files/lk_guide.pdf.
+
 Creating and Editing Scripts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -26,12 +28,6 @@ You can write your own LK scripts to automate SAM analysis tasks:
 
 * Run SSC modules directly. (See :doc:`Software Development Kit <sdk>`.)
 
-For a complete reference to the LK scripting language, click **Scripting reference** above:
-
-.. image:: ../images/SS_Script-LKGuide.png
-   :align: center
-   :alt: SS_Script-LKGuide.png
-
 LK Script notes:
 
 * When you save the script, SAM stores it in a text file with the .lk extension.
@@ -42,17 +38,17 @@ LK Script notes:
 
 * For examples of LK scripts, see `LK Scripts for SAM <https://github.com/NatLabRockies/SAM/tree/develop/samples/LK%20Scripts%20for%20SAM>`__ on the SAM GitHub repository.
 
-To create or open an LK script:
+**To create or open an LK script:**
 
 * On the File menu click **New script** or **Open script**.
 
-.. image:: ../images/SS_StartMenu-NewScript.png
-   :align: center
-   :alt: SS_StartMenu-NewScript.png
+  .. image:: ../images/SS_StartMenu-NewScript.png
+     :align: center
+     :alt: SS_StartMenu-NewScript.png
 
-.. image:: ../images/SS_Script-Editor.png
-   :align: center
-   :alt: SS_Script-Editor.png
+  .. image:: ../images/SS_Script-Editor.png
+     :align: center
+     :alt: SS_Script-Editor.png
 
 Running Scripts from the Command Line 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
