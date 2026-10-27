@@ -3493,6 +3493,7 @@
         "//\tssc_var(obj, \"includes_battery\", 0);\r",
         "\r",
         "//\tssc_dump(obj, 'mspt_system_design_before_exec.lk');\r",
+        "\tssc_var(obj, \"includes_battery\", 0); //Don't include battery for design point calcs\r",
         "\tret = ssc_exec(obj, 'tcsmolten_salt');\r",
         "//\tssc_dump(obj, 'mspt_system_design_after_exec.lk');\r",
         "\t\r",

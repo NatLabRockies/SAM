@@ -1506,7 +1506,7 @@ void Case::HybridizeForEquations(size_t ndxHybrid, VarTable& vt)
 		// specific to CSPTowerMoltenSalt = Technology[1] and Battery = Technology[2]
 	if ((m_config->Technology.size() > 1) && (m_config->Technology[ndxHybrid].Lower() == "csptowermoltensalt")) { // hybrid
 		for (size_t ndx = 0; ndx < m_config->Technology.size(); ndx++) {
-			if (ndx != ndxHybrid) {
+			if (ndx != ndxHybrid && ndx != 2) {
 				vals.Merge(m_vals[ndx], false);
 			}
 			//		vals.Merge(m_vals[2], false);
