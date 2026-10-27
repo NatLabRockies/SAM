@@ -118,7 +118,7 @@ The terms used in the descriptions below are defined in the :ref:`Electricity Ra
 
 * If time-of-use periods apply to the energy rates, when the periods for next month are different than for this month, such as going from a winter month to a summer month, SAM uses the period numbers at 12 a.m., 6 a.m., 12 p.m. and 6 p.m. for the current month to determine how to assign the credit to periods in the next month.
 
-* Any credit remaining at the end of the true-up period is credited to the electricity bill for the month at the end of the period and shown as **Net annual true-up payments ($/mo)**.
+* Any credit remaining at the end of the true-up period is credited to the electricity bill for the month at the end of the period and shown as **Net annual true-up payments ($/mo)**. When **Roll over net excess compensation to future bills** is enabled, the true-up amount is credited to future bills as **Net metering credit ($/mo)** instead of treated as a payment in the true-up month.
 
 **Net billing**
 
@@ -214,7 +214,7 @@ The metering and billing options determine how SAM calculates the monthly electr
 **Net energy metering with $ credits**
   For this option, specify the buy rate(s) and sell rate(s) in the Energy Charges table and use the weekday/weekend schedules to define any time-of-use periods as described below.
 
-  Choose a **Month for end of true-up period** when the annual true-up payment applies.
+  Choose a **Month for end of true-up period** when the annual true-up payment applies. If the true-up amount is rolled over to future months instead of treated as a monthly payment to the electricity customer, check **Roll over net excess compensation to future bills**.
 
 **Net billing**
   For the net billing option, specify the buy rate(s) and sell rate(s) in the Energy Charges table and use the weekday/weekend schedules to define any time-of-use periods as described below.
