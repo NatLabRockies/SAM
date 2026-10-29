@@ -1499,17 +1499,15 @@ void Case::VariablesChanged( const wxArrayString &list, size_t ndxHybrid)
 
 void Case::HybridizeForEquations(size_t ndxHybrid, VarTable& vt)
 {
-	// TyHybridProject - test merging values from other hybrid technologies into the current one for calculations
+	// TyHybridProject - merging values from other hybrid technologies into the current one for calculations
 	auto& vals = vt;
-	//	VarTable vals;
-	//	vals.Copy(m_vals[ndxHybrid]);
 		// specific to CSPTowerMoltenSalt = Technology[1] and Battery = Technology[2]
 	if ((m_config->Technology.size() > 1) && (m_config->Technology[ndxHybrid].Lower() == "csptowermoltensalt")) { // hybrid
 		for (size_t ndx = 0; ndx < m_config->Technology.size(); ndx++) {
 			if (ndx != ndxHybrid) {
-				vals.Merge(m_vals[ndx], false);
+				vals.Merge(m_vals[ndx], false); // merge but do not overwrite existing values in the current hybrid technology - specific to CSPTowerMoltenSalt and Battery hybridization for now
 			}
-			//		vals.Merge(m_vals[2], false);
+			//		TODO: review UI updates to values for merging
 		}
 	}
 }

@@ -421,7 +421,7 @@ bool CodeGen_Base::GenerateCodeHybrids(const int& array_matrix_threshold)
 				return false;
 			}
 			if (!ssc_module_hybridize( p_mod)) { // add o and m and total installed cost for each hybrid subsystem
-				m_errors.Add("could hybridize ssc module: " + scompute_module);
+				m_errors.Add("could nothybridize ssc module: " + scompute_module);
 				return false;
 			}
 
