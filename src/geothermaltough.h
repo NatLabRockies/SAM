@@ -1,9 +1,13 @@
 #ifndef geothermaltough_H
 #define geothermaltough_H
+#if defined(_WIN32) || defined(_WIN64)
+  #  if __has_include(<windows.h>)
+  #    include <windows.h>
+  #  endif
+  #endif
 
 
 #include <wx/wx.h>
-#include <windows.h>
 #include <string>
 #include <vector>
 #include "object.h"
@@ -25,7 +29,7 @@ private:
 
     void TestData(const std::string &absoluteJsonPath);
     void RunExample7Simulation(const std::string &absoluteJsonPath);
-    void SetTOUGHParameters(const std::string& absoluteJsonPath) const;
+    void SetTOUGHParameters(const std::wstring& absoluteJsonPath) const;
     void OnRunTask(wxCommandEvent& event);
     void OnProgressTick(wxThreadEvent& event);
     void OnThreadCompletion(wxThreadEvent& event);
@@ -57,3 +61,4 @@ private:
 };
 
 #endif // geothermaltough_H
+

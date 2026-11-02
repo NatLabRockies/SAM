@@ -1,6 +1,16 @@
 #include <wx/wx.h>
 #include <wx/progdlg.h> // For elegant native pop-up progress bars
+#include <wx/filename.h>
+#include <wx/stdpaths.h>
+
+#ifdef _WIN32
 #include <windows.h>
+#else
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <unistd.h>
+#endif
+
 #include <string>
 #include <vector>
 #include <thread>
@@ -30,123 +40,311 @@ wxDEFINE_EVENT(wxEVT_PYTHON_PROGRESS, wxThreadEvent);
 // Define a unique identifier for our background thread completion event
 wxDEFINE_EVENT(wxEVT_PYTHON_THREAD_COMPLETED, wxThreadEvent);
 
-// --- The Core Worker Function ---
-// [Identical to prior solution, but returns string payload]
-std::string CallPyInstallerWithProgressAndJSON(const std::string& exePath, const std::string& inputJsonStr, wxEvtHandler* eventSink) {
-// ---- FIXED: ASYNCHRONOUS HIGH-CAPACITY PIPE STREAM BALANCER ----
-    SECURITY_ATTRIBUTES saAttr = { sizeof(SECURITY_ATTRIBUTES), NULL, TRUE };
-    HANDLE hChildStd_IN_Rd, hChildStd_IN_Wr, hChildStd_OUT_Rd, hChildStd_OUT_Wr;
-    
-    if (!CreatePipe(&hChildStd_OUT_Rd, &hChildStd_OUT_Wr, &saAttr, 0) || !SetHandleInformation(hChildStd_OUT_Rd, HANDLE_FLAG_INHERIT, 0)) return "";
-    if (!CreatePipe(&hChildStd_IN_Rd, &hChildStd_IN_Wr, &saAttr, 0) || !SetHandleInformation(hChildStd_IN_Wr, HANDLE_FLAG_INHERIT, 0)) { CloseHandle(hChildStd_OUT_Rd); CloseHandle(hChildStd_OUT_Wr); return ""; }
-    
-// .... (Inside CallPyInstallerWithProgress in main.cpp) ....
+namespace
+{
+    std::filesystem::path ResolveProjectRoot()
+    {
+        std::vector<std::filesystem::path> candidates;
 
-    PROCESS_INFORMATION piProcInfo; STARTUPINFOA siStartInfo; 
-    ZeroMemory(&piProcInfo, sizeof(PROCESS_INFORMATION)); ZeroMemory(&siStartInfo, sizeof(STARTUPINFOA));
-    siStartInfo.cb = sizeof(STARTUPINFOA); 
-    siStartInfo.hStdOutput = hChildStd_OUT_Wr; 
-    siStartInfo.hStdError = hChildStd_OUT_Wr;
-    siStartInfo.dwFlags |= STARTF_USESTDHANDLES | STARTF_USESHOWWINDOW; 
-    siStartInfo.wShowWindow = SW_HIDE;
-    
-    // ---- FIXED: ALIGNED DIRECTORY OVERRIDES ----
-    // Force the path mapping to point explicitly inside the PyInstaller onedir subdirectory,
-    // ensuring the Windows loader successfully locates the true compiled binary artifact!
-           // Strip the executable filename to get the directory path
-    size_t lastSlash = exePath.find_last_of("\\/");
-    std::string appDir = (lastSlash != std::string::npos) ? exePath.substr(0, lastSlash) : "";
+        wxString exePath = SamApp::GetRuntimePath() ;
+        if (!exePath.empty())
+        {
+            candidates.push_back(std::filesystem::path(exePath.ToUTF8().data()).parent_path());
+        }
+        candidates.push_back(std::filesystem::current_path());
 
+        for (const auto &candidate : candidates)
+        {
+            std::filesystem::path current = candidate;
+            for (int depth = 0; depth < 8; ++depth)
+            {
+                if (std::filesystem::exists(current / "dist" / "myscript_v2") ||
+                    std::filesystem::exists(current / "dist" / "myscript_v2.exe") ||
+                    std::filesystem::exists(current / "dist" / "cpp_request.json") ||
+                    std::filesystem::exists(current / "dist" / "py_response.json"))
+                {
+                    return current;
+                }
 
-    std::string workingDir = appDir;
-    
-    std::string cmdLine = "\"" + exePath + "\""; 
-    std::vector<char> cmdLineBuf(cmdLine.begin(), cmdLine.end()); 
-    cmdLineBuf.push_back('\0');
-    
-    if (!CreateProcessA(
-            NULL, 
-            cmdLineBuf.data(), 
-            NULL, 
-            NULL, 
-            TRUE, 
-            0, 
-            NULL, 
-            workingDir.c_str(), // Execute directly inside the folder containing all shared DLL assets
-            &siStartInfo, 
-            &piProcInfo)) 
-    { 
-        CloseHandle(hChildStd_OUT_Rd); 
-        CloseHandle(hChildStd_OUT_Wr); 
-        return ""; 
+                std::filesystem::path parent = current.parent_path();
+                if (parent == current)
+                    break;
+                current = parent;
+            }
+        }
+
+        return std::filesystem::current_path();
     }
-    
-    // Close the write handle on the parent side natively so EOF can propagate later
-    CloseHandle(hChildStd_OUT_Wr); 
+}
 
-// .... Keep the rest of your standard ReadFile stream accumulator loops below ....
+// --- The Core Worker Function ---
+// Windows keeps the native CreateProcess implementation. macOS/Linux use the
+// POSIX pipe+fork+exec path so the same worker can stream progress and JSON
+// results across platforms.
+std::string CallPyInstallerWithProgressAndJSON(const std::wstring &exePath, const std::string &inputJsonStr, wxEvtHandler *eventSink)
+{
+#ifdef _WIN32
+    SECURITY_ATTRIBUTES saAttr = {sizeof(SECURITY_ATTRIBUTES), NULL, TRUE};
+    HANDLE hChildStd_IN_Rd, hChildStd_IN_Wr, hChildStd_OUT_Rd, hChildStd_OUT_Wr;
+
+    if (!CreatePipe(&hChildStd_OUT_Rd, &hChildStd_OUT_Wr, &saAttr, 0) || !SetHandleInformation(hChildStd_OUT_Rd, HANDLE_FLAG_INHERIT, 0))
+        return "";
+    if (!CreatePipe(&hChildStd_IN_Rd, &hChildStd_IN_Wr, &saAttr, 0) || !SetHandleInformation(hChildStd_IN_Wr, HANDLE_FLAG_INHERIT, 0))
+    {
+        CloseHandle(hChildStd_OUT_Rd);
+        CloseHandle(hChildStd_OUT_Wr);
+        return "";
+    }
+
+    PROCESS_INFORMATION piProcInfo;
+    STARTUPINFOW siStartInfo;
+    ZeroMemory(&piProcInfo, sizeof(PROCESS_INFORMATION));
+    ZeroMemory(&siStartInfo, sizeof(STARTUPINFOW));
+    siStartInfo.cb = sizeof(STARTUPINFOW);
+    siStartInfo.hStdOutput = hChildStd_OUT_Wr;
+    siStartInfo.hStdError = hChildStd_OUT_Wr;
+    siStartInfo.dwFlags |= STARTF_USESTDHANDLES | STARTF_USESHOWWINDOW;
+    siStartInfo.wShowWindow = SW_HIDE;
+
+    std::wstring exeFullPath = std::filesystem::absolute(std::filesystem::path(exePath)).wstring();
+    std::wstring workingDir = std::filesystem::path(exeFullPath).parent_path().wstring();
+
+    std::wstring cmdLine = L"\"" + exeFullPath + L"\"";
+    std::vector<wchar_t> cmdLineBuf(cmdLine.begin(), cmdLine.end());
+    cmdLineBuf.push_back(L'\0');
+
+    if (!CreateProcessW(
+            NULL,
+            cmdLineBuf.data(),
+            NULL,
+            NULL,
+            TRUE,
+            0,
+            NULL,
+            workingDir.c_str(),
+            &siStartInfo,
+            &piProcInfo))
+    {
+        CloseHandle(hChildStd_OUT_Rd);
+        CloseHandle(hChildStd_OUT_Wr);
+        return "";
+    }
+
+    CloseHandle(hChildStd_OUT_Wr);
     CloseHandle(hChildStd_IN_Rd);
-    
-    // Write out the initial request configurations if needed
-    if (!inputJsonStr.empty()) {
+
+    if (!inputJsonStr.empty())
+    {
         DWORD dwWritten;
         WriteFile(hChildStd_IN_Wr, inputJsonStr.c_str(), (DWORD)inputJsonStr.length(), &dwWritten, NULL);
     }
-    CloseHandle(hChildStd_IN_Wr); 
+    CloseHandle(hChildStd_IN_Wr);
 
     std::string finalJsonOutput = "";
-    std::vector<char> chBuf(65536); // Upgrade buffer tracking capacity to 64KB per chunk
+    std::string processOutput;
+    std::vector<char> chBuf(65536);
     DWORD dwRead;
     std::string lineAccumulator = "";
 
-    // FIXED LOOP: ReadFile will continue pulling blocks until the pipe closes natively (returns FALSE)
-    // This guarantees that massive high-density JSON strings are fully collected without cutoffs.
-    while (ReadFile(hChildStd_OUT_Rd, chBuf.data(), (DWORD)chBuf.size() - 1, &dwRead, NULL) && dwRead > 0) {
+    while (ReadFile(hChildStd_OUT_Rd, chBuf.data(), (DWORD)chBuf.size() - 1, &dwRead, NULL) && dwRead > 0)
+    {
         chBuf[dwRead] = '\0';
         lineAccumulator.append(chBuf.data(), dwRead);
-        
+
         size_t pos;
-        while ((pos = lineAccumulator.find('\n')) != std::string::npos) {
+        while ((pos = lineAccumulator.find('\n')) != std::string::npos)
+        {
             std::string line = lineAccumulator.substr(0, pos);
             lineAccumulator.erase(0, pos + 1);
-            if (!line.empty() && line.back() == '\r') line.pop_back();
+            processOutput.append(line);
+            processOutput.push_back('\n');
+            if (processOutput.size() > 16384)
+                processOutput.erase(0, processOutput.size() - 16384);
+            if (!line.empty() && line.back() == '\r')
+                line.pop_back();
 
-            if (line.rfind("PROGRESS:", 0) == 0) {
-                try {
+            if (line.rfind("PROGRESS:", 0) == 0)
+            {
+                try
+                {
                     int percent = std::stoi(line.substr(9));
                     wxThreadEvent progEvt(wxEVT_PYTHON_PROGRESS);
                     progEvt.SetInt(percent);
                     wxQueueEvent(eventSink, progEvt.Clone());
-                } catch (...) {}
-            } 
-            else if (line.rfind("MATRIX_DATA:", 0) == 0) {
-                finalJsonOutput = line.substr(12); // Capture the high-density payload string
+                }
+                catch (...)
+                {
+                }
+            }
+            else if (line.rfind("MATRIX_DATA:", 0) == 0)
+            {
+                finalJsonOutput = line.substr(12);
             }
         }
     }
-    
-    // ---- FIXED: COMPRESSION AND CACHE RESILIENT EXIT TEARDOWN ----
-    // Programmatically ensure that child handles are wiped cleanly, but NEVER
-    // allow a secondary process handle check to override or strip out a successfully 
-    // collected in-memory finalJsonOutput payload string.
-    if (piProcInfo.hProcess != NULL) {
-        // Wait with INFINITE to ensure Windows flushes the system registers natively
+
+    if (piProcInfo.hProcess != NULL)
+    {
         WaitForSingleObject(piProcInfo.hProcess, INFINITE);
         CloseHandle(piProcInfo.hProcess);
     }
-    if (piProcInfo.hThread != NULL) {
+    if (piProcInfo.hThread != NULL)
+    {
         CloseHandle(piProcInfo.hThread);
     }
-    
+
     CloseHandle(hChildStd_OUT_Rd);
-    
-    // Explicitly print out a quick diagnostic size log to your IDE compiler console 
-    // to confirm that the thousands of high-density nodes are packed in-memory safely.
-    OutputDebugStringA(("[System] Pipeline data extraction complete. Buffer bytes: " + 
-                        std::to_string(finalJsonOutput.length()) + "\n").c_str());
-    
-    // Return the string directly!    
-    return finalJsonOutput;
+    if (!lineAccumulator.empty())
+    {
+        processOutput.append(lineAccumulator);
+        if (lineAccumulator.rfind("MATRIX_DATA:", 0) == 0)
+            finalJsonOutput = lineAccumulator.substr(12);
+    }
+    OutputDebugStringA(("[System] Pipeline data extraction complete. Buffer bytes: " +
+                        std::to_string(finalJsonOutput.length()) + "\n")
+                           .c_str());
+    return finalJsonOutput.empty() ? processOutput : finalJsonOutput;
+#else
+    std::filesystem::path exePathValue = std::filesystem::absolute(std::filesystem::path(exePath));
+    std::string exePathUtf8 = exePathValue.string();
+    if (exePathUtf8.empty())
+    {
+        return "";
+    }
+    std::string processOutput;
+
+    int stdinPipe[2] = {-1, -1};
+    int stdoutPipe[2] = {-1, -1};
+    if (pipe(stdinPipe) != 0 || pipe(stdoutPipe) != 0)
+    {
+        if (stdinPipe[0] != -1)
+            close(stdinPipe[0]);
+        if (stdinPipe[1] != -1)
+            close(stdinPipe[1]);
+        if (stdoutPipe[0] != -1)
+            close(stdoutPipe[0]);
+        if (stdoutPipe[1] != -1)
+            close(stdoutPipe[1]);
+        return "";
+    }
+
+    pid_t childPid = fork();
+    if (childPid == -1)
+    {
+        close(stdinPipe[0]);
+        close(stdinPipe[1]);
+        close(stdoutPipe[0]);
+        close(stdoutPipe[1]);
+        return "";
+    }
+
+    if (childPid == 0)
+    {
+        if (stdinPipe[0] != -1)
+        {
+            dup2(stdinPipe[0], STDIN_FILENO);
+            close(stdinPipe[0]);
+            close(stdinPipe[1]);
+        }
+
+        if (stdoutPipe[1] != -1)
+        {
+            dup2(stdoutPipe[1], STDOUT_FILENO);
+            dup2(stdoutPipe[1], STDERR_FILENO);
+            close(stdoutPipe[1]);
+            close(stdoutPipe[0]);
+        }
+
+        std::filesystem::path exeDir = exePathValue.parent_path();
+        if (!exeDir.empty() && chdir(exeDir.string().c_str()) != 0)
+        {
+            perror("Could not change to worker directory");
+            _exit(126);
+        }
+
+        char *argv[] = {const_cast<char *>(exePathUtf8.c_str()), nullptr};
+        execv(exePathUtf8.c_str(), argv);
+        perror("Could not launch Python worker");
+        _exit(127);
+    }
+
+    close(stdinPipe[0]);
+    close(stdoutPipe[1]);
+
+    if (!inputJsonStr.empty())
+    {
+        ssize_t totalWritten = 0;
+        while (totalWritten < static_cast<ssize_t>(inputJsonStr.size()))
+        {
+            ssize_t written = write(stdinPipe[1], inputJsonStr.c_str() + totalWritten,
+                                    inputJsonStr.size() - static_cast<size_t>(totalWritten));
+            if (written <= 0)
+            {
+                break;
+            }
+            totalWritten += written;
+        }
+    }
+    close(stdinPipe[1]);
+
+    std::string finalJsonOutput = "";
+    std::string lineAccumulator = "";
+    char chBuf[65536];
+    ssize_t bytesRead = 0;
+
+    while ((bytesRead = read(stdoutPipe[0], chBuf, sizeof(chBuf) - 1)) > 0)
+    {
+        chBuf[bytesRead] = '\0';
+        lineAccumulator.append(chBuf, bytesRead);
+
+        size_t pos;
+        while ((pos = lineAccumulator.find('\n')) != std::string::npos)
+        {
+            std::string line = lineAccumulator.substr(0, pos);
+            lineAccumulator.erase(0, pos + 1);
+            processOutput.append(line);
+            processOutput.push_back('\n');
+            if (processOutput.size() > 16384)
+                processOutput.erase(0, processOutput.size() - 16384);
+            if (!line.empty() && line.back() == '\r')
+                line.pop_back();
+
+            if (line.rfind("PROGRESS:", 0) == 0)
+            {
+                try
+                {
+                    int percent = std::stoi(line.substr(9));
+                    wxThreadEvent progEvt(wxEVT_PYTHON_PROGRESS);
+                    progEvt.SetInt(percent);
+                    if (eventSink != nullptr)
+                    {
+                        wxQueueEvent(eventSink, progEvt.Clone());
+                    }
+                }
+                catch (...)
+                {
+                }
+            }
+            else if (line.rfind("MATRIX_DATA:", 0) == 0)
+            {
+                finalJsonOutput = line.substr(12);
+            }
+        }
+    }
+
+    int status = 0;
+    waitpid(childPid, &status, 0);
+    close(stdoutPipe[0]);
+
+    if (!lineAccumulator.empty())
+    {
+        processOutput.append(lineAccumulator);
+        if (lineAccumulator.rfind("MATRIX_DATA:", 0) == 0)
+            finalJsonOutput = lineAccumulator.substr(12);
+    }
+
+    return finalJsonOutput.empty() ? processOutput : finalJsonOutput;
+#endif
 }
 
 geothermaltough::geothermaltough(wxWindow* parent, const wxString& title,const wxPoint& pos, const wxSize& size, long style) : wxDialog(parent, wxID_ANY, title, pos, size, style) {
@@ -346,7 +544,7 @@ void geothermaltough::RunExample7Simulation(const std::string &absoluteJsonPath)
         }
     }
 
-void geothermaltough::SetTOUGHParameters(const std::string& absoluteJsonPath) const
+void geothermaltough::SetTOUGHParameters(const std::wstring& absoluteJsonPath) const
 {
     // Create an active RapidJSON memory allocator node frame
     rapidjson::Document doc;
@@ -424,63 +622,59 @@ void geothermaltough::SetTOUGHParameters(const std::string& absoluteJsonPath) co
     rapidjson::PrettyWriter<rapidjson::StringBuffer> writer(buffer);
     doc.Accept(writer);
 
-    // Flush the unrolled text buffer string cleanly out onto the physical workspace
-    std::ofstream ofs(absoluteJsonPath);
-    if (ofs.is_open()) {
+    std::filesystem::path projectRoot = ResolveProjectRoot();
+    std::filesystem::path distDir = projectRoot / "dist";
+    std::filesystem::create_directories(distDir);
+    std::filesystem::path jsonRequestPath = distDir / "cpp_request.json";
+
+    std::ofstream ofs(jsonRequestPath, std::ios::out | std::ios::trunc);
+    if (ofs.is_open())
+    {
         ofs << buffer.GetString();
-        ofs.flush();
         ofs.close();
+    }
+    else
+    {
+        m_outputText->AppendText(L"[Error] Could not write dist/cpp_request.json.\n");
     }
 }
 
 void geothermaltough::OnRunTask(wxCommandEvent& event) {
-        m_runButton->Enable(false);
-        m_progressBar->SetValue(0);
+    m_runButton->Enable(false);
+    m_progressBar->SetValue(0);
+    m_outputText->AppendText("Serializing outbound JSON and launching worker thread...\n");
 
-        m_outputText->AppendText("Serializing outbound JSON and launching worker thread...\n");
+    
+    std::filesystem::path projectRoot = ResolveProjectRoot();
+    std::filesystem::path distDir = projectRoot / "dist";
+    std::filesystem::create_directories(distDir);
 
+    std::wstring absoluteJsonPath;
+    std::wstring absolutePyExePath;
 
-        // 2. Define the strict, absolute file targets
-        wxString absoluteJsonPath = SamApp::GetRuntimePath() + "bin\\dist\\cpp_request.json";
-        wxString absolutePyExePath = SamApp::GetRuntimePath() + "bin\\dist\\myscript_v2.exe";
+#ifdef _WIN32
+    absoluteJsonPath = std::wstring((projectRoot / "dist" / "cpp_request.json").wstring());
+    absolutePyExePath = std::wstring((projectRoot / "dist" / "myscript_v2.exe").wstring());
+#else
+    std::filesystem::path jsonPath = distDir / "cpp_request.json";
+    std::filesystem::path exePath = distDir / "myscript_v2";
+    absoluteJsonPath = std::wstring(jsonPath.wstring());
+    absolutePyExePath = std::wstring(exePath.wstring());
+#endif
 
-// for testing and verifying with Example 7 in GEOPHIRES repo
-//        TestData(absoluteJsonPath);
-//        RunExample7Simulation(absoluteJsonPath.ToStdString());
-		SetTOUGHParameters(absoluteJsonPath.ToStdString());
+    std::error_code removeError;
+    std::filesystem::remove(distDir / "py_response.json", removeError);
+    SetTOUGHParameters(absoluteJsonPath);
 
-//        m_outputText->AppendText(wxString::Format(L"--- matrix(250,2) sent ---\n%lg\n---------------------------\n", matrixData[249+rows*1]));
-//        m_outputText->AppendText(wxString::Format(L"--- RAW INPUT SENT ---\n%s\n---------------------------\n", wxString::FromUTF8(serializedJson)));
+    std::thread worker([this, absolutePyExePath]()
+                       {
+            std::string rawResult = CallPyInstallerWithProgressAndJSON(absolutePyExePath, "", this);
 
-
-        // 2. Spawn a native C++ worker thread to handle the blocking process execution
-        DWORD timeoutMs = 3000;
-/*
-        std::thread worker([this, exePath, serializedJson, timeoutMs]() {
-            // Run the synchronous pipe function inside the background context
-            //std::string rawResult = CallPyInstallerWithJson(exePath, serializedJson, timeoutMs);
-            std::string rawResult = CallPyInstallerWithProgressAndJSON(exePath, serializedJson, this);
-*/
-        std::thread worker([this, absolutePyExePath]() {
-            // Pass a dummy or empty string since we are transferring data via file now
-            std::string rawResult = CallPyInstallerWithProgressAndJSON(absolutePyExePath.ToStdString(), "", this);
-
-            // Create a safe event container to carry the raw string response to the main thread
             wxThreadEvent threadEvt(wxEVT_PYTHON_THREAD_COMPLETED);
-            // Convert std::string to std::wstring inline via standard MultiByteToWideChar conversion
-            int wchars_num = MultiByteToWideChar(CP_UTF8, 0, rawResult.c_str(), -1, NULL, 0);
-            std::vector<wchar_t> wstr_buf(wchars_num);
-            MultiByteToWideChar(CP_UTF8, 0, rawResult.c_str(), -1, wstr_buf.data(), wchars_num);
+            threadEvt.SetString(wxString::FromUTF8(rawResult));
+            wxQueueEvent(this, threadEvt.Clone()); });
 
-            threadEvt.SetString(wxString(wstr_buf.data()));
-
-
-            // Queue the event into the wxWidgets main loop thread safely
-            wxQueueEvent(this, threadEvt.Clone());
-            });
-
-        // Detach the thread handle so it cleans up after its context function finishes executing
-        worker.detach();
+    worker.detach();
     }
 
 
