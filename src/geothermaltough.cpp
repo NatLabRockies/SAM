@@ -17,6 +17,7 @@
 #include <sstream>
 #include <fstream>
 #include <iostream>
+#include <filesystem>
 
 // Plotting
 #include <wex/plot/plplotctrl.h>
