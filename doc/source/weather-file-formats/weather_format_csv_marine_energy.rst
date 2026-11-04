@@ -26,7 +26,7 @@ The file contains the wave resource matrix, which is a table of joint probabilit
 
 .. note:: SAM requires a 21-by-20 matrix of data for wave energy periods between 0.5 seconds and 20.5 seconds in 1-second increments and wave heights between 0.25 meters and 9.75 meters in 0.5-meter increments.
 
-.. note:: The column separator must be a comma, and the decimal separator must be a dot. Semicolons in the file will cause the weather file reader to fail.
+   The column separator must be a comma, and the decimal separator must be a dot. Semicolons in the file will cause the weather file reader to fail.
 
 Row 1
 -----

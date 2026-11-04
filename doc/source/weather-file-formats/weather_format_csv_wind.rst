@@ -66,13 +66,13 @@ Optional items are:
 
    Row 1 items can be in any order, but the each item's value must immediately follow its label.
 
-Here is an example of a valid Row 1:
+Here is an example of a valid Row 1::
 
-  *SiteID,2226728,Site Timezone,-5,Data Timezone,-5,Longitude,-78.5,Latitude,32.1,Elevation,0*
+    SiteID,2226728,Site Timezone,-5,Data Timezone,-5,Longitude,-78.5,Latitude,32.1,Elevation,0
 
-Example of a valid Row 1 with only required data:
+Example of a valid Row 1 with only required data::
 
-  *Site Timezone,-5,Data Timezone,-5,Longitude,-78.5,Latitude,32.1*
+    Site Timezone,-5,Data Timezone,-5,Longitude,-78.5,Latitude,32.1
 
 .. list-table::
    :width: 100%

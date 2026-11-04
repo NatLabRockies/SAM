@@ -52,9 +52,9 @@ Row 2 contains values for the location data and metadata identified by the label
 
 * Elevation is in meters above sea level, e.g., 1615 for Denver.
 
- For example, given the Row 1 example above, Row 2 for Phoenix, Arizona might look like this:
+For example, given the Row 1 example above, Row 2 for Phoenix, Arizona might look like this::
 
-*TMY2,23183,Phoenix,AZ,USA,33.433333,-112.016667,-7,339*
+    TMY2,23183,Phoenix,AZ,USA,33.433333,-112.016667,-7,339
 
 The remaining header fields, such as source, location ID, city, state, and others listed in the table below are text values (strings) that provide information about the data, but that SAM does not use in calculations. These values are not required for SAM simulations, and can be omitted from the weather file. 
 
