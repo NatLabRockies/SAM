@@ -7,9 +7,7 @@ When you start SAM for the first time, you must provide an email address to rece
 
 * You receive your registration key by email. Be sure to keep the email or a copy of the key so you can register new versions, or in case you need to re-register SAM.
 
-* The registration key works with both the Windows and OS X versions of SAM.
-
-* You can use your registration key to register SAM on more than one computer.
+* You can use your registration key to register SAM on more than one computer and for different versions of SAM.
 
 .. note:: If your computer is connected to the internet and you have trouble registering or verifying your key, please see :doc:`Web Access and Proxies <configure_proxy_server>` for information that you might need to troubleshoot the issue.
 
@@ -17,17 +15,17 @@ To register your copy of SAM:
 
 #. Install SAM and start the software.
 
-SAM displays the registration window. If it does not, you can display it by clicking **Registration** in the bottom left corner of the :doc:`Welcome page <../getting-started/welcome_page>`.
+   SAM displays the registration window. If it does not, you can display it by clicking **Registration** in the bottom left corner of the :doc:`Welcome page <../getting-started/welcome_page>`.
 
 #. In the registration window, type your email address and click **Register**.
 
-Within a few minutes, you should receive a registration key by email from `sam.support@nlr.gov <mailto:sam.support@nlr.gov>`__.
+   Within a few minutes, you should receive a registration key by email from `sam.support@nlr.gov <mailto:sam.support@nlr.gov>`__.
 
 #. Cut and paste the key from the email into the Registration window.
 
 #. Click **Confirm**.
 
-SAM displays a message about registration.
+   SAM displays a message about registration.
 
 #. Click **OK** to agree to share information about your use of SAM and register SAM, or click **Cancel** to stop the registration process.
 
