@@ -35,7 +35,6 @@
             0.2,
             0.2
         ],
-        "analysis_period": 25.0,
         "array_type": 2.0,
         "azimuth": 180.0,
         "batt_simple_enable": 0.0,
@@ -61,7 +60,6 @@
         "grid_per_watt": 0.02,
         "grid_percent": 0.0,
         "grid_total": 2600000.0,
-        "inflation_rate": 2.5,
         "install_labor_fixed": 0.0,
         "install_labor_perarea": 0.0,
         "install_labor_perwatt": 0.17,
@@ -134,7 +132,6 @@
         "pv_land_area_is_shown": 0.0,
         "pvwatts.advanced.is_shown": 1.0,
         "sales_tax_percent": 100.0,
-        "sales_tax_rate": 5.0,
         "sales_tax_total": 6628050.0,
         "sales_tax_value": 5.0,
         "shading": 0.0,
@@ -178,7 +175,6 @@
             0.0,
             0.0
         ],
-        "solar_resource_file": "daggett_ca_34.865371_-116.783023_psmv3_60_tmy.csv",
         "subtotal_direct": 128700000.0,
         "system_capacity": 130000.0,
         "system_use_lifetime_output": 0.0,
@@ -210,7 +206,7 @@
         "user_specified_constant_albedo": 0.2
     },
     "CSPTowerMoltenSalt": {
-        "A_rec_calc": 1087.5665793643203,
+        "A_rec_calc": 1087.5665793643205,
         "A_sf_calc": 1348316.2571999997,
         "CT": 2.0,
         "D_rad_tubes": 0.02,
@@ -240,11 +236,11 @@
         "L_rad_sections": 10.0,
         "L_tower_piping_calc": 504.9902,
         "LeadAcid_q10": 93.0,
-        "LeadAcid_q10_computed": 412231.8,
+        "LeadAcid_q10_computed": 0.0,
         "LeadAcid_q20": 100.0,
-        "LeadAcid_q20_computed": 443260.0,
+        "LeadAcid_q20_computed": 0.0,
         "LeadAcid_qn": 60.0,
-        "LeadAcid_qn_computed": 265956.0,
+        "LeadAcid_qn_computed": 0.0,
         "LeadAcid_tn": 1.0,
         "N_hel_calc": 9339.0,
         "N_panels": 20.0,
@@ -278,9 +274,9 @@
         "TES_COPY_T_htf_hot_des": 574.0,
         "TES_COPY_q_dot_tes_est": 0.8814426938789968,
         "TES_COPY_q_pb_design": 279.126213592233,
-        "TES_COPY_tes_avail_vol": 12986.490759869743,
+        "TES_COPY_tes_avail_vol": 12986.490759869745,
         "TES_COPY_tes_htf_density": 1808.4790461159128,
-        "TES_COPY_tes_tank_diameter": 38.770787813951759,
+        "TES_COPY_tes_tank_diameter": 38.77078781395176,
         "TES_COPY_tes_vol_total": 14167.08082894881,
         "TES_COPY_tshours": 10.0,
         "T_ITD_des": 16.0,
@@ -311,7 +307,7 @@
         "W_dot_rec_pump_tower_share_des_calc": 3.526180377048878,
         "W_rad_tubes": 0.05,
         "ac_nameplate": 3.6363636363636369,
-        "add_om_num_types": 1.0,
+        "add_om_num_types": 0.0,
         "adjust": 0.0,
         "adjust_constant": 4.0,
         "adjust_en_periods": 0.0,
@@ -363,16 +359,16 @@
         "average_attenuation_calc": 9.261050707186698,
         "azimuth": 180.0,
         "batt_C_rate": 0.1,
-        "batt_C_rate_max_charge": 0.25,
+        "batt_C_rate_max_charge": 1.0,
         "batt_C_rate_max_charge_input": 0.5,
-        "batt_C_rate_max_discharge": 0.25,
+        "batt_C_rate_max_discharge": 1.0,
         "batt_C_rate_max_discharge_input": 0.5,
         "batt_Cp": 4183.0,
-        "batt_Qexp": 0.05,
+        "batt_Qexp": 1.0,
         "batt_Qexp_percent": 1.0,
         "batt_Qfull": 5.0,
-        "batt_Qfull_flow": 443260.0,
-        "batt_Qnom": 4.75,
+        "batt_Qfull_flow": 0.0,
+        "batt_Qnom": 56.0,
         "batt_Qnom_percent": 95.0,
         "batt_Vcut": 1.452,
         "batt_Vexp": 2.05,
@@ -393,21 +389,21 @@
         "batt_adjust_timeindex": [
             0.0
         ],
-        "batt_bank_duration": 4.0,
+        "batt_bank_duration": 0.0,
         "batt_bank_ncells_serial": 3.0,
         "batt_bank_nseries_stacks": 1.0,
         "batt_bank_nstrings": 1.0,
-        "batt_bank_power": 50000.0,
+        "batt_bank_power": 20.0,
         "batt_bank_power_dc_ac": 0.0,
-        "batt_bank_size": 200000.0,
+        "batt_bank_size": 3.0,
         "batt_bank_size_dc_ac": 0.0,
         "batt_bank_size_specify": 100.0,
-        "batt_bank_size_ui": 40000.0,
+        "batt_bank_size_ui": 0.0,
         "batt_bank_voltage": 450.0,
         "batt_basis_cost": 62049662.448,
         "batt_calendar_a": 0.00266,
         "batt_calendar_b": -7280.0,
-        "batt_calendar_c": 939.0,
+        "batt_calendar_c": 930.0,
         "batt_calendar_choice": 0.0,
         "batt_calendar_lifetime_matrix": [
             [
@@ -428,24 +424,28 @@
         "batt_cell_current_discharge_max": 10.0,
         "batt_cell_power_charge_max": 2.0,
         "batt_cell_power_discharge_max": 2.0,
-        "batt_chem": 0.0,
-        "batt_computed_bank_capacity": 199998.912,
-        "batt_computed_series": 141.0,
-        "batt_computed_stacks_series": 0.0,
-        "batt_computed_strings": 17730.0,
-        "batt_computed_voltage": 451.2000000000001,
-        "batt_current_charge_max": 22162.5,
+        "batt_chem": 1.0,
+        "batt_computed_bank_capacity": 0.0,
+        "batt_computed_series": 0.0,
+        "batt_computed_stacks_series": 1.0,
+        "batt_computed_strings": 1.0,
+        "batt_computed_voltage": 0.0,
+        "batt_current_charge_max": 100.0,
         "batt_current_choice": 1.0,
-        "batt_current_discharge_max": 110815.0,
+        "batt_current_discharge_max": 100.0,
         "batt_dc_ac_efficiency": 99.0,
         "batt_dc_dc_efficiency": 99.0,
-        "batt_duration_choice": 1.0,
+        "batt_duration_choice": 0.0,
         "batt_h_to_ambient": 5.0,
         "batt_inverter_efficiency_cutoff": 90.0,
         "batt_itc_basis_cost_fed_include": 1.0,
         "batt_itc_basis_cost_include": 0.0,
         "batt_itc_basis_cost_sta_include": 1.0,
         "batt_itc_basis_percent": 6.580724504622195,
+        "batt_kw_cost": 0.0,
+        "batt_kw_des_calc_COST": 0.0,
+        "batt_kwh_cost": 0.0,
+        "batt_kwh_des_calc_COST": 0.0,
         "batt_life_excl": 0.0,
         "batt_life_model": 0.0,
         "batt_lifetime_matrix": [
@@ -508,13 +508,13 @@
         "batt_losses_idle": [
             0.0
         ],
-        "batt_mass": 1333326.08,
-        "batt_meter_position": 1.0,
-        "batt_num_cells": 12499932.0,
-        "batt_power_charge_max_kwac": 50504.77575757576,
-        "batt_power_charge_max_kwdc": 49999.728,
+        "batt_mass": 56.0,
+        "batt_meter_position": 0.0,
+        "batt_num_cells": 1.0,
+        "batt_power_charge_max_kwac": 0.0,
+        "batt_power_charge_max_kwdc": 0.0,
         "batt_power_discharge_max_kwac": 49499.73072,
-        "batt_power_discharge_max_kwdc": 49999.728,
+        "batt_power_discharge_max_kwdc": 0.0,
         "batt_replacement_capacity": 0.0,
         "batt_replacement_option": 0.0,
         "batt_replacement_schedule_percent": [
@@ -522,7 +522,7 @@
         ],
         "batt_resistance": 0.1,
         "batt_room_temperature_celsius": [
-            20.0
+            0.0
         ],
         "batt_room_temperature_single": 20.0,
         "batt_room_temperature_vector": [
@@ -534,14 +534,14 @@
         "batt_size_choice": 0.0,
         "batt_specific_energy_per_mass": 150.0,
         "batt_specific_energy_per_volume": 300.0,
-        "batt_surface_area": 457.88403642103256,
+        "batt_surface_area": 0.181,
         "batt_thermal_choice": 0.0,
-        "batt_time_capacity": 4.0,
+        "batt_time_capacity": 2.0,
         "batt_type": 0.0,
-        "batt_ui_bank_voltage": 451.2000000000001,
-        "batt_ui_cell_voltage": 3.2,
-        "batt_ui_inverter_eff": 96.0,
-        "batt_ui_nominal_bank_power": 49999.728,
+        "batt_ui_bank_voltage": 0.0,
+        "batt_ui_cell_voltage": 0.0,
+        "batt_ui_inverter_eff": 0.0,
+        "batt_ui_nominal_bank_power": 0.0,
         "batt_unit_capacity": 400.0,
         "batt_unit_surface_area": 30.0,
         "batt_voltage_choice": 0.0,
@@ -571,17 +571,9 @@
                 0.5
             ]
         ],
-        "batt_volume": 666.66304,
-        "battery_energy": 199998.912,
-        "battery_indirect_cost_percent": 0.0,
+        "batt_volume": 0.001,
         "battery_losses_shown": 0.0,
-        "battery_per_kW": 233.0,
-        "battery_per_kWh": 252.0,
-        "battery_power": 49999.728,
         "battery_thermal_shown": 0.0,
-        "battery_total": 62049662.448,
-        "battery_total_cost_lcos": 62049662.448,
-        "battery_total_installed_cost": 62049662.448,
         "battery_voltage_shown": 0.0,
         "bifaciality": 0.0,
         "bop_cost_calc": 33350000.0,
@@ -725,6 +717,8 @@
         "cp_capacity_payment_esc": 0.0,
         "cp_capacity_payment_type": 0.0,
         "cp_system_nameplate": 136.86577853481178,
+        "csp.pt.cost.batt_kw": 0.0,
+        "csp.pt.cost.batt_kwh": 0.0,
         "csp.pt.cost.bop": 33350000.0,
         "csp.pt.cost.contingency": 35874619.411264,
         "csp.pt.cost.epc.fixed": 0.0,
@@ -744,8 +738,8 @@
         "csp.pt.cost.power_block": 119600000.0,
         "csp.pt.cost.power_block_mwe": 115.0,
         "csp.pt.cost.receiver": 79621983.54390332,
-        "csp.pt.cost.receiver.area": 1087.5665793643203,
-        "csp.pt.cost.sales_tax.total": 21934767.297172846,
+        "csp.pt.cost.receiver.area": 1087.5665793643205,
+        "csp.pt.cost.sales_tax.total": 21934767.297172849,
         "csp.pt.cost.sales_tax.value": 5.0,
         "csp.pt.cost.site_improvements": 21573060.115199996,
         "csp.pt.cost.site_improvements_m2": 1348316.2571999997,
@@ -768,6 +762,8 @@
         "csp.pt.sf.total_land_area": 2079.2855194841197,
         "csp.pt.sf.tower_height": 194.227,
         "csp_financial_model": 1.0,
+        "csptowermoltensalt_batt_kw_installed_cost": 0.0,
+        "csptowermoltensalt_batt_kwh_installed_cost": 0.0,
         "csptowermoltensalt_q_pb_design": 0.0,
         "csptowermoltensalt_system_capacity": 100502.14217117538,
         "csptowermoltensalt_tes_installed_cost": 0.0,
@@ -9727,7 +9723,7 @@
         "error_equiv": 4.327493500861671,
         "eta_pump": 0.85,
         "eta_rec_thermal_des_calc": 0.9501157618817349,
-        "ext_rec_area_calc": 1087.5665793643203,
+        "ext_rec_area_calc": 1087.5665793643205,
         "f_ctes_warm_ini": 0.0,
         "f_q_dot_des_allowable_su": 1.0,
         "f_q_dot_heater_min": 0.25,
@@ -55933,7 +55929,6 @@
         "hybrid_itc_basis_cost_fed_include": 0.0,
         "hybrid_itc_basis_cost_sta_include": 0.0,
         "hybrid_itc_basis_percent": 0.0,
-        "hybrid_system_capacity": 100505.77853481176,
         "ibi_fed_amount": 0.0,
         "ibi_fed_amount_deprbas_fed": 0.0,
         "ibi_fed_amount_deprbas_sta": 0.0,
@@ -56052,8 +56047,8 @@
         ],
         "k_panel": 235.0,
         "land_area": 0.0,
-        "land_area_base": 2034.2855194841198,
-        "land_area_base_calc": 2034.2855194841198,
+        "land_area_base": 2034.28551948412,
+        "land_area_base_calc": 2034.28551948412,
         "land_area_value": 130.05534895540846,
         "land_fixed": 0.0,
         "land_max": 9.5,
@@ -56790,14 +56785,14 @@
         "non_itc_basis_depreciation_allocation": 0.0,
         "non_itc_basis_percent_depr": 93.4192754953778,
         "om_batt_capacity_cost": [
-            7.25
+            0.0
         ],
         "om_batt_fixed_cost": [
             0.0
         ],
-        "om_batt_nameplate": 199998.912,
+        "om_batt_nameplate": 0.0,
         "om_batt_replacement_cost": [
-            252.0
+            0.0
         ],
         "om_batt_variable_cost": [
             0.0
@@ -56810,6 +56805,10 @@
             0.0
         ],
         "om_fixed_escal": 0.0,
+        "om_fuel_cost": [
+            0.0
+        ],
+        "om_fuel_cost_escal": 0.0,
         "om_land_lease": [
             0.0
         ],
@@ -56924,7 +56923,7 @@
         ],
         "real_discount_rate": 5.5,
         "rec_absorptance": 0.94,
-        "rec_aspect": 1.2092198581560283,
+        "rec_aspect": 1.2092198581560286,
         "rec_cost_exp": 0.7,
         "rec_height": 20.46,
         "rec_height_calc": 20.46,
@@ -56933,7 +56932,7 @@
         "rec_qf_delay": 0.25,
         "rec_ref_area": 1571.0,
         "rec_ref_cost": 103000000.0,
-        "rec_sm_from_sf_est_des_calc": 2.4590670967489358,
+        "rec_sm_from_sf_est_des_calc": 2.459067096748936,
         "rec_su_delay": 0.5,
         "rec_tm_mult": 1.0,
         "receiver_cost_calc": 79621983.54390332,
@@ -56944,7 +56943,7 @@
         "revenue_capacity_payments_is_shown": 0.0,
         "revenue_curtailment_is_shown": 0.0,
         "riser_tm_mult": 0.0,
-        "sales_tax_cost_calc": 21934767.297172846,
+        "sales_tax_cost_calc": 21934767.297172849,
         "sales_tax_frac": 80.0,
         "sales_tax_percent": 100.0,
         "sales_tax_rate": 5.0,
@@ -57022,20 +57021,6 @@
         "solar_resource_file": "daggett_ca_34.865371_-116.783023_psmv3_60_tmy.csv",
         "solarm": 2.4,
         "solution_mode_message": "",
-        "standalonebatt.cost.contingency": 0.0,
-        "standalonebatt.cost.contingency_percent": 0.0,
-        "standalonebatt.cost.epc.fixed": 0.0,
-        "standalonebatt.cost.epc.nonfixed": 0.0,
-        "standalonebatt.cost.epc.percent": 0.0,
-        "standalonebatt.cost.epc.total": 0.0,
-        "standalonebatt.cost.installed_per_capacity": 1.2535353535353536,
-        "standalonebatt.cost.plm.fixed": 0.0,
-        "standalonebatt.cost.plm.nonfixed": 0.0,
-        "standalonebatt.cost.plm.percent": 0.0,
-        "standalonebatt.cost.plm.total": 0.0,
-        "standalonebatt.cost.sales_tax.percent": 0.0,
-        "standalonebatt.cost.sales_tax.total": 0.0,
-        "standalonebatt.cost.sales_tax.value": 5.0,
         "start_day_of_year": 0.0,
         "start_day_of_year_tod_ui": 0.0,
         "startup_frac": 0.5,
@@ -57058,7 +57043,7 @@
         "tech_type": 1.0,
         "term_int_rate": 7.0,
         "term_tenor": 18.0,
-        "tes_avail_vol": 12986.490759869743,
+        "tes_avail_vol": 12986.490759869745,
         "tes_basis_cost": 0.0,
         "tes_htf_density": 1808.4790461159128,
         "tes_init_hot_htf_percent": 30.0,
@@ -57066,7 +57051,7 @@
         "tes_itc_basis_cost_sta_include": 0.0,
         "tes_itc_basis_percent": 0.0,
         "tes_spec_cost": 22.0,
-        "tes_tank_diameter": 38.770787813951759,
+        "tes_tank_diameter": 38.77078781395176,
         "tes_vol_total": 14167.08082894881,
         "th_rad_panel": 0.002,
         "th_riser": 15.0,
@@ -57193,6 +57178,7 @@
         ],
         "ui_mspt_capacity": 100502.14217117538,
         "ui_mspt_cost": 650461415.2249143,
+        "ui_plant_capacity": 0.0,
         "ui_pv_cost": 230389090.9090909,
         "ui_receiver_height": 20.46,
         "ui_step_minutes": 60.0,
@@ -59405,1150 +59391,16 @@
         "wind_system_capacity": 0.0
     },
     "Battery": {
-        "LeadAcid_q10": 93.0,
-        "LeadAcid_q10_computed": 74181.2175,
-        "LeadAcid_q20": 100.0,
-        "LeadAcid_q20_computed": 79764.75,
-        "LeadAcid_qn": 60.0,
-        "LeadAcid_qn_computed": 47858.85,
-        "LeadAcid_tn": 1.0,
-        "add_om_num_types": 1.0,
-        "analysis_period": 25.0,
-        "batt_C_rate": 0.2,
-        "batt_C_rate_max_charge": 0.5,
-        "batt_C_rate_max_charge_input": 0.5,
-        "batt_C_rate_max_discharge": 0.5,
-        "batt_C_rate_max_discharge_input": 0.5,
-        "batt_Cp": 1500.0,
-        "batt_Qexp": 0.04,
-        "batt_Qexp_percent": 1.7777777777777777,
-        "batt_Qfull": 2.25,
-        "batt_Qfull_flow": 79764.75,
-        "batt_Qnom": 2.0,
-        "batt_Qnom_percent": 88.88888888888889,
-        "batt_Vcut": 2.706,
-        "batt_Vexp": 4.05,
-        "batt_Vfull": 4.1,
-        "batt_Vnom": 3.4,
-        "batt_Vnom_default": 3.98,
-        "batt_ac_dc_efficiency": 96.0,
-        "batt_ac_or_dc": 1.0,
-        "batt_adjust": 0.0,
-        "batt_adjust_constant": 0.0,
-        "batt_adjust_en_periods": 0.0,
-        "batt_adjust_en_timeindex": 0.0,
-        "batt_adjust_periods": [
-            [
-                0.0
-            ]
-        ],
-        "batt_adjust_timeindex": [
-            0.0
-        ],
-        "batt_bank_duration": 2.0,
-        "batt_bank_ncells_serial": 3.0,
-        "batt_bank_nseries_stacks": 1.0,
-        "batt_bank_nstrings": 1.0,
-        "batt_bank_power": 20000.0,
-        "batt_bank_power_dc_ac": 0.0,
-        "batt_bank_size": 40000.0,
-        "batt_bank_size_dc_ac": 0.0,
-        "batt_bank_size_specify": 100.0,
-        "batt_bank_size_ui": 40000.0,
-        "batt_bank_voltage": 500.0,
-        "batt_calendar_a": 0.00266,
-        "batt_calendar_b": -7280.0,
-        "batt_calendar_c": 939.0,
-        "batt_calendar_choice": 1.0,
-        "batt_calendar_lifetime_matrix": [
-            [
-                0.0,
-                100.0
-            ],
-            [
-                3650.0,
-                80.0
-            ],
-            [
-                7300.0,
-                50.0
-            ]
-        ],
-        "batt_calendar_q0": 1.02,
-        "batt_cell_current_charge_max": 10.0,
-        "batt_cell_current_discharge_max": 10.0,
-        "batt_cell_power_charge_max": 2.0,
-        "batt_cell_power_discharge_max": 2.0,
-        "batt_chem": 1.0,
-        "batt_computed_bank_capacity": 40000.42683,
-        "batt_computed_series": 126.0,
-        "batt_computed_stacks_series": 0.0,
-        "batt_computed_strings": 35451.0,
-        "batt_computed_voltage": 501.48,
-        "batt_current_charge_max": 39882.375,
-        "batt_current_choice": 1.0,
-        "batt_current_discharge_max": 39882.375,
-        "batt_dc_ac_efficiency": 96.0,
-        "batt_dc_dc_efficiency": 99.0,
-        "batt_duration_choice": 1.0,
-        "batt_h_to_ambient": 100.0,
-        "batt_inverter_efficiency_cutoff": 90.0,
-        "batt_life_excl": 0.0,
-        "batt_life_model": 0.0,
-        "batt_lifetime_matrix": [
-            [
-                100.0,
-                0.0,
-                100.0
-            ],
-            [
-                100.0,
-                128.0,
-                98.7906648
-            ],
-            [
-                100.0,
-                202.0,
-                97.9632249
-            ],
-            [
-                100.0,
-                277.0,
-                97.3903819
-            ],
-            [
-                100.0,
-                371.0,
-                96.6265912
-            ],
-            [
-                100.0,
-                523.0,
-                95.9264498
-            ],
-            [
-                100.0,
-                666.0,
-                95.2263083
-            ],
-            [
-                100.0,
-                1012.0,
-                93.9533239
-            ],
-            [
-                100.0,
-                1354.0,
-                92.9349364
-            ],
-            [
-                100.0,
-                1733.0,
-                91.9483734
-            ],
-            [
-                100.0,
-                2052.0,
-                91.0572843
-            ],
-            [
-                100.0,
-                2384.0,
-                90.2298444
-            ],
-            [
-                100.0,
-                2744.0,
-                89.3705799
-            ],
-            [
-                100.0,
-                3103.0,
-                88.54314
-            ],
-            [
-                100.0,
-                3465.0,
-                87.7157001
-            ],
-            [
-                100.0,
-                3830.0,
-                86.9200849
-            ],
-            [
-                100.0,
-                4188.0,
-                86.1881188
-            ],
-            [
-                100.0,
-                4560.0,
-                85.2970297
-            ],
-            [
-                100.0,
-                5000.0,
-                84.4377652
-            ],
-            [
-                100.0,
-                5374.0,
-                83.7376238
-            ],
-            [
-                100.0,
-                5757.0,
-                82.9738331
-            ],
-            [
-                100.0,
-                6132.0,
-                82.3055163
-            ],
-            [
-                100.0,
-                6527.0,
-                81.4780764
-            ],
-            [
-                100.0,
-                6926.0,
-                80.7461103
-            ],
-            [
-                100.0,
-                7300.0,
-                79.9823197
-            ],
-            [
-                100.0,
-                7701.0,
-                79.218529
-            ],
-            [
-                100.0,
-                8111.0,
-                78.6138614
-            ],
-            [
-                100.0,
-                8495.0,
-                77.6591231
-            ],
-            [
-                100.0,
-                8778.0,
-                77.3408769
-            ],
-            [
-                100.0,
-                9192.0,
-                76.4497878
-            ],
-            [
-                100.0,
-                9987.0,
-                74.8903819
-            ],
-            [
-                100.0,
-                10829.0,
-                73.4264498
-            ],
-            [
-                100.0,
-                11474.0,
-                72.1534653
-            ],
-            [
-                100.0,
-                12162.0,
-                70.9123055
-            ],
-            [
-                100.0,
-                12921.0,
-                69.5756719
-            ],
-            [
-                80.0,
-                0.0,
-                100.0
-            ],
-            [
-                80.0,
-                161.0,
-                98.4087694
-            ],
-            [
-                80.0,
-                301.0,
-                97.135785
-            ],
-            [
-                80.0,
-                448.0,
-                96.0219236
-            ],
-            [
-                80.0,
-                645.0,
-                95.0671853
-            ],
-            [
-                80.0,
-                831.0,
-                94.3033946
-            ],
-            [
-                80.0,
-                1276.0,
-                92.6803395
-            ],
-            [
-                80.0,
-                1696.0,
-                91.5664781
-            ],
-            [
-                80.0,
-                2191.0,
-                90.4844413
-            ],
-            [
-                80.0,
-                2596.0,
-                89.6570014
-            ],
-            [
-                80.0,
-                3023.0,
-                89.0205092
-            ],
-            [
-                80.0,
-                3466.0,
-                88.3521924
-            ],
-            [
-                80.0,
-                3912.0,
-                87.7157001
-            ],
-            [
-                80.0,
-                4375.0,
-                87.0473833
-            ],
-            [
-                80.0,
-                4828.0,
-                86.3472419
-            ],
-            [
-                80.0,
-                5292.0,
-                85.7425743
-            ],
-            [
-                80.0,
-                5759.0,
-                85.0424328
-            ],
-            [
-                80.0,
-                6297.0,
-                84.3422914
-            ],
-            [
-                80.0,
-                7242.0,
-                83.1011315
-            ],
-            [
-                80.0,
-                7724.0,
-                82.4328147
-            ],
-            [
-                80.0,
-                8196.0,
-                81.8281471
-            ],
-            [
-                80.0,
-                8678.0,
-                81.0643564
-            ],
-            [
-                80.0,
-                9186.0,
-                80.4915134
-            ],
-            [
-                80.0,
-                9690.0,
-                79.950495
-            ],
-            [
-                80.0,
-                10169.0,
-                79.3140028
-            ],
-            [
-                80.0,
-                10623.0,
-                78.8048091
-            ],
-            [
-                80.0,
-                11000.0,
-                78.2637907
-            ],
-            [
-                80.0,
-                11534.0,
-                77.6272984
-            ],
-            [
-                80.0,
-                12479.0,
-                76.6725601
-            ],
-            [
-                80.0,
-                13496.0,
-                75.5905233
-            ],
-            [
-                80.0,
-                14299.0,
-                74.7949081
-            ],
-            [
-                80.0,
-                15119.0,
-                73.903819
-            ],
-            [
-                80.0,
-                16019.0,
-                72.8854314
-            ],
-            [
-                40.0,
-                0.0,
-                100.0
-            ],
-            [
-                40.0,
-                489.0,
-                95.7355021
-            ],
-            [
-                40.0,
-                948.0,
-                92.6803395
-            ],
-            [
-                40.0,
-                1323.0,
-                89.8161245
-            ],
-            [
-                40.0,
-                1733.0,
-                87.7793494
-            ],
-            [
-                40.0,
-                2690.0,
-                83.7694484
-            ],
-            [
-                40.0,
-                3623.0,
-                82.3055163
-            ],
-            [
-                40.0,
-                4676.0,
-                82.1145686
-            ],
-            [
-                40.0,
-                5591.0,
-                82.1145686
-            ],
-            [
-                40.0,
-                6507.0,
-                82.1782178
-            ],
-            [
-                40.0,
-                7506.0,
-                81.9236209
-            ],
-            [
-                40.0,
-                8468.0,
-                81.6053748
-            ],
-            [
-                40.0,
-                9438.0,
-                82.7510608
-            ],
-            [
-                40.0,
-                10407.0,
-                81.7963225
-            ],
-            [
-                40.0,
-                11358.0,
-                81.1598303
-            ],
-            [
-                40.0,
-                12345.0,
-                80.4915134
-            ],
-            [
-                40.0,
-                13463.0,
-                80.4915134
-            ],
-            [
-                40.0,
-                14484.0,
-                80.0777935
-            ],
-            [
-                40.0,
-                15468.0,
-                79.7595474
-            ],
-            [
-                40.0,
-                16470.0,
-                79.4094767
-            ],
-            [
-                40.0,
-                17477.0,
-                78.9321075
-            ],
-            [
-                40.0,
-                18475.0,
-                78.6138614
-            ],
-            [
-                40.0,
-                19492.0,
-                78.1364922
-            ],
-            [
-                40.0,
-                20530.0,
-                77.8182461
-            ],
-            [
-                40.0,
-                21542.0,
-                77.4363508
-            ],
-            [
-                40.0,
-                22456.0,
-                77.1181047
-            ],
-            [
-                40.0,
-                23209.0,
-                77.2454031
-            ],
-            [
-                40.0,
-                24274.0,
-                76.7362093
-            ],
-            [
-                40.0,
-                26229.0,
-                75.9724187
-            ],
-            [
-                40.0,
-                28263.0,
-                75.2404526
-            ],
-            [
-                40.0,
-                29842.0,
-                74.7630835
-            ],
-            [
-                40.0,
-                31478.0,
-                74.2538897
-            ],
-            [
-                40.0,
-                33293.0,
-                73.8719943
-            ],
-            [
-                20.0,
-                0.0,
-                100.0
-            ],
-            [
-                20.0,
-                322.0,
-                97.8359264
-            ],
-            [
-                20.0,
-                744.0,
-                96.562942
-            ],
-            [
-                20.0,
-                1030.0,
-                94.9717115
-            ],
-            [
-                20.0,
-                1861.0,
-                91.3437058
-            ],
-            [
-                20.0,
-                2726.0,
-                87.8429986
-            ],
-            [
-                20.0,
-                2726.0,
-                87.8429986
-            ],
-            [
-                20.0,
-                3518.0,
-                84.7878359
-            ],
-            [
-                20.0,
-                5462.0,
-                79.2503536
-            ],
-            [
-                20.0,
-                7476.0,
-                76.927157
-            ],
-            [
-                20.0,
-                9813.0,
-                77.0862801
-            ],
-            [
-                20.0,
-                11702.0,
-                77.2772277
-            ],
-            [
-                20.0,
-                13699.0,
-                77.9137199
-            ],
-            [
-                20.0,
-                15707.0,
-                78.6775106
-            ],
-            [
-                20.0,
-                17758.0,
-                79.0594059
-            ],
-            [
-                20.0,
-                19770.0,
-                79.4413013
-            ],
-            [
-                20.0,
-                21691.0,
-                79.5049505
-            ],
-            [
-                20.0,
-                23725.0,
-                79.5685997
-            ],
-            [
-                20.0,
-                25701.0,
-                79.5685997
-            ],
-            [
-                20.0,
-                27985.0,
-                79.9823197
-            ],
-            [
-                20.0,
-                30010.0,
-                79.8231966
-            ],
-            [
-                20.0,
-                31981.0,
-                79.6958982
-            ],
-            [
-                20.0,
-                33984.0,
-                79.5367751
-            ],
-            [
-                20.0,
-                35993.0,
-                79.2503536
-            ],
-            [
-                20.0,
-                37950.0,
-                79.0594059
-            ],
-            [
-                20.0,
-                40000.0,
-                78.8048091
-            ],
-            [
-                20.0,
-                42027.0,
-                78.5502122
-            ],
-            [
-                20.0,
-                44002.0,
-                78.2956153
-            ],
-            [
-                20.0,
-                45809.0,
-                78.0410184
-            ],
-            [
-                20.0,
-                47324.0,
-                78.4547383
-            ],
-            [
-                20.0,
-                49421.0,
-                77.9773692
-            ],
-            [
-                20.0,
-                53266.0,
-                77.2772277
-            ],
-            [
-                20.0,
-                57263.0,
-                76.6089109
-            ],
-            [
-                20.0,
-                60363.0,
-                76.2906648
-            ],
-            [
-                20.0,
-                63598.0,
-                75.8132956
-            ],
-            [
-                20.0,
-                67147.0,
-                75.6859972
-            ],
-            [
-                10.0,
-                0.0,
-                100.0
-            ],
-            [
-                10.0,
-                827.0,
-                98.281471
-            ],
-            [
-                10.0,
-                1341.0,
-                97.0084866
-            ],
-            [
-                10.0,
-                2050.0,
-                95.6718529
-            ],
-            [
-                10.0,
-                3697.0,
-                92.4257426
-            ],
-            [
-                10.0,
-                5352.0,
-                89.3387553
-            ],
-            [
-                10.0,
-                6801.0,
-                86.7609618
-            ],
-            [
-                10.0,
-                10801.0,
-                81.8281471
-            ],
-            [
-                10.0,
-                14594.0,
-                79.1867044
-            ],
-            [
-                10.0,
-                19282.0,
-                78.2637907
-            ],
-            [
-                10.0,
-                22891.0,
-                78.2956153
-            ],
-            [
-                10.0,
-                26837.0,
-                78.7411598
-            ],
-            [
-                10.0,
-                30819.0,
-                79.1867044
-            ],
-            [
-                10.0,
-                34952.0,
-                79.5685997
-            ],
-            [
-                10.0,
-                38953.0,
-                79.8868458
-            ],
-            [
-                10.0,
-                42829.0,
-                80.0141443
-            ],
-            [
-                10.0,
-                46812.0,
-                80.1414427
-            ],
-            [
-                10.0,
-                50791.0,
-                80.2050919
-            ],
-            [
-                10.0,
-                55205.0,
-                80.8415842
-            ],
-            [
-                10.0,
-                59150.0,
-                80.8415842
-            ],
-            [
-                10.0,
-                63094.0,
-                80.9052334
-            ],
-            [
-                10.0,
-                67040.0,
-                80.7779349
-            ],
-            [
-                10.0,
-                71103.0,
-                80.7142857
-            ],
-            [
-                10.0,
-                74943.0,
-                80.6824611
-            ],
-            [
-                10.0,
-                78957.0,
-                80.523338
-            ],
-            [
-                10.0,
-                82865.0,
-                80.3960396
-            ],
-            [
-                10.0,
-                86722.0,
-                80.2687412
-            ],
-            [
-                10.0,
-                90414.0,
-                80.1732673
-            ],
-            [
-                10.0,
-                93306.0,
-                80.523338
-            ],
-            [
-                10.0,
-                97274.0,
-                80.2687412
-            ],
-            [
-                10.0,
-                104629.0,
-                79.5685997
-            ],
-            [
-                10.0,
-                112503.0,
-                78.9957567
-            ],
-            [
-                10.0,
-                118575.0,
-                78.6138614
-            ],
-            [
-                10.0,
-                124792.0,
-                78.2319661
-            ],
-            [
-                10.0,
-                131609.0,
-                78.1683168
-            ]
-        ],
-        "batt_loss_choice": 0.0,
-        "batt_losses": [
-            0.0
-        ],
-        "batt_losses_charging": [
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0
-        ],
-        "batt_losses_discharging": [
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0
-        ],
-        "batt_losses_idle": [
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0,
-            0.0
-        ],
-        "batt_mass": 571434.669,
-        "batt_meter_position": 1.0,
-        "batt_num_cells": 4466826.0,
-        "batt_power_charge_max_kwac": 20833.555640625,
-        "batt_power_charge_max_kwdc": 20000.213415,
-        "batt_power_discharge_max_kwac": 19200.204878399996,
-        "batt_power_discharge_max_kwdc": 20000.213415,
-        "batt_replacement_capacity": 70.0,
-        "batt_replacement_option": 0.0,
-        "batt_replacement_schedule_percent": [
-            0.0
-        ],
-        "batt_resistance": 0.002,
-        "batt_room_temperature_celsius": [
-            25.0
-        ],
-        "batt_room_temperature_single": 25.0,
-        "batt_room_temperature_vector": [
-            0.0
-        ],
-        "batt_size_choice": 0.0,
-        "batt_specific_energy_per_mass": 70.0,
-        "batt_specific_energy_per_volume": 82.0,
-        "batt_surface_area": 3000.0320122499999,
-        "batt_thermal_choice": 0.0,
-        "batt_time_capacity": 2.0,
-        "batt_type": 5.0,
-        "batt_ui_bank_voltage": 501.48,
-        "batt_ui_cell_voltage": 3.98,
-        "batt_ui_inverter_eff": 96.0,
-        "batt_ui_nominal_bank_power": 20000.213415,
-        "batt_unit_capacity": 400.0,
-        "batt_unit_surface_area": 30.0,
-        "batt_voltage_choice": 0.0,
-        "batt_voltage_matrix": [
-            [
-                0.0,
-                1.2
-            ],
-            [
-                20.0,
-                1.1
-            ],
-            [
-                40.0,
-                1.05
-            ],
-            [
-                60.0,
-                1.0
-            ],
-            [
-                80.0,
-                0.95
-            ],
-            [
-                100.0,
-                0.5
-            ]
-        ],
-        "batt_volume": 487.81008329268288,
-        "battery_energy": 40000.42683,
-        "battery_indirect_cost_percent": 0.0,
-        "battery_losses_shown": 0.0,
-        "battery_per_kW": 233.0,
-        "battery_per_kWh": 252.0,
-        "battery_power": 20000.213415,
-        "battery_thermal_shown": 1.0,
-        "battery_total": 14740157.286855001,
-        "battery_total_cost_lcos": 15477165.15119775,
-        "battery_voltage_shown": 0.0,
-        "cap_vs_temp": [
-            [
-                -20.0,
-                72.33333333
-            ],
-            [
-                -10.0,
-                81.8
-            ],
-            [
-                0.0,
-                88.8
-            ],
-            [
-                10.0,
-                93.0
-            ],
-            [
-                23.0,
-                96.66666667
-            ],
-            [
-                45.0,
-                101.0
-            ],
-            [
-                60.0,
-                101.0
-            ]
-        ],
-        "compute_as_cube": 0.0,
-        "en_batt": 1.0,
-        "en_wave_batt": 0.0,
-        "hybrid_system_capacity": 201663.4051655792,
-        "om_batt_capacity_cost": [
-            15.0
-        ],
-        "om_batt_fixed_cost": [
-            0.0
-        ],
-        "om_batt_nameplate": 40000.42683,
-        "om_batt_replacement_cost": [
-            252.0
-        ],
-        "om_batt_variable_cost": [
-            0.0
-        ],
-        "om_capacity_escal": 0.0,
-        "om_fixed_escal": 0.0,
-        "om_production_escal": 0.0,
-        "om_replacement_cost_escal": 0.0,
-        "sales_tax_rate": 5.0,
-        "solar_resource_file": "daggett_ca_34.865371_-116.783023_psmv3_60_tmy.csv",
-        "standalonebatt.cost.contingency": 0.0,
-        "standalonebatt.cost.contingency_percent": 0.0,
-        "standalonebatt.cost.epc.fixed": 0.0,
-        "standalonebatt.cost.epc.nonfixed": 0.0,
-        "standalonebatt.cost.epc.percent": 0.0,
-        "standalonebatt.cost.epc.total": 0.0,
-        "standalonebatt.cost.installed_per_capacity": 0.8060937500000002,
-        "standalonebatt.cost.plm.fixed": 0.0,
-        "standalonebatt.cost.plm.nonfixed": 0.0,
-        "standalonebatt.cost.plm.percent": 0.0,
-        "standalonebatt.cost.plm.total": 0.0,
-        "standalonebatt.cost.sales_tax.percent": 100.0,
-        "standalonebatt.cost.sales_tax.total": 737007.86434275,
-        "standalonebatt.cost.sales_tax.value": 5.0,
-        "system_capacity": 19200.204878399996,
-        "total_direct_cost": 14740157.286855001,
-        "total_indirect_cost": 0.0,
-        "total_installed_cost": 15477165.15119775,
-        "ui_batt_life_model": 0.0
+        "ac_nameplate": 0.0,
+        "csptowermoltensalt_batt_kw_installed_cost": 0.0,
+        "csptowermoltensalt_batt_kwh_installed_cost": 0.0,
+        "csptowermoltensalt_q_pb_design": 0.0,
+        "csptowermoltensalt_system_capacity": 0.0,
+        "csptowermoltensalt_tes_installed_cost": 0.0,
+        "csptowermoltensalt_total_installed_cost": 0.0,
+        "pv_total_installed_cost": 0.0
     },
     "Hybrid": {
-        "ac_nameplate": 100000.0,
         "analysis_period": 25.0,
         "analysis_period_warning": "",
         "annual_albedo": 0.2253945200002357,
@@ -60556,7 +59408,7 @@
         "annual_csky_beam": NaN,
         "annual_csky_diffuse": NaN,
         "annual_csky_global": NaN,
-        "annual_diffuse": 1.2481643835616439,
+        "annual_diffuse": 1.248164383561644,
         "annual_global": 5.8333945205479449,
         "annual_precipitation": NaN,
         "annual_snow": NaN,
@@ -60567,11 +59419,9 @@
         "batt_itc_basis_cost_fed_include": 1.0,
         "batt_itc_basis_cost_include": 0.0,
         "batt_itc_basis_cost_sta_include": 1.0,
-        "batt_itc_basis_percent": 1.8793207575572766,
-        "batt_power_discharge_max_kwac": 19200.204878399996,
+        "batt_itc_basis_percent": 1.8793207575572768,
         "batt_salvage_percentage": 0.0,
         "batt_salvage_value": 0.0,
-        "battery_total_installed_cost": 15477165.15119775,
         "cbi_fed_amount": 0.0,
         "cbi_fed_deprbas_fed": 0.0,
         "cbi_fed_deprbas_sta": 0.0,
@@ -60598,7 +59448,7 @@
         "cbi_uti_tax_sta": 1.0,
         "chk_update_peaks": 0.0,
         "city": "-",
-        "const_per_interest1": 13382703.974060603,
+        "const_per_interest1": 13382703.974060605,
         "const_per_interest2": 0.0,
         "const_per_interest3": 0.0,
         "const_per_interest4": 0.0,
@@ -60608,7 +59458,7 @@
         "const_per_interest_rate3": 0.0,
         "const_per_interest_rate4": 0.0,
         "const_per_interest_rate5": 0.0,
-        "const_per_interest_total": 13382703.974060603,
+        "const_per_interest_total": 13382703.974060605,
         "const_per_months1": 6.0,
         "const_per_months2": 0.0,
         "const_per_months3": 0.0,
@@ -60656,10 +59506,6 @@
         "cp_capacity_payment_esc": 0.0,
         "cp_capacity_payment_type": 0.0,
         "cp_system_nameplate": 201.6634051655792,
-        "csptowermoltensalt_q_pb_design": 279.126213592233,
-        "csptowermoltensalt_system_capacity": 101663.4051655792,
-        "csptowermoltensalt_tes_installed_cost": 61407766.99029126,
-        "csptowermoltensalt_total_installed_cost": 662384798.6371468,
         "custom_generation_basis_cost": 0.0,
         "customgeneration_itc_basis_cost_fed_include": 0.0,
         "customgeneration_itc_basis_cost_sta_include": 0.0,
@@ -60696,7 +59542,7 @@
             [
                 3.0,
                 15477165.15119775,
-                1.8793207575572766,
+                1.8793207575572768,
                 1.0,
                 1.0,
                 0.0
@@ -79179,7 +78025,6 @@
         "pv_itc_basis_cost_fed_include": 0.0,
         "pv_itc_basis_cost_sta_include": 0.0,
         "pv_itc_basis_percent": 17.690349178228634,
-        "pv_total_installed_cost": 145689050.0,
         "rate_escalation": [
             0.0
         ],
