@@ -41,6 +41,16 @@ wxDEFINE_EVENT(wxEVT_PYTHON_PROGRESS, wxThreadEvent);
 // Define a unique identifier for our background thread completion event
 wxDEFINE_EVENT(wxEVT_PYTHON_THREAD_COMPLETED, wxThreadEvent);
 
+
+#ifdef __WXMSW__
+#define PyINSTALLERBINARY "geophirestough.exe"
+#else
+#define PyINSTALLERBINARY "geophirestough.bin"
+#endif
+
+
+/*
+// Extra search path for PyInstaller executables.
 namespace
 {
     std::filesystem::path ResolveProjectRoot()
@@ -59,7 +69,7 @@ namespace
             std::filesystem::path current = candidate;
             for (int depth = 0; depth < 8; ++depth)
             {
-                if (std::filesystem::exists(current / "dist" / "myscript_v2") ||
+                if (std::filesystem::exists(current / "dist" / "myscript_v2.bin") ||
                     std::filesystem::exists(current / "dist" / "myscript_v2.exe") ||
                     std::filesystem::exists(current / "dist" / "cpp_request.json") ||
                     std::filesystem::exists(current / "dist" / "py_response.json"))
@@ -77,12 +87,12 @@ namespace
         return std::filesystem::current_path();
     }
 }
-
+*/
 // --- The Core Worker Function ---
 // Windows keeps the native CreateProcess implementation. macOS/Linux use the
 // POSIX pipe+fork+exec path so the same worker can stream progress and JSON
 // results across platforms.
-std::string CallPyInstallerWithProgressAndJSON(const std::wstring &exePath, const std::string &inputJsonStr, wxEvtHandler *eventSink)
+std::string CallPyInstallerWithProgressAndJSON(const std::wstring &exePath, const std::string &commandArgument, wxEvtHandler *eventSink)
 {
 #ifdef _WIN32
     SECURITY_ATTRIBUTES saAttr = {sizeof(SECURITY_ATTRIBUTES), NULL, TRUE};
@@ -108,9 +118,9 @@ std::string CallPyInstallerWithProgressAndJSON(const std::wstring &exePath, cons
     siStartInfo.wShowWindow = SW_HIDE;
 
     std::wstring exeFullPath = std::filesystem::absolute(std::filesystem::path(exePath)).wstring();
-    std::wstring workingDir = std::filesystem::path(exeFullPath).parent_path().wstring();
+    std::wstring workingDir = std::filesystem::path(commandArgument).parent_path().wstring();
 
-    std::wstring cmdLine = L"\"" + exeFullPath + L"\"";
+    std::wstring cmdLine = L"\"" + exeFullPath + L"\" \"" + std::wstring(commandArgument.begin(), commandArgument.end()) + L"\"";
     std::vector<wchar_t> cmdLineBuf(cmdLine.begin(), cmdLine.end());
     cmdLineBuf.push_back(L'\0');
 
@@ -133,12 +143,14 @@ std::string CallPyInstallerWithProgressAndJSON(const std::wstring &exePath, cons
 
     CloseHandle(hChildStd_OUT_Wr);
     CloseHandle(hChildStd_IN_Rd);
-
+/*
     if (!inputJsonStr.empty())
     {
         DWORD dwWritten;
         WriteFile(hChildStd_IN_Wr, inputJsonStr.c_str(), (DWORD)inputJsonStr.length(), &dwWritten, NULL);
     }
+    */
+
     CloseHandle(hChildStd_IN_Wr);
 
     std::string finalJsonOutput = "";
@@ -256,14 +268,17 @@ std::string CallPyInstallerWithProgressAndJSON(const std::wstring &exePath, cons
             close(stdoutPipe[0]);
         }
 
-        std::filesystem::path exeDir = exePathValue.parent_path();
+        std::filesystem::path exeDir = std::filesystem::absolute(std::filesystem::path(commandArgument));;
         if (!exeDir.empty() && chdir(exeDir.string().c_str()) != 0)
         {
             perror("Could not change to worker directory");
             _exit(126);
         }
 
-        char *argv[] = {const_cast<char *>(exePathUtf8.c_str()), nullptr};
+        std::string exeDirUtf8 = exeDir.string();
+		std::string commandUtf8 = exePathUtf8 + " " + exeDirUtf8;
+
+        char *argv[] = {const_cast<char *>(commandUtf8.c_str()), nullptr};
         execv(exePathUtf8.c_str(), argv);
         perror("Could not launch Python worker");
         _exit(127);
@@ -617,16 +632,15 @@ void geothermaltough::SetTOUGHParameters(const std::wstring& absoluteJsonPath) c
     // this is read in by the macro 
     doc.AddMember("TOUGH2 Executable Path", rapidjson::Value(m_tough_exe.mb_str(), allocator).Move(), allocator);
 
-
     // --- 6. SERIALIZATION AND WRITER STREAM PIPELINE ---
     rapidjson::StringBuffer buffer;
     rapidjson::PrettyWriter<rapidjson::StringBuffer> writer(buffer);
     doc.Accept(writer);
 
-    std::filesystem::path projectRoot = ResolveProjectRoot();
-    std::filesystem::path distDir = projectRoot / "dist";
-    std::filesystem::create_directories(distDir);
-    std::filesystem::path jsonRequestPath = distDir / "cpp_request.json";
+//    std::filesystem::path projectRoot = ResolveProjectRoot();
+//    std::filesystem::path distDir = projectRoot / "dist";
+//    std::filesystem::create_directories(distDir);
+	std::filesystem::path jsonRequestPath = std::filesystem::path(absoluteJsonPath);
 
     std::ofstream ofs(jsonRequestPath, std::ios::out | std::ios::trunc);
     if (ofs.is_open())
@@ -636,7 +650,7 @@ void geothermaltough::SetTOUGHParameters(const std::wstring& absoluteJsonPath) c
     }
     else
     {
-        m_outputText->AppendText(L"[Error] Could not write dist/cpp_request.json.\n");
+        m_outputText->AppendText(L"[Error] Could not write cpp_request.json.\n");
     }
 }
 
@@ -646,30 +660,32 @@ void geothermaltough::OnRunTask(wxCommandEvent& event) {
     m_outputText->AppendText("Serializing outbound JSON and launching worker thread...\n");
 
     
-    std::filesystem::path projectRoot = ResolveProjectRoot();
-    std::filesystem::path distDir = projectRoot / "dist";
-    std::filesystem::create_directories(distDir);
+//    std::filesystem::path projectRoot = ResolveProjectRoot();
+//    std::filesystem::path distDir = projectRoot / "dist";
+//    std::filesystem::create_directories(distDir);
+    // temp folder for cpp_request.json and py_response.json
+    m_temp_dir = wxFileName::GetTempDir();
+    m_pyinstaller_exe = SamApp::GetRuntimePath() + "/bin/" + wxString(PyINSTALLERBINARY);
 
     std::wstring absoluteJsonPath;
     std::wstring absolutePyExePath;
 
-#ifdef _WIN32
-    absoluteJsonPath = std::wstring((projectRoot / "dist" / "cpp_request.json").wstring());
-    absolutePyExePath = std::wstring((projectRoot / "dist" / "myscript_v2.exe").wstring());
-#else
-    std::filesystem::path jsonPath = distDir / "cpp_request.json";
-    std::filesystem::path exePath = distDir / "myscript_v2";
-    absoluteJsonPath = std::wstring(jsonPath.wstring());
-    absolutePyExePath = std::wstring(exePath.wstring());
-#endif
+    absoluteJsonPath = std::wstring((m_temp_dir + "/cpp_request.json").wc_str());
+    absolutePyExePath = std::wstring((m_pyinstaller_exe).wc_str());
+//#else
+//    std::filesystem::path jsonPath = distDir / "cpp_request.json";
+//    std::filesystem::path exePath = distDir / "myscript_v2";
+//    absoluteJsonPath = std::wstring(jsonPath.wstring());
+//    absolutePyExePath = std::wstring(exePath.wstring());
+//#endif
 
     std::error_code removeError;
-    std::filesystem::remove(distDir / "py_response.json", removeError);
+    std::filesystem::remove(std::filesystem::path(m_temp_dir.ToStdString()) / "py_response.json", removeError);
     SetTOUGHParameters(absoluteJsonPath);
 
     std::thread worker([this, absolutePyExePath]()
                        {
-            std::string rawResult = CallPyInstallerWithProgressAndJSON(absolutePyExePath, "", this);
+            std::string rawResult = CallPyInstallerWithProgressAndJSON(absolutePyExePath, std::string((m_temp_dir).mb_str(wxConvUTF8)), this);
 
             wxThreadEvent threadEvt(wxEVT_PYTHON_THREAD_COMPLETED);
             threadEvt.SetString(wxString::FromUTF8(rawResult));
@@ -698,8 +714,8 @@ void geothermaltough::OnThreadCompletion(wxThreadEvent& event) {
 
 		//TODO : Adjust after PYInstaller added to SAM build process, for now we can hardcode the path to the output file
         //std::string targetFilePath = "C:\\Projects\\Github\\NREL\\GeoSAM\\wxWidgetsTOUGHExample\\build\\Release\\dist\\py_response.json";
-        wxString targetFilePath = SamApp::GetRuntimePath() + "bin\\dist\\py_response.json";
-
+        //wxString targetFilePath = SamApp::GetRuntimePath() + "bin\\dist\\py_response.json";
+		wxString targetFilePath = m_temp_dir + "/py_response.json";
 
 
         // On Windows, give the operating system a split second to clear background 
@@ -791,8 +807,8 @@ void geothermaltough::OnThreadCompletion(wxThreadEvent& event) {
        m_outputText->AppendText(L"\nPipeline transaction completed smoothly.\n");    
     
     // Auto-dump spreadsheet record to disk
-        wxString reportPath = SamApp::GetRuntimePath() + "bin\\dist\\Simulation_Report.csv";
-        ExportSimulationReport(reportPath.ToStdString(), timeSteps, temperatures, pressures);
+  //      wxString reportPath = SamApp::GetRuntimePath() + "bin\\dist\\Simulation_Report.csv";
+  //      ExportSimulationReport(reportPath.ToStdString(), timeSteps, temperatures, pressures);
 
 		PlotOutput(timeSteps, temperatures, pressures);
 
@@ -806,7 +822,7 @@ void geothermaltough::OnThreadCompletion(wxThreadEvent& event) {
 
 
     }
-
+/*
 void geothermaltough::ExportSimulationReport(const std::string& filename,
                                                 const std::vector<double>& timeSteps, 
                                                 const std::vector<double>& temperatures, 
@@ -837,6 +853,7 @@ void geothermaltough::ExportSimulationReport(const std::string& filename,
         csvFile.close();
         m_outputText->AppendText(L"\n[System] Automated CSV simulation report saved successfully.\n");
     }
+*/
 
 void geothermaltough::PlotOutput(const std::vector<double>& timeSteps, const std::vector<double>& temperatures, const std::vector<double>& pressures)
 {

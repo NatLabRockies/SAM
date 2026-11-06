@@ -33,10 +33,10 @@ private:
     void OnRunTask(wxCommandEvent& event);
     void OnProgressTick(wxThreadEvent& event);
     void OnThreadCompletion(wxThreadEvent& event);
-    void ExportSimulationReport(const std::string& filename,
-                                                const std::vector<double>& timeSteps, 
-                                                const std::vector<double>& temperatures, 
-                                                const std::vector<double>& pressures);
+//    void ExportSimulationReport(const std::string& filename,
+//                                                const std::vector<double>& timeSteps, 
+//                                                const std::vector<double>& temperatures, 
+//                                                const std::vector<double>& pressures);
     void PlotOutput(const std::vector<double>& timeSteps,
         const std::vector<double>& temperatures,
         const std::vector<double>& pressures);
@@ -57,7 +57,8 @@ private:
 	double m_temperature;
 	double m_pressure;
     wxString m_tough_exe;
-
+	wxString m_pyinstaller_exe;
+	wxString m_temp_dir;
 };
 
 #endif // geothermaltough_H

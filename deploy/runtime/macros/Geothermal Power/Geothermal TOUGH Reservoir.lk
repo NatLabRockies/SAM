@@ -27,7 +27,7 @@ function main(){
 	}
 
 	// get input_file from pop-up window
-	input_file = choose_file( homedir(), 'Choose TOUGH executable file', '*.exe|*.bin', false, false);
+	input_file = choose_file( homedir(), 'Choose TOUGH executable file', '(executable)|*.exe|(binary)|*.bin', false, false);
 	if (strlen(input_file) < 1){
 		outln("No file selected; exiting.");
 		exit;
