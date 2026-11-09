@@ -126,7 +126,7 @@ configopt( 'Community Solar', { 'long_name'='Community Solar', 'short_name'='Com
 configopt( 'None', { 'long_name'='No Financial Model', 'short_name'='No financial', 'description'='Run the performance model with no financial model' } );
 
 enum { LOAD_SIMPLE, LOAD_BELPE, NO_LOAD };
-enum { DEGRADATION_AC_SINGLE_YEAR, DEGRADATION_DC_LIFETIME, DEGRADATION_AC_LIFETIME, DEGRADATION_PVSAM, DEGRADATION_AC_LIFETIME_LINEAR };
+enum { DEGRADATION_AC_SINGLE_YEAR, DEGRADATION_DC_LIFETIME, DEGRADATION_AC_LIFETIME, DEGRADATION_PVSAM, DEGRADATION_AC_LIFETIME_LINEAR, DEGRADATION_VOLTAGE };
 
 function setup_elec_load_page( mode ) //i is 1 for technologies that HAVE the building load calculator (for now just PV, CSP, Biopower, and Generic Solar- MUST HAVE SOLAR RESOURCE DATA), 2 for techs without ANY load pages (SWH), and 0 for technologies that don't
 {
@@ -351,6 +351,11 @@ function setup_lifetime_page( degradation_mode )
 	elseif ( degradation_mode == DEGRADATION_PVSAM )
 	{
 		addpage( [ [ 'Degradation DC Lifetime', 'Degradation AC DC Lifetime Daily', 'Degradation Lifetime Variables'], ],
+                 { 'sidebar'='DC Degradation','help'='degradation/degradation_dc' } );
+	}
+	else if ( degradation_mode == DEGRADATION_VOLTAGE)
+	{
+		addpage( [ [ 'PV Detailed Degradation'] ],
                  { 'sidebar'='DC Degradation','help'='degradation/degradation_dc' } );
 	}
      // annual AC degradation over one year, 'degradation' requires 'system_use_lifetime = 0'
@@ -1056,7 +1061,7 @@ setconfig( 'Flat Plate PV', 'Single Owner' );
 setmodules( ['pvsamv1', 'grid', 'utilityrate5', 'singleowner'] );
 setup_detailed_pv_pages('');
 setup_grid_limits_page();
-setup_lifetime_page( DEGRADATION_PVSAM );
+setup_lifetime_page( DEGRADATION_VOLTAGE );
 addpage( [[ 'PV Capital Costs' ],
 	[ 'PV Capital Cost Curve', 'PV Capex Table', 'PV Capex Table AC', 'PV Capex Table Land']],
 	{ 'sidebar'='Installation Costs', 'exclusive_var'='pv_capex_cost_choice','help'='installation-costs/cc_pv'} );
