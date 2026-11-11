@@ -16,7 +16,7 @@
 // --- Main application Window ---
 class geothermaltough : public wxDialog {
 public:
-    geothermaltough(wxWindow* parent, const wxString& title = "GeoTOUGH Multi-Physics Simulation Studio",
+    geothermaltough(wxWindow* parent, const wxString& title = "GEOPHIRES TOUGH Reservoir Simulation",
         const wxPoint& pos = wxDefaultPosition,
         const wxSize& size = wxSize(1024, 768), long style = (wxCAPTION | wxCLOSE_BOX | wxCLIP_CHILDREN | wxRESIZE_BORDER));
     virtual ~geothermaltough() {};
@@ -31,12 +31,11 @@ private:
     void RunExample7Simulation(const std::string &absoluteJsonPath);
     void SetTOUGHParameters(const std::wstring& absoluteJsonPath) const;
     void OnRunTask(wxCommandEvent& event);
+    void OnClose(wxCloseEvent& event);
+    void OnHelpButton(wxCommandEvent& event);
     void OnProgressTick(wxThreadEvent& event);
+    void UpdateProgressbar(int progression);
     void OnThreadCompletion(wxThreadEvent& event);
-//    void ExportSimulationReport(const std::string& filename,
-//                                                const std::vector<double>& timeSteps, 
-//                                                const std::vector<double>& temperatures, 
-//                                                const std::vector<double>& pressures);
     void PlotOutput(const std::vector<double>& timeSteps,
         const std::vector<double>& temperatures,
         const std::vector<double>& pressures);
@@ -59,6 +58,8 @@ private:
     wxString m_tough_exe;
 	wxString m_pyinstaller_exe;
 	wxString m_temp_dir;
+
+	std::thread m_workerThread;
 };
 
 #endif // geothermaltough_H

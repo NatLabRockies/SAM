@@ -1,6 +1,6 @@
 /*@
 
-<p>This macro uses the <a href="https://tough.lbl.gov/" target="_blank" rel="noopener noreferrer">TOUGH</a> code to simulate a geothermal reservoir and generate the "Goethermal Reservoir Model Input Table" on the "Geothermal Resource" page<br><br>
+<p>This macro uses the <a href="https://tough.lbl.gov/" target="_blank" rel="noopener noreferrer">TOUGH</a> Equation-of-State (EOS) module to simulate a geothermal reservoir and generate the "Geothermal Reservoir Model Input Table" on the "Geothermal Resource" page<br><br>
 
 For the desired reservoir:<br>
 <ul>
@@ -10,7 +10,7 @@ For the desired reservoir:<br>
 </ul>
 </p>
 <br><br>
-<i> Click "Run macro" to select the TOUGH executable and generate the Time, Temp, Pressure input table on the Geothermal Resource page. </i>
+<i> Click "Run macro" to select the TOUGH executable (TOUGH2 and TOUGH3 <a href="https://tough.lbl.gov/software/tough3/" target="_blank" rel="noopener noreferrer">EOS1 module</a> supported) and generate the Time, Temp, Pressure input table on the Geothermal Resource page. </i>
 
 @*/
 

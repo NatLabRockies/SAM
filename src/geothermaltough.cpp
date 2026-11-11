@@ -49,45 +49,6 @@ wxDEFINE_EVENT(wxEVT_PYTHON_THREAD_COMPLETED, wxThreadEvent);
 #endif
 
 
-/*
-// Extra search path for PyInstaller executables.
-namespace
-{
-    std::filesystem::path ResolveProjectRoot()
-    {
-        std::vector<std::filesystem::path> candidates;
-
-        wxString exePath = SamApp::GetRuntimePath() ;
-        if (!exePath.empty())
-        {
-            candidates.push_back(std::filesystem::path(exePath.ToUTF8().data()).parent_path());
-        }
-        candidates.push_back(std::filesystem::current_path());
-
-        for (const auto &candidate : candidates)
-        {
-            std::filesystem::path current = candidate;
-            for (int depth = 0; depth < 8; ++depth)
-            {
-                if (std::filesystem::exists(current / "dist" / "myscript_v2.bin") ||
-                    std::filesystem::exists(current / "dist" / "myscript_v2.exe") ||
-                    std::filesystem::exists(current / "dist" / "cpp_request.json") ||
-                    std::filesystem::exists(current / "dist" / "py_response.json"))
-                {
-                    return current;
-                }
-
-                std::filesystem::path parent = current.parent_path();
-                if (parent == current)
-                    break;
-                current = parent;
-            }
-        }
-
-        return std::filesystem::current_path();
-    }
-}
-*/
 // --- The Core Worker Function ---
 // Windows keeps the native CreateProcess implementation. macOS/Linux use the
 // POSIX pipe+fork+exec path so the same worker can stream progress and JSON
@@ -397,13 +358,19 @@ geothermaltough::geothermaltough(wxWindow* parent, const wxString& title,const w
     SetSizerAndFit(sizer);
 
 	// To disable the OK button, enabled after the task completes, we can find it by its ID and disable it here
-    if (wxWindow* okButton = FindWindowById(wxID_OK)) {
+    if (wxWindow* okButton = FindWindowById(wxID_OK,this)) {
         okButton->Enable(false);
     }
 
     // Bind UI Actions
     m_runButton->Bind(wxEVT_BUTTON, &geothermaltough::OnRunTask, this);
-       
+    
+    // Bind the Help button specifically using its ID
+    this->Bind(wxEVT_BUTTON, &geothermaltough::OnHelpButton, this, wxID_HELP);
+
+	// close event binding to ensure proper cleanup of the worker thread if the dialog is closed prematurely
+    this->Bind(wxEVT_CLOSE_WINDOW, &geothermaltough::OnClose, this);
+
     // Bind worker thread synchronization notifications safely
     this->Bind(wxEVT_PYTHON_PROGRESS, &geothermaltough::OnProgressTick, this);
 
@@ -637,9 +604,6 @@ void geothermaltough::SetTOUGHParameters(const std::wstring& absoluteJsonPath) c
     rapidjson::PrettyWriter<rapidjson::StringBuffer> writer(buffer);
     doc.Accept(writer);
 
-//    std::filesystem::path projectRoot = ResolveProjectRoot();
-//    std::filesystem::path distDir = projectRoot / "dist";
-//    std::filesystem::create_directories(distDir);
 	std::filesystem::path jsonRequestPath = std::filesystem::path(absoluteJsonPath);
 
     std::ofstream ofs(jsonRequestPath, std::ios::out | std::ios::trunc);
@@ -654,15 +618,37 @@ void geothermaltough::SetTOUGHParameters(const std::wstring& absoluteJsonPath) c
     }
 }
 
+
+void geothermaltough::OnClose(wxCloseEvent& event)
+{
+    // If the worker thread is still running, we should wait for it to finish or terminate it safely
+    if (m_workerThread.joinable())
+    {
+        // Optionally, you can signal the thread to stop if you have a mechanism for that
+        // For now, we will just wait for it to finish
+        m_workerThread.join();
+    }
+	// disable the OK button to prevent user from closing the dialog while the task is running
+    if (wxWindow* okButton = FindWindowById(wxID_OK,this)) {
+        okButton->Enable(false);
+    }
+
+    // Proceed with the default close behavior
+    event.Skip();
+}
+
+void geothermaltough::OnHelpButton(wxCommandEvent& event)
+{
+    SamApp::ShowHelp("geothermal/geo_geothermal_resource");
+}
+
+
 void geothermaltough::OnRunTask(wxCommandEvent& event) {
     m_runButton->Enable(false);
     m_progressBar->SetValue(0);
     m_outputText->AppendText("Serializing outbound JSON and launching worker thread...\n");
 
     
-//    std::filesystem::path projectRoot = ResolveProjectRoot();
-//    std::filesystem::path distDir = projectRoot / "dist";
-//    std::filesystem::create_directories(distDir);
     // temp folder for cpp_request.json and py_response.json
     m_temp_dir = wxFileName::GetTempDir();
     m_pyinstaller_exe = SamApp::GetRuntimePath() + "/bin/" + wxString(PyINSTALLERBINARY);
@@ -672,18 +658,14 @@ void geothermaltough::OnRunTask(wxCommandEvent& event) {
 
     absoluteJsonPath = std::wstring((m_temp_dir + "/cpp_request.json").wc_str());
     absolutePyExePath = std::wstring((m_pyinstaller_exe).wc_str());
-//#else
-//    std::filesystem::path jsonPath = distDir / "cpp_request.json";
-//    std::filesystem::path exePath = distDir / "myscript_v2";
-//    absoluteJsonPath = std::wstring(jsonPath.wstring());
-//    absolutePyExePath = std::wstring(exePath.wstring());
-//#endif
 
     std::error_code removeError;
     std::filesystem::remove(std::filesystem::path(m_temp_dir.ToStdString()) / "py_response.json", removeError);
     SetTOUGHParameters(absoluteJsonPath);
 
-    std::thread worker([this, absolutePyExePath]()
+	UpdateProgressbar(10);
+
+    m_workerThread = std::thread([this, absolutePyExePath]()
                        {
             std::string rawResult = CallPyInstallerWithProgressAndJSON(absolutePyExePath, std::string((m_temp_dir).mb_str(wxConvUTF8)), this);
 
@@ -691,34 +673,36 @@ void geothermaltough::OnRunTask(wxCommandEvent& event) {
             threadEvt.SetString(wxString::FromUTF8(rawResult));
             wxQueueEvent(this, threadEvt.Clone()); });
 
-    worker.detach();
+    m_workerThread.detach();
     }
 
 
 void geothermaltough::OnProgressTick(wxThreadEvent& event) {
         int progression = event.GetInt();
-        m_progressBar->SetValue(progression);
-        m_outputText->AppendText(wxString::Format(L"Executing simulation steps... %d%% complete\n", progression));
+        UpdateProgressbar(progression);
     }
+
+void geothermaltough::UpdateProgressbar(int progression)
+{
+    m_progressBar->SetValue(progression);
+    m_outputText->AppendText(wxString::Format(L"Executing simulation steps... %d%% complete\n", progression));
+}
 
 
 void geothermaltough::OnThreadCompletion(wxThreadEvent& event) {
         m_runButton->Enable(true);
         m_progressBar->SetValue(100);
-        if (wxWindow* okButton = FindWindowById(wxID_OK)) {
+        if (wxWindow* okButton = FindWindowById(wxID_OK, this)) {
             okButton->Enable(true);
         }
 
         wxString rawResult = event.GetString();
         std::string jsonStr = std::string(rawResult.mb_str(wxConvUTF8));
 
-		//TODO : Adjust after PYInstaller added to SAM build process, for now we can hardcode the path to the output file
-        //std::string targetFilePath = "C:\\Projects\\Github\\NREL\\GeoSAM\\wxWidgetsTOUGHExample\\build\\Release\\dist\\py_response.json";
-        //wxString targetFilePath = SamApp::GetRuntimePath() + "bin\\dist\\py_response.json";
 		wxString targetFilePath = m_temp_dir + "/py_response.json";
 
 
-        // On Windows, give the operating system a split second to clear background 
+        // give the operating system a split second to clear background 
         // thread write locks before attempting to open the payload file.
         bool fileReadSuccess = false;
         for (int retry = 0; retry < 5; ++retry) {
@@ -801,14 +785,8 @@ void geothermaltough::OnThreadCompletion(wxThreadEvent& event) {
             m_outputText->AppendText(wxString::Format(L"%.2f\t\t%.2f\t\t%.2f\n", step, temp, press));
         }
 
-    // ---- Data Ready For Engineering Analysis ----
-    // You now possess clean, separate vectors (timeSteps, temperatures, pressures)
-    // ready to link into mathematical processors or visualization charts.
        m_outputText->AppendText(L"\nPipeline transaction completed smoothly.\n");    
     
-    // Auto-dump spreadsheet record to disk
-  //      wxString reportPath = SamApp::GetRuntimePath() + "bin\\dist\\Simulation_Report.csv";
-  //      ExportSimulationReport(reportPath.ToStdString(), timeSteps, temperatures, pressures);
 
 		PlotOutput(timeSteps, temperatures, pressures);
 
@@ -822,38 +800,6 @@ void geothermaltough::OnThreadCompletion(wxThreadEvent& event) {
 
 
     }
-/*
-void geothermaltough::ExportSimulationReport(const std::string& filename,
-                                                const std::vector<double>& timeSteps, 
-                                                const std::vector<double>& temperatures, 
-                                                const std::vector<double>& pressures) {
-        
-        // Open standard file output stream (handles Unicode file paths via standard library)
-        std::ofstream csvFile(filename);
-        if (!csvFile.is_open()) {
-            wxLogError(L"Failed to initialize file writing permissions for target report path.");
-            return;
-        }
-
-        // 1. Output Metadata Header Blocks
-        csvFile << "GEOPHIRES-X / TOUGH Coupled Reservoir Simulation Report\n";
-        csvFile << "Execution Framework,wxWidgets Application Pipeline\n";
-        csvFile << "Simulated Profile Columns,3\n\n";
-
-        // 2. Output Data Column Mapping Headers
-        csvFile << "Timestep (s),Production Temperature (deg C),Production Pressure (kPa)\n";
-
-        // 3. Write Matrix Profiles Iteratively Line-By-Line
-        for (size_t i = 0; i < timeSteps.size(); ++i) {
-            csvFile << timeSteps[i] << "," 
-                    << temperatures[i] << "," 
-                    << pressures[i] << "\n";
-        }
-
-        csvFile.close();
-        m_outputText->AppendText(L"\n[System] Automated CSV simulation report saved successfully.\n");
-    }
-*/
 
 void geothermaltough::PlotOutput(const std::vector<double>& timeSteps, const std::vector<double>& temperatures, const std::vector<double>& pressures)
 {
