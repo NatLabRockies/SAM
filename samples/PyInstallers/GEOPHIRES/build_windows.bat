@@ -1,1 +1,2 @@
 pyinstaller --noconfirm --onefile --console --name "geophirestough" --paths "C:/Projects/Github/NREL/my-geophires-project/geophires-x/src/geophires_x" --paths "C:/Projects/Github/NREL/my-geophires-project/geophires-x/src/geophires_x_client" --add-data "C:/Projects/Github/NREL/my-geophires-project/geophires-x/src/geophires_x;geophires_x" --add-data "C:/Projects/Github/NREL/my-geophires-project/geophires-x/src/geophires_x_client;geophires_x_client"  --clean geophirestough.py
+copy dist/geophirestough.exe ../../../deploy/runtime/bin
