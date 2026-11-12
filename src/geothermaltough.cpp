@@ -104,13 +104,6 @@ std::string CallPyInstallerWithProgressAndJSON(const std::wstring &exePath, cons
 
     CloseHandle(hChildStd_OUT_Wr);
     CloseHandle(hChildStd_IN_Rd);
-/*
-    if (!inputJsonStr.empty())
-    {
-        DWORD dwWritten;
-        WriteFile(hChildStd_IN_Wr, inputJsonStr.c_str(), (DWORD)inputJsonStr.length(), &dwWritten, NULL);
-    }
-    */
 
     CloseHandle(hChildStd_IN_Wr);
 
@@ -237,9 +230,8 @@ std::string CallPyInstallerWithProgressAndJSON(const std::wstring &exePath, cons
         }
 
         std::string exeDirUtf8 = exeDir.string();
-		std::string commandUtf8 = exePathUtf8 + " " + exeDirUtf8;
 
-        char *argv[] = {const_cast<char *>(commandUtf8.c_str()), nullptr};
+        char *argv[] = {const_cast<char *>(exePathUtf8.c_str()), const_cast<char *>(exeDirUtf8.c_str()), nullptr};
         execv(exePathUtf8.c_str(), argv);
         perror("Could not launch Python worker");
         _exit(127);
@@ -248,20 +240,6 @@ std::string CallPyInstallerWithProgressAndJSON(const std::wstring &exePath, cons
     close(stdinPipe[0]);
     close(stdoutPipe[1]);
 
-    if (!inputJsonStr.empty())
-    {
-        ssize_t totalWritten = 0;
-        while (totalWritten < static_cast<ssize_t>(inputJsonStr.size()))
-        {
-            ssize_t written = write(stdinPipe[1], inputJsonStr.c_str() + totalWritten,
-                                    inputJsonStr.size() - static_cast<size_t>(totalWritten));
-            if (written <= 0)
-            {
-                break;
-            }
-            totalWritten += written;
-        }
-    }
     close(stdinPipe[1]);
 
     std::string finalJsonOutput = "";
