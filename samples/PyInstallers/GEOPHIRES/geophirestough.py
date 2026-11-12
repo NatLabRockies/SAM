@@ -12,8 +12,9 @@ from geophires_x_client.geophires_input_parameters import GeophiresInputParamete
 #   cd C:/Projects/Github/NREL/my-geophires-project/geophires-x
 #   python -m pip install -e .
 # Build a standalone executable from this directory:
-# Windows command to build the executable:
-#   pyinstaller --noconfirm --onefile --console --name "geophirestough" --paths "C:/Projects/Github/NREL/my-geophires-project/geophires-x/src/geophires_x" --paths "C:/Projects/Github/NREL/my-geophires-project/geophires-x/src/geophires_x_client" --add-data "C:/Projects/Github/NREL/my-geophires-project/geophires-x/src/geophires_x;geophires_x" --add-data "C:/Projects/Github/NREL/my-geophires-project/geophires-x/src/geophires_x_client;geophires_x_client"  --clean geophirestough.py
+# Windows: build_windows.bat
+# Linux: bash build_linux.sh
+# MacOS: bash build_macos.sh (have to perform on Intel and Apple Silicon Macs and combine with lipo to create a universal binary)
 #   The built executable will be located in the dist folder.
 # copy the built executable geophirestough.exe to the SAM/deploy/runtime/bin folder.
 # Run from a Geothermal case in SAM from the Macros tab and select the Geothermal TOUGH Reservoir macro.
@@ -28,7 +29,7 @@ if os.path.basename(real_cpp_dir).lower() in ["dist", "release", "debug"]:
 
 def main():
 
-    client = GeophiresXClient()
+    print("PROGRESS:30", flush=True)
 
     if len(sys.argv) > 1:
         temp_dir = sys.argv[1]
@@ -55,6 +56,11 @@ def main():
     if not file_load_success or not input_data:
         print(f"MATRIX_DATA:{json.dumps({'status': 'error', 'message': 'cpp_request.json is locked or missing on disk'})}", flush=True)
         return
+
+
+    client = GeophiresXClient()
+
+    print("PROGRESS:40", flush=True)
 
     result = client.get_geophires_result(
         GeophiresInputParameters({
@@ -104,9 +110,12 @@ def main():
                 "TOUGH2 Executable Path": str(input_data.get("TOUGH2 Executable Path"))
         })
     )
+    print("PROGRESS:80", flush=True)
 
     x= result.TOUGH2_reservoir_simulation_results[1:]
-
+    
+    print("PROGRESS:90", flush=True)
+    
     response = {
         "status": "success",
         "matrix_rows": len(x),
@@ -121,6 +130,8 @@ def main():
         json.dump(response, f)
         f.flush()
         os.fsync(f.fileno())
+    
+    print("PROGRESS:100", flush=True)
 
 if __name__ == "__main__":
     main()
