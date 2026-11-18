@@ -1448,7 +1448,7 @@
             "Group": "Battery Thermal",
             "IndexLabels": "",
             "Flags": 2.0,
-            "DefaultValue": 5.0,
+            "DefaultValue": 100.0,
             "UIObject": "Numeric",
             "sscVariableName": " ",
             "sscVariableValue": ""
@@ -1638,7 +1638,7 @@
             "Group": "Battery Thermal",
             "IndexLabels": "",
             "Flags": 2.0,
-            "DefaultValue": 1.0,
+            "DefaultValue": 0.0,
             "UIObject": "CheckBox",
             "sscVariableName": " ",
             "sscVariableValue": ""
