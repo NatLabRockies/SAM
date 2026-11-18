@@ -43,9 +43,19 @@ wxDEFINE_EVENT(wxEVT_PYTHON_THREAD_COMPLETED, wxThreadEvent);
 
 
 #ifdef __WXMSW__
-#define PyINSTALLERBINARY "geophirestough.exe"
+    #define PyINSTALLERBINARY "geophirestough.exe"
+#elif defined(__APPLE__)
+    #if defined(__arm64__)
+        // Apple Silicon (M1/M2/M3/M4) code
+        #define PyINSTALLERBINARY "geophirestough_arm64.bin"
+    #elif defined(__x86_64__)
+        // Intel Mac code
+        #define PyINSTALLERBINARY "geophirestough_x86_64.bin"
+    #else
+        #error "Unsupported macOS architecture"
+    #endif
 #else
-#define PyINSTALLERBINARY "geophirestough.bin"
+    #define PyINSTALLERBINARY "geophirestough.bin"
 #endif
 
 
