@@ -1201,7 +1201,7 @@
         "\t\tmsg = 'The hybrid system combines generation profiles from the Custom Generation Profile, PVWatts, Wind, and Fuel Cell models. This electricity is available to charge the battery, meet the electric load, or be delivered to the grid, depending on your application.';\r",
         "\t}\r",
         "\telse if (technology() == 'PVWatts CSPTowerMoltenSalt Hybrid') {\r",
-        "\t\tmsg = 'The hybrid system combines generation profiles from the Detailed PV, Molten Salt Power Tower, and Wind models. This electricity is available to charge the battery, meet the electric load, or be delivered to the grid, depending on your application. The battery dispatch is handled by the CSP system power controller.';\r",
+        "\t\tmsg = 'The hybrid system combines generation profiles from the PVWatts and Molten Salt Power Tower models. This electricity is available to charge the battery, meet the electric load, or be delivered to the grid, depending on your application. The battery dispatch is handled by the CSP system power controller.';\r",
         "\t}\r",
         "\telse\r",
         "\t{\r",

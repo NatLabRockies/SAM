@@ -606,11 +606,11 @@
                 },
                 "Format": {
                     "Type": 3.0,
-                    "Integer": 1.0
+                    "Integer": 0.0
                 },
                 "Decimals": {
                     "Type": 3.0,
-                    "Integer": 3.0
+                    "Integer": 1.0
                 },
                 "Prefix": {
                     "Type": 5.0,
@@ -661,7 +661,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 474.0
+                    "Integer": 460.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -855,11 +855,11 @@
                 },
                 "Format": {
                     "Type": 3.0,
-                    "Integer": 1.0
+                    "Integer": 0.0
                 },
                 "Decimals": {
                     "Type": 3.0,
-                    "Integer": 3.0
+                    "Integer": 1.0
                 },
                 "Prefix": {
                     "Type": 5.0,
@@ -910,7 +910,7 @@
                 },
                 "X": {
                     "Type": 3.0,
-                    "Integer": 474.0
+                    "Integer": 460.0
                 },
                 "Y": {
                     "Type": 3.0,
@@ -3906,7 +3906,7 @@
                 },
                 "Width": {
                     "Type": 3.0,
-                    "Integer": 269.0
+                    "Integer": 344.0
                 },
                 "Height": {
                     "Type": 3.0,
@@ -3918,7 +3918,7 @@
                 },
                 "Caption": {
                     "Type": 5.0,
-                    "String": "Total installed cost excludes any financing costs from the Financing input page."
+                    "String": "See the Hybrid System Cost page for the total installed cost of the hybrid system. The total installed cost is the sum of the indirect, sales tax, and direct costs and does not include any financing costs from the Financial Parameters page."
                 },
                 "TextColour": {
                     "Type": 4.0,
@@ -6266,7 +6266,7 @@
             "Version": 4.0,
             "Type": 1.0,
             "Label": "Battery power cost",
-            "Units": "$/kW",
+            "Units": "$/kW DC",
             "Group": "",
             "IndexLabels": "",
             "Flags": 9.0,
@@ -6292,7 +6292,7 @@
             "Version": 4.0,
             "Type": 1.0,
             "Label": "Battery power",
-            "Units": "kWAC",
+            "Units": "kW DC",
             "Group": "",
             "IndexLabels": "",
             "Flags": 8.0,
@@ -6304,8 +6304,8 @@
         "batt_kw_spec_cost": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "Battery kW cost",
-            "Units": "$/kW",
+            "Label": "Battery cost per KW",
+            "Units": "$/kW DC",
             "Group": "",
             "IndexLabels": "",
             "Flags": 2.0,
@@ -6356,8 +6356,8 @@
         "batt_kwh_spec_cost": {
             "Version": 4.0,
             "Type": 1.0,
-            "Label": "Battery kWh cost",
-            "Units": "$/kWh",
+            "Label": "Battery cost per capacity",
+            "Units": "$/kWh DC",
             "Group": "",
             "IndexLabels": "",
             "Flags": 2.0,
@@ -7064,7 +7064,7 @@
         "\r",
         "//ui only\r",
         "equations{ 'batt_kw_des_calc_COST' } = define() {\r",
-        "\treturn ${batt_power_discharge_max_kwac};\r",
+        "\treturn ${batt_power_discharge_max_kwdc};\r",
         "};\r",
         "\r",
         "//ui only\r",

@@ -131,6 +131,10 @@ function cf_production()
 	if (( technology() == 'CustomGeneration PVWatts Wind FuelCell Battery Hybrid')  ||  ( technology() == 'PVWatts Wind FuelCell Battery Hybrid') ){
 		cfline( 'fuelcell_fuelcell_annual_energy_discharged',0);
 	}
+	if ( technology() == 'PVWatts CSPTowerMoltenSalt Hybrid') {
+		cfline('pvwatts_cf_energy_net',0);
+		cfline('csptowermoltensalt_cf_energy_net');
+	}
 	if ( is_fom_fin() || financing() == 'Community Solar' )
 	{
 		is_iph = is_iph_tech();
@@ -296,7 +300,11 @@ function cf_om_expenses()
     tech = technology();
     fin = financing();
 
-	if ( tech == 'PVWatts Wind Battery Hybrid' || tech == 'PVWatts Wind FuelCell Battery Hybrid' || tech == 'Photovoltaic Wind Battery Hybrid' || tech == 'CustomGeneration PVWatts Wind FuelCell Battery Hybrid' )
+	if ( tech == 'PVWatts Wind Battery Hybrid' || 
+		 tech == 'PVWatts Wind FuelCell Battery Hybrid' || 
+		 tech == 'Photovoltaic Wind Battery Hybrid' || 
+		 tech == 'CustomGeneration PVWatts Wind FuelCell Battery Hybrid' ||
+		 tech == 'PVWatts CSPTowerMoltenSalt Hybrid' )
 	{
 		cfline( 'System Costs', -1, 0 );
 	}
@@ -373,6 +381,13 @@ function cf_om_expenses()
 		cfline( 'wind_cf_om_fixed,wind_cf_om_production,wind_cf_om_capacity',0);
 		cfline( 'fuelcell_cf_om_fixed,fuelcell_cf_om_production,fuelcell_cf_om_capacity,fuelcell_cf_fuelcell_replacement_cost_schedule,fuelcell_cf_om_fuel_cost',0);
 		cfline( 'battery_cf_om_fixed,battery_cf_om_production,battery_cf_om_capacity,battery_cf_battery_replacement_cost_schedule',0);
+		cfline( 'Project Costs', -1, 0 );
+	}
+	if ( technology() == 'PVWatts CSPTowerMoltenSalt Hybrid'){
+		cfline( 'Subsystem Costs', -1, 0 );
+		cfline( 'pvwatts_cf_om_fixed,pvwatts_cf_om_production,pvwatts_cf_om_capacity,pvwatts_cf_om_land_lease',0);
+		cfline( 'csptowermoltensalt_cf_om_fixed,csptowermoltensalt_cf_om_production,csptowermoltensalt_cf_om_capacity,csptowermoltensalt_cf_om_land_lease',0);
+		cfline( 'csptowermoltensalt_cf_om_fixed_batt,csptowermoltensalt_cf_om_production_batt,csptowermoltensalt_cf_om_capacity_batt,csptowermoltensalt_cf_battery_replacement_cost_schedule',0);	// csptowermoltensalt handles battery operations and costs
 		cfline( 'Project Costs', -1, 0 );
 	}
 }
@@ -1125,7 +1140,12 @@ function create_workbook( wkbk )
 
 	tech = technology();
 	
-	if ( tech == 'PVWatts Wind Battery Hybrid' || tech == 'PVWatts Wind FuelCell Battery Hybrid' || tech == 'Photovoltaic Wind Battery Hybrid' || tech == 'CustomGeneration PVWatts Wind FuelCell Battery Hybrid' || is_iph_tech() )
+	if ( tech == 'PVWatts Wind Battery Hybrid' || 
+		 tech == 'PVWatts Wind FuelCell Battery Hybrid' || 
+		 tech == 'Photovoltaic Wind Battery Hybrid' || 
+		 tech == 'CustomGeneration PVWatts Wind FuelCell Battery Hybrid' || 
+		 tech == 'PVWatts CSPTowerMoltenSalt Hybrid'|| 
+		 is_iph_tech() )
 	{
 		msgbox('Send-to Excel with Equations Not Available.\nThis option is not available for ' + tech + ' configurations.');
 		exit;

@@ -80,7 +80,11 @@ function third_party_graphs()
 	if (technology() == "PV Battery" || technology() == "PVWatts Battery" || technology() == "Generic Battery") {
 		battery_btm_monthly_graph();
 	}
-	if (technology() == "PVWatts Wind Battery Hybrid" || technology() == "Photovoltaic Wind Battery Hybrid" || technology() == "Generic PVWatts Wind FuelCell Battery Hybrid" || technology() == "PVWatts Wind FuelCell Battery Hybrid") {
+	if (technology() == "PVWatts Wind Battery Hybrid" || 
+		technology() == "Photovoltaic Wind Battery Hybrid" || 
+		technology() == "Generic PVWatts Wind FuelCell Battery Hybrid" || 
+		technology() == "PVWatts Wind FuelCell Battery Hybrid") 
+	{
 		battery_btm_monthly_graph_hybrid();
 	}
 	agraph( 'cf_agreement_cost,cf_energy_value', 'Annual Agreement Cost and Electricity Savings', 'Year', '$' );
@@ -94,7 +98,11 @@ function host_developer_graphs()
 	if (technology() == "PV Battery" || technology() == "PVWatts Battery" || technology() == "Generic Battery") {
 		battery_btm_monthly_graph();
 	}
-	if (technology() == "PVWatts Wind Battery Hybrid" || technology() == "Photovoltaic Wind Battery Hybrid" || technology() == "Generic PVWatts Wind FuelCell Battery Hybrid" || technology() == "PVWatts Wind FuelCell Battery Hybrid") {
+	if (technology() == "PVWatts Wind Battery Hybrid" || 
+		technology() == "Photovoltaic Wind Battery Hybrid" || 
+		technology() == "Generic PVWatts Wind FuelCell Battery Hybrid" || 
+		technology() == "PVWatts Wind FuelCell Battery Hybrid") 
+	{
 		battery_btm_monthly_graph_hybrid();
 	}
 	agraph( 'cf_project_return_aftertax', 'Developer After-tax Cash Flow', 'Year', '$', -1, true, false, 'bottom' );
@@ -306,7 +314,7 @@ autographs { 'PVWatts Wind FuelCell Battery Hybrid|Host Developer' } = define ()
 	}
 };
 
-autographs { 'PVWatts CSPTowerMoltenSalt Battery Hybrid|SingleOwner' } = define () {
+autographs { 'PVWatts CSPTowerMoltenSalt Hybrid|Single Owner' } = define () {
 	// monthly energy
 	agraph( 'pvwatts_monthly_energy,csptowermoltensalt_monthly_energy', 'Monthly Generation in Year 1', '', 'kWh' , -1, false, true, 'bottom', 1 );
 	
