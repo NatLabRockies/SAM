@@ -2465,5 +2465,19 @@
         "",
         ""
     ],
-    "Callbacks": []
+    "Callbacks": [
+        "on_load{'Operating Costs Custom Generation Battery'} = define() {\r",
+        "\ttech = technology();\r",
+        "\tif (strpos(tech, \"Hybrid\") != -1) {\r",
+        "\t\tshow('om_fuel_cost', false);\r",
+        "\t\tshow('om_fuel_cost_escal', false);\r",
+        "\t}\r",
+        "\telse {\r",
+        "\t\tshow('om_fuel_cost', true);\r",
+        "\t\tshow('om_fuel_cost_escal', false);\r",
+        "\t}\r",
+        "\trefresh();\r",
+        "};\r",
+        "\t"
+    ]
 }
